@@ -1,0 +1,1455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Frequency selective encoding of substrate vibrations in the somatosensory cortex</title>
+				<funder>
+					<orgName type="full">International Foundation for Paraplegia Research</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">New York Stem Cell Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">New York Stem Cell Foundation-Robertson Investigator</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">European Research Council (OPTOMOT)</orgName>
+				</funder>
+				<funder ref="#_A4VZqXV">
+					<orgName type="full">Swiss National Science Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Cold Spring Harbor Laboratory</publisher>
+				<availability status="unknown"><p>Copyright Cold Spring Harbor Laboratory</p>
+				</availability>
+				<date type="published" when="2018-02-14">2018-02-14</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mario</forename><surname>Prsa</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Basic Neurosciences</orgName>
+								<orgName type="institution">University of Geneva</orgName>
+								<address>
+									<settlement>Geneva</settlement>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Huber</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Basic Neurosciences</orgName>
+								<orgName type="institution">University of Geneva</orgName>
+								<address>
+									<settlement>Geneva</settlement>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Frequency selective encoding of substrate vibrations in the somatosensory cortex</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<publisher>Cold Spring Harbor Laboratory</publisher>
+							<date type="published" when="2018-02-14" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">2638F124F2CE73E5F450F476164C8D16</idno>
+					<idno type="DOI">10.1101/264747</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Sensing vibrations that propagate through solid substrates conveys fundamental information about moving objects and other nearby dynamic events.</s><s>Here we report that neurons responsive to substrate vibrations applied to the mouse forelimb reveal a new way of representing frequency information in the primary somatosensory cortex (S1).</s><s>In contrast to vibrotactile stimulation of primate glabrous skin, which produces temporally entrained spiking and frequency independent firing rates, we found that mouse S1 neurons rely on a different coding scheme: their spike rates are conspicuously tuned to a preferred frequency of the stimulus.</s><s>Histology, peripheral nerve block and optogenetic tagging experiments furthermore reveal that these responses are associated with the activation of mechanoreceptors located in deep subdermal tissue of the distal forelimb.</s><s>We conclude that the encoding of frequency information of substrate-borne vibrations in the mouse S1 might be analogous to the representation of pitch of airborne sound in auditory cortex.</s><s>Introduction Vibrations are ecologically relevant sensory stimuli that can appear in different forms and their spectral content can convey different types of information.</s><s>For example, the frequency of skin vibrations produced by actively displacing a fingertip across an object provides information about the surface texture.</s><s>Spikes of S1 neurons responding to skin vibrations of primate fingertips are found to be temporally locked to a preferred phase of the oscillatory cycle, but their rates are reported to be insensitive to stimulus frequency <ref type="bibr" target="#b17">(Harvey et al., 2013;</ref><ref type="bibr" target="#b33">Mountcastle et al., 1969)</ref>.</s><s>Frequency dependent spike rate modulations could only be obtained with pulsed vibrations in the flutter range (&lt;40 Hz) <ref type="bibr" target="#b39">(Salinas et al., 2000)</ref>, in which individual stimulus cycles and not pitch dominate the percept <ref type="bibr" target="#b38">(Saal et al., 2016)</ref>.</s><s>The same seems to be true in rodents, where active whisker-mediated sensation has been advanced as the main modus operandi for collecting somatosensory information from the environment <ref type="bibr" target="#b11">(Diamond et al., 2008)</ref>; a functional equivalent to active hand palpations in primates.</s><s>Phase-locked spiking and frequency independent firing rates of neural responses to passive sinusoidal vibrations of single whiskers have been reported in barrel cortex (Ewert et al., 2008)  (but see <ref type="bibr" target="#b1">(Arabzadeh et al., 2004;</ref><ref type="bibr" target="#b2">Arabzadeh et al., 2003)</ref>).</s><s>It therefore seems that in such active sensory systems frequencies are not discriminated based on differences in rates of discharge of cortical neurons.</s><s>Instead, the proposed neural coding scheme for frequency recognition is based on identifying the dominant phase of the oscillatory stimulus in the cyclically entrained spike trains.</s><s>Different types of vibratory stimuli are generated by external movements and they can be perceived passively.</s><s>These are transmitted through the solid substrate, and their frequency might indicate the size, speed or distance of, for instance, a nearby conspecific, predator or prey.</s><s>This passive sensory channel is therefore not primarily adapted to identify object textures or shapes, but rather tuned for gathering essential information about events occurring in the nearby environment.</s><s>Substrate vibrations propagate away from the surface of contact, typically through the limbs <ref type="bibr" target="#b20">(Hunt, 1961;</ref>   Hunt and McIntyre, 1960;<ref type="bibr" target="#b34">O'Connell-Rodwell, 2007)</ref> and might therefore activate a broad set of mechanoreceptors distributed along its bones, joints and possibly even in more distant body parts <ref type="bibr" target="#b4">(Bell et al., 1994;</ref><ref type="bibr" target="#b20">Hunt, 1961;</ref><ref type="bibr" target="#b47">Zelena, 1994)</ref>.</s><s>The involved network of mechanoreceptors might thus be very different from the one probed in experiments</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>delivering local skin vibrations at the fingertip, since such vibrations attenuate exponentially with distance and do not seem to propagate beyond the finger <ref type="bibr" target="#b29">(Manfredi et al., 2012)</ref>.</s><s>If substrate vibrations indeed rely on a different functional network of mechanoreceptors, might they also have a distinct neural representation of vibration frequency in the cortex?</s><s>To address this question we sought to characterize how neurons in the mouse forelimb representation of the somatosensory cortex (fS1) encode the frequency of substrate vibrations.</s><s>Using two-photon calcium imaging and electrophysiology, we found that neurons in the mouse fS1 show spike rates tuned to different stimulus frequencies and lack temporally entrained spiking.</s><s>They bandpass filter the mechanical stimuli to favor a narrow bandwidth of frequencies where they operate as stimulus feature detectors.</s><s>We thus propose that the spectral content of structureborne vibrations is extracted at the cortical level using a coding mechanism akin to the one operating in the auditory system for pitch discrimination of airborne sound.</s><s>This sensory channel therefore appears to be fundamentally different from active skin-and whisker-based somatosensation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Vibration frequency selectivity in somatosensory cortex</head><p><s>To deliver substrate vibrations to a single forelimb, we trained head-restrained mice to place their forepaw on a piezoelectric stack actuator and reinforced continuous holding with liquid rewards (Fig. <ref type="figure" target="#fig_0">1A,</ref><ref type="figure">B</ref>, Movie S1, Methods).</s><s>Pure sinusoidal vibrations (Fig. <ref type="figure" target="#fig_0">S1</ref>) of different frequencies (100 Hz to 800 Hz) were delivered pseudorandomly to the forepaw at variable inter-stimulus intervals.</s><s>To measure the activity of neurons in the contralateral fS1, we expressed the fluorescent Ca 2+ indicator GCaMP6f in layer 2/3 neurons using viral vectors and imaged the responses with two-photon microscopy through a chronic cranial window (Fig. <ref type="figure" target="#fig_0">1C,</ref><ref type="figure">D</ref>).</s><s>The location of fS1 was identified by intrinsic signal imaging (Fig. <ref type="figure" target="#fig_0">1D</ref>).</s><s>We found that different vibration frequencies reliably evoked transient increases in fluorescence of a subset of imaged neurons (Fig. <ref type="figure" target="#fig_0">1E,</ref><ref type="figure">F</ref>).</s><s>Since the size of fluorescence transients is positively correlated with the number of spikes in a burst <ref type="bibr" target="#b7">(Chen et al., 2013)</ref> we took the fluorescence change relative to baseline (Δf/f 0 ) as a proxy for spike rate.</s><s>By observing the activity of individual neurons, it became evident that different stimulus frequencies did not evoke equal responses (Fig. <ref type="figure" target="#fig_0">1F</ref>), suggesting that fS1 neurons carry information about vibration frequency in the number of spikes they fire.</s><s>To explicitly test the latter hypothesis, we computed the stimulus-specific information (SSI) as a measure of frequency encoding by the evoked Δf/f 0 responses <ref type="bibr" target="#b6">(Butts, 2003;</ref><ref type="bibr">Butts and Goldman, 2006)</ref>.</s><s>The majority of responding neurons (&gt;85% of 725 cells, 19 mice, 42 fields of view) were found to be informative about frequency (i.e. had responses with significant SSI, p&lt;0.01, permutation test), which is in stark contrast to the 3% of neurons in the primate S1 responding to fingertip vibrations in the same frequency range <ref type="bibr" target="#b17">(Harvey et al., 2013)</ref>.</s><s>To characterize their frequency dependent tuning, mean responses were fit with a descriptive function (Fig. <ref type="figure">2A-H</ref>).</s><s>Strikingly, ≈49% (303 of 621 informative cells) had identifiable tuning curve peaks (Fig. <ref type="figure">2A-D,I</ref>) and thus had a preferred frequency of tactile vibration, which is analogous to a fundamental property of auditory cortex neurons: frequency selectivity <ref type="bibr" target="#b8">(Cheung et al., 2001;</ref><ref type="bibr" target="#b22">Issa et al., 2014;</ref><ref type="bibr" target="#b23">Joachimsthaler et al., 2014)</ref>.</s><s>The remaining neurons were characterized by frequency dependent response increases-toplateau or monotonic increases (Fig. <ref type="figure">2E-H,I</ref>).</s></p><p><s>We next assessed the effects of vibration amplitude on frequency tuning.</s><s>As vibration amplitude was attenuated, a shift of the tuning curves toward higher frequencies was observed (Fig. <ref type="figure">2J,</ref><ref type="figure">K</ref>).</s><s>Also, by reducing the actuator displacement, the range of frequencies that could be generated by the hardware was extended to 1990 Hz.</s><s>As such, neurons characterized as having increases-to-plateau responses at the highest amplitude were found to also be frequency selective when tested over an extended frequency range with smaller displacements (Fig. <ref type="figure" target="#fig_4">S2</ref>).</s><s>Based on the descriptive function fits, we identified neurons that are tuned to a preferred frequency at any of the three tested displacements.</s><s>The distributions of their preferred values confirm that fS1 neurons best respond to higher frequencies at smaller stimulus amplitudes (Fig. <ref type="figure">2L</ref>).</s><s>The observed amplitude dependent changes in tuning (Fig. <ref type="figure">2J</ref>,K, Fig. <ref type="figure" target="#fig_4">S2</ref>) are analogous to how frequency selective responses of auditory cortex neurons change as a function of sound level <ref type="bibr" target="#b41">(Sutter, 2000)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Frequency selective neurons operate as feature detectors</head><p><s>What might be the functional relevance of frequency selective tuning of fS1 neurons?</s><s>Do these neurons signal the presence of a vibratory stimulus at their preferred frequency (i.e.</s><s>operate as feature detectors) or is their role to differentiate stimuli based on their spectral content (i.e.</s><s>perform frequency discrimination)?</s><s>Modeling work has suggested that this question can be answered by analysing what the most informative region of the turning curve is <ref type="bibr">(Butts and Goldman, 2006)</ref>.</s><s>On the curve's flanks, where the slope is steepest, discrimination is best as small changes in stimulus value produce large changes in neural activity.</s><s>At the curve peak, discrimination becomes worse as the slope is near zero, but the peak firing rate is most distinguishable from baseline activity and thus makes the preferred frequency distinct from all others.</s><s>Using the SSI measure to identify the most informative stimuli, model neuron simulations demonstrate that as noise (i.e. the trial-to-trial variability in neural responses) increases, maximal SSI transitions from the tuning curve's flank to its peak <ref type="bibr">(Butts and Goldman, 2006)</ref>.</s><s>We therefore computed the SSI for all neurons with frequency selective tuning at any amplitude.</s><s>The obtained results show that fS1 neurons convey maximum information at their preferred frequency (Fig. <ref type="figure">3</ref>) and therefore operate, just like neurons in auditory cortex <ref type="bibr" target="#b32">(Montgomery and Wehr, 2010)</ref>, in a high-noise regime as feature detectors.</s><s>fS1 neuronal spikes are not cyclically entrained by forepaw vibrations At the periphery, each cycle of a sinusoidal oscillation applied to the skin typically evokes one or more phase-locked spikes in mechanoreceptor afferents <ref type="bibr" target="#b27">(Mackevicius et al., 2012;</ref><ref type="bibr" target="#b42">Talbot et al., 1968)</ref>.</s><s>It follows that spike rate monotonically increases with vibration frequency up to the afferent's best frequency.</s><s>At the cortical level, in S1 neurons representing the primate hand <ref type="bibr" target="#b17">(Harvey et al., 2013;</ref><ref type="bibr" target="#b33">Mountcastle et al., 1969)</ref> and rodent whiskers <ref type="bibr">(Ewert et al., 2008)</ref>, the cycle-to-cycle tracking of the vibration is lost but phase-locked entrainment of spikes persists.</s><s>Spectral information is therefore only encoded in their temporal spiking patterns and not anymore in firing rates.</s><s>Given our finding that frequencies are encoded in firing rates in fS1 when substrate vibrations are applied to the forelimb, we wondered whether phase-locked spiking also exists.</s><s>To address this, we measured stimulus-related spiking with juxtacellular (37 units, 6 mice) or extracellular (17 units, 6 mice) electrode recordings using identical conditions as in imaging experiments (Fig. <ref type="figure">2A</ref> and Fig. <ref type="figure">S3A</ref>).</s><s>We found frequency dependent increases (43 units, Fig. <ref type="figure">S3B-G</ref>), but also decreases (11 units, Fig. <ref type="figure">S3H,</ref><ref type="figure">I</ref>) in spike rates, with a similar heterogeneity of tuning curves as inferred from the imaged calcium fluorescence.</s><s>For the rate increasing units, we measured whether a preferred phase of spike occurrence in the stimulus cycle exists (Fig. <ref type="figure" target="#fig_1">4B</ref>).</s><s>Phase distributions did not reveal significant phase-locked spiking (Fig. <ref type="figure" target="#fig_1">4C</ref>) at any frequency (Rayleigh test for nonuniformity of circular data, p&lt;0.01 for 1 out of 43 units at most).</s><s>To control for possible variability in onset delays across stimulus repetitions, we also computed inter-spike-intervals whose distribution should peak at integer multiples of the stimulus period in the case of phase-locked spiking.</s><s>At any stimulus frequency, the null hypothesis that standardized inter-spike-intervals (see Methods) come from a uniform distribution (Fig. <ref type="figure" target="#fig_1">4C</ref>) could be rejected for at most 1 out of the 43 units (χ 2 test, p&lt;0.01).</s><s>We therefore speculate that a transformation of neural coding, analogous to that in the auditory system <ref type="bibr" target="#b38">(Saal et al., 2016)</ref>, occurs between peripheral and central processing of stimuli vibrating the mouse forelimb, where phase-locked spiking progressively dissipates along the ascending pathway and turns into a pure rate code in the cortex.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Responses are not driven by auditory cues</head><p><s>The striking similarity to response properties of auditory neurons raises the possibility that airborne sounds, produced by the piezoelectric stack actuator generating the vibratory stimulus, drive activity in fS1 neurons.</s><s>Alternatively, the substrate vibrations might propagate through the bones to the inner ear <ref type="bibr" target="#b37">(Rado et al., 1998;</ref><ref type="bibr" target="#b38">Reuter et al., 1998)</ref>.</s><s>Auditory tones are known to alter the perception of tactile stimuli in a frequency-specific manner <ref type="bibr" target="#b10">(Crommett et al., 2017;</ref><ref type="bibr" target="#b46">Yau et al., 2009)</ref> and might hence indeed drive activity in the somatosensory cortex.</s><s>To test for these possibilities, we placed the forepaw away from the stimulator or saturated the ear with white noise, and compared the responses to those evoked by normal control conditions in the same experimental sessions.</s><s>With the forepaw placed off the stimulator (113 cells, 9 mice), sound alone could not activate, at any frequency, the neurons normally responsive to vibratory stimulation.</s><s>Masking hypothetical inner ear vibrations with white noise (128 cells, 9 mice) caused only small changes in the evoked responses (Fig. <ref type="figure" target="#fig_1">S4</ref>), probably due to the averseness of the loud sound.</s><s>These results demonstrate that the auditory system is not implicated in the frequency tuning of fS1 neurons.</s><s>Additional experiments in which mice were trained to perform reach-to-grasp forelimb movements (Movie S2) allowed us to exclude hypothetical stimulus-locked motor events such as muscle twitches, increases in stiffness or proprioceptive inputs (Fig. <ref type="figure">S5</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Pacinian corpuscles are absent in the glabrous skin of the mouse forepaw</head><p><s>In mammals, high frequency vibrations are transduced by a subtype of rapidly adapting mechanoreceptors, the Pacinian corpuscles (PCs) <ref type="bibr" target="#b0">(Abraira and Ginty, 2013)</ref>.</s><s>PCs can be found in many body locations near joints, ligaments, tendons and bones <ref type="bibr" target="#b4">(Bell et al., 1994;</ref><ref type="bibr" target="#b47">Zelena, 1994)</ref>, but they most prominently populate the glabrous skin of fingertips and palm of the primate hand <ref type="bibr">(Kumamoto et al., 1993a)</ref>.</s><s>Is it possible that the cortical coding scheme for substrate vibration frequency, reported here, originates from the recruitment of a functional network of PCs different to that recruited in the primate hand by local cutaneous vibrations?</s><s>To address this question, we performed a detailed histological analysis of PC distribution in the mouse forelimb.</s><s>PCs were identified in hematoxylin and eosin stained sections of the distal limb based on their stereotypical lamellar morphology <ref type="bibr">(Kumamoto et al., 1993a;</ref><ref type="bibr" target="#b26">Kumamoto et al., 1993b)</ref>.</s><s>Unlike in the primate hand, we were unable to find PCs in the dermis of the glabrous forepaw skin (Fig. <ref type="figure" target="#fig_2">S6</ref>), which confirms previous observations <ref type="bibr" target="#b14">(Fleming and Luo, 2013)</ref>.</s><s>However, PCs were systematically found in deep tissue next to bones in the fingers and palm, but also more proximally next to the radius and ulna (Fig. <ref type="figure">5</ref>).</s><s>This finding suggests that the cortical responses reported here originate not from the activation of dermal but rather of a population of deep PCs.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Responses are specific to mechanoreceptor activation in the distal forelimb</head><p><s>To causally link the frequency tuning observed in fS1 to the activation of mechanoreceptors in the distal forelimb we conducted two additional experiments.</s><s>First, we blocked nerve transmission from the forepaw by injecting lidocaine at the wrist level and compared the evoked activity to the pre-injection control period (83 cells, 8 mice).</s><s>The induced changes were compared to the effects of saline injections performed either the following or previous day with the same neurons.</s><s>The significantly higher reduction of the evoked responses with lidocaine (Fig. <ref type="figure" target="#fig_2">6A</ref>) suggests the involvement of mechanoreceptors in the wrist/forepaw in driving the imaged neurons.</s><s>However, the nerve block did not uniformly reduce responses across the entire frequency range (Fig. <ref type="figure" target="#fig_2">6B-D</ref>).</s><s>This frequency-dependent effect might be analogous to tuning curve changes observed when vibration intensity is reduced (Fig. <ref type="figure">2J</ref>-L and Fig. <ref type="figure" target="#fig_4">S2</ref>).</s><s>Alternatively, the substrate vibrations are likely to propagate to and activate mechanoreceptors in other parts of the forelimb (Fig. <ref type="figure">S5</ref>) or even in more distant organs <ref type="bibr" target="#b4">(Bell et al., 1994;</ref><ref type="bibr" target="#b47">Zelena, 1994)</ref>.</s><s>The residual responses after lidocaine injection might thus reflect their frequency selective contribution that converges together with that of mechanoreceptors in the wrist/forepaw on the same cortical fS1 neurons.</s><s>In a second set of experiments, we expressed the optogenetic actuator Channelrhodposin-2 selectively in a subset of mechanoreceptors associated with rapidly adapting afferents.</s><s>Pacinian and Meissner corpuscles and their innervating neurons were targeted using a double-transgenic strategy (ETV1-Cre x ChR2-EYFP, see Methods).</s><s>Two-photon Ca 2+ imaging of fS1 activity was performed while either vibrotactile, optogenetic (Movies S3,S4) or single-point touch (see Methods) stimuli were delivered to the contralateral forepaw.</s><s>Pulsed illumination of the forepaw with an optic fiber evoked highly reliable Δf/f 0 increases in a subset of cortical fS1 neurons (20 cells, 2 mice, 3 fields of view) (Fig. <ref type="figure">7A-C</ref> and Fig. <ref type="figure">S7A</ref>).</s><s>We grouped trials with similar paw placement relative to the optic fiber by applying a dimensionality reduction technique, t-distributed stochastic neighborhood embedding (t-SNE) (van der Maaten and Hinton, 2008a), to forepaw images at the time of stimulus onset (Fig. <ref type="figure">S7B</ref>).</s><s>This classification revealed that the fS1 neurons were preferentially activated by illumination of specific locations on the forepaw (Fig. <ref type="figure">7A-C</ref> and Fig. <ref type="figure">S7C-E</ref>).</s><s>Some of the same neurons also responded to either vibration (Fig. <ref type="figure">7A</ref>) or single-point touch (Fig. <ref type="figure">7B,</ref><ref type="figure">C</ref>).</s><s>In sum, our vibratory stimuli were found to drive cortical neurons intermingled and partially overlapping with those responding to touch of the forepaw and to selective optogenetic activation of its mechanoreceptor afferents (Fig. <ref type="figure">7D</ref>).</s><s>This result supports the assertion that the frequency selective fS1 neurons, reported here, reflect the processing of substrate vibrations acting upon mechanoreceptors of the distal forelimb.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>We have shown that vibrating the mouse forelimb with pure sinusoidal displacements evokes auditory-like responses in somatosensory cortex neurons: frequency selective spike rates and absence of cyclical spike entrainment.</s><s>Both of these findings are at odds with previous reports of how S1 neurons code for the frequency of tactile vibration applied to a single point on the skin (e.g. at fingertips) <ref type="bibr" target="#b17">(Harvey et al., 2013;</ref><ref type="bibr" target="#b33">Mountcastle et al., 1969)</ref>.</s><s>How can this discrepancy be explained?</s><s>Localized oscillatory indentations of the skin surface constitute ecologically relevant vibrotactile sensations for primates, which might occur during active tactile exploration.</s><s>The associated sensation is most likely conveyed to the central nervous system by dermal PCs that densely populate the primate fingertips <ref type="bibr">(Kumamoto et al., 1993a)</ref>.</s><s>On the contrary, we found no evidence that dermal PCs exist in the mouse forepaw (Fig. <ref type="figure">5</ref> and Fig. <ref type="figure" target="#fig_2">S6</ref>), which has been previously reported <ref type="bibr" target="#b14">(Fleming and Luo, 2013)</ref>.</s><s>This finding might also support the view that rodents principally use their whiskers rather than their paws for active tactile exploration <ref type="bibr" target="#b11">(Diamond et al., 2008)</ref> (but see <ref type="bibr" target="#b30">(Manita et al., 2015;</ref><ref type="bibr" target="#b31">Maricich et al., 2012)</ref>).</s><s>Forepaw-based vibration sensation in rodents might thus take the role of passive "listening" through the substrate as the communication medium <ref type="bibr" target="#b19">(Hill, 2008)</ref>.</s><s>The activation of deep, subcutaneous PCs populating the distal forelimb at large might synergistically participate in processing the vibratory stimuli.</s><s>The associated activity in the multiple afferent channels might be individually filtered and eventually converge onto cortical neurons with frequency selective spike rates.</s><s>The frequency-dependent effect of our pharmacological experiments (Fig. <ref type="figure" target="#fig_2">6</ref>) and the absence of a one-to-one correspondence between neurons driven by selective afferent activation and forepaw vibration (Fig. <ref type="figure">7D</ref>) are consistent with this hypothesis.</s><s>On the other hand, localized skin vibrations in primate fingertips drive cortical neurons with firing properties corresponding more closely to those of individual dermal PC afferents <ref type="bibr" target="#b27">(Mackevicius et al., 2012;</ref><ref type="bibr" target="#b42">Talbot et al., 1968)</ref>.</s><s>Besides the difference in receptor distribution found between the mouse and primate, we can ask more generally: do the two different spectral information coding schemes (rate code vs. cyclical entrainment) have different functional implications?</s><s>We speculate that they might reflect a fundamental difference between active and passive sensing.</s><s>Active somatosensory systems need to take the kinematics of the active motion into account when extracting low-level stimulus features.</s><s>Such timing dependent sensory-motor integration might therefore explain temporally precise coding in the cortex, as described by cyclical spike entrainment for example <ref type="bibr">(Ewert et al., 2008;</ref><ref type="bibr" target="#b17">Harvey et al., 2013;</ref><ref type="bibr" target="#b33">Mountcastle et al., 1969)</ref>.</s><s>Instead, cortical feature-selective rate coding in the primate fingertip or the rodent whisker systems have most likely evolved to identify macroscopic object features like surface texture <ref type="bibr" target="#b16">(Garion et al., 2014;</ref><ref type="bibr" target="#b21">Isett et al., 2018)</ref> or edge orientation <ref type="bibr" target="#b5">(Bensmaia et al., 2008)</ref>, independently of motion kinematics.</s><s>On the other hand, passive sensory systems, such as hearing or sensing substrate vibrations do not rely on active motion and have most likely evolved to directly identify and discriminate lower level physical parameters like frequency or pitch using a tuned rate code <ref type="bibr" target="#b12">(Eggermont, 2001)</ref>.</s><s>This distinction is directly supported by psychophysical experiments comparing how humans perceive the spectral information of sound and skin vibrations <ref type="bibr" target="#b15">(Formby et al., 1992)</ref>.</s><s>However, both coding schemes are probably highly overlapping and might even use the information of the same receptors, yet via segregated circuits.</s><s>Future experiments will be necessary to investigate if such parallel coding systems exist, for example at the level of the primate hand.</s><s>Interestingly, we found that the responses to forelimb vibrations described here not only share many features with the auditory system, the frequency range represented (100 Hz to 1.5 kHz, Fig. <ref type="figure">2L</ref>) is also surprisingly complementary to the auditory hearing range of the mouse (4kHz to 50kHz) <ref type="bibr" target="#b24">(Koay et al., 2002)</ref>.</s><s>The passive sensing of substrate vibrations might thus be a natural extension of the mouse auditory system to the lower, inaudible frequency range.</s><s>Actually, it has been proposed that communication via airborne sounds might have evolved from the more ancient precursor modality based on substrate-borne vibration signaling <ref type="bibr" target="#b19">(Hill, 2008)</ref>.</s><s>Many insect species communicate exclusively by emitting and sensing substrate vibrations <ref type="bibr" target="#b9">(Cocroft and Rodríguez, 2005)</ref> while in others, the same sensory organ, such as the Johnston's organ in drosophila, is used to detect both sound and touch <ref type="bibr" target="#b3">(Azevedo and Wilson, 2017)</ref>.</s><s>Vestiges of this modality seem to be still present in rodents, given that Ehrenberg's mole-rats vibrate their subterranean tunnels to communicate with conspecifics <ref type="bibr" target="#b18">(Heth et al., 1987;</ref><ref type="bibr" target="#b36">Rado et al., 1987)</ref>, and might explain the parallels that we found between frequency coding in auditory and somatosensory systems.</s><s>In conclusion, our work reveals a novel and robust neural representation of vibration frequency in the somatosensory cortex.</s><s>The remaining challenge is to understand the mechanisms by which this cortical representation emerges from activations of peripheral mechanoreceptors along the ascending pathway.</s><s>Similarly to recent experiments of primary afferents in the whisker system <ref type="bibr" target="#b40">(Severson et al., 2017)</ref>, we developed an optogenetic tagging strategy to selectively activate rapidly adapting mechanoreceptor afferents in the forepaw.</s><s>We were furthermore able to identify the neurons that this peripheral optogenetic activation drives in the cortex and compare them to those activated by natural tactile stimuli (Fig. <ref type="figure">7</ref>).</s><s>These experiments therefore pave the way for resolving the above posed challenge and, more generally, for future studies to illuminate the functional contribution of a given sensory receptor to cortical processing of sensory information.</s><s>was a pure sinusoid).</s><s>Components apparent at higher frequencies were highly attenuated relative to the stimulation frequency and were for the most part continuously present as revealed by the signal spectrum of the pre-stimulus baseline period (blue).</s><s>Analogous amplitude spectra were obtained for stimuli at all other tested frequencies and amplitudes.</s><s>(A) To test for the possibility that airborne sounds activated the imaged neurons in fS1, the forepaw was moved off the stimulator.</s><s>To test for the possibility that vibrations propagated through the body to the cochlea, loud white noise was used to mask this hypothetical stimulation.</s><s>The response change ratios (median ± quartiles) relative to the control condition (zero level) averaged across all frequencies with significant activity increases in the control condition show that with the forepaw off the stimulator, sound alone could not drive increases in Δf/f 0 (p&lt;10 -21 , Wilcoxon signed-rank test, n=113 cells, 9 mice) and that the white noise mask had but a small aversive effect on the responses (p=0.006,</s><s>n=128 cells, 9 mice).</s><s>Significant Δf/f 0 increases in none of the individual neurons could be evoked by sound alone at any frequency (p&lt;0.01,</s><s>randomization test, n=1999 repetitions).</s><s>(B) A representative fS1 neuron activated by forepaw vibrations (black: control condition) was irresponsive to sound alone (green: forepaw off condition) and unaffected by the auditory mask (blue: white noise condition).</s><s>Top: denoised Δf/f 0 responses evoked by 730 Hz and 1220 Hz vibrations (thin lines: individual stimulus responses, thick lines: mean response).</s><s>Bottom: frequency tuning curves tested with four different vibration amplitudes, as depicted by the greyscale bar, to cover the extended range of frequencies (dots: individual responses, lines: mean response).</s><s>Inset: cropped two-photon image depicting the same responding neuron in both conditions (yellow arrow).</s><s><ref type="figure" target="#fig_2">6 (A-C</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Figures</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Animals</head><p><s>Imaging and electrophysiology experiments were conducted with C57BL/6 (Charles River Laboratory) mice.</s><s>Forepaw optogentic stimulation experiments were conducted with double-transgenic mice generated by mating homozygote Ai32 males carrying a floxed ChR2-EYFP fusion gene inserted in the Gt(ROSA)26Sor locus in a C57BL/6 strain <ref type="bibr" target="#b28">(Madisen et al., 2012)</ref> (Jackson Laboratory; stock no.</s><s>012569) with heterozygote ER81/Etv1-CreER females expressing the CreER T2 fusion protein from the ER81/Etv1 promoter elements <ref type="bibr">(Taniguchi et al., 2011) (Jackson Laboratory;</ref><ref type="bibr">stock no. 013048</ref>).</s><s>As such, Cre-mediated recombination results in an expression of the floxed ChR2-EYFP sequence in the ER81/Etv1expressing cells of the offspring.</s><s>ER81/Etv1 is expressed in Pacinian and Meissner corpuscles, glabrous skin mechanoreceptors associated with rapidly adapting afferents, as well as in their innervating neurons <ref type="bibr" target="#b13">(Fleming et al., 2016)</ref>.</s><s>To induce CreER-based recombination, double-transgenic offspring (10 week old) were administered one daily dose of a 100 µL tamoxifen (T5648, Sigma-Aldrich) solution (20 mg/mL) dissolved in sunflower oil (C8267, Sigma-Aldrich) for five consecutive days by peritoneal injection.</s><s>Mice were housed in an animal facility, maintained on a 12:12 light/dark cycle and were placed under a water restriction regime (1 ml/day) post-surgery.</s><s>The experiments were performed during the light phase of the cycle.</s><s>The animals did not undergo any previous surgery, drug administration or experiments and were housed in groups of maximum 5 animals per cage.</s><s>All procedures complied with and were approved by the Institutional Animal Care and Use Committee of the University of Geneva and Geneva veterinary offices.</s><s>Surgery 12 to 15 week old mice were surgically prepared for head-fixed two-photon Ca 2+ imaging.</s><s>Surgeries were conducted under isoflurane anaesthesia (1.5 to 2%) and additional analgesic (0.1 mg/kg buprenorphine intramuscular (i.m.)), local anaesthetic (75 µL 1% lidocaine subcutaneous (s.c.) under the scalp) and anti-inflammatory drugs (2.5 mg/kg dexamethasone i.m. and 5 mg/kg carprofen s.c.) were administered.</s><s>Mice were fixed on a bite bar with a snout clamp and rested on top of a heating pad.</s><s>The scalp was cut over the midline between the ears and eyes.</s><s>A custom made titanium head bar was fixed on the skull with a cyanoacrylate adhesive (ergo 5011, IBZ Industrie) and dental cement to allow for subsequent head fixation.</s><s>A craniotomy was performed over the left frontal cortex and five viral injections (30 to 50 nL each) were administered with pulled and beveled glass pipettes (≈25 µm tip diameter) at a an approximate rate of 20 nL/min into the forepaw representation of the primary somatosensory cortex (2.25 mm lateral and from -0.25 mm to 0.75 mm in 0.25 mm steps anterior to bregma).</s><s>The injections consisted of AAV1.Syn.GCaMP6f.WPRE.SV40 (1:10 dilution with 0.2% FastGreen in sterile saline, virus stock titer 6.932 x 10 13 ) (University of Pennsylvania, lot.</s><s>no.</s><s>CS0939) at a depth of 350 µm corresponding to cortical layers 2/3.</s><s>After each injection completion, the pipette was left in place for at least another 10 min before being retracted.</s><s>The cortical surface was rinsed for 1 to 2 min with dexamethasone (0.03%) and two hand-cut glass coverslips (150 µm thickness) matched to the shape of the craniotomy were glued together with optical adhesive (NOA 61, Norland Products) and the lower one was placed on top of the cortex.</s><s>The upper glass, which was larger than the craniotomy, was glued to the skull with cyanoacrylate adhesive and secured with dental cement.</s><s>The correspondence between the injection sites and the sensory forepaw representation was confirmed post-operatively with intrinsic signal imaging in each mouse.</s><s>After a seven day recovery period, mice were placed under the water restriction regime and experiments began on the 15 th day after surgery.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Intrinsic signal imaging</head><p><s>Mice were head-fixed and placed on a heated platform under light isoflurane anaesthesia (0. 25 to 0.75%).</s><s>Their right forepaw rested on a metal rod (2 mm diameter) mounted on a galvanometric actuator (model.</s><s>no.</s><s>000-G120D, GSI Lumonics).</s><s>Ten 1 s vibrotactile stimuli consisting of a 100 Hz sinusoidal vibration were delivered to the forepaw with a 10 s inter stimulus interval.</s><s>The cranial window was illuminated by a collimated red light LED (635 nm peak, ACULED VHL, part.</s><s>no.</s><s>E001947, Perkin Elmer) and imaged with a CCD camera at 10 fps with a 256 by 332 pixels resolution (Retiga-2000R, Q Imaging).</s><s>The average difference image between the stimulation period and a 1.5 s baseline period was processed by a 50 by 50 pixels spatial averaging filter and subsequently smoothed by a 5 by 5 pixels Gaussian low pass filter with 0.5 pixels standard deviation.</s><s>Stimulus presentation and image acquisition were controlled by Ephus software (Scanimage.org).</s><s>The expression pattern of GCaMP6f was imaged by illuminating the cranial window with a collimated blue LED light (455 nm peak, ACULED VHL, part.</s><s>no.</s><s>E001947, Perkin Elmer) bandpass filtered between 465 and 495 nm (EX465-495 FITC, Nikon).</s><s>Before detection, the emitted green light was bandpass filtered between 515 and 555 nm (BA515-555 FITC, Nikon).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Two-photon Ca 2+ imaging</head><p><s>Imaging was performed with a custom built two-photon microscope (MIMMS, www.openwiki.janelia.org</s><s>) controlled by Scanimage 5.1 (Vidrio Technologies) using a 16x 0.8 NA objective (Nikon) and with excitation wavelength at 940 nm (Ultra II, tunable Ti:Sapphire laser, Coherent).</s><s>512 by 512 pixel images covering 626 by 665 µm of cortex were acquired at 29.82 Hz using bidirectional scanning with a resonant scanner system (Thorlabs).</s><s>The power was modulated with pockels cell (350-80-LA-02, Conoptics) and calibrated with a photodiode (Thorlabs).</s><s>The primary mirror for imaging was a custom polychroic (Chroma, zt470/561/nir-trans) transmitting the infrared light, while reflecting the green.</s><s>Before detection, the remaining infrared light was filtered with a colored glass band pass filter (BG39, Chroma) while blue light used for optogenetic forepaw stimulation was removed with a short pass filter (CG475, Chroma).</s><s>Images were acquired using photo multiplier tubes (H11706P-40 SEL, Hamamatsu) and written in 16 bit format to disk.</s><s>The trial start, reward and stimulus onset TTL pulses issued by the behavior PC were received as auxiliary triggers and their timestamps saved in the headers of the acquired images.</s><s>The saved timestamps were used for temporal alignment of Ca 2+ traces with behavioral variables during post-hoc analysis.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electrophysiology</head><p><s>In vivo recordings were performed in awake head-fixed mice (12 to 15 weeks old) and targeted to fS1.</s><s>A small craniotomy was drilled over fS1 in mice surgically implanted with a head bar as described above.</s><s>The electrode was an Ag/AgCl wire inserted into an internal solution filled glass pipette.</s><s>The internal solution contained (in mM) K-gluconate 134, KCl 6, HEPES 10, NaCl 4, Mg 2 -ATP 4, Tris 2 -GTP 0.3, Na-phosphocreatine 14, pH 7.25.</s><s>The pulled glass pipettes had a tip-resistance of 6 to 12 MΩ.</s><s>A second reference Ag/AgCl electrode connected to the headstage (CV-7B, Axon Instruments) was placed inside the recording chamber filled with saline.</s><s>Positive pressure was applied as the pipette was lowered until 100 µm below the pial surface and then advanced in 2 µm steps.</s><s>When action potentials were encountered, their wave shape had an initial negative phase.</s><s>If upon further electrode advancement, the initial phase flipped to positive and action potential amplitude increased to many orders of magnitude above baseline, the recording was considered to be juxtacellular, and extracellular otherwise.</s><s>All recordings were done in current clamp mode.</s><s>The signal was amplified and filtered (0.1 Hz to 10 kHz) at the headstage and acquired at 30 kHz (PCI-MIO-16E-4, National Instruments) using custom Matlab (Mathworks) routines.</s><s>Trial start and stimulus onset triggers were saved in parallel on separate channels and used for post-hoc alignment of recorded spikes.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Pharmacology</head><p><s>To block neural transmission from the forepaw, mice were briefly anaesthetized with isoflurane (3%) and 50 µL of Lidocaine (1%) was injected subcutaneously at level of the palmar wrist.</s><s>Mice were subsequently head-fixed under the two-photon microscope and allowed to recover from anaesthesia.</s><s>Vibrotactile responses were imaged from 12.6 ± 2.6 min to 17.7 ± 3.1 min post-injection and compared to responses imaged ≈10 min pre-injection.</s><s>The same procedure was repeated on either the previous or following day with 50 µL of saline with responses being imaged from 13.2 ± 3.5 min to 18.3 ± 3.7 min post injection.</s><s>Histology After hair removal and PFA 4% intracardiac perfusion, mouse forelimbs were sectioned at the elbow.</s><s>The samples were post-fixed in PFA 4% overnight and washed in PBS.</s><s>The sectioned forelimbs were decalcified by immersion in EDTA-Citronensäure-Puffer pH 7.5 <ref type="bibr">(ProTaqs, BIOCYC GmbH &amp; Co.)</ref> for 15 days at room temperature.</s><s>The decalcifying agent was changed once per week and decalcification was deemed complete by manually testing the bone resistance of each sample.</s><s>5 µm thick transverse sections were taken between elbow and fingertips and embedded in paraffin.</s><s>The sections were stained for eosin and hematoxylin using a standard protocol.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Vibrotactile stimuli</head><p><s>The vibrotactile stimuli were generated by a piezoelectric stack actuator (P-841.3,</s><s>Physik Instrumente) equipped with a strain gauge feedback sensor.</s><s>A steel rod (2 mm diameter) on which mice placed their forepaw was mounted on the actuator.</s><s>The actuator and sensor controllers (E-618.1 and E-509.S1, Physik Instrumente) operated in closed loop thereby counteracting any force the mouse applied.</s><s>Pure sinusoids (250 ms duration, 25 ms linear onset/offset ramps) of 11 different frequencies (100 to 800 Hz in 70 Hz increments) calibrated to produce a 5.45 µm displacement amplitude were sampled at 10 kHz (USB-6353, National Instruments) and fed to the actuator controller.</s><s>The sensor measurements were continuously acquired and recalibration of motor commands was regularly performed for the stimuli to remain highly consistent.</s><s>The spectrum of the acquired sensor measurements was analyzed post-hoc to ensure the integrity of their frequency content (Fig. <ref type="figure" target="#fig_0">S1</ref>).</s><s>The 800 Hz upper bound was imposed by the controller's bandwidth for the 5.45 µm displacement.</s><s>Two additional attenuated displacement amplitudes were tested with an extended frequency range: 1.08 µm (100 to 1360 Hz) and 0.23 µm (100 to 1990 Hz).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Optogenetic stimuli</head><p><s>Optogenetic stimuli were generated by blue light illumination (472 nm, 50 mW; Obis FP 473, Coherent) out of a fiber (3.5 µm core diameter, 0.045 NA).</s><s>The stimulus was a 20 Hz train of square pulses (500 ms duration, 25 ms pulse length) with the first and last pulses of the train set to half power (25 mW).</s><s>The fiber was inserted and fixed in the center of a 3D printed holder (3.5 mm diameter, 7.5 mm length) on which the mice placed their forepaw.</s><s>The stimuli were delivered using the same trial structure as with vibrotactile stimuli.</s><s>Touch stimuli Touch stimuli were delivered either manually or in an automatized manner with a custom built device.</s><s>Manual touches of different parts of the forepaw were gentle skin indentations using a 24 gauge needle.</s><s>For automatized indentations, a metal rod (0.5 mm diameter) was mounted on a miniature 8 Ω speaker (32KC08-1, Veco Vansonic) and guided through a tube (3 mm outer diameter) that was inserted and fixed in the center of the 3D printed paw holder (see above).</s><s>Touches were generated by relaying a 3 V signal to the speaker for 0.5 s and delivered using the same trial structure as with vibrotactile stimuli.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral procedures</head><p><s>Mice sat head-fixed in a tube (25 mm inner diameter) and were trained to place the forepaw contralateral to the imaged cortical site on the stimulation device.</s><s>The ipsilateral forelimb was blocked from protruding outside the tube.</s><s>On every trial, eight successive stimuli were delivered with a randomly varied inter-stimulus-interval (1.5 s to 2.5 s) followed by a water reward.</s><s>After reward consumption, a new trial started.</s><s>Paw placement was monitored with a digital fiberoptic sensor (FX-301, Panasonic).</s><s>Paw removal resulted in resetting the inter-stimulus-interval thereby enforcing that mice hold the stimulator at every stimulus onset.</s><s>Frequent paw removals therefore prolonged trial duration and delayed reward delivery, incentivising mice to continuously hold the stimulator to achieve higher reward rates.</s><s>Mice were trained ≈1 h/day for 7 to 10 days before the start of Ca 2+ imaging experiments.</s><s>The different vibrotactile frequencies were randomly sampled without replacement and at least 10 repetitions of each frequency were tested in a given imaging session.</s><s>The described experimental design enforced that mice hold the vibration device upon stimulus presentation.</s><s>Evoked responses could therefore not have been related to overt forelimb movements.</s><s>However, stimulus-triggered muscle twitches, increases in stiffness or proprioceptive inputs cannot be excluded.</s><s>We reasoned that neurons associated with these covert motor acts would be activated by reach-to-grasp forelimb movements.</s><s>Accordingly, as a control experiment, we modified the task by training mice to reach for the water reward instead of delivering it at the snout following the series of eight stimulus presentations.</s><s>For this purpose, the water drop was presented at the opening of a descending metal tube placed at reaching distance and mice executed forelimb reaches to grasp and consume the droplet (Movie S2).</s><s>Mice were trained ≈1 h/day for 10 to 14 days on this task before the start of Ca 2+ imaging experiments.</s><s>All behavior was controlled with real-time routines running on Linux (Bcontrol, brodylab.princeton.edu/bcontrol) and interfaced with Matlab (Mathworks) running on a separate PC.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Two-photon image analysis</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Movement correction</head><p><s>To correct for lateral movements, a custom MATLAB registration algorithm was used to align each image to a template taken as the average image of a 30 s resting baseline period recorded at the start of each session.</s><s>The cross-correlation was computed between each image and the template by multiplying the two-dimensional discrete Fourier transform of one with the complex conjugate of the Fourier transform of the other and taking the inverse Fourier transform of the product.</s><s>The row and column location of the peak cross-correlation value was taken as the vertical and horizontal shift, respectively.</s><s>10% of each image was cropped at the boundaries for the purposes of this computation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Region of interest and Ca 2+ activity generation</head><p><s>Using the session mean and variance images, soma centers of active neurons with clearly identifiable morphologies were manually initialized.</s><s>Regions of interest of individual neurons and background were then identified as spatial footprints using the constrained nonnegative matrix factorization method <ref type="bibr" target="#b35">(Pnevmatikakis et al., 2016)</ref> from the ca_source_extraction Matlab toolbox (gitgub.com/epnev/ca_source_extraction).</s><s>This algorithm also provided the timevarying calcium activity of each neuron and background/neuropil as well as their time-varying baseline fluorescence.</s><s>The two signals were used to compute Δf/f 0 traces used for analysis with the modeled background activity removed.</s><s>A denoised Δf/f 0 trace of each cell was inferred with a constrained deconvolution approach.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data analysis</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Significant responses</head><p><s>The stimulus-evoked Δf/f 0 response of a given neuron was computed as the difference between the maximum Δf/f 0 value post stimulus onset (between 0 and 0.6 s relative to onset) and the mean Δf/f 0 value pre-stimulus onset (between 0 s and -0.25 s relative to onset).</s><s>This computation was repeated 1999 times for randomly shifted stimulus onset times across the neuron's activity trace of the entire session.</s><s>In this manner, 1999 chance measures of the average Δf/f 0 response could be compared to the true Δf/f 0 response means for each vibration frequency.</s><s>If the true mean was more extreme than the upper 99 th percentile of the chance values distribution, the neuron was deemed to be responsive to that particular stimulus frequency.</s><s>This procedure constitutes a randomization test at significance level p&lt;0.01.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stimulus specific information</head><p><s>As a measure of frequency ( ) encoding by a neuron's evoked Δf/f 0 responses ( ) we calculated the stimulus specific information ( ) according to the method of Butts and Goldman <ref type="bibr" target="#b6">(Butts, 2003;</ref><ref type="bibr">Butts and Goldman, 2006)</ref>.</s><s>The responses were first binned into one of 11 uniformly distributed values.</s><s>We then computed the entropy of the stimulus ensemble and the entropy of the stimulus distribution conditional on a particular binned response value</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Two-photon Ca 2+ imaging of forepaw vibration related activity in somatosensory cortex of awake mice.</s><s>(A) Experimental setup schematic.</s><s>(B) "Trial" timeline in which eight successive vibrotactile stimuli were delivered followed by reward.</s><s>The variable inter-stimulus-interval (ISI) was reset upon forepaw release thereby ensuring contact with the stimulator at stimulus onset and incentivised continuous holding for higher reward rates.</s><s>(C) Dorsal view of the cranial window showing the expression patterns of GCaMP6f (green), the intrinsic signal (red) of contralateral forepaw stimulation (fS1: forelimb somatosensory cortex) and the location of the imaging field-of-view (FOV, cyan square).</s><s>(D) Locations of imaging FOVs (cyan squares) relative to the intrinsic signal center-of-mass of fS1 (red) of all experiments (19 mice, 42 FOVs).</s><s>(E) Cropped in-vivo image of GCaMP6f expressing cells in fS1 with five neurons (yellow arrows) responsive to vibrotactile stimulation.</s><s>(F) Imaged fluorescence changes in one "trial" of the five neurons shown in (E), in response to eight stimuli of different frequencies.</s></p></div></figDesc><graphic coords="8,125.58,61.20,360.84,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4.</s><s>The spikes of fS1 neurons are not cyclically entrained by the sinusoidal vibration.</s><s>(A) Experimental setup schematic.</s><s>(B) Spike raster plot of a neuron responding to a 170 Hz vibration.</s><s>To test for phaselocked spiking, the distribution of phases of the stimulus wave at times of spike occurrences was computed as depicted, for each responding neuron and all frequencies.</s><s>(C) Left: distribution of stimulus phases at spike times for a representative neuron at its best frequency (grey lines: phases of individual spikes, black contour: circular phase histogram).</s><s>Rayleigh test for non-uniformity of circular data: p=0.395.</s><s>Right: histogram of standardized inter-spikeintervals of the same example neuron.</s><s>χ 2 test for uniformity: p=0.1.</s></p></div></figDesc><graphic coords="11,35.58,35.58,540.84,435.66" type="vector_box" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>Response specificity to forelimb stimulation tested with peripheral nerve blocking.</s><s>(A) To test if the imaged neural responses were specific to vibrotactile stimulation of the forepaw, nerve transmission was blocked by lidocaine injection at the wrist level.</s><s>Equal volume (50 µL) saline injection was used as control.</s><s>For each neuron, the response change ratio (median +/-quartiles, n=83 cells, 8 mice) relative to pre-injection activity (zero level) was averaged across all frequencies with significant responses in the pre-injection period.</s><s>*: p&lt;10 -12 , Wilcoxon signedrank test.</s><s>(B) Representative neuron showing supressed responses across all tested frequencies after lidocaine (orange) but not saline (cyan) injection compared to pre-injection levels (black).</s><s>Top: denoised Δf/f 0 responses evoked by 520 Hz vibrations (thin lines: individual stimulus responses, thick lines: mean response).</s><s>Bottom: frequency tuning curves (dots: individual responses, lines: mean response).</s><s>Insets: cropped two-photon images showing that the same neuron was analyzed in both experiments (yellow arrow).</s><s>(C,D) Same data as in (B) for two representative neurons showing supressed responses in a restricted range of frequencies only.</s></p></div></figDesc><graphic coords="13,48.36,35.58,515.28,519.66" type="vector_box" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head></head><label></label><figDesc><div><p><s>Figure S1.</s><s>Spectral analysis of measured displacement produced by the vibrotactile stimuli.</s><s>(A) Example of a displacement measured by the stimulator's strain gauge (black) of a single 590 Hz vibration.</s><s>The bottom trace shows an expansion in time of the interval highlighted in red.</s><s>(B) Amplitude spectrum of the displacement produced by the 590 Hz stimulus indicates that the physical vibration consisted of a single frequency component (i.e.was a pure sinusoid).</s><s>Components apparent at higher frequencies were highly attenuated relative to the stimulation frequency and were for the most part continuously present as revealed by the signal spectrum of the pre-stimulus baseline period (blue).</s><s>Analogous amplitude spectra were obtained for stimuli at all other tested frequencies and amplitudes.</s></p></div></figDesc><graphic coords="15,74.40,35.58,463.20,264.06" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure S2 .</head><label>S2</label><figDesc><div><p><s>Figure S2.</s><s>Tuning curves change with vibration amplitude.</s><s>(A-E) Tuning curves changes and extension of the tested frequency range of five example neurons as the vibration amplitude is attenuated from 5.45 µm (black) to 1.08 µm (blue), to 0.23 µm (red).</s></p></div></figDesc><graphic coords="15,35.58,439.56,540.84,234.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head></head><label></label><figDesc><div><p><s>Figure S3.</s><s>Electrode recordings of vibrotactile responses in fS1.</s><s>(A) Examples of activity traces and action potentials recorded juxtacellularly and extracellularly in response to forepaw vibrations.</s><s>(B-I) Spike rasters (top) and spike rate estimates (middle) of representative units recorded in fS1 in response to three chosen stimulus frequencies with their complete tuning curves based on the evoked mean spike rates (bottom).</s></p></div></figDesc><graphic coords="16,35.58,35.58,540.84,549.66" type="vector_box" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head></head><label></label><figDesc><div><p><s>Figure S4.</s><s>Absence of auditory responses in imaged neurons.</s><s>(A)To test for the possibility that airborne sounds activated the imaged neurons in fS1, the forepaw was moved off the stimulator.</s><s>To test for the possibility that vibrations propagated through the body to the cochlea, loud white noise was used to mask this hypothetical stimulation.</s><s>The response change ratios (median ± quartiles) relative to the control condition (zero level) averaged across all frequencies with significant activity increases in the control condition show that with the forepaw off the stimulator, sound alone could not drive increases in Δf/f 0 (p&lt;10 -21 , Wilcoxon signed-rank test, n=113 cells, 9 mice) and that the white noise mask had but a small aversive effect on the responses (p=0.006,</s><s>n=128 cells, 9 mice).</s><s>Significant Δf/f 0 increases in none of the individual neurons could be evoked by sound alone at any frequency (p&lt;0.01,</s><s>randomization test, n=1999 repetitions).</s><s>(B) A representative fS1 neuron activated by forepaw vibrations (black: control condition) was irresponsive to sound alone (green: forepaw off condition) and unaffected by the auditory mask (blue: white noise condition).</s><s>Top: denoised Δf/f 0 responses evoked by 730 Hz and 1220 Hz vibrations (thin lines: individual stimulus responses, thick lines: mean response).</s><s>Bottom: frequency tuning curves tested with four different vibration amplitudes, as depicted by the greyscale bar, to cover the extended range of frequencies (dots: individual responses, lines: mean response).</s><s>Inset: cropped two-photon image depicting the same responding neuron in both conditions (yellow arrow).</s></p></div></figDesc><graphic coords="17,35.58,35.58,540.84,252.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head></head><label></label><figDesc><div><p><s>Figure S5.</s><s>Forelimb movements do not account for the frequency tuned vibrotactile responses.</s><s>(A) To test whether stimulus-locked motor events could drive neural responses in fS1, we trained mice to reach with their forelimb for the water reward following the series of forepaw vibrations on each trial.</s><s>(B-D) Representative neurons responding to either reach onset (B), target onset (C) or around the time of water consumption (d) but not to forepaw vibrations.</s><s>Left and middle: denoised Δf/f 0 responses to reaching and a chosen vibration frequency, respectively.</s><s>(thin lines: individual stimulus responses, thick lines: mean response, green shading in (C): range of reach onset times).</s><s>Right: frequency tuning curves (dots: individual responses, lines: mean response).</s><s>(E) Representative neuron responding to forepaw vibrations but not forelimb movements.</s><s>(F) Representative neuron responding to both events but not showing frequency tuned activity.</s><s>(G) Left: median peak Δf/f 0 during reaching vs. at preferred vibration frequency for all imaged neurons (156 cells, 3 mice, 8 FOVs).</s><s>Inset: enlarged view of the data in the black square.</s><s>Right: depiction of numbers of neurons responding to vibrotactile stimulation (red cross), reaching onset, target onset or water consumption (blue symbols) or to both events (magenta symbols).</s></p></div></figDesc><graphic coords="18,35.58,35.58,540.84,424.02" type="vector_box" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head></head><label></label><figDesc><div><p><s>Figure S6.</s><s>Absence of Pacinian corpuscles in the dermal layer of forepaw pads.</s><s>A transverse 5 µm section (haematoxylin and eosin stained) of a mouse forepaw.</s><s>The magnified panels show the absence of Pacinian corpuscles in the dermal layer of the palm pads.</s></p></div></figDesc><graphic coords="19,35.58,35.58,540.84,375.66" type="vector_box" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="9,35.58,50.78,541.62,369.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="10,35.58,35.58,540.84,226.86" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="12,35.58,35.58,540.84,370.44" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="14,35.58,35.18,540.84,364.84" type="bitmap" /></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>We thank <rs type="person">Vincent Hayward</rs> and <rs type="person">Sliman Bensmaia</rs> for their advice and comments on the manuscript, <rs type="person">Robert Zimmerman</rs> and <rs type="person">Gregorio Galinanes</rs> for help with histology, <rs type="person">Sylvain Crochet</rs> for advice on the electrophysiology experiments and <rs type="person">Claudia Bonardi</rs> for help with training mice on the forelimb reaching task.This work was supported by the <rs type="funder">Swiss National Science Foundation</rs> (<rs type="grantNumber">PP00P3_133710</rs>), the <rs type="funder">European Research Council (OPTOMOT)</rs>, the <rs type="funder">New York Stem Cell Foundation</rs> and the <rs type="funder">International Foundation for Paraplegia Research</rs>.D.H. is a <rs type="funder">New York Stem Cell Foundation-Robertson Investigator</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_A4VZqXV">
+					<idno type="grant-number">PP00P3_133710</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Movie S1.</s><s>Vibratory stimulation of mouse forelimb during cortical imaging.</s><s>Successive vibrations are delivered to the forelimb of a mouse followed by water reward.</s><s>The numerical values indicate the moment of stimulation and the vibration frequency.</s><s>Movie S2.</s><s>Vibratory stimulation of mouse forelimb followed by goal-directed reaching.</s><s>Successive vibrations are delivered to the forelimb of a mouse followed by reaching for a water droplet.</s><s>The numerical values indicate the moment of stimulation and the vibration frequency.</s><s>Movie S3.</s><s>Optogenetic stimulation of mouse forepaw during cortical imaging.</s><s>Movie S4.</s><s>Monitoring of paw placement during optogenetic stimulation.</s></p><p><s>is the fraction of stimuli with frequency and | is, for a particular response , the fraction of stimuli with frequency f.</s><s>The specific information of a response | represents the amount learned about the stimulus by a particular response and is used to compute the SSI as | where | is, for a particular frequency , the fraction of responses equal to binned value .</s><s>The SSI is the average information present in the evoked responses when vibration frequency is present.</s><s>Significant SSI values therefore identify vibration frequencies well-encoded by the neuron.</s><s>The undersampled probability distributions, due to a finite number of stimulus repetitions at each frequency, result in biased SSI values.</s><s>To correct for the bias, we computed the SSI with shuffled frequency labels and subtracted it from the SSI calculated with non-shuffled data.</s><s>This procedure was repeated 1999 times and if the lower 99 th percentile of the bias corrected SSI values was not more extreme than zero, SSI was deemed significant (i.e.</s><s>randomization test at significance level p&lt;0.01).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Tuning curve fitting</head><p><s>To characterize a neuron's tuning to vibration frequency, the normalized mean responses were fit to frequency ( ) by the following descriptive function using the method of non-linear least squares: exp ⁄ where and 0 if , and and if .</s><s>The five free parameters , , , and were fit by constraining to be less than 0.7 (normalized Δf/f 0 to maximum mean response), greater than 0.8 and less than 3000 Hz using the non-linear least squares method.</s><s>The fits were classified as: (i) frequency selective if 730 Hz and was not fixed at the bound, (ii) increases-to-plateau if 730 Hz and was fixed at the bound, in which case the fit was repeated with unbounded , and (iii) monotonically increasing if 730 Hz.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Phase-locked spiking</head><p><s>To determine whether a neuron was entrained by the sinusoidal vibration, we first calculated for each spike its corresponding phase in the stimulus cycle (Fig. <ref type="figure">4B</ref>) and grouped phase values across stimulus repetitions.</s><s>For a given stimulus frequency, spiking was deemed to be phase-locked if the null hypothesis that phase angles are uniformly distributed could be rejected at significance level 0.01 (Rayleigh test for non-uniformity of circular data).</s><s>Second, to control for variability in stimulus/response onset times, we calculated standardized inter-spike-intervals.</s><s>For a given vibration frequency, inter-spike-intervals ( ) of all possible spike pairs that occurred during stimulation were calculated and grouped across stimulus repetitions.</s><s>Because entrained spiking should yield an distribution that peaks at integer multiples of the sinusoidal stimulus period , values were converted to standardized inter-spike-intervals ( ) according to:</s></p><p><s>where is the integer multiple of closest to .</s><s>Spiking was deemed to be entrained by the stimulus periodicity if the null hypothesis that values are uniformly distributed could be rejected at significance level 0.01 (χ 2 test).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Video analysis</head><p><s>For optogenetic and touch stimuli, videos of the mouse forepaw were continuously acquired with a 1/3" CMOS camera (Firefly MV FMVU-03MTM, Point Grey Research).</s><s>A custom video acquisition software programmed in Matlab (Mathworks) saved 8-bit greyscale images (376 x 240 pixels) to disk at a rate of 30 frames/s.</s><s>The start of trial TTL pulses issued by the behavior PC were received as external triggers and frame times relative to trigger onset were saved in the image headers.</s><s>The saved timestamps were used for temporal alignment with Ca 2+ traces during post-hoc analysis.</s></p><p><s>Images corresponding to frames immediately preceding stimulus onset were used for estimating the stimulated paw region.</s><s>The horizontal and vertical means of each image were concatenated and the obtained traces mapped into a twodimensional space with t-Distributed Stochastic Neighborhood Embedding (t-SNE) (van der Maaten and Hinton, 2008b) using the t-SNE Matlab toolbox (lvdmaaten.github.io/tsne).</s><s>The initial dimensionality reduction via Principal Component Analysis performed by t-SNE was set to 5 dimensions and the t-SNE perplexity parameter to 15.</s><s>The mapped points formed identifiable clusters, each corresponding to a different stimulated location on the paw (Fig. <ref type="figure">7B</ref>).</s><s>Paw locations associated with each cluster were subjectively determined by visual inspection.</s><s>We estimated a neuron's receptive field by color coding the mapped points based on evoked Δf/f 0 responses (Fig. <ref type="figure">7A</ref>-C and Fig. <ref type="figure">S7A-C</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistics and data</head><p><s>No statistical methods were used to predetermine sample size and all experimental animals were included in the analysis.</s><s>The normality assumption was tested with the Kolmogorov-Smirnov test.</s><s>Non-parametric tests were used when the normality assumption was not met.</s><s>All data analyses were performed with custom written routines in Matlab.</s></p><p><s>All data analysed and all custom Matlab code used for the analysis in the current study are available from the corresponding author upon request.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">The sensory neurons of touch</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">E</forename><surname>Abraira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Ginty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="618" to="639" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Whisker vibration information carried by rat barrel cortex neurons</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Arabzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Panzeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="6011" to="6020" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Encoding of whisker vibration by rat barrel cortex neurons: implications for texture discrimination</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Arabzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Petersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="9146" to="9154" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Active Mechanisms of Vibration Encoding and Frequency Filtering in Central Mechanosensory Neurons</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Azevedo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Wilson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="446" to="460" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The structure and function of Pacinian corpuscles: a review</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bolanowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Holmes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Progress in neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="79" to="128" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">The representation of stimulus orientation in the early stages of somatosensory processing</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Bensmaia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V</forename><surname>Denchev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dammann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Craig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Hsiao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="776" to="786" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">How much information is associated with a particular stimulus?</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Butts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Network (Bristol, England)</title>
+		<editor>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Butts</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Goldman</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">92</biblScope>
+			<date type="published" when="2003">2003. 2006</date>
+		</imprint>
+	</monogr>
+	<note>PLoS biology</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Ultrasensitive fluorescent proteins for imaging neuronal activity</title>
+		<author>
+			<persName><forename type="first">T.-W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Wardill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Pulver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Renninger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Baohan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Schreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Kerr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Orger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">499</biblScope>
+			<biblScope unit="page" from="295" to="300" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Functional organization of squirrel monkey primary auditory cortex: responses to pure tones</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Cheung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H</forename><surname>Bedenbaugh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Nagarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Schreiner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="1732" to="1749" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">The Behavioral Ecology of Insect Vibrational Communication</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Cocroft</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Rodríguez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BioScience</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="323" to="334" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Auditory adaptation improves tactile frequency perception</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">E</forename><surname>Crommett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Perez-Bellido</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Yau</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="1352" to="1362" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Where&apos; and &apos;what&apos; in the whisker sensorimotor system</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Von Heimendahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Knutsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kleinfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ahissar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="601" to="612" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">High-frequency whisker vibration is encoded by phase-locked responses of neurons in the rat&apos;s barrel cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Eggermont</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<editor>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Ewert</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">C</forename><surname>Vahle-Hinz</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">157</biblScope>
+			<biblScope unit="page" from="5359" to="5368" />
+			<date type="published" when="2001">2001. 2008</date>
+		</imprint>
+	</monogr>
+	<note>Hearing research</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">A RET-ER81-NRG1 Signaling Pathway Drives the Development of Pacinian Corpuscles</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Fleming</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ramos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Talmage</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Abe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Arber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="10337" to="10355" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">The anatomy, function, and development of mammalian Abeta low-threshold mechanoreceptors</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Fleming</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in biology</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The role of frequency selectivity in measures of auditory and vibrotactile temporal resolution</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Formby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Morgan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">G</forename><surname>Forrest</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Raney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of the Acoustical Society of America</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="293" to="305" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Texture coarseness responsive neurons and their mapping in layer 2-3 of the rat barrel cortex in vivo</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Garion</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Dubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Khateb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Schiller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Azouz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schiller</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">3405</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Multiplexing stimulus information through rate and temporal codes in primate somatosensory cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Harvey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Saal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dammann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Bensmaia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS biology</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">1001558</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>3rd,</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Vibrational Communication in Subterranean Mole Rats (Spalax ehrenbergi)</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Heth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Frankenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Raz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Nevo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behavioral Ecology and Sociobiology</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="31" to="33" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S M</forename><surname>Hill</surname></persName>
+		</author>
+		<title level="m">Vibration communication in animals</title>
+		<meeting><address><addrLine>Cambridge, Massachusetts</addrLine></address></meeting>
+		<imprint>
+			<publisher>Harvard University press</publisher>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Characteristics of responses from receptors from the flexor longus digitorum muscle and the adjoining interosseous region of the cat</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Hunt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of physiology</title>
+		<editor>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Hunt</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Mcintyre</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">155</biblScope>
+			<biblScope unit="page" from="74" to="87" />
+			<date type="published" when="1960">1961. 1960</date>
+		</imprint>
+	</monogr>
+	<note>The Journal of physiology</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Slip-Based Coding of Local Shape and Texture in Mouse S1</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Isett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Feasel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Lane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Feldman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="418" to="433" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>e415</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Multiscale optical Ca2+ imaging of tonal organization in mouse auditory cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Issa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Haeffele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Bergles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Young</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">T</forename><surname>Yue</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="944" to="959" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Quantitative analysis of neuronal response properties in primary and higher-order auditory cortical fields of awake house mice (Mus musculus)</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Joachimsthaler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Uhlmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ehret</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kurt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The European journal of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="904" to="918" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Behavioral audiograms of homozygous med(J) mutant mice with sodium channel deficiency and unaffected controls</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Koay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Heffner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Heffner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hearing research</title>
+		<imprint>
+			<biblScope unit="volume">171</biblScope>
+			<biblScope unit="page" from="111" to="118" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Distribution of pacinian corpuscles in the hand of the monkey, Macaca fuscata</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kumamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Senuma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ebara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Matsuura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of anatomy</title>
+		<imprint>
+			<biblScope unit="volume">183</biblScope>
+			<biblScope unit="page" from="149" to="154" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+	<note>Pt 1</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Distribution of pacinian corpuscles in the cat forefoot</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kumamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Takei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kinoshita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ebara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Matsuura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of anatomy</title>
+		<imprint>
+			<biblScope unit="volume">182</biblScope>
+			<biblScope unit="page" from="23" to="28" />
+			<date type="published" when="1993">1993b</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Millisecond precision spike timing shapes tactile perception</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Mackevicius</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Best</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Saal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Bensmaia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="15309" to="15317" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">A toolbox of Cre-dependent optogenetic transgenic mice for light-induced activation and silencing</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Madisen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-M</forename><surname>Zhuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Berenyi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fujisawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-W</forename><forename type="middle">A</forename><surname>Hsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zanella</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="793" to="802" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">The effect of surface wave propagation on neural responses to vibration in primate glabrous skin</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">R</forename><surname>Manfredi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Baker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">O</forename><surname>Elias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dammann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Zielinski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">S</forename><surname>Polashock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Bensmaia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PloS one</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">31203</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">A Top-Down Cortical Circuit for Accurate Sensory Perception</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Manita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suzuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Homma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Matsumoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Odagawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yamada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ota</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Matsubara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Inutsuka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sato</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="1304" to="1316" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Rodents rely on Merkel cells for texture discrimination tasks</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Maricich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Morrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Mathes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Brewer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="3296" to="3300" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Auditory cortical neurons convey maximal stimulus-specific information at their best frequency</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Montgomery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wehr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="13362" to="13366" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Cortical neuronal mechanisms in flutter-vibration studied in unanesthetized monkeys. Neuronal periodicity and frequency discrimination</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">B</forename><surname>Mountcastle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Talbot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sakata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hyvarinen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="452" to="484" />
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Keeping an &quot;Ear&quot; to the Ground: Seismic Communication in Elephants</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>O'connell-Rodwell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physiology</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="287" to="294" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Simultaneous Denoising, Deconvolution, and Demixing of Calcium Imaging Data</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Pnevmatikakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Soudry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Machado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Merel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pfau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Reardon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Mu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lacefield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="285" to="299" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Seismic signalling as a means of communication in a subterranean mammal</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Levi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hauser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Witcher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Alder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Intrator</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wollberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Terkel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Animal Behaviour</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="1249" to="1251" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Seismic communication signals in the blind mole-rat (Spalax ehrenbergi): electrophysiological and behavioral evidence for their processing by the auditory system</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Terkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wollberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of comparative physiology A, Sensory, neural, and behavioral physiology</title>
+		<imprint>
+			<biblScope unit="volume">183</biblScope>
+			<biblScope unit="page" from="503" to="511" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Importance of spike timing in touch: an analogy with hearing?</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Reuter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nummela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hemilä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Saal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Bensmaia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of the Acoustical Society of America</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="142" to="149" />
+			<date type="published" when="1998">1998. 2016</date>
+		</imprint>
+	</monogr>
+	<note>Current opinion in neurobiology</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Periodicity and firing rate as candidate neural codes for the frequency of vibrotactile stimuli</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Salinas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hernandez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zainos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="5503" to="5515" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Active Touch and Self-Motion Encoding by Merkel Cell-Associated Afferents</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Severson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Van De Loo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Ginty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O'</forename><surname>Connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page" from="666" to="676" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Shapes and level tolerances of frequency tuning curves in primary auditory cortex: quantitative measures and population codes</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Sutter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page" from="1012" to="1025" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">The sense of flutter-vibration: comparison of the human capacity with response patterns of mechanoreceptive afferents from the monkey hand</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Talbot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Darian-Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Kornhuber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">B</forename><surname>Mountcastle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="301" to="334" />
+			<date type="published" when="1968">1968</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">A resource of Cre driver lines for genetic targeting of GABAergic neurons in cerebral cortex</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Taniguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Paik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sugino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kvitsiani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page" from="995" to="1013" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Visualizing data using t-SNE</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Van Der Maaten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Machine Learning Research</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">85</biblScope>
+			<date type="published" when="2008">2008a</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Visualizing Data using t-SNE</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Van Der Maaten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Machine Learning Research</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="2579" to="2605" />
+			<date type="published" when="2008">2008b</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Temporal frequency channels are linked across audition and touch</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Yau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Olenczak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dammann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Bensmaia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current biology : CB</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="561" to="566" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zelena</surname></persName>
+		</author>
+		<title level="m">Nerves and Mechanoreceptors</title>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Chapman &amp; Hall)</publisher>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

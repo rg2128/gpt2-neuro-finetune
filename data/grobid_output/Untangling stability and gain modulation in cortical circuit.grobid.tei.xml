@@ -1,0 +1,2338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Untangling stability and gain modulation in cortical circuits with multiple interneuron classes</title>
+				<funder ref="#_Y49mgme">
+					<orgName type="full">R01EB026953 (BD)</orgName>
+				</funder>
+				<funder ref="#_UvSksan">
+					<orgName type="full">National Institutes of Health</orgName>
+				</funder>
+				<funder ref="#_fJERwXu">
+					<orgName type="full">Vannevar Bush Faculty Fellowship</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Simons Foundation Collaboration on the Global Brain 542967 (BD)</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Cold Spring Harbor Laboratory</publisher>
+				<availability status="unknown"><p>Copyright Cold Spring Harbor Laboratory</p>
+				</availability>
+				<date type="published" when="2020-06-15">2020-06-15</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hannah</forename><surname>Bos</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Pittsburgh</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Neural Basis of Cognition</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christoph</forename><surname>Miehl</surname></persName>
+							<idno type="ORCID">0000-0001-9094-2760</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Anne-Marie</forename><surname>Oswald</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Neural Basis of Cognition</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Neuroscience</orgName>
+								<orgName type="institution">University of Pittsburgh</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Neurobiology</orgName>
+								<orgName type="institution">University of Chicago</orgName>
+								<address>
+									<settlement>Chicago</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Brent</forename><surname>Doiron</surname></persName>
+							<idno type="ORCID">0000-0002-6916-5511</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Pittsburgh</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Neural Basis of Cognition</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Neurobiology</orgName>
+								<orgName type="institution">University of Chicago</orgName>
+								<address>
+									<settlement>Chicago</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Statistics</orgName>
+								<orgName type="institution">University of Chicago</orgName>
+								<address>
+									<settlement>Chicago</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Untangling stability and gain modulation in cortical circuits with multiple interneuron classes</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<publisher>Cold Spring Harbor Laboratory</publisher>
+							<date type="published" when="2020-06-15" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">F72F7BECE2939A1603BD5836A45C39F2</idno>
+					<idno type="DOI">10.1101/2020.06.15.148114</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Synaptic inhibition is the mechanistic backbone of a suite of cortical functions, not the least of which is maintaining overall network stability as well as modulating neuronal gain.</s><s>Past cortical models have assumed simplified recurrent networks in which all inhibitory neurons are lumped into a single effective pool.</s><s>In such models the mechanics of inhibitory stabilization and gain control are tightly linked in opposition to one another -meaning high gain coincides with low stability and vice versa.</s><s>This tethering of stability and response gain restricts the possible operative regimes of the network.</s><s>However, it is now well known that cortical inhibition is very diverse, with molecularly distinguished cell classes having distinct positions within the cortical circuit.</s><s>In this study, we analyze populations of spiking neuron models and associated mean-field theories capturing circuits with pyramidal neurons as well as parvalbumin (PV) and somatostatin (SOM) expressing interneurons.</s><s>Our study outlines arguments for a division of labor within the full cortical circuit where PV interneurons are ideally positioned to stabilize network activity, whereas SOM interneurons serve to modulate pyramidal cell gain.</s><s>This segregation of inhibitory function supports stable cortical dynamics over a large range of modulation states.</s><s>Our study offers a blueprint for how to relate the circuit structure of cortical networks with diverse cell types to the underlying population dynamics and stimulus response.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>A prominent feature of cortical neurons is that their responses to stimuli are quite malleable, depending upon a host of factors.</s><s>For instance, the global structure of a sensory scene activates surround receptive fields, normalizing the response of cortical neurons to their preferred stimuli <ref type="bibr" target="#b1">(Adesnik et al., 2012;</ref><ref type="bibr" target="#b11">Carandini and Heeger, 2012;</ref><ref type="bibr" target="#b65">Reynolds and Heeger, 2009;</ref><ref type="bibr">Vinje and Gallant, 2000)</ref>.</s><s>Alternatively, top-down projections can also mediate how cortical responses change with directed attention <ref type="bibr" target="#b14">(Cohen and Maunsell, 2009;</ref><ref type="bibr" target="#b67">Ruff et al., 2018</ref><ref type="bibr">), subject arousal (McGinley et al., 2015)</ref>, or task engagement <ref type="bibr" target="#b19">(Downer et al., 2015)</ref>.</s><s>On the whole, these neuronal response shifts are reliably signaled by changes in neuronal firing rates <ref type="bibr" target="#b11">(Carandini and Heeger, 2012;</ref><ref type="bibr" target="#b31">Harris and Thiele, 2011;</ref><ref type="bibr" target="#b56">Niell and Stryker, 2010;</ref><ref type="bibr" target="#b67">Ruff et al., 2018)</ref>, the spectral content of local field potentials <ref type="bibr" target="#b31">(Harris and Thiele, 2011;</ref><ref type="bibr" target="#b56">Niell and Stryker, 2010)</ref> as well as single neuron membrane potentials <ref type="bibr">(Poulet and Petersen, 2008)</ref>, and finally the magnitude of spike train correlations across a population <ref type="bibr" target="#b17">(Doiron et al., 2016)</ref>.</s><s>These observations have prompted studies that focus on how inhibitory circuits are key mediators of cortical state modulations.</s><s>Indeed, inhibition has been implicated in the suppression of neuronal activity <ref type="bibr" target="#b0">(Adesnik, 2017;</ref><ref type="bibr" target="#b1">Adesnik et al., 2012;</ref><ref type="bibr" target="#b29">Haider et al., 2013;</ref><ref type="bibr" target="#b37">Kato et al., 2017)</ref>, gain control of pyramidal neuron firing rates <ref type="bibr" target="#b24">(Ferguson and Cardin, 2020;</ref><ref type="bibr" target="#b38">Katzner et al., 2011;</ref><ref type="bibr" target="#b61">Phillips and Hasenstaub, 2016;</ref><ref type="bibr" target="#b73">Silver, 2010)</ref> and correlated neuronal fluctuations <ref type="bibr" target="#b57">(Okun and Lampl, 2008)</ref>, rhythmic population activity <ref type="bibr" target="#b4">(Atallah and Scanziani, 2009;</ref><ref type="bibr" target="#b93">Womelsdorf et al., 2014)</ref>, and spike timing of pyramidal neurons <ref type="bibr" target="#b6">(Berman and Maler, 1998;</ref><ref type="bibr" target="#b89">Wehr and Zador, 2003)</ref>.</s><s>However, inhibition must also prevent runaway cortical activity that would otherwise lead to pathological activity <ref type="bibr" target="#b29">(Haider et al., 2013;</ref><ref type="bibr" target="#b58">Ozeki et al., 2009;</ref><ref type="bibr" target="#b84">Veit et al., 2017)</ref>, enforcing constraints on how inhibition can modulate pyramidal neuron activity.</s><s>In sum, using inhibitory interactions to expose the physiological and circuit basis for how cortical activity changes depending upon processing or cognitive needs has been a longstanding and popular avenue of study <ref type="bibr" target="#b35">(Isaacson and Scanziani, 2011)</ref>.</s></p><p><s>While inhibition has been long measured <ref type="bibr" target="#b21">(Eccles et al., 1954;</ref><ref type="bibr" target="#b32">Hartline et al., 1956;</ref><ref type="bibr" target="#b49">Lloyd, 1946)</ref>, the past fifteen years have witnessed a newfound appreciation of its diversity.</s><s>The invention and widespread use of cell-specific labeling and optogenetic control <ref type="bibr" target="#b23">(Fenno et al., 2011)</ref>, combined with the detailed genetic and physiological characterization of cortical interneurons <ref type="bibr" target="#b36">(Jiang et al., 2015;</ref><ref type="bibr" target="#b51">Markram et al., 2004)</ref> has painted a complex picture of a circuit that was previously considered to be simpler <ref type="bibr" target="#b18">(Douglas et al., 1989)</ref>.</s><s>The standard cortical circuit now includes (at a minimum) somatostatin (SOM) and parvalbumin (PV) expressing interneuron classes, with distinct synaptic interactions between these classes as well as with pyramidal neurons <ref type="bibr" target="#b36">(Jiang et al., 2015;</ref><ref type="bibr" target="#b39">Kepecs and Fishell, 2014;</ref><ref type="bibr" target="#b60">Pfeffer et al., 2013;</ref><ref type="bibr" target="#b78">Tremblay et al., 2016)</ref>.</s><s>This new circuit reality presents some clear challenges <ref type="bibr" target="#b12">(Cardin, 2018;</ref><ref type="bibr" target="#b24">Ferguson and Cardin, 2020;</ref><ref type="bibr" target="#b81">Urban-Ciecko and Barth, 2016;</ref><ref type="bibr" target="#b94">Wood et al., 2017;</ref><ref type="bibr" target="#b97">Yavorska and Wehr, 2016)</ref>, foremost being to uncover how state changes that were previously associated with inhibition in a broad sense, should be distributed over these diverse interneuron classes.</s></p><p><s>An attractive hypothesis is that SOM and PV interneurons are within-group functionally homogeneous, yet each class performs functions that are distinct from those of the other classes <ref type="bibr" target="#b33">(Hattori et al., 2017;</ref><ref type="bibr" target="#b39">Kepecs and Fishell, 2014;</ref><ref type="bibr" target="#b87">Wang et al., 2004)</ref>.</s><s>In line with this idea, early optogenetic studies of PV and SOM neurons in the mouse visual cortex showed differential multiplicative and subtractive modulations of excitatory neuron responses <ref type="bibr" target="#b3">(Atallah et al., 2012;</ref><ref type="bibr" target="#b92">Wilson et al., 2012)</ref>.</s><s>However, such tidy arithmetic of inhibitory modulation is likely an over-abstraction, and a detailed analysis of data from the auditory cortex shows a mixed modulatory influence of both SOM and PV interneurons <ref type="bibr" target="#b72">(Seybold et al., 2015)</ref>.</s><s>Another popular functional distinction between interneuron classes is their roles in disinhibitory cortical circuits <ref type="bibr" target="#b26">(Fu et al., 2014;</ref><ref type="bibr" target="#b43">Large et al., 2018;</ref><ref type="bibr" target="#b45">Lee et al., 2013;</ref><ref type="bibr" target="#b62">Pi et al., 2013;</ref><ref type="bibr" target="#b88">Wang and Yang, 2018)</ref>, specifically when one interneuron class inhibits another class and thereby releasing pyramidal neurons from a source of inhibition.</s><s>Yet inhibition can be complicated to dissect in the full cortical circuit.</s><s>For instance, the SOM → E inhibitory pathway competes with the SOM → PV → E disinhibitory pathway for pyramidal neuron (E) influence.</s><s>This competition could underlie differences in how SOM neurons suppress pyramidal neuron activity in layer 2/3 of visual and auditory cortex <ref type="bibr" target="#b0">(Adesnik, 2017;</ref><ref type="bibr" target="#b1">Adesnik et al., 2012;</ref><ref type="bibr" target="#b37">Kato et al., 2017)</ref> yet increase activity in layer 4 of somatosensory cortex <ref type="bibr" target="#b95">(Xu et al., 2013)</ref>.</s><s>These difficulties in interpretation likely arise from an incomplete analysis: selected feedforward sub motifs within the full recurrent circuit are considered, yet with a tacit ignorance of the other pathways that will nevertheless still contribute to the cortical response.</s><s>A proper untangling of the complexity of a fully recurrent cortical circuit requires a modeling framework where a rigorous analysis can be performed.</s></p><p><s>Cortical models with both excitatory and inhibitory pathways have a long history of study <ref type="bibr" target="#b27">(Griffith, 1963;</ref><ref type="bibr" target="#b91">Wilson and Cowan, 1972)</ref>.</s><s>Models with just a single inhibitory interneuron class have successfully explained a wide range of cortical behavior; from contrast dependent nonlinearities in cortical response <ref type="bibr" target="#b58">(Ozeki et al., 2009;</ref><ref type="bibr" target="#b66">Rubin et al., 2015)</ref>, to the genesis of irregular and variable spike discharge <ref type="bibr" target="#b10">(Brunel and Hakim, 1999;</ref><ref type="bibr" target="#b83">van Vreeswijk and Sompolinsky, 1996)</ref>, and finally to the mechanisms underlying high-frequency cortical network rhythms <ref type="bibr" target="#b8">(Bos et al., 2016;</ref><ref type="bibr" target="#b86">Wang, 2010)</ref>.</s><s>On the surface, it may seem surprising that cortical models that ignore inhibitory diversity can nevertheless account for such a range of cortical behavior.</s><s>However, these models are often designed to capture only a single aspect of cortical responses, and rarely do they account for how a set of neuronal correlates (firing rates, response gain, neuronal correlations, etc.) shift with the cortical state.</s><s>In truth, perhaps the most compelling reason that theorists lag behind the reality of a diverse interneuron cortical circuit is that there are serious complications in model analysis when multiple interneuron classes are introduced.</s><s>Indeed, the set of model parameters and the landscape of possible solutions both increase dramatically with the addition of new neuron classes.</s><s>In total, there is a real need for a cogent analysis of the behavior of multi-interneuron cortical circuits models.</s></p><p><s>We present a circuit theory for previously developed multi-interneuron cortical circuit models <ref type="bibr" target="#b15">(del Molino et al., 2017;</ref><ref type="bibr" target="#b41">Kuchibhotla et al., 2017;</ref><ref type="bibr" target="#b17">Litwin-Kumar et al., 2016;</ref><ref type="bibr" target="#b50">Mahrach et al., 2020;</ref><ref type="bibr" target="#b84">Veit et al., 2017)</ref> with the goal of giving a mechanistic understanding of how diverse inhibitory interneurons participate in the circuit level modulation of cortical responses.</s><s>In particular, we consider modulatory inputs to SOM neurons which aim to shift the operative state of the full E -PV -SOM neuron circuit.</s><s>We expose a circuit-based relationship between how SOM neuron modulations co-determine network stability and response gain.</s><s>More to the point, the underlying E -PV -SOM circuit supports a division of labor <ref type="bibr" target="#b87">(Wang et al., 2004)</ref>, whereby PV neurons are well-positioned to provide network stability, allowing SOM neurons the freedom to modulate response gain.</s><s>Our theoretical framework offers an attractive platform to probe how interneuron circuit structure determines gain and stability which may generalize well beyond the sensory cortices where these interneuron circuits are currently best characterized.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The inhibitory and disinhibitory pathways of the E -PV -SOM circuit</head><p><s>There is strong in vivo evidence that SOM interneurons play a critical role in the modulation of cortical response <ref type="bibr" target="#b81">(Urban-Ciecko and Barth, 2016;</ref><ref type="bibr" target="#b97">Yavorska and Wehr, 2016)</ref>.</s><s>However, the complex wiring between excitatory and inhibitory neurons <ref type="bibr" target="#b36">(Jiang et al., 2015;</ref><ref type="bibr" target="#b60">Pfeffer et al., 2013;</ref><ref type="bibr" target="#b78">Tremblay et al., 2016)</ref> presents a challenge when trying to expose the specific mechanisms by which SOM neurons modulate cortical response.</s><s>Two distinct inhibitory circuit pathways are often considered when disentangling the impact of SOM inhibition on pyramidal neuron (E) response.</s><s>We introduce these pathways with a pair of studies that are emblematic of these circuit motifs.</s></p><p><s>In the first line of study, SOM neuron activity in layer 2/3 of the mouse visual cortex was recruited by expanding the spatial scale of an orientated drifting grating visual stimulus <ref type="bibr" target="#b0">(Adesnik, 2017;</ref><ref type="bibr" target="#b1">Adesnik et al., 2012)</ref>.</s><s>This resulted in decreased activity of putative layer 2/3 E neurons whose spatial receptive field was in the center of a visual image.</s><s>The simplest interpretation is that the increased SOM activity inhibited E neurons via direct SOM → E connectivity.</s><s>Similar suppression of E neuron response from direct SOM inhibition has been implicated in other studies <ref type="bibr" target="#b88">(Wang and Yang, 2018)</ref>, and a disinhibition of SOM → E projections is often mediated through vasoactive intestinal-peptide (VIP) neurons projections to SOM neurons <ref type="bibr" target="#b26">(Fu et al., 2014;</ref><ref type="bibr" target="#b62">Pi et al., 2013)</ref>.</s><s>In the second study, layer 4 SOM neurons in mouse somatosensory cortex were optogenetically silenced <ref type="bibr" target="#b95">(Xu et al., 2013)</ref>.</s><s>This resulted in increased activity of PV neurons, and a subsequent decreased activity of E neurons.</s><s>The authors intuited a suppression of the disinhibitory pathway SOM → PV → E as the source of reduced E neuron activity.</s><s>Taken together, the pair of studies seem in opposition to one another, with SOM neuron activity providing either a source or a relief of E neuron suppression.</s><s>This response dichotomy prompted us to consider what physiological and circuit properties of the E -PV -SOM circuit are critical determinants of whether an increase in SOM neuron activity results in an increase or a decrease in E neuron response.</s></p><p><s>An answer to this question requires consideration of the full recurrent connectivity within the E -PV -SOM neuron circuit, as opposed to analysis restricted to just the SOM → E and SOM → PV → E sub motifs within the circuit.</s><s>Fortunately, there is a detailed physiological characterization of the specific connectivity patterns of inhibitory subtypes within the cortical circuit <ref type="bibr" target="#b36">(Jiang et al., 2015;</ref><ref type="bibr" target="#b60">Pfeffer et al., 2013;</ref><ref type="bibr" target="#b78">Tremblay et al., 2016)</ref>.</s><s>Briefly, PV neurons couple strongly to other PV neurons as well as to E neurons, while SOM neurons connect strongly to PV and E neurons, but not to other SOM neurons.</s><s>Finally, both PV and SOM neurons receive inputs from E neurons.</s><s>We incorporate these circuit details in a network of leaky integrate-and-fire model neurons where the E, PV, and SOM subclasses are represented (Fig. <ref type="figure" target="#fig_0">1A</ref>; see Methods 1.1).</s><s>The simplicity of the spiking dynamics makes our model amenable to a mean-field reduction which captures the bulk spiking activity of each subpopulation of neurons (where r E , r P , and r S denote the E, PV, and SOM populations respectively; see Methods 1.2), as has been done by similar studies of the E -PV -SOM cortical circuit <ref type="bibr" target="#b15">(del Molino et al., 2017;</ref><ref type="bibr" target="#b41">Kuchibhotla et al., 2017;</ref><ref type="bibr" target="#b17">Litwin-Kumar et al., 2016;</ref><ref type="bibr" target="#b50">Mahrach et al., 2020)</ref>.</s><s>A, Sketch of the network model with neuron class-specific connections motivated by <ref type="bibr" target="#b60">(Pfeffer et al., 2013)</ref>.</s><s>A modulatory input (black line) is applied to the SOM neurons.</s><s>This input results in a change in the SOM neuron population firing rate (δr S ; green line), which in turn causes a change of excitatory neuron activity (δr E ; red line).</s><s>Assuming a linear relation between δr S and δr E allows δr E to be determined by summing over all possible pathways through the network by which SOM activity can influence E activity (see Eq. ( <ref type="formula" target="#formula_23">23</ref>)).</s><s>B, The relation between δr S and δr E after summing over all paths (see Eq. ( <ref type="formula" target="#formula_27">26</ref>)).</s><s>Sketches visualizes the tradeoff between the inhibitory and disinhibitory pathways.</s><s>J κγ summarizes the number and strength of connections from population γ to population κ (κ ,γ ∈ {E, P, S}, see Eq. ( <ref type="formula" target="#formula_8">7</ref>)); β κ denotes the cellular gain of population κ (see Eq. ( <ref type="formula">16</ref>)), and W EP the effective connectivity matrix between the E and PV populations (see Eq. ( <ref type="formula" target="#formula_19">17</ref>)).</s></p><p><s>Using our model we ask how a modulation of the SOM neuron activity, resulting in r S → r S + δr S , is transferred to a modulation of E neuron activity yielding r E → r E +δr E (Fig. <ref type="figure" target="#fig_0">1A</ref>, green and red inset timeseries).</s><s>If δr S is sufficiently small we can linearize around a given dynamical state of the model so that δr E = L ES δr S , where L ES is the transfer coefficient between SOM and E neuron modulations.</s><s>In principle L ES depends on the synaptic matrix J that defines the coupling between neuron classes, as well as the cellular gain, β, of all neurons classes (see Methods 1.3).</s><s>Since the neuron transfer is nonlinear (see Eq. ( <ref type="formula" target="#formula_11">10</ref>)), the β values, and by extension L ES , depend upon the operating point of the network.</s><s>While L ES is straightforward to compute <ref type="bibr" target="#b15">(del Molino et al., 2017;</ref><ref type="bibr" target="#b17">Litwin-Kumar et al., 2016)</ref> it can be cumbersome, and extracting clear insight about how J and β influence modulation can be difficult.</s></p><p><s>It is instructive to express L ES as a sum over all possible synaptic pathways by which SOM neuron activity can influence E neuron activity (Fig. <ref type="figure" target="#fig_0">1A</ref>, right; see Eq. ( <ref type="formula" target="#formula_23">23</ref>)).</s><s>Fortunately, this sum can be simplified so that just two network motifs determine the sign of L ES (Fig. <ref type="figure" target="#fig_0">1B</ref>; see Methods 1.3).</s><s>These motifs reflect both the disinhibitory component of the network (the SOM → PV → E connections, labeled pathway p I in Fig. <ref type="figure" target="#fig_0">1B</ref>) and the inhibitory component (the PV → PV and SOM → E connections, labeled pathway p II in Fig. <ref type="figure" target="#fig_0">1B</ref>).</s><s>Interestingly, these motifs corresponds to the pathways evoked in our motivating pair of experimental studies (p I in <ref type="bibr" target="#b95">(Xu et al., 2013)</ref> and p II in <ref type="bibr" target="#b1">(Adesnik et al., 2012)</ref>).</s><s>The net pathway is a tradeoff between these two motifs, where p I vies for disinhibition (L ES &gt; 0) while p II vies for inhibition (L ES &lt; 0).</s></p><p><s>Whether the full motif is inhibitory or disinhibitory depends (somewhat expectantly) on the three connection strengths J EP , J PS , and J ES (J EP is the synaptic strength of the PV → E neuron pathway; the other connections have the same nomenclature).</s><s>However, what is unexpected is that it also depends on the recurrent strength between PV neurons, J PP (the β P J PP term in pathway p II ).</s><s>Further, since β P depends on the operating point of the network then the tradeoff between the two pathways can be controlled by PV neuron modulation.</s><s>In particular, since β P increases with r P then L ES can transition from effectively inhibitory for low PV activity (small β P ) to effectively disinhibitory for higher PV activity (large β P ).</s><s>However, this is only possible if the combined SOM → PV and PV → E connections are stronger than the combined PV → PV and SOM → E connections.</s><s>We remark that other connections and the activity of the excitatory and SOM neurons only contribute to the amplitude of the effective pathway (as reflected in the prefactor in Fig. <ref type="figure" target="#fig_0">1B</ref>).</s><s>Thus, changing the activity of E and SOM neurons does not explicitly change the sign of L ES .</s></p><p><s>Pfeffer et al. <ref type="bibr" target="#b60">(Pfeffer et al., 2013)</ref> report that in L2/3 and L5 of the mouse visual cortex the SOM → E connection is stronger than the SOM → PV connection, while the connections from PV → E neurons and PV → PV neurons are comparably strong.</s><s>Given these facts, our analysis suggests that the inhibitory pathway p II outweighs the disinhibitory pathway p I , so that L ES &lt; 0. This is consistent with the SOM suppression of E neuron activity by large drifting gratings reported by Adesnik et al. <ref type="bibr" target="#b1">(Adesnik et al., 2012)</ref> in L2/3 of mouse visual cortex.</s><s>Alternatively, Xu et al. <ref type="bibr" target="#b95">(Xu et al., 2013)</ref> find stronger SOM → PV than SOM → E connections in L4 mouse somatosensory cortex.</s><s>However, since the relative strength of the PV → E and PV → PV connection strengths are unknown, our analysis cannot predict whether the effective pathway is inhibitory or disinhibitory.</s></p><p><s>In sum, while the full E -PV -SOM recurrent circuit invokes a multitude of polysynaptic pathways, a tradeoff between the two central disynaptic pathways often appealed to in literature, p I and p II , does indeed determine the modulatory influence of SOM neurons upon E neurons.</s><s>Having now identified the central role of these two pathways, in the following sections we investigate how they control the stimulus -response gain of E neurons.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Comparison of gain modulation by the two inhibitory pathways</head><p><s>Gain modulation refers to changes in the sensitivity of neuron activity to changes in a driving input <ref type="bibr" target="#b24">(Ferguson and Cardin, 2020;</ref><ref type="bibr" target="#b73">Silver, 2010;</ref><ref type="bibr" target="#b90">Williford and Maunsell, 2006)</ref>.</s><s>Typically, the driving input is a feature of a sensory scene and individual neuron responses show tuning to specific feature value.</s><s>In a later section we will consider gain modulation of tuned responses, but to begin we simply consider a homogeneous input (I stim ) that targets both E and PV neurons <ref type="bibr" target="#b78">(Tremblay et al., 2016)</ref>, and we compute the E neuron network gain as the dr E /dI stim (Eq.</s><s>( <ref type="formula">27</ref>)).</s><s>Here, network gain measures the sensitivity of r E owing to the activity of the full recurrent circuit in response to a change in I stim .</s><s>This is opposed to the cellular gain β E which measures the sensitivity of r E to a change in the full input current to E neurons due to both the external stimulus and internal interactions.</s><s>Our circuit model allows us to compare and contrast the effectiveness of network gain modulation via the disinhibitory pathway from SOM → PV → E neurons (p I ; Fig. <ref type="figure" target="#fig_1">2Ai</ref>) to modulation via the direct SOM → E pathway (p II ; Fig. <ref type="figure" target="#fig_1">2Bi</ref>).</s><s>In what follows we explore the E -PV -SOM circuit with both simulations of populations of integrate-and-fire model neurons (Methods 1.1) as well as an associated firing rate model (Methods 1.2).</s></p><p><s>We first address modulation via the disinhibitory pathway p I with SOM neurons being depolarized by a modulatory input (I mod &gt; 0).</s><s>Examples such a modulation include suppressed VIP inhibition onto SOM neurons <ref type="bibr" target="#b62">(Pi et al., 2013)</ref>, activation of pyramidal cells located outside the circuit yet preferentially projecting to SOM neurons <ref type="bibr" target="#b1">(Adesnik et al., 2012)</ref>, and direct cholinergic modulation of SOM neurons <ref type="bibr" target="#b41">(Kuchibhotla et al., 2017;</ref><ref type="bibr" target="#b81">Urban-Ciecko and Barth, 2016)</ref>.</s><s>Modulations that increase SOM neurons activity (Fig. <ref type="figure" target="#fig_1">2Aii</ref>, green) suppress the activity of PV neurons (Fig. <ref type="figure" target="#fig_1">2Aii</ref>, blue), thereby removing inhibition from E neurons and increasing their firing rates (Fig. <ref type="figure" target="#fig_1">2Aii,</ref><ref type="figure">red</ref>).</s><s>For small modulations (I mod &lt; 15 Hz), the slight increase in E neuron firing rates causes an increase in E neuron network gain by increasing cellular gain β E (Fig. <ref type="figure" target="#fig_1">2Aiii</ref>, black).</s><s>For larger modulations (I mod &gt; 20 Hz), PV neuron firing rates increase due to increased excitatory feedback from E → PV neurons which overcomes the feedforward inhibition of the SOM → PV neuron pathway.</s><s>The switch from suppressed PV activity to enhanced PV activity marks the transition of the E -PV sub-circuit from a non-inhibition stabilized network (non-ISN) to an inhibition stabilized network (ISN) <ref type="bibr" target="#b17">(Litwin-Kumar et al., 2016;</ref><ref type="bibr" target="#b58">Ozeki et al., 2009;</ref><ref type="bibr" target="#b80">Tsodyks et al., 1997)</ref>.</s><s>In the ISN state, the recurrently coupled E neurons are not stable by themselves but are stabilized by recurrent inhibition from PV neurons.</s><s>Our firing rate model predicts that increased recurrent inhibition also suppresses network response to input and can decrease E neuron network gain for sufficiently strong modulations (Fig. <ref type="figure" target="#fig_1">2Aiii</ref>, black curve).</s><s>The maximum in response gain occurs after the network has transitioned to the ISN regime (see Methods 1.4).</s></p><p><s>At high values of modulatory input (I mod &gt; 30 Hz) there is a severe disagreement between the firing rates and network gain obtained with the integrate-and-fire neuron simulations compared to those from analysis of the firing rate model (Fig. <ref type="figure" target="#fig_1">2Aiii</ref>, compare points to the curve).</s><s>The firing rate description assumes near Poisson spiking dynamics and negligible correlations between neuron spike trains (Methods 1.2).</s><s>Thus, the discrepancy between theory and simulations hints at a shift in the spiking network dynamics away from the asynchronous irregular regime <ref type="bibr" target="#b9">(Brunel, 2000;</ref><ref type="bibr" target="#b63">Renart et al., 2010)</ref>.</s><s>Indeed, while the population spike times of the E neurons in the integrate-and-fire simulations show irregular spiking for low modulation <ref type="bibr">(Fig. 2Aiv,</ref><ref type="bibr">top)</ref>, this gives way to more synchronous activity when reaching maximal gain (Fig. <ref type="figure" target="#fig_1">2Aiv</ref>, middle) and eventually pathologic synchronous population bursts for large modulation (Fig. <ref type="figure" target="#fig_1">2Aiv</ref>, bottom).</s><s>Past modeling work has shown how fast recurrent inhibition within a cortical circuit can maintain an asynchronous spiking dynamic <ref type="bibr" target="#b34">(Huang et al., 2019;</ref><ref type="bibr" target="#b63">Renart et al., 2010;</ref><ref type="bibr" target="#b76">Tetzlaff et al., 2012)</ref>.</s><s>Thus, it is to be expected that suppressing the normally strong recurrent PV inhibition via pathway p I will lead to a breakdown of the asynchronous state that is supported in the E -PV subcircuit.</s><s>In total, modulation of E neuron network gain through the disinhibitory pathway p I is restricted to only sufficiently weak modulations.</s><s>The stimulus targets E and PV neurons and modulatory input targets SOM neurons.</s><s>A, Disinhibition via SOM→PV→E: ii) Stationary population firing rates of excitatory neurons (red), PV neurons (blue) and SOM neurons (green) dependent on modulation of the SOM neurons.</s><s>Dots correspond to simulation results of populations of leaky-integrate-and-fire neurons (Methods 1.1).</s><s>Solid lines denote analytical predictions obtained from mean-field theory (Eq.</s><s>( <ref type="formula" target="#formula_15">13</ref>)).</s><s>iii) Gain of excitatory neurons (black, Eq. ( <ref type="formula">27</ref>)) depending on the modulation of SOM neurons.</s><s>Simulation (dots) and theoretical results (solid lines) in A and B are normalized separately to their maxima in B. iv) Raster plots showing all spike times of the excitatory neurons in a 50 ms segment for three levels of modulation (see markers in iii).</s><s>B Inhibition via SOM → E: ii-iv) as in A. Parameters: p PS = 0.1 (I), p PS = 0 (II), p ES = 0 (I), p ES = 0.1 (II), p SE = 0 (I, II), p ext,inh S varies between 0.0225 and 0.00675 in (I) and between 0.01125 and 0.0225 in (II) (see also Eq. ( <ref type="formula" target="#formula_9">8</ref>), p ext,inh E = 0.01 (I).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Aii</head><p><s>In the second pathway, p II , SOM neurons project directly to E neurons, so we consider modulations that inhibit SOM neurons (I mod &lt; 0) and result in net disinhibition of E neurons.</s><s>Consequently, E neurons increase their firing rates and then drive PV neurons to increased rates (Fig. <ref type="figure" target="#fig_1">2Bii</ref>).</s><s>Through-out the modulation E neuron network gain increases monotonically from low to high values (Fig. <ref type="figure" target="#fig_1">2Biii</ref>).</s><s>Further, network dynamics remain in the asynchronous, irregular spiking regime (Fig. <ref type="figure" target="#fig_1">2Biv</ref>).</s><s>Indeed, this asynchrony permits the firing rate model theory to match the integrate-and-fire simulations across low and high gain values (Fig. <ref type="figure" target="#fig_1">2Biii</ref>, compare points to the curve).</s><s>Thus, in contrast to the modulation through inhibitory pathway p I , pathway p II supports a network gain increase that is robust throughout the modulation range.</s></p><p><s>In summary, these initial examples show that inhibitory modulations via the indirect SOM → PV → E and direct SOM → E pathways and are quite distinct.</s><s>There is a clear need to establish a more nuanced view on how diverse inhibition controls network gain and stability; this is the central goal of our study.</s><s>Towards this end, in the next section, we formalize the relations between gain and stability in simple cortical networks with only one inhibitory class.</s><s>This will provide us a platform to build a broader theory in E -PV -SOM circuits, which will be the focus of the later sections.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Gain and stability modulation are opposed in E -PV circuits</head><p><s>In order to provide insight in how stability and network gain are co-affected by a modulation we first consider a reduced E -PV circuit (Fig. <ref type="figure" target="#fig_2">3B</ref>) where stimuli target both E and PV neurons I stim = (I E stim , I P stim ) T .</s><s>For this circuit the network gain is (Methods 1.3):</s></p><formula xml:id="formula_0">g E ≡ dr E dI stim = β E (1 + β P J PP )I E stim -β P J EP I P stim det(1 -W) .<label>(1)</label></formula><p><s>The first term on the right-hand side (in the numerator) describes how E neuron response is amplified by the network, while the second one describes response cancellation by PV neurons.</s><s>Since the cellular gains β E and β P depend upon the operating point from which the circuit dynamics is linearized, the tradeoff between amplification and cancellation can be controlled through an external modulation that shifts this point.</s></p><p><s>To compare network gain across different network states we consider a grid of possible firing rates (r E , r P ).</s><s>A given network state is found by numerically determining the external input required to position the network at that rate (see Eq. ( <ref type="formula" target="#formula_10">9</ref>)).</s><s>For each network state we linearize the network dynamics (i.e.</s><s>determine the βs) and compute the network gain via Eq.</s><s>(1) (see heatmap in Fig. <ref type="figure" target="#fig_2">3A</ref>).</s><s>It is immediately apparent that network gain is largest for high r E and low r P , and smallest vice versa.</s><s>Gain modulation is most effective when it connects two network states which are orthogonal to a line of constant gain (gain isolines in Fig. <ref type="figure" target="#fig_2">3A</ref>).</s><s>Thus, for most network states the highest gain increase occurs for modulations that increase E neuron rates while simultaneously decreasing PV neuron rates.</s></p><p><s>Unstable firing rate dynamics are typified by runaway activity, when recurrent excitation is not stabilized by recurrent inhibition <ref type="bibr" target="#b27">(Griffith, 1963;</ref><ref type="bibr" target="#b58">Ozeki et al., 2009;</ref><ref type="bibr" target="#b83">van Vreeswijk and Sompolinsky, 1996;</ref><ref type="bibr" target="#b91">Wilson and Cowan, 1972)</ref>.</s><s>In networks of spiking neurons, this instability can manifest as network-wide synchronized, oscillatory dynamics (as observed in Fig. <ref type="figure" target="#fig_1">2Aiv</ref>).</s><s>To quantify these frequency-dependent state transitions we use a stability measure defined as the minimal distance (across oscillatory frequency) to the transition between stable and unstable oscillatory dynamics (see Methods 1.5).</s><s>As was done for network gain we consider how stability depends on network activity (r E , r P ) about which the network is linearized (color in Fig. <ref type="figure" target="#fig_2">3C</ref>).</s><s>Network dynamics are most stable for large PV and low E neuron rates (the white region in Fig. <ref type="figure" target="#fig_2">3C</ref>).</s><s>For higher E rates the recruited PV activity gives rise to larger amplitude network oscillations, and as a result the distance to instability decreases (the orange region in Fig. <ref type="figure" target="#fig_2">3C</ref>).</s><s>Finally, for sufficiently large E and small PV rates, the network transitions into fully unstable firing rate dynamics (black lines in Fig. <ref type="figure" target="#fig_2">3A,</ref><ref type="figure">C</ref>).</s></p><p><s>This analysis of gain and stability reveals an inverse relationship between these two network features (compare Fig. <ref type="figure" target="#fig_2">3A</ref> and<ref type="figure">C</ref>).</s><s>This is evident by plotting a near constant gain for (r E , r P ) ranging over a stability isoline (Fig. <ref type="figure" target="#fig_2">3D</ref>).</s><s>Further, over a large region of (r E , r P ) we observe that higher gain is accompanied by lower stability (Fig. <ref type="figure" target="#fig_2">3A,</ref><ref type="figure">C</ref>).</s><s>This connection arises because the recurrent E → PV → E loop enforces both a dynamic cancellation required to stabilize network activity <ref type="bibr" target="#b58">(Ozeki et al., 2009;</ref><ref type="bibr" target="#b63">Renart et al., 2010;</ref><ref type="bibr" target="#b76">Tetzlaff et al., 2012)</ref> as well as a cancellation that attenuates E neuron response to I stim <ref type="bibr" target="#b74">(Stern et al., 2018;</ref><ref type="bibr" target="#b75">Sutherland et al., 2009)</ref>.</s><s>Thus, any modulation that increases network gain in the E -PV circuit will necessarily result in a less stable network.</s><s><ref type="formula" target="#formula_10">9</ref>)).</s><s>Different fixed points correspond to different external inputs to the populations.</s><s>The color denotes the network gain (Eq.</s><s>( <ref type="formula" target="#formula_0">1</ref>)) of the system at the given fixed point.</s><s>Lines of constant gain are shown in gray (from dark to light gray normalized gain 0.1 to 0.7 in steps of 0.1).</s><s>The black line marks where the deterministic rate dynamics become unstable.</s><s>Parameter combinations for which no fixed point could be found are set to maximum gain and minimum stability.</s><s>B, Sketch of the model containing E and PV neurons and a stimulus that targets both populations.</s><s>C, Same as in A but the color denotes how close the system operates to instability (Eq.</s><s>( <ref type="formula" target="#formula_37">35</ref>)).</s><s>The deterministic rate dynamics becomes unstable at distance (d min ) zero.</s><s>Stability isolines are plotted in gray (from dark to light gray: d min = 0.3, 0.5, 0.7, 0.9).</s><s>D, Gain along stability isolines of d min = 0.6, 0.7, 0.8, 0.9.</s><s>Parameters: p ES = p PS = p SE = 0, p ext E and p ext P vary on each point of the grid in A and C.</s></p><p><s>These results prompt the question: can a cortical circuit be modulated through inhibition to a higher gain regime without compromising network stability?</s><s>In the next section, we investigate whether direct modulation of SOM neurons can shift the E -PV -SOM circuit from a low to a high gain state while stability is maintained.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Gain and stability are differentially mediated by SOM and PV neurons</head><p><s>Our initial exploration of the full E -PV -SOM circuit showed that while disinhibition through pathway p I (SOM → PV → E) can modulate network gain it also destabilizes circuit activity.</s><s>In contrast, disinhibition through pathway p II (SOM → E) ensured a stable asynchronous state throughout modulation (Fig. <ref type="figure" target="#fig_1">2</ref>).</s><s>However, our analysis was restricted to a network with a single unmodulated state, and it remains to show that this result is general over a wide range of network states.</s></p><p><s>To simplify our analysis we neglect the E → SOM connections in the full E -PV -SOM circuit (Fig. <ref type="figure" target="#fig_3">4</ref>, left column).</s><s>Consequently, SOM neuron modulation can only affect the stability and gain of E neurons by changing the dynamical state of the E -PV subcircuit.</s><s>Positive or negative input modulations to SOM neurons increase or decrease their steady-state firing rate, which in turn affects the steady-state rates of the E and PV neurons (Fig. <ref type="figure" target="#fig_3">4Ai</ref>,ii).</s><s>A specific modulation can be visualized as a vector (∆r E , ∆r P ) in the previously introduced (r E , r P ) firing rate grid (Fig. <ref type="figure" target="#fig_3">4Aiii</ref>).</s><s>The direction of the vector indicates where the E -PV network state would move to if SOM neurons are weakly modulated.</s><s>We remark that the modulation (∆r E , ∆r P ) not only depends on the feedforward SOM projections to E and PV neurons, but also on the dynamical regime (i.e linearization) of the unmodulated state (r E , r P ).</s></p><p><s>To build intuition we first consider only the SOM → PV connection and set the SOM → E connection to zero, thereby isolating pathway p I (Fig. <ref type="figure" target="#fig_1">2Ai</ref>).</s><s>A depolarizing modulation to SOM neurons is applied (I mod &gt; 0), ultimately causing ∆r E &gt; 0 through PV neuron disinhibition.</s><s>If the unmodulated network state has low r E and high r P then the modulation vector field shows a transition from non-ISN to ISN dynamics, indicated by ∆r P &lt; 0 for low r E yet shifting to ∆r P &gt; 0 for larger r E (Fig. <ref type="figure" target="#fig_3">4Bi</ref>,ii).</s><s>In this regime, the modulation vectors cross the gain isolines, and network gain robustly increases over a wide range of initial (r E , r P ) network states (Fig. <ref type="figure" target="#fig_3">4Bii</ref>).</s><s>However, the vectors also cross the stability isolines, showing that the modulation compromises network stability (Fig. <ref type="figure" target="#fig_3">4Bi</ref>).</s><s>If we extend our analysis by including weak SOM → E connectivity (Fig. <ref type="figure" target="#fig_3">4Ci</ref>,ii), the SOM → PV connection continues to dominate and maintains a disinhibitory effect on E neurons.</s><s>The vector field changes so that the modulation now strongly increases gain but also shifts the circuit more directly into the unstable region.</s><s>Note also that the response reversal of the PV neurons at the transition from non-ISN to ISN has vanished.</s><s>In total, disinhibition through pathway p I has the general property that increased gain comes at the cost of decreased stability.</s></p><p><s>We next consider the modulation of E neuron activity via removal of direct SOM mediated inhibition through pathway p II .</s><s>To begin we set the SOM → PV connection to zero (Fig. <ref type="figure" target="#fig_3">4C</ref>) and consider an external hyperpolarizing modulation of SOM neurons (I mod &lt; 0).</s><s>This results in ∆r E &gt; 0, which in turn gives ∆r P &gt; 0 through the E → PV connection (Fig. <ref type="figure" target="#fig_3">4Di</ref>,ii).</s><s>The vector field crosses gain isolines at low r E values, but aligns with a them at high r E (Fig. <ref type="figure" target="#fig_3">4Dii</ref>).</s><s>That means that a modulation yields gain increases for low network activity but loses its effectiveness at high activity.</s><s>However, the vector field also shows how the modulation aligns with the stability isolines at high r E , indicating that stability is not comprised by modulation.</s><s>Finally, including the SOM → PV connection shows that the arrow field aligns with a lower stability isoline (Fig. <ref type="figure" target="#fig_3">4Ei</ref>).</s><s>The high gain state is, therefore, more stable, but at the price of a smaller overall gain increase (Fig. <ref type="figure" target="#fig_3">4Eii</ref>).</s></p><p><s>In sum, our analysis shows that if PV neurons stabilize E neuron activity then increasing the gain of E neurons by inhibiting PV neurons drives the network dynamics towards instability.</s><s>By contrast, shifting the network to a high gain state by removing SOM inhibition from the E neurons yields rate increases of both the E and PV neurons and a stable high gain state.</s><s>The network stability is improved if SOM neurons project to both E and PV neurons.</s><s>In total, our analysis supports the simple idea that interneurons that stabilize network activity should not be involved in the modulation of network gain.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Recurrent feedback from E to SOM neurons amplifies gain modulation</head><p><s>Neglecting the E → SOM connection in the E -PV -SOM circuit makes SOM activity simply an intermediate step in a feedforward modulation of the E -PV subcircuit.</s><s>In this section, we consider how the recurrent E ↔ SOM interactions determine how an external modulation to SOM neurons affects E neuron gain.</s></p><p><s>First, in the absence of E → SOM coupling, we consider the network in three conditions: nonstimulated (NSt), stimulated (St), or modulated and stimulated (M+St).</s><s>In the NSt condition E and PV neuron activity is low (Fig. <ref type="figure">5Ai</ref>,ii; left bars), while SOM neurons are moderately activity (Fig. <ref type="figure">5Aiii</ref>; left bar).</s><s>In the St condition a depolarizing stimulus (I stim &gt; 0) is given to the E and PV neurons and their activity naturally increases (Fig. <ref type="figure">5Ai</ref>,ii; middle bars).</s><s>However, since E neurons do not project to SOM neurons then SOM activity in the S condition remains the same as in the NS condition (Fig. <ref type="figure">5Aiii</ref>; middle bar).</s><s>Finally, in the M+St condition a hyperpolarizing modulation (I mod &lt; 0) is applied to the SOM neurons in conjunction with I stim &gt; 0 to both E and PV neurons.</s><s>In this case, the E and PV neurons rise their activity further compared to the St condition (Fig. <ref type="figure">5Ai</ref>,ii; right bars) because of disinhibition via SOM neuron suppression (Fig. <ref type="figure">5Aiii</ref>; right bar).</s><s>The above analysis ignored E → SOM coupling; we now compare it to the case when E → SOM projections are intact.</s><s>There is little difference in the NSt condition since E neuron activity is low and hence the influence of E neurons upon SOM neurons is small (Fig. <ref type="figure">5Bi</ref>,ii,iii; left bars).</s><s>The same is true for the M+St condition since the modulation continues to suppress SOM neuron activity despite the E projections to SOM (Fig. <ref type="figure">5Bi</ref>,ii,iii; right bars).</s><s>However, in the St condition the E → SOM coupling increases SOM activity (Fig. <ref type="figure">5Biii</ref>; right bars), which in turn lowers the E response (and by extension the PV response) compared to the case when E → SOM coupling is absent (Fig. <ref type="figure">5Bi</ref>,ii; right bars).</s><s>The above analysis provides an important observation: when we compare the St and M+St cases, the relative increase in E neuron rates with SOM modulation is greater when E → SOM connections are present (Fig. <ref type="figure">5</ref> Ai vs Fig. <ref type="figure">5Bi</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Ai</head><p><s>Aii Aiii</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Bi Bii Biii</head><p><s>Ci Cii</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E S</head><p><s>Figure <ref type="figure">5</ref>: Feedback from E to SOM cells enhances gain modulation.</s><s>A, Network without feedback from E to SOM neurons (J SE = 0).</s><s>Firing rates of E (i), PV (ii), and SOM (iii) neurons without stimulus (NSt), with stimulus (St) and with stimulus and (negative) modulation (M+St).</s><s>B, Same as panel A but with feedback from E to SOM neurons.</s><s>C, Ratio between the network gain modulation for networks with and without recurrent feedback from E to SOM neurons, α rec /α ff .</s><s>The ratio increases with the initial firing rate of the SOM neurons (i) and the relative coupling strength between E to SOM neurons and E to PV neurons (ii).</s><s>The curves correspond to three different initial conditions of the rates (r E , r P ) (black: (2 Hz, 3 Hz), gray: (2 Hz, 2 Hz), light gray:</s></p><p><s>(2 Hz, 1.5 Hz)).</s></p><p><s>To show that this result is robust we employ our linearized rate description to give a general theory for how E -SOM recurrence increases E neuron gain control via SOM neuron modulation.</s><s>To this end we consider the ratio of network gains in the modulated (m) and unmodulated (u) circuits: α = g m /g u (recall that g = dr E /dI stim ).</s><s>We do this for feedforward (ff) and recurrent (rec) networks which either lack or preserve E → SOM coupling, respectively.</s><s>To simplify our analysis we assume that the modulation (I mod &lt; 0) completely silences SOM activity.</s><s>With this simplification the gain modulation in the recurrent network, α rec , is related to the gain modulation in the feedforward network, α ff , as follows (see Eq. ( <ref type="formula" target="#formula_51">45</ref>)):</s></p><formula xml:id="formula_1">α rec = α ff 1 -β S J SE dr E dr S .<label>(2)</label></formula><p><s>In circuits where SOM neurons effectively inhibit E neurons (i.e p II &gt; p I , see Fig. <ref type="figure" target="#fig_0">1</ref>) we always have that dr E /dr S &lt; 0. Consequently, Eq. ( <ref type="formula" target="#formula_1">2</ref>) shows that the gain modulation in the recurrent system is then always larger than the modulation in the feedforward system.</s><s>Indeed, α rec /α ff &gt; 1 over a large range of both unmodulated SOM neuron activity (Fig. <ref type="figure">5Ci</ref>) and the strength of the E → SOM connection (Fig. <ref type="figure">5Cii</ref>).</s><s>In sum, the theory which produced Eq. ( <ref type="formula" target="#formula_1">2</ref>) generalizes the results of our specific network example (Fig. <ref type="figure">5A</ref> and<ref type="figure">B</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Modulation of SOM neurons has additive and multiplicative effects on tuning curves</head><p><s>In the previous sections, we measured network gain as the increase of E neuron activity in response to a small increase in stimulus intensity.</s><s>We now extend our gain modulation analysis to E -PV -SOM circuits with distributed responses, whereby individual neurons are tuned to a particular value of a stimulus (i.e the preferred orientation of a bar in a visual scene or the frequency of an acoustic tone).</s><s>In what follows the stimulus θ is parametrized with an angle ranging from 0 • to 180 • .</s><s>We begin by giving all E and PV neurons feedforward input µ ff (θ) which is tuned to θ = 90 • with a Gaussian profile (see Eq. ( <ref type="formula" target="#formula_53">47</ref>) and Fig. <ref type="figure" target="#fig_4">6Ai</ref>).</s><s>This homogeneous input to all E and PV neurons ensures that neurons have similar tuning curves, and thus it suffices to consider the population average tuning curve, r(θ) = [r E (θ), r P (θ), r S (θ)].</s><s>The slope of the input tuning dµ ff /dθ (Eq.</s><s>( <ref type="formula" target="#formula_53">47</ref>)) is translated to response gain dr/dθ via (Eq.</s><s>( <ref type="formula" target="#formula_55">49</ref>) and see Methods 1.8):</s></p><formula xml:id="formula_2">dr κ dθ = γ∈{E,P} P κγ β γ :=gκ dµ ff dθ , where P = (1 -W) -1 , κ ∈ {E, P, S}. (<label>3</label></formula><formula xml:id="formula_3">)</formula><p><s>Here W is the effective connectivity matrix for the E -PV -SOM circuit (W κγ = β κ J κγ ).</s></p><p><s>We have written Eq.</s><s>( <ref type="formula" target="#formula_2">3</ref>) in a compact form where the mapping from input gain to response gain for population κ is given by dr κ /dθ = g κ dµ ff /dθ, where g κ is the gain coefficient.</s><s>The coefficient g κ has a complicated dependence on the cellular gain β; explicitly through the products P κγ β γ as well as through the matrix P's dependence on the effective connectivity W. If the neuronal transfer is truly linear, so that β is independent of the operating point, then g cannot be changed by an applied modulation.</s><s>Consequently, any circuit modulation evokes only an additive (or subtractive) shift of response tuning.</s><s>By similar logic, a nonlinear neuronal transfer would cause the cellular gain β to change under any modulation that shifts the network operating point.</s><s>In this case, g E will now also depend on the modulation (unless the circuit W and cellular transfer function are very finely tuned), and thus the modulation cannot result in a purely additive tuning curve shift and rather will show some multiplicative (or divisive) component.</s></p><p><s>To explore how SOM neuron modulation mediates multiplicative gain control of tuning curves we first set the unstimulated state of the model to have a low firing rate ( ∼ 0.1 Hz) for both E and PV neurons.</s><s>Applying stimuli with varying θ shows that all populations are tuned (Fig. <ref type="figure" target="#fig_4">6Bi</ref>,ii,iii).</s><s>This is expected since both E and PV neurons receive tuned feedforward input and SOM neurons receive input from E neurons which all have the same preferred angle.</s><s>When the network is modulated through a suppression of SOM neuron activity (I mod &lt; 0) SOM tuning is both subtractively and divisively modulated (Fig. <ref type="figure" target="#fig_4">6Biii</ref>), while the tuning of E and PV neurons undergo both additive and multiplicative changes (Fig. <ref type="figure" target="#fig_4">6Bi</ref>,ii).</s><s>The additive or subtractive shift reflects the overall rate increase of E and PV neurons and decrease of SOM neurons, respectively.</s><s>Similarly, the multiplicative or divisive shift arises from an increase in the transfer coefficient g for E and PV neurons and a decrease in g S SOM neuron suppression.</s><s>Indeed, ∆g κ = g m κg u κ is positive for all θ for the E and P populations (Fig. <ref type="figure" target="#fig_4">6Ci</ref>,ii) and negative for all θ for the S population (Fig. <ref type="figure" target="#fig_4">6Ciii</ref>), showing the respective multiplicative and divisive nature of the modulation on the circuit tuning.</s></p><p><s>It is currently under debate whether tuning in mouse V1 is imposed by tuned input or a combination of weakly tuned input and recurrent connections.</s><s>Theoretical studies showed that balanced networks extract the weakly tuned component by subtracting the large untuned input component that is supplied to every neuron through recurrent inhibition <ref type="bibr" target="#b30">(Hansel and van Vreeswijk, 2012;</ref><ref type="bibr" target="#b69">Sadeh and Rotter, 2015)</ref> and therefore produce sparse and selective responses <ref type="bibr" target="#b59">(Pehlevan and Sompolinsky, 2014)</ref>.</s><s>We test whether SOM mediated gain amplification extends to a network where E and PV neurons have heterogeneous tuning curves.</s><s>We supply E and PV neurons differently tuned input so that their θ preference is now distributed (Fig. <ref type="figure" target="#fig_4">6D-F</ref> show the tuning curves of three representative E and PV neurons).</s><s>Suppression of SOM activity yields both additive and multiplicative shifts of the tuning curves of E and PV neurons (Fig. <ref type="figure" target="#fig_4">6D-F</ref>, solid vs faded curves).</s><s>Further, since SOM neurons receive convergent input from E neurons with different preferred frequencies, then they are not tuned themselves (Fig. <ref type="figure" target="#fig_4">6F</ref>).</s><s>Thus, SOM neurons can regulate the network gain of E neurons to stimuli of different directions without having direct access to the stimulus information through tuned E input.</s><s>The gain of individual E neurons is amplified once inhibition by SOM neurons that target all E neurons and suppress responses of highly active neurons is reduced.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E -PV -SOM circuitry promotes a division of labor between PV and SOM neurons.</head><p><s>One central conclusion from our study is that modulations of SOM neurons in the E -PV -SOM cortical circuit can segregate the mechanics of gain control and network stability.</s><s>We established this by comparing and contrasting the modulatory influence of the direct SOM → E pathway (p II ) to that of the indirect SOM → PV → E pathway (p I ).</s><s>However, perhaps the most salient circuit distinction between SOM and PV interneurons is the strong PV → PV connectivity in comparison to the complete lack of SOM → SOM coupling, at least as reported in the mouse sensory neocortex <ref type="bibr" target="#b60">(Pfeffer et al., 2013;</ref><ref type="bibr" target="#b78">Tremblay et al., 2016;</ref><ref type="bibr" target="#b81">Urban-Ciecko and Barth, 2016)</ref>.</s><s>In this concluding section, we investigate how gain control and stability are affected by self-inhibition (or lack thereof) within the E -PV -SOM cortical circuit.</s><s>We consider the full circuit with connectivity parameters where a depolarizing SOM modulation (I mod &gt; 0) leads to a reduction in E neuron firing rate r E (i.e p II &gt; p I ; Fig 7A, light green curve).</s><s>As a first exercise, we modify the circuit to include SOM → SOM neuron coupling (p SS &gt; 0).</s><s>A clear consequence is that modulatory recruitment of SOM activity is less effective at suppressing E neuron activity with stronger SOM self-inhibition (Fig 7A, medium and dark green curves).</s><s>The intuition for this is straightforward.</s><s>Recurrent inhibition is a well known form of divisive gain control <ref type="bibr" target="#b68">(Sadeh et al., 2014;</ref><ref type="bibr" target="#b74">Stern et al., 2018;</ref><ref type="bibr" target="#b75">Sutherland et al., 2009)</ref>.</s><s>In our circuit, SOM neurons act as an intermediate stage in a modulatory path to E neurons.</s><s>Thus, SOM → SOM coupling will ultimately reduce the efficacy (or gain) of I mod to enact a change in E neuron activity.</s><s>In other words, SOM self-inhibition would act to counter the modulatory influence of the I mod → SOM → E pathway.</s><s>This provides a functional benefit for the observed lack of SOM → SOM coupling in cortical networks.</s><s>While SOM neurons lack self-inhibition (as a group), PV neurons connect strongly to other PV neurons <ref type="bibr" target="#b60">(Pfeffer et al., 2013)</ref>.</s><s>In our circuit PV neurons stabilize network dynamics, counteracting the large E → E recurrence which if left unchecked would cause an explosion of network activity.</s><s>In order to best quench runaway excitation, PV neurons must dynamically track E neuron activity so as to provide inhibition which effectively cancels recurrent excitation <ref type="bibr" target="#b58">(Ozeki et al., 2009;</ref><ref type="bibr" target="#b80">Tsodyks et al., 1997;</ref><ref type="bibr" target="#b83">van Vreeswijk and Sompolinsky, 1996)</ref>.</s><s>This is best accomplished when PV neurons receive the same synaptic inputs as E neurons.</s><s>Thus, the strong PV → E pathway necessitates a comparable PV → PV pathway.</s><s>Indeed, over a large range of modulatory states network stability is increased with stronger PV → PV activity <ref type="bibr">(Fig 7B)</ref>.</s><s>Along similar lines, the strong SOM → E pathway needed for effective network modulation should be matched by a strong SOM → PV pathway so that PV neurons are subject to the same SOM inhibition that E neurons receive.</s><s>This allows PV neurons to better stabilize overall network activity <ref type="bibr">(Fig 7C)</ref>.</s></p><p><s>In total, a division of labor within the PV -SOM sub-circuit, whereby SOM neurons mediate modulations of network response and PV neurons are responsible for network stability, is supported by the known synaptic interactions between the PV and SOM neurons.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>Cortical inhibition is quite diverse, with molecularly distinguished cell classes having distinct placement within the cortical circuit <ref type="bibr" target="#b36">(Jiang et al., 2015;</ref><ref type="bibr" target="#b51">Markram et al., 2004;</ref><ref type="bibr" target="#b60">Pfeffer et al., 2013;</ref><ref type="bibr" target="#b78">Tremblay et al., 2016)</ref>.</s><s>Cell specific optogenetic perturbations are a critical probe used to relate circuit wiring to cortical function.</s><s>In many cases, a preliminary analysis of these new optogenetic datasets involves building circuit intuition only from the dominant direct synaptic pathways while neglecting indirect or disynaptic pathways.</s><s>This is understandable given the newly realized complexity of the circuit; however, this is precisely the situation where a more formal modeling approach can be very fruitful.</s><s>Toward this end, recent modelling efforts both at the large <ref type="bibr" target="#b7">(Billeh et al., 2020)</ref> and smaller <ref type="bibr" target="#b15">(del Molino et al., 2017;</ref><ref type="bibr" target="#b41">Kuchibhotla et al., 2017;</ref><ref type="bibr" target="#b17">Litwin-Kumar et al., 2016;</ref><ref type="bibr" target="#b50">Mahrach et al., 2020;</ref><ref type="bibr" target="#b84">Veit et al., 2017)</ref> scales have incorporated key aspects of interneuron diversity.</s><s>These studies typically explore which aspects of cellular or circuit diversity are required to replicate a specific experimental finding.</s></p><p><s>In our study, we provide a general theoretical framework that dissects the full E -PV -SOM into interacting sub-circuits.</s><s>We then identify how specific inhibitory sub-circuits support both network stability and E neuron gain control; two ubiquitous functions often associated with inhibition <ref type="bibr" target="#b24">(Ferguson and Cardin, 2020;</ref><ref type="bibr" target="#b29">Haider et al., 2013;</ref><ref type="bibr" target="#b35">Isaacson and Scanziani, 2011;</ref><ref type="bibr" target="#b58">Ozeki et al., 2009;</ref><ref type="bibr" target="#b84">Veit et al., 2017)</ref>.</s><s>In this way, our approach gives an expanded view of the mechanics of cortical function when compared to more classical results that focus only on how circuit structure supports a single feature of cortical dynamics.</s><s>The theoretical framework we develop can be adopted to investigate other structure -function relationships in complicated multi-class cortical circuits.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Division of labor between PV and SOM interneurons</head><p><s>Compelling theories for both network stability <ref type="bibr" target="#b27">(Griffith, 1963;</ref><ref type="bibr" target="#b58">Ozeki et al., 2009;</ref><ref type="bibr" target="#b83">van Vreeswijk and Sompolinsky, 1996)</ref> and gain control <ref type="bibr" target="#b74">(Stern et al., 2018;</ref><ref type="bibr" target="#b75">Sutherland et al., 2009)</ref> have been developed using simple cortical models having only one inhibitory neuron class.</s><s>Thus, stability and gain control do not necessarily require cortical circuits with diverse inhibition.</s><s>What our study points out is that for a cortical circuit to perform gain modulation robustly through disinhibition yet remaining in a regime where the activity is stable, segregating the circuits responsible for gain control and stability has significant advantages.</s></p><p><s>If we accept this division of inhibitory labor hypothesis, then a natural question arises: Why would PV neurons be assigned to stabilization while SOM neurons assigned to E neuron modulation?</s><s>In fact, there is evidence for the reverse labor assignment, namely that optogenetic perturbation of PV neurons can shift E neuron response gain <ref type="bibr" target="#b3">(Atallah et al., 2012;</ref><ref type="bibr" target="#b72">Seybold et al., 2015;</ref><ref type="bibr" target="#b92">Wilson et al., 2012)</ref>, and SOM neurons can suppress E neuron firing which in principle would also quench runaway E neuron activity <ref type="bibr" target="#b0">(Adesnik, 2017;</ref><ref type="bibr" target="#b1">Adesnik et al., 2012)</ref>.</s><s>However, the interpretation of optogenetic perturbations can be fraught with subtle but important difficulties <ref type="bibr" target="#b24">(Ferguson and Cardin, 2020;</ref><ref type="bibr" target="#b61">Phillips and Hasenstaub, 2016)</ref>; in this case, the activation of PV neurons without concomitant E neuron activation is somewhat artificial.</s><s>Further, while it is true that SOM neurons can mediate suppression, this is distinct from conferring stability since stable networks can allow E neurons to have high (but not runaway) activity.</s><s>Our approach was not to infer a specific division of labor assignment from a synthesis of varied experimental results, yet base our conclusions from the known circuit structure of the E -PV -SOM circuit.</s></p><p><s>Two key circuit features support our division of labor breakdown.</s><s>Firstly, E neurons and PV neurons experience very similar synaptic environments.</s><s>Both receive excitatory drive from upstream areas <ref type="bibr" target="#b78">(Tremblay et al., 2016)</ref>, and both receive strong recurrent excitation, as well as PV-and SOMmediated inhibition <ref type="bibr" target="#b60">(Pfeffer et al., 2013)</ref>.</s><s>This symmetry in the synaptic input to E and PV neurons allow PV neurons to dynamically track E neuron activity.</s><s>Consequently, any spurious increase in excitatory drive to E neurons, that could cause a cascade of E population activity due to recurrent E → E connections, is quickly countered by an associated increase in PV inhibition.</s><s>Secondly, SOM neurons famously do not connect to other SOM neurons <ref type="bibr" target="#b36">(Jiang et al., 2015;</ref><ref type="bibr" target="#b60">Pfeffer et al., 2013;</ref><ref type="bibr" target="#b82">Urban-Ciecko et al., 2015)</ref>.</s><s>Since SOM neurons do provide strong inhibition to E neurons this lack of input symmetry makes them less fit to stabilize E neuron activity than PV neurons.</s><s>However, it is precisely the lack of SOM neuron self inhibition which allows a high gain for any top-down modulatory signal to induce a change in E neuron response.</s><s>A large component of the analysis in our manuscript is devoted to establishing this circuit based view of a division of inhibitory labor in E -PV -SOM cortical circuits.</s></p><p><s>There are circuit and cellular distinctions between PV and SOM neurons that were not considered in our study, but could nonetheless still contribute to a division of labor between network stability and modulation.</s><s>Pyramidal neurons have widespread dendritic arborizations, while by comparison PV neurons have restricted dendritic trees <ref type="bibr" target="#b51">(Markram et al., 2004)</ref>.</s><s>Thus, the dendritic filtering of synaptic inputs that target distal E neurons dendrites would be quite distinct from that of the same inputs onto PV neurons.</s><s>Fortunately, PV neurons target both the cell bodies and proximal dendrites of both PV and E neurons <ref type="bibr" target="#b16">(Di Cristo et al., 2004;</ref><ref type="bibr" target="#b51">Markram et al., 2004;</ref><ref type="bibr" target="#b78">Tremblay et al., 2016)</ref>, so that the symmetry of PV inhibition onto PV and E neurons as viewed by action potential initiation is maintained.</s><s>In stark contrast, SOM neurons inhibit the distal dendrites of E neurons <ref type="bibr" target="#b51">(Markram et al., 2004)</ref>.</s><s>Dendritic inhibition has been shown to gate burst responses in pyramdial neurons greatly reducing cellular gain <ref type="bibr" target="#b44">(Larkum et al., 2004;</ref><ref type="bibr" target="#b53">Mehaffey et al., 2005)</ref>, and recent theoretical work shows how such gating allows for a richer, multiplexed spike train code <ref type="bibr" target="#b55">(Naud and Sprekeler, 2018)</ref>.</s><s>Further, dendritic inhibition is localized near the synaptic site for E → E coupling, and recent modelling <ref type="bibr" target="#b96">(Yang et al., 2016)</ref> and experimental <ref type="bibr" target="#b2">(Adler et al., 2019)</ref> work shows how such dendritic inhibition can control E synapse plasticity.</s><s>This implies that SOM neurons may be an important modulator not only of cortical response but also of learning.</s></p><p><s>The E -PV -SOM cortical circuit is best characterized in superficial layers of sensory neocortex <ref type="bibr" target="#b60">(Pfeffer et al., 2013;</ref><ref type="bibr" target="#b78">Tremblay et al., 2016;</ref><ref type="bibr" target="#b81">Urban-Ciecko and Barth, 2016)</ref>, and the wiring of our model network relied heavily on that literature.</s><s>However, cell densities and connectivity patterns of interneuron populations change across the brain <ref type="bibr" target="#b40">(Kim et al., 2017)</ref> and across cortical layers <ref type="bibr" target="#b36">(Jiang et al., 2015;</ref><ref type="bibr" target="#b78">Tremblay et al., 2016)</ref>.</s><s>Our circuit based division of labor thus predicts that any differences in inhibitory connectivity compared to the one we studied will be reflected in changes of the roles that interneurons play in distinct cortical functions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Feedback from E to SOM neurons expands range of gain modulation</head><p><s>Our initial analysis of the E -PV -SOM circuit neglects E → SOM cell coupling (Figs <ref type="figure" target="#fig_1">2</ref> and<ref type="figure" target="#fig_3">4</ref>).</s><s>While this permits a simplified analysis, a consequence is that SOM activity serves only as a feedforward input to the recurrent E -PV circuit.</s><s>This restriction constrains the range over which the gain of E neurons can be varied through disinhibition of E and PV neurons.</s><s>Including the E → SOM connection recruits strong SOM-mediated inhibitory feedback which suppresses the E neuron response to stimuli.</s><s>Subsequent suppression of SOM neuron activity (through VIP inhibition, for instance) releases E neurons from SOM inhibition so that stimuli now drove high activity (Fig. <ref type="figure">5</ref>).</s><s>In effect, removing SOM inhibition when it controls E neuron responses through a recurrent E -SOM circuit has a far greater effect than simply removing feedforward SOM → E inhibition.</s><s>This result is in line with previous findings that recurrent inhibition is more effective at gain modulation than feedforward inhibition <ref type="bibr" target="#b68">(Sadeh et al., 2014;</ref><ref type="bibr" target="#b74">Stern et al., 2018;</ref><ref type="bibr" target="#b75">Sutherland et al., 2009)</ref>.</s></p><p><s>To study SOM-mediated gain control, we simply include or remove the E → SOM coupling in the E -PV -SOM circuit.</s><s>In truth, the E → SOM synaptic coupling is malleable and dependent upon E neuron activity.</s><s>Short term synaptic dynamics in cortical circuits often show net depression <ref type="bibr" target="#b98">(Zucker and Regehr, 2002)</ref>, however, the E → SOM connection famously facilitates with increasing pre-synaptic activity <ref type="bibr" target="#b5">(Beierlein et al., 2003;</ref><ref type="bibr" target="#b64">Reyes et al., 1998;</ref><ref type="bibr">Thomson, 1997;</ref><ref type="bibr" target="#b78">Tremblay et al., 2016;</ref><ref type="bibr" target="#b81">Urban-Ciecko and Barth, 2016;</ref><ref type="bibr" target="#b97">Yavorska and Wehr, 2016)</ref>.</s><s>Indeed, prolonged activation of E neurons recruits SOM activity through this facilitation <ref type="bibr" target="#b5">(Beierlein et al., 2003)</ref>.</s><s>Thus, this enhanced gain control would require a strong and long lasting drive to E neurons to facilitate the E → SOM synapses.</s><s>Further work incorporating short term plasticity models <ref type="bibr" target="#b79">(Tsodyks et al., 1998)</ref> into the E -PV -SOM model circuit will be required to fully explore how evoked E activity shapes the modulation of E neurons via SOM disinhibition.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Impact of SOM neuron modulation on tuning curves</head><p><s>Neuronal gain control has a long history of investigation <ref type="bibr" target="#b24">(Ferguson and Cardin, 2020;</ref><ref type="bibr" target="#b70">Salinas and Thier, 2000;</ref><ref type="bibr" target="#b90">Williford and Maunsell, 2006)</ref>, with mechanisms that are both bottom-up <ref type="bibr" target="#b71">(Schwartz and Simoncelli, 2001)</ref> and top-down <ref type="bibr" target="#b65">(Reynolds and Heeger, 2009;</ref><ref type="bibr" target="#b67">Ruff et al., 2018)</ref> mediated.</s><s>A vast majority of early studies focused on single neuron mechanisms; examples include the role of spike frequency adaptation <ref type="bibr" target="#b22">(Ermentrout, 1998)</ref>, interactions between fluctuating synaptic conductances and spike generation mechanics <ref type="bibr" target="#b13">(Chance et al., 2002)</ref>, and dendritic-dependent burst responses <ref type="bibr" target="#b44">(Larkum et al., 2004;</ref><ref type="bibr" target="#b53">Mehaffey et al., 2005)</ref>.</s><s>These studies often dichotomized gain modulations into a simple arithmetic where they are classified as either additive (subtractive) or multiplicative (divisive) <ref type="bibr" target="#b73">(Silver, 2010;</ref><ref type="bibr" target="#b90">Williford and Maunsell, 2006)</ref>.</s><s>More recently, this arithmetic has been used to dissect the modulations imposed by SOM and PV neuron activity onto E neuron tuning <ref type="bibr" target="#b3">(Atallah et al., 2012;</ref><ref type="bibr" target="#b46">Lee et al., 2014;</ref><ref type="bibr" target="#b92">Wilson et al., 2012)</ref>.</s><s>Initially, the studies framed a debate about how subtractive and divisive gain control should be assigned to PV and SOM neuron activation.</s><s>However, a pair of studies in the auditory cortex gave a sobering account whereby activation and inactivation of PV and SOM neurons had both additive and multiplicative effects on tuning curves <ref type="bibr" target="#b61">(Phillips and Hasenstaub, 2016;</ref><ref type="bibr" target="#b72">Seybold et al., 2015)</ref>, challenging the tidy assignment of modulation arithmetic into interneuron class.</s></p><p><s>Past modelling efforts have specifically considered how tuned or untuned SOM and PV projections combine with nonlinear E neuron spike responses to produce subtractive or divisive gain changes <ref type="bibr" target="#b17">(Litwin-Kumar et al., 2016;</ref><ref type="bibr" target="#b72">Seybold et al., 2015)</ref>.</s><s>However, the insights in these studies were primarily restricted to feedforward SOM and PV projections to E neurons, and ignored E neuron recurrence within the circuit.</s><s>In our study we explicitly consider the role of recurrent wiring through how the effective connectivity matrix W will change with network state.</s><s>We derived that changes in W scale E neuron gain in a multiplicative (or divisive) fashion (see Eq. ( <ref type="formula" target="#formula_2">3</ref>) and <ref type="bibr" target="#b68">(Sadeh et al., 2014)</ref>).</s><s>By contrast, additive (or subtractive) gain changes can occur through feedforward inhibition and a roughly linear E neuron transfer (β E does not change).</s><s>The combination of these observations prompts a testable prediction.</s><s>The large heterogeneity of subtractive and divisive gain control reported in various studies <ref type="bibr" target="#b3">(Atallah et al., 2012;</ref><ref type="bibr" target="#b46">Lee et al., 2014;</ref><ref type="bibr" target="#b54">Natan et al., 2017;</ref><ref type="bibr" target="#b72">Seybold et al., 2015;</ref><ref type="bibr" target="#b92">Wilson et al., 2012)</ref> may not reflect differences in SOM vs PV projections to a specific E neuron, yet rather how embedded that recorded E neuron and the activated interneurons are in the full recurrent cortical circuit.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Methods</head><p><s>1.1 Population model E, PV and SOM neurons are modeled as leaky-integrate-and-fire (LIF) neurons connected with exponentially decaying synapses</s></p><formula xml:id="formula_4">τ m dV i dt = -(V i -E L ) + RI i (4) τ s dI i dt = -I i + τ s j w ij n δ(t -t n j ). (<label>5</label></formula><formula xml:id="formula_5">)</formula><p><s>Here V i describes the membrane potential of the i-th neuron and I i its synaptic current.</s><s>R denotes the resistance of the membrane, E L the resting potential, τ m the membrane time constant, τ s the synaptic time constant, w ij weight of the synapse from neurons j to neuron i and t n j the time of the n-th spike of neuron j.</s><s>When the membrane potential of a neurons exceeds its threshold (V th ), it is reset to its resting potential (V r ), where it is clipped for the refractory period (τ ref ).</s><s>All weights are drawn from a Gaussian distribution with mean w and standard deviation 0.1w.</s><s>All parameters are given in Table <ref type="table" target="#tab_1">1</ref>.</s><s>The dynamics are simulated with NEST <ref type="bibr" target="#b42">(Kunkel et al., 2017)</ref>.</s></p><p><s>Neurons are subdivided into N E excitatory (E), N P Parvalbumin-positive (PV) neurons, and N S Somatostatin-positive (SOM) neurons.</s><s>We assume that 20% of all neurons are inhibitory (η = 1/4) and that the ratio of PV and SST densities is given by ρ = N S /N P = 0.83 <ref type="bibr" target="#b60">(Pfeffer et al., 2013)</ref>, the population sizes are given by</s></p><formula xml:id="formula_6">N E = N, N P = η 1 + ρ N = η P N, N S = ρη P N.<label>(6)</label></formula><p><s>Pairs of neurons are connected randomly with p κγ being the probability of a connection from a neuron in population γ to a neuron in population κ (κ, γ ∈ {E, , S}).</s><s>Thus the connectivity between populations is described by</s></p><formula xml:id="formula_7">J = wN     p EE -</formula><formula xml:id="formula_8">    =     J EE -J EP -J ES J PE -J PP -J PS J SE -J SP -J SS     ,<label>(7)</label></formula><p><s>where the inhibitory connection strength is amplified by g = 4 and the effective weight is given by w = τ s Rw.</s><s>Each neuron in population κ receives additional input from external Poisson sources with connection strength wN p ext κ and firing rate r ext = 8 Hz.</s><s>In matrix representation the external connection strength is given by J ext = wN diag(p ext E , p ext P , p ext S ).</s><s>In some cases, populations receive input from inhibitory external Poisson sources with connection strength -g wN p ext,inh κ which could represent, for example, VIP neurons.</s><s>External input due to stimulus or modulation is given the same connection strength.</s><s>Modulatory input is given by</s></p><formula xml:id="formula_9">J mod = -g wN diag(0, 0, p ext,inh S ),<label>(8)</label></formula><p><s>such that I mod = p ext,inh S r ext .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.2">Theoretical description of the population dynamics</head><p><s>The population rate dynamics of E, PV and SOM neurons (r = (r E , r P , r S )) are described by a firing rate model <ref type="bibr" target="#b91">(Wilson and Cowan, 1972)</ref> τ dr dt = -r + f (r, q), with f (r, q) = Φ(µ(r, q), σ(r, q)),</s></p><p><s>where q denotes the firing rate of external input due to a stimulus or modulation.</s><s>The static transfer function Φ is given by the inverse of the mean first-passage time of the membrane potential of the neurons.</s><s>It follows from diffusion approximation of the membrane potentials of the neurons within one population, assuming that all neurons are uncorrelated <ref type="bibr" target="#b25">(Fourcaud and Brunel, 2002</ref>)</s></p><formula xml:id="formula_11">Φ(µ, σ) = τ m √ π ( Ṽth -µ)/σ ( Ṽr-µ)/σ e s 2 (1 + erf(s))ds -1 ,<label>(10)</label></formula><p><s>with</s></p><formula xml:id="formula_12">Ṽr = V r + σ α 2 τ s τ m , Ṽth = V th + σ α 2 τ s τ m , α = 1 √ 2 ζ 1 2 , (<label>11</label></formula><formula xml:id="formula_13">)</formula><p><s>with the Riemann zeta function ζ.</s><s>The mean and variance of the input current to the neurons are given by µ(r, q) = Jr + J ext q and σ 2 (r, q) = w</s></p><formula xml:id="formula_14">√ N J σ r + w √ N J ext q,<label>(12)</label></formula><p><s>with J σ iE = J iE , J σ iP = gJ iP and J σ iS = gJ iS .</s></p><p><s>In the steady-state the population averaged rates are given by the self-consistent equation</s></p><formula xml:id="formula_15">r(q) = f (r, q). (<label>13</label></formula><formula xml:id="formula_16">)</formula><p><s>Noisy rate dynamics induced by the finite-size of the network can be described be the following dynamical variable <ref type="bibr" target="#b28">(Grytskyy, 2013)</ref>:</s></p><formula xml:id="formula_17">y = r + x, τ dr dt = -r + f (y, q),<label>(14)</label></formula><p><s>where x is a vector of white noise terms x κ with variance r κ /N κ .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.3">Network gain</head><p><s>Changes of the steady-state rates induced by small changes in the external rate can be described by linearization around the fixed point <ref type="bibr" target="#b15">(del Molino et al., 2017;</ref><ref type="bibr" target="#b17">Litwin-Kumar et al., 2016</ref>)</s></p><formula xml:id="formula_18">dr dq = dΦ dµ dµ(r, q) dq = B J dr dq + J ext ,<label>(15)</label></formula><p><s>with B = diag(β E , β P , β S ) and</s></p><formula xml:id="formula_19">β i = dΦ(µ i , σ i )/dµ i (16) yielding dr dq = 1 -W -1 W ext , with W = BJ and W ext = BJ ext . (<label>17</label></formula><formula xml:id="formula_20">)</formula><p><s>Here 1 denotes the identity matrix.</s><s>Note that we omitted changes in the fixed point due to the rate dependence of the variance of the input since it is small compared to changes in the mean input.</s><s>Thus the change of population rates δr induced by a change in the external rate δq is given by δr = dr dq δq.</s></p><p><s>(18)</s></p><p><s>and the matrix dr dq has been termed a response matrix <ref type="bibr" target="#b15">(del Molino et al., 2017)</ref>.</s><s>If all eigenvalues of W are smaller than 1 the response matrix can be written as:</s></p><formula xml:id="formula_21">dr dq = ∞ i=0 W i W ext . (<label>19</label></formula><formula xml:id="formula_22">)</formula><p><s>and the response of the excitatory neurons to modulation of the SOM neurons gives</s></p><formula xml:id="formula_23">dr E dq S = β S J ext S ∞ i=0 W i 13 (20) = β S J ext S β E J ES -β 2 E J EE J ES + β E β P J EP J PS (21) +(β P J EP J PE + β S J ES J SE -β E J 2 EE )β 2 E J ES (22) +(β E J EE J EP -β P J EP J PP )β E β P J PS + ...) .<label>(23)</label></formula><p><s>Here W i 13 denotes the element in the first row and third column of the matrix.</s><s>Our expression shows that the response matrix describes the summed effect of all possible pathways through the network whereby an externally applied signal could influence population E rates.</s></p><p><s>Assuming that modulation only targets SOM neurons δq = (0, 0, I mod ), the rate change of excitatory neurons induced by modulation is given by</s></p><formula xml:id="formula_24">δr E = dr E dI mod β S Ĩmod = β E J EP β P J PS -(1 + β P J PP )β E J ES det(1 -W) β S Ĩmod<label>(24)</label></formula><p><s>with Ĩmod = J ext S I mod and the rate change of SOM neurons by</s></p><formula xml:id="formula_25">δr S = det(1 -W EP ) det(1 -W) β S Ĩmod with W EP = W EE W EP W PE W PP . (<label>25</label></formula><formula xml:id="formula_26">)</formula><p><s>Thus the rate change of the excitatory neurons can be expressed as a function of the rate change of SOM neurons as</s></p><formula xml:id="formula_27">δr E = β E J EP β P J PS -(1 + β P J PP )J ES det(1 -W EP ) δr S .<label>(26)</label></formula><p><s>Network gain is defined as the rate change of neurons in response to a stimulus, assuming that stimuli target E and PV neurons δq = I stim = (I E stim , I P stim , 0), E neuron network gain is given by</s></p><formula xml:id="formula_28">g E = dr E dI stim = β E (1 + β P J PP ) ĨE stim -β P J EP ĨP stim det(1 -W)</formula><p><s>with ĨE,P stim = J ext E,P I E,P stim .</s></p><p><s>(27)</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.4">Paradoxical responses and gain maximum</head><p><s>The response of the PV neurons to SOM modulation is given by</s></p><formula xml:id="formula_29">dr P dI mod = -β P β E J ES J PE + (1 -β E J EE )J PS det(1 -W) = -β P J PS + β E (J ES J PE -J EE J PS ) det(1 -W)<label>(28)</label></formula><p><s>When SOM neurons only project to PV neurons (J ES = 0), the rate of PV neurons decreases if the E -PV circuit is in the non-ISN regime (β E J EE &lt; 1) and increases otherwise.</s><s>The latter case has been termed paradoxical response <ref type="bibr" target="#b80">(Tsodyks et al., 1997)</ref>.</s><s>If SOM neurons also project to E neurons, PV neurons get additional negative drive from the lack of E feedback yielding decreased PV rates even in the ISN regime.</s><s>Hence we only expect paradoxical responses if the product of connection strength J EE J PS is large.</s><s>Thus the observation of paradoxical responses of PV neurons in response to suppression via SOM neurons cannot disclose whether the E neurons operate in the ISN or non-ISN regime if SOM neurons also suppress the activity of E neurons.</s></p><p><s>Modulation controls the firing rates and cellular gains (βs) of E and PV population, and network gain (g) explicitly depends on the latter.</s><s>Differentiating Eq. ( <ref type="formula">27</ref>) with respect to β E we have:</s></p><formula xml:id="formula_30">dg E dβ E = 1 + β P J PP det(1 -W) 2 ĨE stim + β P (J PP ĨE stim -J EP ĨP stim ) .<label>(29)</label></formula><p><s>We see that dg E dβ E increases if PV → PV coupling is strong and PV neurons are not driven strongly by the stimulus.</s></p><p><s>Differentiating Eq. ( <ref type="formula">27</ref>) with respect to β P gives:</s></p><formula xml:id="formula_31">dg E dβ P = β E J EP det(1 -W) 2 -ĨE stim + β E (J EE ĨP stim -J PE ĨE stim ) + J SE A,<label>(30)</label></formula><p><s>with</s></p><formula xml:id="formula_32">A = β 2 E J EP β S det(1 -W) 2 J PS ĨE stim -J ES ĨP stim .<label>(31)</label></formula><p><s>Here we see that when β P increases then g E decreases if E → E coupling is not too strong, PV neurons are not driven strongly by the stimulus, and SOM neurons project in a feedforward manner to both E and PV neurons.</s><s>When increasing g E via the disinhibitory pathway SOM → PV → E neurons in the ISN regime, the rate of E and PV neurons increases.</s><s>Assuming that the circuit operates below the saturating regime of the transfer function, the cellular gains β E and β P therefore also increase.</s><s>The increased E rate then increases g E , but the increased PV rate decreases g E , which explains the maximum at g E .</s><s>(Fig. <ref type="figure" target="#fig_1">2Biii</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.5">Quantifying network stability</head><p><s>Let us consider the linearized deterministic rate dynamics stemming from Eq. ( <ref type="formula" target="#formula_10">9</ref>):</s></p><formula xml:id="formula_33">τ dr dt = -r + W(r + q).<label>(32)</label></formula><p><s>Stability can be inferred from the eigenvalues of the Jacobian W -1 (where 1 is the identity matrix).</s></p><p><s>The steady-state rate dynamics become unstable if one of the eigenvalues of W has a real part that is larger than one.</s><s>Going beyond this binary view of stability (stable vs unstable) we use a measure of distance to instability which can inform us whether the system becomes more or less stable with state changes.</s><s>A frequency-dependent proximity to instability can be inferred from the Nyquist plot of the transfer function of the rate dynamics <ref type="bibr" target="#b20">(Doyle et al., 2009)</ref>.</s><s>For simplicity, consider the dynamics of the least stable mode associated to the eigenvalue λ of W:</s></p><formula xml:id="formula_34">τ ṙ = -r + λ(r + q),<label>(33)</label></formula><p><s>where r and q denote the rate r and input q projected onto the least stable mode, respectively.</s><s>We remark that we consider q to be time-dependent with Laplace transform Q(ω).</s><s>Solving the equation above in the Laplace domain gives the following relation between input and output</s></p><formula xml:id="formula_35">R(ω) = λ(ω) 1 -λ(ω) Q(ω) with λ(ω) = λ 1 + iωτ . (<label>34</label></formula><formula xml:id="formula_36">)</formula><p><s>The term 1/(1λ(ω)) is referred to as sensitivity function in control theory <ref type="bibr" target="#b20">(Doyle et al., 2009)</ref> and its inverse measures the distance of the Nyquist curve to the critical point, which is here given by (λ) = 1.</s><s>The curve generated by λ(ω) provides a distance measure of the rate dynamics to instabilities for ω &gt; 0 (Fig. <ref type="figure">8</ref>).</s><s>Thus, it is natural to measure the proximity of the rate dynamics to instability via:</s></p><formula xml:id="formula_37">d min = min ωτ |1 -λ(ω)|.<label>(35)</label></formula><p><s>Since λ(ω) converges to zero for large frequencies d min is upper bounded by one.</s><s>same distance measure quantifies how easily the dynamics are destabilized by internally generated noise, which is amplified by the circuit as</s></p><formula xml:id="formula_38">Y (ω) = 1 1 -λ(ω) X(ω).<label>(36)</label></formula><p><s>Figure <ref type="figure">8</ref>: Measure of distance to instability.</s><s>Sketch of Nyquist plots corresponding to the system at rest (λ 1 (ω)) and the modulated system (λ 2 (ω)).</s><s>Only the mode closest to instability is shown.</s><s>Modulation increases the imaginary part of the eigenvalue but leaves the real part unaltered.</s><s>d min is defined as the minimal distance of λ(ω) to the critical value (λ) = 1.</s></p><p><s>Here, we simplified the dynamic transfer function as a first-order low pass filter.</s><s>A more rigorous mapping of the frequency-dependent input-output relation between the rate and the spiking model can be achieved by applying linear response theory when deriving the transfer function from the Fokker-Planck equation <ref type="bibr" target="#b10">(Brunel and Hakim, 1999;</ref><ref type="bibr" target="#b47">Lindner and Schimansky-Geier, 2001)</ref>.</s><s>For LIF-neurons in the balanced regime, this results in small modifications of the Nyquist plots from first-order low pass filters <ref type="bibr" target="#b8">(Bos et al., 2016)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.6">Stability of the E -PV sub-circuit</head><p><s>Considering the circuit composed of E and PV neurons, the eigenvalues of the Jacobian (W EP -1) are given by</s></p><formula xml:id="formula_39">λ 1,2 = β E J EE -β P J PP -2 2 ± (β E J EE -β P J PP -2) 2 4 + β E J EP β P J PE .<label>(37)</label></formula><p><s>Thus the real part of the largest eigenvalue fulfills</s></p><formula xml:id="formula_40">(λ max ) ≥ β E J EE -β P J PP -2 2 . (<label>38</label></formula><formula xml:id="formula_41">)</formula><p><s>Hence if there is no coupling between the PV neurons J PP = 0, the activity of excitatory neurons be dynamically stabilized and the susceptibility at which the dynamics become unstable is given by</s></p><formula xml:id="formula_42">β critical E = 2/J EE . (<label>39</label></formula><formula xml:id="formula_43">)</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.7">Gain amplification</head><p><s>The E neuron network gain in the unmodulated system with feedforward inhibition by SOM neurons is given by:</s></p><formula xml:id="formula_44">g ff u ≡ dr E dI stim = β E (1 + β P J PP )I E -β E β P J EP I P det(1 -W) := f (β E , β P ) h(β E , β P ) . (<label>40</label></formula><formula xml:id="formula_45">)</formula><p><s>Modulating the circuit by removing inhibition from SOM neurons shifts E and PV neurons to a new fixed point with cellular gains β * E and β * P , respectively.</s><s>Similarly, the network gain in the modulated state is:</s></p><formula xml:id="formula_46">g ff m = f (β * E , β * P ) h(β * E , β * P ) . (<label>41</label></formula><formula xml:id="formula_47">)</formula><p><s>Modulation then amplifies gain by the factor α ff = g ff m /g ff u .</s></p><p><s>Starting from the same fixed point as in the feedforward system, the gain in the unmodulated circuit with recurrently connected SOM neurons is then:</s></p><formula xml:id="formula_48">g rec u = f (β E , β P ) h(β E , β P ) -u(β E , β P , β S ) ,<label>(42)</label></formula><p><s>with u(β E , β P , β S ) = (β E β P J EP J PSβ E (1 + β P J PP )J ES )β S J SE = h(β E , β P )β S J SE dr E dr S (43)</s></p><p><s>and dr E /dr S for the corresponding feedforward circuit.</s><s>Assuming that modulation silences SOM neurons, the circuit is shifted to the same fixed point as in the feedforward case and therefore</s></p><formula xml:id="formula_49">g rec m = f (β * E , β * P ) h(β * E , β * P ) = g ff m . (<label>44</label></formula><formula xml:id="formula_50">)</formula><p><s>The gain amplification in the circuit with recurrently connected SOM neurons is hence given by</s></p><formula xml:id="formula_51">α rec = g rec m g rec u = α ff 1 -β S J SE dr E dr S . (<label>45</label></formula><formula xml:id="formula_52">)</formula><p><s>Since dr E /dr S is always negative for the circuit that supports gain modulation by removing SOM activity, the gain amplification in the recurrent system is always larger than in the feedforward system.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.8">Gain modulation in populations</head><p><s>We first assume that the E, PV and SOM population each has a stable tuning curve with respect to some stimuli θ ∈ (0 • , 180 • ); we denote the population tuning curve as r(θ) = (r E (θ), r P (θ), r S (θ)).</s></p><p><s>In equilibrium (i.e neglecting transients) the change of the tuning curves with respect to the angle is given by dr dθ = d dθ f (µ rec (θ), µ ff (θ)), <ref type="bibr">(46)</ref> with the static transfer function f (Eq.</s><s>( <ref type="formula" target="#formula_10">9</ref>) and Eq. ( <ref type="formula" target="#formula_11">10</ref>)) and the mean input from recurrent and feedforward connections µ rec and µ ff (Eq.</s><s>( <ref type="formula" target="#formula_14">12</ref>)).</s><s>We assume that the feedforward input is tuned with a Gaussian profile and that it only targets E and PV neurons:</s></p><formula xml:id="formula_53">µ ff (θ) = wN p θ e -(θ-θ p ) 2 /σ 2 θ     1 1 0     ,<label>(47)</label></formula><p><s>with the preferred angle θ p = 90 • .</s><s>Analyzing the sensitivity of firing rates to changes in preferred orientation (analogously to changes in the input intensity as analyzed in Methods 1.3) gives the stimulus gain mapping from feedforward input to firing rate output:</s></p><formula xml:id="formula_54">dr dθ = (1 -W) -1 Ĩ(θ), Ĩκ = β κ dµ ff κ dθ ,<label>(48)</label></formula><p><s>showing that the slope of the input tuning curve of population κ is effectively multiplied by the factor g κ .</s></p><p><s>We can extend the analysis to networks where individual E and PV neurons receive differently tuned input (i.e distributed tuning).</s><s>In that case the response sensitivity dr/dθ and the mean inputs µ rec , µ ff are of dimension N (the number of neurons).</s><s>The input to the i th neuron of population κ is given by: µ ff iκ (θ) = wN p θ e -(θ-θ p iκ ) 2 /σ 2 θ , (50)</s></p><p><s>with the preferred angle θ p iκ = 180i/N κ .</s><s>Thus the input vector for each θ is sparse and the response of the balanced network is also sparse and selective <ref type="bibr" target="#b59">(Pehlevan and Sompolinsky, 2014)</ref>.</s><s>The amplification of sparse input vectors can be understood as the projection of the input onto the eigenvectors of the N × N dimensional Jacobian -W N ×N ) weighted by the inverse of the associated eigenvalues <ref type="bibr" target="#b68">(Sadeh et al., 2014)</ref>.</s><s>Since some eigenvalues of the random connectivity matrix W N ×N are close to one, their modes get amplified.</s><s>When the activity of SOM neurons is removed the product of the population eigenvalues (det(1 -W)) becomes smaller which subsequently increases gain.</s><s>Since the eigenvectors of population eigenvalues affect all neurons in one population equally, the tuning curve slopes of individual neurons is increased (Fig. <ref type="figure" target="#fig_4">6D-F</ref>).</s></p><p><s>In particular, if SOM neurons only project feedforward to the E and PV neurons, the population response scaling (det(1 -W) -1 = det(1 -W EP ) -1 ) is determined by the changes of cellular gains of the E and PV neurons alone.</s><s>In contrast, if SOM neurons are part of the recurrent circuit (J SE = 0), removing their activity directly affects the population response scaling (det(1 -W) -1 = (det(1 -W EP )β E (p Ip II )β S J SE ) -1 ) resulting in stronger multiplicative scaling.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Parameter</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 :</head><label>1</label><figDesc><div><p><s>Figure 1: Tradeoff between two inhibitory motifs in the E -PV -SOM cortical circuit.</s><s>A, Sketch of the network model with neuron class-specific connections motivated by<ref type="bibr" target="#b60">(Pfeffer et al., 2013)</ref>.</s><s>A modulatory input (black line) is applied to the SOM neurons.</s><s>This input results in a change in the SOM neuron population firing rate (δr S ; green line), which in turn causes a change of excitatory neuron activity (δr E ; red line).</s><s>Assuming a linear relation between δr S and δr E allows δr E to be determined by summing over all possible pathways through the network by which SOM activity can influence E activity (see Eq. (23)).</s><s>B, The relation between δr S and δr E after summing over all paths (see Eq. (26)).</s><s>Sketches visualizes the tradeoff between the inhibitory and disinhibitory pathways.</s><s>J κγ summarizes the number and strength of connections from population γ to population κ (κ ,γ ∈ {E, P, S}, see Eq. (7)); β κ denotes the cellular gain of population κ (see Eq. (16)), and W EP the effective connectivity matrix between the E and PV populations (see Eq. (17)).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 :</head><label>2</label><figDesc><div><p><s>Figure2: Comparison of two inhibitory pathways.</s><s>Sketches of the model for disinhibition via SOM → PV → E (pathway p I , Ai) and for inhibition via SOM → E (pathway p II , Bi).</s><s>The stimulus targets E and PV neurons and modulatory input targets SOM neurons.</s><s>A, Disinhibition via SOM→PV→E: ii) Stationary population firing rates of excitatory neurons (red), PV neurons (blue) and SOM neurons (green) dependent on modulation of the SOM neurons.</s><s>Dots correspond to simulation results of populations of leaky-integrate-and-fire neurons (Methods 1.1).</s><s>Solid lines denote analytical predictions obtained from mean-field theory (Eq.</s><s>(13)).</s><s>iii) Gain of excitatory neurons (black, Eq. (27)) depending on the modulation of SOM neurons.</s><s>Simulation (dots) and theoretical results (solid lines) in A and B are normalized separately to their maxima in B. iv) Raster plots showing all spike times of the excitatory neurons in a 50 ms segment for three levels of modulation (see markers in iii).</s><s>B Inhibition via SOM → E: ii-iv) as in A. Parameters: p PS = 0.1 (I), p PS = 0 (II), p ES = 0 (I), p ES = 0.1 (II), p SE = 0 (I, II), p ext,inh</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 :</head><label>3</label><figDesc><div><p><s>Figure 3: Gain and stability in a network of E and PV neurons.</s><s>A, Every dot in the heatmap is a fixed point of the population rate dynamics of coupled E and PV neurons (Eq.</s><s>(9)).</s><s>Different fixed points correspond to different external inputs to the populations.</s><s>The color denotes the network gain (Eq.</s><s>(1)) of the system at the given fixed point.</s><s>Lines of constant gain are shown in gray (from dark to light gray normalized gain 0.1 to 0.7 in steps of 0.1).</s><s>The black line marks where the deterministic rate dynamics become unstable.</s><s>Parameter combinations for which no fixed point could be found are set to maximum gain and minimum stability.</s><s>B, Sketch of the model containing E and PV neurons and a stimulus that targets both populations.</s><s>C, Same as in A but the color denotes how close the system operates to instability (Eq.</s><s>(35)).</s><s>The deterministic rate dynamics becomes unstable at distance (d min ) zero.</s><s>Stability isolines are plotted in gray (from dark to light gray: d min = 0.3, 0.5, 0.7, 0.9).</s><s>D, Gain along stability isolines of d min = 0.6, 0.7, 0.8, 0.9.</s><s>Parameters: p ES = p PS = p SE = 0, p ext E and p ext P vary on each point of the grid in A and C.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 :</head><label>4</label><figDesc><div><p><s>Figure 4: How modulation of SOM neurons affect network gain and stability.</s><s>A, Sketches illustrating how the vector fields in panels B-E are obtained.</s><s>Modulation of SOM neurons yields a steady-state rate change of SOM (i), which yields altered steady-state rates of E and PV neurons (ii).</s><s>The arrows indicate in which direction a fixed point of the rate dynamics is changed by the modulation (iii).</s><s>B-E Heatmaps as in Fig. 3 for network stability (i) and gain (ii).</s><s>Arrow fields as defined in panel A. SOM neurons do not receive recurrent feedback from excitatory neurons (p SE = 0).</s><s>B: SOM neurons receive positive modulation and connect only to PV neurons (p ES = 0, p PS = 0.1).</s><s>C: SOM neurons receive positive modulation and connect to both PV and E neurons (p ES = 0.07, p PS = 0.1).</s><s>D: SOM neurons receive negative modulation and connect only to E neurons (p ES = 0.1, p PS = 0).</s><s>E: SOM neurons receive negative modulation and connect to both PV and E neurons (p ES = 0.1, p PS = 0.07) .</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 6 :</head><label>6</label><figDesc><div><p><s>Figure 6: SOM activity modulates tuning curves of E and PV neurons.</s><s>A, Sketch of all neurons receiving input tuned to the same (i) and different (ii) preferred θ.</s><s>B, All E and PV neurons receive tuned feedforward input with a preferred θ of 90 • .</s><s>Modulatory input suppresses the activity of SOM neurons.</s><s>Population tuning curves of E (i), PV (iii), and SOM neurons (iii) without (light color) and with modulation (dark color).</s><s>C, Difference of gain coefficients ∆g κ = g m κg u κ for the modulated (m) and unmodulated (m) networks.</s><s>∆g i is only shown for angles θ at which the input µ ff (θ) is larger than 1% of its peak value.</s><s>D-F, Same as in panel B, but individual neurons receive tuned feedforward input with different preferred θ.</s><s>Panels show tuning curves of three example neurons (i-iii) within the E (D), PV (E), and SOM (F) populations.</s><s>Parameters: p ext E = 0.0185, p ext P = 0.0175, p ext S = 0.0445 p ext,inh S = 0.0125 without modulation, p ext,inh S</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 7 :</head><label>7</label><figDesc><div><p><s>Figure 7: How inhibitory to inhibitory coupling affects rate and stability.</s><s>A, Rate of E neurons depending on the modulation of SOM neurons for different values of SOM → SOM coupling.</s><s>B, Stability of the circuit depending on the modulation of SOM neurons for different values of PV → PV coupling.</s><s>The external input is chosen such that the rates at zero modulation are the same as in panel A for all values of p II .</s><s>C, Stability of the circuit depending on the modulation of SOM neurons for different values of SOM → PV coupling.</s><s>The external input is chosen such that the rates at zero modulation are the same as in panel A for all values of p IS .</s><s>Parameters: p ext E = 0.0527, p ext,inh S</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head></head><label></label><figDesc><div><p><s>where κ ∈ {E, P, S}.</s><s>Since E and PV receive the same amount of feedforward input we can drop the index of µ ff κ and write the slope of the population tuning curves asdr κ dθ = γ∈{E,P} P κγ β γ :=gκ dµ ff dθ, where P = (1 -W) -1 , α ∈ {E, P, S},</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head></head><label></label><figDesc><div><p><s>gp EP η P -gp ES ρη P p PE -gp PP η P -gp PS ρη P p SE -gp SP η P -gp SS ρη P</s></p></div></figDesc><table /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 1 :</head><label>1</label><figDesc><div><p><s>Default model parameter.</s><s>Deviations are specified in the text or caption of figures.</s></p></div></figDesc><table><row><cell></cell><cell>Value</cell><cell>Description</cell></row><row><cell>τ m</cell><cell>10 ms</cell><cell>membrane time constant</cell></row><row><cell>R</cell><cell>40 MΩ</cell><cell>membrane resistance</cell></row><row><cell>E L</cell><cell>-65 mV</cell><cell>resting potential</cell></row><row><cell>V th</cell><cell>-50 mV</cell><cell>threshold potential</cell></row><row><cell>V r</cell><cell>-65 mV</cell><cell>reset potential</cell></row><row><cell>τ s</cell><cell>0.5 ms</cell><cell>synaptic time constant</cell></row><row><cell>τ ref</cell><cell>2 ms</cell><cell>absolute refractory period</cell></row><row><cell>N</cell><cell>4136</cell><cell>number of excitatory neurons</cell></row><row><cell>p EE</cell><cell>0.03</cell><cell>connection probability between excitatory neurons</cell></row><row><cell>p PE</cell><cell>0.05</cell><cell>connection probability between E and PV neurons</cell></row><row><cell>p SE</cell><cell>0.05</cell><cell>connection probability between E and SOM neurons</cell></row><row><cell>p EP</cell><cell>0.1</cell><cell>connection probability between PV and E neurons</cell></row><row><cell>p PP</cell><cell>0.1</cell><cell>connection probability between PV neurons</cell></row><row><cell>p SP</cell><cell>0.0</cell><cell>connection probability between PV and SOM neurons</cell></row><row><cell>p ES</cell><cell>0.1</cell><cell>connection probability between SOM and E neurons</cell></row><row><cell>p PS</cell><cell>0.07</cell><cell>connection probability between SOM and PV neurons</cell></row><row><cell>p SS</cell><cell>0.0</cell><cell>connection probability between SOM neurons</cell></row><row><cell>p ext E</cell><cell>0.055</cell><cell>connection probability of external input to E neurons</cell></row><row><cell>p ext P</cell><cell>0.05</cell><cell>connection probability of external input to PV neurons</cell></row><row><cell>p ext S</cell><cell>0.05</cell><cell>connection probability of inhibitory external input to SOM neurons</cell></row><row><cell>p ext,inh E</cell><cell>0</cell><cell>connection probability of inhibitory external input to E neurons</cell></row><row><cell>p ext,inh P</cell><cell>0</cell><cell>connection probability of inhibitory external input to PV neurons</cell></row><row><cell>p ext,inh S</cell><cell>0.025</cell><cell>connection probability of external inhibitory input to SOM neurons</cell></row><row><cell>w = w iE</cell><cell>610.56 pA</cell><cell>synaptic strength of excitatory connection</cell></row><row><cell>w iP , w iS p θ</cell><cell>-gw 0.025</cell><cell>synaptic strength of inhibitory connection connection probability of tuned input to E neurons</cell></row><row><cell>σ θ</cell><cell>20 •</cell><cell>standard deviation of input tuning</cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We thank <rs type="person">Xinruo Yang</rs>, <rs type="person">Fereshteh Lagzi</rs> and <rs type="person">Gregory Handy</rs> for useful comments on the manuscript.Funding was provided by the <rs type="funder">National Institutes of Health</rs> Grants <rs type="grantNumber">1U19NS107613</rs> (BD), <rs type="grantNumber">CRCNS R01DC015139</rs> (<rs type="affiliation">AMO, BD</rs>), and <rs type="funder">R01EB026953 (BD)</rs>, the <rs type="funder">Vannevar Bush Faculty Fellowship</rs> <rs type="grantNumber">ONR-N00014-18-1-2002</rs> (<rs type="affiliation">BD, AMO</rs>), and an award from the <rs type="funder">Simons Foundation Collaboration on the Global Brain 542967 (BD)</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_UvSksan">
+					<idno type="grant-number">1U19NS107613</idno>
+				</org>
+				<org type="funding" xml:id="_Y49mgme">
+					<idno type="grant-number">CRCNS R01DC015139</idno>
+				</org>
+				<org type="funding" xml:id="_fJERwXu">
+					<idno type="grant-number">ONR-N00014-18-1-2002</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code</head><p><s>Packaged Python code to replicate simulation and theory results is freely available at https:// github.com/hannahbos/disinhibitory_pathways</s></p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Synaptic Mechanisms of Feature Coding in the Visual Cortex of</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Adesnik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Awake Neuron</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="1147" to="1159" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>e4</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A neural circuit for spatial summation in visual cortex</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Adesnik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bruns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Taniguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scanziani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">490</biblScope>
+			<biblScope unit="page" from="226" to="231" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Somatostatin-expressing interneurons enable and maintain learning-dependent sequential activation of pyramidal neurons</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Adler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Shin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yasuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">B</forename><surname>Gan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page" from="202" to="216" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Parvalbumin-expressing interneurons linearly transform cortical responses to visual stimuli</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">V</forename><surname>Atallah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bruns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scanziani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page">159</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Instantaneous modulation of gamma oscillation frequency by balancing excitation with</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">V</forename><surname>Atallah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scanziani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="566" to="577" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Two dynamically distinct inhibitory networks in layer 4 of the neocortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Beierlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Gibson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Connors</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="2987" to="3000" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Inhibition evoked from primary afferents in the electrosensory lateral line lobe of the weakly electric fish (apteronotus leptorhynchus)</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Berman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Maler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="3173" to="3196" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Systematic integration of structural and functional data into multi-scale models of mouse primary visual cortex</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">N</forename><surname>Billeh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Identifying Anatomical Origins of Coexisting Oscillations in the Cortical Microcircuit</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Diesmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Helias</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS computational biology</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1005132" to="1005134" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Dynamics of sparsely connected networks of excitatory and inhibitory spiking neurons</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of computational neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="183" to="208" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Fast global oscillations in networks of integrate-and-fire neurons with low firing rates</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Hakim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="1621" to="1671" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Normalization as a canonical neural computation</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">51</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Inhibitory interneurons regulate temporal precision and correlations in cortical circuits</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Cardin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends in neurosciences</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="689" to="700" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Gain modulation from background synaptic input</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">S</forename><surname>Chance</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Reyes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="773" to="782" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Attention improves performance primarily by reducing interneuronal correlations</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">1594</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">Paradoxical response reversal of top-down modulation in cortical circuits with three interneuron types</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C G</forename><surname>Del Molino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Mejias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>Elife 6, e29742</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Subcellular domain-restricted gabaergic innervation in primary visual cortex in the absence of sensory and thalamic inputs</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Di Cristo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1184" to="1186" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">The mechanics of state-dependent neural correlations</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Litwin-Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rosenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Ocker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josić</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="383" to="393" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">A canonical microcircuit for neocortex</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Douglas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Whitteridge</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="480" to="488" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Task engagement selectively modulates neural correlations in auditory cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Downer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Niwa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Sutter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="7565" to="7574" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Doyle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Francis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Tannenbaum</surname></persName>
+		</author>
+		<title level="m">Feedback Control Theory</title>
+		<imprint>
+			<publisher>Dover Publications</publisher>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Cholinergic and inhibitory synapses in a pathway from motor-axon collaterals to motoneurones</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Eccles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fatt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Koketsu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of physiology</title>
+		<imprint>
+			<biblScope unit="volume">126</biblScope>
+			<biblScope unit="page" from="524" to="562" />
+			<date type="published" when="1954">1954</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Linearization of F-I curves by adaptation</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ermentrout</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1721" to="1729" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">The development and application of optogenetics</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Fenno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yizhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annual review of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="389" to="412" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Mechanisms underlying gain modulation in the cortex</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Ferguson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Cardin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="13" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Dynamics of the firing probability of noisy integrate-and-fire neurons</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Fourcaud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="2057" to="2110" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">A Cortical Circuit for Gain Control by Behavioral State</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">156</biblScope>
+			<biblScope unit="page" from="1139" to="1152" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">On the stability of brain-like structures</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Griffith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophysical journal</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="299" to="308" />
+			<date type="published" when="1963">1963</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">A unified view on weakly correlated recurrent networks</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Grytskyy</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="1" to="19" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Inhibition dominates sensory responses in the awake cortex</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Haider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Häusser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">493</biblScope>
+			<biblScope unit="page">97</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">The mechanism of orientation selectivity in primary visual cortex without a functional map</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hansel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Van Vreeswijk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="4049" to="4064" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Cortical state and attention</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thiele</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature reviews neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="509" to="523" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Inhibition in the eye of limulus</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Hartline</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Wagner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ratliff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of general physiology</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="651" to="673" />
+			<date type="published" when="1956">1956</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Functions and dysfunctions of neocortical inhibitory neuron subtypes</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hattori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">V</forename><surname>Kuchibhotla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Froemke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Komiyama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page">1199</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Circuit models of low-dimensional shared variability in cortical networks</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="337" to="348" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">How inhibition shapes cortical activity</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Isaacson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scanziani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="231" to="243" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Principles of connectivity among morphologically defined cell types in adult neocortex</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Jiang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">350</biblScope>
+			<biblScope unit="page">9462</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Network-level control of frequency tuning in auditory cortex</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Kato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Asinof</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Isaacson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="412" to="423" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Gabaa inhibition controls response gain in visual cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Katzner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Busse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="5931" to="5941" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Interneuron cell types are fit to function</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kepecs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fishell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">505</biblScope>
+			<biblScope unit="page">318</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Brain-wide Maps Reveal Stereotyped Cell-Type-Based Cortical Architecture and Subcortical Sexual Dimorphism</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">171</biblScope>
+			<biblScope unit="page" from="456" to="469" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>e22</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Parallel processing by cortical inhibition enables context-dependent behavior</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">V</forename><surname>Kuchibhotla</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="62" to="71" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kunkel</surname></persName>
+		</author>
+		<idno>Nest 2.12.0</idno>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Differential inhibition of cells and inhibitory interneurons along the rostrocaudal axis of anterior piriform cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Large</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="8067" to="E8076" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Top-down dendritic input increases the gain of layer 5 pyramidal neurons</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Larkum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Senn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R</forename><surname>Lüscher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cerebral cortex</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1059" to="1070" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">A disinhibitory circuit mediates motor integration in the somatosensory cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kruglikov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fishell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rudy</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Publishing Group</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1662" to="1670" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Interneuron subtypes and orientation tuning</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Kwan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">508</biblScope>
+			<biblScope unit="page" from="1" to="E2" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Transmission of noise coded versus additive signals through a neuronal ensemble</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lindner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Schimansky-Geier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Letters</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="2934" to="2937" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Inhibitory stabilization and visual coding in cortical circuits with multiple interneuron subtypes</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rosenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="1399" to="1409" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Facilitation and inhibition of spinal motoneurons</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Lloyd</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="421" to="438" />
+			<date type="published" when="1946">1946</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Mechanisms underlying the response of mouse cortical networks to optogenetic manipulation</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mahrach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Van Vreeswijk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hansel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">49967</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Interneurons of the neocortical inhibitory system</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Markram</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature reviews neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">793</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Waking state: rapid variations modulate neural and behavioral responses</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Mcginley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="1143" to="1161" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Deterministic multiplicative gain control with active dendrites</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Mehaffey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Maler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Turner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="9968" to="9977" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Natan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Geffen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Cortical Interneurons Differentially Shape Frequency Tuning following Adaptation</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="878" to="890" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Sparse bursts optimize information transmission in a multiplexed neural code</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Naud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sprekeler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>E6329-E6338</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Modulation of visual responses by behavioral state in mouse visual cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Niell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Stryker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="472" to="479" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Instantaneous correlation of excitation and inhibition during ongoing and sensory-evoked activities</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Okun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Lampl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">535</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Inhibitory Stabilization of the Cortical Network Underlies Visual Surround Suppression</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ozeki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Finn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Schaffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="578" to="592" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Selectivity and sparseness in randomly connected balanced networks</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Pehlevan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PloS one</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">89992</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Inhibition of inhibition in visual cortex: the logic of connections between molecularly distinct interneurons</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Pfeffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scanziani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1068" to="1076" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<monogr>
+		<title level="m" type="main">Asymmetric effects of activating and inactivating cortical interneurons</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Phillips</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Hasenstaub</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016. 18383</date>
+			<biblScope unit="volume">5</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Internal brain state regulates membrane potential synchrony in barrel cortex of behaving mice</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Pi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<editor>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Petersen</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">503</biblScope>
+			<biblScope unit="page">881</biblScope>
+			<date type="published" when="2008">2013. 2008</date>
+		</imprint>
+	</monogr>
+	<note>Nature</note>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">The asynchronous state in cortical circuits</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Renart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">327</biblScope>
+			<biblScope unit="page" from="587" to="590" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Target-cell-specific facilitation and depression in neocortical circuits</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Reyes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="279" to="285" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">The normalization model of attention</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="168" to="185" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">The Stabilized Supralinear Network: A Unifying Circuit Motif Underlying Multi-Input Integration in Sensory Cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Van Hooser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="402" to="417" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Cognition as a window into neuronal population space</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Ruff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Ni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annual review of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="77" to="97" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Mean-field analysis of orientation selectivity in inhibition-dominated networks of spiking neurons</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cardanobile</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rotter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SpringerPlus</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">148</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Orientation selectivity in inhibition-dominated networks of spiking neurons: effect of single neuron properties and dynamics</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rotter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS computational biology</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">1004045</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Gain modulation: a major computational principle of the central nervous system</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Salinas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Thier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="15" to="21" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Natural signal statistics and sensory gain control</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Schwartz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Simoncelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="819" to="825" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Seybold</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A K</forename><surname>Phillips</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Schreiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Hasenstaub</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Inhibitory Actions Unified by Network Integration</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="1181" to="1192" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Neuronal arithmetic</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Silver</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">474</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<monogr>
+		<title level="m" type="main">A transformation from temporal to ensemble coding in a model of piriform cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Bolding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Franks</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">34831</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Feedback-induced gain control in stochastic spiking networks</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sutherland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Longtin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biological cybernetics</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="475" to="489" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tetzlaff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Helias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Einevoll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Diesmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Decorrelation of Neural-Network Activity by Inhibitory Feedback</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="1002596" to="1002625" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Activity-dependent properties of synaptic transmission at two classes of connections made by rat neocortical pyramidal axons in vitro</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Physiology</title>
+		<imprint>
+			<biblScope unit="volume">502</biblScope>
+			<biblScope unit="page" from="131" to="147" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">GABAergic Interneurons in the Neocortex: From Cellular Properties to Circuits</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tremblay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rudy</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="260" to="292" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">Neural networks with dynamic synapses</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tsodyks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Pawelzik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Markram</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="821" to="835" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Paradoxical effects of external modulation of inhibitory interneurons</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Tsodyks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Skaggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Sejnowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Mcnaughton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="4382" to="4388" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Somatostatin-expressing neurons in cortical networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Urban-Ciecko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Barth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Publishing Group</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="401" to="409" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Neocortical Somatostatin Neurons Reversibly Silence Excitatory via GABAb Receptors</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Urban-Ciecko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Fanselow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Barth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="1" to="11" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title level="a" type="main">Chaos in neuronal networks with balanced excitatory and inhibitory activity</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Van Vreeswijk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">274</biblScope>
+			<biblScope unit="page" from="1724" to="1726" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title level="a" type="main">Cortical gamma band synchronization through somatostatin interneurons</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Veit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hakim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Jadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Sejnowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Adesnik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page">951</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<analytic>
+		<title level="a" type="main">Sparse coding and decorrelation in primary visual cortex during natural vision</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Vinje</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Gallant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">287</biblScope>
+			<biblScope unit="page" from="1273" to="1276" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<analytic>
+		<title level="a" type="main">Neurophysiological and computational principles of cortical rhythms in cognition</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physiological reviews</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="1195" to="1268" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">Division of labor among distinct subtypes of inhibitory neurons in a cortical microcircuit of working memory</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tegnér</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Constantinidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Goldman-Rakic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="1368" to="1373" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title level="a" type="main">A disinhibitory circuit motif and flexible information routing in the brain</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current opinion in neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="75" to="83" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<title level="a" type="main">Balanced inhibition underlies tuning and sharpens spike timing in auditory cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wehr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Zador</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">426</biblScope>
+			<biblScope unit="page">442</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">Effects of spatial attention on contrast response functions in macaque area V4</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Williford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H R</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="40" to="54" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<analytic>
+		<title level="a" type="main">Excitatory and inhibitory interactions in localized populations of model neurons</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cowan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophysical journal</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1" to="24" />
+			<date type="published" when="1972">1972</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<analytic>
+		<title level="a" type="main">Division and subtraction by distinct cortical inhibitory networks in vivo</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Runyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sur</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">488</biblScope>
+			<biblScope unit="page">343</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<analytic>
+		<title level="a" type="main">Dynamic circuit motifs underlying rhythmic gain control, gating and integration</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Womelsdorf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Valiante</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Sahin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tiesinga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">1031</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<analytic>
+		<title level="a" type="main">Cortical inhibitory interneurons control sensory processing</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Wood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Blackwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Geffen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current opinion in neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="200" to="207" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<analytic>
+		<title level="a" type="main">Neocortical Somatostatin-Expressing GABAergic Interneurons Disinhibit the Thalamorecipient Layer 4</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">Y</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tremblay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rudy</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="155" to="167" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<analytic>
+		<title level="a" type="main">A dendritic disinhibitory circuit mechanism for pathway-specific gating</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Murray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature communications</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1" to="14" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<analytic>
+		<title level="a" type="main">Somatostatin-Expressing Inhibitory Interneurons in Cortical Circuits</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Yavorska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wehr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in Neural Circuits</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="226" to="244" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<analytic>
+		<title level="a" type="main">Short-term synaptic plasticity</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Zucker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">G</forename><surname>Regehr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annual review of physiology</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page" from="355" to="405" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

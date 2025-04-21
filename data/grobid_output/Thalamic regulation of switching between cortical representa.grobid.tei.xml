@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MIT Open Access Articles Thalamic regulation of switching between cortical representations enables cognitive flexibility</title>
+				<funder ref="#_gWP3QHr">
+					<orgName type="full">Brain and Behavior, Klingenstein, Pew</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">National Institutes of Health</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">German Ministry of Education</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2020-05-15">2020 May 15.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Springer</forename><surname>Science</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Business</forename><surname>Media</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Rajeev</forename><forename type="middle">V</forename><surname>Rikhye</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">McGovern Institute for Brain Research</orgName>
+								<orgName type="institution" key="instit2">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Brain and Cognitive Sciences</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aditya</forename><surname>Gilra</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Institute for Genetics</orgName>
+								<orgName type="laboratory">Neural Network Dynamics and Computation Group</orgName>
+								<orgName type="institution">University of Bonn</orgName>
+								<address>
+									<addrLine>Kirschallee 1</addrLine>
+									<postCode>53115</postCode>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Michael</forename><forename type="middle">M</forename><surname>Halassa</surname></persName>
+							<email>mhalassa@mit.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">McGovern Institute for Brain Research</orgName>
+								<orgName type="institution" key="instit2">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Brain and Cognitive Sciences</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MIT Open Access Articles Thalamic regulation of switching between cortical representations enables cognitive flexibility</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2020-05-15">2020 May 15.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">53425B69CD311AE3F5F1518E93EBF378</idno>
+					<idno type="DOI">10.1038/s41593-018-0269-z.</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Interactions between the prefrontal cortex (PFC) and mediodorsal thalamus (MD) are critical for cognitive flexibility, yet the underlying computations are unknown.</s><s>To investigate fronto-thalamic substrates of cognitive flexibility, we developed a behavioral task, where mice switched between different sets of learned cues that guided attention towards either visual or auditory targets.</s><s>We found that PFC responses reflected both the individual cues and their meaning as task rules, indicating a hierarchical cue-to-rule transformation.</s><s>Conversely, MD responses reflected the statistical regularity of cue presentation, and were required for switching between such experimentally-specified cueing contexts.</s><s>A subset of these thalamic responses sustained contextrelevant PFC representations, while another suppressed the context-irrelevant ones.</s><s>Through modeling and experimental validation, we find that thalamic-mediated suppression may not only reduce PFC representational interference but could also preserve unused cortical traces for future use.</s><s>Overall, our study provides a computational foundation for thalamic engagement in cognitive flexibility.</s></p><p><s>Users may view, print, copy, and download text and data-mine the content in such documents, for the purposes of academic research, subject always to the full Conditions of use:</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Cognitive flexibility, the ability to mentally switch between different thoughts and action plans, is critical for survival in a rapidly changing environment <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref> .</s><s>This important process allows us to flexibly switch attention among competing inputs <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref> .</s><s>A lack of cognitive flexibility is a hallmark of many mental illnesses such as schizophrenia <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b8">9</ref> .</s><s>Furthermore, a key limiting factor to artificial general intelligence (AI) is the inability of deep learning algorithms to perform multiple tasks without interference <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> .</s><s>Therefore, elucidating the circuit and computational principles underlying cognitive flexibility will have a broad multidisciplinary impact.</s></p><p><s>The prefrontal cortex (PFC) plays a central role in cognitive flexibility <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b12">13</ref> , including the differential allocation of attentional resources based on learned cues <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref> .</s><s>Multiple recent studies have also demonstrated that PFC function is highly dependent on its interactions with the mediodorsal thalamus (MD) <ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref> .</s><s>In particular, the MD sustains task-relevant representations in the PFC by augmenting effective connectivity between cortical neurons <ref type="bibr" target="#b16">17</ref> .</s><s>However, because previous studies did not include a controllable switching component, the role of MD-PFC interactions in cognitive flexibility remain unclear.</s></p><p><s>In this study, we examined the substrates of cognitive flexibility through a series of behavioral manipulations, temporally-precise optogenetic perturbations and multi-site multielectrode recordings.</s><s>We found that PFC responses reflected both the individual cues and their meaning as task rules, indicating a hierarchical cue-to-rule transformation in this cortical area.</s><s>In contrast, MD responses reflected the statistical regularity of the cue presentation, which we refer to as the cueing context.</s><s>Using causal perturbations, we found that in addition to stabilizing context-relevant representations, MD neurons also suppress context-irrelevant PFC representations.</s><s>These processes impart on the PFC the flexibility to dynamically switch between different contexts with minimal interference.</s><s>Altogether, our work clarifies how MD neurons regulate prefrontal representational switching and provides a computational foundation for thalamic engagement in cognitive flexibility.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Prefrontal neurons display mixed selectivity during attentional switching</head><p><s>To examine how mouse prefrontal cortex (PFC) ensembles operate when cognitive flexibility is required, we expanded an attentional control task <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b22">23</ref> to incorporate a cue switching component (Fig. <ref type="figure" target="#fig_1">1a</ref>).</s><s>At the core of the task is sensory selection, where freely behaving mice select between spatially-conflicting visual and auditory targets.</s><s>On each trial, a mouse selects between the two targets based on one of two 100 ms-long learned cues; a high-pass (HP) or a low-pass (LP) noise burst.</s><s>These cues correspond to two rules -attend to audition and attend to vision respectively.</s><s>Mice were required to hold a pseudo-randomly presented cue in mind for up to one second by maintaining snout fixation in the initiation port prior to the simultaneous presentation of the two targets.</s><s>The targets corresponded to the spatial location of the reward being delivered through the right or left reward port (e.g.</s><s>left LED flash on an attend to vision trial signaled a response on the left reward port).</s><s>Correct performance was rewarded with 10 μL of condensed milk, while incorrect performance was punished with a timeout.</s><s>Logistic regression modeling of behavior across all mice used in this study revealed that they used the cue to guide their choices (Supplementary Fig. <ref type="figure" target="#fig_1">1a-d</ref>, see Methods).</s></p><p><s>Once mice became proficient at using the auditory noise cues, we introduced two visual cues -an ultraviolet (UV) and green LED flash -which corresponded to the same rules (Fig. <ref type="figure" target="#fig_1">1b</ref>).</s><s>To assess how mice switched from using one cue set to another, we trained mice to perform this task in blocks (Fig. <ref type="figure" target="#fig_1">1b</ref>).</s><s>Mice had equivalent performance across both blocks regardless of their presentation order (Supplementary Fig. <ref type="figure" target="#fig_1">1e,</ref><ref type="figure">f</ref>), suggesting that they utilized different cue sets equivalently.</s><s>Importantly, this demonstrates an ability to flexibly switch their attention when the cueing context changes.</s></p><p><s>Given the well-known role for the PFC in cognitive flexibility <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b24">25</ref> , we asked how PFC neurons (prelimbic cortex; see Methods) engage in this task.</s><s>Using unbiased trial-selection (Supplementary Fig. <ref type="figure" target="#fig_1">1g</ref>) and spike waveform clustering analysis <ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref> , we classified recorded neurons into two categories: regular spiking (RS, putative excitatory) and fast spiking (FS, putative inhibitory, Supplementary Fig. <ref type="figure" target="#fig_2">2a-d</ref>).</s><s>As previously reported <ref type="bibr" target="#b16">17</ref> , a subset of RS neurons showed a brief increase in spike-timing reliability during the delay period.</s><s>We refer to these cells as transient (see Supplementary Fig. <ref type="figure" target="#fig_2">2e-g</ref> for classification of cells).</s><s>As a population, these transient cells tiled time in the delay period with distinct neurons responding at different time points (Supplementary Fig. <ref type="figure" target="#fig_2">2h</ref>).</s><s>Interestingly, these cells could be further categorized into two groups.</s><s>One group responded selectively to one of the four learned cues (Fig. <ref type="figure" target="#fig_1">1c,</ref><ref type="figure">d</ref>, cue-selective, 233/1789, 5 mice), while another responded equivalently to two cues that had the same meaning, which may be interpreted as a single task rule (Fig. <ref type="figure" target="#fig_1">1e</ref>, f and Supplementary Fig. <ref type="figure" target="#fig_2">2i</ref>, cue-invariant 102/1789, 5 mice).</s><s>For example, a cue-invariant PFC neuron selective to the attend-to-vision rule responds with transient elevation in spiking reliability at the same delay period time in both LP noise and Green LED trials.</s><s>To our knowledge this type of cue-invariance, indicative of ruleselectivity <ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b29">30</ref> , has not been previously reported in mouse PFC.</s></p><p><s>In stark contrast to the transient RS neural responses, putative inhibitory FS neurons showed broad changes in spike rate that distinguished between the two cueing contexts but not rule meaning (Fig. <ref type="figure" target="#fig_1">1g</ref>, h and Supplementary Fig. <ref type="figure" target="#fig_2">2j</ref>, 418 neurons 5 mice).</s><s>In fact, RS and FS populations encode distinct cognitive variables, with the rule signal being more readily decodable from RS neurons while the context signal being more readily decodable from FS neurons (Fig. <ref type="figure" target="#fig_1">1i,</ref><ref type="figure">j</ref>).</s><s>Further analysis confirmed that RS neurons encode cues and rules through changes in spiking reliability (Supplementary Fig. <ref type="figure" target="#fig_3">3a,</ref><ref type="figure">b</ref>).</s><s>On the other hand, FS populations encode context through broader (persistent) changes in spike rates across both the inter-trial interval and the delay period.</s><s>It is important to note that, in addition to transient PFC RS cells, we observed another RS group that showed persistent spike rate changes that also correlated with context (Supplementary Fig. <ref type="figure" target="#fig_3">3c</ref>).</s><s>However, it was much harder to decode context from these cells compared to PFC FS neurons (Supplementary Fig. <ref type="figure" target="#fig_3">3d,</ref><ref type="figure">e</ref>).</s></p><p><s>To further test if transient PFC responses were indeed due to the sensory cue, we omitted the cue on 20% of the trials (Supplementary Fig. <ref type="figure" target="#fig_4">4a</ref>).</s><s>In addition to a decrease in behavioral performance, we observed a significant decrease in tuning strength of both PFC cueselective and cue-invariant neurons (Supplementary Fig. <ref type="figure" target="#fig_4">4b-d</ref>).</s><s>Taken together, these results indicate that transient PFC responses are due to the learned cue, with cue-selective cells representing a physical cue and cue-invariant cells representing its meaning as a task rule.</s><s>Is it possible that the observed mixed selectivity among cue-invariant neurons reflects the differential sampling of local cue-selective neurons in a context-dependent manner?</s><s>To address this question, we constructed a multi-neuronal generalized linear model (GLM, Fig. <ref type="figure" target="#fig_1">1k</ref>) to predict the spike rate of each PFC neuron <ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b31">32</ref> .</s><s>In addition to external sensory variables, our GLM model also included coupling terms to capture the dependencies between neurons (see Methods).</s><s>These coupling terms were in the form of a coupling filter that allowed us to explain the effect that spiking in other simultaneously recorded neurons had on the unit being modeled.</s><s>Importantly, we used a rigorous cross-validation approach to statistically evaluate the predicted coupling and to constrain the parameters of the model (see Methods).</s><s>On average, the GLM was able to explain close to 75% of the response variance of both cue-selective and cue-invariant PFC neurons on each trial (Supplementary Fig. <ref type="figure" target="#fig_5">5ac</ref>).</s></p><p><s>By analyzing the strength of the coupling filters, we were able to make inferences about the functional connectivity between the different classes of PFC neurons.</s><s>This analysis revealed that cue-selective neurons are strongly coupled among themselves only if they encode the same cue, and do not receive substantial reciprocal coupling from cue-invariant neurons (Fig. <ref type="figure" target="#fig_1">1l</ref>).</s><s>Additionally, cue-invariant neurons receive strong functional inputs from cueselective neurons across both contexts (Fig. <ref type="figure" target="#fig_1">1m</ref>).</s><s>As such, based on this pattern of functional connectivity, we reasoned that task-relevant PFC computations are hierarchically organized, with cue-invariant neurons gaining their rule selectivity from cue-selective neurons across contexts (Fig. <ref type="figure" target="#fig_1">1n</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Mediodorsal thalamus encodes cueing context</head><p><s>The mediodorsal thalamus (MD) projects extensively to the PFC has a critical role in maintaining task-relevant activity in this cortical region <ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b33">34</ref> .</s><s>Furthermore, a recent study found that the MD might play a role in cognitive flexibility by recruiting cortical inhibitory neurons <ref type="bibr" target="#b34">35</ref> .</s><s>Given our finding that FS neurons are contextually selective (Fig. <ref type="figure" target="#fig_1">1h</ref>, i), we next asked how MD neurons responded in our context switching task (Fig. <ref type="figure" target="#fig_2">2a</ref>).</s><s>In agreement with our previously published results <ref type="bibr" target="#b16">17</ref> , we found that a subset of MD neurons exhibited a transient increase in spiking reliability during the delay, and distinct MD neurons tiled the delay period (Fig. <ref type="figure" target="#fig_2">2b</ref>).</s><s>Unlike PFC RS neurons, these transient MD neurons did not display cue-selective responses but had equivalent responses to both cues within the same block.</s><s>Additionally, another subset of MD neuron showed the same selectivity towards the cueing context but through persistent changes in spike rate over the delay period (Figs.</s><s>2c and 2d for classification of transient and persistent MD neurons).</s><s>At the population level, the cueing context was much more decodable from both persistent and transient MD neurons compared to PFC RS neurons (Fig. <ref type="figure" target="#fig_2">2e,</ref><ref type="figure">f</ref>).</s><s>Therefore, across the PFC-MD network, MD and PFC FS neurons were the most informative of the cueing context, whereas PFC transient neurons were most informative of the rule (Fig. <ref type="figure" target="#fig_2">2f</ref>).</s></p><p><s>Are these thalamic responses reflective of sensory input (i.e. the modality of the cues) or of something more cognitive?</s><s>To answer this question, we required mice to perform the task using blocks with cues of different modalities.</s><s>MD neuronal activity reflected these heteromodal cueing blocks (Supplementary Fig. <ref type="figure">S6a-d</ref>).</s><s>Furthermore, when we presented all four cues in a randomized manner, we found MD neurons that responded to all four cues, suggesting that their combination was encoded as a single context (Supplementary Fig. <ref type="figure">6eh</ref>).</s><s>Altogether, MD activity reflects the statistical regularity of cue presentation over a multitrial timescale, which we refer to as the cueing context (Supplementary Fig. <ref type="figure">6i,</ref><ref type="figure">j</ref>).</s></p><p><s>What factors could explain this contextual selectivity in the MD?</s><s>We had previously shown that transient responses in the MD are dependent on PFC inputs <ref type="bibr" target="#b16">17</ref> .</s><s>Therefore, one possibility is that the MD gains contextual selectivity from PFC inputs, either from persistent RS neurons or from cue-selective ones (Supplementary Fig. <ref type="figure">7a,</ref><ref type="figure">b</ref>).</s><s>To test these two models, we fit GLMs to MD neurons and analyzed how different PFC cell types contributed to their selectivity (Fig. <ref type="figure" target="#fig_2">2g</ref>).</s><s>PFC RS persistent cells did not contribute to spiking of either MD transient or persistent cells (Supplementary Fig. <ref type="figure">7c-f</ref>).</s><s>In contrast, more than 75% of the variance in the delay period activity of both transient and persistent MD neurons could be explained by inputs from cue-selective PFC neurons, with MD neurons more likely to receive inputs from the context-congruent cortical cue set (Fig. <ref type="figure" target="#fig_2">2h</ref>).</s><s>Also, consistent with the fact that PFC FS neurons do not project to the MD, we found that they exerted no causal influence on MD spiking, further validating the power of the GLM to infer biologically plausible circuit models (Supplementary Fig. <ref type="figure">7c,</ref><ref type="figure">f</ref>).</s><s>Therefore, these findings suggest that MD neurons gain their contextual selectivity, at least partly, by pooling context-specific cue inputs from the PFC.</s><s>MD transient cells pool from PFC cells in temporally precise manner, while MD persistent cells pool from PFC cells over a broader temporal window (Supplementary Fig. <ref type="figure">7g,</ref><ref type="figure">h</ref>).</s></p><p><s>To further verify these model predictions, we expressed the inhibitory channelrhodopsin, iC ++, in PFC to directly inactivate its neurons or their terminals in MD [PFC MD ] (Fig. <ref type="figure" target="#fig_2">2i</ref> and Supplementary Fig. <ref type="figure">8a-c</ref>) in a temporally precise manner.</s><s>We reasoned that if MD neurons derive contextual selectivity from the PFC then suppressing PFC MD inputs should decrease its selectivity.</s><s>To mitigate detrimental effect that bilateral PFC suppression as on behavior in this task <ref type="bibr" target="#b16">17</ref> , we suppressed the PFC unilaterally once the animal achieved stable performance in each block (Supplementary Fig. <ref type="figure">8b</ref>, see Methods).</s><s>This method allowed us to dissociate neural selectivity in the MD from changes in behavioral performance.</s><s>Suppressing PFC neurons themselves or their terminals in MD diminished contextual signals in the MD (Fig. <ref type="figure" target="#fig_2">2j</ref> and Supplementary Fig. <ref type="figure">8d,</ref><ref type="figure">e</ref>).</s><s>Notably, removing PFC input filters in the MD GLM had a similar effect on response predictability as suppressing PFC MD terminals, providing further experimental validation of our GLM (Fig. <ref type="figure" target="#fig_2">2k</ref>).</s><s>Finally, to test the idea that PFC inputs are causally involved in generating and not just modulating contextual selectivity in the MD, we suppressed PFC MD inputs on every trial during the cueing period (Supplementary Fig. <ref type="figure">9a</ref>).</s><s>When performed unilaterally, this manipulation significantly decreased MD contextual selectivity (Supplementary Fig. <ref type="figure">9b,</ref><ref type="figure">c</ref>), and when performed bilaterally, it significantly impaired behavioral performance (Supplementary Fig. <ref type="figure">9d-f</ref>).</s></p><p><s>Taken together, these results suggest that by pooling from cue-specific PFC neurons, the MD encodes the cueing context (Fig. <ref type="figure" target="#fig_2">2l</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Encoding a cueing context is critical for behavioral performance and flexibility</head><p><s>Our results so far suggest that both MD and PFC FS explicitly encode cueing context, while PFC RS neurons encode other cognitive variables such as cue identity and rule.</s><s>We wondered if behavioral performance benefitted from such a behavioral encoding scheme, and if so, how?</s><s>We noticed that mice performed much better on sessions in which the four cues were separated into two cueing contexts compared to sessions in which the cues were equiprobable (Fig. <ref type="figure" target="#fig_3">3a</ref>).</s><s>This performance advantage occurred regardless of how cues in the block were grouped with respect to modality.</s><s>Critically, although performance within either of the two blocks was higher than that when cues were fully randomized across the session, there was a clear and consistent behavioral detriment for 4-8 trials upon switching from one block to another (Fig. <ref type="figure" target="#fig_3">3b</ref>).</s><s>This decline in behavioral performance at the switch suggested that, despite previous learning, mice had to readjust to using cues in the new cueing set.</s><s>This behavioral switching dynamic was associated with several neural ones.</s><s>We found that cue-selective PFC neurons showed reliable spiking earlier than cue-invariant ones upon first exposure to the new context (Supplementary Fig. <ref type="figure" target="#fig_1">10a</ref>).</s><s>This suggests that the decrease in behavioral performance at the point of context switch could be due to a remapping of inputs onto the shared cue-invariant cells.</s><s>To test this hypothesis, we analyzed the temporal evolution of coupling filters from cue-selective to cue-invariant PFC cells on a trial on a trial by trial basis at the point of the switch (Supplementary Fig. <ref type="figure" target="#fig_1">10b</ref>, see Methods).</s><s>Intriguingly, the time taken for these coupling filters to stabilize followed broadly similar dynamics to that of the behavioral performance (Fig. <ref type="figure" target="#fig_3">3c</ref>) and could explain close to 87% of the variance in the behavioral switch latency -sessions which took longer for the mouse to switch were also associated with a longer time to stabilize cue-selective inputs into cue-invariant neurons (Fig. <ref type="figure" target="#fig_3">3d</ref>).</s><s>This would be expected if PFC cue-invariance was the source of cognitive control signals (attend to vision vs. attend to audition).</s><s>In contrast, although the coupling between cue-selective PFC neurons and context-selective MD neurons followed broadly similar dynamics, they were too fast to correlate with behavioral performance (Supplementary Fig. <ref type="figure" target="#fig_1">10 c-g</ref>).</s><s>Therefore, the output of the PFC cue-invariant cells, and not the MD or PFC cueselective cells, are most likely utilized for controlling sensory selection and successful task performance.</s></p><p><s>These results also suggest that the contextual selectivity of the MD may be required for the generation of rule signals in the PFC by adjusting the functional connectivity between cueselective and cue-invariant PFC neurons in a context specific manner.</s><s>To causally test this model, we designed and executed a series of optogenetic perturbation experiments.</s><s>Our previous study demonstrated that bilateral suppression of MD neurons during the duration of the delay period diminished task-relevant activity in the PFC <ref type="bibr" target="#b16">17</ref> .</s><s>In addition, in tasks lacking a delay period, MD suppression, via halorhodopsin (see Methods) during the cueing period (100 ms) had minimal effect on behavioral performance <ref type="bibr" target="#b16">17</ref> .</s><s>As such, we first asked whether cue-specific, interleaved and bilateral MD suppression had a measurable impact on behavioral performance.</s><s>Interestingly, once an animal achieved stable performance within a block, such manipulation had no impact (Fig. <ref type="figure" target="#fig_3">3e</ref>).</s><s>Instead, the biggest behavioral deficit that we observed was the prolonged time taken to achieve stable performance in the new context (Fig. <ref type="figure" target="#fig_3">3f</ref> and Supplementary Fig. <ref type="figure" target="#fig_1">11</ref>).</s><s>Consistent with the idea that MD contextual signals are relevant for establishing PFC task-relevant connectivity patterns, this MD manipulation also increased the number of trials taken to stabilize cue-invariant representations in the PFC (Fig. <ref type="figure" target="#fig_3">3g</ref>).</s><s>Notably, this laser manipulation had no unwanted effects on the MD as the same laser power and duration had no effect in mice that expressed GFP in the MD (data not shown).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MD neurons regulate PFC representational switching likely through cortical inhibition</head><p><s>In addition to the effects on behavioral performance and PFC representational stability, we also noted that temporally-precise MD suppression during the cueing period impacted cueselective PFC neural spiking.</s><s>Specifically, although the increase in spiking of cells preferring the second context was unaffected (Fig. <ref type="figure" target="#fig_3">3h</ref>), we observed that cells preferring the first context continued to fire even though their sensory cue was no longer present (Fig. <ref type="figure" target="#fig_3">3i</ref>).</s><s>Suppressing MD terminals in the PFC (MD PFC ) resulted in a similar 'out-of-context' spike rate elevation (Supplementary Fig. <ref type="figure" target="#fig_2">12</ref>).</s><s>Critically, these MD-dependent changes in PFC RS spiking activity were contrasted by changes in PFC FS firing; MD suppression attenuated the normal elevation of FS neural spiking associated with the second context (Fig. <ref type="figure" target="#fig_3">3i</ref>).</s><s>Therefore, at least a subset of MD neurons may regulate representational switching by suppressing out-of-context activity in the PFC through cortical inhibitory mechanisms.</s></p><p><s>To more directly probe this process, we turned to our multineuronal GLM to assess the impact of MD neurons on PFC targets (Fig. <ref type="figure" target="#fig_4">4a</ref>).</s><s>We found that, in contrast to cue-invariant PFC neurons (Fig. <ref type="figure" target="#fig_4">4b</ref>), cue-selective PFC neurons received substantial MD inputs, which varied according to context (Fig. <ref type="figure" target="#fig_4">4c</ref>).</s><s>These functional inputs could be broadly segregated into two types; one predominantly inhibitory and another predominantly excitatory (Fig. <ref type="figure" target="#fig_4">4c</ref> inset).</s><s>Notably, these functional inputs originated from the two distinct MD functional subgroups; persistent MD neurons were more likely to provide inhibitory functional inputs, while transient MD neurons predominantly provided excitatory ones (Fig. <ref type="figure" target="#fig_4">4d</ref>).</s></p><p><s>Similar to MD neurons, PFC FS neurons also exerted a context-dependent inhibitory effect on cue-selective neurons, with FS neurons having a larger inhibitory effect on PFC neurons that prefer cues of the opposite context (Fig. <ref type="figure" target="#fig_4">4e</ref>).</s><s>Consistent with the idea that MD cell types may be exerting part of their effects on the PFC through local inhibitory circuits <ref type="bibr" target="#b34">35,</ref><ref type="bibr" target="#b35">36</ref> , we found that MD inputs could explain more of the variance of PFC FS neuron firing than PFC cue-selective neurons (Supplementary Fig. <ref type="figure" target="#fig_3">13a-c</ref>).</s><s>MD persistent neurons were more coupled to PFC FS neurons than MD transient neurons were (Fig. <ref type="figure" target="#fig_4">4f</ref>).</s><s>Also, in contrast to FS neurons, PFC RS persistent neural responses were poorly explained by inputs from either the MD or cue-selective PFC neurons (Supplementary Fig. <ref type="figure" target="#fig_3">13d</ref>), reinforcing the notion that they may be part of a distinct functional circuit than the one under study.</s><s>Altogether, these results support a model in which the MD controls contextual switching by suppressing PFC neurons of the irrelevant context through mechanisms that involving cortical inhibition.</s></p><p><s>To further test this model causally, we needed to gain a degree of selectivity over the two identified functional MD subtypes (Fig. <ref type="figure" target="#fig_4">4g</ref>).</s><s>MD neurons in vitro have a bimodal resting membrane potential distribution <ref type="bibr" target="#b36">37</ref> , suggesting different degrees of excitability.</s><s>Because our analysis suggested that two MD populations are driven by different degrees of cortical engagement (Supplementary Fig. <ref type="figure">7</ref>), we reasoned that this might also be due to differential excitability which may impart differential susceptible to optogenetic inhibition.</s><s>Specifically, the less excitable MD population (likely transient MD cells) would require stronger or more coincident PFC inputs to fire and hence would be more susceptible to weak suppression.</s><s>Conversely, persistent MD neuron may be more excitable and would require weaker and less coincident PFC inputs to fire.</s></p><p><s>By parametrically controlling laser power on an animal-by-animal basis without influencing behavior (Supplementary Fig. <ref type="figure" target="#fig_4">14 a,</ref><ref type="figure">b</ref>), we found that MD transient cells were far more susceptible than MD persistent cells to low levels of yellow laser power (556 nm, power at fiber tip: 0.6-1.1 mW, Fig. <ref type="figure" target="#fig_4">4h</ref> and Supplementary Fig. <ref type="figure" target="#fig_4">14 c,</ref><ref type="figure">d</ref>).</s><s>These laser powers did not have an appreciable effect on the spiking properties of MD persistent cells (Supplementary Fig. <ref type="figure" target="#fig_4">14 e-g</ref>).</s><s>Higher laser powers (power at fiber tip: 2.1-3.5 mW) affected both transient and persistent MD neurons (Supplementary Fig. <ref type="figure" target="#fig_4">14h</ref>).</s><s>In support of the predictions made by our GLM, selectively suppressing MD transient cells with weak laser powers selectively eliminated excitatory functional inputs to the PFC but had no impact on the inhibitory functional inputs from transient MD neurons (Fig. <ref type="figure" target="#fig_4">4i</ref>).</s><s>Suppressing MD PFC terminals had a similar effect on the PFC without affecting the firing rates of these neurons (Supplementary Fig. <ref type="figure" target="#fig_4">14i-k</ref>).</s><s>This manipulation also revealed a selective effect on the response properties of both transient PFC RS neurons subtypes (Fig. <ref type="figure" target="#fig_4">4j</ref> and Supplementary Fig. <ref type="figure" target="#fig_5">15a</ref>), but not PFC FS neurons (Fig. <ref type="figure" target="#fig_4">4k</ref>).</s><s>In agreement with our earlier studies <ref type="bibr" target="#b16">17</ref> , temporally-limited MD suppression had a stronger effect on the maintenance of these peaks rather than their initiation in the PFC, confirming that the MD is not the source of PFC cue information (Supplementary Fig. <ref type="figure" target="#fig_5">15b</ref>).</s><s>Although the congruence between terminal and somatic inactivation may be surprising, the relatively large volumes of MD terminals may have larger impact on somatic excitability than what would be expected otherwise.</s></p><p><s>Consistent with the idea that persistent MD neurons provide cross-contextual PFC suppression, strong laser suppression significantly increased "out-of-context" cue-selective PFC spiking (Fig. <ref type="figure" target="#fig_4">4l</ref>) and concomitantly decreased PFC FS neural spiking (Fig. <ref type="figure" target="#fig_4">4m</ref>).</s><s>Because of this, inputs from cue-selective PFC neurons onto cue-invariant neurons took a longer time to stabilize (Fig. <ref type="figure" target="#fig_4">4n</ref>).</s><s>Weak laser suppression, which targeted only transient cell, did not have a similar effect.</s><s>Taken together, our findings strongly suggest that the MD has two distinct computational functions: (1) Transient MD cells maintain the context-relevant representation in the PFC, permitting cue information to be held in working memory; (2) Persistent MD cells suppress context-irrelevant representations in the PFC by recruiting FS neurons in a context-dependent manner (Fig. <ref type="figure" target="#fig_4">4o</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MD-dependent suppression of context-irrelevant representations protects them for future use</head><p><s>Our data thus far suggest a model in which persistent MD neurons suppress PFC representations when they are no longer relevant for the current context.</s><s>What computational advantage could this architecture impart?</s><s>Recent theoretical work <ref type="bibr" target="#b37">38</ref> has shown that a context-dependent gating mechanism, which suppresses task-irrelevant nodes in deep neural network, can increase flexibility by allowing the network to learn more tasks sequentially.</s><s>We wondered whether MD-mediated inhibition could impart such a benefit onto PFC, allowing it to flexibly switch between the different cueing contexts.</s></p><p><s>To test this idea, we used a reservoir network of rate neurons as a model for PFC function <ref type="bibr" target="#b38">39,</ref><ref type="bibr" target="#b39">40</ref> and incorporated an MD-like node <ref type="bibr" target="#b38">39</ref> that suppressed context-irrelevant reservoir neurons (Fig. <ref type="figure" target="#fig_5">5a</ref>).</s><s>The network was trained to perform a classification task where it had to classify four cues into two rules, which was analogous to the task that mice were trained to do.</s><s>Interestingly, the PFC-MD model outperformed a PFC-only model in being able to flexibly switch between cueing contexts (Fig. <ref type="figure" target="#fig_5">5b</ref>).</s><s>Without an MD, weights relevant to context 1 changed in the second context (Fig. <ref type="figure" target="#fig_5">5c,</ref><ref type="figure">d</ref>), which in turn increased errors when context 1 was required again.</s><s>Incorporating the MD limited the spread of recurrent excitation to the context-relevant PFC neurons, making the two contextual representations practically disjoint, and disabling weight changes involving context-irrelevant neurons.</s><s>Interestingly, this weight-protection benefit generalized to a much more computationallydemanding exclusive-or (XOR) classification task which is by design not linearly separable <ref type="bibr" target="#b40">41,</ref><ref type="bibr" target="#b41">42</ref> (Supplementary Fig. <ref type="figure" target="#fig_1">16</ref>).</s><s>Overall, the computational benefits imparted by an MD-like node are even more relevant in the XOR task, suggesting broad benefits of crosscontextual suppression in cognitive flexibility.</s></p><p><s>We reasoned that we could test these theoretical weight protection benefits experimentally if we employed a three-block switching paradigm (Fig. <ref type="figure" target="#fig_5">5e</ref>, see Methods), where mice were reexposed to the first cueing context in the third block.</s><s>In this paradigm, PFC neurons selective for the first cue-set should be suppressed in the second block, but perhaps reactivated again in the third as it would be computationally efficient to simply re-engage the same functional ensemble rather than generate a new one de novo.</s><s>We found that mice performed this three-block switching paradigm well, with no significant difference in performance across blocks (Fig. <ref type="figure" target="#fig_5">5f</ref>).</s><s>Interestingly, suppressing the MD bilaterally during the cueing period once behavior stabilized in the second block significantly impaired performance when the animal was re-exposed to the first block (Fig. <ref type="figure" target="#fig_5">5f</ref>).</s><s>Although performance was close to chance (as if the mouse had forgotten the first context), bilateral MD manipulations did not have any long-lasting effects as performance returned to normal the following day (Fig. <ref type="figure" target="#fig_5">5g</ref>).</s><s>This reduction in behavioral performance on re-exposure to the first block parametrically varied with the number of trials suppressed in the second block; suppressing a larger number of trials in the second block resulted in a larger behavioral deficit (Fig. <ref type="figure" target="#fig_5">5h</ref>, inflection point, 20 trials).</s><s>Interestingly, although the switching latency was marginally shorter when the animal moved from the second back to the first cueing context, MD suppression in the second block prolonged this switch (Fig. <ref type="figure" target="#fig_5">5i</ref> and Supplementary Fig. <ref type="figure" target="#fig_1">17</ref>).</s><s>This effect is stronger than what we show in Fig. <ref type="figure" target="#fig_3">3f</ref>, because unlike the two-block switching paradigm, mice must now reactivate representations for the first cueing context in the PFC.</s></p><p><s>To examine the neural substrates of this behavioral detriment, we again aimed at dissociating behavioral from neural manipulations and therefore employed a unilateral optogenetic suppression paradigm where we suppressed MD neurons during the cue once behavior stabilized in the second block.</s><s>In sessions where no such optical manipulation was deployed, both PFC cue-selective and cue-invariant neurons were largely shared between the first cueset and their repeat in the third block (Fig. <ref type="figure" target="#fig_5">5j</ref>).</s><s>As expected, unilateral cue-specific MD suppression resulted in out-of-context spiking of the first cue-set neurons during the second block (Fig. <ref type="figure" target="#fig_5">5k</ref> and Supplementary Fig. <ref type="figure" target="#fig_1">18</ref>).</s><s>Although this was not associated with a delay in how these neurons were recruited in the third context, their functional inputs onto cueinvariant neurons were much weaker upon the switch (Fig. <ref type="figure" target="#fig_5">5l</ref>).</s><s>Therefore, our data suggest that in addition to suppressing context-irrelevant cortical representations such that contextrelevant functional connections rapidly stabilize, such process may protect recently engaged but currently irrelevant connectivity patterns for near-future use (see Supplementary Fig. <ref type="figure" target="#fig_1">19</ref> for summary model).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>In this study, we expanded on a behavioral paradigm we had previously developed <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b22">23</ref> by nesting it in a cognitive hierarchy.</s><s>Specifically, while our previous studies have explored the neural correlates of cross-modal sensory selection based on two learned cues, the current design nested the selection process within multiple cueing contexts.</s><s>Importantly, these contexts were under complete experimental control and could be arbitrarily constructed on a session-by-session basis.</s><s>This allowed us to make multiple observations.</s><s>First, we identified a prefrontal neural hierarchy that matches the cognitive one; neurons that reflected the meaning of the cue (the rule) derived their representations from local cue-selective inputs.</s><s>Similar hierarchies are seen in sensory areas <ref type="bibr" target="#b42">43</ref> potentially speaking to broadly similar cortical organization principles.</s><s>Notably, we found only 5% of cells in the mouse PFC to be rule selective, a contrast to higher species which have significantly larger fractions of such cells <ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b43">44</ref> .</s><s>This difference may explain why mice perform worse on randomized cueing compared to primates.</s></p><p><s>Second, unlike structures like the lateral geniculate nucleus (LGN), or thalamic circuits that primarily drive excitatory responses in the cortex <ref type="bibr" target="#b44">45</ref> , we found that the MD exerts effects on cognitive switching through local inhibitory cortical interneurons.</s><s>This builds on similar recent studies <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b34">35,</ref><ref type="bibr" target="#b35">36</ref> , but also provides a computational framework linking thalamic output to cortical inhibitory microcircuits.</s><s>For example, transient MD neurons could recruit disinhibitory motifs <ref type="bibr" target="#b45">46</ref> to maintain activity in the PFC while persistent MD neurons could target soma-targeting interneurons <ref type="bibr" target="#b35">36</ref> .</s><s>Without further evidence however, we can only speculate that the diversity of thalamo-cortical computations may match the diversity of cortical interneurons <ref type="bibr" target="#b46">47</ref> .</s></p><p><s>Third, the unique connectivity patterns of the lateral MD are consistent with our physiological results; convergence of individually small cortical terminal inputs onto single MD neurons <ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b47">48</ref> may explain their lack of selectivity to categorical information that originates in cortex.</s><s>Instead, our model shows that this convergence of PFC inputs may facilitate the emergence of contextual signals in the MD <ref type="bibr" target="#b19">20</ref> .</s><s>Additionally, the lack of thalamic lateral connectivity may allow MD neurons to multiplex incoming signals, a process that would be harder for cortical circuits to implement given their extensive recurrence.</s></p><p><s>Fourth, the experiments regarding multiple switches point to a variety of plasticity rules governing cortical function, as had been recently shown through recurrent neural network simulations <ref type="bibr" target="#b48">49</ref> .</s><s>Within this framework, our data suggest a unique role for the thalamus in generating contextual representations that may regulate cortical plasticity.</s><s>The exact nature of cortical inhibitory neurons involved in cross-contextual suppression are still unknown at this point, and our study provides a starting point for such detailed exploration.</s><s>Lastly, it is worth mentioning that recent progress in artificial intelligence (AI) research has shown a benefit for incorporating context-specific gating mechanisms in convolutional networks on the ability to perform multiple tasks and the mitigation of 'catastrophic forgetting' <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b37">38</ref> .</s><s>The key idea in these studies is the generation of non-overlapping taskspecific representations in a context-specific manner <ref type="bibr" target="#b49">50</ref> .</s><s>We envision the MD thalamus to impart a similar computational benefit on task-specific PFC representations; rapid separation of potentially overlapping representations such that their decoding is performed more easily.</s><s>Overall, our finding may not only be relevant to future research in neuroscience but may also lead to the generation of artificial networks that exhibit more stable learning and robust performance.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Mice.</head><p><s>All experiments were carried out under protocols approved by MIT's Committee on Animal Care and conformed to NIH guidelines.</s><s>With the exception of one mouse, who had the Sst-IRES-Cre (Jax: 013044) genotype, all mice were C57/BL6 (Taconic Biosciences).</s><s>Only male mice older than 8 weeks old were used in this study.</s><s>Please refer to the Life Sciences Reporting Summary for further details.</s><s>Mice were housed in the vivarium on a standard 12hour light/dark cycle and were singly housed throughout the experimental period.</s><s>Experiments were performed during the light portion of the cycle.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral setup.</head><p><s>Behavioral training and testing took place in gridded floor-mounted, custom-built enclosures made of sheet metal covered with a thin layer of antistatic coating for electrical insulation (dimensions in cm: length, 15.2; width, 12.7; height, 24).</s><s>All enclosures contained customdesigned operant ports, each of which was equipped with an IR LED/IR phototransistor pair (Digikey) for nose-poke detection.</s><s>Trial initiation was achieved through an 'initiation port' mounted on the grid floor 6 cm away from the 'response ports' located at the front of the chamber.</s><s>Task rule cues and auditory sweeps were presented with millisecond precision through a ceiling-mounted speaker controlled by an RX8 Multi I/O processing system (Tucker-Davis Technologies).</s><s>Visual stimuli were presented by two dimmable, white-lightemitting diodes (Mouser) mounted on each side of the initiation port and controlled by an Arduino Mega microcontroller (Ivrea).</s><s>Similarly, the visual cues were delivered through a pair of a wall-mounted 5 mm LEDs (UV: 320-380 nm, Green: 495-510 nm, 100 mW 25 degree viewing angle Mouser).</s><s>These LEDs were bright enough to illuminate the whole arena.</s><s>Two response ports were mounted at the angled front wall 7.5 cm apart, respectively.</s><s>Milk reward (10 μL evaporated milk, Carnation) was delivered by a single syringe pump (New Era Pump Systems) when mice made a correct choice.</s><s>Access to the response ports was restricted by vertical sliding gates which were controlled by a servo motor (Tower Hobbies).</s><s>The TDT Rx8 sound production system (Tucker Davis Technologies) was triggered through MATLAB (MathWorks), interfacing with a custom-written software running on an Arduino Mega (Ivrea) for trial logic control.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Multi-electrode array construction and implantation.</head><p><s>Custom multi-electrode array scaffolds (drive bodies) were designed using 3D CAD software (SolidWorks) and printed in Accura 55 plastic (American Precision Prototyping) as described previously <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b51">51</ref> .</s><s>Prior to implantation, each array scaffold was loaded with 12-18 independently movable micro-drives carrying 12.5-μm nichrome (California Fine Wire Company) stereotrodes or tetrodes.</s><s>Electrodes were pinned to custom-designed, 96-channel electrode interface boards (EIB, Sunstone Circuits) along with a common reference wire (A-M systems).</s><s>For combined optogenetic manipulations and electrophysiological recordings of the PFC, optic fibers delivering the light beam lateral (45° angled tips) were embedded adjacent to the electrodes.</s><s>In the case of combined optogenetic PFC manipulations with mediodorsal recordings.</s></p><p><s>During implantation, mice were deeply anaesthetized with 1% isofluorane and mounted on a stereotaxic frame.</s><s>A craniotomy was drilled centered at AP -2 mm, ML 0.6 mm for PFC recordings and at AP: 1 mm, ML 1.2 mm for mediodorsal recordings.</s><s>The range of coordinates covered in our recordings for the lateral MD are: AP: -1 to -1.5 mm, ML: 0.3 to 0.8 mm relative to bregma.</s><s>Similarly, for the PFC, the range of coordinates covered in our recordings are: AP: 2.1 to 2.7 mm, ML: 0.25 to 0.6 mm relative to bregma.</s></p><p><s>The dura was carefully removed, and the drive implant was lowered into the craniotomy using a stereotaxic arm until stereotrode tips touched the cortical surface.</s><s>Surgilube (Savage Laboratories) was applied around electrodes to guard against fixation through dental cement.</s><s>Stainless-steel screws were implanted into the skull to provide electrical and mechanical stability and the entire array was secured to the skull using dental cement.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Optogenetic Manipulation.</head><p><s>We utilized a dual wavelength optical silencing method to independently suppress neurons in the PFC and MD.</s><s>Specifically, we virally expressed the inhibitory channelrhodopsin iC++ in the PFC (AAV-CaMKIIA-iC++-eYFP) <ref type="bibr" target="#b52">52</ref> , which is selective to blue-shifted wavelengths (473 nm), and expressed halorhodopsin (AAV-CaMKIIA-eNpHR3.0-eYFP) in the MD <ref type="bibr" target="#b53">53</ref> .</s><s>Since the peak spectrum of eNpHR is red-shifted (peak ~550 nm), we could independently suppress both populations without affecting their terminals in either structures.</s><s>Light was delivered to these structures using optic fibers that were part of the micro-drive (as described above).</s><s>We used a 473 nm laser and a 556 nm laser (OptoEngine) to activate iC++ and eNpHR respectively.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral training.</head><p><s>Mice were trained to perform this task in subsequent stages.</s><s>First, 10 μL of evaporated milk (reward) was delivered randomly to each reward port for shaping and reward habituation.</s><s>Next, the location of the rewarded port was signaled by a white LED (same used as the visual target) in order to establish an association between the location of the visual target and the location of the reward port.</s><s>Following this, mice learned the association between the auditory targets -up-sweep: 10-15 kHz and a down-sweep: 16-12 kHz -with the left and right ports respectively.</s><s>An individual trial was terminated 20 s after reward collection, and a new trial became available 5 s later.</s><s>As as soon as mice achieved criterion performance in this block (&gt;60% correct), visual and auditory targets were randomly interleaved.</s></p><p><s>Second, mice learned to poke (i.e.</s><s>break the IR barrier in each reward port) in order to receive reward.</s><s>All other parameters remained constant.</s><s>An incorrect poke had no negative consequence.</s><s>By the end of this training phase, all mice collected at least 20 rewards per 30min session.</s></p><p><s>Third, mice were trained to initiate trials.</s><s>Initially, mice had to briefly (50 ms) break the infrared beam in the initiation port to trigger target stimulus presentation and render reward ports accessible.</s><s>Trial rule (attend to vision or attend to audition) was indicated by 10-kHz low-pass filtered white noise (vision) or 11 kHz high-pass filtered white noise (audition) sound cues.</s><s>Stimuli were presented in blocks of six trials consisting of single-modality stimulus presentation (no conflict).</s><s>An incorrect response immediately rendered the response port inaccessible.</s><s>Rewards were available for 15 s following correct response, followed by a 5 s inter-trial interval (ITI).</s><s>Incorrect responses was punished with a time-out, which consisted of a 30 s ITI.</s><s>During an ITI, mice could not initiate new trials.</s><s>During this stage, the duration of the initiation time was gradually increased from 50 ms to 800 ms.</s><s>Mice progressed to the next stage only when they were able to maintain snout fixation for at least 800 ms.</s></p><p><s>Fourth, conflict trials were introduced, in which auditory and visual targets were co presented indicating reward at opposing locations.</s><s>Four different trial types were presented in repeating blocks: (1) three auditory-only trials; (2) three visual-only trials; (3) six conflict trials with auditory target; and (4) six conflict trials with visual target.</s><s>The time that mice had to break the IR barrier in the initiation port was continuously increased over the course of this training stage (1-2 weeks) until it reached 0.5 s.</s><s>At the same time, duration of the target stimuli was successively shortened to a final duration of 0.1 s.</s><s>Once mice performed successfully on conflict trials, single-modality trials were removed, and block length was reduced to three trials.</s></p><p><s>Fifth, during the final stage of training, trial availability and task rule were dissociated.</s><s>Broadband white noise indicated trial availability, which prompted a mouse to initiate a trial.</s><s>Upon successful initiation, the white noise was immediately replaced by either low-pass or high-pass filtered noise for 0.1 s to indicate the rule.</s><s>This was followed by a delay period (variable, but for most experiments it was 0.4 s) before target stimuli presentation.</s><s>All block structure was removed, and trial type was randomized.</s><s>Particular steps were taken throughout the training and testing periods to ensure that mice used the rules for sensory selection.</s></p><p><s>Once mice were fully familiarized with the main structure of the task and achieved consistent performance on the final stage of training, they were exposed to the visual cueing condition.</s><s>After achieving 40 correct responses, mice were moved to an association block where the LEDs were paired with the congruent auditory cues (LP with Green LED and HP with UV LED).</s><s>The volume of the sound decayed linearly over the course of trials, with full volume for the first 10 trials up to 1/5 th of the volume for the last few trials.</s><s>The sound volume was changed only after the mouse made two consecutive correct responses (an indication that the mouse understands the task).</s><s>At the end of 70 trials, and depending on performance, mice were moved to the visual-only block, where no auditory cues were played.</s><s>In the following session, the length of the association block was gradually reduced.</s><s>Once mice were able to achieve a consistent performance of &gt;60% on 3 consecutive sessions in the visual-only block, the association block was removed completely.</s><s>At this point, mice were considered experts on the task.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral testing.</head><p><s>In the double block cueing paradigm, mice were required to complete 70 trials in each block.</s><s>Blocks were constructed based on either cues of the same modality (HP-LP and UV-Green) or cues from both modalities (HP-Green and UV-LP).</s><s>In each block, cues were drawn pseudo-randomly and the order of the blocks were randomized from session to session.</s><s>Sessions in which mice did not perform &gt;60% overall in each block were discarded and were not analyzed further.</s></p><p><s>In the randomized cueing paradigm, mice were required to complete a total of 200 trials per session.</s><s>On each trial, one cue out of a possible four cues (HP, LP, UV and Green) were drawn at random.</s><s>To further ensure that the cues appeared in random (i.e.</s><s>without any regularity), we imposed the additional constrained that no more than three draws can be from the same modality.</s><s>That is after three UV-Green draws, the next cue has to be either HP or LP.</s><s>A new random seed was used each day.</s><s>Mice that were previously trained on the block design took approximately a week to adjust to this new cueing condition.</s><s>Although average performance was low, mice had brief periods in which their local performance was close to 80%.</s></p><p><s>In the three-block switching paradigm, mice were required to complete a total of 70 trials in the first two blocks and 90 trials in the third block.</s><s>The identity of the first block (i.e.</s><s>whether visual or auditory) was pseudorandomized from day-to-day.</s><s>In total, we have 4 sessions per mouse (2 Auditory-Visual-Auditory, 2 Visual-Auditory-Visual) on the standard version of the task, and 4 sessions per mouse with MD suppressed in the second block.</s><s>We did not notice a difference in the effect of MD suppression in the visual block compared to the auditory cueing block, and hence have pooled these sessions for analysis.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral analysis.</head><p><s>To quantify the behavior, we carried out regression analysis to weigh the contributions of rule and history of choice and reward on the animal's choice on the current trial <ref type="bibr" target="#b54">54</ref> .</s><s>To do so, we concatenated data from multiple sessions for each mouse and fit the animal's choice with a logistic regression model of the form:</s></p><formula xml:id="formula_0">P (Vision) = lapse + 1 + 2lapse 1 + e -A A = β 0 + ∑ t = 1 T β rule (t)R(t) + β success (t)S(t) + β failure (t)F (t)</formula><p><s>Where T is the number of trials in the past.</s><s>For this model, we calculated that the model explained behavioral variance best when we included up to 10 trials in the past.</s><s>In this equation S(t), F(t) ∈ [+1, -1] if a trial is a success or a failure respectively.</s><s>Similarly, R(t) ∈ [+1, -1] if the rule on that trial is 'attend-to-vision' or 'attend-to-audition' respectively.</s><s>This model was fit using a custom written ridge regression routine in Matlab.</s><s>The hyperparameter value for ridge regression was calculated using 5-fold cross validation.</s></p><p><s>To assess the effect that choice history had on the probability of success on the next trial, we developed a probabilistic model.</s><s>Given the 2-AFC structure of our task, we assumed that on each trial, the mouse tosses a coin was a bias (q = P success ) that depends on the animal's success on past trials.</s><s>Therefore, the likelihood of a success given s successes and f failures in the past 10 trials is given by the binomial distribution:</s></p><formula xml:id="formula_1">p(s; q) = s + f s q s (1 -q) f</formula><p><s>Knowing that the conjugate prior of the binomial distribution is the beta distribution, we can calculate the posterior distribution using Bayes' theorem</s></p><formula xml:id="formula_2">p(q) = q α -1 (1 -α) β -1 B(α, β)</formula><p><s>Posterior = p(q)p(s; q) ∫ p(q)p(s; q)dq ~Beta (α + s), (β + f)</s></p><p><s>Using this the expected probability of success (E(q)) on the next trial is then:</s></p><formula xml:id="formula_3">E(q) = B(α + s + 1, β + f) B(α + s, β + f)</formula><p><s>All models were fit separately for each mouse (n = 5) using 1,000 runs of 5-fold cross validation.</s><s>For each run, we computed the log-likelihood for the test data set for the mean value if P(Vision) or P(success).</s><s>Model fit quality was assessed by computing the deviance statistic.</s><s>We also used this model to assess overall behavioral performance.</s><s>Trials in which behavior was close to the predicted chance levels were ignored and the overall fraction correct was computed from trials in which actual behavior deviated significantly from the model (we define these periods as "stable" behavior).</s><s>As such, changes in performance accuracy reported throughout are only calculated over the period of stable behavior, and do not include switch trials.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Trial selection.</head><p><s>By comparing the two models -a model that includes rule-dependent components and a reward-history model -we were able to determine trials over which the animal was making either an informed choice based on the current cue or a biased choice based on history of reward.</s><s>We used this to select trials.</s><s>Specifically, for each trial, we computed the deviance between the full model and the history model, and selected a trial if deviance was above a threshold value that was calculated using cross validation for each session.</s><s>Surprisingly, tuning peaks (described in the following section) were much more apparent in the selected trials, than in the rejected trials.</s><s>Please refer to the Life Sciences Reporting Summary for further details on data omission.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electrophysiological recordings and spike sorting.</head><p><s>Signals were acquired using a Neuralynx multiplexing digital recording system (Neuralynx) through a combination of 32-and 64-channel digital multiplexing headstages plugged into the 96-channel EIB of the implant.</s><s>Signals from each electrode were amplified, filtered between 0.1 Hz and 9 kHz and digitized at 30 kHz.</s><s>For thalamic recordings, tetrodes were lowered from the cortex into the mediodorsal thalamus over the course of 1-2 weeks where recording depths ranged from -2.8 to -3.2 mm DV.</s><s>For PFC recordings, adjustments accounted for the change of depth of PFC across the AP axis.</s><s>Thus, in anterior regions, unit recordings were obtained -1.2 to -1.7 mm DV, whereas for more posterior recordings electrodes were lowered -2 to -2.4 mm DV.</s></p><p><s>Spike sorting was done automatically using MountainSort <ref type="bibr" target="#b55">55</ref> .</s><s>Following sorting each cluster was manually inspected for quality.</s><s>Only well isolated clusters with biologically plausible waveforms were selected for further analysis.</s></p><p><s>Identification of FS and RS cells.-For</s><s>each spike waveform, we extracted four metrics: (1) peak-to-trough time;</s></p><p><s>(2) peak-to-trough ratio; (3) spike width; (4) spike amplitude.</s><s>We combined this 4-dimensional feature vector with the overall firing rate of the neuron to form a 5-dimensional feature vector for each cell.</s><s>We applied k-means clustering (k++ algorithm, 1,000 runs with randomly initialized seed), and determined the optimal number of clusters using the Calinski-Harabasz criterion <ref type="bibr" target="#b56">56</ref> .</s><s>Cluster separability was assessed statistically by calculating the ratio of between-cluster variance to within-cluster variance.</s><s>For most sessions, the waveforms clustered reliably into two clusters, corresponding to FS and RS waveforms.</s><s>Approximately 10% of all recorded spike waveforms could not be reliably classified into either subtype (based on 1,000 runs), and were hence not included in further analysis.</s></p><p><s>Analysis of firing rate.-For</s><s>all PFC and mediodorsal neurons, changes in firing rate associated task performance were assessed using peri-stimulus time histograms (PSTHs).</s></p><p><s>PSTHs were computed using a 10-ms bin width for individual neurons in each recording session4 convolved with a Gaussian kernel (25 ms full-width at half-maximum) to create a spike density function (SDF) which was then converted to a z score by subtracting the mean firing rate in the baseline (500 ms before event onset) and dividing by the variance over the same period.</s><s>For comparison of overall firing rates across conditions, trial number and window size were matched between groups.</s><s>Except for switching analysis, we analyzed firing rates only trials in which local performance deviated significantly from the probabilistic model (Supplementary Fig. <ref type="figure" target="#fig_1">1</ref>).</s></p><p><s>Computing reliability and tuning strength-For each recorded neuron, we computed trial-to-trial reliability using a 150 ms sliding window.</s><s>Reliability is simply the correlation in spike times between each pair-wise combination of trials, such that a neuron with perfect reliability has no spike time variation and a correlation coefficient of 1.</s><s>Only neurons with responses on 15 trials or more were selected for this analysis.</s></p><p><s>To determine whether the observed level of reliability was significantly different from chance, we used a randomization test where the time period of analysis was randomly picked in the range [-2.5, 1.5], the trials randomly shuffled and the reliability score recalculated.</s><s>By repeating this process 1,000 times, a null distribution of the reliability time series was constructed.</s><s>A neuron was reliable if the unshuffled reliability time series exceeded the null distribution by 1.5 standard deviations (z-score &gt; 1.5).</s><s>Using this method, we were able to calculate a significant reliability trace for each neuron and for each stimulus condition.</s></p><p><s>Classification of cells into persistent and reliable.-The</s><s>method described above allowed us to extract reliability scores (max in the delay period).</s><s>In the PFC RS and MD populations, we noticed a bimodal distribution of reliability scores -with some neurons responding with high trial-to-trial spiking in the delay period (transient) and others responding with low reliability (persistent).</s><s>To formally classify these cells, we used the expectation-maximization algorithm (python sklearn package) to fit a Gaussian mixture model to the reliability histogram.</s><s>This procedure was run separately for PFC RS, FS and MD neurons.</s><s>The goodness of fit of the Gaussian was assessed using the Bayes Information Criterion (BIC).</s><s>Separability of the resulting gaussians was assessed by ROC analysis.</s><s>PFC RS and MD populations had separable gaussians and passed the Hartigan's dip-test for bimodality.</s><s>In these populations, we classified cells as transient if they were within 95% CI of the mean of the high reliability Gaussian model.</s><s>Cells were classified as persistent if they were within the 95% CI of the mean of the low reliability Gaussian model.</s><s>This method allowed us to robustly classify neurons without the need to define an arbitrary threshold.</s></p><p><s>Classification of cells into cue-selective or cue-invariant.-Using the reliability time series across the delay period, we computed a cross-correlogram for all pairs of conditions (6-way comparison).</s><s>Neurons with significant correlation with lags within +/-50 ms were scored.</s><s>A neuron was classified as cue-selective if it had a significant reliability event for only one out of the four stimulus conditions.</s><s>A neuron was classified as mixedselective if it had a significant reliability event for two out of the four stimulus conditions.</s></p><p><s>We never found neurons in either the MD or PFC with significant reliability in more than two conditions (except for randomized cueing experiments).</s></p><p><s>To further assess the tuning strength of PFC neurons, we first sampled trials with replacement to calculate an estimate of d-prime for either cues or rules for each cell.</s><s>Second, we also computed a bootstrapped value of the reliability of that cell.</s><s>We defined the tuning strength as the slope of the regression line between reliability and d-prime.</s><s>As such, a neuron with high reliability and high d-prime had a higher tuning strength value, indicating that this neuron was strongly selective to a cue.</s><s>We used this tuning strength metric to better define cue-invariant neurons.</s><s>Cue-invariant, rule-selective neurons should respond to both cues that map onto the same rule.</s><s>Hence, we calculated the selectivity angle for each pair of cues corresponding to the same rule using the formula 6 : θ = tan -1 Tuning strengtℎ to cue 1 of rule A Tuning strengtℎ to cue 2 of rule A</s></p><p><s>Neurons with selectivity angle of 45 degrees had the same tuning strength for both cues in the same rule and were hence classified as cue-invariant.</s><s>Therefore, we used a hierarchical selection process to classify cue-invariant cells: (1) the significant reliability time series for cues 1 and 2 of rule A must be correlated within a lag of 50 ms; (2) the selectivity angle must be close to 45 degrees.</s><s>Since MD and PFC FS neurons were weakly reliable, we calculated their selectivity using trial-averaged firing rates instead.</s><s>In this way, MD and FS neurons were classified as context selective if (1) they had correlated responses for both cues within a context and (2) they had a within context selectivity angle was also close to 45 degrees.</s><s>Each of these measures were tested for significance using a permutation test where hybrid data were created by shuffling trial labels.</s></p><p><s>Calculating contextual modulation index.-We</s><s>assessed the contextual modulation index (CMI) of the trial-averaged firing rate of a neuron using the following formula:</s></p><formula xml:id="formula_4">CMI = Rate context1 -Rate context2 Rate context1 + Rate context2</formula><p><s>As such, because the firing rate is non-negative, CMI ∈ [+1, -1].</s><s>To determine significance, we calculated the CMI for two hybrid spike trains created by randomly shuffling trial labels from 1,000 iterations.</s><s>This created a null distribution.</s><s>A cell was considered significantly contextually modulated if the unshuffled CMI was outside the 95% confidence interval of the shuffled CMI (p &lt; 0.05, two-tailed Student's t-test).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Decoding analysis.</head><p><s>Trial-by-trial classification analysis was performed using a Support Vector Machine (SVM) implemented through LIBSVM and the Matlab Neural Decoding Toolbox 57 .</s><s>The firing rates of neurons on each trial from the entire population (pooled across sessions) was first smoothed using a 20 ms-wide gaussian filter.</s><s>The SVM classifier with a Gaussian radial basis function kernel was then trained on 60% of the data (randomly selected) while 40% of the data was used for prediction.</s><s>This classifier works by first constructing an optimal hyperplane based on labelled training data and then generating predictions of the labels on testing data.</s><s>Accuracy of the decoding was assessed by comparing the predicted labels to the actual labels.</s><s>Classification accuracy was also quantified by computing the mutual information via the following equation:</s></p><formula xml:id="formula_5">MI = ∑ i = 1 S ∑ j = 1 S p ij log p ij p i p j</formula><p><s>where p ij is the probability of observing label i (cue, rule or context), given that the original label is j.</s><s>This classification process was repeated 1,000 times to obtain and accurately estimate the error of the classification accuracy.</s></p><p><s>To test the dependence of the number of neurons on classification, we used a Monte Carlo sampling technique (repeated 500 times) to pick n neurons (range, 1 to population size) at random from the population with replacement.</s><s>The single-trial responses from these n neurons were compared to the template as described above.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Generalized linear model (GLM).</head><p><s>We modelled the spike trains of neurons using a generalized linear model (GLM) <ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b31">32,</ref><ref type="bibr" target="#b58">58</ref> .</s><s>The spike trains were discretized (Δ) into 5 ms bins.</s><s>As explained elsewhere <ref type="bibr" target="#b59">59</ref> , the loglikelihood for a single neuron (up to an additive constant) is given by the formula:</s></p><formula xml:id="formula_6">log L(φ, r) = ∑ t r(t)log( Δ φ(t)) -Δ φ(t)</formula><p><s>Where φ(t) is the instantaneous spike rate (conditional intensity) of the fully coupled GLM:</s></p><formula xml:id="formula_7">φ(t) = exp(kx(t) + hr(t -1) + cs(t) + b)</formula><p><s>In this equation, k is the weights on the stimulus covariates (akin to a receptive field); h is the postsynaptic weights that integrate the neuron's own spiking history; c is the coupling weights (filters) on other simultaneously recorded spikes (s).</s><s>In the uncoupled model, we ignored this coupling term.</s><s>To avoid overfitting, regression weights were fit with a maximum a posteriori estimate with an L2 penalty.</s><s>Matlab scripts used to build the GLM can be found here: https://github.com/pillowlab/neuroGLM.</s></p><p><s>These coupling filters are analogous to the positive lag of a cross-correlogram with the additional benefit of accounting for the response variance that is not already explained by the cue and other task-relevant variables.</s><s>In other words, each neuron produces a coupling filter, that when convolved with the spike train of that neuron, explains part of the variance of the neuron being modeled.</s><s>Mathematically, this operation can be written as:</s></p><formula xml:id="formula_8">∑ i = 1 m ∑ j = 1 n c ij f j (s i (t -τ: t)</formula><p><s>Where m is the number of simultaneously recorded neurons and f j are temporal basis functions that we assumed to be nonlinearly time-scaled raised cosine functions <ref type="bibr" target="#b31">32</ref> .</s><s>In each session, the GLM was constructed using a median of 25 PFC and 18 MD neurons with well isolated units.</s></p><p><s>To statistically validate these coupling filters, we randomized both neuronal labels and trial order, and used leave-one-neuron-out cross validation 60 .</s><s>This allowed us to determine the probability of a coupling being significant above chance levels.</s><s>We also calculate the coupling strength as the integral (area under the curve) of each coupling filter.</s><s>Because each neuron can receive many coupling filters, we used a dimensionality reduction (SVD) to determine the most common filter shapes (i.e.</s><s>those that explained the largest fraction of variance).</s><s>It is important to note here that we fit each GLM in an unbiased manner and determined the most significant couplings based on shuffling.</s><s>In cases where we tested the effect of removing certain filters on predicting the firing rate of neurons, we first fit a model to 80% of the trials, set the necessary filter components to 0, and then used that model to predict the remaining 20% of the trials.</s><s>We computed explained variance (EV) using the following formula:</s></p><formula xml:id="formula_9">EV = 1 - ∑ i (y i -Model i ) 2 ∑ i (y i -y l )</formula><p><s>2 .</s><s>We repeated this procedure 100 times.</s><s>In this way, we do not bias the other terms of the model by removing terms before performing the regression.</s></p><p><s>We derived a Filter Similarity Index to determine how inputs to a neuron changed as the animal switched from one context to another.</s><s>First, we used the behavioral model (see section on trial selection above) to determine trials in which choice behavior was stable in each context.</s><s>Using these trials, we derived coupling filters: (1) between PFC cue selective cells, (2) from PFC cue-selective cells to MD cells, and (3) from PFC cue selective cells to PFC invariant cells.</s><s>We refer to these filters as stable input filters.</s><s>Next, we re-fit the GLM on a trial-to-trial basis from 10 trials before the switch to 10 trials after the switch and extracted single-trial input filters.</s><s>The Filter Similarity Index is the Pearson's correlation coefficient between the single trial coupling filter and the stable coupling filter in each context.</s><s>In particular, for cells preferring the second context, we report the correlation coefficients between the single trial input filters and the stable filter in the second context.</s><s>This analysis allowed us to visualize the remapping of intra-cortical and cortico-thalamic inputs as mice switched from one cueing context to another.</s><s>We defined the filter stabilization latency as the trial number at which the correlation coefficient between the single trial coupling filter and the stable coupling filter in each context is significantly above chance levels.</s></p><p><s>For clustering analysis in Figure <ref type="figure" target="#fig_4">4d</ref>, we quantified the shape of the filter using a filter score.</s></p><p><s>For filters with a larger inhibitory magnitude, the filter score was the signed area under the curve of the inhibitory component.</s><s>For filters with a larger excitatory magnitude, the filter score was the area under the curve of the positive component.</s><s>In this way, negative filter scores correspond to MD neurons that exert an inhibitory effect on their targets, while positive filters scores correspond to MD neurons that exert an excitatory effect on their targets.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Model to explain MD responses.</head><p><s>We constructed a simple model to determine if, and how, MD neurons derive their contextual selectivity from PFC cue-selective neurons (Supplementary Fig. <ref type="figure">7</ref>).</s><s>To do so, we first generated a population of 1,000 Poisson spiking units with transient elevations that spanned the duration of the delay period (50 ms peak spacing).</s><s>These model neurons mimicked, for example HP and LP selective neurons in the PFC, with the aim of predicting the responses of the auditory cueing context selective MD cells.</s><s>For each model PFC neuron, we computed a PSTH.</s><s>Each PSTH was then convolved with the PFC-MD input kernel (described above).</s><s>This convolved output was then weighted and summed.</s><s>We then used a least squares method to determine the best fit model that could explain the trialaveraged firing rate of either persistent or transient MD neurons.</s><s>For persistent MD neurons, weights were almost uniformly distributed over all PFC inputs, suggesting that their inputs were not temporally selective.</s><s>In contrast, transient MD neurons weighted inputs from cotuned PFC neurons more strongly, suggesting that they receive temporally-selective inputs from these co-tuned cue-selective neurons.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Computational Modeling.</head><p><s>We use a recurrently connected reservoir of 1000 rate neurons to model the PFC.</s><s>The rate of each neuron indexed by i is given as a function of its input I i as r i = tanh(I i ) if I i &gt; 0, and = 0 otherwise.</s><s>The input consists of cue input, recurrent input and MD gating together, filtered with a decaying exponential synapse with time constant τ = 20 ms, as</s></p><formula xml:id="formula_10">τ dI i (t) dt = -I i + ∑ k w ik in cue k (t) + ∑ j (1 + μ i (t))w ij r j (t) + ∑ l w il MD + r l MD (t)</formula><p><s>cue k is a vector of length equal to the number of possible cues (corresponding to HP and LP noise, UV and green LED flash).</s><s>It has entries 1 for cues that are on at the current time and 0 for those off.</s><s>The input weights w ik in are set such that each cue k stimulates a set of 200 neurons, disjoint with the sets for other cues, with each weight chosen uniformly between 0.75 and 1.5.</s><s>w ij is set as a Gaussian-distributed variable with mean zero and standard deviation 0.75/ 400, and then the mean is subtracted across each row of the matrix.</s><s>r l MD is a vector representing the activity of MD neurons with dimensionality equal to the number of contexts.</s><s>We set the entry for the current context to 1 and the rest to 0. w il MD + is set to -10 for those neurons that are not stimulated by cues belonging to context l, and to 0 for those that do, effectively suppressing activity of context-irrelevant neurons.</s><s>μ i mediates the multiplicative effect of the MD on the total recurrent input to neuron i, and is given by:</s></p><formula xml:id="formula_11">μ i = ∑ m w im MD × r m MD w im</formula><p><s>MD × is set to 8 if neuron i is one of the neurons stimulated by cues belonging to context m, else it is set to 0, effectively enhancing the recurrent input for context-relevant neurons.</s></p><p><s>Note that all sums run over all the full range of the summed indices.</s></p><p><s>When simulating the PFC-only network, we set all w il MD + to zero and all w im MD × to 2, effectively removing all context-specific suppression and enhancement.</s><s>The model included two output neurons -the first corresponding to attend to audition and the second to attend to vision, receiving input from the PFC as where τ w = 200 s, and the instantaneous error ϵ n in output n is defined in terms of the target output r n target which is cue-specific as below.</s><s>Learning on the output weights is on throughout the simulations.</s></p><p><s>Each task was simulated as a run of 1000 cycles of context 1 (block 1), followed by 1000 cycles of context 2 (block 2) and then again followed by 200 cycles of context 1 (block 3).</s><s>Each cycle consists of 2 trials of cue = (1,0,0,0) and cue = (0,1,0,0) during context 1, and of 2 trials of cue = (1,0,0,0) and cue = (0,1,0,0) during context 2, in random order within each cycle, for the experimental linearly separable task, representing high-pass and low-pass noise and UV and green LED flash respectively.</s><s>The target output r n target for these cues is</s></p><p><s>(1,0), (0,1), (1,0), and (0,1) respectively.</s><s>The two longer blocks allowed the network to learn the two contextual tasks sequentially, while the shorter third block served to test the ability of the network to recall the first context.</s></p><p><s>Similarly, for the XOR task, each cycle consists of equal to 4 trials of cue equal to (0,0,0,0), (0,1,0,0), (1,0,0,0) and (1,1,0,0) during context 1, and (0,0,0,0), (0,0,0,1), (0,0,1,0) and (0,0,1,1) during context 2, in random order.</s><s>These must map to target output r n target equal to</s></p><p><s>(1,0) if only one of the cues in a context is active and to (0,1) if none or both are active.</s></p><p><s>Each trial consists of a 100 ms-long cue presentation followed by 100 ms of delay period when (0,0,0,0) is presented.</s><s>The target output is maintained throughout the trial for plasticity of the output weights, and the mean squared error is computed over the full trial and across the two outputs.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistical Testing.</head><p><s>All data in this paper is pooled from 5 mice (optical perturbation 3 mice).</s><s>No statistical tests were done to determine the sample size, but our sample sizes are similar to those reported in previous publications (ref 17, 23).</s><s>Note, data collection and analysis were not performed blind to the conditions of the experiments.</s></p><p><s>Data were first tested for normality using the Shapiro-Wilk test.</s><s>All data presented in this paper are nonnormally distributed; thus, all statistical tests were conducted using nonparametric statistics.</s><s>Our experiments involved testing the influence of different conditions (cues, optical manipulations, etc.) on the same population of neurons; thus, all comparisons were performed using nonparametric repeated-measures ANOVA (Friedman test) with Bonferroni's correction for multiple comparisons.</s><s>Comparisons between independent measures was performed using the nonparametric Kruskal-Wallis ANOVA.</s><s>For Bonferroni corrections, the significance value was set to 0.05.</s><s>Post hoc tests were performed using the two-tailed signed-rank test (for repeated measures) or the Wilcoxon rank-sum test for independent measures.</s><s>All other statistical tests that were performed are described in the text.</s><s>The 95% CIs were computed by bootstrapping.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc><div><p><s>I n out &gt; 0, and = 0 otherwise.</s><s>w ni out is initialized to zero,</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 1 .</head><label>1</label><figDesc><div><p><s>Fig. 1.</s><s>Prefrontal neurons display selectivity indicative of a hierarchical cue to rule transformation during attentional switching.</s><s>(a) Schematic of task design.</s><s>(b) Mice were trained to associate four cues with two rules.</s><s>These cues were presented in two blocks, each containing two cues.</s><s>An animal had to achieve at least 70 correct trials in a block before moving on to the next block.</s><s>For details, see Methods.</s><s>(c) Example peri-stimulus time histogram (PSTH) and raster plot (number of trials vs. time) for a regular-spiking (RS) PFC neuron that is selective to a LP noise.</s><s>The</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 2 .</head><label>2</label><figDesc><div><p><s>Fig. 2. Mediodorsal thalamic responses reflect the cueing context.</s><s>(a) Schematic for MD recordings.</s><s>(b-c) Example PSTHs of MD neurons with transient (b) and persistent (c) responses to both cues within the auditory cueing context.</s><s>Each color indicates a distinct neuron.</s><s>Representative examples drawn from n = 5 mice (independent samples).</s><s>(d) Histogram of inter-trial spiking reliability scores from all task-modulated MD neurons.</s><s>A gaussian mixture model (dashed lines) was used to classify cells into either persistent (low reliability) or transient (high reliability).</s><s>Inset, pie chart quantifying the fraction of each MD neuron type.</s><s>(e) Classification accuracy over time relative to cue onset for a decoder trained to predict either rule (top) or cue context decoding (bottom)trained to classify rule (left) and cue context (right) from PFC RS and MD populations (5 mice).</s><s>The asterisks denote the time point at which classification accuracy is significant (i.e.</s><s>p &lt; 0.05, permutation test from n = 5 biologically-independent mice) above chance (50%</s></p></div></figDesc><graphic coords="30,84.14,62.00,503.73,442.80" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 3 .</head><label>3</label><figDesc><div><p><s>Fig. 3. Flexible switching between contexts is associated with MD-dependent changes in PFC activity (a) Comparison of fraction correct trials between the different task conditions.</s><s>Each data point is one session per mouse from 3 mice in total.</s><s>*** p = 0.023 x 10 -3 , Bonferronicorrected Kruskal-Wallis ANOVA.</s><s>Note, each session is treated as an independent sample.</s><s>(b) Change in behavioral performance (fraction correct) relative to switch.</s><s>**p &lt; 0.01, *** p &lt; 0.001.</s><s>One-way Rank-sum test relative to 5 trials before the switch.</s><s>n = 33 independent sessions from 3 mice.</s><s>Data is shown as mean +/-SEM.</s><s>(c) Change in filter similarity index of coupling filters from cue-selective to cue-invariant neurons in the PFC relative to switch.</s><s>Insets show an example coupling filter changing between the point of switch (black) to its</s></p></div></figDesc><graphic coords="32,84.13,62.00,503.74,470.16" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4 .</head><label>4</label><figDesc><div><p><s>Fig. 4. Distinct MD neurons augment and suppress context-relevant PFC representations.</s><s>(a) Schematic of Poisson GLM used to model PFC neurons including MD interactions.</s><s>(b) Box-plot comparing the coupling probability between MD and PFC cue-selective (n = 230 neurons from 5 mice)) or cue-invariant neurons (n = 86 neurons from 5 mice).</s><s>***p = 0.58 x 10 -5 two-way rank-sum test relative to cue-selective neurons.</s><s>(c) Left: Scatter plot relating the coupling strength between MD and PFC cue-selective cell with the difference in contextual selectivity for both cells that prefer the current context or the previous context.</s></p></div></figDesc><graphic coords="34,97.32,62.00,477.36,503.75" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig 5 .</head><label>5</label><figDesc><div><p><s>Fig 5. Benefit of PFC-MD over PFC-only architecture on switching contexts.</s><s>(a) Recurrent neural network (RNN) model of the PFC-MD network.</s><s>The drawing depicts neural activation in a single context, with grey RNN neurons representing the currentlyirrelevant context (b) The mean squared error (MSE) in decoding the desired output from the PFC over two context switches (indicated by the arrows).</s><s>For details, see Methods.</s><s>(c) Trial-averaged responses of 1000 neurons in the PFC to low-pass noise (blue) and high-pass noise (red).</s><s>Horizontal lines below the plots indicate the sets of neurons activated by the</s></p></div></figDesc><graphic coords="36,84.12,62.00,503.76,500.40" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="1,113.50,16.20,385.00,140.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head></head><label></label><figDesc><div><p><s>final stable value (red).</s><s>Red line marks the filter stabilization latency.</s><s>Shaded area, 95% CI.</s><s>For details, see Methods.</s><s>(d) Scatter plot relating behavioral (behav.)</s><s>switch latency with the filter stabilization latency for inputs to cue-invariant PFC neurons.</s><s>Each data point is a session (p = 0.0068 x 10 -6 , two-way rank-sum test, n = 33 independent sessions from 3 mice).</s><s>(e) Left: Schematic illustrating bilateral MD suppression.</s><s>Right: Change in Top: Example PSTH of a PFC neuron selective to cues in the second cueing context.</s><s>Left: Time course of the change in normalized maximum firing rate (relative to stable behavior) relative to the switch.</s><s>No significant difference (p = 0.92 between suppressed and non-suppressed conditions).</s><s>Right: Scatter plot comparing the maximum firing rate of PFC cue selective neurons (grey) and PFC FS neurons (purple) 10 trials after switch.</s><s>(i) As in (h) but showing the effect that MD suppression has on PFC cells that are selective for cues in the first cueing context.</s><s>Left: *** p &lt; 0.001, one-way rank-sum test for each time point between suppressed and non-suppressed conditions, n = 3 mice.</s><s>Data is shown as mean +/-SEM.</s><s>Right, p &lt; 0.001 one-way rank-sum test for each time point between suppressed and non-suppressed conditions, n = 3 mice.</s></p></div></figDesc><table><row><cell>behavioral performance (fraction correct) relative to switch for sessions with bilateral MD</cell></row><row><cell>suppression. Statistics and plotting same as (b). (f-g) Box-plots comparing the effect that</cell></row><row><cell>MD suppression has on behavioral switching latency (f, *** p = 0.78 x 10 -4 , Kruskal-Wallis</cell></row><row><cell>ANOVA) and cue-invariant input filter stabilization latency (g, *** p = 0.19 x 10 -4 , Kruskal-</cell></row><row><cell>Wallis ANOVA). N = 33 sessions with no suppression, 31 sessions with MD suppression</cell></row><row><cell>from 3 mice. (h)</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nat Neurosci.</s><s>Author manuscript; available in PMC 2020May 15.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We thank <rs type="person">Ralf D. Wimmer</rs> for help with experiments, and members of the <rs type="institution">Halassa Lab</rs> for technical assistance and discussions.We would also like to thank <rs type="person">Wulfram Gerstner</rs>, <rs type="person">Michale Fee</rs>, <rs type="person">Earl Miller</rs> and <rs type="person">Matthew Wilson</rs> for helpful discussions, and <rs type="person">Jonathan W. Pillow</rs> and <rs type="person">David Zlotowski</rs> for advice on the GLM model.This work was supported by grants from the <rs type="funder">National Institutes of Health</rs>, the <rs type="funder">Brain and Behavior, Klingenstein, Pew</rs> and <rs type="person">Simons Foundations</rs> as well as the <rs type="programName">Human Frontiers Science Program</rs> to MMH, and the <rs type="funder">German Ministry of Education</rs> to AG through <rs type="person">Raoul Memmesheimer</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_gWP3QHr">
+					<orgName type="program" subtype="full">Human Frontiers Science Program</orgName>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>All Matlab and python scripts used to analyses the data will be deposited on Github Github (https://github.com/toxine4610/</s><s>ThalamusContextSwitchingCode), and (https://github.com/adityagilra/PFC_MD_weights_stability).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p><s>All data are available from the corresponding author upon reasonable request.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Yeung N Memory and cognitive control in task switching</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Richter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="1256" to="1263" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22972906</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Hanks TD &amp; Summerfield C Perceptual Decision Making in Rodents, Monkeys, and Humans</title>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="15" to="31" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28056343</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Dynamic coding for cognitive control in prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Stokes</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mfl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="364" to="375" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23562541</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Roberts AC Dissociation in prefrontal cortex of affective and attentional shifts</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Dias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Robbins</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">380</biblScope>
+			<biblScope unit="page" from="69" to="72" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8598908</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">An integrative theory of prefrontal cortex function</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="167" to="202" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11283309</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Dimensional and Monotonic Preparatory Activity in Mouse Anterior Lateral Motor Cortex</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Inagaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Inagaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Romani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Low</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="4163" to="4185" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29593054</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Jensen O &amp; Stokes MG Selective inhibition of distracting input</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Noonan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Crittenden</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bbr.2017.10.010</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Behav. Brain Res</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Prefrontal function in schizophrenia: confounds and controversies</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Weinberger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Berman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Philos. Trans. R. Soc. Lond. B. Biol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">351</biblScope>
+			<biblScope unit="page" from="1495" to="1503" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8941961</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Thalamocortical dysconnectivity in schizophrenia</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Woodward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Karbasforoushan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Heckers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">169</biblScope>
+			<biblScope unit="page" from="1092" to="1099" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23032387</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Overcoming catastrophic forgetting in neural networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kirkpatrick</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mfl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U. S. A</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="3521" to="3526" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28292907</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hassabis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kumaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Summerfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Botvinick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience-Inspired Artificial Intelligence. Neuron</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="245" to="258" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28728020</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Passingham RE Prefrontal interactions reflect future task operations</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sakai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="75" to="81" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12469132</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Buschman TJ Cortical circuits for the control of attention</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="216" to="222" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23265963</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Top-down versus bottom-up control of attention in the prefrontal and posterior parietal cortices</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Buschman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">315</biblScope>
+			<biblScope unit="page" from="1860" to="1862" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17395832</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Miller EK Goal-direction and top-down control</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Buschman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Philos. Trans. R. Soc. Lond. B. Biol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">369</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Funahashi S &amp; Stokes MG Stable and Dynamic Coding for Working Memory in Primate Prefrontal Cortex</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Spaak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Watanabe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="6503" to="6516" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28559375</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Thalamic amplification of cortical connectivity sustains attentional control</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">I</forename><surname>Schmitt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">545</biblScope>
+			<biblScope unit="page" from="219" to="223" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28467827</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Thalamic projections sustain prefrontal activity during working memory maintenance</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Bolkan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mfl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosciadvance on</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Mediodorsal thalamus hypofunction impairs flexible goal-directed behavior</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Parnaudeau</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mfl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biol. Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="445" to="453" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24813335</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Wimmer RD &amp; Halassa MM Toward an Integrative Theory of Thalamic Function</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">V</forename><surname>Rikhye</surname></persName>
+		</author>
+		<idno type="DOI">10.1146/annurev-neuro-080317-062144</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Chakraborty S What does the mediodorsal thalamus do?</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Mitchell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Syst. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">37</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23950738</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Lee AT &amp; Sohal VS Roles of prefrontal cortex and mediodorsal thalamus in task engagement and behavioral flexibility</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Marton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Seifikar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Luongo</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.1728-17.2018</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Thalamic control of sensory selection in divided attention</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Wimmer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mfl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">526</biblScope>
+			<biblScope unit="page" from="705" to="709" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26503050</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Neural mechanisms of transient and sustained cognitive control during task switching</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">S</forename><surname>Braver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">I</forename><surname>Donaldson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="713" to="726" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12925284</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">The brain circuitry of attention</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shipp</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Cogn. Sci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="223" to="230" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15120681</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Feedforward mechanisms of excitatory and inhibitory cortical receptive fields</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Bruno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Simons</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="10966" to="10975" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12486192</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Nieder A Complementary contributions of prefrontal neuron classes in abstract numerical categorization</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Diester</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="7737" to="7747" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18667606</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Uchida N &amp; Mainen ZF A defined network of fast-spiking interneurons in orbitofrontal cortex: responses to behavioral contingencies and ketamine administration</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Quirk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Sosulski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Feierstein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Syst. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">13</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20057934</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Single neurons in prefrontal cortex encode abstract rules</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Wallis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">411</biblScope>
+			<biblScope unit="page" from="953" to="956" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11418860</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">The prefrontal cortex: categories, concepts and cognition</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Freedman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Wallis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Philos. Trans. R. Soc. Lond. B. Biol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">357</biblScope>
+			<biblScope unit="page" from="1123" to="1136" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12217179</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Pillow JW &amp; Huk AC Functional dissection of signal and noise in MT and LIP during decision-making</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Yates</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Katz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1285" to="1292" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28758998</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Huk AC &amp; Pillow JW Encoding and decoding in parietal cortex during sensorimotor decision-making</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mlr</forename><surname>Meister</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1395" to="1403" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25174005</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">An Essential Partner of the Prefrontal Cortex for Cognition</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Parnaudeau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Bolkan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kellendonk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mediodorsal</forename><surname>The</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Thalamus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biol. Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="648" to="656" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29275841</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Chakraborty S What does the mediodorsal thalamus do?</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Mitchell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Syst. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">37</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23950738</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Thalamic Control of Cognition and Social Behavior Via Regulation of Gamma-Aminobutyric Acidergic Signaling and Excitation/Inhibition Balance in the Medial Prefrontal Cortex</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Ferguson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W-J</forename><surname>Gao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biol. Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="657" to="669" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29373121</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">The mediodorsal thalamus drives feedforward inhibition in the anterior cingulate cortex via parvalbumin interneurons</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Delevich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tucciarone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="5743" to="5753" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25855185</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Hong SZ &amp; Fiorillo CD T-type calcium channels cause bursts of spikes in motor but not sensory thalamic neurons during mimicry of natural patterns of synaptic input</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Cell. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">428</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26582654</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title level="m" type="main">Grant GD &amp; Freedman DJ Alleviating catastrophic forgetting using context-dependent gating and synaptic stabilization</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">Y</forename><surname>Masse</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Computing Properties of Neural Dynamics in Prefrontal Cortex</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Enel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Procyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Quilodran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">F</forename><surname>Dominey</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Reservoir</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput. Biol</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">1004967</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27286251</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Real-time computing without stable states: a new framework for neural computation based on perturbations</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Maass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Natschläger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Markram</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="2531" to="2560" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12433288</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">Haykin S Neural Networks and Learning Machines</title>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Minsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Papert</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Perceptrons</surname></persName>
+		</author>
+		<title level="m">an introduction to computational geometry</title>
+		<imprint>
+			<publisher>MIT press</publisher>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Tolhurst DJ Spatial summation in the receptive fields of simple cells in the cat&apos;s striate cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Movshon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">D</forename><surname>Thompson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">283</biblScope>
+			<biblScope unit="page" from="53" to="77" />
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 722589</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">EK A comparison of abstract rules in the prefrontal cortex, premotor cortex, inferior temporal cortex, and striatum</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Muhammad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jd &amp;</forename><surname>Wallis</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cogn. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="974" to="989" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16839304</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Thalamic relay functions and their role in corticocortical communication: generalizations from the visual system</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Guillery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Sherman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="163" to="175" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11804565</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">A dendritic disinhibitory circuit mechanism for pathwayspecific gating</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jd &amp;</forename><surname>Murray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X-J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">12815</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27649374</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">GABAergic Interneurons in the Neocortex: From Cellular Properties to Circuits</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tremblay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Rudy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="260" to="292" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27477017</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Convergence of cortical and sensory driver inputs on single thalamocortical cells</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Groh</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mfl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb. Cortex</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="3167" to="3179" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23825316</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Engagement of pulvino-cortical feedforward and feedback pathways in cognitive computations</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jaramillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Mejias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X-J</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/322560</idno>
+	</analytic>
+	<monogr>
+		<title level="j">bioRxiv</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Explicit contextual information selectively contributes to predictive switching of internal models</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Imamizu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mfl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp. brain Res</title>
+		<imprint>
+			<biblScope unit="volume">181</biblScope>
+			<biblScope unit="page" from="395" to="408" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17437093</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">Methods-only references</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Lightweight, Integrated and Quick-to-Assemble (SLIQ) Hyperdrives for Functional Circuit Dissection</title>
+		<author>
+			<persName><surname>Liang L Mfl</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Scalable</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Neural Circuits</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28243194</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Structural foundations of optogenetics: Determinants of channelrhodopsin ion selectivity</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Berndt</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mfl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U. S. A</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="822" to="829" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26699459</note>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Natronomonas halorhodopsin enhanced for optogenetic applications</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Gradinaru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Thompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Enphr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="129" to="139" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18677566</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Diamond ME &amp; Brody CD Posterior parietal cortex represents sensory history and mediates its effects on behaviour</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Akrami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Kopec</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">554</biblScope>
+			<biblScope unit="page" from="368" to="372" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29414944</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">A Fully Automated Approach to Spike Sorting</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mfl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="1381" to="1394" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28910621</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">A heuristic method for finding the optimal number of clusters with application in medical data</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bayati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Davoudi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fatemizadeh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Conf. Proc. … Annu. Int. Conf. IEEE Eng. Med. Biol. Soc. IEEE Eng. Med. Biol. Soc. Annu. Conf</title>
+		<imprint>
+			<biblScope unit="page" from="4684" to="4687" />
+			<date type="published" when="2008">2008. 2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">Meyers EM The neural decoding toolbox. Front. Neuroinform</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23734125</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Pillow JW mfl. Spatio-temporal correlations and visual signalling in a complete neuronal population</title>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">454</biblScope>
+			<biblScope unit="page" from="995" to="999" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18650810</note>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Simoncelli EP &amp; Chichilnisky EJ Prediction and decoding of retinal ganglion cell responses with a probabilistic spiking model</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Pillow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Paninski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">J</forename><surname>Uzzell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="11003" to="11013" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16306413</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

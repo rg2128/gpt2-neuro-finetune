@@ -1,0 +1,1315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Stochastic Transitions between Neural States in Taste Processing and Decision-Making</title>
+				<funder ref="#_S7YvhmS">
+					<orgName type="full">National Science Foundation/National Institutes of Health Collaborative Research in Computational Neuroscience mechanism)</orgName>
+				</funder>
+				<funder ref="#_HAKCNPC">
+					<orgName type="full">National Institutes of Health/National Institute on Deafness and Other Communication Disorders</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Swartz Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Society for Neuroscience</publisher>
+				<availability status="unknown"><p>Copyright Society for Neuroscience</p>
+				</availability>
+				<date type="published" when="2010-02-17">2010-02-17</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Paul</forename><surname>Miller</surname></persName>
+							<email>pmiller@brandeis.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Donald</forename><forename type="middle">B</forename><surname>Katz</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Volen Center for Complex Systems</orgName>
+								<orgName type="institution">Brandeis University</orgName>
+								<address>
+									<postCode>02453</postCode>
+									<settlement>Psychology, Waltham</settlement>
+									<region>Massachusetts</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Departments of 1 Biology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Volen Center for Complex Systems</orgName>
+								<orgName type="institution" key="instit1">MS013</orgName>
+								<orgName type="institution" key="instit2">Brandeis University</orgName>
+								<address>
+									<addrLine>415 South Street</addrLine>
+									<postCode>02454-9110</postCode>
+									<settlement>Waltham</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Stochastic Transitions between Neural States in Taste Processing and Decision-Making</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">The Journal of Neuroscience</title>
+						<title level="j" type="abbrev">J. Neurosci.</title>
+						<idno type="ISSN">0270-6474</idno>
+						<idno type="eISSN">1529-2401</idno>
+						<imprint>
+							<publisher>Society for Neuroscience</publisher>
+							<biblScope unit="volume">30</biblScope>
+							<biblScope unit="issue">7</biblScope>
+							<biblScope unit="page" from="2559" to="2570"/>
+							<date type="published" when="2010-02-17" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">187486C0272FCFD2F663A93604EEFACA</idno>
+					<idno type="DOI">10.1523/jneurosci.3047-09.2010</idno>
+					<note type="submission">Received June 26, 2009; revised Dec. 9, 2009; accepted Dec. 31, 2009.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Noise, which is ubiquitous in the nervous system, causes trial-to-trial variability in the neural responses to stimuli.</s><s>This neural variability is in turn a likely source of behavioral variability.</s><s>Using Hidden Markov modeling, a method of analysis that can make use of such trial-to-trial response variability, we have uncovered sequences of discrete states of neural activity in gustatory cortex during taste processing.</s><s>Here, we advance our understanding of these patterns in two ways.</s><s>First, we reproduce the experimental findings in a formal model, describing a network that evinces sharp transitions between discrete states that are deterministically stable given sufficient noise in the network; as in the empirical data, the transitions occur at variable times across trials, but the stimulus-specific sequence is itself reliable.</s><s>Second, we demonstrate that such noise-induced transitions between discrete states can be computationally advantageous in a reduced, decision-making network.</s><s>The reduced network produces binary outputs, which represent classification of ingested substances as palatable or nonpalatable, and the corresponding behavioral responses of "spit" or "swallow".</s><s>We evaluate the performance of the network by measuring how reliably its outputs follow small biases in the strengths of its inputs.</s><s>We compare two modes of operation: deterministic integration ("ramping") versus stochastic decision-making ("jumping"), the latter of which relies on state-to-state transitions.</s><s>We find that the stochastic mode of operation can be optimal under typical levels of internal noise and that, within this mode, addition of random noise to each input can improve optimal performance when decisions must be made in limited time.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Trial-to-trial variability, considered ubiquitous in neuronal systems <ref type="bibr" target="#b40">(Shadlen and Newsome, 1998)</ref>, can obscure the nature of the dynamics of a single-trial neural response to a sensory stimulus <ref type="bibr" target="#b9">(Durstewitz and Deco, 2008)</ref>.</s><s>In particular, if neural processing involves sharp transitions between discrete states and if the timing of the transitions varies from trial to trial, then these transitions become broadened by analyses such as principal component analysis (PCA) that first combine data across trials to form peristimulus time histograms (PSTHs).</s><s>Analyses such as Hidden Markov modeling (HMM) <ref type="bibr" target="#b0">(Abeles et al., 1995;</ref><ref type="bibr" target="#b35">Seidemann et al., 1996;</ref><ref type="bibr" target="#b19">Jones et al., 2007)</ref>, meanwhile, are not anchored to the time point of stimulus delivery and so have no difficulty incorporating such trial-to-trial variability.</s><s>If state transitions are real properties of the data, HMM can use correlations in firing-rate changes of multiple cells across transitions regardless of whether the transitions occur at identical poststimulus times in each trial; thus, HMM extracts more information about such neuronal responses than PSTH-based methods.</s></p><p><s>Recently, we documented the existence of just these kinds of ensemble responses in gustatory cortex (GC) during taste processing <ref type="bibr" target="#b19">(Jones et al., 2007)</ref>.</s><s>HMM of ensemble neural data from GC provided more information on taste identity than standard ensemble PCA and other PSTH-based analyses.</s><s>Such a result suggests that each taste does in fact produce a reliable sequence of relatively long-lived (200 -1000 ms) states with fast transitions (averaging 60 ms) between them.</s><s>Transition times vary from trial to trial (by up to the mean lifetime of states) such that averaging of firing rates across trials reveals only an artifactually smoothly varying response.</s></p><p><s>Here we place these empirical findings in a solid computational framework, demonstrating that such neural activity can arise from the timing of stochastically induced, rapid changes between discrete, deterministically stable network states <ref type="bibr" target="#b29">(Okamoto et al., 2007;</ref><ref type="bibr" target="#b25">Miller and Wang, 2006;</ref><ref type="bibr" target="#b7">Deco et al., 2007b</ref><ref type="bibr" target="#b8">Deco et al., , 2009;;</ref><ref type="bibr" target="#b14">Gigante et al., 2009)</ref>.</s><s>Our attractor-based model network possesses the key features of neural activity observed during taste processing <ref type="bibr" target="#b19">(Jones et al., 2007)</ref>.</s><s>(1) Transitions between states produce correlated, rapid changes in firing rates of multiple neurons.</s><s>(2) Transitions occur at discrete but unpredictable times in individual trials.</s><s>(3) Much slower variations of activity are observed in PSTHs.</s><s>(4) Individual stimuli bias the transitions through reliable sequences of states.</s></p><p><s>To study the computational advantage of network dynamics based on stochastic transitions between discrete states, we also investigate a reduced network that performs winner-takes-all decision-making <ref type="bibr" target="#b45">(Wang, 2001)</ref>, representing a categorical perception of one taste over another (or the two-alternative forced choice of "spit" vs "swallow") evident in neural activity of GC as a palatability response <ref type="bibr" target="#b20">(Katz et al., 2001;</ref><ref type="bibr" target="#b12">Fontanini and Katz, 2006;</ref><ref type="bibr" target="#b16">Grossman et al., 2008)</ref>.</s><s>We modulate the excitability of the network to change its operating mode from one of deterministic integration ("ramping") to one in which the spontaneous state remains stable and decisions are made by stochastic transition ("jumping").</s><s>We measure how reliably the probabilistic binary responses follow small input biases favoring one outcome over another and demonstrate that the jumping mode is optimal under many conditions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and Methods</head><p><s>Model network simulations: taste-processing network.</s><s>Our model tasteprocessing network (Fig. <ref type="figure" target="#fig_0">1</ref>) is designed to mimic the cortical neural responses observed during the processing of two tastes of opposite palatability (such as sucrose and quinine): specifically, cell groups whose activity increases in one of the three epochs of taste processing <ref type="bibr" target="#b20">(Katz et al., 2001;</ref><ref type="bibr" target="#b12">Fontanini and Katz, 2006)</ref>, which we label "detection," "identification," and "decision."</s><s>For the simplified model, one group of cells is necessary for detection and two each for the identification and decision, so our base network has five groups.</s><s>Each group of cells comprises an excitatory population and an inhibitory population in a 4 to 1 ratio in correspondence with cortical data.</s><s>Unless otherwise stated, a total of 100 cells per pool is used (80 excitatory and 20 inhibitory).</s><s>Specific connec-tion strengths are given in the supplemental data (available at www. jneurosci.org</s><s>as supplemental material).</s></p><p><s>We simulate taste delivery by adding Poisson spike trains to all excitatory cells in the taste-processing network, beginning at a time of 100 ms after stimulus (representing the delay from taste delivery to neural responses in gustatory cortex).</s><s>The two tastes were distinguished by the cells in one of the two pools labeled "taste" in our model network (Fig. <ref type="figure" target="#fig_0">1 A</ref>) receiving inputs at a 20% higher rate than the otherwise symmetric pool.</s><s>For additional details, see the supplemental data (available at www. jneurosci.org</s><s>as supplemental material).</s></p><p><s>Model network simulations: decision-making network.</s><s>The decisionmaking network is a subsection of the taste-processing network that is designed to produce a palatability response upon receiving input from cells with information pertaining to taste identity.</s><s>That is, we designed the subnetwork to analyze just one of the multiple transitions in the full taste-processing network: the transition from "identity" to "palatability".</s><s>A similar decision-making network could underlie the transition from "detection" to "identity" in taste processing.</s></p><p><s>Our network has the structure of previous model networks for decision-making <ref type="bibr" target="#b46">(Wang, 2002;</ref><ref type="bibr" target="#b48">Wong and Wang, 2006;</ref><ref type="bibr" target="#b49">Wong et al., 2007)</ref>: competing pools of excitatory neurons with strong self-excitation and strong cross-inhibition.</s><s>As with the full taste-processing network, each excitatory pool of cells is coupled with one-fourth the number of inhibitory cells (rather than a global inhibitory network as in some models).</s><s>The self-excitation generates an attractor state of high activity for each pool, such that with sufficient input they are excited from a stable state of low firing-rate, spontaneous activity to the highly active state.</s><s>The cross-inhibition ensures that only one of the excitatory pools can be active at a time (in the absence of overwhelming input).</s><s>Details of the specific connections are given in the supplemental data (available at www.jneurosci.org as supplemental material).</s></p><p><s>We adjust the operational mode of the decision-making network, from ramping to jumping, by reducing its overall excitability, to render the spontaneous, low activity of each pool more stable.</s><s>We achieve such a reduction in excitability by either reducing overall excitatory input during the stimulus or increasing the leak conductance of all excitatory cells (equivalent to a uniform inhibitory input).</s><s>For Figures <ref type="figure" target="#fig_4">5</ref> and<ref type="figure" target="#fig_5">6</ref>, we simultaneously altered several synaptic parameters (see Fig. <ref type="figure" target="#fig_4">5 legend</ref>) to generate a network in the ramping mode that had sufficiently slow integration of inputs to match the timescale of the jumping network.</s></p><p><s>Model network simulations: single-cell properties.</s><s>Because HMM was applied to neural spike train data by <ref type="bibr" target="#b19">Jones et al. (2007)</ref>, our level of modeling is sufficiently realistic that neural spike trains are produced.</s><s>Beyond this, model specification is minimal, however: we do not assume that any particular property of a single neuron is responsible for the observed temporal dynamics.</s><s>The multiple timescales of the system arise from the interaction between network structure and rapid noise fluctuations rather than from any specific property explicitly built into the model.</s><s>Thus, we chose the simplest possible model of a spiking neuron, namely the leaky integrate-and-fire (LIF) model <ref type="bibr" target="#b44">(Tuckwell, 1988)</ref>.</s><s>LIF cells fire at a higher rate with increased excitatory input once a threshold is reached and at a lower rate when inhibitory input is increased; they produce spike trains with a coefficient of variation similar to that of a Poisson process, assuming sufficiently noisy inputs.</s><s>To ensure noisy spike trains, beyond the input explicitly calculated from cells within the network, we add a Poisson barrage of excitatory and inhibitory synaptic inputs to represent activity of other connected cells not explicitly included in our network.</s></p><p><s>The basic equation for the LIF neuron describes the temporal variation of membrane potential, V i , of cell i, when receiving total excitatory synaptic conductance input g E S i E , and total inhibitory conductance input g I S i I , according to the following:</s></p><formula xml:id="formula_0">C i dV i dt ϭ g L ͑V L Ϫ V i ͒ ϩ g E S i E ͑V E Ϫ V i ͒ ϩ g I S i I ͑V I Ϫ V i ͒,</formula><p><s>where C i is the membrane capacitance of the cell, g L is its leak conductance, V L is the leak membrane potential (respectively, the conductance across the cell membrane and the resting potential of the cell in the absence of synaptic input and spiking activity), V E is the reversal potential of excitatory synaptic input, and V I is that of inhibitory synaptic input.</s><s>The scales of excitatory and inhibitory synaptic conductance are set by g E and g I , respectively, with maximal conductance of a synapse from neuron j to i given by g E W Ii (if excitatory) or g I W Ii (if inhibitory).</s></p><p><s>Total synaptic inputs S i E and S i I are given by summing over presynaptic cells (over all excitatory cells to calculate S i E and over all inhibitory cells to calculate S i I ):</s></p><formula xml:id="formula_1">S i E,I ϭ j W ji S j ,</formula><p><s>where s j is the fraction of receptors opened by the spikes of neuron j.</s><s>We determine s j from</s></p><formula xml:id="formula_2">ds j ͑t͒ dt ϭ Ϫ s j ͑t͒ s ϩ ␣ n ͑1 Ϫ s j ͑t jϪ n ͒͒ ␦͑t Ϫ t j n ͒,</formula><p><s>where s is the synaptic time constant, t j n is the time of the nth spike of neuron j and t jϪ n is the time just preceding that spike time.</s><s>When the membrane potential reaches a threshold, V Th , a spike is recorded and the membrane potential is lowered to a reset value, V R , for a refractory period, ref.</s><s>Equations were integrated using second-order Runge-Kutta with a time step of 0.1 ms.</s></p><p><s>Parameters were chosen such that, in the absence of explicitly modeled synaptic inputs, excitatory cells fired at under 3 Hz, whereas inhibitory cells fired at ϳ5 Hz.</s><s>Their specific values are given in the supplemental data (available at www.jneurosci.org as supplemental material).</s></p><p><s>Hidden Markov modeling.</s><s>We used standard Matlab packages for Hidden Markov modeling, using as inputs 10 trials of spike trains of two excitatory cells per pool (10 total) in the taste-processing network and four excitatory cells per pool (8 total) in the decision-making network (these numbers of trials and neurons are similar to those successfully analyzed by <ref type="bibr" target="#b19">Jones et al., 2007)</ref>.</s><s>We binned spike trains on a scale of 2 ms and generated vectors containing the identity of a neuron that spiked in each bin, with a "0" for no spike.</s><s>(For the rare occurrence of a bin containing spikes from more than one cell, neuron identity was chosen randomly from the cells that spiked.)</s><s>We iterated until convergence or up to a maximum of 500 iterations, using the Baum-Welch algorithm, which is guaranteed to approach a local optimum, using eight different random starting models.</s><s>The final model with maximum log likelihood (calculated as the probability of producing the measured spike trains given the particular model) was treated as the optimal characterization of population activity in the network.</s><s>Given the final model, we were able to plot for each trial the probability as a function of time that the ensemble of neuronal activity corresponds to a particular HMM state.</s></p><p><s>For our baseline simulations we allowed six HMM states to be used in the modeling.</s><s>In typical simulations of the taste-processing network, only four states were used in a trial, and, in the decision-making network, only two states were used.</s><s>That is, HMM defined the probability of being in these extra states as 0 throughout trials.</s><s>To test the importance of model parameters, we also ran HMM starting with from 3 to 10 states and with time bins varying from 1 to 25 ms.</s><s>We calculated the overlap of these model outputs with our original model in cases when equivalent states could be observed.</s><s>We defined the overlap, O() in each trial () as a normalized dot product between the probabilities P and PЈ for the original and new HMM by the following calculation:</s></p><formula xml:id="formula_3">O͑͒ ϭ 1 N iϭ1 N n P i n ͑͒ PЈ i n ͑͒ ͱ n P i n ͑͒ P i n ͑͒ ͱ n PЈ i n ͑͒ PЈ i n ͑͒ ,</formula><p><s>where i is the index of the time bin (from 1 to N ) in the original model, and the sum over n is the sum over states matched across models by their order of appearance.</s><s>Thus, PЈ i n () is the probability in a comparison model, being in state n in trial at the time equal to the time of the ith bin in the original model (the actual bin number may be different when comparing models of different bin size).</s><s>From the set of O() across trials, we report the mean and SD in Results.</s><s>Figures of example trials with specific parameters and values for O() are provided in the supplemental data (available at www.jneurosci.org as supplemental material).</s></p><p><s>Performance of decision-making network.</s><s>For each parameter set, we simulated 100 random trials and defined performance as the number of correct minus the number of incorrect responses.</s><s>We defined a response as the average firing rate of one pool exceeding that of the other pool by Ͼ20 Hz and the response as "correct" when the pool with greater input had the high firing rate.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stochastic transitions between discrete states</head><p><s>Our model network for taste processing produced a predictable sequence of activity states given a specific set of inputs, with sharp transitions between the states (Fig. <ref type="figure" target="#fig_1">2 A,</ref><ref type="figure">B,</ref><ref type="figure">D,</ref><ref type="figure">E</ref>).</s><s>Sequences were stable, with all 10 trials of each particular set of inputs producing an identical sequence (see also transition matrices in the supplemental data, available at www.jneurosci.org as supplemental material).</s><s>We simulated two types of input corresponding to two different tastes, which produced two different sequences (although with an identical initial state).</s><s>Average state duration was 615 Ϯ 68 ms for taste 1 and 471 Ϯ 50 ms for taste 2, whereas average transition time between states was smaller by more than an order of magnitude (mean of 27 Ϯ 6 ms for taste 1 and mean of 35 Ϯ 4 ms for taste 2).</s></p><p><s>The timing of individual transitions was highly variable across trials, such that an abrupt change in the firing rates of cells apparent on individual trials at a particular time were observed at a different time in the successive trial.</s><s>For example, the average range of the time of second transition within a single set of trials was 600 -894 ms for taste 1 and 636 -1020 ms for taste 2. Thus, much of the sharpness of the reliably observed firing rate changes is lost in the trial-averaged activity, which are by their nature time locked to the stimulus onset (Fig. <ref type="figure" target="#fig_0">1 B,</ref><ref type="figure">C</ref> ).</s><s>This sharpness is recovered in histograms keyed to state transitions rather than stimulus delivery, as shown by the comparison of these two cases for individual cells in each panel of Figure <ref type="figure" target="#fig_2">3</ref>. Similar results were observed across a broad region of parameter space used for the HMM.</s><s>Overlaps, O, of probabilities with a standard model that used six states and 2 ms time bins are given in Table <ref type="table" target="#tab_0">1</ref>.</s><s>The final column is a control, comparing the original data with trial indices randomly shuffled with the original HMM parameters.</s><s>In some other cases (e.g., using fewer than six states with a time bin of above 20 ms or more than six states with a time bin of Ͻ2 ms), no reliable state sequences were produced.</s><s>Figures showing these comparisons of HMM fits can be found in the supplemental data (available at www.jneurosci.org as supplemental material).</s></p><p><s>Because cells in a network are connected to each other, a significant change in the firing of one group of cells leads to correlated changes in firing rates of other cells as the state sequence progresses.</s><s>Thus, histograms of average firing rates as a function of states in the sequence (Fig. <ref type="figure" target="#fig_1">2 C,</ref><ref type="figure">F</ref> ) demonstrate that our interconnected network gives rise to the features of distributed processing apparent in the neural data: (1) individual cells fire spikes in more than one state, (2) firing rates of some cells increase whereas others decrease across state transitions, and (3) each state contains activity of multiple cells at multiple rates.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Two modes of decision-making</head><p><s>To assess the computational value of a model with discrete states and sharp, stochastic transitions between them, we analyzed the subpart of our taste-processing network that produces a binary choice, namely "palatable" versus "unpalatable", to produce a behavioral response of "spit" versus "swallow" (Fig. <ref type="figure" target="#fig_3">4 A</ref>).</s><s>In general, the relative strength of inputs (Fig. <ref type="figure" target="#fig_3">4</ref> A, arrows) to the two pools is history and learning dependent, as well as stimulus de-pendent.</s><s>We do not consider the full interplay of past with present stimuli here but assess how differences of input determine the basins of attraction for network activity and how likely the network is to produce one decision or the other.</s><s>We distinguish two modes of operation that can be instantiated within such a decision-making network: a ramping mode produced by deterministic integration of activity and a jumping mode that relies on a stochastic transition from one deterministically stable attractor state to another.</s></p><p><s>Attractor networks that can produce binary choices typically possess three stable states <ref type="bibr" target="#b2">(Brunel and Wang, 2001;</ref><ref type="bibr" target="#b46">Wang, 2002;</ref><ref type="bibr" target="#b48">Wong and Wang, 2006;</ref><ref type="bibr" target="#b49">Wong et al., 2007)</ref>: a state with no decision, and two decisive states, one for each of the binary choices, as indicated schematically by the "pseudopotentials" in Figure <ref type="figure" target="#fig_3">4</ref>, B and C. A pseudopotential is defined to possess a slope proportional to the deterministic rate of change of a variable, such as the firing rate of a group of cells <ref type="bibr" target="#b25">(Miller and Wang, 2006)</ref>.</s><s>Strictly it requires the state of the system to depend only on that one variable, but, in this case, we draw schematic figures to indicate the deterministic tendency for the system to change as a function of the difference in firing rates of the two populations.</s><s>A pure random walk process possesses a flat pseudopotential, because what- ever the rates of cells, they have no tendency to drift in one direction above another.</s><s>Biased random walk models produce pseudopotentials with constant slope downward in the direction of bias.</s><s>However, attractor models have local minima, such that the firing rates return to a stable value after any small change.</s><s>Previous investigations <ref type="bibr" target="#b2">(Brunel and Wang, 2001;</ref><ref type="bibr" target="#b46">Wang, 2002;</ref><ref type="bibr" target="#b48">Wong and Wang, 2006;</ref><ref type="bibr" target="#b49">Wong et al., 2007)</ref> of such attractor-based decision-making proposed that stimulus delivery renders the spontaneous activity state (representing no decision) deterministically unstable, so that firing rates elevate, on average more for the state with greater input.</s><s>Once one group is sufficiently active to suppress the other, fluctuations have little effect and one of the two attractors representing a decision is reached.</s><s>The attractors appear as local minima of the pseudopotential in Figure <ref type="figure" target="#fig_3">4, D</ref> and<ref type="figure">E</ref>.</s></p><p><s>However, the mode in which this network functions can be changed with any one of a number of simple adjustments: if either the total input is weaker or if the cells in the decisionmaking network are less excitable, the spontaneous state can remain stable even in the presence of a stimulus (Fig. <ref type="figure" target="#fig_3">4 B,</ref><ref type="figure">C</ref>).</s><s>Small fluctuations do not accumulate, because after small deviations, the system returns to a stable state of low activity with no difference between the rates of cells in the two pools.</s><s>Occasionally, larger fluctuations can cause a significant change in the activity of the network, sufficient to switch the system into a different stable activity state, in which one of the pools is highly active and suppresses the other.</s><s>Thus, the final state of the system after such a fluctuation is qualitatively the same as that of models of decision-making based on deterministic integration, but the dynamics of the change from spontaneous to persistent states is significantly different: in our terminology, a jump rather than a ramp.</s><s>In the following section (Figs.</s><s><ref type="figure" target="#fig_4">5,</ref><ref type="figure" target="#fig_5">6</ref>), we use two different networks, one in ramping mode and one in jumping mode, with parameters adjusted so the two networks take similar mean times (1280 Ϯ 434 ms for jumping, 1640 Ϯ 260 ms for ramping) to reach an active state after stimulus onset.</s></p><p><s>HMM analysis of spike trains from eight representative cells selected in equal numbers from each pool reveals the difference in the two modes of operation (Fig. <ref type="figure" target="#fig_4">5</ref>).</s><s>Ramping produces slow transitions (153 Ϯ 47 ms) between states and an extra HMM state of intermediate activity between spontaneous and persistent states (Fig. <ref type="figure" target="#fig_4">5 A,</ref><ref type="figure">B</ref>).</s><s>However, the jumping mode produces just two stable states with sharp transitions (mean of 19 Ϯ 5 ms) between them, with highly variable timing of those transitions (Fig. <ref type="figure" target="#fig_4">5C,</ref><ref type="figure">D</ref>) (mean transition time of 1065 Ϯ 556 ms).</s></p><p><s>The advantage of computer simulation is our ability to monitor every single neuron in every trial.</s><s>Thus, we can analyze the fine temporal details of network activity on a trial-by-trial basis, in a manner not possible in a biological network.</s><s>In particular, neurons that have similar responses (typically all 80 excitatory neurons or all 20 inhibitory neurons of a specific population in our simulations) can be binned together, reducing noise, and allowing us to obtain the dynamics of each type of neuron during each trial.</s><s>To reduce measurement noise, the bins we use to calculate mean population activity on a trial-by-trial basis are significantly larger (200 ms) than the 2 ms bins used as input to the HMM analysis.</s></p><p><s>Figure <ref type="figure" target="#fig_5">6</ref>, A and C, shows the mean activity of the four types of cell: excitatory in solid line, inhibitory in dashed lines, with the pool receiving more input in green and the pool with less input in red.</s><s>The slower ramping on a single trial is apparent in Figure <ref type="figure" target="#fig_5">6</ref> A, with the network in ramping mode, compared with Figure <ref type="figure" target="#fig_5">6C</ref>, with the network in jumping mode.</s><s>Activities of the excitatory pools across 10 trials are shown in Figure <ref type="figure" target="#fig_5">6</ref>, B and D, respectively, for ramping and jumping modes of decision-making.</s><s>These panels each include an "error trial" (in red), during which the population with less bias became the highly active one.</s><s>Figure <ref type="figure" target="#fig_5">6 D</ref> shows, in addition, a trial in which neither pool made the transition to the active state within the allocated 2 s of stimulus response.</s><s>Such trials, which we label as "undecided" and count as 1 ⁄2 for a correct trial and 1 ⁄2 for an error trial, disappear if response time is drawn out far beyond 2 s.</s><s>Although noise does lead to variability across trials in neural responses in the ramping mode (Fig. <ref type="figure" target="#fig_5">6 B</ref>), the latency variability is significantly greater in jumping mode (Fig. <ref type="figure" target="#fig_5">6 D</ref>).</s></p><p><s>To quantify these differences in transition speeds, we defined the onset time of a firing rate change as the point at which mean population activity passed 5 Hz (a rate never produced in the spontaneous state) and calculated how long it took increasing firing rates to reach an arbitrary threshold of 40 Hz.</s><s>In ramping mode, firing rate changes commenced at 240 Ϯ 84 ms (mean Ϯ  Note that the transitions in jumping mode of our model were much slower than transition times found by HMM analysis of the same data for two reasons.</s><s>First, population activity is binned at 200 ms, limiting our ability to resolve rate of change, whereas HMM analysis can use 2 ms bins.</s><s>Second, in our sparse random networks, neurons within a population differ in their inputs and excitability, so the times for the average rate of 80 cells to increase is much longer than the times for the rate of individual cells to change.</s></p><p><s>To further analyze the behavior of our model network, we switch between modes of decision-making by adjusting, in a single network, the stability of the spontaneous state of activity of the two excitatory populations when an input is present.</s><s>In the jumping mode, the spontaneous state is stable, either because both populations receive relatively little total input (Fig. <ref type="figure" target="#fig_6">7A</ref>) or because we globally increase the leak conductance of all cells (Fig. <ref type="figure" target="#fig_6">7B</ref>) to represent a constant inhibitory drive.</s><s>Figure <ref type="figure" target="#fig_6">7A</ref> shows the results of a speed-accuracy tradeoff within the jumping mode.</s><s>As we enhance the stability of the spontaneous state (i.e., reducing the total applied current and moving along the x-axis to the left), the probability increases that the decision-making network response will follow input bias.</s><s>Thus, performance improves with increased stability of the spontaneous state.</s><s>However, in the case of highest stability and best performance, the time taken to produce a decision was frequently Ͼ10 s, far longer than of behavioral relevance for taste processing.</s><s>That is, in the jumping mode, any increase in performance comes at the cost of increased decision-making time (see Analyses in the supplemental data, available at www.jneurosci.org as supplemental material).</s><s>In the ramping mode at larger applied currents, meanwhile, choice probability is approximately constant, such that there is no benefit of increasing integration time.</s></p><p><s>We define performance as the difference between percentage of "correct" trials and "incorrect" trials, so that chance response corresponds to zero performance.</s><s>Our definition of performance penalizes those undecided trials in the jumping mode when no transition away from spontaneous activity was made during stimulus presentation, by assuming no better than chance re-sponses on such trials, thus neglecting any information from the inputs that could affect any forced response.</s><s>Such undecided trials, when all cells remained at or near spontaneous activity levels, never occur in the ramping mode: in all ramping trials, at least one population reached activity at least 20 Hz higher than the other for two consecutive 200 ms time bins (our criterion to select the "winning" population) so a binary response could be determined even if the attractor state was not yet reached.</s></p><p><s>When we restricted the duration of stimulus processing to 2 s [a typical time for a taste to remain on the tongue before swallowing <ref type="bibr" target="#b43">(Travers and Norgren, 1986)</ref>], performance was best (Fig. <ref type="figure" target="#fig_6">7B</ref>) when the spontaneous activity is stabilized by an increase of inhibitory current to all excitatory cells in the network.</s><s>The peak in performance occurs, furthermore, when this inhibitory current drives the network into the jumping mode of decisionmaking.</s><s>At even higher levels of inhibition, the network more frequently remains in the spontaneous state, producing no decision within the stimulus duration of 2 s, and thus overall performance declines.</s><s>Such a peak in performance, in which the timescale for a noise-dependent state transition approaches but does not exceed the timescale of the input (in our case the duration of the input), is an indication that our system undergoes stochastic resonance <ref type="bibr" target="#b24">(McDonnell and Abbott, 2009)</ref>.</s></p><p><s>Addition of noise to the stimulus, produced when inputs are simulated as Poisson spike trains rather than as constant currents, has little effect in the ramping mode, because the difference in the two inputs producing a bias for deterministic integration is of a far greater magnitude than the fluctuations in the inputs.</s><s>Such inclusion of input noise allows the network to operate farther into the region of stochastic transitions in its jumping mode, however, specifically because increased noise increases the likelihood of a state transition before 2 s (Fig. <ref type="figure" target="#fig_6">7B</ref>).</s><s>Thus, although stimulus noise inevitably reduces the reliability of the difference between two stimuli, it paradoxically leads to better performance in the jumping mode by accelerating the decisionmaking process.</s></p><p><s>The benefit of the jumping mode for decision-making-an improved ability to produce a binary output that follows a small bias-arises because the decision-making network has its own internal noise.</s><s>To explore the extent of the advantage of the jumping mode over the ramping mode, we can reduce the effect of internal noise simply by increasing the number of neurons in each network pool (and simultaneously scaling down individual synaptic strengths); this reduces noise because the noise is injected into each neuron independently.</s><s>Performance of the jumping mode peaks at a level of 50 independent cells (Fig. <ref type="figure" target="#fig_6">7C</ref>): increasing noise heightens the probability of errors, whereas reducing noise lessens the ability of the network to respond in the stimulus window.</s><s>However, the advantage over the ramping mode remains across a realistic range of levels of network noise [up to a noise level corresponding to 100 independent neurons, beyond which in vivo correlations render any additional averaging out of noise impossible <ref type="bibr" target="#b50">(Zohary et al., 1994)</ref>].</s><s>Ultimately, deterministic integration in the ramping mode performs better only under conditions in which internal noise levels are reduced further (as they can be in computer simulations, in contrast to in vivo): a jumping network performing stochastic transitions under low-noise conditions ultimately reaches zero performance, because no transitions occur in the absence of noise, whereas such noise is only a detriment to the performance of a ramping network performing deterministic integration.</s></p><p><s>To explore the generality of these findings, in Figure <ref type="figure" target="#fig_7">8</ref> we present the results of parameter exploration in which, compared with Figure <ref type="figure" target="#fig_6">7B</ref>, the signal is stronger, because the input rates are either doubled (Fig. <ref type="figure" target="#fig_7">8 A-C</ref>) or quintupled (Fig. <ref type="figure" target="#fig_7">8 D-F</ref> ).</s><s>The network is slightly altered from that of Figure <ref type="figure" target="#fig_6">7</ref> in an attempt to optimize the ramping mode; we reduced the recurrent excitation within a pool to reduce the speed of deterministic transitions.</s><s>In all figures, the transition from ramping to jumping arises as we increase leak conductance to stabilize the spontaneous state; the stabilization requires higher leak conductance with greater external inputs.</s><s>The transition is obtained by monitoring the SD of transition times as the network size is increased to reduce internal noise.</s><s>In the ramping mode, the reduction of noise reduces SD of transition times, but in the jumping mode the opposite occurs (i.e., because of the increase in mean transition time, a reduction in noise increases absolute temporal variability).</s></p><p><s>In Figure <ref type="figure" target="#fig_7">8</ref> A-C, we see for all three population sizes (50, 100, and 200) and for all three stimulus durations (1, 2, and 5 s) that optimal performance occurs with sufficient leak conductance that the system operates in jumping mode.</s><s>However, a dramatic drop off in performance occurs when the leak conductance is increased beyond that needed for optimal performance, because the response time rises extremely rapidly (supplemental data, available at www.jneurosci.org as supplemental material) with additional stabilization of the spontaneous state.</s><s>A fivefold increase of the inputs from our base conditions produces a different story (Fig. <ref type="figure" target="#fig_7">8 D-F</ref> ).</s><s>In all cases but one, optimal performance arises either in the ramping mode or on the boundary of ramping and jumping modes.</s><s>Only in the system with highest internal noise (50 cells with independent noise, per group) and longest stimulus duration (5 s) is the jumping mode still optimal.</s><s>Thus, in general, we find that a strong signal (here an average of an extra 50 spikes/s through 5 nS AMPA receptor-mediated synapses to each excitatory cell of the biased population) favors the deterministic ramping mode, whereas high internal noise (equivalent to 100 or fewer cells with independent Poisson-like firing per population) combined with a long allowed response time favors the jumping mode.</s></p><p><s>One factor that can have a deleterious effect on the response is variability in the network preceding stimulus onset.</s><s>In fact, even if the spontaneous state is deterministically stable, in principle, spontaneous transitions can produce a random response <ref type="bibr" target="#b25">(Miller and Wang, 2006)</ref>.</s><s>In Figure <ref type="figure" target="#fig_8">9</ref> we assess, using a firing rate model and nullcline analysis, how variation in starting conditions can produce differing responses once the stimulus is present.</s><s>The nullclines (Fig. <ref type="figure" target="#fig_8">9</ref>, S-shaped curves) indicate the values at which the rate of change of one variable is 0 given a fixed value of a second variable.</s><s>In this case, the two variables are the synaptic outputs of the two excitatory populations, which are monotonic functions of the firing rate of each population.</s><s>The green curve shows where dS2/dt ϭ 0 at fixed S1, and the red curve shows where dS1/dt ϭ 0 at fixed S2.</s><s>The S-shape to each curve indicates that one population is bistable (can have both a stable low firing rate and a stable high firing rate) for a small range of activity of the other population.</s><s>Intersections of the two nullclines indicate fixed points of the system, which we mark by filled circles for stable states and open circles for unstable states.</s></p><p><s>In Figure <ref type="figure" target="#fig_8">9A-C</ref>, we increase the input strengths multiplicatively, thus increasing the signal, to switch from jumping mode (Fig. <ref type="figure" target="#fig_8">9A</ref>) to a slow ramping mode via 25% increase of inputs (Fig. <ref type="figure" target="#fig_8">9B</ref>) and a strongly ramping mode with fivefold increase of inputs (Fig. <ref type="figure" target="#fig_8">9C</ref>).</s><s>The 10% bias of inputs favors the fixed point (filled circle) with high S2 and low S1.</s><s>In the absence of noise, all trajectories (blue) in the jumping mode (Fig. <ref type="figure" target="#fig_8">9A</ref>) terminate in the symmetric state with low S1 and low S2, whereas in the deterministic ramping mode (Fig. <ref type="figure" target="#fig_8">9B</ref>), 10 of 11 trajectories (orange) terminate in the state with high S2 (near perfect performance).</s><s>However, with even stronger signal (Fig. <ref type="figure" target="#fig_8">9C</ref>), a large number of errors occur, because many initial conditions produce a trajectory (in magenta) that terminates with large S1 and low S2 (only 8 of 13 trajectories follow the input bias).</s></p><p><s>Figure <ref type="figure" target="#fig_8">9D</ref>-F shows the same nullclines as Figure <ref type="figure" target="#fig_8">9A</ref>-C, with the same set of initial conditions but with a small amount of noise added to the trajectories.</s><s>The noise enables the jumping mode to produce responses (Fig. <ref type="figure" target="#fig_8">9D</ref>) so that 10 trajectories terminate at high S2 versus one at high S1 (and 2 at low S1, low S2).</s><s>The noise produces more errors in the slow ramping mode so that eight trajectories terminate at high S2 and 5 at high S1, whereas trajectories in the strong, fast ramping mode are little affected by the additional noise (Fig. <ref type="figure" target="#fig_8">9F</ref> ).</s></p><p><s>The benefit of a high threshold in the jumping mode for stochastic decision-making can be appreciated by considering two Gaussian distributions of instantaneous input current, with a difference in means, D, and SDs, .</s><s>Rather than integrating the instantaneous current over time to distinguish the two distributions, one could set a threshold current, T, and ask the following: what is the probability that one distribution of inputs might produce an instantaneous current above that threshold compared with the other distribution?</s><s>That is, we assume that a superthreshold instantaneous current is sufficient to cause a jump to one of the two decision states.</s><s>Measuring T with respect to the mean current of the two distributions, we thus compare the ratio of Ύ TϩD/2 ϱ exp ͩ Ϫ x 2 2 2ͪ dx for the distribution with lower mean to Ύ TϪD/2 ϱ exp ͩ Ϫ x 2 2 2ͪ dx for the distribution with larger mean.</s><s>The resulting ratio of complementary error functions increases with threshold, T, asymptotically reaching exp ͩ TD 2 ͪ for large T (see Analysis 1 in the supplemental data, available at www.jneurosci.</s><s>org as supplemental material).</s><s>Thus, the greater the threshold, the more likely an instantaneous current from the distribution with greater mean is observed above threshold before a current from the distribution with lower mean.</s><s>A similar result is found via analysis of the system as barrier hopping in an asymmetric potential in which an increase in threshold corresponds to a deepening of the initial potential well (see Analysis 2 in supplemental data, available at www.jneurosci.org as supplemental material).</s><s>In summary, a small increase in the stability of the initial state beyond its optimum can easily lead to a network with prohibitively high response times.</s><s>However, maintaining stability of the initial state on stimulus onset has clear advantages (Fig. <ref type="figure" target="#fig_8">9</ref>).</s><s>To-gether, these two results lend theoretical support to the concept of an urgency signal <ref type="bibr" target="#b3">(Cisek et al., 2009)</ref>-in our case, a gradual ramping up of global excitation or ramping down of global inhibition-to optimize decision-making within the jumping mode.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>The variability and apparent unreliability of individual neural spikes, particularly notable in awake animals <ref type="bibr">(Shadlen and</ref><ref type="bibr">Newsome, 1994, 1998;</ref><ref type="bibr" target="#b50">Zohary et al., 1994)</ref>, long ago led researchers to begin averaging neural spike trains across multiple trials to obtain reliable data.</s><s>This practice is now ubiquitous, although we have entered an era when multiple cells are recorded simultaneously on a regular basis, making such across-trial averaging less essential.</s><s>However, in the absence of a good reason to suppose that across-trial averaging is missing any important aspect of the data, such traditional methods, being easy to use and explain, will continue to be the norm.</s><s>In this paper, we describe a jumping mode of network operation that is obscured by across-trial averaging but that matches the trial-to-trial variability in cortical neural activity during sensory processing observed through Hidden Markov modeling <ref type="bibr" target="#b0">(Abeles et al., 1995;</ref><ref type="bibr" target="#b35">Seidemann et al., 1996;</ref><ref type="bibr" target="#b19">Jones et al., 2007)</ref>.</s><s>Furthermore, we reveal a useful computational aspect of this mode of operation in decision-making, expanding theoretical work by others in this area <ref type="bibr" target="#b4">(Deco and Romo, 2008;</ref><ref type="bibr" target="#b23">Mart í et al., 2008;</ref><ref type="bibr" target="#b8">Deco et al., 2009)</ref>.</s></p><p><s>We do not attempt here to reproduce all the specific details of neuronal responses during taste processing (nor do we reproduce the entire system responsible for such responses).</s><s>We do, however, show how some important key response features arise, features that may also be important in other functions of cortical activity.</s><s>First, we demonstrate how neurons possessing only fast time constants (the slowest time constant in our simulations is that of NMDA receptor activation, lasting 100 ms) can produce time structure that is an order of magnitude longer, even in the presence of a constant, time-invariant stimulus.</s><s>The ability to remain in one constant state for this long allows completion of one stage of processing (such as taste identification) before the next stage (deciding on a behavioral response) commences.</s><s>This "slowing" of cortical processing suggests a mechanism that can explain a wide range of behavioral responses, some with relatively slow reaction times, in a unified manner <ref type="bibr" target="#b17">(Halpern, 2005)</ref>.</s></p><p><s>Second, we show that stable states of activity can transition rapidly to other states, at latencies that vary from trial to trial.</s><s>The trial-to-trial variability of transition times is produced because of the inherent noise in the network.</s><s>Others <ref type="bibr" target="#b26">(Moreno-Bote et al., 2007)</ref> have considered similar state transitions as the basis for binocular rivalry in visual perception and have shown that the distribution of times between transitions can be used to elucidate more detailed biophysical properties of the cells and network connections.</s><s>This analysis has the potential to explain both the reliability and "trial-to-trial" variability of perceptual judgments <ref type="bibr">(Deco et al., 2007a</ref><ref type="bibr">(Deco et al., ,b, 2009;;</ref><ref type="bibr" target="#b4">Deco and Romo, 2008)</ref>, again within a single unified framework: that is, the same mechanism that drives the system through states is responsible for the "random" variability in response speed.</s><s>Our framework may also be applicable to other systems in which sequences of activity states have been observed, such as during songbird singing <ref type="bibr" target="#b11">(Fee et al., 2004;</ref><ref type="bibr" target="#b18">Hampton et al., 2009)</ref> and insect olfaction <ref type="bibr" target="#b22">(Laurent et al., 2001)</ref>.</s></p><p><s>Previous models of decision-making have assumed the existence of a perfect integrator, so that integration of evidence follows a biased random walk <ref type="bibr" target="#b33">(Ratcliff et al., 1999</ref><ref type="bibr" target="#b34">(Ratcliff et al., , 2007;;</ref><ref type="bibr" target="#b42">Smith and Ratcliff, 2004;</ref><ref type="bibr" target="#b31">Ratcliff and McKoon, 2008)</ref>.</s><s>In these models, a constant bias in the inputs produces a constant ramping up of .</s><s>Benefits and limits of noise and the stochastic, jumping mode of decision-making in a fixed time interval.</s><s>A, Total applied current is varied to shift the network from the ramping mode (high total applied current) to the jumping mode of decision-making (low total applied current) while maintaining a fixed bias (difference between the currents to the two populations is held fixed).</s><s>Proportion of trials in which the winning pool is the one with greater input, maximized when the system is in jumping mode.</s><s>B, With constant inputs for a limited, 2 s decision-making period, inhibitory conductance is increased to shift the network to jumping mode.</s><s>Optimal performance occurs in the parameter region of the jumping mode.</s><s>Bottom curve, Inputs are fixed currents.</s><s>Top curve, Inputs are Poisson spike trains with the same mean current as the bottom curve.</s><s>Note that performance is better when inputs are noisy.</s><s>C, Performance varies with size of network, always improving with network size (which reduces internal noise) for deterministic integration in the ramping mode but having an optimal level for the jumping mode.</s><s>Note that noise is uncorrelated across cells in these simulations, so unrealistically low levels of internal variability could be reached with large network size.</s></p><p><s>activity of an appropriate set of cells as a function of time; trial-to-trial fluctuations represent random noise distributed about a mean ramping rate.</s><s>Other models, based on the properties of connected groups of neurons, have shown that such gradual ramping and accumulation of evidence can arise in an attractor model <ref type="bibr" target="#b46">(Wang, 2002;</ref><ref type="bibr" target="#b48">Wong and Wang, 2006;</ref><ref type="bibr" target="#b49">Wong et al., 2007;</ref><ref type="bibr" target="#b47">Wong and Huk, 2008)</ref>, without the need for a perfect integrator.</s><s>However, all models that produce a slow time constant for deterministic integration require a level of fine tuning <ref type="bibr" target="#b36">(Seung, 1996;</ref><ref type="bibr" target="#b1">Aksay et al., 2000;</ref><ref type="bibr">Seung et al., 2000a,b)</ref> that may be difficult to realize biologically.</s></p><p><s>Our model is a variant of such an attractor model, operating in a regimen in which deterministic integration is impossible, so fluctuations are key <ref type="bibr" target="#b7">(Deco et al., 2007b)</ref>.</s><s>In such a regimen, fine tuning is not as necessary <ref type="bibr" target="#b21">(Koulakov et al., 2002;</ref><ref type="bibr" target="#b15">Goldman et al., 2003;</ref><ref type="bibr" target="#b28">Okamoto and Fukai, 2003)</ref>.</s><s>The discrete jumps in activity that occur in any individual trial resemble a gradual ramping of activity when neural data is averaged across trials <ref type="bibr" target="#b27">(Okamoto and Fukai, 2001)</ref>, but in our model, this ramp is artifactual.</s><s>In particular, trial-totrial variability in timing of sharp transitions, and a gradual ramping of activity on each trial, will look similar in any analyses that average across trials (cf.</s><s><ref type="bibr" target="#b5">Deco et al., 2005)</ref>.</s></p><p><s>Such an effect has been observed in a number of systems <ref type="bibr" target="#b0">(Abeles et al., 1995;</ref><ref type="bibr" target="#b35">Seidemann et al., 1996;</ref><ref type="bibr" target="#b19">Jones et al., 2007)</ref> and has been suggested, following singleunit analysis, to characterize cortical activity during delay-period "ramping activity" in the anterior cingulate cortex of monkeys <ref type="bibr" target="#b29">(Okamoto et al., 2007)</ref>.</s><s>In most cases, recognition of such a process requires the use of HMM (or similar analyses) brought to bear on simultaneously recorded multielectrode data, although not necessarily dense multi-electrode data: both times HMM have been applied successfully to neural data <ref type="bibr" target="#b35">(Seidemann et al., 1996;</ref><ref type="bibr" target="#b19">Jones et al., 2007)</ref>, a handful (6 -12) of neurons have been enough to allow reliable detection of states.</s><s>The use of more neurons might reveal greater complexity (subsets of neurons performing independent sequences of states, for instance), but it is clear that these dynamical processes are not sparse: whereas many neurons work together during stimulus processing, the patterns that reflect this processing can be observed in Ͼ50% of the neurons <ref type="bibr" target="#b19">(Jones et al., 2007)</ref> and thus in relatively small recorded ensembles.</s></p><p><s>A significant theoretical difference between the two modes of operation of an attractor-based decision-making network has to do with the fact that, in the jumping mode, the initial, spontaneous state of activity is deterministically stable even while the inputs are present.</s><s>Maintaining the deterministic stability of the initial activity state can allow the network to more reliably follow a small bias of the inputs than is possible in a ramping mode when the initial state is unstable and a response is deterministically "forced".</s><s>This benefit is apparent when a major cause of errors in  With inputs of 0.0040 and 0.0044, the low activity state is stable; B-E, with inputs of 0.0050 and 0.0055, the low activity state is just unstable and noise generates many errors; C-F, with inputs of 0.0200 and 0.0220, the low activity state is highly unstable and asymmetry in the initial state of the system produces multiple errors.</s></p><p><s>the ramping mode of decision-making arises from variability in network activity before and up to the moment of stimulus onset.</s><s>Such variability in initial conditions has less effect when the spontaneous state remains stable, and thus a source of error is greatly reduced (Fig. <ref type="figure" target="#fig_8">9</ref>).</s></p><p><s>Of course, the higher the threshold for a decision, the more stable is the initial state and the longer it takes to generate a response; this produces the well known tradeoff between response speed and accuracy <ref type="bibr" target="#b30">(Ratcliff, 1985;</ref><ref type="bibr" target="#b32">Ratcliff and Smith, 2004;</ref><ref type="bibr" target="#b42">Smith and Ratcliff, 2004;</ref><ref type="bibr" target="#b41">Shea-Brown et al., 2008;</ref><ref type="bibr" target="#b10">Eckhoff et al., 2009)</ref> (also see the analyses in the supplemental data, available at www.jneurosci.org as supplemental material).</s><s>If a finite decision time is needed, such a tradeoff leads to an optimal level of stability for the initial state.</s><s>Similarly, for a fixed network with a stable initial state, an optimal level of noise is needed to balance the desire for a timely transition during the response time with the need to keep any input bias from being hidden in the variability.</s><s>Such a matching, of the timescale of transitions produced by noise to the timescale of a stimulus to produce optimal performance, is a hallmark of stochastic resonance <ref type="bibr" target="#b13">(Gammaitoni et al., 1998;</ref><ref type="bibr" target="#b24">McDonnell and Abbott, 2009)</ref>.</s></p><p><s>Because the addition of noise can increase the speed with which a network jumping mode processes input, we find our simulation capable of performing an unlikely feat: the addition of a certain amount of noise to the inputs of the network allows the network to more reliably detect a difference between the inputs.</s><s>The optimal level of stimulus noise will depend on the level of internal network noise (and vice versa).</s><s>In the brain, inputs to one region from another contain inherent variability and fluctuations but so too do environmental stimuli.</s><s>The improved performance of our network with stochastic inputs leads to the suggestion that the brain can use environmental fluctuations to enhance its function <ref type="bibr" target="#b8">(Deco et al., 2009)</ref>.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Architecture of model network for taste processing.</s><s>A, The model network is based on five pools of neurons, with each pool containing N E excitatory cells and N I ϭ N E /4 inhibitory cells (by default, N E ϭ 80, N I ϭ 20).</s><s>Recurrent excitatory connections (data not shown) dominate within a pool.</s><s>Arrows indicate significant excitatory connections between pools, and balls indicate the strong cross-inhibition between pools that produce one binary decision of palatability.</s><s>Other connections (data not shown) produce weak inhibition between all pools.Recurrent excitation is sufficient to maintain the activity of a pool, once a combination of inputs and random fluctuations has driven the pool into an active state.</s><s>The network progresses through the three epochs of detection (somatosensory response), identification (chemosensory response), and decision (palatability response) that are observed in gustatory cortex during taste processing.</s><s>Each successive epoch is driven by strong activity arising in a particular pool, which through cross-connections alters the activity in all pools.</s><s>B, C, Trial-averaged firing rates of four cells in the model network, after a stimulus representing either taste 1 (B) or taste 2 (C).</s><s>Color of the trace indicates the pool from which the cell is taken.</s><s>Note the gradual ramping of firing rates that can take Ͼ1 s for some cells.</s></p></div></figDesc><graphic coords="2,80.66,62.22,168.00,308.40" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Neural activity produces sharp transitions between discrete states, with trial-to-trial variability in transition times.</s><s>A, Spike trains of 10 cells (2 from each pool) with the results of a hidden Markov analysis of their activity after a stimulus representing taste 1. Bold solid lines over the solid color indicate the probability of the network being in a given state.</s><s>The probability remains close to 1, except for short intervals when the system transitions to a new state.</s><s>B, A subsequent trial with the same inputs representing the same taste gives rise to an identical sequence of states but with different transition times.</s><s>C, Distribution of firing rates for each of the 10 cells in the four successive HMM states produced by taste 1. D, E, As in A but for the response of the same cells to a stimulus representing taste 2. F, As in C but for the firing rates in the five successive HMM states produced by taste 2.</s></p></div></figDesc><graphic coords="4,45.66,62.98,495.60,488.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Transition-triggered average reveals more rapid changes in firing rate than apparent in standard histograms.</s><s>A, In orange, we plot a histogram of firing rates of a cell, aligned to the end of the second HMM state of each trial.</s><s>This transitiontriggered average (TTA) of firing rate reveals a rapid change in rate at the time of transition that are smoothed out in the standard histogram (yellow line, which is cell 2, taste 1 from Fig. 1B,C shifted for comparison).</s><s>B, Cell 8, taste 1. Blue indicates TTA.</s><s>C, Cell 2, taste 2. Orange indicates TTA.</s><s>D, Cell 10, taste 2; maroon indicates TTA.</s></p></div></figDesc><graphic coords="5,45.16,62.34,327.60,245.28" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Detailed architecture of the decision-making part of the network, used alone for additional analysis, with its two modes of operation.</s><s>A, All of the types of connection within and between pools are represented in the figure, with arrows indicating excitatory connections and balls indicating inhibitory connections.</s><s>Size of each pool ranges from 20 excitatory and 5 inhibitory cells to 80 excitatory and 20 inhibitory cells.</s><s>As shown, the inputs to the network produce a bias toward swallow (3 arrows vs 2, indicates a stronger input; in practice, the stronger input is just 10% higher, unless otherwise stated).</s><s>B, C, Pseudopotentials indicating the jumping mode of decision-making, which arises with reduced total input, or by increasing the inhibitory conductance, without a bias (B) and with a bias toward swallow (C).</s><s>Initial state is deterministically stable, so fluctuations are required to produce a decision.</s><s>D, E, Pseudopotentials indicating the ramping mode of decision-making with sufficient external input or without inhibitory current, without a bias (D) and with a bias toward swallow (E).</s></p></div></figDesc><graphic coords="6,214.16,62.94,327.60,259.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Hidden Markov analysis of decision-making network in two modes of operation.</s><s>All figures include the spike trains of eight selected cells (4 from each decision-making pool) on a particular trial, combined with the HMM output of probability for each state as a function of time (solid curves with color below curve).</s><s>A, B, Two separate trials for a network in ramping mode.</s><s>Note the relatively slow transitions between states in the HMM output.</s><s>C, D, Two separate trials from a network in jumping mode.</s><s>Transitions are much sharper.</s><s>Networks were matched for similar average temporal behavior but with different parameters.</s><s>Ramping mode (A, B): g L ϭ 18 nS, W EE ϭ 5, W EI ϭ 10, W IE ϭ 6, ␣ ϭ 0.25 (performance of 37 with N ϭ 50).</s><s>Jumping mode (C, D):g L ϭ 22 nS, W EE ϭ 5, W EI ϭ 30, W IE ϭ 8, W II ϭ 3, ␣ ϭ 0.5 (performance of 41 with N ϭ 50).</s><s>These different parameters account for differences in behavior: stimuli are identical.</s></p></div></figDesc><graphic coords="7,113.66,62.26,360.00,291.36" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure6.</s><s>Decision-making network produces a winner-takes-all response to a small bias in input.</s><s>A, B, Network in ramping integration mode (parameters of Fig.5 A, B).</s><s>A, In a single trial, solid curves indicate activity of each excitatory population, and dashed curves indicate activity the inhibitory population of the corresponding color.</s><s>B, Activity of the two excitatory populations across 10 trials, given a small bias current to the "choose swallow" population (green) over the "choose spit" population (red).</s><s>An error trial is visible when the red curve reaches high activity.</s><s>C, D, Network operating in jumping mode (parameters of Fig.5C,D).</s><s>C, A single trial with average activity of excitatory populations solid and their corresponding inhibitory population in the same color dashed.</s><s>D, Ten trials of activity of the two excitatory populations given a small bias to the swallow population (green).</s><s>An error trial is visible when the choose spit population (red) achieves high activity.</s><s>On one trial, neither population reaches high activity, representing an undecided state.</s></p></div></figDesc><graphic coords="8,214.16,62.62,327.60,240.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 7</head><label>7</label><figDesc><div><p><s>Figure7.</s><s>Benefits and limits of noise and the stochastic, jumping mode of decision-making in a fixed time interval.</s><s>A, Total applied current is varied to shift the network from the ramping mode (high total applied current) to the jumping mode of decision-making (low total applied current) while maintaining a fixed bias (difference between the currents to the two populations is held fixed).</s><s>Proportion of trials in which the winning pool is the one with greater input, maximized when the system is in jumping mode.</s><s>B, With constant inputs for a limited, 2 s decision-making period, inhibitory conductance is increased to shift the network to jumping mode.</s><s>Optimal performance occurs in the parameter region of the jumping mode.</s><s>Bottom curve, Inputs are fixed currents.</s><s>Top curve, Inputs are Poisson spike trains with the same mean current as the bottom curve.</s><s>Note that performance is better when inputs are noisy.</s><s>C, Performance varies with size of network, always improving with network size (which reduces internal noise) for deterministic integration in the ramping mode but having an optimal level for the jumping mode.</s><s>Note that noise is uncorrelated across cells in these simulations, so unrealistically low levels of internal variability could be reached with large network size.</s></p></div></figDesc><graphic coords="9,62.66,62.54,204.00,448.08" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 8 .</head><label>8</label><figDesc><div><p><s>Figure 8. Optimal mode for decision-making shifts to ramping with strong external signal, low internal noise, and short duration of stimuli.</s><s>A-C, Response of the network with a doubling of both inputs used in Figure 7, B and C. Network size increases from left to right panels: A, n ϭ 50; B, n ϭ 100; C, n ϭ 200.</s><s>D-F, Response of the network with a factor of 5 increase in both inputs of Figure 7, B and C. Network size increases from left to right panels: A, n ϭ 50; B, n ϭ 100; C, n ϭ 200.</s><s>In A-F, input durations are 1 s (red), 2 s (green), or 5 s (blue).</s><s>The transition between jumping and ramping modes is determined by a switch from increasing to decreasing variance of response times with reduced internal noise (larger networks).</s></p></div></figDesc><graphic coords="10,214.16,62.74,327.60,188.88" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 9 .</head><label>9</label><figDesc><div><p><s>Figure 9. Nullcline analysis reveals how the jumping mode reduces response variability arising from non-identical initial conditions.</s><s>Nullclines in the synaptic variables indicate the steady states of the system.</s><s>Green lines indicate dS1/dt ϭ 0 for a given S2; red lines indicate dS2/dt ϭ 0 for a given S1.</s><s>Filled circles are stable fixed points of the system, and open circles are unstable fixed points.</s><s>Trajectories for the system with inputs biased by 10% in favor of S2 from a symmetric range of starting points are presented without noise (A-C) and with noise (D-F ).</s><s>Orange trajectories result in a correct response with high S2, low S1; magenta trajectories show an incorrect response with low S2, high S1; blue trajectories result in a lack of response with low S1 and S2.A-D, With inputs of 0.0040 and 0.0044, the low activity state is stable; B-E, with inputs of 0.0050 and 0.0055, the low activity state is just unstable and noise generates many errors; C-F, with inputs of 0.0200 and 0.0220, the low activity state is highly unstable and asymmetry in the initial state of the system produces multiple errors.</s></p></div></figDesc><graphic coords="10,214.16,338.02,327.60,225.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 . Overlaps of probabilities</head><label>1</label><figDesc></figDesc><table><row><cell>Maximum states</cell><cell>3</cell><cell>4</cell><cell>4</cell><cell>8</cell><cell>8</cell><cell>1 0</cell><cell>6 *</cell></row><row><cell>Time bin</cell><cell>2</cell><cell>1</cell><cell>2</cell><cell>2</cell><cell>2 0</cell><cell>1 0</cell><cell>2 *</cell></row><row><cell>Mean O</cell><cell>0.970</cell><cell>0.976</cell><cell>0.996</cell><cell>0.969</cell><cell>0.939</cell><cell>0.942</cell><cell>0.774</cell></row><row><cell>SD of O</cell><cell>0.023</cell><cell>0.030</cell><cell>0.006</cell><cell>0.017</cell><cell>0.037</cell><cell>0.050</cell><cell>0.17</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2560" xml:id="foot_0"><p><s>• J. Neurosci., February 17, 2010 • 30(7):2559 -2570 Miller and Katz • Stochastic Decision-Making in Taste Processing</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p><s>Miller and Katz• Stochastic Decision-Making in Taste Processing J. Neurosci., February 17, 2010 • 30(7):2559 -2570 • 2561</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2562" xml:id="foot_2"><p><s>• J. Neurosci., February 17, 2010 • 30(7):2559 -2570 Miller and Katz • Stochastic Decision-Making in Taste Processing</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2564" xml:id="foot_3"><p><s>• J. Neurosci., February 17, 2010 • 30(7):2559 -2570 Miller and Katz • Stochastic Decision-Making in Taste Processing</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2566" xml:id="foot_4"><p><s>• J. Neurosci., February 17, 2010 • 30(7):2559 -2570 Miller and Katz • Stochastic Decision-Making in Taste Processing</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2568" xml:id="foot_5"><p><s>• J. Neurosci., February 17, 2010 • 30(7):2559 -2570 Miller and Katz • Stochastic Decision-Making in Taste Processing</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2570" xml:id="foot_6"><p><s>• J. Neurosci., February 17, 2010 • 30(7):2559 -2570 Miller and Katz • Stochastic Decision-Making in Taste Processing</s></p></note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>This work was supported by <rs type="funder">National Institutes of Health/National Institute on Deafness and Other Communication Disorders</rs> Grants <rs type="grantNumber">R01DC00945</rs> (under the <rs type="funder">National Science Foundation/National Institutes of Health Collaborative Research in Computational Neuroscience mechanism)</rs> and <rs type="grantNumber">R01DC007708</rs> and the <rs type="funder">Swartz Foundation</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_HAKCNPC">
+					<idno type="grant-number">R01DC00945</idno>
+				</org>
+				<org type="funding" xml:id="_S7YvhmS">
+					<idno type="grant-number">R01DC007708</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Cortical activity flips among quasi-stationary states</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Abeles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bergman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Gat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Meilijson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Seidemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Tishby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Vaadia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="8616" to="8620" />
+			<date type="published" when="1995">1995</date>
+			<pubPlace>U S A</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Anatomy and discharge properties of pre-motor neurons in the goldfish medulla that have eyeposition signals during fixations</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Aksay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Baker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Tank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page" from="1035" to="1049" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Effects of neuromodulation in a cortical network model of object working memory dominated by recurrent inhibition</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="63" to="85" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Decisions in changing conditions: the urgency-gating model</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cisek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Puskas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>El-Murr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="11560" to="11571" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The role of fluctuations in perception</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="591" to="598" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Neural dynamics of crossmodal and cross-temporal associations</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ledberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Almeida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fuster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">166</biblScope>
+			<biblScope unit="page" from="325" to="336" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">a) Weber&apos;s law in decision making: integrating behavioral data in humans with a neurophysiological model</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Scarano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Soto-Faraco</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="11192" to="11200" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Perceptual detection as a dynamical bistability phenomenon: a neurocomputational correlate of sensation</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pe ´rez-Sanagustín</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>De Lafuente</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="20073" to="20077" />
+			<date type="published" when="2007">2007b</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Stochastic dynamics as a principle of brain function</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">T</forename><surname>Rolls</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Prog Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="1" to="16" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Computational significance of transient dynamics in cortical networks</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Durstewitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Eur J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="217" to="227" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Optimality and robustness of a biophysical decision-making model under norepinephrine modulation</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Eckhoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Wong-Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Holmes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="4301" to="4311" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Neural mechanisms of vocal sequence generation in the songbird</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Fee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Kozhevnikov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Hahnloser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann N Y Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">1016</biblScope>
+			<biblScope unit="page" from="153" to="170" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">State-dependent modulation of time-varying gustatory responses</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fontanini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Katz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="3183" to="3193" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Stochastic resonance</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gammaitoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ha ¨nggi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Marchesoni</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Rev Mod Phys</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="223" to="287" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Bistable perception modeled as competing stochastic integrations at two levels</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gigante</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mattia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Braun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Del</forename><surname>Giudice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">1000430</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Robust persistent neural activity in a model integrator with multiple hysteretic dendrites per neuron</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Goldman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Levine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Major</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Tank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb Cortex</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1185" to="1195" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Learning-related plasticity of temporal coding in simultaneously recorded amygdalacortical ensembles</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Grossman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fontanini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Wieskopf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Katz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="2864" to="2873" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Temporal characteristics of human taste judgements as calibrations for gustatory event-related potentials and gustatory magnetoencephalographs</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Halpern</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem Senses</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="228" to="229" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>Suppl 1</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">An avian basal gangliaforebrain circuit contributes differentially to syllable versus sequence variability of adult bengalese finch song</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Hampton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Sakata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Brainard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="3235" to="3245" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Natural stimuli evoke dynamic sequences of states in sensory cortical ensembles</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fontanini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">F</forename><surname>Sadacca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Katz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="18772" to="18777" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Dynamic and multimodal responses of gustatory cortical neurons in awake rats</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Katz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Simon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Nicolelis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="4478" to="4489" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Model for a robust neural integrator</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Raghavachari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kepecs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Lisman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="775" to="782" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Odor encoding as an active, dynamical process: experiments, computation, and theory</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Laurent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stopfer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Volkovskii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Abarbanel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="263" to="297" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">A fluctuationdriven mechanism for slow decision processes in reverberant networks</title>
+		<author>
+			<persName><forename type="first">Mart</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mattia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gigante</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Del</forename><surname>Giudice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">2534</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Mcdonnell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Abbott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">What is stochastic resonance? Definitions, misconceptions, debates, and its relevance to biology</title>
+		<imprint>
+			<date type="published" when="2009">2009. 1000348</date>
+			<biblScope unit="volume">5</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Stability of discrete memory states to stochastic fluctuations in neuronal systems</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chaos</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">26109</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Noise-induced alternations in an attractor network model of perceptual bistability</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Moreno-Bote</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rinzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rubin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="1125" to="1139" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Neural mechanism for a cognitive timer</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Okamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fukai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev Lett</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="3919" to="3922" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Physiologically realistic modelling of a mechanism for neural representation of intervals of time</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Okamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fukai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biosystems</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="229" to="233" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Temporal integration by stochastic recurrent network dynamics with bimodal neurons</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Okamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Isomura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Takada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fukai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="3859" to="3867" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Theoretical interpretations of the speed and accuracy of positive and negative responses</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ratcliff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol Rev</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="212" to="225" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">The diffusion decision model: theory and data for two-choice decision tasks</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ratcliff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mckoon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="873" to="922" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">A comparison of sequential sampling models for two-choice reaction time</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ratcliff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol Rev</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page" from="333" to="367" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Connectionist and diffusion models of reaction time</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ratcliff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Van Zandt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mckoon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol Rev</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="261" to="300" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Dual diffusion model for single-cell recording data from the superior colliculus in a brightness-discrimination task</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ratcliff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">T</forename><surname>Hasegawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Hasegawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Segraves</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="1756" to="1774" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Simultaneously recorded single units in the frontal cortex go through sequences of discrete and stable states in monkeys performing a delayed localization task</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Seidemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Meilijson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Abeles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bergman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Vaadia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="752" to="768" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">How the brain keeps the eyes still</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="page" from="13339" to="13344" />
+			<date type="published" when="1996">1996</date>
+			<pubPlace>U S A 93</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Tank DW (2000a) The autapse: a simple illustration of short-term analog memory storage by tuned synaptic feedback</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Reis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="171" to="185" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Tank DW (2000b) Stability of the memory of eye position in a recurrent network of conductance-based model neurons</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Reis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="259" to="271" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Noise, neural codes and cortical organization</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="569" to="579" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">The variable discharge of cortical neurons: implications for connectivity, computation, and information coding</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="3870" to="3896" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Optimization of decision making in multilayer networks: the role of locus coeruleus</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Gilzenrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="2863" to="2894" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Psychology and neurobiology of simple decisions</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ratcliff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="161" to="168" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Electromyographic analysis of the ingestion and rejection of sapid stimuli in the rat</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Travers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Norgren</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="544" to="555" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title level="m" type="main">Introduction to theoretical neurobiology</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Tuckwell</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1988">1988</date>
+			<publisher>Cambridge UP</publisher>
+			<pubPlace>Cambridge, UK</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Synaptic reverberation underlying mnemonic persistent activity</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="455" to="463" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Probabilistic decision making by slow reverberation in cortical circuits</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="955" to="968" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Temporal dynamics underlying perceptual decision making: insights from the interplay between an attractor model and parietal neurophysiology</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Huk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="245" to="254" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">A recurrent network mechanism of time integration in perceptual decisions</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="1314" to="1328" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Neural circuit dynamics underlying accumulation of time-varying evidence during perceptual decision making</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Huk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">6</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Correlated neuronal discharge rate and its implications for psychophysical performance</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zohary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">370</biblScope>
+			<biblScope unit="page" from="140" to="143" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,1611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Synergistic Coding of Visual Information in Columnar Networks</title>
+				<funder>
+					<orgName type="full">National Eye Institute</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">NIH EUREKA program</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Elsevier BV</publisher>
+				<availability status="unknown"><p>Copyright Elsevier BV</p>
+				</availability>
+				<date type="published" when="2020-07-09">2020 July 09.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Sunny</forename><surname>Nigam</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Neurobiology &amp; Anatomy</orgName>
+								<orgName type="department" key="dep2">McGovern Medical School</orgName>
+								<orgName type="institution">University of Texas</orgName>
+								<address>
+									<postCode>77030</postCode>
+									<settlement>Houston</settlement>
+									<region>TX</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sorin</forename><surname>Pojoga</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Neurobiology &amp; Anatomy</orgName>
+								<orgName type="department" key="dep2">McGovern Medical School</orgName>
+								<orgName type="institution">University of Texas</orgName>
+								<address>
+									<postCode>77030</postCode>
+									<settlement>Houston</settlement>
+									<region>TX</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Valentin</forename><surname>Dragoi</surname></persName>
+							<email>valentin.dragoi@uth.tmc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Neurobiology &amp; Anatomy</orgName>
+								<orgName type="department" key="dep2">McGovern Medical School</orgName>
+								<orgName type="institution">University of Texas</orgName>
+								<address>
+									<postCode>77030</postCode>
+									<settlement>Houston</settlement>
+									<region>TX</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Synergistic Coding of Visual Information in Columnar Networks</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Neuron</title>
+						<title level="j" type="abbrev">Neuron</title>
+						<idno type="ISSN">0896-6273</idno>
+						<imprint>
+							<publisher>Elsevier BV</publisher>
+							<biblScope unit="volume">104</biblScope>
+							<biblScope unit="issue">2</biblScope>
+							<biblScope unit="page" from="402" to="411.e4"/>
+							<date type="published" when="2020-07-09">2020 July 09.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6C42ED8DA25E08CF3E8F1B217FD44A98</idno>
+					<idno type="DOI">10.1016/j.neuron.2019.07.006</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Incoming stimuli are encoded collectively by populations of cortical neurons, which transmit information by using a neural code thought to be predominantly redundant.</s><s>Redundant coding is widely believed to reflect a design choice whereby neurons with overlapping receptive fields sample environmental stimuli to convey similar information.</s><s>Here, we performed multielectrode laminar recordings in awake monkey V1 to report significant synergistic interactions between nearby neurons within a cortical column.</s><s>These interactions are clustered non-randomly across cortical layers to form synergy and redundancy hubs.</s><s>Homogeneous sub-populations comprising synergy hubs decode stimulus information significantly better compared to redundancy hubs or heterogeneous sub-populations.</s><s>Mechanistically, synergistic interactions emerge from the stimulus dependence of correlated activity between neurons.</s><s>Our findings suggest a refinement of the prevailing ideas regarding coding schemes in sensory cortex: columnar populations can efficiently encode information due to synergistic interactions even when receptive fields overlap and shared noise between cells is high.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>In Brief</head><p><s>Nigam et al. show that synergistic interactions represent an integral part of cortical computations in laminar circuits during wakefulness.</s><s>Synergistic interactions allow columnar neural populations to efficiently encode sensory information even when receptive fields overlap and shared noise between cells is high.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p><s>A prevailing view in sensory neuroscience is that nearby neurons exhibit significant redundancy in their code.</s><s>This view is based on studies in a variety of animal models <ref type="bibr" target="#b7">(Berry et al., 1997;</ref><ref type="bibr" target="#b12">Dan et al., 1998;</ref><ref type="bibr" target="#b13">Doi et al., 2012;</ref><ref type="bibr" target="#b35">Montani et al., 2007;</ref><ref type="bibr" target="#b38">Nirenberg et al., 2001;</ref><ref type="bibr" target="#b44">Puchalla et al., 2005;</ref><ref type="bibr" target="#b46">Reich et al., 2001)</ref> and across different sensory regions <ref type="bibr" target="#b10">(Chechik et al., 2006;</ref><ref type="bibr" target="#b47">Reinagel and Reid, 2000)</ref> and is believed to reflect the high degree of redundancy of stimuli in the environment <ref type="bibr" target="#b27">(Kersten, 1987;</ref><ref type="bibr" target="#b52">Simoncelli and Olshausen, 2001)</ref>.</s><s>For instance, natural scenes have strong spatial correlations that cause wide groups of cortical cells with overlapping receptive fields to participate in encoding any single individual feature present in the image.</s><s>This view, which remains highly influential, has led to the idea that a major goal of sensory systems is to reduce the redundancy of neuronal responses <ref type="bibr" target="#b3">(Attneave, 1954;</ref><ref type="bibr" target="#b5">Barlow, 1961)</ref>.</s><s>Indeed, theories of efficient coding have long predicted that sensory processing acts to reduce the redundancy of the neural code by removing correlations present between neurons <ref type="bibr" target="#b2">(Atick and Redlich, 1992;</ref><ref type="bibr" target="#b5">Barlow, 1961;</ref><ref type="bibr" target="#b19">Field, 1989;</ref><ref type="bibr" target="#b22">Gutnisky and Dragoi, 2008;</ref><ref type="bibr" target="#b56">van Hateren, 1992;</ref><ref type="bibr" target="#b30">Laughlin, 1989;</ref><ref type="bibr" target="#b48">Rieke et al., 1995)</ref>.</s><s>Although redundancy may offer possible advantages <ref type="bibr" target="#b6">(Barlow, 2001;</ref><ref type="bibr" target="#b44">Puchalla et al., 2005)</ref>, it is achieved at a cost in coding efficiency, as more neurons participate to represent the same information than would be necessary.</s></p><p><s>Although the influential finding of redundant coding in sensory cortex may suggest that this coding scheme has been firmly established, several limitations of previous studies prevent this conclusion.</s><s>First, previous work has relied on neuronal recordings in vitro in the retina <ref type="bibr" target="#b13">(Doi et al., 2012;</ref><ref type="bibr" target="#b44">Puchalla et al., 2005)</ref> or in vivo in sensory cortex during anesthesia <ref type="bibr" target="#b35">(Montani et al., 2007;</ref><ref type="bibr" target="#b46">Reich et al., 2001)</ref>.</s><s>However, when animals are anesthetized, neurons are highly correlated <ref type="bibr" target="#b17">(Ecker et al., 2014;</ref><ref type="bibr" target="#b43">Poulet and Petersen, 2008;</ref><ref type="bibr" target="#b49">Schölvinck et al., 2015)</ref>, and correlated activity has been typically linked to redundant coding schemes <ref type="bibr" target="#b3">(Attneave, 1954;</ref><ref type="bibr" target="#b5">Barlow, 1961;</ref><ref type="bibr" target="#b22">Gutnisky and Dragoi, 2008)</ref>.</s><s>Second, redundancy was previously observed when multiple neurons were recorded tangentially across the cortical surface and not along the cortical column <ref type="bibr" target="#b35">(Montani et al., 2007;</ref><ref type="bibr" target="#b46">Reich et al., 2001)</ref>.</s><s>Indeed, we confirmed previous findings and observed similar redundancy-dominated information encoding in tangential recordings from the superficial layers of macaque primary visual cortex (Figure <ref type="figure" target="#fig_0">S1</ref>).</s><s>Cortical columns have been hypothesized to be the elementary functional and computational module of the neocortex <ref type="bibr" target="#b45">(Rakic, 1988;</ref><ref type="bibr" target="#b36">Mountcastle, 1997)</ref>, and columnar structure coupled with laminar morphology <ref type="bibr" target="#b26">(Hubel and Wiesel, 1972;</ref><ref type="bibr" target="#b31">Lund and Boothe, 1975)</ref> have been intriguing subjects of study over the past several decades.</s><s>Although we know much about anatomy, cell types, input-output architecture, and recurrent connectivity <ref type="bibr" target="#b0">(Adesnik and Scanziani, 2010;</ref><ref type="bibr" target="#b9">Briggs and Callaway, 2005;</ref><ref type="bibr" target="#b14">Douglas and Martin, 2004;</ref><ref type="bibr" target="#b33">Markram et al., 2004;</ref><ref type="bibr" target="#b36">Nassi and Callaway, 2009)</ref>, whether cells within a cortical column process information redundantly or synergistically is unknown.</s><s>Third, the timescales used to compute redundancy in previous studies were much shorter than those normally experienced during wakefulness, such as those occurring during natural viewing when each gaze fixation lasts for hundreds of milliseconds.</s></p><p><s>We re-examined the idea of redundant coding in neocortex by measuring the amount of information about visual stimuli transmitted by neurons within a microcolumn in awake monkey primary visual cortex (V1) at a timescale relevant for visual perception.</s><s>We found significant synergistic interactions between nearby neurons that were clustered nonrandomly across cortical layers to form synergy and redundancy hubs.</s><s>Neuronal populations comprising only synergy hubs were significantly better at decoding stimulus information compared to redundancy hubs or populations comprising both synergy and redundancy hubs.</s></p><p><s>These findings suggest that the generality of the redundant coding idea in sensory cortex needs to be revisited.</s><s>That is, columnar neuronal populations can efficiently encode information due to synergistic inter-neuronal interactions, even when receptive fields overlap and shared noise between cells is high.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RESULTS</head><p><s>Spike trains were recorded from multiple V1 neurons (Figure <ref type="figure" target="#fig_0">1A</ref>; n = 201 single units) in two fixating monkeys using multi-contact laminar arrays advanced perpendicularly to the cortical surface.</s><s>Stimuli consisted of five sine-wave gratings flashed for 300 ms and presented at equally spaced orientations within 20° of the cells' optimal orientation.</s><s>Gratings were 5° in diameter, i.e., large enough to cover the receptive fields of all the neurons recorded by the linear array (Figure <ref type="figure" target="#fig_0">1B</ref>).</s><s>Spatial frequency was chosen to maximize the number of V1 neurons that were driven in a session (average number of presentations of each stimulus per session was 84 ± 13).</s><s>Because recordings were performed in a cortical column, cells had largely overlapping receptive fields and were tuned to the same stimulus orientation <ref type="bibr">(Figures S2A and S2B)</ref>.</s><s>Representative examples of V1 responses of five single units to multiple presentations of sine wave gratings are shown in Figure <ref type="figure" target="#fig_0">1C</ref>.</s><s>From these responses, we calculated the bias-corrected amount of mutual information that spike timing and spike counts carried about stimulus orientation (STAR Methods) as a function of time, from 200 ms before stimulus onset to 1,000 ms poststimulus onset.</s><s>Because the responses of cortical neurons are noisy, it is difficult to estimate the precise time of the first spike in response to the stimulus.</s><s>Therefore, for each time t, we computed the information conveyed by the preceding spike and interspike interval (Figure <ref type="figure" target="#fig_0">1D</ref>).</s><s>To compare these information values with those based on spike counts, at each instant of time t, we calculated the information conveyed by spike counts in windows of different sizes: 10; 50; 100; 200; 300; and 400 ms.</s></p><p><s>Despite the great variability in the amount of information conveyed by pairs of neurons, there was a clear increase in mutual information about 40 ms after stimulus onset (Figure <ref type="figure" target="#fig_0">1E</ref>), which is expected given the time the visually evoked neural impulses need to reach primary visual cortex.</s><s>Contrary to findings in the retina <ref type="bibr" target="#b7">(Berry et al., 1997;</ref><ref type="bibr" target="#b21">Gollisch and Meister, 2008)</ref>, spike counts were more informative than spike times and spike intervals in neuronal pairs (this was also true for single neurons; Figure <ref type="figure" target="#fig_1">S2C</ref>).</s><s>Hence, we focused our subsequent analysis on the 300-ms time window, as spike counts in this window were most informative and matched the duration of the flashed stimulus (Figure <ref type="figure" target="#fig_1">S2D</ref>).</s><s>As expected, the peak mutual information carried by pairs of neurons represents an almost two-fold increase in information relative to that carried by single cells (Figure <ref type="figure" target="#fig_0">1F</ref>).</s></p><p><s>We further examined whether combinations of cells jointly convey less information (redundant coding), the same information (independent coding), or more information (synergistic coding) in their spike counts compared to the sum of the information conveyed independently by individual neurons.</s><s>On average, the amount of information encoded jointly by a pair of cells was not significantly higher (p &gt; 0.05; Wilcoxon rank-sum) than the sum of the information provided by the two neurons forming the pair (Figure <ref type="figure" target="#fig_0">1F</ref>; the difference between these two quantities was labeled ΔI).</s><s>Although this may suggest that pairs of neurons encode stimuli in an independent manner, when ΔI was analyzed separately for each pair (STAR Methods), we observed a significant number of pairs exhibiting synergistic ΔI &gt; 0; p &lt; 0.05; Wilcoxon signed rank test; Holm-Bonferroni correction for multiple comparisons; Figure <ref type="figure" target="#fig_0">1G</ref>) and redundant interactions (ΔI &lt; 0; p &lt; 0.05; Wilcoxon signed rank test; Holm-Bonferroni correction for multiple comparisons).</s><s>However, when ΔI was averaged across all the pairs, we failed to observe either net synergy or redundancy <ref type="bibr">(Figure 1G,</ref><ref type="bibr">inset)</ref>.</s><s>Out of 1,031 pairs, 43% were synergistic, 47% were redundant, and the remaining 10% were independent (Figure <ref type="figure" target="#fig_0">1H</ref>).</s><s>Thus, contrary to previous findings originating from tangential recordings across the cortical surface (e.g., Figure <ref type="figure" target="#fig_0">S1</ref>), cortical columns in awake macaque V1 are characterized by a large proportion of synergistic pairs.</s><s>Although synergistic pairs were slightly less abundant than redundant pairs, they carried significantly more information about incoming stimuli (Figure <ref type="figure" target="#fig_0">1I</ref>; p &lt; 0.0001; Wilcoxon rank-sum test).</s><s>To examine whether these results extend beyond pairwise interactions, we calculated synergy and redundancy for triplets (n = 4,034) and quadruplets (n = 12,526; Figures <ref type="figure" target="#fig_2">S3A-S3F</ref>).</s><s>Indeed, approximately 40% of triplets and quadruplets were synergistic.</s><s>These synergistic groups carried more stimulus information compared to their redundant counterparts, which is consistent with the results found in pairs.</s></p><p><s>To quantify the relative strength of synergy and redundancy, we calculated the peak synergy and redundancy fraction <ref type="bibr" target="#b35">(Montani et al., 2007;</ref><ref type="bibr">STAR Methods)</ref> for the two separate groups of pairs.</s><s>We found that, on average, synergistic pairs provided approximately 45% more information than the sum of the individual information values provided by the neurons forming the pair, and redundant pairs provided approximately 40% less information.</s><s>The strength of synergistic and redundant interactions gradually increased as spike counts were calculated over larger windows (Figure <ref type="figure" target="#fig_0">1J</ref>).</s><s>Contrary to previous studies, these findings provide evidence for strong synergy and redundancy, and relatively little independence, within the cortical columns of V1.</s></p><p><s>In principle, one might expect that nearby neurons within a column would have similar tuning curves, and hence, cells separated by smaller distances would mostly have redundant interactions.</s><s>In that case, our results would simply reflect a distance-based encoding rule.</s><s>However, we found no significant difference in cortical distance between the neurons forming synergistic and redundant pairs (Figure <ref type="figure" target="#fig_0">1K</ref>; p &gt; 0.05; Wilcoxon rank sum test).</s><s>It might also be possible that small differences in tuning preference or mean firing rates between the cells in a pair could be associated with synergistic or redundant interactions.</s><s>Therefore, we calculated the difference in tuning preferences and the mean firing rates but did not observe significant differences between the distributions for pairs corresponding to synergistic and redundant interactions (tuning preference: Figure <ref type="figure" target="#fig_2">S3G</ref>, Watson-Williams test; p &gt; 0.05; firing rates: Figure <ref type="figure" target="#fig_2">S3H</ref>, one-way balanced ANOVA followed by multiple comparisons test; p &gt; 0.05).</s><s>Altogether, these results demonstrate that synergistic interactions cannot simply be explained in terms of spatial proximity, tuning differences, or firing rate differences between the cells in a pair.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Synergy and Redundancy Hubs</head><p><s>We further examined whether we can identify neurons preferentially engaging in synergistic or redundant interactions with the rest of the cells in a column or whether interactions are mixed (Figure <ref type="figure" target="#fig_1">2A</ref>).</s><s>That is, do some neurons have a higher probability than others to establish synergistic or redundant interactions?</s><s>To examine this issue, we calculated the participation coefficient (PC) of a neuron as the fraction of interactions that were either synergistic or redundant.</s><s>For example, a neuron with 7 synergistic and 3 redundant pairwise interactions would have a participation coefficient of 0.7 for synergy and 0.3 for redundancy.</s><s>To assess the statistical significance of the PC values, we calculated the normalized participation coefficient (PC norm ) by randomly assigning the same number of redundant and synergistic interactions between neurons (STAR Methods).</s><s>The normalized coefficient was obtained by dividing the actual PC for a neuron by the mean PC calculated from the randomized set.</s><s>Neurons that had a participation coefficient &gt;0.5 and normalized participation coefficient significantly &gt;1 (see STAR Methodsfor statistical testing) were labeled as synergy or redundancy "hubs," depending on which interaction dominated (Figure <ref type="figure" target="#fig_1">2B</ref>).</s><s>Neurons not satisfying this criterion were labeled as "non-hubs."</s><s>We found that approximately 26% of the neurons in our population were synergy hubs, whereas 37% were redundancy hubs.</s><s>This demonstrates that synergistic and redundant interactions do cluster such that some neurons preferentially participate in one or the other type of interaction with their neighbors.</s><s>However, there was no significant difference in mean cortical distance (Figure <ref type="figure" target="#fig_1">2C</ref>) between the neurons forming synergy and redundancy hubs (p &gt; 0.05; Wilcoxon rank-sum test).</s></p><p><s>What could be the functional role of such hubs?</s><s>To answer this question, we built subpopulations of neurons consisting of varying numbers of synergy and redundancy hubs (STAR Methods) and examined their impact on stimulus decoding.</s><s>For instance, to construct a homogeneous sub-population consisting of 5 neurons, all five neurons were randomly sampled from the pool of either synergy or redundancy hubs in a particular session.</s><s>Heterogeneous sub-populations of five neurons were constructed by selecting different numbers of synergy and redundancy hubs, e.g., 3 synergy hubs were combined with 2 redundancy hubs or 1 synergy hub was combined with 4 redundancy hubs, etc. (Figure <ref type="figure" target="#fig_1">2D</ref>).</s><s>All possible drawings of neurons from the synergy and redundancy pools were used to construct these sub-populations.</s><s>We subsequently used a linear discriminant classifier to decode stimulus identity using the spike count responses of the neurons in each subpopulation.</s><s>We normalized decoder accuracy with respect to that of sub-populations containing only redundancy hubs for each session.</s><s>There was an increase in peak decoder accuracy as the percentage of synergy hubs was increased (Figure <ref type="figure" target="#fig_1">2E</ref> shows one example session).</s><s>The lowest decoder accuracy was obtained for homogeneous populations exclusively consisting of redundancy hubs (Figure <ref type="figure" target="#fig_1">2E</ref>).</s><s>To compare across sessions, we normalized decoder accuracy for each sub-population (homogeneous or heterogeneous) by the lowest performance (hence, the normalized decoder accuracy had values &gt;1 for different sub-populations).</s><s>Across sessions (Figures <ref type="figure" target="#fig_2">S3I-S3K</ref>), there was a clear increase in mean normalized decoder accuracy with the increase in the number of synergy hubs in the populations (Figure <ref type="figure" target="#fig_1">2F</ref>; n = 11 sessions; p &lt; 0.001; one-way balanced ANOVA followed by multiple comparisons test).</s><s>Normalized decoder accuracy was not significantly greater than 1 (p &gt; 0.05; t test) for sub-populations where less than half of neurons were synergy hubs.</s><s>There was a 20% increase in decoder accuracy between sub-populations with only synergy compared to only redundancy hubs.</s><s>Altogether, these results indicate that there is a specialized subgroup of neurons encoding more stimulus information, and these cells tend to form hubs of synergistic interactions.</s></p><p><s>Next, we examined the nature of the interactions between synergy and redundancy hubs (Figure <ref type="figure" target="#fig_2">3A</ref>).</s><s>Specifically, are synergy-synergy hub interactions predominantly synergistic or redundant?</s><s>Across sessions (STAR Methods), we found that the probability that synergy hubs interact synergistically with each other is 75% ± 5%, and the probability that redundancy hubs interact synergistically is only 26% ± 6% (Figure <ref type="figure" target="#fig_2">3B</ref>).</s><s>However, one might expect that, by chance, a synergy hub would interact primarily through synergistic interactions with other synergy hubs.</s><s>Therefore, the probability of a synergistic interaction between two synergy hubs would be high, and the same could be expected for redundancy hubs.</s><s>To control for this possibility, we calculated the probability of different types of hubhub interactions by shuffling the interaction labels across the population of pairs while holding the total number of synergistic or redundant interactions for each neuron the same as in the actual data.</s><s>From these "randomized" networks, we calculated a distribution of interaction percentages for each type of hub-hub interaction, and if the actual interaction percentage was greater than the mean of this distribution (p &lt; 0.05; right-tailed Wilcoxon sign rank test), that session was included for analysis (STAR Methods).</s><s>Across sessions, the probabilities of 2 nd -order interaction between hubs were statistically different from 50% (p &lt; 0.001; two-tailed Wilcoxon sign rank test).</s><s>However, interactions between synergy and redundancy hubs are equally likely to be synergistic or redundant (not significantly different from 50%; two-tailed Wilcoxon sign rank test; p &gt; 0.05).</s><s>This analysis reveals a higher degree of organization of hub networks whereby synergistic-synergistic and redundancyredundancy interactions are more prevalent between hubs than mixed interactions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Synergistic and Redundant Interactions Are Present across All Cortical Layers</head><p><s>We further examined whether synergistic or redundant interactions are confined to a specific cortical layer or they are spread out across the entire cortical column.</s><s>We thus performed current source density (CSD) analysis <ref type="bibr" target="#b24">(Hansen and Dragoi, 2011;</ref><ref type="bibr" target="#b25">Hansen et al., 2012;</ref><ref type="bibr" target="#b50">Schroeder et al., 1998;</ref><ref type="bibr">STAR Methods)</ref> to identify the polarity of the inversion accompanied by the sink-source configuration at the base of the granular (G) layer and then assigned electrode contacts above and below the sink to supragranular (SG) and infragranular (IG) layers (Figure <ref type="figure" target="#fig_3">4A</ref>).</s><s>We calculated the degree of synergy and redundancy for cell pairs within (intra) and between layers (inter).</s><s>In both cases, averaging the ΔI values for all the pairs within a group yielded a mean that was not significantly different from zero (p &gt; 0.05; t test) to indicate independent encoding of information (Figure <ref type="figure" target="#fig_3">4B</ref>, inset).</s><s>However, when pairs were analyzed separately within each group, we mostly found synergistic (ΔI &gt; 0; p &lt; 0.001; Wilcoxon signed rank test) and redundant (ΔI &lt; 0; p &lt; 0.001; Wilcoxon signed rank test) rather than independent interactions (Figures <ref type="figure" target="#fig_3">4C</ref> and<ref type="figure" target="#fig_3">4D</ref>) across the layers of V1.</s><s>Peak values of synergy and redundancy <ref type="bibr">(Figures 4C and 4D,</ref><ref type="bibr">insets)</ref> were not significantly different across inter-or intra-layer pairs (p &gt; 0.05; one-way balanced ANOVA).</s><s>The presence of synergy and redundancy in inter-layer pairs suggests that these interactions are not confined locally within layers but extend across layers for distances up to hundreds of microns.</s></p><p><s>Additional synergy and redundancy analysis was performed by separating our inter-layer pairs into SG-G, IG-G, and G-IG pairs (Figures <ref type="figure" target="#fig_3">S4A-S4D</ref>).</s><s>Inter-layer pairs between neurons in superficial (SG) and deep (IG) layers had higher synergy (p &lt; 0.001; one-way balanced ANOVA followed by multiple comparisons test) compared to inter-layer pairs between neurons in superficial (SG) and granular (G) layers.</s><s>However, there was no difference in redundancy values for different classes of inter-layer pairs.</s><s>The percentage of synergistic or redundant pairs and synergy or redundancy hubs were roughly the same in the supragranular, granular, and infragranular layers (Figures <ref type="figure" target="#fig_3">4E</ref> and<ref type="figure" target="#fig_3">4F</ref>).</s><s>Further, there was no significant difference in the peak information encoded by either intra-or inter-layer cell pairs (Figures <ref type="figure" target="#fig_3">S4E</ref> and<ref type="figure" target="#fig_3">S4F</ref>; p &gt; 0.05; one-way balanced ANOVA), which indicates that information processing is relatively uniform across cortical layers.</s><s>These analyses reveal that synergistic and redundant interactions constitute a general property of V1 cortical microcolumns.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stimulus-Dependent Correlated Activity Gives Rise to Synergistic Interactions</head><p><s>To explore the sources of synergistic and redundant interactions between cortical neurons <ref type="bibr" target="#b32">(Magri et al., 2009;</ref><ref type="bibr" target="#b42">Pola et al., 2003)</ref>, we decomposed synergy and redundancy into components that reflect how signal and noise correlations separately influence stimulus coding.</s><s>Specifically, the difference (ΔI) between the joint mutual information encoded by a pair of cells and the sum of the information transmitted by each cell can be decomposed into components determined by signal similarity (I ss ), stimulus-independent correlations (I CI ), and stimulus-dependent correlations (I CD ) (STAR Methods; Equation <ref type="formula" target="#formula_2">6</ref>).</s><s>We calculated the time course of each of these components and averaged them across pairs (Figure <ref type="figure" target="#fig_4">5A</ref>), irrespective of whether they were synergistic or redundant.</s><s>We also separated the cell pairs into synergistic and redundant groups and then evaluated the time course of these components (Figures <ref type="figure" target="#fig_4">5B-5D</ref>).</s><s>Signal similarity quantifies the amount of redundancy due to the similarity of neuronal responses across stimuli.</s><s>This component can only contribute to redundancy in information encoding.</s><s>However, we found that signal similarity did not play a significant role in generating the observed redundancy in these populations (I ss not significantly less than 0; p &lt; 0.05; Wilcoxon signed rank test; Figure <ref type="figure" target="#fig_4">5B</ref>).</s></p><p><s>The effect of correlated activity between neurons on information processing was quantified by the stimulus-independent and stimulus-dependent components of information.</s><s>The stimulus-independent component is positive when the cross-correlation between neurons and signal similarity have opposite signs and vice versa.</s><s>We found that, although stimulusindependent correlations did not contribute to synergistic interactions (I CI not significantly different from 0 for synergistic pairs; p &gt; 0.05; Wilcoxon signed rank test), it did contribute to redundancy (I CI significantly &lt;0 for redundant pairs; p &lt; 0.05; Wilcoxon signed rank test; Figure <ref type="figure" target="#fig_4">5C</ref>).</s><s>The stimulus-dependent component of information is non-zero when the strength of correlations between neurons is modulated by the stimulus, and it is zero otherwise.</s><s>We found that only synergistic pairs had a non-negative I CD (p &lt; 0.05; Wilcoxon signed rank test), indicating that the synergy observed in this population originates from the stimulus-dependent noise correlation component (Figure <ref type="figure" target="#fig_4">5D</ref>).</s><s>Thus, even though neurons within a cortical column have overlapping receptive fields and similar orientation preference, the stimulus dependence of correlated activity gives rise to efficient synergistic computations.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DISCUSSION</head><p><s>A prevailing view in sensory systems is that nearby neurons exhibit significant redundancy in their code, mainly originating from the high degree of redundancy of natural stimuli.</s><s>This view has significantly influenced research in sensory neuroscience, which has postulated that a major goal of sensory systems is to reduce the redundancy of neuronal responses.</s><s>In contrast to previous studies, our results reveal a surprisingly high degree of synergy within V1 cortical columns during wakefulness when stimuli are presented at the timescale of visual fixation.</s><s>Synergistic interactions are clustered non-randomly across cortical layers to form synergy hubs.</s><s>Synergy is beneficial for stimulus coding, as sub-populations of synergy hubs perform significantly better than redundant or mixed synergy and redundancy hubs.</s><s>Our findings have implications for the coding schemes employed by columnar neuronal populations, which have the ability to efficiently encode information due to synergistic interactions.</s></p><p><s>In the visual system, most previous studies measuring the amount of information transmitted by sensory neurons have been performed in the retina and lateral geniculate nucleus (LGN) in a variety of model systems <ref type="bibr" target="#b8">(Brenner et al., 2000;</ref><ref type="bibr" target="#b12">Dan et al., 1998;</ref><ref type="bibr" target="#b34">Meister et al., 1995;</ref><ref type="bibr" target="#b38">Nirenberg et al., 2001;</ref><ref type="bibr" target="#b44">Puchalla et al., 2005)</ref>.</s><s>The macaque visual cortex has been the focus of only a handful of studies <ref type="bibr" target="#b35">(Montani et al., 2007;</ref><ref type="bibr" target="#b46">Reich et al., 2001</ref>) that reported mostly redundant and independent interactions.</s><s>Contrary to previous results, we found significant synergy within columnar circuits, despite the fact that neurons have largely overlapping receptive fields and similar tuning preferences.</s><s>This could be due to several key differences from prior work, such as (1) previous recordings were performed in a two-dimensional plane along the cortical surface using tetrodes or microelectrodes (Figure <ref type="figure" target="#fig_0">S1</ref>), whereas we focused on recordings across the entire depth of a cortical column.</s><s>It might seem contradictory that tangential recordings that involve neurons in superficial layers do not show synergy, whereas superficial layers in laminar recordings do.</s><s>This may be due to an important difference between columnar and lateral intracortical circuits.</s><s>That is, although the neurons recorded tangentially reside in superficial layers, they belong to different cortical columns (interelectrode spacing up to 4 mm) and hence different preferred orientations.</s><s>In that case, neuronal responses are primarily influenced by lateral (short-and long-range cortical connections).</s><s>On the other hand, the neurons in superficial layers recorded by our laminar array have identical stimulus preference and overlapping receptive fields, and connectivity is dominated by short-range vertical intracortical connections (less than 1 mm).</s><s>Differences could also arise from the stimulus dependence of correlated activity.</s><s>In agreement with studies performed in the retina <ref type="bibr" target="#b20">(Franke et al., 2016;</ref><ref type="bibr" target="#b58">Zylberberg et al., 2016)</ref> and cortex <ref type="bibr" target="#b28">(Kohn and Smith, 2005;</ref><ref type="bibr" target="#b29">Kreiter and Singer, 1996)</ref>, columnar V1 neurons sharing the same preferred orientations have strong stimulus-dependent correlations, which are linked to synergistic interactions.</s><s>Consistent with previous studies in V1, neurons recorded along the cortical surface exhibit correlations that show only weak stimulus dependence <ref type="bibr" target="#b22">(Gutnisky and Dragoi, 2008;</ref><ref type="bibr" target="#b53">Smith and Kohn, 2008)</ref>.</s><s>(2) Our recordings were performed in awake animals, whereas previous studies used anesthetized animals.</s><s>There is considerable evidence that population activity and correlations between neurons depend on cortical state <ref type="bibr" target="#b17">(Ecker et al., 2014;</ref><ref type="bibr" target="#b43">Poulet and Petersen, 2008;</ref><ref type="bibr" target="#b49">Schölvinck et al., 2015)</ref>.</s><s>Because synergy and redundancy depend on the strength of correlated activity (Figure <ref type="figure" target="#fig_4">5</ref>), global brain state could play a significant role in determining whether interactions are synergistic or redundant, and (3) we measured synergy and redundancy for spike counts at the timescale of visual fixation <ref type="bibr" target="#b15">(Dragoi and Sur, 2006;</ref><ref type="bibr" target="#b16">Dragoi et al., 2002)</ref> in 300-ms bins, i.e., a larger scale than the time intervals used in prior studies.</s></p><p><s>One of our novel results is the diversity of neuron classes in V1, ranging from cells engaged in strongly synergistic interactions (synergy hubs) to cells engaged in strongly redundant interactions (redundancy hubs).</s><s>These sub-populations differ significantly in their stimulus decoding accuracy: sub-populations consisting of synergy hubs offer superior decoding performance compared to sub-populations of redundancy or mixed hubs.</s><s>This functional sub-division into neuronal functional groups within the cortical microcolumn comprising neurons with similar stimulus preferences is surprising.</s><s>Additionally, synergy hubs were present in all cortical layers, hence suggesting that synergistic coding constitutes a general strategy employed within cortical columns.</s><s>Given that neuronal populations comprising only synergy hubs are significantly better at decoding stimulus information compared to redundancy hubs, what could be the advantage of encoding schemes in which both synergistic and redundant interactions are present?</s><s>We reasoned that, although there is a significant reduction of redundancy from retina to the cortex <ref type="bibr" target="#b30">(Laughlin, 1989;</ref><ref type="bibr" target="#b2">Atick and Redlich, 1992;</ref><ref type="bibr" target="#b56">van Hateren, 1992)</ref>, a large fraction of pairwise intracortical interactions remain redundant.</s><s>Hence, redundancy can be viewed as a necessary consequence rather than a limitation.</s><s>Redundancy is functionally important in that it allows a dense sampling of stimuli by neurons with overlapping receptive fields.</s><s>This oversampling of visual information could be necessary for error correction <ref type="bibr" target="#b23">(Hamming, 1950)</ref> in the case of noisy stimuli to facilitate the extraction of behaviorally relevant information.</s><s>Furthermore, redundant coding may compensate for unwanted effects of synaptic unreliability to ensure robust and precise firing rates.</s><s>Given the importance of both synergistic and redundant coding schemes, columnar circuits may be designed to operate in a regime balancing the efficiency of synergistic interactions and the robustness of redundant interactions.</s></p><p><s>One issue of great interest is the functional coupling between synergy and redundancy hubs.</s><s>Past studies have shown the existence of rich clubs <ref type="bibr" target="#b11">(Colizza et al., 2006;</ref><ref type="bibr" target="#b55">van den Heuvel and Sporns, 2011;</ref><ref type="bibr" target="#b37">Nigam et al., 2016)</ref> in the functional architecture of brain networks.</s><s>Thus, neurons or brain regions acting as hubs of functional connectivity preferentially connect to similar hubs to form a densely connected sub-network defined as a rich club.</s><s>These specialized networks have been shown to play an important role in the integration and transfer of information across brain regions <ref type="bibr" target="#b18">(Faber et al., 2019)</ref> and regulating network dynamics <ref type="bibr" target="#b51">(Senden et al., 2014)</ref>, which are important requirements of efficient information processing.</s><s>Our analysis shows that synergy hubs interact synergistically with other synergy hubs, and redundancy hubs interact redundantly with other redundancy hubs.</s><s>This raises the intriguing possibility that synergy hubs may be part of a rich club network critically involved in efficient information processing relevant for perception and cognition.</s></p><p><s>One could argue that the raw ΔI values of synergy and redundancy measured in columnar networks (Figure <ref type="figure" target="#fig_0">1G</ref>) are too small to significantly impact information coding.</s><s>First, it is noteworthy that the ΔI values are small because the recorded columnar neurons have very similar tuning preferences, which implies homogeneous tuning curves for the recorded population.</s><s>Second, we computed mutual information using stimuli centered close to the preferred orientation of the cell (within 20°).</s><s>Hence, the range of stimulus-evoked responses of our recorded cells is small compared to that associated with the full range of orientations spanning 0°-180°.</s><s>As a result, the mutual information values were low, and thus synergy and redundancy were low too.</s><s>However, relative to the mutual information encoded, the values for synergy and redundancy were not small.</s><s>That is, synergistic interactions provided 45% more information than the sum of information transmitted by individual neurons.</s><s>Previous work in neocortex <ref type="bibr" target="#b35">(Montani et al., 2007)</ref> has estimated this value to be around 13.7% and concluded that synergy was very weak.</s><s>Thus, our values are more than three times higher than previously reported.</s><s>Furthermore, we show that even small changes in mutual information impact stimulus coding, as our decoder analysis reveals that synergy hubs provide more information than redundancy hubs.</s><s>We also show that synergistic pairs, triplets, and quadruplets carry significantly higher information than their redundant counterparts (Figures <ref type="figure" target="#fig_2">S3D</ref> and<ref type="figure" target="#fig_2">S3F</ref>).</s></p><p><s>Our study uses synthetic stimuli (oriented gratings) for activating V1 neurons, but could the implications of our work be extended to feature encoding during natural viewing?</s><s>There are two important distinctions between our stimuli and those encountered during natural viewing.</s><s>First, stimuli viewed in natural conditions have a "full field" spatial context, whereas the gratings used in our experiments are restricted in diameter.</s><s>When stimuli extend well beyond the classical receptive fields of V1 neurons, visual surround modulates neuronal responses to reduce firing rates <ref type="bibr" target="#b1">(Angelucci et al., 2017)</ref> and correlations <ref type="bibr" target="#b54">(Snyder et al., 2014;</ref><ref type="bibr" target="#b57">Vinje and Gallant, 2002)</ref> and increase sparseness, such as to improve the efficiency of information transmission <ref type="bibr" target="#b57">(Vinje and Gallant, 2002)</ref>.</s><s>However, it is unknown whether and how contextual modulation of neuronal responses during natural viewing influences the stimulus dependence of correlated activity and, hence, synergy and redundancy.</s><s>Second, natural viewing is a history-dependent process by which individual neuron and population responses adapt at the timescale of visual fixation <ref type="bibr" target="#b16">(Dragoi et al., 2002;</ref><ref type="bibr" target="#b22">Gutnisky and Dragoi, 2008)</ref>.</s><s>Although adaptation reduces neuronal correlations <ref type="bibr" target="#b22">(Gutnisky and Dragoi, 2008)</ref>, how temporal context influences the degree of synergy and redundancy in V1 columnar circuits remains unknown.</s><s>Future studies can further elucidate the role of spatial and temporal context of visual information in determining the relative balance of synergy and redundancy in columnar circuits.</s><s>It also remains to be seen whether other sensory cortical areas exhibit a similar degree of synergy as that found in V1.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>STAR★METHODS LEAD CONTACT AND MATERIALS AVAILABILITY</head><p><s>Further information and requests should be directed to and will be fulfilled by the Lead Contact, Valentin Dragoi (Valentin.Dragoi@uth.tmc.edu).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>EXPERIMENTAL MODEL AND SUBJECT DETAILS</head><p><s>All experiments were performed in accordance with protocols approved by the U.S. National Institutes of Health Guidelines for the Care and Use of Animals for Experimental Procedures and were approved by the Institutional Animal Care and Use Committee at the University of Texas Health Science Center at Houston.</s><s>Data from two adult male rhesus macaques (Macaca mulatta) were collected for this study.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>METHOD DETAILS</head><p><s>Experimental protocol-Two male rhesus macaques (Macaca mulatta), monkeys C and W, were trained to fixate on a small fixation point (0.2 deg) in the center of a cathode ray tube (CRT) monitor while the head was fixed.</s><s>After 200 ms of fixation, a visual stimulus was presented for 300 ms.</s><s>If monkeys break fixation anytime during this 500 ms period, the trial was aborted.</s><s>Monkeys were rewarded with juice if they held fixation for the entire duration of the trial.</s><s>Stimuli were generated with Psychophysics toolbox using MATLAB.</s><s>Static 5-deg circular sine-wave gratings of 5 different orientations were flashed at the center of the receptive fields for 300 ms.</s><s>During each trial we presented a single grating chosen randomly from one of the five different orientations.</s><s>The 5 orientations displayed during the trials were chosen such that they covered a range of ± 20° in steps of 10° centered on the preferred orientations of the cells recorded in that session.</s><s>The location of the presented stimulus was chosen so that it covered the position of most of the receptive fields.</s><s>The average number of trials recorded per session was 424 ± 68.</s></p><p><s>Eye-movement control-Monkeys were trained to fixate on a dot (0.2 deg in size) at the center of the screen within a small rectangular window of size 1 deg.</s><s>Eye position was constantly monitored by using an eye tracker operating at 1 KHz (EyeLink II; SR Research).</s><s>If at any point during the trial, eye position exceeded 0.25 deg outside the boundaries of the rectangular box, then the trial was automatically aborted.</s><s>This ensured that our trials were not contaminated by neural activity corresponding to large-scale fluctuations in eye movements.</s></p><p><s>Electrophysiological recordings-We recorded extracellular activity from populations of V1 neurons simultaneously across all layers, using laminar electrodes with 16 contacts (Plextrode ® U-Probe, Plexon Inc).</s><s>These contacts were separated by 100 μm.</s><s>We recorded both spiking activity and LFP signals by means of a Multichannel Acquisition Processor System (MAP, Plexon Inc) at a sampling rate of 40 KHz.</s><s>Spike waveforms above threshold (~4 sd above the amplitude of the noise signal) were saved and sorted post data acquisition using Plexon's Offline Sorter.</s><s>Spike waveforms were manually sorted with Plexon's offline sorter program using waveform clustering parameters such as spike amplitude and width, timing of the valley and peak.</s><s>Clusters that clearly separated from the origin of the principal component space and from other clusters were classified as single units to be used for further analysis.</s><s>Single units were subsequently analyzed using custom scripts in MATLAB.</s><s>Post-sorting, we calculated auto-correlograms and cross-correlograms (Figures <ref type="figure" target="#fig_4">S5A-S5C</ref>) with the shift correction technique to further eliminate cases whereby a single neuron is recorded as two separate units on two different channels, hence avoiding an over-estimation and duplication of the units used in the analysis.</s><s>For all the recorded neurons used in the analysis we compared the auto and cross correlogram values at 0 time lag (Figure <ref type="figure" target="#fig_4">S5C</ref>), and found that the distributions are significantly different (KS test; p &lt; 0.001).</s><s>The 0 time lag values in auto-correlograms were almost 100 times higher than the values in the crosscorrelograms.</s><s>This analysis shows that the neurons recorded on different electrodes were indeed individual single units and not multiple copies of each other.</s><s>After a unit was isolated, its receptive field was mapped with dynamic gratings or using reverse correlation while the animal performed a passive fixation task.</s><s>Reverse correlation stimulus consisting of 8 different orientations (equally spaced from 0 to 180°) were presented over multiple trials to extract the preferred orientation of the recorded units.</s></p><p><s>Only the units with significant modulation of responses during stimulus presentation compared to the pre-stimulus period were considered for analysis.</s><s>We verified the verticality of laminar array penetrations by analyzing the receptive field maps and tuning curves of the neurons (Figures <ref type="figure" target="#fig_1">S2A</ref> and<ref type="figure" target="#fig_1">S2B</ref>).</s><s>We calculated the pairwise difference in receptive field centers across the cells used in our analysis, and found a mean difference between receptive field centers &lt; 0.5 deg (Figure <ref type="figure" target="#fig_4">S5D</ref>, Wilcoxon signed rank test; p &lt; 0.001).</s><s>We also calculated the standard error of mean (s.e.m) of preferred orientation for all the neurons recorded in a session.</s><s>When averaged across sessions, s.e.m was 3.2 ± 0.2° (Figure <ref type="figure" target="#fig_4">S5E</ref>), which is significantly &lt; 4° (Wilcoxon signed rank test; p &lt; 0.001), in agreement with our previous work <ref type="bibr" target="#b24">(Hansen and Dragoi, 2011;</ref><ref type="bibr" target="#b25">Hansen et al., 2012)</ref>.</s><s>The highly overlapping nature of the receptive fields and similarity of preferred orientations indicate that the neurons used in our analysis were recorded from the same cortical column.</s><s>We eliminated sessions in which we found significant drifts (upward or downward) in the average population activity over the time course of the recording.</s><s>Our analysis of spike waveform characteristics and firing rates indicates that the majority of the units that we recorded were putative excitatory cells.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Current source Density Analysis (CSD) for cortical layer identification-For</head><p><s>each recording session we identified visual cortical layers using CSD analysis.</s><s>We recorded LFP data using laminar probes while presenting a full field high contrast natural image.</s><s>We corrected the filter-induced timing delays of LFP data by using the FPAlign utility from Plexon Inc.</s><s>We then filtered the LFP channels with a band pass filter (0.5-100 Hz) and we applied an 8 th order Butterworth notch filter at 60 Hz.</s><s>We averaged the filtered LFP signals across trials to obtain the evoked response potential (ERP) for each channel.</s><s>We computed the current source density by using the second spatial derivative of the LFP time-series across equally spaced laminar contacts using the iCSD toolbox for MATLAB <ref type="bibr" target="#b41">(Pettersen et al., 2006)</ref>.</s><s>The centroid of the primary sink observed in the CSD served as reference for the granular layer.</s><s>All the contacts above and below this sink were analyzed and classified into one of three groups: supragranular (SG), granular (G) and infra granular (IG).</s></p><p><s>Information theoretic analysis-We examined spike count and spike timing-based coding schemes.</s><s>For spike count schemes we considered the total spike counts in bins of size <ref type="bibr">10,</ref><ref type="bibr">50,</ref><ref type="bibr">100,</ref><ref type="bibr">150,</ref><ref type="bibr">200,</ref><ref type="bibr">250,</ref><ref type="bibr">300,</ref><ref type="bibr">350</ref>, and 400 ms, and used a 10 ms sliding window.</s><s>We performed the sliding window analysis starting from 200 ms prior to stimulus onset to 1000 ms post stimulus onset.</s><s>For spike timing schemes, we considered spike time (ST) and spike interval (SI).</s><s>ST at instant t was defined as the time of the last spike before time t.</s><s>SI was defined as the inter-spike interval corresponding to the last two spikes with respect to time t.</s></p><p><s>All information theoretic quantities such as mutual information (MI), ΔI (synergy/ redundancy), were evaluated using the Information Breakdown Toolbox <ref type="bibr" target="#b32">(Magri et al., 2009)</ref>.</s><s>The Panzeri-Treves bias correction <ref type="bibr" target="#b39">(Panzeri and Treves, 1996)</ref> method implemented in the toolbox was used to account for the bias in mutual information estimation caused by limited sampling of neuronal responses.</s><s>Using the toolbox, we also calculated for each information theoretic measure 1000 bootstrap estimates.</s><s>The bootstrapped estimates were calculated by randomly shuffling the neural responses evoked by the stimulus.</s><s>The shuffling destroys the stimulus dependency of neural activity and provided an estimate of these quantities at chance level.</s><s>The values reported in our analysis were obtained by subtracting the mean of the bootstrapped estimates from the bias corrected raw estimates.</s><s>The following are the information theoretic quantities used in our analysis:</s></p><formula xml:id="formula_0">MI(S; R) = H(R) -H(R | S) (1) H(R) = -∑ r P (r)log 2 P (r | s) (2) H(R | S) = -∑ s = 1 N s P (s) ∑ r P (r | s)log 2 P (r | s)<label>(3)</label></formula><p><s>Mutual information (Equation <ref type="formula">1</ref>) is defined as the difference between the response entropy H(R) (Equation <ref type="formula">2</ref>) and the noise entropy H(R|S)(Equation <ref type="formula" target="#formula_0">3</ref>).</s><s>P(r) is the probability that the neuronal response is r, P(r | s) is the conditional probability of responser given stimuluss.</s><s>By definition MI &gt; 0; however, since we reported bootstrap subtracted raw values, there were certain points along the time-course where the values were negative.</s><s>This simply implies that the actual raw values are smaller than chance values.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ΔI = MI(S; R) -MI lin</head><p><s>(4) ΔI is the difference between the mutual information provided by the joint responses of N neurons and the sum of the information provided by each of the N neurons MI lin .</s><s>ΔI &gt; 0 implies that the joint responses provide more information than the linear sum of the information provided by each single neuron, and this indicates the presence of synergistic interactions.</s><s>On the other hand, ΔI &lt; 0 implies that the joint responses provide less information than the linear sum of the information provided by each single neuron, indicating the presence of redundant interactions.</s><s>If ΔI = 0 there is no loss or gain of information by considering the joint responses compared to individual responses.</s><s>To classify whether a pair is synergistic or redundant we performed a right/left-sided Wilcoxon signed rank test on the distribution of values of ΔI in the time window starting at stimulus onset and extending 600 ms post stimulus onset (approximate time for which mutual information is greater than chance levels, see Figure <ref type="figure" target="#fig_0">1A</ref>).</s><s>The obtained p values of the above statistical test was then passed through a Holm-Bonferroni test to obtain corrected p values accounting for multiple comparisons.</s><s>If ΔI was significantly greater than 0 (p &lt; 0.05), the pair was classified as synergistic, if ΔI was significantly less than 0, then it was classified as redundant and finally if ΔI was not significantly different from 0, the pair was classified as independent.</s><s>To quantify relative strengths of synergy and redundancy, we normalized the peak synergy and peak redundancy values between 0 and 600 ms by the mutual information of that particular pair <ref type="bibr" target="#b35">(Montani et al., 2007)</ref>,</s></p><formula xml:id="formula_1">ΔI norm = MI(S; R) -MI lin MI(S; R)<label>(5)</label></formula><p><s>ΔI norm is positive for synergistic interactions and in that case it was labeled as the Synergy Fraction (SF).</s><s>Redundant interactions have a negative ΔI norm in which case it was labeled as Redundancy Fraction (RF).</s><s>We calculated ΔI norm separately for synergistic pairs and redundant pairs and we reported the mean for each category of pairs.</s></p><p><s>Information breakdown analysis <ref type="bibr" target="#b42">(Pola et al., 2003)</ref> was performed to assess the role of correlations in the generation of synergy and redundancy.</s><s>ΔI can be broken down into the following components:</s></p><formula xml:id="formula_2">ΔI = I ss + I CI + I CD<label>(6)</label></formula><p><s>I ss represents the contribution to ΔI that arises due to the similarity in the distribution across stimuli of stimulus-conditional response probabilities of individual neurons.</s><s>This component can be present even in the absence of correlations between neurons and is always less than or equal to zero.</s><s>I CI represents the contribution of stimulus-independent correlations to ΔI.</s><s>I CI is positive if signal and noise correlations have the opposite sign and negative otherwise.</s><s>I CD is the contribution of stimulus dependent correlations to ΔI.</s><s>This term is strictly nonnegative and is zero only if the stimulus does not modulate the correlations between cells.</s><s>Just as in the case of mutual information and ΔI, we calculated bias corrected and shuffle corrected estimates of the information breakdown terms for spike counts in 300 ms time bins using the information breakdown toolbox.</s><s>Although I CD is strictly non-negative, the shuffle corrected values for I CD could be negative if the shuffled values are greater than the actual raw values.</s></p><p><s>Participation coefficient-To classify neurons into synergy or redundancy hubs, we calculated participation coefficients for synergistic (PC syn ) and redundant interactions (PC red ) for each neuron.</s><s>For instance, let's consider a group of 10 neurons.</s><s>Imagine a 10 × 10 symmetric interaction matrix (i) where the ij th entry of the matrix is +1 if there is a synergistic interaction between neuron i and j.</s><s>On the other hand, if there is a redundant interaction between neuron i and j, the ij th entry is set to -1.</s><s>For an independent interaction between pairs the corresponding matrix entry is set to 0. This yields a symmetric 10 × 10 matrix that summarizes the structure of interactions between all possible pairs.</s><s>PC syn was calculated by dividing the number of synergistic interactions a neuron had, by the total number of possible interactions that the neuron can have with the rest of the recorded neurons in a session.</s><s>Participation coefficient for redundant interactions was calculated in a similar way, except considering the redundant interactions of a neuron.</s><s>To generate values of PC expected by chance we created a new shuffled 10 × 10 matrix by assigning the same number of +1 s (synergistic interactions) and -1 s (redundant interactions) at random.</s><s>This creates a shuffled interaction matrix which has the same number of interactions of each type, but assigned randomly between pairs.</s><s>One can calculate the participation coefficient for synergistic and redundant interactions for each neuron in this new shuffled matrix.</s><s>Multiple realizations of the shuffled interaction matrix (N = 500) can then be used to create a distribution of participation coefficient values expected from random assignment of synergistic and redundant interactions without any structure.</s><s>If there is non-random structure in the actual data, the participation coefficients should be significantly higher than those calculated from the shuffled realizations of the interaction matrix.</s><s>A distribution of PC norm values was generated by dividing the actual PC value and the shuffled PC values.</s><s>A Wilcoxon signed rank test was used to ascertain whether the median of the distribution was greater than 1.</s><s>Neurons with PC &gt; 0.5 and PC norm significantly &gt; 1 were assigned as synergistic or redundant hubs depending upon which interaction dominated.</s><s>Hence, in our case a neuron is a synergy hub not only if it has more synergistic interactions compared to redundant, but also if its participation coefficient is significantly higher than what would be expected by chance for a neuron with the same number of synergistic and redundant interactions.</s></p><p><s>Hub interaction analysis-For each session we examined the pairwise interactions between synergy and redundancy hubs.</s><s>The percentage of synergistic interactions was calculated by dividing the number of synergistic interactions within the group by the total number of possible interactions.</s><s>The same analysis was done for within-group interactions for redundancy hubs.</s><s>We also calculated the percentage of synergistic interactions between synergistic and redundancy hubs.</s><s>To control for the fact that by chance the probability of synergistic interactions within synergy hub groups and redundant interactions between redundancy hubs groups would be high we calculated chance values of the % synergistic/ redundant interactions in randomized interaction networks.</s><s>To construct a randomized synergistic interaction matrix, we randomly assigned synergistic interactions between pairs while keeping the total number of synergistic interactions for each neuron constant.</s><s>Hence the identity of the hubs was retained even post randomization.</s><s>The percentage of synergistic interactions was then calculated for this randomized network.</s><s>A distribution of randomized values was calculated by repeating the randomization process multiple times (n = 500).</s><s>If the actual percentage exceeds the median of the randomized distribution (Wilcoxon signed rank test; p &lt; 0.05), then that session was used for the analysis, otherwise it was rejected.</s></p><p><s>Finally the distribution of values obtained for all sessions was tested against 50% using a Wilcoxon signed rank test to conclude whether the interaction percentage was significantly less than or greater than 50%.</s></p><p><s>Decoder analysis-We created sub-populations of different sizes with synergy and redundancy hubs for each session.</s><s>The size of the sub-population depended on the number of synergy and redundancy hubs found in that session.</s><s>For a fixed sub-population size, the number of synergy hubs and redundancy hubs was varied such that there were subpopulations with only redundancy hubs, only synergy hubs, or a mix of synergy and redundancy hubs in different proportions.</s><s>Thus, we created homogeneous and heterogeneous populations.</s><s>We explored all possible combinations of synergy and redundancy hubs for creating the heterogeneous sub-populations.</s><s>We decoded neural activity by using a multiclass linear discriminant analysis <ref type="bibr" target="#b4">(Averbeck et al., 2003;</ref><ref type="bibr" target="#b40">Pesaran et al., 2002)</ref>.</s><s>The classifier was trained on 70% of the trials and performance was tested on the remaining 30%.</s><s>We repeated this classification process 20 times with different training and testing sets drawn randomly from the trials from a session.</s><s>Decoder performance was averaged over all possible realizations of the sub-populations of a fixed size and over the number of iterations.</s></p><p><s>The responses used for decoding were spike counts in 300 ms bins and we employed the sliding window approach as described in the previous section to generate decoder accuracy as a function of time.</s><s>The maximum decoding accuracy above chance levels from this time course was used to quantify the decoding power of a sub-population.</s><s>Finally, to account for sub-populations with different number of neurons from different sessions, we calculated the normalized decoding accuracy which was obtained by dividing the decoder accuracy of a sub-population by the decoding accuracy of the homogeneous population containing only redundant hubs.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>QUANTIFICATION AND STATISTICAL ANALYSIS</head><p><s>We used non-parametric statistical tests throughout the analysis as mentioned in the main text.</s><s>Specifically, for synergy and redundancy identification, Wilcoxon signed rank test was used.</s><s>In other cases, we used Wilcoxon rank sum test for significance analysis.</s><s>We applied the Holm-Bonferroni correction wherever multiple comparisons were performed, as mentioned in the main text.</s><s>(F) Percent of synergy and redundancy hubs within each layer out of the total number of neurons in each layer.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Synergistic and Redundant Coding in Visual Cortex (A) Schematic of laminar recording using 16-channel U-Probe in macaque primary visual cortex.</s><s>(B) Position of receptive fields (blue circles) of neurons recorded with a laminar probe with respect to the displayed sinusoidal grating and fixation point (red dot).</s><s>(C) Raster plots of five representative cells for multiple presentations of each sinusoidal grating.</s><s>The orientations of the gratings ranged from 115° to 155° in steps of 10°.</s><s>(D) Schematic of possible strategies for encoding stimulus information.</s><s>A sliding time window starting from an instant t and extending to t +Δt was used to calculate the following: spike count (SC); spike time (ST): the elapsed time since the last spike with respect to t +Δt;</s></p></div></figDesc><graphic coords="21,96.24,62.00,479.52,466.09" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Synergy and Redundancy "Hubs" (A) Schematic of neuron classification into two functional classes: synergy and redundancy hubs.</s><s>Top represents a neuron (filled red triangle) that has synergistic interactions (red bands) with all other neurons (synergy hub).</s><s>Bottom represents a neuron (filled blue triangle) that has redundant interactions (blue bands) with all other neurons (redundancy hub).</s><s>(B) Scatterplot of the participation coefficient (PC) and its value normalized with respect to chance (PC norm ) for all the recorded units.</s><s>Each circle represents a single neuron.</s><s>Filled red circles represent synergy hubs, filled blue circles represent redundancy hubs, and open gray circles are non-hubs.</s><s>(C) Mean distance between neurons forming synergy (red) and redundancy hubs (blue).</s><s>Error bars represent SEM.</s><s>(D) Schematic representation of three types of sub-populations used for the decoding analysis.</s><s>Homogeneous populations were constructed either with 100%synergy (red) or 100% redundancy hubs (blue).</s><s>Heterogeneous populations were constructed by combining varying numbers of synergy and redundancy hubs.</s><s>(E) Time course of decoder accuracy above chance levels (20%) for a sub-population comprising 7 neurons with varying percentages of synergy and redundancy hubs (different colors) for a representative session.</s><s>Each line represents the mean; shaded region represents SEM.</s><s>(F) Normalized peak decoder accuracy averaged over all sessions for sub-populations with varying percentages of synergy hubs.</s><s>Solid red line is a fit generated with a smoothing spline.</s><s>Error bars represent SEM.</s></p></div></figDesc><graphic coords="23,128.64,62.00,414.72,290.09" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Synergistic Interactions between Synergy Hubs (A) Schematic of interactions between synergy hubs and redundancy hubs.</s><s>(B) Percentage of synergistic interactions between various hub types: synergy-synergy hubs (red circles); redundancy-redundancy hubs (blue circles); and mixed synergy-redundancy hubs (magenta circles).</s><s>Each circle corresponds to an individual session.</s><s>Filled black circles and error bars represent the mean and SEM across sessions.</s><s>The asterisks denote statistically significant differences of mean values from 50% (filled black circles; Wilcoxon sign rank test; p &lt; 0.001).</s></p></div></figDesc><graphic coords="24,192.00,62.00,288.00,191.28" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Laminar Distribution of Synergy and Redundancy (A) Schematic of laminar probe used for recording neural activity along a cortical column.</s><s>The probe has 16 contacts with 100-μm inter-contact spacing.</s><s>Representative example of current source density (CSD) analysis for identifying layers is shown.</s><s>(B) Time course of ΔI values averaged across all pairs within each respective layer and for inter-layer pairs.</s><s>Inset shows peak ΔI values for each layer and for inter-layer pairs.</s><s>(C) Time course as in (B) but only for synergistic pairs within each layer and across layers.</s><s>Inset shows peak ΔI values.</s><s>(D) Same as in (C) but for redundant pairs.</s><s>Solid lines represent mean values, and shaded region represents SEM.</s><s>(E) Percent of synergistic and redundant pairs in each layer out of the total number of pairs in that layer.</s></p></div></figDesc><graphic coords="25,176.64,62.00,318.72,455.04" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Stimulus-Dependent Correlations Lead to Synergistic Interactions (A) Time course of information breakdown of synergy or redundancy term ΔI in terms of signal similarity: I SS (green; redundancy caused by similarity of responses between neurons), stimulus-independent correlations: I CI (purple), and stimulus-dependent correlations: I CD (orange) averaged over all pairs.</s><s>(B) Time course of the contribution of signal similarity to synergy and redundancy obtained by averaging I SS separately for synergistic (red trace) and redundant pairs (blue trace).</s><s>(C) Time course of the contribution of stimulus-independent correlations for synergistic and redundant pairs.</s><s>(D) Same as in (C) except for stimulus-dependent correlations.</s></p></div></figDesc><graphic coords="27,192.00,62.00,288.00,306.48" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Neuron.</s><s>Author manuscript; available in PMC 2020 July 09.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>We thank <rs type="person">Marcello Mulas</rs> for being involved in the early stages of this project and <rs type="person">Xaq Pitkow</rs> for comments on a previous version of the manuscript.This work is supported by grants from the <rs type="funder">National Eye Institute</rs> and the <rs type="funder">NIH EUREKA program</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DATA AND CODE AVAILABILITY</head><p><s>Information theoretic calculations were performed using the information breakdown toolbox which is available at https://github.com/sunnyneuro/Information_Breakdown_Toolbox.git</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Highlights</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>•</head><p><s>Strong synergistic interactions underlie cortical computations in laminar circuits</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Lateral competition for cortical space by layer-specific horizontal circuits</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Adesnik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scanziani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">464</biblScope>
+			<biblScope unit="page" from="1155" to="1160" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20414303</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Circuits and mechanisms for surround modulation in visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Angelucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bijanzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Nurminen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Federer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Merlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Bressloff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="425" to="451" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28471714</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">What does the retina know about natural scenes?</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Atick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Redlich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="196" to="210" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Some informational aspects of visual perception</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Attneave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol. Rev</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="183" to="193" />
+			<date type="published" when="1954">1954</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 13167245</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Neural activity in prefrontal cortex during copying geometrical shapes. I. Single cells encode shape, sequence, and metric parameters</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Averbeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Crowe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Chafee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Georgopoulos</forename><surname>Ap</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp. Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">150</biblScope>
+			<biblScope unit="page" from="142" to="153" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12669171</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Possible principles underlying the transformations of sensory messages In Sensory Communication</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Barlow</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1961">1961</date>
+			<biblScope unit="page" from="217" to="234" />
+		</imprint>
+	</monogr>
+	<note>Rosenblinth WA, ed. (MIT</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Redundancy reduction revisited</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Barlow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Network</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="241" to="253" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11563528</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">The structure and precision of retinal spike trains</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Berry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Warland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meister</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page">9144251</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Synergy in a neural code</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brenner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Strong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Koberle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bialek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>De Ruyter Van Steveninck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1531" to="1552" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10935917</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Laminar patterns of local excitatory input to layer 5 neurons in macaque primary visual cortex</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Briggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Callaway</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb. Cortex</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="479" to="488" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15319309</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Reduction of information redundancy in the ascending auditory pathway</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chechik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Bar-Yosef</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Young</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Tishby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nelken</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="359" to="368" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16880130</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Detecting rich-club ordering in complex networks</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Colizza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Flammini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Serrano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vespignani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="110" to="115" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Coding of visual information by precisely correlated spikes in the lateral geniculate nucleus</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Alonso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Usrey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Reid</forename><surname>Rc</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="501" to="507" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10196548</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Efficient coding of spatial information in the primate retina</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Doi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Gauthier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Field</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Shlens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Greschner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Machado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">H</forename><surname>Jepson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mathieson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Gunning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="16256" to="16264" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23152609</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Neuronal circuits of the neocortex</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Douglas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><surname>Kac</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="419" to="451" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15217339</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Image structure at the center of gaze during free viewing</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dragoi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sur</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cogn. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="737" to="748" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16768374</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Dynamics of neuronal sensitivity in visual cortex and local feature discrimination</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dragoi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sur</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="883" to="891" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12161755</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">State dependence of noise correlations in macaque primary visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Ecker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Cotton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Subramaniyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Denfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Cadwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Smirnakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bethge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Tolias</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="235" to="248" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24698278</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Computation is concentrated in rich clubs of local cortical networks</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Faber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Timme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Beggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Newman</forename><surname>El</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Netw. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="384" to="404" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 30793088</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">What the statistics of natural images tell us about visual coding</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Field</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. SPIE 1077, Human Vision, Visual Processing, and Digital Display</title>
+		<meeting>SPIE 1077, Human Vision, Visual essing, and Digital Display</meeting>
+		<imprint>
+			<publisher>International Society for Optics and Photonics</publisher>
+			<date type="published" when="1989">1989</date>
+			<biblScope unit="page" from="269" to="277" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Structures of neural correlation and how they favor coding</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Franke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fiscella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sevelev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Roska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hierlemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Da Silveira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="409" to="422" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26796692</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Rapid neural coding in the retina with relative spike latencies</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gollisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meister</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">319</biblScope>
+			<biblScope unit="page" from="1108" to="1111" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18292344</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Adaptive coding of visual information in neural populations</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Gutnisky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dragoi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">452</biblScope>
+			<biblScope unit="page" from="220" to="224" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18337822</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Error detecting and error correcting codes</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Hamming</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bell Syst. Tech. J</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="147" to="160" />
+			<date type="published" when="1950">1950</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Adaptation-induced synchronization in laminar cortical circuits</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dragoi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="10720" to="10725" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21659632</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Correlated variability in laminar cortical circuits</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Chelaru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dragoi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="590" to="602" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23141070</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Laminar and columnar distribution of geniculo-cortical fibers in the macaque monkey</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Hubel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Wiesel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Neurol</title>
+		<imprint>
+			<biblScope unit="volume">146</biblScope>
+			<biblScope unit="page" from="421" to="450" />
+			<date type="published" when="1972">1972</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 4117368</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Predictability and redundancy of natural images</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kersten</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Opt. Soc. Am. A</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="2395" to="2400" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 3430226</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Stimulus dependence of neuronal correlation in primary visual cortex of the macaque</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="3661" to="3673" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15814797</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Stimulus-dependent synchronization of neuronal responses in the visual cortex of the awake macaque monkey</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Kreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Singer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="2381" to="2396" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8601818</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">The role of sensory adaptation in the retina</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Laughlin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Exp. Biol</title>
+		<imprint>
+			<biblScope unit="volume">146</biblScope>
+			<biblScope unit="page" from="39" to="62" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 2689569</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Interlaminar connections and pyramidal neuron organisation in the visual cortex, area 17, of the macaque monkey</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Lund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Boothe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Neurol</title>
+		<imprint>
+			<biblScope unit="volume">159</biblScope>
+			<biblScope unit="page" from="305" to="334" />
+			<date type="published" when="1975">1975</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">A toolbox for the fast information analysis of multiple-site LFP, EEG and spike train recordings</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Magri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Whittingstall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Logothetis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Panzeri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19607698</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Interneurons of the neocortical inhibitory system</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Markram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Toledo-Rodriguez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Silberberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="793" to="807" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15378039</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Concerted signaling by retinal ganglion cells</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meister</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lagnado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Baylor</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">270</biblScope>
+			<biblScope unit="page" from="1207" to="1210" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7502047</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">The role of correlations in direction and contrast coding in the primary visual cortex</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Montani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schultz Sr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="2338" to="2348" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17329431</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Parallel processing strategies of the primate visual system</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">B</forename><surname>Mountcastle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Nassi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Callaway</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="360" to="372" />
+			<date type="published" when="1997">1997. 2009</date>
+		</imprint>
+	</monogr>
+	<note>Brain. PubMed: 19352403</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Rich-club organization in effective connectivity among cortical neurons</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nigam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shimono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F-C</forename><surname>Yeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Timme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Myroshnychenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Lapish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Tosi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hottowy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="670" to="684" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26791200</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Retinal ganglion cells act largely as independent encoders</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nirenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Carcieri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Jacobs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">411</biblScope>
+			<biblScope unit="page" from="698" to="701" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11395773</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Analytical estimates of limited sampling biases in different information measures</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Panzeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Treves</forename><forename type="middle">A</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Network</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="87" to="107" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29480146</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Temporal structure in neuronal activity during working memory in macaque parietal cortex</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Pesaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Pezaris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sahani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Mitra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Andersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="805" to="811" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12134152</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Current-source density estimation based on inversion of electrostatic forward solution: effects of finite extent of neuronal activity and conductivity discontinuities</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Pettersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Devor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ulbert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Dale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Einevoll</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci. Methods</title>
+		<imprint>
+			<biblScope unit="volume">154</biblScope>
+			<biblScope unit="page" from="116" to="133" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16436298</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">An exact method to quantify the information transmitted by different mechanisms of correlational coding</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thiele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Hoffmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Panzeri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Network</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="35" to="60" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12613551</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Internal brain state regulates membrane potential synchrony in barrel cortex of behaving mice</title>
+		<author>
+			<persName><forename type="first">Jfa</forename><surname>Poulet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cch</forename><surname>Petersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">454</biblScope>
+			<biblScope unit="page" from="881" to="885" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18633351</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Puchalla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Schneidman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Berry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Redundancy in the population code of the retina</title>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="493" to="504" />
+		</imprint>
+	</monogr>
+	<note>PubMed: 15882648</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Specification of cerebral cortical areas</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Rakic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">241</biblScope>
+			<biblScope unit="page" from="170" to="176" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 3291116</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Independent and redundant information in nearby cortical neurons</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Reich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mechler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Victor</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">294</biblScope>
+			<biblScope unit="page" from="2566" to="2568" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11752580</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Temporal coding of visual information in the thalamus</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Reinagel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Reid</forename><surname>Rc</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="5392" to="5400" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10884324</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Naturalistic stimuli increase the rate and efficiency of information transmission by primary auditory afferents</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rieke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Bodnar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bialek</forename><forename type="middle">W</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Biol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">262</biblScope>
+			<biblScope unit="page" from="259" to="265" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Cortical state determines global variability and correlations in visual cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Schölvinck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Saleem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Benucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="170" to="178" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25568112</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">A spatiotemporal profile of visual system activation revealed by current source density analysis in the awake macaque</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Schroeder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Mehta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Givre</forename><surname>Sj</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb. Cortex</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="575" to="592" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9823479</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Rich club organization supports a diverse set of functional network configurations</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Senden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>De Reus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Goebel</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Van Den</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Heuvel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="174" to="182" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24699017</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Natural image statistics and neural representation</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Simoncelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Olshausen</forename><surname>Ba</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="1193" to="1216" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11520932</note>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Spatial and temporal scales of neuronal correlation in primary visual cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="12591" to="12603" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19036953</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Correlations in V1 are reduced by stimulation outside the receptive field</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Snyder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Morais</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="11222" to="11227" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25143603</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Rich-club organization of the human connectome</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Van Den Heuvel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sporns</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="15775" to="15786" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22049421</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">A theory of maximizing sensory information</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Van Hateren</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biol. Cybern</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="23" to="29" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 1486129</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Natural stimulation of the nonclassical receptive field increases information transmission efficiency in V1</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Vinje</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Gallant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="2904" to="2915" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11923455</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Direction-selective circuits shape noise to ensure a precise population code</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zylberberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cafaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Turner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rieke</forename><forename type="middle">F</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="369" to="383" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26796691</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,3250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Dynamical systems, attractors, and neural circuits</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>F1000 Research Ltd</publisher>
+				<availability status="unknown"><p>Copyright F1000 Research Ltd</p>
+				</availability>
+				<date type="published" when="2016-05-24">24 May 2016</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Paul</forename><surname>Miller</surname></persName>
+							<email>pmiller@brandeis.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">John</forename><surname>Beggs</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mark</forename><surname>Goldman</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Harel</forename><surname>Shouval</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Volen National Center for Complex Systems</orgName>
+								<orgName type="institution">Brandeis University</orgName>
+								<address>
+									<postCode>02454-9110</postCode>
+									<settlement>Waltham</settlement>
+									<region>Massachusetts</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Indiana University</orgName>
+								<address>
+									<settlement>Bloomington</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of California at Davis</orgName>
+								<address>
+									<settlement>Davis</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Texas Medical School</orgName>
+								<address>
+									<settlement>Houston</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department" key="dep1">Center for Neuroscience</orgName>
+								<orgName type="department" key="dep2">Department of Neurobiology, Physiology, and Behavior</orgName>
+								<orgName type="department" key="dep3">Department of Ophthalmology and Vision Science</orgName>
+								<orgName type="institution">University of California at Davis</orgName>
+								<address>
+									<postCode>95618</postCode>
+									<settlement>Davis</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Indiana University</orgName>
+								<address>
+									<postCode>47405</postCode>
+									<settlement>Bloomington</settlement>
+									<region>IN</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Dynamical systems, attractors, and neural circuits</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">F1000Research</title>
+						<title level="j" type="abbrev">F1000Res</title>
+						<idno type="eISSN">2046-1402</idno>
+						<imprint>
+							<publisher>F1000 Research Ltd</publisher>
+							<biblScope unit="volume">5</biblScope>
+							<biblScope unit="page">992</biblScope>
+							<date type="published" when="2016-05-24">24 May 2016</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">046E5DEB376CE32C2BD2713B2DA79B65</idno>
+					<idno type="DOI">10.12688/f1000research.7698.1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:06+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>hidden Markov model</term>
+					<term>Point attractors</term>
+					<term>Marginal states</term>
+					<term>line attractors</term>
+					<term>continuous attractors</term>
+					<term>Oscillating systems</term>
+					<term>cyclic attractors</term>
+					<term>limit cycles</term>
+					<term>strange attractors</term>
+					<term>Heteroclinics Open Peer Review</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Biology is the study of dynamical systems.</s><s>Yet most of us working in biology have limited pedagogical training in the theory of dynamical systems, an unfortunate historical fact that can be remedied for future generations of life scientists.</s><s>In my particular field of systems neuroscience, neural circuits are rife with nonlinearities at all levels of description, rendering simple methodologies and our own intuition unreliable.</s><s>Therefore, our ideas are likely to be wrong unless informed by good models.</s><s>These models should be based on the mathematical theories of dynamical systems since functioning neurons are dynamic-they change their membrane potential and firing rates with time.</s><s>Thus, selecting the appropriate type of dynamical system upon which to base a model is an important first step in the modeling process.</s><s>This step all too easily goes awry, in part because there are many frameworks to choose from, in part because the sparsely sampled data can be consistent with a variety of dynamical processes, and in part because each modeler has a preferred modeling approach that is difficult to move away from.</s><s>This brief review summarizes some of the main dynamical paradigms that can arise in neural circuits, with comments on what they can achieve computationally and what signatures might reveal their presence within empirical data.</s><s>I provide examples of different dynamical systems using simple circuits of two or three cells, emphasizing that any one connectivity pattern is compatible with multiple, diverse functions.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>When we try to understand any biological process, our models of the system matter.</s><s>Our ideas of how a parameter impacts the system or how a variable responds to manipulations of the system determine what questions we attempt to answer and which experiments we perform.</s><s>These ideas are based on our own mental models, which can be misleading if not founded on the appropriate dynamical principles 1,2 .</s></p><p><s>In this article, I hope to provide a short introduction to the types of dynamical system that arise in neural circuits.</s><s>In doing so, I explore why there is a perhaps surprising lack of consensus on the nature of the dynamics within mammalian neural circuits-modelers aiming to explain various cognitive processes commence from seemingly incompatible starting points, such as chaotic systems, oscillators, or sets of point attractor states.</s><s>I briefly consider hallmarks and support for each paradigm and summarize how-in spite of the tremendous quantity of electrophysiological data-room for debate remains as to which type of dynamical system is best used to model and understand brain function.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Hidden variables within neural data</head><p><s>Neural circuits are nonlinear dynamical systems that, in principle, can be described by coupled differential equations <ref type="bibr" target="#b0">3</ref> .</s><s>However, the relevant continuous variables necessary for a full description of the behavior of a functioning neural circuit are typically hidden from us.</s><s>Minimally these include the membrane potential of every cell, but recordings of neural activity in behaving vertebrates such as mammals are limited to a small subset of cells.</s><s>Even if all recorded cells reside in one circuit that we wish to describe, the circuit, which could be distributed or compact, receives inputs from tens of thousands of other neurons, whose activity is unknown.</s><s>Moreover, even a continuous variable such as membrane potential is most commonly observed only at the discrete times of voltage spikes.</s><s>Therefore, our descriptions of neural circuits require us to infer the behavior of underlying hidden variables when we observe only a sparse number of them.</s></p><p><s>Numerous other properties impact the ongoing behavior of a cell and the circuit as a whole.</s><s>These may include the number of vesicles of neurotransmitter and their voltage-dependent release probabilities at each synaptic connection or the cell-average states of activation and inactivation of the various ion channels.</s><s>Calcium concentration and spatial distributions of all these values can also affect neural activity.</s><s>Such an overwhelming abundance of known unknowns makes a full or complete description impossible and helps explain why we not only fail to have a concrete, detailed explanation of the behavior of most neural circuits but even do not know which dynamical system provides the best model of the behavior.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Classes of dynamical system</head><p><s>A dynamical system is any system that changes in time and can be described by a set of coupled differential equations.</s><s>A pendulum is a simple example, the Hodgkin-Huxley model of a neuron a more complicated one, and the coordinated activity of all neurons in a brain an intractable one.</s><s>To characterize a dynamical system rigorously, one should know how the rate of change of all relevant variables depends on the combination of their instantaneous values.</s><s>One then can simulate how they change in time from any initial condition and plot these co-varying variables together as a trajectory.</s><s>If a small change in initial conditions leads to identical behavior after some transient period, then the system possesses a point attractor state-trajectories converge if their initial difference is not too large.</s><s>If the system is an oscillator, trajectories converge to a particular loop-a limit cycle-in which differences in initial conditions are maintained over time as a fixed phase offset.</s><s>If trajectories diverge from each other across a broad range of initial conditions while all variables remain bounded, then the system is chaotic.</s></p><p><s>Here we consider circuits with only two or three neurons to provide examples of many different types of dynamics.</s><s>In general, a system with hundreds or thousands of neurons-so that we would need a space of hundreds or thousands of dimensions to plot the dynamics as the coordinated set of membrane potentials or firing rates of all neurons-could contain point attractors, limit cycles, and regions of chaos depending on which subsets of cells were more strongly active for one period of time.</s><s>The richness of such highdimensional systems and their relevance to cognitive function make them an important area of current study <ref type="bibr" target="#b1">[4]</ref><ref type="bibr">[5]</ref><ref type="bibr" target="#b4">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b8">[8]</ref><ref type="bibr">[9]</ref><ref type="bibr">[10]</ref> .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Point attractors</head><p><s>A point attractor state is equivalent to a stable fixed point of the dynamics, such as the bottom of a bowl with a ball in it.</s><s>No neural circuit in vivo can strictly be in a point attractor state, as that would require all variables (such as membrane potentials) to be static.</s><s>However, it may be reasonable to consider a broad average across variables, such as the mean firing rate of a large group of neurons, to be stationary following any initial transient response to a fixed input.</s><s>Simple systems without feedback operate in such point attractor states if cells have one value of firing rate in the absence of stimulus and, typically following a period of adaptation, shift to a different stable firing rate in the presence of a stimulus (Figure <ref type="figure" target="#fig_0">1</ref>).</s><s>Neurons in the sensory periphery appear to behave in this manner.</s></p><p><s>Variability in the spiking of a neuron-both within a trial and between trials-appears to be at odds with a point attractor description, which suggests a stable, stationary set of firing rates.</s><s>However, such variability can be attributed to various noise terms that lead to each neuron's spikes being produced randomly (say, as a Poisson process) with probability that depends on the rate-a hidden variable, which could be static and deterministic-and/or to noise-driven fluctuations in the rate about its stable fixed point.</s><s>Thus, a point attractor framework is not incompatible with ever-varying neural activity, especially, as we shall discuss below, for systems with many attractor states.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Multistability and memory</head><p><s>When a system possesses multiple point attractor states in the absence of stimuli, then the history of prior stimuli can determine the neural circuit's current activity state-the particular attractor in which it resides-so the system can retain memories (Figure <ref type="figure" target="#fig_1">2</ref>).</s><s>In some of the most important pioneering work in computational and theoretical neuroscience <ref type="bibr" target="#b13">[11]</ref><ref type="bibr">[12]</ref><ref type="bibr">[13]</ref><ref type="bibr" target="#b17">[14]</ref> , Grossberg and Hopfield demonstrated how such discrete memory states can form via activitydependent changes in the strength of connections between coactive neurons during stimulus presentation.</s><s>While the initial analyses of During each current step, a new attractor is produced, but following current offset the original activity state is reached.</s><s>(D) Any particular combination of the firing rates of the two units (x-axis is rate of unit 1, y-axis is rate of unit 2) determines the way those firing rates change in time (arrows).</s><s>Starting from any pair of firing rates, any trajectory following arrows terminates at the point of intersection of the two lines.</s><s>Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Since unit 1 excites unit 2, the fixed point for r(2) increases with r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Since unit 2 inhibits neuron 1, the fixed point for r(1) decreases with r(2).</s><s>The crossing point of the nullclines is a fixed point of the whole system.</s><s>The fixed point is stable (so is an attractor state) because arrows converge on the fixed point.</s><s>(E) As in (D) but the solution during the second pulse of applied current.</s><s>The applied current shifts the nullcline for r(1) so that the fixed point of the system is at much higher values of r(1) and r(2).</s><s>For parameters, see supporting Matlab code, "dynamics_two_units.m".</s></p><p><s>the capacity (number of memories held) of such networks relied on binary neurons that were either on or off and updated in discrete time steps 12 , the principle of memory formation and memory retrieval via an imperfect stimulus has been demonstrated in continuous firing rate models in continuous time <ref type="bibr" target="#b17">14,</ref><ref type="bibr" target="#b19">15</ref> and in circuits of model spiking neurons <ref type="bibr" target="#b21">16</ref> .</s><s>These pattern-learning systems, known generically as autoassociative networks, provide great insight into how memories can be distributed across overlapping sets of cells and retrieved from imperfect stimuli via pattern completion to a point attractor state.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Inhibition-stabilized network</head><p><s>The value of a dynamical systems approach to understanding neural-circuit behavior that is otherwise highly counter-intuitiveeven paradoxical-is exemplified by the inhibition-stabilized (IS) network.</s><s>The behavior of the IS network is particularly worth taking the time to understand because there is evidence that regions of both the hippocampus and the cortex could operate in the IS regime.</s></p><p><s>The IS network is a feedback-dominated network in which selfexcitation is strong enough to destabilize excitatory firing rates in the absence of feedback inhibition.</s><s>However, feedback inhibition is also very strong, in fact dominant enough to clamp the excitatory firing at what is an otherwise unstable fixed point of the dynamics <ref type="bibr" target="#b22">17</ref> .</s><s>In IS circuits, the strong feedback inhibition is to similarly tuned neurons-to the same cells they receive excitation from-unlike most point attractor models in which the dominant inhibitory effect is cross-inhibition between differently tuned cells to enhance selectivity.</s></p><p><s>An intriguing property of the IS network is that a decrease in external excitatory input to inhibitory cells causes their steady-state The first pulse is applied to unit 1, the second to unit 2. (C) Firing rate as a function of time in the coupled network reveals three different activity states: both units inactive or either one active.</s><s>The activity persists after offset of the applied current-a signature of multistability-so retains memory of past inputs.</s><s>(D) Any particular combination of the firing rates of the two neurons (x-axis is rate of neuron 1, y-axis is rate of neuron 2) determines the way those firing rates change in time (arrows).</s><s>Depending on the initial pair of firing rates, a trajectory following arrows terminates at one of the points of intersection of the two lines, either (0,0) or (100,0) or (0,100).</s><s>The intersections at the midpoints of the lines are unstable-if activity of unit 1 is under 50 Hz, it decays to 0; if it is over 50 Hz, it will increase to 100 Hz (if unit 2 is inactive).</s><s>Red line: nullcline for neuron 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Since neuron 1 excites neuron 2, the fixed point for r(2) increases with r(1).</s><s>Black line: nullcline for neuron 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Since neuron 2 inhibits neuron 1, the fixed point for r(1) decreases with r(2).</s><s>The crossing point of the nullclines is a fixed point of the whole system.</s><s>The fixed point is stable (so is an attractor state) because arrows converge on the fixed point.</s><s>(E) As in (D) but the solution during the second pulse of applied current.</s><s>The applied current shifts the nullcline for r(1) so that the only fixed point of the system is at (100,0).</s><s>For parameters, see supporting Matlab code, "dynamics_two_units.m".</s></p><p><s>firing rate to increase <ref type="bibr" target="#b22">17</ref> .</s><s>The initial transient decrease in firing of the inhibitory cells causes a strong increase in firing rate of the excitatory cells.</s><s>The feedback loop is strong enough that the net effect on inhibitory cells, following the ensuing increase in their excitatory input, is an increase in firing rate (Figure <ref type="figure" target="#fig_2">3</ref>).</s><s>In the final state, with decreased external excitatory input to inhibitory cells, both inhibitory and excitatory cells have higher firing rate.</s><s>The effect can be called paradoxical because in the final state the excitatory cells fire at a higher rate while receiving more inhibitory input than before.</s></p><p><s>Evidence for neural circuit operation in the IS regime was first provided by a combination of modeling and data analysis for the hippocampus during theta oscillations, based on the relative phase relationship of oscillatory activity from excitatory and inhibitory cells <ref type="bibr" target="#b22">17</ref> .</s><s>More recently, strong evidence for operation in this regime has been provided for the primary visual cortex as an explanation of how two stimuli can switch from producing supralinear to sublinear summation as their contrast increases and the IS regime is reached <ref type="bibr" target="#b24">18,</ref><ref type="bibr" target="#b26">19</ref> .</s><s>(C) Firing rate as a function of time in the coupled network.</s><s>During each current step, a new attractor is produced, but following current offset the original activity state is reached.</s><s>When inhibition is applied to unit 2, the rates of both unit 1 and unit 2 increase as a result of the ensuing net within-circuit increase in excitation to both units.</s><s>The "paradox" lies in that external inhibition to unit 2 results in an increase in its rate (due to internal raised excitation) and, even more counter-intuitively, unit 1 stabilizes at a higher firing rate in the presence of greater inhibitory input from unit 2. (D) Any particular combination of the firing rates of the two units (x-axis is rate of unit 1, y-axis is rate of unit 2) determines the way those firing rates change in time (arrows).</s><s>Starting from any pair of firing rates, any trajectory following arrows terminates at the point of intersection of the two lines.</s><s>Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Since unit 1 excites unit 2, the fixed point for r(2) increases with r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Since unit 2 inhibits unit 1, at high enough r(2) only r(1) = 0 is possible and at low r(2) only r(1) = 100 is possible.</s><s>The line joining the minimum and maximum values of r(1) would normally be of unstable fixed points, but in this system it is stabilized.</s><s>The crossing point of the nullclines is the fixed point of the whole system.</s><s>The fixed point is stable (so is an attractor state) because arrows converge on the fixed point.</s><s>(E) As in (D) but the solution during the second pulse of applied current.</s><s>The inhibitory applied current shifts the nullcline for r(2) down, and the result is that the fixed point of the system moves to higher values of both r(1) and r(2).</s><s>For parameters, see supporting Matlab code, "dynamics_two_units.m".</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Attractor-state itinerancy</head><p><s>The term itinerancy is used if a system switches rapidly between distinguishable patterns of activity that last significantly longer than the switching time.</s><s>Switches can occur by noise-driven fluctuations in a circuit with many stable point attractors <ref type="bibr" target="#b28">20</ref> or via biological processes such as synaptic depression or firing rate adaptation-which operate more slowly than changes in firing rates of cells-between quasi stable attractor states <ref type="bibr" target="#b30">21</ref> .</s><s>A system with just two quasi stable states can give rise to a relaxation oscillator by the latter process 1,22,23 , whereas a system with many quasi stable states can give rise to "chaotic itinerancy" <ref type="bibr" target="#b35">24,</ref><ref type="bibr" target="#b36">25</ref> .</s></p><p><s>Itinerancy through quasistable states can subserve sequence memory, with distinct states reached in response to both the number of stimuli and the types of stimuli in a sequence <ref type="bibr" target="#b30">21</ref> .</s><s>Noise-induced itinerancy through point attractor states can also serve as the neural basis of a sampling framework for Bayesian computation <ref type="bibr" target="#b38">26</ref> and can lead to optimal decision making if certain biological constraints must be met by the system <ref type="bibr" target="#b40">27</ref> .</s></p><p><s>Perhaps the most compelling evidence for attractor state itinerancy is during bistable percepts <ref type="bibr" target="#b42">[28]</ref><ref type="bibr" target="#b44">[29]</ref><ref type="bibr" target="#b46">[30]</ref><ref type="bibr" target="#b47">[31]</ref><ref type="bibr" target="#b48">[32]</ref> , when the switching from one percept to the other and back arises in the presence of a constant, ambiguous stimulus such as the Necker cube <ref type="bibr" target="#b50">33</ref> .</s><s>Models of the phenomenon suggest a neural circuit possessing two attractor states with transitions between them produced by a combination of synaptic depression and noise-driven fluctuations <ref type="bibr" target="#b51">[34]</ref><ref type="bibr" target="#b52">[35]</ref><ref type="bibr" target="#b53">[36]</ref> .</s></p><p><s>It is worth noting that experimental identification of such attractor state itinerancy may require non-standard analyses of neural spike trains.</s><s>The standard practice of averaging across trials after their alignment to stimulus onset would fail to reveal such inherent dynamics because the timing of transitions varies across trials and indeed the initial state may differ from trial to trial.</s><s>Thus, across-trial averaging would reveal simply a blurred, approximately constant rate dependent on the average response during the two distinct percepts.</s><s>Therefore, it is essential to use single-trial methods of analysis where possible if one hopes to uncover such underlying dynamics.</s><s>The use of averaging across trials has been a necessity when analyzing spike trains in vivo because of the apparent randomness and limited amount of information contained within the spike times of any one neuron in any one trial.</s><s>However, methods such as hidden Markov modeling (HMM) <ref type="bibr" target="#b54">[37]</ref><ref type="bibr" target="#b55">[38]</ref><ref type="bibr" target="#b56">[39]</ref> allow one to treat each trial independently, especially if one has access to spike trains from many simultaneously recorded cells with correlated activity.</s><s>HMM produces an analysis that assumes discrete states of activity with transitions between these activity states that vary in timing from trial to trial.</s><s>Analysis of neural spike trains in vivo in multiple cortical areas by HMM and other methods has produced strong evidence for state transitions during cognitive processes, including motor preparation <ref type="bibr" target="#b54">37,</ref><ref type="bibr">40</ref> , taste processing <ref type="bibr" target="#b56">39</ref> , and perceptual decision making <ref type="bibr" target="#b59">41,</ref><ref type="bibr">42</ref> .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Addressing the unrealistic firing rates in multistable models</head><p><s>The multistability necessary for memory is typically achieved in models via a subset of neurons switching from a low firing rate where the feedback activity is insufficient to generate a sustained response to a high firing rate state reinforced by recurrent excitatory feedback that is limited in rate only by saturation of an intrinsic or synaptic process.</s><s>Unless the saturating process has a slow time constant, such active states maintained by recurrent feedback typically have much higher firing rates than those observed in vivo-indeed, in simple models, once excitatory feedback is increased enough to engender stable persistent activity in the absence of input, that activity can be at the neuron's maximal firing rate, on the order of 100 Hz (as in Figure <ref type="figure" target="#fig_1">2</ref>).</s><s>Such rates are incompatible with the smaller changes of activity-often no more than 10 Hz between pre-stimulus and post-stimulus levels-during memory tasks in vivo <ref type="bibr" target="#b62">43,</ref><ref type="bibr" target="#b63">44</ref> , calling into question the validity of these recurrent excitatory models.</s><s>This issue can be resolved by several different modeling assumptions <ref type="bibr" target="#b65">45</ref> .</s><s>If recurrent feedback current is mediated primarily through N-methyl-D-aspartate (NMDA) receptors and they are allowed a 100 ms time constant (though 50 ms may be more reasonable at in vivo temperatures for mammals), then the high firing rate state can be limited to 20 to 30 Hz <ref type="bibr" target="#b67">46,</ref><ref type="bibr" target="#b68">47</ref> .</s><s>Furthermore, if a slow time constant for synaptic facilitation of 7 seconds is used, then firing rates in the active state can be reduced to levels below 10 Hz <ref type="bibr" target="#b70">48</ref> .</s><s>A final possibility is that the network contains subgroups of excitatory and inhibitory cells operating in the IS regime (Figure <ref type="figure" target="#fig_3">4</ref>) in which active subgroups can, in principle, maintain stable activity at arbitrary low rates while suppressing the activity of other subgroups via cross-inhibition <ref type="bibr" target="#b72">[49]</ref><ref type="bibr" target="#b74">[50]</ref><ref type="bibr" target="#b75">[51]</ref> .</s><s>In this regime, a system of point attractor states is compatible with the low firing rates of persistently active neurons observed in vivo.</s></p><p><s>A problem related to the one above is that most models of bistability produce spike patterns in the high-activity state that are much more regular than those observed in vivo.</s><s>Systems that transition between various stable states will cause spike trains to be less regular because of the contribution of rate variation.</s><s>Lower firing rates will likely also help with this problem because most model neurons produce irregular spike trains when operating below threshold in a fluctuation-driven regime at low firing rates.</s><s>However, spike statistics such as the coefficient of variation (CV) of interspike intervals have not been analyzed to date in models of the IS regime.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Marginal states (line attractors or continuous attractors)</head><p><s>If a dynamical system possesses a continuous range of points (a line) that variables of the system approach, then the attractor state has "marginal stability"; if the activity is perturbed away from the line, then it recovers toward the line, but deviations along the line can accumulate over time <ref type="bibr" target="#b77">52</ref> .</s><s>In neural circuit models, marginal states either depend on an underlying symmetry (for example, translation in space when considering memory for position via a ring attractor) <ref type="bibr" target="#b79">[53]</ref><ref type="bibr" target="#b80">[54]</ref><ref type="bibr" target="#b82">[55]</ref><ref type="bibr" target="#b84">[56]</ref> or require other fine-tuning of parameters <ref type="bibr" target="#b85">[57]</ref><ref type="bibr" target="#b87">[58]</ref><ref type="bibr" target="#b89">[59]</ref><ref type="bibr" target="#b90">[60]</ref> .</s><s>When neural activity enters a marginal state, the whole system can be described by a reduced number of variables, such as the position along the line of a line attractor <ref type="bibr" target="#b92">61</ref> .</s><s>Systems with marginal states are able to encode and store the values of continuous quantities <ref type="bibr" target="#b79">53,</ref><ref type="bibr" target="#b80">54,</ref><ref type="bibr" target="#b90">60</ref> , integrate information over time perfectly <ref type="bibr" target="#b82">55,</ref><ref type="bibr" target="#b85">57,</ref><ref type="bibr" target="#b94">62</ref> (Figure <ref type="figure" target="#fig_4">5</ref>), combine prior information with sensory input in a Bayesian manner <ref type="bibr" target="#b96">63</ref> , and in general achieve optimal computational performance <ref type="bibr" target="#b98">64</ref> .</s><s>In practice, a system with many point attractor states that are close to each other-that is, total circuit activity differs little between states-can appear like a line attractor, performing integration 8 yet with the benefit of greater robustness and stability <ref type="bibr" target="#b100">65</ref> .</s></p><p><s>Predicted experimental signatures of marginal states include drift of neural activity as noise accumulates in the manner of a random walk-leading to variance increasing linearly with time <ref type="bibr" target="#b80">54</ref> -in the presence of a constant stimulus; perfect temporal integration of inputs <ref type="bibr" target="#b82">55,</ref><ref type="bibr" target="#b85">57</ref> ; and correlations within single neural spike trains that decay linearly over time <ref type="bibr" target="#b77">52,</ref><ref type="bibr" target="#b102">66</ref> .</s><s>These have acquired some degree of experimental support <ref type="bibr" target="#b103">[67]</ref><ref type="bibr" target="#b104">[68]</ref><ref type="bibr" target="#b105">[69]</ref> .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Oscillating systems (cyclic attractors or limit cycles)</head><p><s>Observations of oscillations are widespread throughout the brain <ref type="bibr" target="#b107">70,</ref><ref type="bibr" target="#b109">71</ref> -indeed, the earliest human extracranial recordings revealed oscillations in electrical potential <ref type="bibr" target="#b110">72</ref> .</s><s>In some cases, the The first current pulse is applied to unit 1, and the second is applied to unit 3. A small amount of noise is added to the current to prevent the system resting at an unstable symmetric state, toward which it is otherwise drawn.</s><s>(C) Firing rate as a function of time in the coupled network.</s><s>The current steps switch activity between stable states in which no neuron's activity is greater than 10 Hz-note the difference in rates from the "traditional" bistability of Figure <ref type="figure" target="#fig_1">2</ref>. (D) Any particular combination of the firing rates of the three units (x-axis is rate of unit 1, y-axis is rate of unit 3) determines the way those firing rates change in time (arrows).</s><s>Only a plane out of the full three-dimensional space of arrows is shown-the plane corresponding to dr(3)/dt = 0. Starting from any pair of firing rates, any trajectory following arrows terminates at the point of intersection of the two lines.</s><s>Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Since unit 2 inhibits neuron 1, the fixed point for r(1) decreases with r(2).</s><s>The crossing points of the nullclines are fixed points of the whole system.</s><s>The asymmetric fixed points are stable (so are attractor states) because arrows converge on them, whereas the intervening symmetric fixed point is unstable.</s><s>For parameters, see supporting Matlab code, "dynamics_three_units.m".</s></p><p><s>presence of oscillations is inferred from a peak in the power spectrum at a particular frequency <ref type="bibr" target="#b111">73,</ref><ref type="bibr" target="#b113">74</ref> -such a peak could arise from attractor state itinerancy, chaos, or heteroclinic orbits (see below) in the absence of a true oscillator.</s><s>Yet, given the overwhelming abundance of evidence, there is no doubt as to the existence of oscillations in neural circuits-something still in question for other dynamical frameworks discussed here.</s><s>Therefore, current research focuses on elucidating the role, if any, of oscillations in diverse mental processes <ref type="bibr" target="#b114">75,</ref><ref type="bibr" target="#b116">76</ref> .</s></p><p><s>Spiking neurons themselves can be oscillators, so it should not seem surprising that neural circuits can also oscillate.</s><s>Circuit oscillations can arise from the intrinsic oscillations of constituent neurons, or from the circuit connectivity (Figure <ref type="figure" target="#fig_5">6</ref>), or from a combination of the two.</s><s>In general, any system with fast positive feedback and slower negative feedback is liable to oscillate (Figure <ref type="figure" target="#fig_6">7</ref>).</s><s>Moreover, in any nonlinear dynamical system, a change in the inputs leads to a change in amplitude and frequency of ongoing oscillations, so correlations between oscillatory power or frequency and task condition are inevitable.</s><s>Therefore, observed correlations between oscillatory power or synchrony and behavior or cognitive process-whether related to attention <ref type="bibr" target="#b118">77</ref> , arousal <ref type="bibr" target="#b120">78</ref> , memory load <ref type="bibr" target="#b122">79</ref> , or sleep state <ref type="bibr" target="#b123">[80]</ref><ref type="bibr">[81]</ref><ref type="bibr" target="#b126">[82]</ref> -may indicate a causal dependence in one direction (oscillations cause the process) or the other (particular processes cause oscillations as an epiphenomenon).</s><s>The difficulty of distinguishing the two arises because experiments aimed at altering an oscillation inevitably alter other properties of the dynamical system necessary for the cognitive process.</s></p><p><s>The importance of oscillations is perhaps undisputed only in the case of motor systems that produce a repeating, periodic output <ref type="bibr" target="#b128">83</ref> or in the sensations of whisking and olfaction that are directly related to such motor rhythms.</s><s>Perhaps the most accepted roles for information processing by oscillations are within hippocampal place cells, whose phase of firing with respect to the ongoing 7 to 10 Hz theta oscillation contains substantial information <ref type="bibr" target="#b129">[84]</ref><ref type="bibr" target="#b130">[85]</ref><ref type="bibr" target="#b132">[86]</ref><ref type="bibr" target="#b133">[87]</ref> .</s><s>During each current step, the firing rate of unit 1 increases linearly because of the applied current.</s><s>Inhibitory feedback to unit 2 causes a linear decrease in its firing rate.</s><s>Upon stimulus offset, the firing rate reached is maintained.</s><s>(D) Any particular combination of the firing rates of the two units (x-axis is rate of unit 1, y-axis is rate of unit 2) determines the way those firing rates change in time (arrows).</s><s>Starting from any pair of firing rates, any trajectory following arrows terminates at a point where the two lines overlap each other.</s><s>Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Since the two units inhibit each other, the overlapping lines have negative gradient.</s><s>(E) A small applied current to unit 1 shifts its nullcline to the right slightly.</s><s>Now the only fixed point is where the two lines intersect at r(2) = 0, but in the region between the two parallel nullclines, the rate of change is small (note the small arrows parallel to the lines) so firing rates change gradually.</s><s>For parameters, see supporting Matlab code, "dynamics_two_units.m".</s></p><p><s>Oscillating systems contain limit cycles and so appear as closed loops in a plot of one variable against another (Figure <ref type="figure" target="#fig_5">6C</ref>).</s><s>Since activity is attracted to the limit cycle-which is a line embedded within a higher-dimensional space-oscillating systems have some similarities to line attractors.</s><s>In particular, small perturbations can be accumulated in the phase of the oscillation (along the line of the limit cycle), so, as with line attractors, noise accumulates as a random walk in one particular direction.</s><s>Moreover, the phase of an oscillator retains a memory of perturbations, so oscillators can also be integrators, albeit only up to an offset of one cycle and with the need of an unperturbed oscillator for comparison.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Chaotic systems (strange attractors)</head><p><s>A high-dimensional neural system-as arises if the activity of each neuron can vary with little correlation with the activity of other neurons-with a balance between excitatory and inhibitory random connections becomes chaotic if connections are strong enough <ref type="bibr" target="#b135">[88]</ref><ref type="bibr">[89]</ref><ref type="bibr">[90]</ref> .</s><s>An early model of eye-blink conditioning in the cerebellum Oscillations are switched off by the inhibition to unit 1, so the system has two stable attractors: one a limit cycle, the other a point attractor.</s><s>(D) Any particular combination of the firing rates of the two units (x-axis is rate of unit 1, y-axis is rate of unit 2) determines the way those firing rates change in time (arrows).</s><s>Depending on the starting point, a trajectory following the arrows will fall on the limit cycle (the green closed orbit, which represents the coordinated variation of firing rate with time during the oscillations) or will reach the fixed point at the origin.</s><s>Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Since unit 1 excites unit 2, the fixed point for r(2) increases with r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Crossing points of the nullclines are the fixed points of the whole system, but the one within the limit cycle is unstable, as is the one with r(2) = 0 but r(1) &gt; 0. (E) As in (D) but the solution during the inhibitory pulse of applied current.</s><s>The inhibitory current shifts the nullcline for r(1) down, and the result is that all trajectories terminate at the origin.</s><s>For parameters, see supporting Matlab code, "dynamics_two_units.m".</s></p><p><s>(the part of the mammalian brain with the highest density of cells and connections) used a chaotic circuit to encode and reproduce timing information <ref type="bibr" target="#b139">91,</ref><ref type="bibr" target="#b140">92</ref> .</s></p><p><s>The smallest change in the initial conditions of a chaotic system leads to an indeterminate change in response, which can pose a serious problem for information processing and memory (Figure <ref type="figure" target="#fig_7">8</ref>).</s><s>Yet a system operating near or at the "edge of chaos" can be computationally efficient <ref type="bibr" target="#b142">93</ref> and become reliably entrained to inputs while responding more rapidly than ordered systems <ref type="bibr">89,</ref><ref type="bibr" target="#b143">94</ref> .</s><s>Moreover, certain learning rules for changing of connection strengths between neurons in a chaotic system can allow the encoding of almost any spatiotemporal input pattern <ref type="bibr" target="#b1">4,</ref><ref type="bibr" target="#b144">95</ref> , the switching between multiple patterns <ref type="bibr" target="#b1">4</ref> , and the encoding and processing of many rule-based tasks <ref type="bibr" target="#b4">6,</ref><ref type="bibr" target="#b8">8</ref> .</s><s>Thus, chaotic systems appear to be highly flexible and trainable.</s><s>Any particular combination of the firing rates of the three units (x-axis is rate of unit 1, y-axis is rate of unit 3) determines the way those firing rates change in time (arrows).</s><s>Only a plane out of the full three-dimensional space of arrows is shown: the plane corresponding to dr(3)/dt = 0. Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>The crossing points of the nullclines are fixed points of the whole system, none of which is stable in this example.</s><s>For parameters, see supporting Matlab code, "dynamics_three_units.m".</s></p><p><s>Observed signatures of chaos include the apparent randomness and variability of spike trains, especially during spontaneous activity in the absence of stimuli, and the initial drop of such variability upon stimulus presentation <ref type="bibr" target="#b143">94,</ref><ref type="bibr" target="#b146">96</ref> .</s></p><p><s>Chaos can arise in systems with quasistable attractor states as an itinerancy between the states in an order possessing no pattern <ref type="bibr" target="#b147">97,</ref><ref type="bibr" target="#b148">98</ref> or in an oscillating system (typically as unpredictable jumps between different types of oscillation).</s><s>Heteroclinic sequences (see below) can also be chaotic <ref type="bibr" target="#b149">99</ref> .</s><s>Addition of a small amount of intrinsic noise to chaotic systems causes the divergence in activity observed without noise upon small changes in initial conditions to occur on separate trials with identical initial conditions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Heteroclinics</head><p><s>A common type of fixed point in a system with many variables (meaning it is high-dimensional) is a saddle point.</s><s>Saddle points are so-named because, like the saddle on a horse or the saddle on a ridge, there are directions where the natural tendency is to approach the fixed point (moving down from a higher point on the ridge) and other directions where the natural tendency is to move away from the fixed point (down to the valley below).</s><s>If the state of a dynamical No applied current is present.</s><s>The miniscule difference in initial conditions is amplified over time, so, for example, unit 3 produces a small burst of activity after 1.5 s in (D), but that burst is absent from (C). (D) Any particular combination of the firing rates of the three units (x-axis is rate of unit 1, y-axis is rate of unit 3) determines the way those firing rates change in time (arrows).</s><s>Only a plane out of the full three-dimensional space of arrows is shown: the plane corresponding to dr(2)/dt = 0. Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>The crossing points of the nullclines are unstable fixed points of the whole system.</s><s>For parameters, see supporting Matlab code, "dynamics_three_units.m".</s></p><p><s>system can move toward one such saddle point and then move away from it to another one, and so on, the trajectory is called a heteroclinic sequence.</s><s>Heteroclinic sequences have similarities to systems with attractor-state itinerancy and a type of oscillator that switches between states that appear stable on a short timescale, called a relaxation oscillator.</s><s>All three systems have states toward which the system is drawn but at which the system does not remain.</s><s>In a heteroclinic sequence, activity can be funneled toward each saddle point as if it were an attractor state but, once in the vicinity of the saddle point, will find the direction of instability and move away (Figure <ref type="figure" target="#fig_8">9</ref>).</s><s>In the absence of noise, the duration in a "state" (the vicinity of a particular saddle point) depends on how close to the fixed point the system gets and therefore may vary with initial conditions.</s><s>Interestingly, a small amount of noise can make these state durations more regular <ref type="bibr" target="#b151">100</ref> .</s><s>Models of heteroclinic sequences have been proposed as a basis for memory <ref type="bibr" target="#b152">101,</ref><ref type="bibr" target="#b153">102</ref> and decision making <ref type="bibr" target="#b154">103,</ref><ref type="bibr" target="#b155">104</ref> .</s><s>According to some calculations, a randomly connected neural circuit would contain a suitable number of heteroclinic trajectories for information processing <ref type="bibr" target="#b156">105</ref> .</s><s>In the high-dimensional space of neural activity, most random fixed points would have some directions along which they attract neural activity and other directions along which they repel it, meaning that they would be the saddle points necessary for producing heteroclinic sequences.</s><s>However, no unique predictions of cognitive processing via heteroclinic sequences have been linked to empirical data to date.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Criticality</head><p><s>Many scientists argue that the brain is in a critical state, in fact exhibiting self-organized criticality, so should be studied as such.</s><s>Criticality is a measured state of a system rather than a dynamical model.</s><s>A critical system is characterized by a number of properties, including the following: power law decays of the durations and sizes of features such as neural avalanches <ref type="bibr" target="#b157">106</ref> ; relationships between the exponents of these different power laws; a scaling of the time dependence of these features when binned by size onto a universal curve <ref type="bibr" target="#b159">107</ref> ; and correlations of fluctuations that extend across the system.</s><s>All of these features arise from a particular distribution of the number of possible states binned according to their probability of occurrence-a distribution that, in principle, can be enumerated <ref type="bibr" target="#b160">108</ref> -that conspire to remove any stereotypical size of the systems fluctuations.</s><s>Critical systems have been argued to be optimal at information processing <ref type="bibr" target="#b142">93,</ref><ref type="bibr">109</ref> .</s></p><p><s>It is likely that most of the above dynamical systems under appropriate conditions could produce critical behavior <ref type="bibr" target="#b163">110</ref> -although the term criticality is sometimes used for systems operating at the edge of chaos <ref type="bibr" target="#b142">93</ref> where critical properties can arise in random networks <ref type="bibr" target="#b165">111</ref> .</s><s>Criticality appears to be more strongly dependent on the modular or hierarchical structure of network connectivity <ref type="bibr" target="#b166">[112]</ref><ref type="bibr" target="#b168">[113]</ref><ref type="bibr">[114]</ref> than the within-module dynamics.</s></p><p><s>Characteristics of criticality have been measured in cortical cultures <ref type="bibr" target="#b157">106,</ref><ref type="bibr" target="#b159">107</ref> , intact retina <ref type="bibr" target="#b160">108</ref> , and whole-brain imaging <ref type="bibr" target="#b170">115</ref> .</s><s>Observations to date suggest that much neural activity is close to being critical 109,116 rather than exactly critical, leaving it open that even if a particular dynamical system cannot engender exact criticality, it is still close enough to provide an accurate description of neural activity (but see 108).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Summary</head><p><s>Many different types of dynamical system have been proposed as models of neural activity, each of which can be justified by  <ref type="figure">B,</ref><ref type="figure">C</ref>) Firing rate as a function of time in the coupled network from different initial conditions (near the fixed points) with no applied current.</s><s>Activity is initially slow to move away from the vicinity of the fixed point (along its unstable direction) but after a cycle returns to the vicinity of the same fixed point (along its stable direction).</s><s>(D) Any particular combination of the firing rates of the three units (x-axis is rate of unit 1, y-axis is rate of unit 3) determines the way those firing rates change in time (arrows).</s><s>Only a plane out of the full three-dimensional space of arrows is shown: the plane corresponding to dr(2)/dt = 0. Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>The crossing points of the nullclines are fixed points of the whole system, in this case at r(1) = 100, r(2) = 0, and r(3) = 0 and at r(1) = 0, r(2) = 100, and r(3) = 100.</s><s>The fixed points are saddle points in that firing rates can either approach the fixed point or move away from it, depending on the precise set of rates.</s><s>For parameters, see supporting Matlab code, "dynamics_three_units.m".</s></p><p><s>experimental evidence in some brain regions and circumstances.</s><s>Different neural circuits in different parts of the brain may operate in different dynamical regimes because of connectivity differences, in particular differences in relative dominance of feedback or feedforward connections and in the relative contributions of excitatory or inhibitory neurons.</s><s>Moreover, since the dynamical regime of a neural circuit depends on many factors (only one of which is the connectivity pattern), it is likely that a single circuit can change between dynamical regimes following learning or when it receives inputs or neural modulation.</s></p><p><s>Any one of these types of dynamical system (or any other not mentioned) could provide the most accurate basis for understanding a particular neurological function, another may be compatible with the observed data and more useful for explaining particular features of the neural behavior, while others may at heart be incompatible with the known circuit properties.</s><s>Therefore, it behooves us all to avoid entrenchment in our favorite paradigm and to improve our understanding of the variety of dynamical systems when attempting to understand neural circuit function.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary material</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>dynamics_two_units.</head><p><s>Click here to access the data.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>dynamics_three_units.</head><p><s>Click here to access the data.</s></p><p><s>A final point worth making is that just knowing the connectomewhich neurons are connected to each other-does not tell us about the operation of a neural circuit.</s><s>Many of the dynamics we see arise in the same simple circuit with the same neurons (for example, Figure <ref type="figure" target="#fig_0">1</ref>, Figure <ref type="figure" target="#fig_2">3</ref>, and Figure <ref type="figure" target="#fig_5">6</ref> have identical architecture, even accounting for type of synapse, as do Figure <ref type="figure" target="#fig_3">4</ref>, Figure <ref type="figure" target="#fig_6">7</ref>, and Figure <ref type="figure" target="#fig_7">8</ref>); differences in neural excitability or differences in strengths of connections can produce different functionality within a single architecture.</s><s>Conversely, distinct connectivity patterns can give rise to the same function.</s><s>Rather, observation of the coordinated activity of many neurons during mental processing is the route to understanding the remarkable abilities of our brains.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing interests</head><p><s>The author declares that he has no competing interests.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Grant information</head><p><s>The author(s) declared that no grants were involved in supporting this work.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>A single point attractor is present without input and a different one with input in a threshold-linear two-unit circuit.</s><s>(A) Diagram of the model circuit.</s><s>Arrows indicate excitatory connections, and balls indicate inhibitory connections between units.</s><s>(B) Applied current as a function of time.</s><s>Two different sized pulses of current are applied to unit 1. (C) Firing rate as a function of time in the coupled network.</s><s>During each current step, a new attractor is produced, but following current offset the original activity state is reached.</s><s>(D) Any particular combination of the firing rates of the two units (x-axis is rate of unit 1, y-axis is rate of unit 2) determines the way those firing rates change in time (arrows).Starting from any pair of firing rates, any trajectory following arrows terminates at the point of intersection of the two lines.</s><s>Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Since unit 1 excites unit 2, the fixed point for r(2) increases with r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Since unit 2 inhibits neuron 1, the fixed point for r(1) decreases with r(2).</s><s>The crossing point of the nullclines is a fixed point of the whole system.</s><s>The fixed point is stable (so is an attractor state) because arrows converge on the fixed point.</s><s>(E) As in (D) but the solution during the second pulse of applied current.</s><s>The applied current shifts the nullcline for r(1) so that the fixed point of the system is at much higher values of r(1) and r(2).</s><s>For parameters, see supporting Matlab code, "dynamics_two_units.m".</s></p></div></figDesc><graphic coords="4,169.84,77.61,272.66,335.90" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. A multistable attractor network can be switched between states to encode distinct memories through persistent activity in a threshold-linear two-unit circuit.</s><s>(A) Diagram of the model circuit.</s><s>Arrows indicate excitatory connections, and balls indicate inhibitory connections.</s><s>The strong self-excitatory feedback renders each unit unstable once active.</s><s>(B) Applied current as a function of time.The first pulse is applied to unit 1, the second to unit 2. (C) Firing rate as a function of time in the coupled network reveals three different activity states: both units inactive or either one active.</s><s>The activity persists after offset of the applied current-a signature of multistability-so retains memory of past inputs.</s><s>(D) Any particular combination of the firing rates of the two neurons (x-axis is rate of neuron 1, y-axis is rate of neuron 2) determines the way those firing rates change in time (arrows).</s><s>Depending on the initial pair of firing rates, a trajectory following arrows terminates at one of the points of intersection of the two lines, either (0,0) or (100,0) or (0,100).</s><s>The intersections at the midpoints of the lines are unstable-if activity of unit 1 is under 50 Hz, it decays to 0; if it is over 50 Hz, it will increase to 100 Hz (if unit 2 is inactive).</s><s>Red line: nullcline for neuron 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Since neuron 1 excites neuron 2, the fixed point for r(2) increases with r(1).</s><s>Black line: nullcline for neuron 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Since neuron 2 inhibits neuron 1, the fixed point for r(1) decreases with r(2).</s><s>The crossing point of the nullclines is a fixed point of the whole system.</s><s>The fixed point is stable (so is an attractor state) because arrows converge on the fixed point.</s><s>(E) As in (D) but the solution during the second pulse of applied current.</s><s>The applied current shifts the nullcline for r(1) so that the only fixed point of the system is at (100,0).</s><s>For parameters, see supporting Matlab code, "dynamics_two_units.m".</s></p></div></figDesc><graphic coords="5,169.39,95.27,273.26,336.74" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3.</s><s>The "paradoxical" shift of a single point attractor in the inhibition-stabilized regime in a threshold-linear two-unit circuit.</s><s>(A) Diagram of the model circuit.</s><s>Arrows indicate excitatory connections, and balls indicate inhibitory connections between units.</s><s>Architecture is identical to that in Figure 1.</s><s>(B) Applied current as a function of time.</s><s>Two different sized inhibitory pulses of current are applied to unit 2.(C) Firing rate as a function of time in the coupled network.</s><s>During each current step, a new attractor is produced, but following current offset the original activity state is reached.</s><s>When inhibition is applied to unit 2, the rates of both unit 1 and unit 2 increase as a result of the ensuing net within-circuit increase in excitation to both units.</s><s>The "paradox" lies in that external inhibition to unit 2 results in an increase in its rate (due to internal raised excitation) and, even more counter-intuitively, unit 1 stabilizes at a higher firing rate in the presence of greater inhibitory input from unit 2. (D) Any particular combination of the firing rates of the two units (x-axis is rate of unit 1, y-axis is rate of unit 2) determines the way those firing rates change in time (arrows).</s><s>Starting from any pair of firing rates, any trajectory following arrows terminates at the point of intersection of the two lines.</s><s>Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Since unit 1 excites unit 2, the fixed point for r(2) increases with r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Since unit 2 inhibits unit 1, at high enough r(2) only r(1) = 0 is possible and at low r(2) only r(1) = 100 is possible.</s><s>The line joining the minimum and maximum values of r(1) would normally be of unstable fixed points, but in this system it is stabilized.</s><s>The crossing point of the nullclines is the fixed point of the whole system.</s><s>The fixed point is stable (so is an attractor state) because arrows converge on the fixed point.</s><s>(E) As in (D) but the solution during the second pulse of applied current.</s><s>The inhibitory applied current shifts the nullcline for r(2) down, and the result is that the fixed point of the system moves to higher values of both r(1) and r(2).</s><s>For parameters, see supporting Matlab code, "dynamics_two_units.m".</s></p></div></figDesc><graphic coords="6,169.00,88.50,274.82,338.54" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Bistability with low stable firing rates in the inhibition-stabilized threshold-linear three-unit circuit.</s><s>(A) Diagram of the model circuit.</s><s>Arrows indicate excitatory connections, and balls indicate inhibitory connections between units.</s><s>A third unit is added to the architecture of Figure 3. (B) Applied current as a function of time.The first current pulse is applied to unit 1, and the second is applied to unit 3. A small amount of noise is added to the current to prevent the system resting at an unstable symmetric state, toward which it is otherwise drawn.</s><s>(C) Firing rate as a function of time in the coupled network.</s><s>The current steps switch activity between stable states in which no neuron's activity is greater than 10 Hz-note the difference in rates from the "traditional" bistability of Figure2.</s><s>(D) Any particular combination of the firing rates of the three units (x-axis is rate of unit 1, y-axis is rate of unit 3) determines the way those firing rates change in time (arrows).</s><s>Only a plane out of the full three-dimensional space of arrows is shown-the plane corresponding to dr(3)/dt = 0. Starting from any pair of firing rates, any trajectory following arrows terminates at the point of intersection of the two lines.</s><s>Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Since unit 2 inhibits neuron 1, the fixed point for r(1) decreases with r(2).</s><s>The crossing points of the nullclines are fixed points of the whole system.</s><s>The asymmetric fixed points are stable (so are attractor states) because arrows converge on them, whereas the intervening symmetric fixed point is unstable.</s><s>For parameters, see supporting Matlab code, "dynamics_three_units.m".</s></p></div></figDesc><graphic coords="8,168.63,86.80,271.82,280.94" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5.</s><s>A marginal state or continuous/line attractor is produced by careful tuning of the connection strengths in a threshold-linear two-unit circuit.</s><s>(A) Diagram of the model circuit.</s><s>Arrows indicate excitatory connections, and balls indicate inhibitory connections between units.</s><s>The architecture is identical to that of Figure 2. (B) Applied current as a function of time.</s><s>Two very small pulses of current are applied to unit 1. (C) Firing rate as a function of time in the coupled network.During each current step, the firing rate of unit 1 increases linearly because of the applied current.</s><s>Inhibitory feedback to unit 2 causes a linear decrease in its firing rate.</s><s>Upon stimulus offset, the firing rate reached is maintained.</s><s>(D) Any particular combination of the firing rates of the two units (x-axis is rate of unit 1, y-axis is rate of unit 2) determines the way those firing rates change in time (arrows).</s><s>Starting from any pair of firing rates, any trajectory following arrows terminates at a point where the two lines overlap each other.</s><s>Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Since the two units inhibit each other, the overlapping lines have negative gradient.</s><s>(E) A small applied current to unit 1 shifts its nullcline to the right slightly.</s><s>Now the only fixed point is where the two lines intersect at r(2) = 0, but in the region between the two parallel nullclines, the rate of change is small (note the small arrows parallel to the lines) so firing rates change gradually.</s><s>For parameters, see supporting Matlab code, "dynamics_two_units.m".</s></p></div></figDesc><graphic coords="9,168.50,117.18,275.18,339.02" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>An oscillator produced by directed excitatory and inhibitory connections in a bistable threshold-linear two-unit circuit.</s><s>(A) Diagram of the model circuit.</s><s>Arrows indicate excitatory connections, and balls indicate inhibitory connections between units.</s><s>The architecture is identical to that of Figure 1 and Figure 3. (B) Applied current as a function of time.</s><s>An inhibitory pulse of current is applied to unit 1. (C) Firing rate as a function of time in the coupled network.Oscillations are switched off by the inhibition to unit 1, so the system has two stable attractors: one a limit cycle, the other a point attractor.</s><s>(D) Any particular combination of the firing rates of the two units (x-axis is rate of unit 1, y-axis is rate of unit 2) determines the way those firing rates change in time (arrows).</s><s>Depending on the starting point, a trajectory following the arrows will fall on the limit cycle (the green closed orbit, which represents the coordinated variation of firing rate with time during the oscillations) or will reach the fixed point at the origin.</s><s>Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Since unit 1 excites unit 2, the fixed point for r(2) increases with r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>Crossing points of the nullclines are the fixed points of the whole system, but the one within the limit cycle is unstable, as is the one with r(2) = 0 but r(1) &gt; 0. (E) As in (D) but the solution during the inhibitory pulse of applied current.</s><s>The inhibitory current shifts the nullcline for r(1) down, and the result is that all trajectories terminate at the origin.</s><s>For parameters, see supporting Matlab code, "dynamics_two_units.m".</s></p></div></figDesc><graphic coords="10,168.52,109.83,275.54,339.50" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 7 .</head><label>7</label><figDesc><div><p><s>Figure 7. Switching between two distinct oscillators in a bistable threshold-linear three-unit circuit.</s><s>(A) Diagram of the model circuit.</s><s>Arrows indicate excitatory connections, and balls indicate inhibitory connections between units.</s><s>Architecture is identical to that of Figure 4. (B) Applied current as a function of time.</s><s>The first current pulse is applied to unit 3, and the second is applied to unit 1. (C) Firing rate as a function of time in the coupled network.</s><s>The current steps switch activity between two stable states with different frequencies of oscillation.</s><s>(D)Any particular combination of the firing rates of the three units (x-axis is rate of unit 1, y-axis is rate of unit 3) determines the way those firing rates change in time (arrows).</s><s>Only a plane out of the full three-dimensional space of arrows is shown: the plane corresponding to dr(3)/dt = 0. Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>The crossing points of the nullclines are fixed points of the whole system, none of which is stable in this example.</s><s>For parameters, see supporting Matlab code, "dynamics_three_units.m".</s></p></div></figDesc><graphic coords="11,170.60,151.14,270.86,279.98" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 8 .</head><label>8</label><figDesc><div><p><s>Figure 8. Chaotic activity in a threshold-linear three-unit circuit.</s><s>(A) Diagram of the model circuit.</s><s>Arrows indicate excitatory connections, and balls indicate inhibitory connections between units.</s><s>Architecture is identical to that of Figure 4 and Figure 7. (B, C) Firing rate as a function of time in the coupled network, from two imperceptibly different initial conditions.</s><s>No applied current is present.</s><s>The miniscule difference in initial conditions is amplified over time, so, for example, unit 3 produces a small burst of activity after 1.5 s in (D), but that burst is absent from (C). (D) Any particular combination of the firing rates of the three units (x-axis is rate of unit 1, y-axis is rate of unit 3) determines the way those firing rates change in time (arrows).</s><s>Only a plane out of the full three-dimensional space of arrows is shown: the plane corresponding to dr(2)/dt = 0. Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>The crossing points of the nullclines are unstable fixed points of the whole system.</s><s>For parameters, see supporting Matlab code, "dynamics_three_units.m".</s></p></div></figDesc><graphic coords="12,170.71,118.95,271.22,280.34" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 9 .</head><label>9</label><figDesc><div><p><s>Figure 9. Heteroclinic orbits in a threshold-linear three-unit circuit.</s><s>(A) Diagram of the model circuit.</s><s>Arrows indicate excitatory connections, and balls indicate inhibitory connections between units.</s><s>(B, C) Firing rate as a function of time in the coupled network from different initial conditions (near the fixed points) with no applied current.</s><s>Activity is initially slow to move away from the vicinity of the fixed point (along its unstable direction) but after a cycle returns to the vicinity of the same fixed point (along its stable direction).</s><s>(D) Any particular combination of the firing rates of the three units (x-axis is rate of unit 1, y-axis is rate of unit 3) determines the way those firing rates change in time (arrows).</s><s>Only a plane out of the full three-dimensional space of arrows is shown: the plane corresponding to dr(2)/dt = 0. Red line: nullcline for unit 2-the value of r(2) at which dr(2)/dt = 0 (its fixed point) given a value of r(1).</s><s>Black line: nullcline for unit 1-the value of r(1) at which dr(1)/dt = 0 (its fixed point) given a value of r(2).</s><s>The crossing points of the nullclines are fixed points of the whole system, in this case at r(1) = 100, r(2) = 0, and r(3) = 0 and at r(1) = 0, r(2) = 100, and r(3) = 100.</s><s>The fixed points are saddle points in that firing rates can either approach the fixed point or move away from it, depending on the precise set of rates.</s><s>For parameters, see supporting Matlab code, "dynamics_three_units.m".</s></p></div></figDesc><graphic coords="13,170.63,111.15,269.78,278.90" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head></head><label></label><figDesc><div><p><s>Solving the distal reward problem through linkage of STDP and dopamine signaling.</s><s>Cereb Cortex.</s><s>2007; 17(10): 2443-52.</s><s>PubMed Abstract | Publisher Full Text 2. Strogatz SH: Nonlinear Dynamics and Chaos.</s><s>Boulder, CO: Westview Press, 2015.</s></p></div></figDesc></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>F1000Research 2016, 5(F1000 Faculty Rev):992 Last updated:14 NOV 2024</s></p></note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>The author(s) declared that no grants were involved in supporting this work.</p></div>
+			</div>			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Open Peer Review</head><note type="other">Current</note></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3.</head><p><s>The benefits of publishing with F1000Research: Your article is published within days, with no editorial bias • You can publish traditional articles, null/negative results, case reports, data notes and more •</s></p><p><s>The peer review process is transparent and collaborative • Your article is indexed in PubMed after passing peer review • Dedicated customer support at every stage • For pre-submission enquiries, contact research@f1000.com</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+			<publisher>Theoretical Neuroscience. MIT Press</publisher>
+		</imprint>
+	</monogr>
+	<note>Reference Source</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Generating coherent patterns of activity from chaotic neural networks</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sussillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="544" to="557" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Internal representation of task rules by recurrent dynamics: the importance of the diversity of neural responses</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rigotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Dayan Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2009.07.018</idno>
+	</analytic>
+	<monogr>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation 5</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">24</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<idno type="DOI">10.3389/fncom.2010.00024</idno>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">From fixed points to chaos: three models of delayed discrimination</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Barak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sussillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Prog Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page" from="214" to="222" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1016/j.pneurobio.2013.02.002</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Robust timing and motor patterns by taming chaos in recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Laje</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Buonomano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="925" to="933" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<idno type="DOI">10.1038/nn.3405</idno>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Context-dependent computation by recurrent dynamics in prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Mante</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sussillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">V</forename><surname>Shenoy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">503</biblScope>
+			<biblScope unit="issue">7474</biblScope>
+			<biblScope unit="page" from="78" to="84" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">The importance of mixed selectivity in complex cognitive tasks</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rigotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Barak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Warden</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature12742</idno>
+	</analytic>
+	<monogr>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation 9</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="volume">497</biblScope>
+			<biblScope unit="page" from="585" to="590" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<idno type="DOI">10.1038/nature12160</idno>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation 10</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Recurrent Network Models of Sequence Generation and Memory</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Harvey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Tank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="128" to="142" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1016/j.neuron.2016.02.009</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Some nonlinear networks capable of learning a spatial pattern of arbitrary complexity</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grossberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="368" to="372" />
+			<date type="published" when="1968">1968</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation 12. Hopfield JJ: Neural networks and physical systems with emergent collective computational abilities</title>
+		<idno type="DOI">10.1073/pnas.59.2.368</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="2554" to="2558" />
+			<date type="published" when="1982">1982</date>
+			<pubPlace>U S A.</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<idno type="DOI">10.1073/pnas.79.8.2554</idno>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation 13</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Absolute stability of global pattern formation and parallel memory storage by competitive neural networks</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grossberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TSMC.1983.6313075</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Syst Man Cybern</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="815" to="826" />
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+	<note>Publisher Full Text</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Neurons with graded response have collective computational properties like those of two-state neurons</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Hopfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="3088" to="3092" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1073/pnas.81.10.3088</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Graded-response neurons and information encodings in autoassociative memories</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Treves</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev A</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2418" to="2430" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<idno type="DOI">10.1103/PhysRevA.42.2418</idno>
+		<title level="m">PubMed Abstract | Publisher Full Text References F1000 recommended</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Stable and rapid recurrent processing in realistic autoassociative memories</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">P</forename><surname>Battaglia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Treves</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/089976698300017827</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="431" to="450" />
+			<date type="published" when="1998">1998</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Paradoxical effects of external modulation of inhibitory interneurons</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Tsodyks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Skaggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Sejnowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="4382" to="4388" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m">PubMed Abstract | F1000 Recommendation</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Analysis of the stabilized supralinear network</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ahmadian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1994" to="2037" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1162/NECO_a_00472</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">The stabilized supralinear network: a unifying circuit motif underlying multi-input integration in sensory cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Van</forename><surname>Hooser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="402" to="417" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<idno type="DOI">10.1016/j.neuron.2014.12.026</idno>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Stochastic transitions between neural states in taste processing and decision-making</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Katz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="2559" to="2570" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1523/JNEUROSCI.3047-09.2010</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Stimulus number, duration and intensity encoding in randomly connected attractor networks with synaptic depression</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">59</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.3389/fncom.2013.00059</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Impulses and Physiological States in Theoretical Models of Nerve Membrane</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Fitzhugh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophys J</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="445" to="466" />
+			<date type="published" when="1961">1961</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1016/S0006-3495(61)86902-6</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">An Active Pulse Transmission Line Simulating Nerve Axon</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Nagumo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Arimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yoshizawa</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/JRPROC.1962.288235</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc IRE</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="2061" to="2070" />
+			<date type="published" when="1962">1962</date>
+		</imprint>
+	</monogr>
+	<note>Publisher Full Text</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Chaotic itinerancy</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kaneko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tsuda</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1607783</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chaos</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="926" to="936" />
+			<date type="published" when="2003">2003</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+	</analytic>
+	<monogr>
+		<title level="m">Tsuda I: Chaotic itinerancy and its roles in cognitive neurodynamics</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="67" to="71" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1016/j.conb.2014.08.011</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Bayesian sampling in visual perception</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Moreno-Bote</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Knill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">30</biblScope>
+			<biblScope unit="page" from="12491" to="12496" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1073/pnas.1101430108</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Accuracy and response-time distributions for decisionmaking: linear perfect integrators versus nonlinear attractor-based neural circuits</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Katz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="261" to="294" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1007/s10827-013-0452-x</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Nonlinear modeling of multistable perception</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Poston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Stewart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav Sci</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="318" to="334" />
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1002/bs.3830230403</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Perceptual bistability with counterphase gratings</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gorea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lorenceau</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1321" to="1331" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1016/0042-6989(84)90187-1</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Temporal dynamics of auditory and visual bistability reveal common principles of perceptual organization</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pressnitzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hupé</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cub.2006.05.054</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Biol</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<biblScope unit="page" from="1351" to="1357" />
+			<date type="published" when="2006">2006</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Bistability for audiovisual stimuli: Perceptual decision is modality specific</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hupé</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Joffo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pressnitzer</surname></persName>
+		</author>
+		<idno type="DOI">10.1167/8.7.1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Vis</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1" to="1" />
+			<date type="published" when="2008">2008</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Time for a change: what dominance durations reveal about adaptation effects in the perception of a bi-stable reversible figure</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Toppino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Long</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Atten Percept Psychophys</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="867" to="882" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.3758/s13414-014-0809-x</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<monogr>
+		<title level="m" type="main">Vision: A Computational Investigation into the Human Representation and Processing of Visual Information</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Marr</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<publisher>MIT Press</publisher>
+			<pubPlace>Cambridge, MA, USA</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Reference Source</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">A hierarchical model of binocular rivalry</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dayan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1119" to="1135" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Deterministic analysis of stochastic bifurcations in multistable neurodynamical systems</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Martí</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00422-007-0144-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biol Cybern</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="487" to="496" />
+			<date type="published" when="2007">2007</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Noise-induced alternations in an attractor network model of perceptual bistability</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Moreno-Bote</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rinzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rubin</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.00116.2007</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1125" to="1139" />
+			<date type="published" when="2007">2007</date>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Simultaneously recorded single units in the frontal cortex go through sequences of discrete and stable states in monkeys performing a delayed localization task</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Seidemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Meilijson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Abeles</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="752" to="768" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>PubMed Abstract</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Hidden Markov modelling of simultaneously recorded cells in the associative cortex of behaving monkeys</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Gat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Tishby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Abeles</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0954-898X_8_3_005</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Network-Comp Neural Sys</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="297" to="322" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>Publisher Full Text</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Natural stimuli evoke dynamic sequences of states in sensory cortical ensembles</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fontanini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">F</forename><surname>Sadacca</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="issue">47</biblScope>
+			<biblScope unit="page" from="18772" to="18777" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Cortical activity flips among quasi-stationary states</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Abeles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bergman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Gat</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.0705546104</idno>
+	</analytic>
+	<monogr>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation 40</title>
+		<meeting><address><addrLine>U S A.</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="8616" to="8620" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1073/pnas.92.19.8616</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">NEURONAL MODELING. Singletrial spike trains in parietal cortex reveal discrete steps during decisionmaking</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Latimer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Yates</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Meister</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">349</biblScope>
+			<biblScope unit="issue">6244</biblScope>
+			<biblScope unit="page" from="184" to="187" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">The Behavioral Relevance of Cortical Neural Ensemble Responses Emerges Suddenly</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">F</forename><surname>Sadacca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mukherjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Vladusich</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aaa4056</idno>
+	</analytic>
+	<monogr>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="655" to="669" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1523/JNEUROSCI.2265-15.2016</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Neuronal correlate of visual associative long-term memory in the primate temporal cortex</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Miyashita</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/335817a0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">335</biblScope>
+			<biblScope unit="issue">6193</biblScope>
+			<biblScope unit="page" from="817" to="820" />
+			<date type="published" when="1988">1988</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Task-dependent changes in short-term memory in the prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Warden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">47</biblScope>
+			<biblScope unit="page" from="15801" to="15810" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1523/JNEUROSCI.1569-10.2010</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Persistent activity and the single-cell frequency-current curve in a cortical network model</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Network</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="261" to="280" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1088/0954-898X_11_4_302</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Synaptic basis of cortical persistent activity: the importance of NMDA receptors to working memory</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">21</biblScope>
+			<biblScope unit="page" from="9587" to="9603" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed Abstract</note>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Effects of neuromodulation in a cortical network model of object working memory dominated by recurrent inhibition</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="63" to="85" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1023/A:1011204814320</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Synaptic theory of working memory</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mongillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Barak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tsodyks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">319</biblScope>
+			<biblScope unit="issue">5869</biblScope>
+			<biblScope unit="page" from="1543" to="1546" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<monogr>
+		<idno type="DOI">10.1126/science.1150769</idno>
+		<title level="m">PubMed Abstract | Publisher Full Text | F1000 Recommendation</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Associative memory neural network with low temporal spiking rates</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Amit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Treves</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="issue">20</biblScope>
+			<biblScope unit="page" from="7871" to="7875" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1073/pnas.86.20.7871</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Willshaw model: Associative memory with sparse coding and low firing rates</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Golomb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevA.41.1843</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev A</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1843" to="1854" />
+			<date type="published" when="1990">1990</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Computing and stability in cortical networks</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nirenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1385" to="1412" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1162/089976604323057434</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Theory of orientation tuning in visual cortex</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ben-Yishai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Bar-Or</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="3844" to="3848" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1073/pnas.92.9.3844</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">Representation of spatial orientation by the intrinsic dynamics of the head-direction cell ensemble: a theory</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="2112" to="2126" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>PubMed Abstract</note>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Synaptic mechanisms and network dynamics underlying spatial working memory in a cortical network model</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Compte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Goldman-Rakic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb Cortex</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="910" to="923" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<monogr>
+		<idno type="DOI">10.1093/cercor/10.9.910</idno>
+		<title level="m">PubMed Abstract | Publisher Full Text | F1000 Recommendation</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Angular path integration by moving &quot;hill of activity&quot;: a spiking neuron model without recurrent excitation of the head-direction system</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1002" to="1014" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<monogr>
+		<idno type="DOI">10.1523/JNEUROSCI.4172-04.2005</idno>
+		<title level="m">PubMed Abstract | Publisher Full Text | F1000 Recommendation</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title level="a" type="main">Design of continuous attractor networks with monotonic tuning using a symmetry principle</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Machens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/neco.2007.07-06-297</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="452" to="485" />
+			<date type="published" when="2008">2008</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<analytic>
+		<title level="a" type="main">How the brain keeps the eyes still</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">23</biblScope>
+			<biblScope unit="page" from="13339" to="13344" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">PubMed Abstract | Free Full Text</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">The autapse: a simple illustration of shortterm analog memory storage by tuned synaptic feedback</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Reis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="171" to="185" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1023/A:1008971908649</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<title level="a" type="main">Stability of the memory of eye position in a recurrent network of conductance-based model neurons</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Reis</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0896-6273(00)81155-1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="259" to="271" />
+			<date type="published" when="2000">2000</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">A recurrent network model of somatosensory parametric working memory in the prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb Cortex</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="1208" to="1218" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1093/cercor/bhg101</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<analytic>
+		<title level="a" type="main">Understanding Emergent Dynamics: Using a Collective Activity Coordinate of a Neural Network to Recognize Time-Varying Patterns</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Hopfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="2011" to="2038" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1162/NECO_a_00768</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<analytic>
+		<title level="a" type="main">A controlled attractor network model of path integration in the rat</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Conklin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Eliasmith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="183" to="203" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1007/s10827-005-6558-z</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<analytic>
+		<title level="a" type="main">Pouget A: Efficient computation and cue integration with noisy population codes</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Deneve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="826" to="831" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1038/90541</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<analytic>
+		<title level="a" type="main">Optimal computation with attractor networks</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Deneve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Physiol Paris</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="issue">4-6</biblScope>
+			<biblScope unit="page" from="683" to="694" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b99">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1016/j.jphysparis.2004.01.022</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b100">
+	<analytic>
+		<title level="a" type="main">Model for a robust neural integrator</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Raghavachari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kepecs</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="775" to="782" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b101">
+	<monogr>
+		<idno type="DOI">10.1038/nn893</idno>
+		<title level="m">PubMed Abstract | Publisher Full Text | F1000 Recommendation</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b102">
+	<analytic>
+		<title level="a" type="main">Power-law neuronal fluctuations in a recurrent network model of parametric working memory</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.00491.2005</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1099" to="1114" />
+			<date type="published" when="2006">2006</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b103">
+	<analytic>
+		<title level="a" type="main">Neuronal correlates of parametric working memory in the prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hernández</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/20939</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">399</biblScope>
+			<biblScope unit="issue">6735</biblScope>
+			<biblScope unit="page" from="470" to="473" />
+			<date type="published" when="1999">1999</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b104">
+	<analytic>
+		<title level="a" type="main">Anatomy and discharge properties of premotor neurons in the goldfish medulla that have eye-position signals during fixations</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Aksay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Baker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1035" to="1049" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed Abstract</note>
+</biblStruct>
+
+<biblStruct xml:id="b105">
+	<analytic>
+		<title level="a" type="main">Neural activity in macaque parietal cortex reflects temporal integration of visual motion signals during perceptual decision making</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Huk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">45</biblScope>
+			<biblScope unit="page" from="10420" to="10436" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b106">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1523/JNEUROSCI.4684-04.2005</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b107">
+	<analytic>
+		<title level="a" type="main">Neuronal oscillations in cortical networks</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsáki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Draguhn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">304</biblScope>
+			<biblScope unit="issue">5679</biblScope>
+			<biblScope unit="page" from="1926" to="1929" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b108">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1126/science.1099745</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b109">
+	<monogr>
+		<title level="m" type="main">Rhythms of the Brain</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsáki</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/acprof:oso/9780195301069.001.0001</idno>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+			<publisher>Oxford University Press</publisher>
+			<pubPlace>New York, NY</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Publisher Full Text</note>
+</biblStruct>
+
+<biblStruct xml:id="b110">
+	<analytic>
+		<author>
+			<persName><forename type="first">H</forename><surname>Berger</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF01797193</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Über das Elektrenkephalogramm des Menschen</title>
+		<imprint>
+			<date type="published" when="1929">1929</date>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="527" to="570" />
+		</imprint>
+	</monogr>
+	<note>Publisher Full Text</note>
+</biblStruct>
+
+<biblStruct xml:id="b111">
+	<analytic>
+		<title level="a" type="main">Mechanisms of gamma oscillations</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsáki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="203" to="225" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b112">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1146/annurev-neuro-062111-150444</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b113">
+	<analytic>
+		<title level="a" type="main">Quantifying spike train oscillations: biases, distortions and solutions</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Matzner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Bar-Gad</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pcbi.1004252</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PubMed Abstract | Publisher Full Text | Free Full Text</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<date type="published" when="2015">2015. 1004252</date>
+		</imprint>
+	</monogr>
+	<note>PLoS Comput Biol</note>
+</biblStruct>
+
+<biblStruct xml:id="b114">
+	<analytic>
+		<title level="a" type="main">Neurophysiological and computational principles of cortical rhythms in cognition</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol Rev</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1195" to="1268" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b115">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1152/physrev.00035.2008</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b116">
+	<analytic>
+		<title level="a" type="main">Mechanism and significance of global coherence in scalp EEG</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Freeman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="199" to="205" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b117">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1016/j.conb.2014.11.008</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b118">
+	<analytic>
+		<title level="a" type="main">Modulation of oscillatory neuronal synchronization by selective visual attention</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fries</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Rorie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="issue">5508</biblScope>
+			<biblScope unit="page" from="1560" to="1563" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b119">
+	<monogr>
+		<idno type="DOI">10.1126/science.1055465</idno>
+		<title level="m">PubMed Abstract | Publisher Full Text | F1000 Recommendation</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b120">
+	<analytic>
+		<title level="a" type="main">7 to 12 Hz activity in rat gustatory cortex reflects disengagement from a fluid self-administration task</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fontanini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Katz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="2832" to="2840" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b121">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1152/jn.01035.2004</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b122">
+	<analytic>
+		<title level="a" type="main">Gating of human theta oscillations by a working memory task</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Raghavachari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Kahana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Rizzuto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="3175" to="3183" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed Abstract</note>
+</biblStruct>
+
+<biblStruct xml:id="b123">
+	<analytic>
+		<title level="a" type="main">The slow (&lt;1 Hz) rhythm of non-REM sleep: a dialogue between three cardinal oscillators</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Crunelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Hughes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="9" to="17" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b124">
+	<analytic>
+		<idno type="DOI">10.1038/nn.2445</idno>
+	</analytic>
+	<monogr>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation 81. Buzsáki G: Hippocampal sharp wave-ripple: A cognitive biomarker for episodic memory and planning</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="1073" to="1188" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b125">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1002/hipo.22488</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b126">
+	<analytic>
+		<title level="a" type="main">Cortical development, electroencephalogram rhythms, and the sleep/wake cycle</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cirelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Tononi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biol Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1071" to="1078" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b127">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1016/j.biopsych.2014.12.017</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b128">
+	<analytic>
+		<title level="a" type="main">Principles of rhythmic motor pattern generation</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Marder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Calabrese</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol Rev</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="687" to="717" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>PubMed Abstract</note>
+</biblStruct>
+
+<biblStruct xml:id="b129">
+	<analytic>
+		<title level="a" type="main">Position reconstruction from an ensemble of hippocampal place cells: contribution of theta phase coding</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Lisman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="2602" to="2609" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b130">
+	<analytic>
+		<title level="a" type="main">The theta/gamma discrete phase code occuring during the hippocampal phase precession may be a more general brain coding scheme</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lisman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="913" to="922" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b131">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1002/hipo.20121</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b132">
+	<analytic>
+		<title level="a" type="main">The θ-γ neural code</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Lisman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Jensen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2013.03.007</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1002" to="1016" />
+			<date type="published" when="2013">2013</date>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b133">
+	<analytic>
+		<title level="a" type="main">Independent theta phase coding accounts for CA1 population sequences and enables flexible remapping</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chadwick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Van Rossum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Nolan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">eLife</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">3542</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b134">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.7554/eLife.03542</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b135">
+	<analytic>
+		<title level="a" type="main">Chaos in random neural networks</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Crisanti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Sommers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev Lett</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="259" to="262" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b136">
+	<analytic>
+		<title level="a" type="main">Chaos in neuronal networks with balanced excitatory and inhibitory activity</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Van Vreeswijk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">274</biblScope>
+			<biblScope unit="issue">5293</biblScope>
+			<biblScope unit="page" from="1724" to="1726" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b137">
+	<analytic>
+		<title level="a" type="main">Chaotic balanced state in a model of cortical circuits</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vreeswijk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1321" to="1371" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b138">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1162/089976698300017214</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b139">
+	<analytic>
+		<title level="a" type="main">Neural Network Model of the Cerebellum: Temporal Discrimination and the Timing of Motor Responses</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Buonomano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Mauk</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/neco.1994.6.1.38</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="38" to="55" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+	<note>Publisher Full Text</note>
+</biblStruct>
+
+<biblStruct xml:id="b140">
+	<analytic>
+		<title level="a" type="main">Temporal information transformed into a spatial code by a neural network with realistic properties</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Buonomano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Merzenich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">267</biblScope>
+			<biblScope unit="issue">5200</biblScope>
+			<biblScope unit="page" from="1028" to="1030" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b141">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1126/science.7863330</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b142">
+	<analytic>
+		<title level="a" type="main">Real-time computation at the edge of chaos in recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Bertschinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Natschläger</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/089976604323057443</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1413" to="1436" />
+			<date type="published" when="2004">2004</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b143">
+	<analytic>
+		<title level="a" type="main">Stimulus-dependent suppression of chaos in recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevE.82.011903</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev E Stat Nonlin Soft Matter Phys</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="issue">1 Pt 1</biblScope>
+			<biblScope unit="page">11903</biblScope>
+			<date type="published" when="2010">2010</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b144">
+	<analytic>
+		<title level="a" type="main">Real-time computing without stable states: a new framework for neural computation based on perturbations</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Maass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Natschläger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Markram</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="2531" to="2560" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b145">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1162/089976602760407955</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b146">
+	<analytic>
+		<title level="a" type="main">Stimulus onset quenches neural variability: a widespread cortical phenomenon</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Churchland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Cunningham</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.2501</idno>
+	</analytic>
+	<monogr>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="369" to="378" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b147">
+	<analytic>
+		<title level="a" type="main">Complex dynamics in simple Hopfield neural networks</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">S</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Huang</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.2220476</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chaos</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">33114</biblScope>
+			<date type="published" when="2006">2006</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b148">
+	<analytic>
+		<title level="a" type="main">Dynamics of random neural networks with bistable units</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevE.90.062710</idno>
+	</analytic>
+	<monogr>
+		<title level="m">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page">62710</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b149">
+	<analytic>
+		<title level="a" type="main">Winnerless competition between sensory neurons generates chaos: A possible mechanism for molluscan hunting behavior</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Varona</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Selverston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chaos</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="672" to="677" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b150">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1063/1.1498155</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b151">
+	<analytic>
+		<title level="a" type="main">Designing responsive pattern generators: stable heteroclinic channel cycles for modeling and control</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Horchler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Daltorio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Chiel</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1748-3190/10/2/026001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinspir Biomim</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">26001</biblScope>
+			<date type="published" when="2015">2015</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b152">
+	<analytic>
+		<title level="a" type="main">On the origin of reproducible sequential activity in neural circuits</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">S</forename><surname>Afraimovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">P</forename><surname>Zhigulin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1819625</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chaos</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1123" to="1129" />
+			<date type="published" when="2004">2004</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b153">
+	<analytic>
+		<title level="a" type="main">Dynamical origin of the effective storage capacity in the brain&apos;s working memory</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.103.218101</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev Lett</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="issue">21</biblScope>
+			<biblScope unit="page">218101</biblScope>
+			<date type="published" when="2009">2009</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b154">
+	<analytic>
+		<title level="a" type="main">Dynamics of sequential decision making</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Huerta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Afraimovich</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.97.188103</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev Lett</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="issue">18</biblScope>
+			<biblScope unit="page">188103</biblScope>
+			<date type="published" when="2006">2006</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b155">
+	<analytic>
+		<title level="a" type="main">Transient cognitive dynamics, metastability, and decision making</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Huerta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Varona</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pcbi.1000072</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PubMed Abstract | Publisher Full Text | Free Full Text</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<date type="published" when="2008">2008. 1000072</date>
+		</imprint>
+	</monogr>
+	<note>PLoS Comput Biol</note>
+</biblStruct>
+
+<biblStruct xml:id="b156">
+	<analytic>
+		<title level="a" type="main">Reproducible sequence generation in random neural ensembles</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Huerta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.93.238104</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev Lett</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">23</biblScope>
+			<biblScope unit="page">238104</biblScope>
+			<date type="published" when="2004">2004</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b157">
+	<analytic>
+		<title level="a" type="main">Neuronal avalanches in neocortical circuits</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Beggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Plenz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">35</biblScope>
+			<biblScope unit="page" from="11167" to="11177" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b158">
+	<monogr>
+		<title level="m">PubMed Abstract | F1000 Recommendation</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b159">
+	<analytic>
+		<title level="a" type="main">Universal critical dynamics in high resolution neuronal avalanche data</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Friedman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Brinkman</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.108.208102</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev Lett</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">20</biblScope>
+			<biblScope unit="page">208102</biblScope>
+			<date type="published" when="2012">2012</date>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b160">
+	<analytic>
+		<title level="a" type="main">Thermodynamics and signatures of criticality in a network of neurons</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Tkačik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Marre</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="issue">37</biblScope>
+			<biblScope unit="page" from="11508" to="11513" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b161">
+	<analytic>
+		<title level="a" type="main">PubMed Abstract | Publisher Full Text | Free Full Text | F1000 Recommendation 109. Beggs JM: The criticality hypothesis: how local cortical networks might optimize information processing</title>
+		<idno type="DOI">10.1073/pnas.1514188112</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Philos Trans A Math Phys Eng Sci</title>
+		<imprint>
+			<biblScope unit="volume">366</biblScope>
+			<biblScope unit="page" from="329" to="343" />
+			<date type="published" when="1864">2008. 1864</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b162">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1098/rsta.2007.2092</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b163">
+	<analytic>
+		<title level="a" type="main">Ongoing cortical activity at rest: criticality, multistability, and ghost attractors</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">K</forename><surname>Jirsa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="3366" to="3375" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b164">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1523/JNEUROSCI.2523-11.2012</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b165">
+	<analytic>
+		<title level="a" type="main">Last updated: 14 NOV</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kadmon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevx.5.041030</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Transition to Chaos in Random Neuronal Networks. F1000Research</title>
+		<imprint>
+			<date type="published" when="2015">2016. 2024. 2015</date>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">41030</biblScope>
+		</imprint>
+	</monogr>
+	<note>5(F1000 Faculty Rev. Publisher Full Text</note>
+</biblStruct>
+
+<biblStruct xml:id="b166">
+	<analytic>
+		<title level="a" type="main">Sustained activity in hierarchical modular neural networks: self-organized criticality and oscillations</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Hilgetag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">30</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b167">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.3389/fncom.2011.00030</idno>
+		<imprint>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b168">
+	<analytic>
+		<title level="a" type="main">Landsberg AS: Hierarchical networks, power laws, and neuronal avalanches</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Friedman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chaos</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">13135</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b169">
+	<analytic>
+		<title level="a" type="main">de Arcangelis L: Brain modularity controls the critical behavior of spontaneous activity</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Russo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Herrmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep04312</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Rep</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">4312</biblScope>
+			<date type="published" when="2014">2014</date>
+			<publisher>PubMed Abstract | Publisher Full Text | Free Full Text</publisher>
+		</imprint>
+	</monogr>
+	<note>PubMed Abstract | Publisher Full Text | Free Full Text 114</note>
+</biblStruct>
+
+<biblStruct xml:id="b170">
+	<analytic>
+		<title level="a" type="main">Criticality in large-scale brain FMRI dynamics unveiled by a novel point process analysis</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Tagliazucchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Balenzuela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Fraiman</surname></persName>
+		</author>
+		<idno type="DOI">10.3389/fphys.2012.00015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PubMed Abstract | Publisher Full Text | Free Full Text</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">15</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>Front Physiol</note>
+</biblStruct>
+
+<biblStruct xml:id="b171">
+	<analytic>
+		<title level="a" type="main">Being critical of criticality in the brain</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Beggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Timme</surname></persName>
+		</author>
+		<idno type="DOI">10.3389/fphys.2012.00163</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PubMed Abstract | Publisher Full Text | Free Full Text</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">163</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>Front Physiol</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

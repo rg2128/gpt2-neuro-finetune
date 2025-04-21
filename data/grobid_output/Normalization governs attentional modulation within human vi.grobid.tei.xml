@@ -1,0 +1,1921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Normalization governs attentional modulation within human visual cortex</title>
+				<funder ref="#_NXPvSQD">
+					<orgName type="full">National Institutes of Health</orgName>
+					<orgName type="abbreviated">NIH</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2019-12-11">2019-12-11</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Ilona</forename><forename type="middle">M</forename><surname>Bloem</surname></persName>
+							<email>ibloem@bu.edu</email>
+							<idno type="ORCID">0000-0002-7926-6500</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Psychological and Brain Sciences</orgName>
+								<orgName type="institution">Boston University</orgName>
+								<address>
+									<postCode>02215</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Center for Systems Neuroscience</orgName>
+								<orgName type="institution">Boston University</orgName>
+								<address>
+									<postCode>02215</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sam</forename><surname>Ling</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Psychological and Brain Sciences</orgName>
+								<orgName type="institution">Boston University</orgName>
+								<address>
+									<postCode>02215</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Center for Systems Neuroscience</orgName>
+								<orgName type="institution">Boston University</orgName>
+								<address>
+									<postCode>02215</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Normalization governs attentional modulation within human visual cortex</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Communications</title>
+						<title level="j" type="abbrev">Nat Commun</title>
+						<idno type="eISSN">2041-1723</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">10</biblScope>
+							<biblScope unit="issue">1</biblScope>
+							<date type="published" when="2019-12-11" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">D571B2C9DD0B1BD43810450AE6EDBA52</idno>
+					<idno type="DOI">10.1038/s41467-019-13597-1</idno>
+					<note type="submission">Received: 27 December 2018; Accepted: 12 November 2019;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:08+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Although attention is known to increase the gain of visuocortical responses, its underlying neural computations remain unclear.</s><s>Here, we use fMRI to test the hypothesis that a neural population's ability to be modulated by attention is dependent on divisive normalization.</s><s>To do so, we leverage the feature-tuned properties of normalization and find that visuocortical responses to stimuli sharing features normalize each other more strongly.</s><s>Comparing these normalization measures to measures of attentional modulation, we demonstrate that subpopulations which exhibit stronger normalization also exhibit larger attentional benefits.</s><s>In a converging experiment, we reveal that attentional benefits are greatest when a subpopulation is forced into a state of stronger normalization.</s><s>Taken together, these results suggest that the degree to which a subpopulation exhibits normalization plays a role in dictating its potential for attentional benefits.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>N</head><p><s>eural processing is surprisingly efficient.</s><s>Although our environment is brimming with information, our cognitive system adeptly regulates competition between neural representations-all vying for visual awareness.</s><s>A growing body of evidence suggests that this is made possible, in part, by recruiting a seemingly ubiquitous neural computation, known as divisive normalization, which can regulate the relative strength between competing representations <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref> .</s><s>Under normalization, the response to a stimulus is modulated by the summed activity generated by the stimulus itself, along with pooled neighboring responses.</s><s>This computation crucially supports a number of functions, including regulating the dynamic range of neural responses <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b5">6</ref> .</s><s>Models of divisive normalization have long served as cornerstone principles for computational accounts of early vision, and generalize to a variety of other sensory modalities <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b7">8</ref> and cognitive processes <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref> .</s><s>Interestingly, normalization is also believed to be modulated by contextual influences, whereby visual features that are similar tend to normalize each other more than those that are dissimilar <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> .</s><s>This feature-tuned aspect has been theorized to play an active role in reducing redundant sensory information <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref> .</s><s>The image properties in our visual environment are comprised of statistical biases, whereby neighboring features belonging to the same object are most likely to be similar.</s><s>Feature-tuned normalization incorporates these inherent dependencies, acting as a form of neural information compression by deprioritizing the processing of redundant representations <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b21">22</ref> , thereby aiding in the segregation of a figure from its background.</s></p><p><s>While tuned normalization may play a role in the bottom-up enhancement of potentially relevant information in a visual scene, we ultimately rely on top-down attentional systems to selectively enhance a small subset of that information for prioritized processing, from moment to moment.</s><s>One of the most welldocumented ways that attention enhances relevant information is by increasing the gain, or 'strength', of the behavioral <ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref> or neural response <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref><ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref> .</s><s>Interestingly, prominent computational models have theorized that normalization and attention are tightly linked, whereby attentional modulation within visual cortices is dependent on divisive normalization <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b31">32</ref> .</s><s>These models propose that attention can alter the balance between the stimulus activity and the summed activity of the normalization pool, weakening the current state of gain control, and thereby resulting in an increased neural response.</s><s>Normalization accounts of attention have traditionally hinged on three key components: the locus of attention, the size of the stimulus, and the size of the attentional window <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b32">33</ref> .</s><s>However, while these models have proposed that the spatial extent of the 'attention field' could be feature selective <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b33">34</ref> , the suppressive drive itself is typically considered to be feature-agnostic, allowing an equal contribution of all information, regardless of feature similarities.</s><s>The notion that attention modulation could additionally depend on a fourth component, incorporating the feature-selective nature of normalization, has some support in animal studies, with single-unit recordings in macaques suggesting that the contribution of tuned normalization can explain attention biases of competition between multiple stimuli within a receptive field <ref type="bibr" target="#b9">10</ref> .</s></p><p><s>In this study, we use functional magnetic resonance imaging (fMRI) to test the hypothesis that attention-driven modulation of the gain of responses within human visual cortex depends on the magnitude of tuned normalization.</s><s>We approach this problem by first devising an efficacious, voxel-by-voxel population measure of the feature-tuned aspects of normalization within early visual cortex, during passive viewing.</s><s>To do so, we exploit a phenomenon known as sub-additivity, a signature property of normalization wherein the population responses to images comprised of two superimposed stimuli fall short of the linear sum of the response to each stimulus independently <ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref><ref type="bibr" target="#b39">[40]</ref> .</s><s>We demonstrate potent tuned normalization within human visual cortex: superimposed stimuli sharing the same features are more strongly normalized than stimuli that differ in their features.</s><s>Armed with a population measure of feature-tuned normalization, we set out to test the hypothesis that attentional modulation is partially driven by tuned normalization.</s><s>If normalization truly governs attentional modulation, we reason that attention-driven gain changes will be greater when a neural subpopulation within early visual areas exhibits stronger normalization.</s><s>Indeed, in our second experiment we reveal that tuned normalization is tightly linked to an independent measure of attentional modulation.</s><s>Leveraging population-wide heterogeneities in BOLD responses for both normalization and attention measures, we find that subpopulations that exhibit stronger normalization also exhibit larger attentional benefits.</s><s>Finally, in a third converging experiment, we directly manipulate spatial attention, while simultaneously measuring population activity under different states of normalization.</s><s>In doing so, we demonstrate that attentional benefits are greater when the population is put under stronger normalization.</s><s>In sum, our results suggest that a neural population's capability for attentional benefits appears contingent upon normalization, whereby the degree to which a population can normalize itself results in greater potential for attentional modulation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p><s>Sub-additivity as a signature of tuned normalization.</s><s>We first set out to obtain a population measure of visuocortical responses under different states of normalization.</s><s>Specifically, in addition to a well-known untuned, feature-agnostic component, does subadditivity show a signature of a tuned, or feature-selective component?</s><s>We leveraged the fact that population responses to images comprised of superimposed visual stimuli are not simply the linear sum of the response to each stimulus independently <ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref> .</s><s>Instead, the response typically exhibits a property known as subadditivity-a phenomenon nicely captured by contrast normalization.</s><s>This is believed to emerge due to the compressive nature of normalization, which acts to nonlinearly limit the overall response to the stimuli.</s><s>To assess the influence of tuned and untuned normalization on population responses within human visual cortex, we leveraged an fMRI noise-masking technique <ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b35">36,</ref><ref type="bibr" target="#b37">38</ref> , which allowed us to test the degree to which BOLD responses within early visual cortex exhibit sub-additivity, depending on stimulus feature similarity.</s><s>To tap into the subadditive nature of tuned normalization, we constructed stimuli that were composed of linearly summed pairs of oriented bandpass-filtered noise gratings (outer diameter 15°; inner diameter 3°; at 50% Michelson contrast; spatial frequencies between 2 and 3 cycles/°; orientation bandwidth of 10°).</s><s>Importantly, images were constructed using pairs of stimuli combined in either an orthogonal (different features) or a collinear configuration (similar features; Fig. <ref type="figure">1a</ref>).</s><s>We measured BOLD responses to these collinear and orthogonal stimuli configurations in separate blocks during an fMRI session, while participants performed a demanding task at fixation, finding targets in a rapid letter stream, and ignoring the stimuli presented in the periphery (Supplementary Fig. <ref type="figure">1</ref>).</s><s>In addition, in a separate set of scans we measured the BOLD response to both individual components (45°&amp; 135°), in separate blocks, that comprised the overlaid stimuli, and summed the responses for each component in order to create a hypothetical additive sum.</s><s>Note, we did not find a difference in the evoked responses to individual components when oriented radial or tangential from fixation (Supplementary Fig. <ref type="figure" target="#fig_1">2</ref>).</s><s>The sub-additive deviation from the hypothetical sum for both the collinear and orthogonal configurations served as our measure of untuned normalization, while comparing the difference between responses evoked by the two overlaid configurations served as our measure for an additional tuned component.</s></p><p><s>Orthogonal and collinear stimuli configurations both exhibited sub-additivity across early visual areas (V1-V3), with the measured BOLD response of both stimulus configurations being lower than the hypothetical additive sum (repeated measures ANOVA orthogonal sub-additivity: main effect of additivity F (1,15) = 16.39,</s><s>p = 0.001, η 2 p = 0.522, main effect for visual area and the interaction, p &gt; 0.3; repeated measures ANOVA collinear sub-additivity: main effect of additivity F(1,15) = 22.84, p &lt; 0.001, η 2 p = 0.604, main effect for visual area and the interaction, p &gt; 0.4;</s></p><p><s>Fig. <ref type="figure">1b</ref>, Supplementary Fig. <ref type="figure">1</ref>).</s><s>Furthermore, the responses demonstrated robust feature-tuned normalization as well, whereby stimuli comprised of collinear orientations were more sub-additive, and thus more strongly normalized, than stimuli that contained orthogonal orientations (repeated measures ANOVA interaction effect F(2,15) = 7.85, p = 0.005, η 2 p = 0.511; tuned normalization post hoc analysis two-sided paired t-test; V1: t(5) = 6.00, p = 0.0057, d = 2.44, V2: t(5) = 3.82, p = 0.0370, d = 1.56, and V3: t(5) = 3.44, p = 0.0551, d = 1.42,</s><s>Bonferroni corrected).</s><s>While BOLD responses to either stimuli configuration across visual areas were fairly consistent in the degree to which they exhibited sub-additivity (untuned normalization), the magnitude of the feature-tuned aspect of normalization decreased in strength along the visual hierarchy (one-way ANOVA across visual areas: F(2,17) = 7.85, p = 0.005, η 2 p = 0.511).</s><s>This orientation-tuned aspect of normalization was strongest within primary visual cortex-a region shown to be most precisely tuned to orientation content <ref type="bibr" target="#b40">[41]</ref><ref type="bibr" target="#b41">[42]</ref><ref type="bibr" target="#b42">[43]</ref> , and became less apparent as we moved up the visual hierarchy, consistent with a shift in the preferred feature space.</s><s>We next explored the degree of dependency, from voxel-to-voxel, of the deviation from additivity for both orthogonal and collinear stimuli configurations within V1.</s><s>Although there was heterogeneity in the magnitude of subadditivity between voxels within a region, comparing the difference between the hypothetical additive sum with both collinear and orthogonal stimulus configurations revealed a consistent pattern, with the collinear configuration exhibiting larger sub-additivity compared with the orthogonal configuration -an effect that was highly reliable for the majority of voxels within V1, but decreased in V2 and V3 (Fig. <ref type="figure">1c</ref>, Supplementary Figs.</s><s><ref type="figure" target="#fig_2">3,</ref><ref type="figure" target="#fig_4">4</ref>).</s></p><p><s>Importantly, the differences in BOLD responses evoked by the two stimuli configurations were not driven by differences in the image statistics, adaptation (see Supplementary Fig. <ref type="figure" target="#fig_5">5</ref>), nor could they be explained by basic first-order visual response properties.</s><s>A Fourier analysis confirmed that while the orientation content between the stimuli configurations differed, the overall power was comparable (Fig. <ref type="figure" target="#fig_1">2a</ref>).</s><s>Furthermore, a V1-based energy detection model <ref type="bibr" target="#b43">[44]</ref><ref type="bibr" target="#b44">[45]</ref><ref type="bibr" target="#b45">[46]</ref><ref type="bibr" target="#b46">[47]</ref><ref type="bibr" target="#b47">[48]</ref><ref type="bibr" target="#b48">[49]</ref> that only incorporated untuned divisive normalization also fell short of accounting for these results.</s><s>In this model, we estimated the amount of contrast energy each class of images evoked by applying a linear Gabor wavelet decomposition that described tuning along the dimensions of space, phase, orientation, and spatial frequency <ref type="bibr" target="#b43">44,</ref><ref type="bibr" target="#b44">45</ref> (Fig. <ref type="figure" target="#fig_1">2b</ref>).</s><s>Five hundred unique images for both collinear and orthogonal stimuli configurations were passed through the model, which resulted in a measure of contrast energy for each image, contained in quadrature wavelet pairs.</s><s>After combining all wavelets across space and spatial frequency scales, a measure of contrast energy evoked by each orientation channel remained.</s><s>The model output then underwent divisive normalization, effectively acting as a contrast gain control operator <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b49">50</ref> .</s><s>A bootstrap analysis indicated that there is no difference between the two simulated stimulus energy distributions, indicating that these images have the same stimulus energy when applying untuned normalization (95% confidence interval = [-0.026,</s><s>0.019]; Fig. <ref type="figure" target="#fig_1">2c</ref>).</s><s>Importantly, however, a difference in stimulus energy was observed when we incorporated an orientation-tuned component into the normalization model (bootstrapped 95% confidence interval = [0.362;</s><s>0.4035]; Fig. <ref type="figure" target="#fig_1">2d</ref>), indicating that the observed differences in subadditivity of the BOLD responses between the two stimuli configurations can be driven by tuned normalization.</s></p><p><s>Attentional modulation is related to tuned normalization.</s><s>Leveraging our ability to measure feature-tuned normalization  within human visual cortex, we then set out to test our main hypothesis: Does attention boost information processing by modulating divisive normalization?</s><s>Our previous experiment demonstrated that collinear stimulus configurations were more sub-additive, as they evoked lower BOLD responses compared with orthogonal stimuli.</s><s>Importantly, while responses to each stimulus configuration varied substantially, this difference between collinear and orthogonal configurations was consistent for almost all voxels within an area (Fig. <ref type="figure">1c</ref>, Supplementary Fig. <ref type="figure" target="#fig_4">4</ref>).</s><s>In a second experiment, we examined the degree of voxelwise dependency between this measure of tuned normalization and an independent measure of attention modulation.</s><s>If normalization and attentional modulation interact, we predicted that those subpopulations that are more strongly normalized should also exhibit the highest potential for attentional modulation.</s></p><p><s>Tuned normalization strength was quantified as the difference between the mean BOLD responses to orthogonal and collinear stimuli blocks.</s><s>Collinear stimuli evoked weaker BOLD responses compared with orthogonal stimuli, resulting in a positive difference for all regions of interest (Fig. <ref type="figure" target="#fig_2">3a</ref>).</s><s>To measure attentional modulation, we assessed BOLD responses while participants viewed orientation bandpass-filtered noise gratings (outer diameter 15°; inner diameter 3°; at 50% Michelson contrast; spatial frequencies between 2 and 3 cycles/°; orientation bandwidth of 10°).</s><s>While viewing these stimuli, participants were asked to either covertly attend toward the stimulus, performing a fine orientation discrimination task (Attended condition), or perform a demanding task at fixation, which drew attention away from the oriented stimulus (Unattended condition).</s><s>Note that the visual stimulation was identical in both conditions, with the only difference being the task observers performed (Supplementary Fig. <ref type="figure">6</ref>).</s><s>Attention modulation was defined as the difference between BOLD responses to attended and unattended stimuli blocks.</s><s>Consistent with previous findings 24, <ref type="bibr" target="#b50">[51]</ref><ref type="bibr" target="#b51">[52]</ref><ref type="bibr" target="#b52">[53]</ref> , striate and extrastriate cortex exhibited robust attentional modulation (Fig. <ref type="figure" target="#fig_2">3b</ref>; repeated measures ANOVA: main effect of attention F (1,15) = 50.38,</s><s>p &lt; 0.001, η 2 p = 0.771, while main effect for visual area and the interaction did not reach significance, p &gt; 0.4).</s></p><p><s>While these results reflect the average response across the entire region of interest (ROI), the magnitude of tuned normalization strength varied substantially from voxel-to-voxel within each visual area, suggesting heterogeneity across the population (Fig. <ref type="figure">1c</ref>).</s><s>Leveraging this population-wide heterogeneity in neural responses in both attentional modulation and tuned normalization measures, our results revealed that subpopulations that exhibit the strongest tuned normalization also possess the greatest attentional benefits, most strongly within V1 and V3 (Fig. <ref type="figure" target="#fig_4">4</ref>; oneway ANOVA on Fisher-Z transformed Spearman correlations; F (2,17) = 3.326, p = 0.064, η 2 p = 0.307; post hoc two-sided one sample t-tests V1: t(5) = 4.30, p = 0.0231, d = 1.76,</s><s>V2: t(5) = 2.96, p = 0.0944, d = 1.21, and V3: t(5) = 5.14, p = 0.0109, d = 2.10, Bonferroni corrected).</s><s>To explore the spatial distribution of these effects, we examined the correspondence between the retinotopic preference and attentional modulation or tuned normalization strength measures.</s><s>Using pRF mapping procedures <ref type="bibr" target="#b53">54,</ref><ref type="bibr" target="#b54">55</ref> , we estimated the preference for spatial position for every voxel, allowing us to assess potential biases in both measures of interest, based on retinotopic preference.</s><s>There did  not appear to be any strong clustering of either of our two measures across spatial position.</s><s>This suggests that while both attentional modulation and normalization strength share a tight relationship, this is not driven by a systematic coarse-scale topographical organization (see Supplementary Fig. <ref type="figure">7</ref>).</s><s>Furthermore, to ensure that our results reflected a true relationship between normalization and attention, rather than being driven by differences in spurious factors, such as the signal-to-noise ratio (SNR), our analyses were restricted to the top 25% most visually responsive voxels within V1-V3, selected by ranking the significance obtained from a standard GLM analysis of an independent functional localizer.</s><s>Note that the relationship persists when all voxels within a respective region are used in the analyses (one-way ANOVA on Fisher-Z transformed Spearman correlations; F(2,17) = 2.78, p = 0.094, η 2 p = 0.270; post hoc two-sided one sample t-tests V1: t(5) = 5.30, p = 0.0096, d = 2.16, V2: t(5) = 3.42, p = 0.0567, d = 1.40, and V3: t(5) = 4.66, p = 0.0166, d = 1.90, Bonferroni corrected).</s><s>In addition, we examined whether the relationship between tuned normalization strength and attentional modulation was still evident even when we broke down our stringent voxel selection into four bins, according to ranked goodness of fit of responses to the visual localizer (Fig. <ref type="figure" target="#fig_4">4b</ref>).</s><s>While the observed correlation within V1 and V2 was not driven by differences in the goodness of fit of the localizer scans, as a similar relationship persisted in each bin, within V3 the correlation did seem driven by voxels that had a better fit The less pronounced relationship in extrastriate cortex is likely driven by the reduced heterogeneity and overall magnitude of tuned normalization strength observed in these visual areas (Fig. <ref type="figure" target="#fig_4">4</ref>, Supplementary Fig. <ref type="figure">8</ref>).</s><s>Taken together, leveraging the heterogeneity of population responses for attentional modulation and tuned normalization strength, our results reveal a tight link between these two measures, which was strongest in primary visual cortex, suggesting that a neural subpopulation's potential to increase its attentional gain is dependent on its tuned normalization strength.</s></p><p><s>Tuned normalization modulates spatial attention.</s><s>To provide converging evidence in support of the underlying relationship between tuned normalization and attention, we carried out an additional experiment, wherein we directly assessed whether attentional modulation is greater when the population response is put under a state of stronger normalization.</s><s>To do so, we measured BOLD responses for the overlaid stimuli configurations in separate blocks, similar to those constructed in Experiment 1, while covert spatial attention was directed to either the left or right side of fixation.</s><s>To leave enough headroom for an increased BOLD response with attention, we used a lower contrast stimulus (individual components 25% contrast, resulting in a combined overlaid stimulus of 50% contrast).</s><s>Participants performed a demanding probe detection task, detecting and discriminating whether a neutral gray Gaussian disk was embedded in the upper or lower visual field of the attended side of the screen, while maintaining fixation at the center of the screen (Fig. <ref type="figure" target="#fig_5">5a</ref>, Supplementary Fig. <ref type="figure">9</ref>, diameter probe 1.5°).</s><s>Note that the targets could appear on either side of fixation, and only the cue at fixation would indicate where to attend.</s><s>This experimental design allowed us to simultaneously measure BOLD responses for either configuration when attention was directed toward or away from the stimulus.</s></p><p><s>First, we assessed whether stimuli that share feature information (collinear configuration) yield stronger tuned normalization, compared with stimuli with dissimilar features (orthogonal configuration), when attention was directed to the opposite visual field.</s><s>In agreement with the results of Experiment 1, we found strong tuned normalization that decreased in its strength across visual areas (Fig. <ref type="figure" target="#fig_5">5b</ref>; repeated measures ANOVA interaction effect F(2,15) = 4.116, p = 0.038, η 2 p = 0.354; tuned normalization post hoc analysis two-sided paired t-test; V1: t(5) = 5.46, p = 0.008, d = 2.23, V2: t(5) = 4.84, p = 0.014, d = 1.99, and V3: t(5) = 5.80, p = 0.006, d = 2.32, Bonferroni corrected; one-way ANOVA across visual areas F(2,17) = 4.12, p = 0.038, η 2 p = 0.354).</s><s>Having established that there is strong tuned normalization when attention is directed away, we then set out to test whether tuned normalization truly dictates the magnitude of attentional modulation.</s><s>We hypothesized that the largest attentional effects would be evident when a neural population experiences stronger normalization, induced by the similarity between the features of the overlaid stimuli (i.e., attentional effects for collinear &gt;orthogonal).</s></p><p><s>To quantify the magnitude of attentional modulation, we computed the difference between responses when attention was directed toward vs. away, from either the collinear or orthogonal stimuli configurations.</s><s>We discovered that attentional effects were indeed the greatest for the collinear stimulus configuration, when neural responses were put under a stronger state of normalization (Fig. <ref type="figure" target="#fig_5">5c</ref>; repeated measures ANOVA main effect of stimulus configuration F(1,15) = 12.43, p = 0.003, η 2 p = 0.453; while main effect for visual area and the interaction did not reach significance, p &gt; 0.2).</s><s>These results provide direct evidence to suggest that a more strongly normalized population is more susceptible to an attention-facilitated increase in gain.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>Taken together, our results reveal that a neural population's capability for attentional benefits is tightly linked to feature-tuned normalization.</s><s>The magnitude of attentional modulation depends on the degree to which a population has normalized its response, based on the degree of feature similarity within an image.</s><s>In the first experiment, we utilized an efficacious method to probe orientation-tuned normalization of population responses within human early visual cortex.</s><s>By superimposing stimuli that differed in their orientation content, we found that BOLD responses were lower for stimuli that matched in their visual features, compared with stimuli that were comprised of different features.</s><s>In a second experiment, we found a tight voxel-wise relationship between this measure of tuned normalization strength and an independent measure of attention modulation, suggesting that attention optimizes information processing by modulating divisive normalization.</s><s>Critically, in a third experiment, we provided direct converging evidence that the magnitude of attentional benefits depends on the degree to which a population has normalized its response; when a neural population was put under a stronger suppressive state, the largest attentional effects emerged.</s></p><p><s>Our results square with a normalization-based model of attention, which posits that attentional modulation arises through interactions with divisive normalization <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b31">32</ref> .</s><s>This model is the prevailing theory, to date, by which attention is believed to act upon neural responses.</s><s>While previous work provided support for this model <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b55">56</ref> , our results extend the notion that normalization-driven properties of attention are feature selective <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b29">30,</ref><ref type="bibr" target="#b56">57</ref> .</s><s>The standard normalization model proposes that the spatial extent of an 'attention field' can reshape either relative to the stimulus size or to match a particular feature in order to modulate a population response, and suppression is considered to be feature-agnostic, acting independently from the selective properties computed within a respective region.</s><s>However, divisive normalization is modulated by contextual influences, where feature similarity results in stronger normalization, a property the model currently does not account for.</s><s>Extending the standard normalization model by incorporating a tuned component into the suppressive drive could potentially account for differences between the two stimuli configurations (Fig. <ref type="figure" target="#fig_1">2d</ref> and see the Methods section).</s><s>Previous work has suggested that instead of incorporating a tuned suppressive component into the normalization model of attention, a more parsimonious description to explain differences in the magnitude of suppression is by allowing attention to be feature-selective <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b33">34</ref> .</s><s>While the notion of feature-based attention is well established <ref type="bibr" target="#b57">58,</ref><ref type="bibr" target="#b58">59</ref> , incorporating this into the normalization model does not account for the results we have presented here.</s><s>In our study, we provide evidence that differences between the two stimuli configurations emerge even when they were unattended (Figs.</s><s><ref type="figure" target="#fig_1">2d</ref> and<ref type="figure" target="#fig_5">5b</ref>), suggesting that tuned inhibition can arise in the absence of any aid of top-down attentional feedback.</s><s>Furthermore, in a third experiment we manipulated spatial attention, while holding factors such as stimulus size, attentional window size, and contrast relatively constant, in order to investigate the role that feature-tuned normalization has on attentional modulation (Fig. <ref type="figure" target="#fig_5">5</ref>).</s><s>We find that the magnitude of attention is greatest when stimuli match in their visual features.</s><s>This finding is not readily explained by the normalization model of attention, and instead would need to be extended such that feature similarity results in a release from normalization with attention.</s><s>Future research measuring the full neural contrast response function, and manipulating features such as the size and shape of the attentional window, will shed more light on precisely how this contribution of feature-tuning is best incorporated into the normalization model of attention.</s><s>Normalization has been proposed to be a canonical computation throughout cortex, and relies on several mechanisms which all serve to regulate the relative strength between neural representations.</s><s>Two well-established mechanisms within early visual cortex are surround suppression and cross-orientation inhibition <ref type="bibr" target="#b59">60,</ref><ref type="bibr" target="#b60">61</ref> .</s><s>Surround suppression is characterized as the modulation of the neural response within the classical receptive field, as a result of the intensity of stimulation presented outside of the receptive field <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b61">62</ref> , while cross-orientation inhibition is the modulation of the neural response induced by presenting two superimposed oriented stimuli components within the classical receptive field <ref type="bibr" target="#b60">61,</ref><ref type="bibr" target="#b62">63,</ref><ref type="bibr" target="#b63">64</ref> .</s><s>Neuroimaging and psychophysical experiments cannot precisely target a single receptive field, and instead these methods measure population responses evoked by relatively large stimuli, with the spatial area typically spanning far beyond the receptive field of any individual neuron <ref type="bibr" target="#b64">65</ref> .</s><s>This likely makes the interactions arising from overlay stimuli, as used here, more analogous to surround suppression.</s><s>While neuroimaging and psychophysical studies using a typical center-surround stimuli often report an attenuation of the response to the center stimulus <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b38">39,</ref><ref type="bibr" target="#b65">66</ref> , it is important to consider that this center does not correspond to any particular receptive field center.</s><s>Instead, the center stimulus drives the response of a large population of neurons, of which only those neurons close to the border between the center and surround stimulus are likely to be attenuated <ref type="bibr" target="#b64">65,</ref><ref type="bibr" target="#b66">67</ref> .</s><s>In this study, we set out to optimize surround suppression by superimposing our stimuli configurations, presented full field (15°v isual angle stimulus diameter).</s><s>We hypothesized that by keeping the orientation of one of the components constant and manipulating the orientation of the second component, we can induce normalization more analogous to surround suppression within all neural populations with receptive fields falling within our stimulus bounds.</s><s>The superimposed configurations indeed elicited the predicted population responses that one would expect from feature-tuned normalization <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b64">65,</ref><ref type="bibr" target="#b67">68,</ref><ref type="bibr" target="#b68">69</ref> , as we found lower BOLD responses for those configurations that matched in their orientation content, compared with configurations with orthogonal orientation information.</s></p><p><s>Feature-tuned normalization is suggested to play an active role in the efficient coding of natural stimuli <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b69">70,</ref><ref type="bibr" target="#b70">71</ref> . Our v</s><s>sual environment is comprised of statistical biases between image features, whereby nearby edges have a higher probability to be cooriented and belonging to the same contour, as compared with more distant edges <ref type="bibr" target="#b16">17</ref> .</s><s>A tuned normalization pool could perhaps incorporate these statistical dependencies by attenuating its strength where features match, leading to an effective boost of the responses at discontinuities, where features are no longer quite as co-aligned.</s><s>While tuned normalization plays a role by prioritizing processing for salient items, potentially aiding the visual system in segregating figure from ground, we ultimately rely on top-down attentional systems to selectively enhance a small subset of that information for prioritized processing.</s><s>Selective attention may interact with this figure/ground segregation process by selectively highlighting objects in the environment, which often are defined by their common feature properties.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head><p><s>Observers.</s><s>Six healthy adults participated in the first two experiments (3 male, mean age = 30), and seven adults (2 male, mean age = 28) participated in the third experiment.</s><s>Five adults participated in all three experiments.</s><s>All observers provided written informed consent, and had normal or corrected-to-normal vision.</s><s>The Boston University Institutional Review Board approved the study.</s><s>One observer who participated in the final experiment was excluded from further data analysis, based on consistent eye movements toward the cued spatial locations (eye-movement analysis revealed a mean deviation from fixation of &gt;1°).</s><s>A power analysis indicated that six subjects would be sufficient to detect the predicted attention effects.</s><s>Indeed, this sample size is consistent with previous fMRI attention and vision studies <ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b50">51,</ref><ref type="bibr" target="#b52">53,</ref><ref type="bibr" target="#b58">59,</ref><ref type="bibr" target="#b71">72</ref> .</s></p><p><s>Apparatus and stimuli.</s><s>Stimuli were generated using Matlab (R2013a) in conjunction with the Psychophysics Toolbox <ref type="bibr" target="#b72">73,</ref><ref type="bibr" target="#b73">74</ref> , rendered on a Macbook Pro (OS X 10.7), and were displayed on a rear-projection screen (subtending ~21°× 16°) using a gamma-corrected projector.</s><s>Participants viewed the display through a front surface mirror.</s><s>Participants were placed comfortably in the scanner with their heads fixed, using padding to minimize head motion.</s><s>Stimuli consisted of bandpass-filtered noise gratings (outer diameter: 15°; inner diameter: 3°; at 50% Michelson contrast).</s><s>The bandpass filter spared only spatial frequencies between 2 and 3 cycles/°, orientation content centered at 45°or 135°(orientation bandwidth of 10°), and was smoothed in the Fourier domain to avoid Gibbs ringing artifacts.</s></p><p><s>Tuned normalization experiment.</s><s>Stimuli were the linear combination of the stimuli described above.</s><s>Superimposing these components created either orthogonal (45°/135°and 135°/45°) or collinear (45°/45°and 135°/135°) stimuli, which resulted in a doubling of the contrast to 100% Michelson contrast.</s></p><p><s>The two overlaid stimuli configurations were presented at 2 Hz (250 ms on, 250 ms off) for 14 s, where each stimulus presentation within a block consisted of unique random noise stimuli.</s><s>Blocks (2 s cue; 14 s stimulus presentation) were pseudo-randomized over the course of a run, and interleaved with 16 s fixation periods.</s><s>Throughout the experiment observers performed a demanding fixation task, finding targets in a rapid letter stream presented at fixation (5 Hz, letter size: 0.7°).</s><s>During stimulus presentation blocks, target letters would appear with a probability of 30%, and participants reported whenever they detected a 'J' or a 'K' amongst distractor letters (Supplementary Fig. <ref type="figure">1</ref>).</s><s>Observers were capable of discriminating the target letters with high accuracy (mean = 0.93, S.E.M. = 0.02).</s></p><p><s>In addition to the overlaid stimuli, in separate runs we measured the BOLD response to an individual stimulus component (50% Michelson contrast), and doubled this obtained response to create a hypothetical additive sum.</s><s>Oriented stimuli (45°&amp; 135°) were presented at 2 Hz in separate blocks (2 s cue, 14 s stimulus presentation), and were interleaved with baseline periods.</s><s>Observers performed the same fixation task as described above, reporting the presence of target letters embedded in a rapid letter stream presented at fixation (performance: mean = 0.88, S.E.M. = 0.04).</s><s>Participants completed 5-10 fMRI runs; each run took 272 s to complete (8 stimulus blocks per run).</s><s>In addition, a scan session included two visual localizer scans, in which a flickering and rotating contrast pattern was presented within the same aperture as the filtered noise stimuli (blocked presentation, 16 s on and off; 6 stimulus blocks per run).</s></p><p><s>Attention modulation experiment.</s><s>To examine the voxel-wise relationship between tuned normalization and attention, we obtained a measure of attentional modulation within the same scan sessions as the previous experiment (n = 6).</s><s>In this experiment, orientation stimuli (single component of the stimuli described above; orientation content centered on 45°or 135°; at 50% Michelson contrast) were presented at 2 Hz during a block (2 s cue, 14 s stimulus presentation).</s><s>Participants were informed at the start of each stimulus presentation block with a cue (2 s) whether to either attend toward the stimuli, or to attend away from the grating (Supplementary Fig. <ref type="figure">6</ref>).</s><s>During attended stimulus blocks, observers performed an orientation discrimination task, detecting and discriminating a change in the orientation of the stimulus compared with the global orientation (45°or 135°), target stimuli appeared with a probability of 60% throughout the stimulus block.</s><s>To match task difficulty for the orientation task across observers, we titrated individual thresholds to yield an accuracy of 75%.</s><s>During unattended stimulus blocks observers performed the same fixation task as described above; target letters appeared with a probability of 30%.</s><s>All stimulus presentation blocks were completely identical, as both orientation and target letters would appear throughout a block, and only the initial cue informed the participant which task to perform (Supplementary Fig. <ref type="figure">6</ref>).</s><s>The two attentional condition blocks were pseudorandomized over the course of the run, each interleaved with 16 s baseline periods.</s><s>Behavioral data indicated performance for both tasks was well above chance (attended task: mean = 0.75, S.E.M. = 0.05, unattended task: mean = 0.88, S.E.M. = 0.04).</s><s>Participants completed 5-10 fMRI runs; each run took 272 s to complete (8 stimulus blocks per run).</s></p><p><s>Spatial attention experiment.</s><s>To directly assess whether attention modulates local gain control, we manipulated covert spatial attention for both stimuli configurations.</s><s>Participants (n = 6) were instructed to maintain their gaze within a fixation circle (diameter, 1°) at the center of the display.</s><s>Observers viewed stimuli that were the linear combinations of the same bandpass-filtered noise stimuli described above (outer diameter 15°; inner diameter 3°; spared midline), resulting in either orthogonal (45°/135°and 135°/45°) or collinear (45°/45°and 135°/135°) stimuli.</s><s>Each individual component was rendered at 25% Michelson contrast, resulting in a combined grating of 50% Michelson contrast.</s><s>Note that the overall contrast of these superimposed stimuli was lower than in the previous normalization experiment, as we wanted to leave enough headroom in the response for the attentional manipulation to take effect.</s></p><p><s>A cue (2 s) at the start of each block informed the participant to allocate their covert spatial attention to either the left or right side of a central fixation point, and remained displayed throughout the block (16 s total block duration; Supplementary Fig. <ref type="figure">9</ref>).</s><s>Observers performed a demanding probe detection task, detecting and discriminating whether a neutral gray Gaussian disk appeared at a random location within the upper or lower visual field on the attended side of fixation (probe size 1.5°, with smoothed edges).</s><s>Probes could appear on either side of fixation throughout a stimulus block.</s><s>However, observers were instructed to only respond to targets presented on the attended side, as indicated by the cue presented at fixation.</s><s>The stimulus configuration displayed on either side of fixation was held constant within a block.</s><s>Stimulus configuration and attention conditions were counter-balanced and presented in a pseudorandom order, and were interleaved with fixation blocks of equal duration.</s><s>The behavioral ability to discriminate between targets was comparable for both stimuli configurations, as confirmed by measures acquired outside the scanner (collinear: mean = 0.87, S.E.M. = 0.03; orthogonal: mean = 0.90, S.E.M. = 0.03; paired t-test: t(5) = 0.502, p = 0.637).</s><s>Participants completed 8-14 fMRI runs; each run took 272 s to complete (8 stimulus blocks per run).</s><s>In addition, a scan session included two visual localizer scans, in which a flickering and rotating contrast pattern was presented within the same aperture as the stimuli (blocked presentation, 16 s on and off; 6 stimulus blocks per run).</s><s>fMRI data acquisition and preprocessing.</s><s>MRI data were acquired at Harvard University's Center for Brain Science Neuroimaging Center (Cambridge, Massachusetts).</s><s>Data for the first two experiments were collected in a single scan session, using a 3.0 Tesla Tim Trio MRI Scanner (Siemens, Erlangen, Germany) equipped with a 32-channel head coil.</s><s>A scan lasted 2 h, during which we acquired: an anatomical scan (voxel size: 1.2 mm isotropic) using a T1-weighted multi-echo MPRAGE sequence, and functional volumes with whole brain coverage using a simultaneous multislice (SMS) acquisition protocol (69 slices, TR = 2 s, TE = 30 ms, flip angle = 80°, FoV = 216 mm, voxel size = 2 mm isotropic, in-plane acceleration factor 3, multiband factor 3 <ref type="bibr" target="#b74">75,</ref><ref type="bibr" target="#b75">76</ref> .</s><s>The final experiment was collected using a 3.0 Tesla Prisma MRI Scanner equipped with a 64-channel head coil.</s><s>A scan lasted 1.5-2 h, during which we acquired: an anatomical scan (voxel size: 1.2 mm isotropic) using a T1-weighted multi-echo MPRAGE sequence, and functional volumes with whole brain coverage using a SMS acquisition protocol (72 slices, TR = 2 s, TE = 30 ms, flip angle = 80°, FoV = 208 mm, voxel size = 2 mm isotropic, in-plane acceleration factor 3, multiband factor 3 <ref type="bibr" target="#b74">75,</ref><ref type="bibr" target="#b76">77,</ref><ref type="bibr" target="#b77">78</ref> .</s><s>All analyses were performed in the native space for each participant.</s><s>Functional volumes were aligned to reconstructed anatomical data, using a surface-based registration between the structural and functional MRI volumes implemented in Freesurfer <ref type="bibr" target="#b78">79</ref> .</s><s>Functional data were preprocessed using standard motion-correction procedures, Siemens slice timing correction, and boundary-based registration <ref type="bibr" target="#b78">79,</ref><ref type="bibr" target="#b79">80</ref> .</s><s>To optimize voxel-wise analyses, no volumetric spatial smoothing was performed.</s><s>Robust rigid registration <ref type="bibr" target="#b80">81</ref> was performed to align experimental data within each scan session, using the middle time-point of each scan.</s><s>All further analyses were conducted using custom code written in Matlab.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Regions of interest.</head><p><s>Population receptive field data collected during a separate scan session were analyzed using the 'analyzePRF' Matlab toolbox, and used to define regions of interest up to area V3 <ref type="bibr" target="#b53">54,</ref><ref type="bibr" target="#b54">55</ref> .</s><s>Not all subjects were available for pRF scanning; for one participant in Experiments 1 and 2, and one participant in Experiment 3, we defined retinotopic regions based on traditional retinotopy scans following standard procedures <ref type="bibr" target="#b81">82</ref> .</s><s>Within the regions of interest, we defined the top 25% of voxels based on the independent localizer scans (using a standard GLM analysis, selecting the most visually responsive voxels by their respective significance values) for those voxels whose estimated population receptive field (pRF) location fell within the stimulus aperture (15°diameter).</s><s>For the participants that did not complete pRF scanning, a fixed localizer significance cut-off was used that yielded a similar number of total voxels, compared with the other participants.</s><s>This voxel selection ensured that our analysis would be based on voxels that were visually responsive to the localizer stimulus.</s><s>fMRI data analysis.</s><s>The preprocessed and aligned raw MRI time series per scan, for each voxel, was detrended, high-pass filtered and converted to percent signal change.</s><s>Task data for all experiments were analyzed by obtaining the activity pattern for each stimulus block, and temporally averaging the BOLD activity across all block of the same condition for every voxel within the ROI, after time shifting by three TRs to account for the hemodynamic lag (Supplementary Figs. 1, 6 &amp; 9).</s><s>For Experiment 1, we quantified the difference between the BOLD response evoked by the orthogonal or collinear stimulus configurations by computing a difference, where a positive difference signals stronger normalization (Fig. <ref type="figure" target="#fig_2">3a</ref>).</s><s>For Experiment 2, we similarly quantified attentional modulation as the difference between attended vs. unattended blocks (Fig. <ref type="figure" target="#fig_2">3b</ref>).</s></p><p><s>To compare the degree of voxel-wise dependency between these two measures we computed a Spearman correlation, for the voxels that passed the stringent voxel selection described above within the defined V1-V3 regions, which was Fisher-Z transformed to allow for comparison between observers (Fig. <ref type="figure" target="#fig_4">4a</ref>).</s><s>To ensure that the correlations were not driven by a signal-to-noise ratio (SNR) difference, our voxel selection was broken up into four equal bins, demonstrating similar correlations within each bin (Fig. <ref type="figure" target="#fig_4">4b</ref>).</s><s>To ensure that outliers did not drive the computed correlations, we discounted voxels for this voxel-wise correlation analysis that exceeded the mean normalization strength or attentional modulation measure (for each observer) by more than 3 s.d.</s><s>(between 0 and 8 voxels were discounted for each observer, within a respective region).</s></p><p><s>For Experiment 3, covert spatial attention was manipulated to either the left or right side from central fixation, leaving the opposite visual field unattended.</s><s>This allowed us to examine the effect of attention when attention was either directed toward or away from either visual field, for both collinear and orthogonal stimuli configurations (Supplementary Fig. <ref type="figure">9</ref>).</s><s>To quantify the magnitude of attentional modulation, we computed the difference between attending toward vs. attending away (Fig. <ref type="figure" target="#fig_5">5</ref>).</s></p><p><s>Modeling image statistics.</s><s>To assess the image statistics of our two stimuli configurations we first analyzed the power of the two image classes in the frequency domain using a standard 2-D Fourier transform.</s><s>We generated 1000 unique bandpass-filtered noise images, which were combined either in a collinear or orthogonal configuration, resulting in 500 overlaid stimuli within each image class (see the Apparatus and Stimuli section; the size was matched to the screen resolution and visual angle to those images used in the experiments, so that these images were identical to the ones participants viewed in the scanner).</s><s>Collapsing the Fourier domain power at each frequency band, over all orientations, confirmed that both image types carry the most power (beside the DC component) in those frequency bands the bandpass filter spared (2-3 cycles/°, see above; Fig. <ref type="figure" target="#fig_1">2a</ref>).</s></p><p><s>Next, we constructed a V1-based energy detection model to describe a plausible underlying neural mechanism that resolves the discrepancy between the image statistics and the evoked BOLD response for each image configuration.</s><s>We fed the same set of 1000 images used for the Fourier analysis into the V1-based energy detection model consisting of a bank of linear filters <ref type="bibr" target="#b43">[44]</ref><ref type="bibr" target="#b44">[45]</ref><ref type="bibr" target="#b45">[46]</ref><ref type="bibr" target="#b46">[47]</ref><ref type="bibr" target="#b47">[48]</ref><ref type="bibr" target="#b48">[49]</ref> .</s><s>Because edge effects can introduce spurious output, images were not masked to match the circular stimulus configuration, and they were padded on the sides with 20% of the stimulus size (resulting in an image resolution of 775 × 775 pixels).</s><s>The bank of linear filters consisted of 36 spatial frequencies (evenly spaced between 0.5 and 4 cycles/°), 8 orientations (evenly spaced between 0 and 180°), 2 phases (0, pi/2), with a receptive field size of 2°visual angle (Fig. <ref type="figure" target="#fig_1">2b</ref>).</s><s>After convolving each pixel within the image with following filters, we combined the quadrature-phase pairs analogous to a complex-cell energy model <ref type="bibr" target="#b44">45,</ref><ref type="bibr" target="#b82">83</ref>  where Energy pos,or,sf represents the complex-cell energy for each image at a given position, orientation and spatial frequency, and filter pos,or,sf,ph represents the Gabor filter at each particular position, orientation, spatial frequency, and phase.</s></p><p><s>The contrast energy for all quadrature pairs were summed across spatial frequency scales and averaged over space, resulting in a measure of pooled contrast energy within each orientation channel (Fig. <ref type="figure" target="#fig_1">2b</ref></s></p><p><s>where TE or represents the total stimulus contrast energy at a given orientation, and num_pos reflects the total number of pixels within an image (775 × 775).</s><s>Each images' summarized complex-cell output undergoes untuned divisive normalization, effectively acting as a contrast gain control operator <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b49">50</ref></s></p><formula xml:id="formula_1">þ σ<label>ð3Þ</label></formula><p><s>where, R untuned represents the normalized stimulus energy of each image, num_or reflects the total number of orientation channels, σ is a constant (constrained at 0.5), and n reflects the nonlinearity in the gain of the response (constrained at 1).</s></p><p><s>For illustrative purposes we computed the total mean stimulus energy over all 1000 images (combining both collinear and orthogonal image configurations) to demean each output, and the maximum stimulus energy over all images to normalize to 1 (Fig. <ref type="figure" target="#fig_1">2c</ref>).</s></p><p><s>Here, we incorporate a tuned component to the normalization pool <ref type="bibr" target="#b83">84</ref> , to account for the stronger sub-additive response to the collinear stimulus configuration.</s><s>The untuned component pools equally over all oriented filters (see Eq. ( <ref type="formula" target="#formula_1">3</ref>)), while the tuned component only contains information in the orientation channel matching the orientation image statistics:</s></p><formula xml:id="formula_2">R tuned ¼ X or TE or n ω or TE or ð Þ n þ P TE or num or n þ σ<label>ð4Þ</label></formula><p><s>where, R tuned represents the normalization stimulus energy of each image, ω or reflects an array of the same size as TE or , and only the orientation channel matching the collinear stimulus configuration statistics are non-zero, allowing a contribution of tuned normalization (i.e., the tuned component could only modulate energy in the 45°orientation channel; Fig. <ref type="figure" target="#fig_1">2d</ref>).</s><s>Future research measuring the full neural contrast response function, and manipulating features such as the size and shape of the attentional window, will shed more light on precisely how this contribution of feature-tuning is best incorporated into the normalization model of attention.</s></p><p><s>Eye-position monitoring.</s><s>Eye-tracking data were acquired for 5 out of 6 observers for Experiments 1 and 2 (collected within the same scan session), and for 6 out of 7 observers for Experiment 3, using a MR-compatible SR Research EyeLink 1000 system (sampled at 1 kHz).</s><s>After removing blinks, the mean distance from fixation was computed during time windows corresponding to the stimuli blocks.</s><s>Specifically, we first calculated the x-and y-deviations, and then for Experiments 1 and 2 computed the absolute distance from fixation, while for Experiment 3 we focused on the x-trace displacement as it gives a better indication whether participants made eye movements toward the cued attended side.</s><s>In both scan sessions eye movements were not &gt;0.25°f</s><s>rom central fixation (first scan session: 0.24°; second scan session: 0.18°), remaining well within the fixation circle (diameter 1°).</s><s>However, one observer in Experiment 3 made eye movements &gt;1°toward the attended side and was excluded from further data analysis.</s><s>Importantly, for all other observers eye movements did not differ between stimulus configurations, when cued to attend either side of the visual field (repeated measures ANOVA: F(1,5) = 0.92, p = 0.381).</s></p><p><s>Reporting summary.</s><s>Further information on research design is available in the Nature Research Reporting Summary linked to this article.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc><div><p><s>Fig. 1 Sub-additivity as a measure of tuned normalization.</s><s>a Schematic of stimuli used to measure sub-additivity.</s><s>Two oriented stimuli components (outer diameter 15°; inner diameter 3°, at 50% Michelson contrast, spatial frequencies between 2 and 3 cycles/°; orientation bandwidth of 10°) were linearly summed in either an orthogonal (top; blue) or a collinear (bottom; orange) configuration, resulting in a full contrast stimulus.</s><s>Stimuli are modified for illustrative purposes.</s><s>b Average BOLD responses across observers for orthogonal (blue) and collinear (orange) configurations.</s><s>A hypothetical additive response (black) was created by summing the average response evoked by both individual stimulus components (45°&amp; 135°).</s><s>Dots represent individual observers; N = 6; error bars denote ± 1 S.E.M. c Voxel-wise relationship of the deviation from additivity for both stimuli configurations in V1.</s><s>BOLD responses were normalized for each participant.</s><s>Small colored dots indicate individual voxels; larger black dots represent the whole ROI average per observer.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2</head><label>2</label><figDesc><div><p><s>Fig.2Image statistics between collinear and orthogonal stimuli did not differ.</s><s>a Average normalized power obtained with a 2D Fourier transform of 500 images within each stimulus configuration (collapsed across phase).</s><s>Error bars denote ± 1 S.E.M. b Energy detector model.</s><s>Stimuli were convolved with a set of Gabor filters across space (centered on every pixel of the image), phase (two phases to create a quadrature pair), spatial frequency (36 scales, ranged between 0.5-4 cycles/°), and orientations (eight orientation channels).</s><s>The quadrature-phase pairs were squared, summed, square-rooted, and normalized to 1, to generate a complex-cell response at the eight orientation channels for each image, see Methods.</s><s>Overall stimulus energy was demeaned across all images of both stimuli configurations and normalized by its maximum value, mainly for illustrative purposes.</s><s>Error bars denote ± 1 S.E.M. c To account for contrast saturation, divisive normalization was applied to the total stimulus energy obtained from the filter outputs, and we combined all orientation channels to obtain one stimulus energy value per image.</s><s>As is evident, the distributions of stimulus energy for both stimuli configurations are highly comparable when divisive normalization is applied.</s><s>d Incorporating a tuned component to the normalization term results in a separation of the energy distributions in which collinear stimuli have a relatively lower stimulus energy, see Methods.</s></p></div></figDesc><graphic coords="4,196.21,236.57,74.20,74.08" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3</head><label>3</label><figDesc><div><p><s>Fig. 3 Measures of tuned normalization strength and attention modulation.</s><s>a Tuned normalization strength reflects the difference between BOLD responses evoked by orthogonal and collinear stimuli blocks (% signal change).</s><s>The orthogonal configuration elicited larger BOLD responses compared with the collinear configuration across V1-V3.</s><s>b Attention modulation reflects the difference in BOLD response between attended and unattended stimuli blocks (% signal change).</s><s>We observed large attention modulation across V1-V3.</s><s>Error bars denote ± 1 S.E.M.; N = 6; colored dots indicate individual observers.</s></p></div></figDesc><graphic coords="4,202.06,139.49,72.04,50.80" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head></head><label></label><figDesc><div><p><s>(one-way ANOVA of Fisher-Z transformed Spearman correlations across bins; V1: F(3,20) = 0.52, p = 0.672, η 2 p = 0.073; V2: F (3,20) = 0.62, p = 0.612, η 2 p = 0.085; and V3: F(3,20) = 3.97, p = 0.023, η 2 p = 0.373).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4</head><label>4</label><figDesc><div><p><s>Fig.4 Attentional modulation as a function of tuned normalization strength.</s><s>a A tight relationship between tuned normalization strength and attentional modulation is evident for the top 25% selected voxels for each observer, see Methods.</s><s>Dots illustrate individual voxels within an area, colors represent a unique participant.</s><s>b Spearman correlations were computed for each observer, gray bars represent the mean correlation across observers, while the colored bars represent the correlations when the voxel selection is broken down into four bins based on the independent visual localizer (red: bottom 25%, yellow: top 25%).</s><s>All Spearman correlations were transformed into a Fisher-Z-statistic to allow for statistical comparisons between observers, see Methods.</s><s>Error bars denote ± 1 S.E.M.; N = 6; colored dots illustrate individual observers.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 5</head><label>5</label><figDesc><div><p><s>Fig. 5 Tuned normalization modulates spatial attention.</s><s>a Stimuli were comprised of orientation bandpass-filtered noise gratings (outer diameter 15°; inner diameter 3°; spared midline; individual component was rendered at 25% Michelson contrast, resulting in a combined grating of 50% Michelson contrast), comparable to stimuli used for Experiment 1. Participants performed a demanding spatial attention task, detecting and discriminating a small gray Gaussian disk embedded in either the upper or lower visual field of the attended location (a cue presented throughout the block at fixation informed the participant to attend the left or right side of fixation).</s><s>b Tuned normalization strength represents the difference between BOLD responses evoked by orthogonal and collinear stimuli blocks when attention was directed away (% signal change).</s><s>The orthogonal configuration elicited larger BOLD responses compared with the collinear configuration across V1-V3.</s><s>c Attention modulation reflects the difference between BOLD responses when spatial attention was either directed toward or away from the stimuli locations, for both collinear and orthogonal configurations.</s><s>Error bars denote ± 1 S.E.M., N = 6, gray dots illustrate different participants; stimuli are modified for illustrative purposes.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head></head><label></label><figDesc><div><p><s>Voxel-wise relationship of the deviation from additivity for both stimuli configurations in V1.</s><s>BOLD responses were normalized for each participant.</s><s>Small colored dots indicate individual voxels; larger black dots represent the whole ROI average per observer.</s></p></div></figDesc><table><row><cell>1 Sub-additivity as a measure of tuned normalization. a Schematic of</cell></row><row><cell>stimuli used to measure sub-additivity. Two oriented stimuli components</cell></row><row><cell>(outer diameter 15°; inner diameter 3°, at 50% Michelson contrast, spatial</cell></row><row><cell>frequencies between 2 and 3 cycles/°; orientation bandwidth of 10°) were</cell></row><row><cell>linearly summed in either an orthogonal (top; blue) or a collinear (bottom;</cell></row><row><cell>orange) configuration, resulting in a full contrast stimulus. Stimuli are</cell></row><row><cell>modified for illustrative purposes. b Average BOLD responses across</cell></row><row><cell>observers for orthogonal (blue) and collinear (orange) configurations. A</cell></row><row><cell>hypothetical additive response (black) was created by summing the</cell></row><row><cell>average response evoked by both individual stimulus components (45°&amp;</cell></row><row><cell>135°). Dots represent individual observers; N = 6; error bars denote ± 1</cell></row><row><cell>S.E.M. c</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head></head><label></label><figDesc><div><p><s>:</s></p></div></figDesc><table><row><cell>Energy pos;or;sf ¼</cell><cell>s</cell><cell>ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi ffi X 2 image Á filter pos;or;sf ;ph</cell><cell>ð1Þ</cell></row><row><cell></cell><cell></cell><cell>ph</cell><cell></cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head></head><label></label><figDesc><div><p><s>:</s></p></div></figDesc><table><row><cell>R untuned ¼</cell><cell>X or</cell><cell>P</cell><cell>TE or TE or</cell><cell>n n</cell></row><row><cell></cell><cell></cell><cell cols="2">num or</cell><cell></cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>NATURE COMMUNICATIONS | (2019) 10:5660 | https://doi.org/10.1038/s41467-019-13597-1</s><s>| www.nature.com/naturecommunications</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank <rs type="person">Louis Vinke &amp; Sara Aghajari</rs> for assistance with data collection, <rs type="person">Janneke Jehee</rs>, <rs type="person">Joe McGuire</rs>, <rs type="person">Rosanne Rademaker</rs> and members of the <rs type="institution">Ling Lab</rs> for helpful comments and suggestions.We thank <rs type="person">Himanshu Bhat</rs> and <rs type="person">Thomas Benner</rs> (<rs type="affiliation">Siemens Healthcare</rs>) and <rs type="person">Steven Cauley</rs> (<rs type="affiliation">MGH</rs>) for modifying and supplying the simultaneous multislice-BOLD imaging sequence.This work was supported by <rs type="funder">NIH</rs> <rs type="grantNumber">EY028163</rs> (S.L.).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_NXPvSQD">
+					<idno type="grant-number">EY028163</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p><s>We have uploaded all preprocessed fMRI and behavioral data, to the Open Science Framework (OSF) at https://osf.io/4qz37.</s><s>A reporting summary for this Article is available as a Supplementary Information file.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code availability</head><p><s>The experimental scripts used during data collection and analysis code to generate all figures in the manuscript are available from the Open Science Framework (OSF) at https://osf.io/4qz37.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author contributions</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing interests</head><p><s>The authors declare no competing interests.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Normalization regulates competition for visual awareness</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Blake</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page" from="531" to="540" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Normalization of cell responses in cat striate cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Vis. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="181" to="197" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Normalization as a canonical neural computation</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">51</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Contour enhancement, short term memory, and constancies in reverberating neural networks</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grossberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Stud. Appl. Math</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="page" from="213" to="257" />
+			<date type="published" when="1973">1973</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The normalization model of attention</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="168" to="185" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Linearity and normalization in simple cells of the macaque primary visual cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Movshon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="8621" to="8644" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Contrast gain control in auditory cortex</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Rabinowitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Willmore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schnupp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>King</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="1178" to="1191" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">A normalization model of multisensory integration</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohshiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Angelaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Deangelis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">775</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Visual attention and flexible normalization pools</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Schwartz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Coen-Cagli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vis</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="25" to="25" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Tuned normalization explains the size of attention modulations</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Ni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="803" to="813" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Value normalization in decision making: theory and evidence</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rangel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Clithero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="970" to="981" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Towards a theory of the laminar architecture of cerebral cortex: computational clues from the visual system</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Raizada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grossberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb. Cortex</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="100" to="113" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">A normalization model suggests that attention changes the weighting of inputs between visual areas</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Ruff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="4085" to="E4094" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Normalization and the cholinergic microcircuit: a unified basis for attention</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Schmitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Duncan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Cogn. Sci</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="422" to="437" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Center-surround interactions in foveal and peripheral vision</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Vis. Res</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="3065" to="3072" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Nature and interaction of signals from the receptive field center and surround in macaque V1 neurons</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Cavanaugh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Movshon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="2530" to="2546" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Flexible gating of contextual influences in natural vision</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Coen-Cagli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Schwartz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1648" to="1655" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Characterizing the effects of feature salience and top-down attention in the early visual system</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Poltoratski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mccormack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="564" to="573" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Natural signal statistics and sensory gain control</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Schwartz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Simoncelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">819</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Neural representation of natural images in visual area V2</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Willmore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Prenger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Gallant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="2102" to="2114" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Sparse coding and decorrelation in primary visual cortex during natural vision</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Vinje</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Gallant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">287</biblScope>
+			<biblScope unit="page" from="1273" to="1276" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Circuits and mechanisms for surround modulation in visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Angelucci</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="1" to="27" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Attentional modulation interacts with orientation anisotropies in contrast perception</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Bloem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vis</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="6" to="6" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Attention alters orientation processing in the human lateral geniculate nucleus</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Pratte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="496" to="498" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Attention alters appearance</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carrasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Read</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">1194</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">An extended normalization model of attention accounts for feature-based attentional enhancement of both response and coherence gain</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Schwedhelm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Krishna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Treue</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plos Comput. Biol</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">1005225</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Neuromodulation of attention</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thiele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Bellgrove</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="769" to="785" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Changing the spatial scope of attention alters patterns of neural gain in human cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Itthipuripat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rungratsameetaweemana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Sprague</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Serences</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="112" to="123" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Effects of spatial attention on contrast response functions in macaque area V4</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Williford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="40" to="54" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Neuronal mechanisms of visual attention</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev. Vis. Sci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="373" to="391" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">A normalization model of attentional modulation of single unit responses</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">4651</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">How does the cerebral cortex work? Learning, attention, and grouping by the laminar circuits of visual cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grossberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Spat. Vis</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="163" to="185" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">When size matters: attention affects performance by contrast or response gain</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Herrmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Montaser-Kouhsari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carrasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">1554</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Attention determines contextual enhancement versus suppression in human primary visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Flevaris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">O</forename><surname>Murray</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="12273" to="12280" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Representation of concurrent stimuli by population activity in visual cortex</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Busse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Wade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page" from="931" to="942" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Cross-orientation suppression in human visual cortex</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Brouwer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="2108" to="2119" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Inter-ocular contrast normalization in human visual cortex</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Moradi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vis</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="13" to="13" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Gain control in the response of human visual cortex to plaids</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Mcdonald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Mannion</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Clifford</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page" from="2570" to="2580" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Response suppression in V1 agrees with psychophysics of surround masking</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zenger-Landolt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="6884" to="6893" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Human luminance pattern-vision mechanisms: masking experiments require a new model</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Foley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Opt. Soc. Am</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">1710</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Receptive fields and functional architecture of monkey striate cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hubel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wiesel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Physiology</title>
+		<imprint>
+			<biblScope unit="volume">195</biblScope>
+			<biblScope unit="page" from="215" to="243" />
+			<date type="published" when="1968">1968</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Dissociation of neural mechanisms underlying orientation processing in humans</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pearson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Blake</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="1458" to="1462" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Specificity of V1-V2 orientation networks in the primate visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Roe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">Y</forename><surname>Ts'o</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cortex</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="168" to="178" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Identifying natural images from human brain activity</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">N</forename><surname>Kay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Naselaris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Prenger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Gallant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">452</biblScope>
+			<biblScope unit="page">352</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">A two-stage cascade model of BOLD responses in human visual cortex</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">N</forename><surname>Kay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Winawer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rokem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mezer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Wandell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plos Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">1003079</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Image representation using 2D Gabor wavelets</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ieee T Pattern Anal</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="959" to="971" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">A parametric texture model based on joint statistics of complex wavelet coefficients</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Portilla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Simoncelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int J. Comput Vis</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="49" to="70" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">An evaluation of the two-dimensional Gabor filter model of simple receptive fields in cat striate cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Palmer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page" from="1233" to="1258" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Emergence of simple-cell receptive field properties by learning a sparse code for natural images</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Olshausen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Field</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">381</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Striate cortex of monkey and cat: contrast response function</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Albrecht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hamilton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="217" to="237" />
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Multiple spotlights of attentional selection in human visual cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Mcmains</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Somers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="677" to="686" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Mechanisms of directed attention in the human extrastriate cortex as revealed by functional MRI</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kastner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Weerd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Ungerleider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">282</biblScope>
+			<biblScope unit="page" from="108" to="111" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Spatial attention affects brain activity in human primary visual cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Gandhi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Boynton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="3314" to="3319" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Population receptive field estimates in human visual cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">O</forename><surname>Dumoulin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Wandell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="647" to="660" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Compressive spatial summation in human visual cortex</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">N</forename><surname>Kay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Winawer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mezer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Wandell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="481" to="494" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Spatial attention modulates center-surround interactions in macaque visual area V4</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Sundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="952" to="963" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Spatially tuned normalization explains attention modulation variance within neurons</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Ni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="1903" to="1913" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Feature-based attention increases the selectivity of population responses in primate visual cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Martinez-Trujillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Treue</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="744" to="751" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Attention improves encoding of taskrelevant features in the human visual cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Jehee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Brady</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="8210" to="8219" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Different mechanisms underlie three inhibitory phenomena in cat area 17</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Sengpiel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Baddeley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Freeman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Harrad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Blakemore</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Vis. Res</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="2067" to="2080" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Suppression without inhibition in visual cortex</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Freeman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Durand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Kiper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="759" to="771" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Length and width tuning of neurons in the cat&apos;s primary visual cortex</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deangelis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Freeman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ohzawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page" from="347" to="374" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Mechanisms underlying cross-orientation suppression in cat visual cortex</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Priebe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">1660</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Organization of suppression in receptive fields of neurons in cat visual cortex</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deangelis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Robson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ohzawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Freeman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="144" to="163" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Orientation-tuned surround suppression in mouse visual cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Self</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="9290" to="9304" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Surround modulation measured with functional mri in the human visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="525" to="533" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">The role of attention in figure-ground segregation in areas V1 and V4 of the visual cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Poort</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page" from="143" to="156" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Visual memories bypass normalization</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Bloem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">L</forename><surname>Watanabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Kibbe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="845" to="856" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Different orientation tuning of near-and far-surround suppression in macaque primary visual cortex mirrors their tuning in human perception</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shushruth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="106" to="119" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Possible principles underlying the transformations of sensory messages</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Barlow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sensory Commun</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="217" to="234" />
+			<date type="published" when="1961">1961</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">What is the goal of sensory coding?</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Field</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="559" to="601" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Attentional enhancement via selection and pooling of early sensory responses in human visual cortex</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pestilli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carrasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Gardner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="832" to="846" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">The psychophysics toolbox</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Brainard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Spat. Vis</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="433" to="436" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">The VideoToolbox software for visual psychophysics: transforming numbers into movies</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Pelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Spat. Vis</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="437" to="442" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Multiband multislice GE-EPI at 7 tesla, with 16-fold acceleration using partial parallel imaging with application to high spatial and temporal whole-brain fMRI</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Moeller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Magn. Reson Med</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="1144" to="1153" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Blipped-controlled aliasing in parallel imaging for simultaneous multislice echo planar imaging with reduced g-factor penalty</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Setsompop</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Magn. Reson Med</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="1210" to="1224" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Multiplexed echo planar imaging for sub-second whole brain FMRI and fast diffusion imaging</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Feinberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">15710</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Evaluation of slice accelerations using multiband echo planar imaging at 3T</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="991" to="1001" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Fischl</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Freesurfer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="774" to="781" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">Accurate and robust brain image alignment using boundary-based registration</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Greve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Fischl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="63" to="72" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Highly accurate inverse consistent registration: a robust approach</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Reuter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Rosas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Fischl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="1181" to="1196" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Borders of multiple visual areas in humans revealed by functional magnetic resonance imaging</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sereno</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">268</biblScope>
+			<biblScope unit="page" from="889" to="893" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Spatiotemporal energy models for the perception of motion</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Adelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Bergen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Josa</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">284</biblScope>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title level="a" type="main">Early and late mechanisms of surround suppression in striate cortex of macaque</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">S</forename><surname>Webb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Dhruv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Solomon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Tailby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lennie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="11666" to="11675" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

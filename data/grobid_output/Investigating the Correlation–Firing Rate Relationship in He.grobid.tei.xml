@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Investigating the Correlation–Firing Rate Relationship in Heterogeneous Recurrent Networks</title>
+				<funder ref="#_3YdNKMb">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2018-06-06">2018-06-06</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Andrea</forename><forename type="middle">K</forename><surname>Barreiro</surname></persName>
+							<email>abarreiro@smu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">Southern Methodist University</orgName>
+								<address>
+									<settlement>Dallas</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cheng</forename><surname>Ly</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Statistical Science and Operations Research</orgName>
+								<orgName type="institution">Virginia Commonwealth University</orgName>
+								<address>
+									<settlement>Richmond</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Investigating the Correlation–Firing Rate Relationship in Heterogeneous Recurrent Networks</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">The Journal of Mathematical Neuroscience</title>
+						<title level="j" type="abbrev">J. Math. Neurosc.</title>
+						<idno type="eISSN">2190-8567</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">8</biblScope>
+							<biblScope unit="issue">1</biblScope>
+							<date type="published" when="2018-06-06" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">9A653C997AE9EE9FB001ABA802886C2F</idno>
+					<idno type="DOI">10.1186/s13408-018-0063-y</idno>
+					<note type="submission">Received: 5 January 2018 / Accepted: 21 May 2018 /</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Recurrent network</term>
+					<term>Spike count correlation</term>
+					<term>Linear response</term>
+					<term>Heterogeneity</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>The structure of spiking activity in cortical networks has important implications for how the brain ultimately codes sensory signals.</s><s>However, our understanding of how network and intrinsic cellular mechanisms affect spiking is still incomplete.</s><s>In particular, whether cell pairs in a neural network show a positive (or no) relationship between pairwise spike count correlation and average firing rate is generally unknown.</s><s>This relationship is important because it has been observed experimentally in some sensory systems, and it can enhance information in a common population code.</s><s>Here we extend our prior work in developing mathematical tools to succinctly characterize the correlation and firing rate relationship in heterogeneous coupled networks.</s><s>We find that very modest changes in how heterogeneous networks occupy parameter space can dramatically alter the correlation-firing rate relationship.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p><s>One prominent goal of theoretical neuroscience is to understand how spiking statistics of cortical networks are modulated by network attributes <ref type="bibr" target="#b8">[9,</ref><ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b41">42]</ref>.</s><s>This understanding is essential to the larger question of how sensory information is encoded and transmitted, because the statistics of neural activity impact population coding <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b36">37]</ref>.</s><s>One family of statistics that is implicated in nearly all population coding studies is trial-to-trial variability (and co-variability) in spike counts; there is now a rich history of studying how these statistics arise, and how they effect coding of stimuli <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b32">33]</ref>.</s><s>Recent work has demonstrated that the information content of spiking neural activity depends on spike count correlations and its relationship (if any) with stimulus tuning <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b43">44]</ref>.</s></p><p><s>An important relationship observed in many experimental studies is that pairwise correlations on average increase with firing rates.</s><s>This has been observed in vitro <ref type="bibr" target="#b7">[8]</ref> and in several visual areas: area MT <ref type="bibr" target="#b1">[2]</ref>, V4 <ref type="bibr" target="#b4">[5]</ref> (when measured between cells in the same attentional state), V1 <ref type="bibr" target="#b18">[19,</ref><ref type="bibr" target="#b35">36]</ref>, and notably, in ON-OFF directionally sensitive retinal ganglion cells <ref type="bibr" target="#b10">[11,</ref><ref type="bibr" target="#b43">44]</ref>.</s><s>The retinal studies involved cells with a clearly identified function, and therefore allowed investigation of the coding consequences of the observed correlation-firing rate relationship.</s><s>These studies found that the stimulusdependent correlation structure observed compared favorably to a structure in which stimulus-independent correlations were matched to their (stimulus-)averaged levels.</s><s>This finding reflects a general principle articulated in other studies <ref type="bibr" target="#b17">[18,</ref><ref type="bibr" target="#b24">25]</ref>, that stimulus-dependent correlations are beneficial when they serve to spread the neural response in a direction orthogonal to the signal space.</s></p><p><s>These findings thus provide strong motivation for understanding what network mechanisms can produce this positive (and perhaps beneficial) correlation-firing rate relationship.</s><s>This correlation-firing rate trend has been explained theoretically in feedforward networks driven by common input <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b37">38]</ref>; however, many cortical networks are known to be dominated by strong recurrent activity <ref type="bibr" target="#b23">[24,</ref><ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b38">39]</ref>.</s><s>On the other hand, theoretical studies of the mechanisms for correlations in recurrent networks have largely analyzed homogeneous networks (i.e., identical cells, aside from excitatory/inhibitory cell identity) <ref type="bibr" target="#b8">[9,</ref><ref type="bibr" target="#b12">13,</ref><ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b39">40,</ref><ref type="bibr" target="#b40">41]</ref>, and have not considered how correlations vary with firing rates with realistic intrinsic heterogeneity.</s><s>Thus, how spike count correlations can vary across a population of heterogeneouslytuned, recurrently connected neurons is not yet well understood despite its possible implications for coding.</s></p><p><s>In a previous paper, we addressed this gap by developing a mathematical method to compactly describe how second-order spike count statistics vary with both intrinsic and network attributes <ref type="bibr" target="#b3">[4]</ref>.</s><s>Specifically, we adapted network linear response theory <ref type="bibr" target="#b13">[14,</ref><ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b42">43]</ref> to account for heterogeneous and recurrent networks, which in turn allows us to identify important network connections that contribute to correlations via a single-cell susceptibility function <ref type="bibr" target="#b7">[8]</ref>.</s><s>Here, we will use this method to survey a broad family of recurrent networks to understand how three factors influence the relationship between correlations and firing rates; how the neurons occupy parameter space, the strength of recurrent excitation, and the strength of background noise.</s><s>This work thus provides a more complete picture of how even modest changes in important circuit parameters can alter the correlation-firing rate relationship.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Results</head><p><s>First, we summarize how a network linear response theory allows us to use the singleneuron firing rate function to approximate correlations.</s><s>We then apply this theory to examine three factors that can modulate the correlation-firing rate relationship: direction in effective parameter space, strength of recurrent excitation, and strength of background noise.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">Using the Single-Neuron Firing Rate Function to Characterize Correlation Susceptibility</head><p><s>The response of a neuron is generally a nonlinear function of model parameters.</s><s>However, background noise linearizes this response, so that we can use a linear theory to describe the change in response to small changes in parameters.</s><s>We assume we have some way to approximate the change in firing rate which occurs as a result of a change in parameter X:</s></p><formula xml:id="formula_0">ν i (t) = ν i,0 + (A X,i * X i )(t); (1)</formula><p><s>ν i,0 is the baseline rate (when X = 0) and A X,i (t) is a susceptibility function that characterizes the firing rate response <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b40">41]</ref>.</s><s>The parameter which is modulated has often been chosen to be a current bias μ <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b40">41]</ref>; however, it could also be the mean or variance of a conductance, a time constant, or a spike generation parameter <ref type="bibr" target="#b28">[29,</ref><ref type="bibr" target="#b29">30]</ref>.</s><s>In a coupled network, the parameter change X i arises from inter-neuron coupling; substituting X i (t) → j (J X,ij * ν j ) and moving to the spectral domain, we find</s></p><formula xml:id="formula_1">ỹ(ω) ỹ * (ω) = I -K(ω) -1 ỹ0 (ω) ỹ0 * (ω) I -K * (ω) -1 , (<label>2</label></formula><formula xml:id="formula_2">)</formula><p><s>where ỹi = F[y iν i ] is the Fourier transform of the mean-shifted process (ν i is the average firing rate of cell i) and f = F[f ] for all other quantities; Kij (ω) = ÃX,i (ω) JX,ij (ω) is the interaction matrix in the frequency domain (which may depend on the parameter being varied, i.e.</s><s>X); ỹ0 (ω) ỹ0 * (ω) is the power spectrum of the uncoupled neural response.</s><s>Using the usual series expansion for (I-K(ω)) -1 , we see that the covariance C(ω) ≡ ỹ(ω) ỹ * (ω) naturally decomposes into contributions from different graph motifs:</s></p><formula xml:id="formula_3">C(ω) = I -K(ω) -1 C0 (ω) I -K * (ω) -1 = C0 (ω) + K(ω) C0 (ω) + C0 (ω) K * (ω) + K(ω) C0 (ω) K * (ω) + • • • . (3)</formula><p><s>Each instance of K includes the susceptibility function in the spectral domain, A X (ω), which modulates the effect of each directed connection by the responsiveness of the target neuron to the parameter of interest.</s><s>As noted by previous authors <ref type="bibr" target="#b26">[27]</ref>, the validity of the expansion in Eq. ( <ref type="formula">3</ref>) relies on the spectral radius of K, ρ( K), remaining less than one.</s><s>We checked that this remains true for all networks we examined in this paper, with a maximum of ρ( K) = 0.9564.</s></p><p><s>We next justify why-at least for long-time correlations-we can estimate each of these terms using the single-neuron firing rate function.</s><s>First, in the small frequency limit, A X,i (ω) will coincide with the derivative of the firing rate with respect to the parameter:</s></p><formula xml:id="formula_4">lim ω→0 ÃX,i (ω) = dν i dX .</formula><p><s>For the common input motif, K(ω) C0 (ω) K * (ω), we can write</s></p><formula xml:id="formula_5">K C0 K * ij = k→i,k→j Kik C0 kk Kjk (4) = k→(i,j ),k∈E ( Ãg E ,i Jik ) C0 kk ( Ãg E ,j Jjk ) + k→(i,j ),k∈I ( Ãg I ,i Jik ) C0 kk ( Ãg I ,j Jjk ) (5) = | JE | 2 k→(i,j ),k∈E Ãg E ,i Ãg E ,j C0 kk + | JI | 2 k→(i,j ),k∈I Ãg I ,i Ãg I ,j C0 kk (6) = | JE | 2 Ãg E ,i Ãg E ,j k→(i,j ),k∈E C0 kk + | JI | 2 Ãg I ,i Ãg I ,j k→(i,j ),k∈I C0 kk ,<label>(7)</label></formula><p><s>where we have separated excitatory (E) and inhibitory (I) contributions, using g E and g I to denote the mean conductance of each type, and assumed that the synaptic coupling kernels, Jjk , depend only on E/I cell identity (and have thus dropped the first subscript, which adds no additional information).</s><s>This provides a formula for the long-time covariance, but we are typically interested in the correlation; fortunately, the small frequency limit also allows us to obtain a normalized correlation measure from the cross-spectrum, because lim</s></p><formula xml:id="formula_6">T →∞ ρ T ,ij = lim T →∞ Cov T (n i , n j ) Var T (n i ) Var T (n j ) = Cij (0) Cii (0) Cjj (0) , (<label>8</label></formula><formula xml:id="formula_7">)</formula><p><s>where Cov T (n i , n j ) and Var T (n i ) denote covariance and variance of spike counts in a time window T ; that is, ρ T ,ij is the Pearson correlation coefficient (which varies between -1 and 1).</s><s>Finally, letting ω → 0 and normalizing with the assumption that spiking is close to a Poisson process, as expected for an asynchronously firing network, so that Ckk ≈ ν k :</s></p><formula xml:id="formula_8">( K C0 K * ) ij Cii Cjj = 1 √ ν i ν</formula><formula xml:id="formula_9">. (<label>9</label></formula><formula xml:id="formula_10">)</formula><p><s>The above expression summarizes how the impact of excitatory and inhibitory common input are modulated by the single-neuron firing rate function, ν, and its derivatives.</s></p><p><s>Thus far, we have presented results previously obtained by others <ref type="bibr" target="#b26">[27,</ref><ref type="bibr" target="#b39">40,</ref><ref type="bibr" target="#b40">41]</ref>.</s><s>We now depart from these authors by focusing specifically on the behavior of the term in Eq. ( <ref type="formula" target="#formula_9">9</ref>); and for simplicity, the behavior of this modulating factor for two identical neurons; e.g.</s></p><formula xml:id="formula_11">1 √ ν i ν j dν i dg I dν j dg I → 1 ν dν dg I 2 . (<label>10</label></formula><formula xml:id="formula_12">)</formula><p><s>In principle, analogous expressions govern larger motifs, such as chains, that involve additional evaluations of ν and its derivatives; for example, excitatory length-3 chains arising from K3 C0 would be:</s></p><formula xml:id="formula_13">( K3 C0 ) ij Cii Cjj = 1 √ ν i ν j dν i dg E dν l dg E dν k dg E</formula><p><s>modulation by firing rate function</s></p><formula xml:id="formula_14">×| JE | 3 × l→i k→l, l∈E j →k, k∈E C0 jj all E → E → E → E paths . (<label>11</label></formula><formula xml:id="formula_15">)</formula><p><s>However, we found that, for a wide range of networks, direct common input-and inhibitory common input in particular-was the dominant contributor to pairwise correlations (Fig. <ref type="figure" target="#fig_5">6(A)</ref>).</s><s>We now examine how different network mechanisms modulate the correlationfiring rate relationship, focusing on three factors: direction in effective parameter space, strength of recurrent excitation, and strength of background noise.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Direction in Parameter Space Modulates the Correlation-Firing Rate Relationship</head><p><s>Suppose we have a firing rate function of one or more intrinsic parameters (for exposition purposes, assume a function of two parameters (x 1 , x 2 )), i.e.</s></p><formula xml:id="formula_16">ν = F (x 1 , x 2 ).</formula><p><s>The parameters x j might include input bias, membrane time constant, ionic/synaptic reversal potentials, or a spiking threshold.</s><s>Based on our arguments from the previous section, we will approximate correlation susceptibility by the quantity</s></p><formula xml:id="formula_17">Ŝ = 1 F ∂F ∂x 1 2 ,</formula><p><s>where x 1 is an appropriately chosen parameter.</s><s>Specifically, we will find, empirically, that the inhibitory common input is the dominant term, and therefore will use x 1 = g I , the mean inhibitory conductance.</s><s>Thus, the units of Ŝ in all figures are Hz/[g 2 I ], where g I is dimensionless (see Eq. ( <ref type="formula" target="#formula_26">17</ref>)).</s></p><p><s>Heterogeneous firing rates can arise when each neuron occupies a different location in parameter space (i.e. a different (x 1 , x 2 ) point), thus causing both firing rate F and susceptibility Ŝ to vary from neuron to neuron.</s><s>We now ask: how does Ŝ change with firing rate?</s></p><p><s>Note that this question, as stated, is ill-posed because F and Ŝ are both functions of two parameters (x 1 and x 2 ): there is not necessarily a one-to-one or even a functional relationship between these quantities.</s><s>Suppose that, locally, a population of neurons can be described as lying along a parameterized path in the (x 1 , x 2 ) plane: i.e., (x 1 (s), x 2 (s)), for s min &lt; s &lt; s max .</s><s>Then we can compute the directional derivative:</s></p><formula xml:id="formula_18">d Ŝ dF = d Ŝ/ds dF /ds = ∇ Ŝ • dx ∇F • dx , (<label>12</label></formula><formula xml:id="formula_19">)</formula><p><s>where we have expressed the directional derivatives in terms of the local direction of the path: i.e. dx = ( dx 1 ds , dx 2 ds ) and the gradients of F and Ŝ.</s><s>However, this depends not only on the functions F and Ŝ, but also on the direction dx.</s></p><p><s>To gain some intuition for why (and when) direction in (x 1 , x 2 ) space matters, we consider the networks studied in <ref type="bibr" target="#b3">[4]</ref>.</s><s>Previously, we simplified the firing rate function by setting all but two parameters (inhibitory conductance, g I,i , and threshold, θ i ) to their population average; i.e.</s><s>F g I,i , θ i ≡ f g I,i , σ g I ,i p , g E,i p , σ g E ,i p , σ i p , θ i , <ref type="bibr" target="#b12">(13)</ref> and • p denotes the population average.</s><s>In Figs.</s><s><ref type="figure">1(A</ref>) and (B), we show F and Ŝ ≡ ( ∂F ∂x 1 ) 2 /F thus computed, for the asynchronous network studied in that paper.</s><s>We then surveyed a sequence of diagonal paths through the center (i.e., midpoint of the ranges of threshold and inhibitory conductance), with each path plotted in a different color.</s><s>In Fig. <ref type="figure">1</ref>(C) we plot firing rate (solid lines) and susceptibility (dashed-dotted lines) along each curve.</s><s>Finally, in Fig. <ref type="figure">1</ref>(D) we plot the susceptibility versus the firing rate, along each path.</s></p><p><s>This last panel shows that there is striking variability in the susceptibility-firing rate relationship, depending on the direction the path takes through the center of the (θ, g I ) plane.</s><s>Any given firing rate (below ∼ 15 Hz) is consistent with either increase or decrease of susceptibility.</s><s>All curves go through a single point in the (θ, g I ) plane, and therefore a single point in the (F, Ŝ) plane; here the direction Fig. <ref type="figure">1</ref> Firing rate and susceptibility ( Ŝ), computed for the asynchronous (Asyn) network studied in <ref type="bibr" target="#b3">[4]</ref>, with all other parameters besides threshold θ and mean inhibitory conductance g I set to their average values (thereby leaving a two-dimensional parameter space).</s><s>Here, we traverse the plane on straight-line paths defined by their angle through the origin.</s><s>Although the units of g I are dimensionless, they are shown as the units for Ŝ for completeness.</s><s>The units of θ (i.e., voltage) are also scaled to be dimensionless of the Ŝ-F relationship (i.e., whether Ŝ increases or decreases with F ) can change rapidly with angle, as for the red, orange, and yellow curves.</s></p><p><s>We then extended these observations by traversing the phase space with two additional families of straight-line paths (Fig. <ref type="figure" target="#fig_0">2</ref>); the radial paths are repeated in Figs.</s><s><ref type="figure" target="#fig_0">2(A</ref>) and (B).</s><s>For horizontal (Figs.</s><s><ref type="figure" target="#fig_0">2(C</ref>) and (D)) and vertical (Figs.</s><s><ref type="figure" target="#fig_0">2(E</ref>) and (F)) families, paths no longer intersect at a single point; nevertheless, a given firing rate is consistent with both increases and decreases in susceptibility.</s><s>This is pronounced in Fig. <ref type="figure" target="#fig_0">2(F)</ref>, where at 15 Hz susceptibility decreases with firing rate in the orange, yellow and light green paths, but increases for the light blue, medium blue, royal blue, and indigo paths.</s></p><p><s>We performed the same computations on the strong asynchronous network studied in <ref type="bibr" target="#b3">[4]</ref> that has larger excitatory coupling strength: results are shown in Fig. <ref type="figure" target="#fig_1">3</ref>.</s><s>A given firing rate could be consistent with either increase or decrease of susceptibility; we see this in the radial paths (Figs.</s><s><ref type="figure" target="#fig_1">3(A</ref>) and (B)) and horizontal paths (Figs.</s><s><ref type="figure" target="#fig_1">3(C</ref>) and (D)) for rates between 5-10 Hz.</s><s>However, vertical paths (Figs.</s><s><ref type="figure" target="#fig_1">3(E</ref>) and (F)) always have susceptibility increasing with firing rate (except perhaps at the highest firing rates).</s><s>As in the asynchronous network, direction of susceptibility (increase vs. decrease) can change rapidly with angle, for paths that intersect a single point; see Figs. <ref type="figure" target="#fig_1">3(A)-(B</ref>), red to orange to yellow.</s><s><ref type="bibr" target="#b3">[4]</ref>, with all other parameters besides threshold θ and mean inhibitory conductance g I set to their average values (thereby leaving a two-dimensional parameter space: the other (averaged) parameters are σ g I ,i p = 0.6602 (see Eq. ( <ref type="formula" target="#formula_46">30</ref>)), σ g E ,i p = 0.0026 (see Eq. ( <ref type="formula" target="#formula_44">29</ref>)), σ i p = 6.3246, g E , i p = 0.0053 (see Eq. ( <ref type="formula" target="#formula_26">17</ref>)).</s><s>Here, we traverse the plane on three different families of straight-line paths.</s><s>The dashed lines show paths visualized in <ref type="bibr" target="#b3">[4]</ref>: θ = 1 (vertical, aqua blue) and g I = 1.83 (horizontal, orange/yellow)</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3">Quantifying the Likelihood of a Positive Correlation-Firing Rate Relationship</head><p><s>In the previous section, we saw that the path a network occupies in effective parameter space can have a dramatic effect on the correlation-firing rate relationship: we next seek to formalize these observations.</s><s>Let dx be the local direction in which we want to studied in <ref type="bibr" target="#b3">[4]</ref>, with all other parameters besides threshold θ and mean inhibitory conductance g I set to their average values (thereby leaving a two-dimensional parameter space: the other (averaged) parameters are σ g I ,i p = 0.5884 (see Eq. ( <ref type="formula" target="#formula_46">30</ref>)), σ g E ,i p = 0.0378 (see Eq. ( <ref type="formula" target="#formula_44">29</ref>)), σ i p = 4.7434, g E , i p = 0.0611, see Eq. ( <ref type="formula" target="#formula_26">17</ref>)).</s><s>Here, we traverse the plane on three different families of straight-line paths.</s><s>Dashed lines show paths visualized in <ref type="bibr" target="#b3">[4]</ref>  To examine the utility of this idea, we reconsider the radial paths along which we previously computed susceptibility.</s><s>The paths all go through a single point, so we can check the sign((∇ Ŝ • x)(∇F • x)) for all directions through this point.</s><s>In Figs.</s><s><ref type="figure" target="#fig_4">5(A</ref>) and (C), white indicates positive and black negative.</s><s>Figures <ref type="figure" target="#fig_4">5(B</ref>) and (D) repeat the susceptibility-firing rate curves from Fig. <ref type="figure" target="#fig_0">2</ref>(B) and Fig. <ref type="figure" target="#fig_1">3(B)</ref>.</s><s>For the asynchronous network (Fig. <ref type="figure" target="#fig_4">5(A)</ref>), the red, indigo, and royal blue paths are predicted to have negative d Ŝ/dF , as we can confirm in Fig. <ref type="figure" target="#fig_4">5(B</ref>).</s><s>Yellow, green, and light blue curves are predicted to have positive d Ŝ/dF .</s><s>The orange curve is close to dF = 0; the true blue curve is close to dS = 0.</s><s>For the strong asynchronous network, only the red curve is in the negative region of Fig. <ref type="figure" target="#fig_4">5(C)</ref>; this is also the only path with d Ŝ/dF &lt; 0 in Fig. <ref type="figure" target="#fig_4">5(D)</ref>.</s></p><p><s>Of course, this prediction only applies to portions of the path near the point at which we computed the gradients; away from this point, gradients will change along with the direction of the Ŝ vs. F curve.</s><s>For example, the royal blue curve in Fig. <ref type="figure" target="#fig_4">5(B</ref>) increases with firing rate for small firing rates, and the light blue, true blue, and royal blue curves in Fig. <ref type="figure" target="#fig_4">5(D</ref>) decrease with firing rate, (for large firing rates).</s></p><p><s>This motivates a direction-independent measure to quantify the fraction of paths that lead to an increase of correlation with firing rate.</s><s>This is given exactly in terms of the angle between ∇ Ŝ and ∇F :</s></p><formula xml:id="formula_20">cos θ = ∇ Ŝ • ∇F ∇ Ŝ ∇F<label>(14)</label></formula><p><s>and in particular the fraction of x directions in which Ŝ increases with F is given by</s></p><formula xml:id="formula_21">1 π π -cos -1 ∇ Ŝ • ∇F ∇ Ŝ ∇F . (<label>15</label></formula><formula xml:id="formula_22">)</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.4">Strength of Recurrent Excitation Modulates the Correlation-Firing Rate Relationship</head><p><s>Our use of inhibitory susceptibility (i.e.</s><s>Eq. ( <ref type="formula" target="#formula_11">10</ref>)) to characterize the relationship between correlations and firing rates relied on intermediate assumptions, specifically:</s></p><p><s>• Second-order motifs dominate pairwise correlations.</s></p><p><s>• Inhibitory common input is the dominant second-order motif.</s></p><p><s>• Asynchronous spiking assumption:</s></p><formula xml:id="formula_23">Var T (n i ) = T ν i ⇒ Cii = ν i .</formula><p><s>Here, we check that these conditions are still satisfied for a range of neural network models.</s></p><p><s>In <ref type="bibr" target="#b3">[4]</ref>, we examined two spiking regimes achieved by varying the strength of excitation: both recurrent excitation W EE and excitatory input into the inhibitory population W I E .</s><s>We next applied our theory to a dense grid of parameters (different networks), each identified by its location on the (W EE , W I E ) plane.</s><s>Both excitatory strengths were varied from a minimum of their values for the asynchronous network (W EE = 0.5 and W I E = 5) to a maximum of 1.4 times their value in the strong asynchronous network (to W EE = 12.6 and W I E = 11.2).</s><s>The parameter W XY is a dimensionless scale factor (see Eqs. ( <ref type="formula" target="#formula_26">17</ref>)-(20)); for example in an all-to-all homogeneous network, W XY = 1 is when the presynaptic input is exactly the average population firing rate (filtered by the synapse).</s></p><p><s>To quantify the importance of paths of different length through the network, we can define the contributions at any specific order k by using the interaction network K:</s></p><formula xml:id="formula_24">Rk ij = ( k l=0 Kl C0 ( K * ) k-l ) ij Cii Cjj . (<label>16</label></formula><formula xml:id="formula_25">)</formula><p><s>Then we regressed the total correlation ( Cij / Cii Cjj ) against the contributions at each specific order ( Rk ij ); the corresponding fraction of variance explained (R 2 value) gives a quantitative measure of how well the total correlation can be predicted from each term.</s></p><p><s>Similarly, we quantity the importance of specific second-order motif types, by regressing the total contribution from second-order motifs ( R2 ij ) against the contribution from specific motifs.</s><s>We performed this computation for each network (a total of 225 networks), and summarize the results in Fig. <ref type="figure" target="#fig_5">6</ref>; to present the data compactly, we collapse R 2 values (all values are ∈ [0, 1]) for a fixed W EE and varying W I E by showing mean and standard deviation only (standard deviation as error bars).</s><s>Secondorder contributions dominate for small to moderate W EE (Fig. <ref type="figure" target="#fig_5">6(A)</ref>); other orders only compete when W EE has already exceeded the level of the strong asynchronous network (where the network is close to the edge of instability, and at the limit of validity for mean-field, asynchronous assumptions).</s></p><p><s>To illustrate the meaning of this statistic, in Fig. <ref type="figure" target="#fig_5">6</ref>(B) we show contributions up to fourth order ( Rk ij , for k = 1, . . .</s><s>, 4) vs. total correlation ( Cij / Cii Cjj ) for all E-E cell pairs in a network, for two individual networks included in the summary panel.</s><s>Note that the second-order contributions cluster near the unity line in both cases, indicating that second-order contributions are the best predictor of total correlations, consistent with the R 2 values stated.</s></p><p><s>Of the second-order motifs, inhibitory common input is the dominant contribution at any value of W EE , except perhaps the last, at which point the excitatory population has unrealistically high firing rates (Fig. <ref type="figure" target="#fig_5">6(C</ref>)).</s><s>To summarize, we have confirmed that far from being limited to a few examples, the conditions we identified in <ref type="bibr" target="#b3">[4]</ref> as ) from linear regressions of contributions to pairwise correlations from second-order motifs ( R2 ij ) against contributions from the distinct types of second-order motifs: inhibitory common input (magenta), excitatory common input (red), decorrelating chains (green), and correlating chains (blue).</s><s>Both (A,C): Each data point represents the mean value from 15 networks with W I E between 5 and 11.2; error bars show standard deviation across these values.</s><s>W XY = 1 is when the presynaptic input is exactly the average population firing rate (filtered by the synapse) in an all-to-all homogeneous network allowing us to focus on susceptibility to inhibition to explain pairwise correlations, appear to hold up for a variety of networks.</s></p><p><s>We note that our findings about the relative magnitudes of terms of different orders are purely empirical; that is, they are based on concrete numerical observations, rather than a priori estimates.</s><s>Thus, it should be reassessed if anything about the parameters or network connectivity is changed.</s><s>In particular, a likely reason for the relative weakness of first-order terms is that in these networks excitation is almost always weaker than inhibition; while first-order terms are always excitatory, second-order terms can involve excitation and/or (comparatively strong) inhibition.</s></p><p><s>Having confirmed the validity of our approach, we computed the susceptibility with respect to inhibition, for each of the networks examined in the previous section (because of instability, we restricted these computations to excitatory strengths ×1.2 the values used in <ref type="bibr" target="#b3">[4]</ref>).</s><s>Because background noise values varied slightly, we actually examined two network families; one in which we chose σ values as in the asynchronous network, another in which we chose σ values as in the strong asynchronous network.</s><s>Also as in <ref type="bibr" target="#b3">[4]</ref>, we estimated susceptibility using network-averaged values of g E , g I , σ g E , and σ g I .</s></p><p><s>Surprisingly, the difference in background noise dwarfed the recurrent excitation strengths, at least in accessing the relationship between Ŝ and firing rate.</s><s>In Fig. <ref type="figure">7</ref>, we show Ŝ vs. F curves, for a set of representative networks, on a single plot.</s><s>Color indicates W EE (shade of blue) and W I E (shade of red); values of W EE are 0.50 (as in the asynchronous network from <ref type="bibr" target="#b3">[4]</ref>), 6.45, 9 (as in the strong asynchronous network from <ref type="bibr" target="#b3">[4]</ref>), and 10.7, values of W I E are 5 (as in the asynchronous network from <ref type="bibr" target="#b3">[4]</ref>), 7.1, 8 (as in the strong asynchronous network from <ref type="bibr" target="#b3">[4]</ref>), and 8.6.</s><s>For reference, Fig. <ref type="figure">7</ref> Firing rate vs. susceptibility ( Ŝ), computed for a family of networks generated by modulating the strength of excitation (W EE and W I E ). (A) Background noise values σ E , σ I set as in the asynchronous network from <ref type="bibr" target="#b3">[4]</ref>.</s><s>(B) Background noise values σ E , σ I set as in the strong asynchronous network from <ref type="bibr" target="#b3">[4]</ref>.</s><s>Sixteen curves are chosen, for a survey of the range of networks achievable by varying strength of recurrent excitation.</s><s>Values of W EE are 0.50 (as in the asynchronous network from <ref type="bibr" target="#b3">[4]</ref>), 6.45, 9 (as the strong asynchronous network from <ref type="bibr" target="#b3">[4]</ref>), and 10.7.</s><s>Values of W I E are 5 (as in the asynchronous network from <ref type="bibr" target="#b3">[4]</ref>), 7.1, 8 (as in the strong asynchronous network from <ref type="bibr" target="#b3">[4]</ref>), and 8.6.</s><s>Again, W XY = 1 is when the presynaptic input is exactly the average population firing rate (filtered by the synapse) in an all-to-all homogeneous network, so the coupling strengths vary significantly W XY = 1 is when the presynaptic input is exactly the average population firing rate (filtered by the synapse) in an all-to-tall homogeneous network, so these coupling strengths vary significantly.</s><s>We see that, for the full range of recurrent excitation values, Ŝ vs. F curves in Fig. <ref type="figure">7</ref>(A) are mostly decreasing; Ŝ vs. F curves in Fig. <ref type="figure">7(B</ref>) are mostly increasing for low F , and saturating for high F .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.5">Background Noise Modulates the Correlation-Firing Rate Relationship</head><p><s>To further explore the role of background noise, we repeated the susceptibility calculation on additional families of networks, now allowing background noise strengths σ E and σ I (i.e. to the excitatory and inhibitory populations) to vary separately.</s><s>Input to excitatory cells was varied between σ E = 1.5 and 2.5; input to inhibitory cells was varied between σ I = 1.5 and 3.</s><s>These noise values are relatively large; see Eq. ( <ref type="formula" target="#formula_26">17</ref>) and note that voltage is of order 1.</s><s>In Fig. <ref type="figure" target="#fig_6">8(A)</ref> we display susceptibility vs. firing rate curves for 12 (σ E , σ I ) pairs; asterisks indicate σ E and σ I by color (green intensity for σ E and blue intensity for σ I ).</s><s>Within each panel curves are colored as in Fig. <ref type="figure">7</ref>: red intensity for W I E and blue intensity for W EE .</s></p><p><s>Surprisingly, most network families (i.e.</s><s>(σ E , σ I )) were associated with a decrease in correlation with firing rate.</s><s>The exceptions are (0.15, 0.25) (as in the strong asynchronous network in <ref type="bibr" target="#b3">[4]</ref>) and (0.15, 0.3).</s><s>This latter was most robustly associated with a positive correlation-firing rate relationship.</s><s>Furthermore, the shape of susceptibility-firing curves did not appear to vary much with the strength of recurrent excitation (i.e., curves within each panel are similar).</s><s><ref type="formula" target="#formula_26">17</ref>) for σ E and σ I definitions).</s><s>(B) Population-averaged effective parameters g I and E rev , for each network displayed in (A); see Eq. ( <ref type="formula" target="#formula_42">28</ref>) for E rev We next sought to investigate possible mechanisms for a positive correlation-firing rate relationship, by examining the effective parameters that govern the neural response: in essence, the network's "operating point" (see Eq. ( <ref type="formula" target="#formula_40">26</ref>)).</s><s>Possible choices include g I , g E , σ g E , σ g I , and the effective reversal potential E rev ; we found σ g E and σ g I to be largely functions of g E and g I , while E rev has a (nonlinear) functional relationship with g E and g I .</s><s>Thus two parameters suffice, and here we chose to use g I and E rev .</s><s>In Fig. <ref type="figure" target="#fig_6">8</ref>(B), we plot average parameter values for each curve, colorcoded by (σ E , σ I ).</s><s>Any given color is consistent with a relatively tight range of g I and (comparatively) broad range of E rev .</s><s>As σ I increases (increasing blue intensity), inhibitory conductance g I increases and reversal potential E rev decreases.</s><s>However, it was not apparent that any particular region in (g I , E rev ) parameter space was associated with a positive correlation-firing rate relationship, in that the values of g I and E rev that supported a positive relationship supported negative relationships as well.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Discussion</head><p><s>In this paper, we showed that using a single-cell firing rate function to examine the relationship between correlations and firing rates is feasible for a wide range of heterogeneous, recurrent networks.</s><s>We focused on three factors that can modulate the correlation-firing rate relationship: how the network occupies effective parameter space, strength of recurrent excitation, and strength of background noise.</s><s>Although there are many sets of parameters known to vary within a heterogeneous network of neurons, we have already demonstrated vastly different correlation-firing rate relationships with our methods, with a theory that can be readily applied to other model networks.</s></p><p><s>One possible application of this work is in designing neural networks for computational experimentation; just as modelers now modify cortical networks to obey experimental constraints on firing rates <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b34">35]</ref>, we could also include a constraint on the desired correlation-firing rate relationship.</s><s>Here we showed that we can quickly assess a wide range of possible network configurations for a positive correlationfiring rate relationship: in Sect.</s><s>2.5, for example, we performed calculations on 15 × 15 × 12 = 2700 heterogeneous networks, with a nominal amount of computing time.</s></p><p><s>One surprising finding in our computations was the relative insensitivity of the slope of the correlation-firing rate relationship to recurrent excitation (W EE , W I E ), as demonstrated in Figs.</s><s><ref type="figure">7</ref> and<ref type="figure" target="#fig_6">8</ref>.</s><s>This is striking in contrast to the strong sensitivity on display in Figs.</s><s><ref type="figure" target="#fig_0">2(B</ref>) and 3(B).</s><s>This difference is explained as follows: in every case where we computed the susceptibility for a self-consistent network (i.e. a solution of Eqs. ( <ref type="formula" target="#formula_40">26</ref>)-( <ref type="formula" target="#formula_46">30</ref>) and ( <ref type="formula" target="#formula_51">32</ref>)-( <ref type="formula" target="#formula_52">33</ref>)), the source of heterogeneous firing rates was neural excitability, set via a spiking threshold θ .</s><s>The resulting effective parameters, such as inhibitory conductance g I , did not deviate strongly from their population mean values.</s><s>In essence, all of these networks took a horizontal path through (θ, g I ) parameter space, as in Figs.</s><s><ref type="figure" target="#fig_0">2(C),</ref><ref type="figure">(D</ref>) and Figs.</s><s><ref type="figure" target="#fig_1">3(C),</ref><ref type="figure">(D</ref>).</s><s>If we were to generate networks where heterogeneity arises from another source-such as the strength or frequency of inhibitory connections <ref type="bibr" target="#b22">[23]</ref>-we might see different results.</s><s>We look forward to exploring this in future work.</s></p><p><s>A priori, there is no reason to expect that the correlation-firing rate relationship in these recurrent networks can be simplified to a feedforward motif based on shared inhibitory input; this was purely an empirical observation (see Fig. <ref type="figure" target="#fig_5">6(B)</ref>).</s><s>We remark that others have shown that the effective input correlation can be canceled to have near zero input (and thus output) correlation on average in balanced networks <ref type="bibr" target="#b27">[28,</ref><ref type="bibr" target="#b39">40]</ref>, in contrast to some of the models considered here (i.e., strong asynchronous regime with more net excitation).</s><s>The conditions for correlation cancellation in these model networks is beyond the scope of this study, but note that others have shown correlation cancellation does not always hold ( <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b21">22]</ref> via altering connection probabilities).</s><s>The studies that demonstrate correlation cancellation often have faster (or equal) inhibitory synaptic time scales than excitatory: τ I ≤ τ E <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b31">32]</ref> ( <ref type="bibr" target="#b39">[40]</ref> used current-based instantaneous synapses or τ I = τ E = 10 ms) while in our networks the inhibitory synapses have longer time scales (Table <ref type="table" target="#tab_1">1</ref>).</s><s>Note that Fig. <ref type="figure" target="#fig_3">S4</ref> of <ref type="bibr" target="#b27">[28]</ref> shows that having effectively zero input correlation does not hold as the inhibitory time scales increase beyond the excitatory time scales.</s><s>Finally, system size is another key parameter that could certainly affect the magnitude of the recurrent feedback.</s><s>In contrast to <ref type="bibr" target="#b27">[28,</ref><ref type="bibr" target="#b39">40]</ref>, we did not account for how system size would affect correlation cancellation in these heterogeneous networks.</s></p><p><s>Although affirmative answers to whether correlations increase with firing rate in experiments were cited in the Introduction <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b35">36,</ref><ref type="bibr" target="#b43">44]</ref> we also note that many experiments have shown that the average correlation across a population can decrease with firing rate when a global state changes or a stimulus is presented.</s><s>A recent review <ref type="bibr" target="#b8">[9]</ref> shows that stimulus-induced decorrelation (with increased firing rate) occurs in a variety of brain regions and animals.</s><s>This is slightly different from the situation we examine here, where we consider the relationship between correlations and firing rates within a stimulus condition.</s><s>Regardless, the fact that the relationship between correlation and firing rate is not obvious points to the continued need for theoretical studies into the mechanisms of spike statistics modulation.</s></p><p><s>Finally, our finding that correlations often decrease, rather than increase, with firing rate stands in apparent contradiction to earlier work on feedforward networks <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b37">38]</ref>.</s><s>On closer inspection, we can identify several reasons why our results differ; with conductance inputs (rather than currents) we have a quantitatively different relationship between input parameters and firing rates; furthermore with more adjustable single-neuron parameters, the same sets of firing rates may be observed with single-neuron parameters set in different ways.</s><s>While the current clamp experiments described in <ref type="bibr" target="#b7">[8]</ref> found a consistent increase of correlations with firing rates, we can hypothesize that the parallel dynamic clamp experiments in which pairwise correlations arise from common inhibitory input, would in fact show a decrease with firing rate.</s><s>However, we also predict that whether an increase or decrease with firing rate is observed would depend on whether firing rates are modulated by varying the level of inhibitory input, or by otherwise varying the excitability of the cells (perhaps pharmacologically).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1">Neuron Model and Network Setup</head><p><s>We considered randomly connected networks of excitatory and inhibitory neurons.</s><s>Each cell is a linear integrate-and-fire model with second-order alpha-conductances, i.e. membrane voltage v i was modeled with a stochastic differential equation, as long as the voltage is below threshold θ i :  <ref type="formula" target="#formula_26">17</ref>)- <ref type="bibr" target="#b19">(20)</ref>.</s><s>All are dimensionless except the time scales.</s></p><formula xml:id="formula_26">τ m dv i dt = -v i -g E,i (t)(v i -E E ) -g I,i (t)(v i -E I ) + σ i √ τ m ξ i (t). (<label>17</label></formula><formula xml:id="formula_27">)</formula><p><s>When v i reaches θ i , a spike is recorded and voltage is reset to 0 following a refractory period:</s></p><formula xml:id="formula_28">v i (t) ≥ θ i ⇒ v i (t + τ ref ) = 0,<label>(18)</label></formula><p><s>Each neuron receives Gaussian white background noise with magnitude σ i depending only on the cell type; that is, ξ i (t) = 0 and ξ i (t)ξ i (t + s) = δ(s).</s><s>The membrane time constant, τ m , and excitatory and inhibitory synaptic reversal potentials, E E and E I , are the same for every cell in the network (see Table <ref type="table" target="#tab_1">1</ref>).</s><s>The thresholds θ i are a significant source of heterogeneity, and they are selected from a log-normal distribution with mean 1 and variance e (0.2) 2 -1; since the system size is moderate, the θ i 's were set to have C.D.F.</s><s>(cumulative distribution function) values equally spaced from 0.05 to 0.95 for both E and I cells.</s><s>Each cell responds to synaptic input through conductance terms, g E,i and g I,i , which are each governed by a pair of differential equations:</s></p><formula xml:id="formula_29">τ d,X dg X,i dt = -g X,i + g (1)</formula><p><s>X,i , (</s></p><p><s>τ r,X dg</s></p><formula xml:id="formula_31">(1) X,i dt = -g<label>(1)</label></formula><formula xml:id="formula_32">X,i + τ r,X α X W Y X N Y X j ∈X,j →i k δ(t -t j,k ),<label>(20)</label></formula><p><s>where Y = {E, I } denotes the type of cell i and X = {E, I } denotes the type of the source neuron j .</s><s>Each spike is modeled as a delta-function that impacts the auxiliary variable g (1)  X,i ; here t j,k is the kth spike of cell j .</s><s>The rise and decay time constants τ r,X and τ d,X and pulse amplitude α X depend only on the type of the source neuron, that is they are otherwise the same across the population.</s><s>The parameter W Y X denotes the strength of X → Y synaptic connections, which are (once given the type of source and target neurons) identical across the population.</s><s>The "raw" synaptic weight (listed in Table <ref type="table" target="#tab_2">2</ref>) is divided by N Y X , the total number of X → Y connections received by each Y -type cell.</s></p><p><s>Table <ref type="table" target="#tab_2">2</ref> show connectivity parameters for the two example networks we discuss in Sect.</s><s>2.2.</s><s>For Figs. <ref type="figure">1</ref><ref type="figure" target="#fig_0">2</ref><ref type="figure" target="#fig_1">3</ref>, five parameters are set as stated in this table.</s><s>In Sect.</s><s>2.4 and Figs.</s><s><ref type="figure" target="#fig_5">6</ref><ref type="figure">7</ref>, W EE was varied between 0.5 and 12.6 and W I E between 5 and 11.2.</s><s>In Sect.</s><s>2.5 and Fig. <ref type="figure" target="#fig_6">8</ref>, W EE was varied between 0.5 and 10.8 and W I E between 5 and 9.6; σ E was varied between 1.5 and 2.5 and σ I between 1.5 and 3.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Linear Response Theory</head><p><s>In general, computing the response of even a single neuron to an input requires solving a complicated, nonlinear stochastic process.</s><s>However, it often happens that the presence of background noise linearizes the response of the neuron, so that we can describe this response as a perturbation from a background state.</s><s>This response is furthermore linear in the perturbing input and thus referred to as linear response theory <ref type="bibr" target="#b30">[31]</ref>.</s><s>The approach can be generalized to yield the dominant terms in the coupled network response as well.</s><s>We will use the theory to predict the covariance matrix of spiking activity.</s><s>The derivation is presented in full in <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b29">30]</ref>; here, we present only the main points.</s><s>We assume we have some way to approximate the change in firing rate which occurs as a result of a change in parameter:</s></p><formula xml:id="formula_33">ν i (t) = ν i,0 + (A X,i * X i )(t);<label>(21)</label></formula><p><s>ν i,0 is the baseline rate (when X = 0) and A X,i (t) is a susceptibility function that characterizes this firing rate response up to order <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b40">41]</ref>.</s></p><p><s>In order to consider joint statistics, we need the trial-by-trial response of the cell.</s><s>First, we propose to approximate the response of each neuron by</s></p><formula xml:id="formula_34">y i (t) ≈ y 0 i (t) + A X,i * j (J X,ij * y j ) (t);<label>(22)</label></formula><p><s>that is, each input X i has been replaced by a filtered version of the presynaptic firing rates y j .</s></p><p><s>In the frequency domain this becomes</s></p><formula xml:id="formula_35">ỹi (ω) = ỹ0 i + ÃX,i (ω) j JX,ij (ω) ỹj (ω) ,<label>(23)</label></formula><p><s>where ỹi = F[y iν i ] is the Fourier transform of the mean-shifted process (ν i is the average firing rate of cell i) and f = F[f ] for all other quantities.</s><s>In matrix form, this yields a self-consistent equation for ỹ in terms of ỹ0 :</s></p><formula xml:id="formula_36">I -K(ω) ỹ = ỹ0 ⇒ ỹ = I -K(ω) -1 ỹ0 , (<label>24</label></formula><formula xml:id="formula_37">)</formula><p><s>where Kij (ω) = ÃX,i (ω) JX,ij (ω) is the interaction matrix in the frequency domain.</s></p><p><s>The cross-spectrum is then computed via</s></p><formula xml:id="formula_38">ỹ(ω) ỹ * (ω) = I -K(ω) -1 ỹ0 (ω) ỹ0 * (ω) I -K * (ω) -1 . (<label>25</label></formula><formula xml:id="formula_39">)</formula><p><s>To compute the interaction matrix for a network of conductance-based neurons, we use the effective time constant approximation (as in the supplemental for <ref type="bibr" target="#b40">[41]</ref>).</s><s>We first separate each conductance into mean and fluctuating parts, e.g., g E,i → g E,i + (g E,ig E,i ) (see the discussion in <ref type="bibr" target="#b11">[12]</ref>).</s><s>Next we identify an effective conductance g 0,i and potential E rev,i , and treat the fluctuating part of the conductances as noise, i.e. g E,ig E,i → σ g E ,i ξ E,i (t), so that Eq. ( <ref type="formula" target="#formula_26">17</ref>) becomes</s></p><formula xml:id="formula_40">τ m dv i dt = -g 0,i (v i -E rev,i ) + σ g E ,i ξ E,i (t)(v i -E E ) + σ g I ,i ξ I,i (t)(v i -E I ) + σ 2 i τ m ξ i (t),<label>(26)</label></formula><p><s>where</s></p><formula xml:id="formula_41">g 0,i = 1 + g E,i + g I,i ,<label>(27)</label></formula><formula xml:id="formula_42">E rev,i = g E,i E E + g I,i E I g 0,i , (<label>28</label></formula><formula xml:id="formula_43">)</formula><formula xml:id="formula_44">σ 2 g E ,i = Var g E,i (t) = E g E,i (t) -g E,i 2 , (<label>29</label></formula><formula xml:id="formula_45">)</formula><formula xml:id="formula_46">σ 2 g I ,i = Var g I,i (t) = E g I,i (t) -g I,i 2 . (<label>30</label></formula><formula xml:id="formula_47">)</formula><p><s>The parameters which govern the firing rate response will now be the conductance mean and variance, e.g.</s><s>g E,i and σ 2 g E ,i ; we next compute how these depend on incoming firing rates for second-order α-function synapses (Eqs.</s><s>( <ref type="formula" target="#formula_30">19</ref>) and ( <ref type="formula" target="#formula_32">20</ref>)).</s><s>We first simplify the equation for the auxiliary variable (Eq.</s><s>( <ref type="formula" target="#formula_32">20</ref>)):</s></p><formula xml:id="formula_48">τ r,X dg (1) X,i dt = -g<label>(1)</label></formula><p><s>X</s></p><formula xml:id="formula_49">,i + τ r,X αX,i k δ(t -t k )<label>(31)</label></formula><p><s>so that αX,i includes all factors that contribute to the pulse size in Eq. ( <ref type="formula" target="#formula_32">20</ref>), including synapse strength and pulse amplitude.</s><s>The time constants τ r,X , τ d,X and synapse jump sizes αX,i generally depend on cell type.</s><s>Then assuming that each spike train is a Poisson process with a constant mean firing rate: i.e., each spike train is modeled as a stochastic process S(t) with</s></p><formula xml:id="formula_50">S(t) = ν; S(t)S(t + τ ) -ν 2 = νδ(τ ),</formula><p><s>a straightforward but lengthy calculation shows that g X,i (t) = αX,i ν X,i τ r,X , (</s></p><p><s>Var g X,i</s></p><formula xml:id="formula_52">(t) = 1 2 α2 X,i ν X,i τ r,X τ r,X τ r,X + τ d,X = g X,i (t) × α 2 × τ r,X τ r,X + τ d,X ,<label>(33)</label></formula><p><s>where ν X,i is the total rate of type-X spikes incoming to cell i.</s><s>Notice that modulating the rate of an incoming spike train will impact both the mean and variance of the input to the effective equation, Eq. ( <ref type="formula" target="#formula_40">26</ref>) (via E rev,i and σ g X ,i ).</s><s>Furthermore, this impact may differ for excitatory and inhibitory neurons, giving us a total of four parameters that can be varied in the effective equation.</s><s>Therefore, we have four susceptibility functions to compute, Ã g E ,i (ω), Ã g I ,i (ω), Ãσ 2 g E ,i (ω), and Ãσ 2 g I ,i (ω).</s><s>The first two capture the change in firing rate as a result of a change in mean conductanceg E,i → g E,i 0 + g E,i 1 exp(ıωt) or g I,i → g I,i 0 + g I,i 1 exp(ıωt)-while the final two address a change in variance-σ 2 g E ,i → (σ 2 g E ,i ) 0 + (σ 2 g E ,i ) 1 exp(ıωt) or σ 2 g I ,i → (σ 2 g I ,i ) 0 + (σ 2 g I ,i ) 1 exp(ıωt).</s><s>Since the corresponding Fokker-Planck equation required to obtained these entities is linear, we can compute both susceptibilities separately and combine them to get the net effect.</s><s>With these pieces, we now have the interaction matrix:</s></p><formula xml:id="formula_53">Kij (ω) = Ã g E ,i (ω) Jij (ω) + Ãσ 2 g E</formula><p><s>,i (ω) Lij (ω), j excitatory, Ã g I ,i (ω) Jij (ω) + Ãσ 2 g I ,i (ω) Lij (ω), j inhibitory, <ref type="bibr" target="#b33">(34)</ref> where L(ω) plays a similar role as J, but for the effect of incoming spikes on the variance of conductance.</s><s>Its relationship to J (either in the frequency or time domain) is given by the same simple scaling shown in Eq. (33): i.e., for j excitatory,</s></p><formula xml:id="formula_54">Lij (ω) = Jij (ω) × αE,i 2 × τ r,E τ r,E + τ d,E , (<label>35</label></formula><formula xml:id="formula_55">)</formula><p><s>where the first factor comes from the effective spike amplitude αE,i (and is the scale factor proposed in <ref type="bibr" target="#b28">[29]</ref>, Eq. ( <ref type="formula">64</ref>)), and the second arises from using second-order (vs.</s><s>first-order) alpha-functions.</s></p><p><s>To implement this calculation, we first solve for a self-consistent set of firing rates: that is, ν i is the average firing rate of Eq. ( <ref type="formula" target="#formula_40">26</ref>), along with Eqs. ( <ref type="formula" target="#formula_41">27</ref>)-( <ref type="formula" target="#formula_46">30</ref>) and ( <ref type="formula" target="#formula_51">32</ref>)- <ref type="bibr" target="#b32">(33)</ref>.</s><s>We then apply Richardson's threshold integration method <ref type="bibr" target="#b28">[29,</ref><ref type="bibr" target="#b29">30]</ref> directly to Eq. ( <ref type="formula" target="#formula_40">26</ref>) to compute the unperturbed power spectrum ( ỹ0 (ω) ỹ0 * (ω) ) and susceptibility functions.</s><s>The software we used to implement this calculation is described more fully in <ref type="bibr" target="#b3">[4]</ref> and can be found at https://github.com/andreakbarreiro/LR_CondBased.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Computing Statistics from Linear Response Theory</head><p><s>Linear response theory yields the cross-spectrum of the spike train, ỹi (ω) ỹ * j (ω) , for each distinct pair of neurons i and j (see Eq. ( <ref type="formula" target="#formula_38">25</ref>)).</s><s>The cross-correlation function, C ij (τ ), measures the similarity between two processes at time lag τ , while the crossspectrum measures the similarity between two processes at frequency ω: C ij (τ ) ≡ y i (t)ν i y j (t + τ )ν j , <ref type="bibr" target="#b35">(36)</ref> Cij (ω) ≡ ỹi (ω) ỹj (ω) .</s></p><p><s>(</s></p><formula xml:id="formula_56">)<label>37</label></formula><p><s>The Weiner-Khinchin theorem <ref type="bibr" target="#b30">[31]</ref> implies that {C ij , Cij } are a Fourier transform pair: that is,</s></p><formula xml:id="formula_57">Cij (ω) = ∞ -∞ C ij (t)e -2πıωt dt. (<label>38</label></formula><formula xml:id="formula_58">)</formula><p><s>In principle, the cross-correlation C(t) and cross-spectrum C(ω) matrices are functions on the real line, reflecting the fact that correlation can be measured at different time scales.</s><s>In particular, for a stationary point process the covariance of spike counts over a window of length T , n i and n j , can be related to the cross-correlation function C ij by the following formula <ref type="bibr" target="#b16">[17]</ref>:</s></p><formula xml:id="formula_59">Cov T (n i , n j ) = T -T C ij (τ )(T -|τ |) dτ. (<label>39</label></formula><formula xml:id="formula_60">)</formula><p><s>The variance of spike counts over a time window of length T , n i , is likewise given by integrating the autocorrelation function Cii (0) Cjj (0) , <ref type="bibr" target="#b41">(42)</ref> gives us a normalized measure of long-time correlation.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 2</head><label>2</label><figDesc><div><p><s>Fig.2Susceptibility ( Ŝ) vs. firing rate, computed for the asynchronous network studied in<ref type="bibr" target="#b3">[4]</ref>, with all other parameters besides threshold θ and mean inhibitory conductance g I set to their average values (thereby leaving a two-dimensional parameter space: the other (averaged) parameters are σ g I ,i p = 0.6602 (see Eq. (30)), σ g E ,i p = 0.0026 (see Eq. (29)), σ i p = 6.3246, g E , i p = 0.0053 (see Eq. (17)).</s><s>Here, we traverse the plane on three different families of straight-line paths.</s><s>The dashed lines show paths visualized in<ref type="bibr" target="#b3">[4]</ref>: θ = 1 (vertical, aqua blue) and g I = 1.83 (horizontal, orange/yellow)</s></p></div></figDesc><graphic coords="8,70.67,67.18,316.32,359.76" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 3</head><label>3</label><figDesc><div><p><s>Fig.3Susceptibility ( Ŝ) vs. firing rate, computed for the strong asynchronous (Strong Asyn) network studied in<ref type="bibr" target="#b3">[4]</ref>, with all other parameters besides threshold θ and mean inhibitory conductance g I set to their average values (thereby leaving a two-dimensional parameter space: the other (averaged) parameters are σ g I ,i p = 0.5884 (see Eq. (30)), σ g E ,i p = 0.0378 (see Eq. (29)), σ i p = 4.7434, g E , i p = 0.0611, see Eq. (17)).</s><s>Here, we traverse the plane on three different families of straight-line paths.</s><s>Dashed lines show paths visualized in<ref type="bibr" target="#b3">[4]</ref>: θ = 1 (vertical, aqua blue) and g I = 1.46 (horizontal, yellow/green)</s></p></div></figDesc><graphic coords="9,72.02,65.95,316.08,359.52" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head></head><label></label><figDesc><div><p><s>Fig.3Susceptibility ( Ŝ) vs. firing rate, computed for the strong asynchronous (Strong Asyn) network studied in<ref type="bibr" target="#b3">[4]</ref>, with all other parameters besides threshold θ and mean inhibitory conductance g I set to their average values (thereby leaving a two-dimensional parameter space: the other (averaged) parameters are σ g I ,i p = 0.5884 (see Eq. (30)), σ g E ,i p = 0.0378 (see Eq. (29)), σ i p = 4.7434, g E , i p = 0.0611, see Eq. (17)).</s><s>Here, we traverse the plane on three different families of straight-line paths.</s><s>Dashed lines show paths visualized in<ref type="bibr" target="#b3">[4]</ref>: θ = 1 (vertical, aqua blue) and g I = 1.46 (horizontal, yellow/green)</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4</head><label>4</label><figDesc><div><p><s>Fig. 4 Where ∇ Ŝ and ∇F are similarly aligned, Ŝ and F will both increase along most paths through that point.</s><s>In each panel, gray shows the part of the x-plane where d Ŝ dF = ∇ Ŝ•dx ∇F •dx &gt; 0, black where d Ŝ dF &lt; 0. From left to right: ∇ Ŝ and ∇F positively aligned; ∇ Ŝ and ∇F orthogonal; ∇ Ŝ and ∇F negatively aligned</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 5</head><label>5</label><figDesc><div><p><s>Fig. 5 Using a single number to predict d Ŝ/dF .</s><s>(A) Paths through parameter space for the asynchronous network: white shows the part of the x-plane where d Ŝ dF = ∇ Ŝ•dx ∇F •dx &gt; 0, black where d Ŝ dF &lt; 0, where ∇ Ŝ and ∇F are computed at the center of the diagram.</s><s>(B) Correlation susceptibility vs. firing rate, for each path illustrated in (A).</s><s>(C)-(D) As in (A)-(B), but for the strong asynchronous network</s></p></div></figDesc><graphic coords="11,76.16,64.26,312.00,288.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 6</head><label>6</label><figDesc><div><p><s>Fig.6Second-order motifs dominate pairwise correlations in a wide range of networks; inhibitory common input is the dominant second-order motif.</s><s>(A) Fraction of variance explained (R 2 ) from linear regressions of total correlation ( Cij / Cii Cjj ) against contributions from first order (blue), second order (red), third-order (green), and fourth-order (magenta) motifs.</s><s>(B) Contributions up to fourth order ( Rk ij , for k = 1, . . .</s><s>, 4) vs. total correlation ( Cij / Cii Cjj ) for all E-E cell pairs in a network, for two individual networks included in panel A. (C) Fraction of variance explained (R 2 ) from linear regressions of contributions to pairwise correlations from second-order motifs ( R2 ij ) against contributions from the distinct types of second-order motifs: inhibitory common input (magenta), excitatory common input (red), decorrelating chains (green), and correlating chains (blue).</s><s>Both (A,C): Each data point represents the mean value from 15 networks with W I E between 5 and 11.2; error bars show standard deviation across these values.</s><s>W XY = 1 is when the presynaptic input is exactly the average population firing rate (filtered by the synapse) in an all-to-all homogeneous network</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 8</head><label>8</label><figDesc><div><p><s>Fig.8The strength of background noise modulates the correlation-firing rate relationship.</s><s>(A) Each panel shows firing rate vs. susceptibility ( Ŝ), computed for a family of networks generated by modulating the strength of excitation (W EE and W I E ) with various background noise levels (see Eq. (17) for σ E and σ I definitions).</s><s>(B) Population-averaged effective parameters g I and E rev , for each network displayed in (A); see Eq. (28) for E rev</s></p></div></figDesc><graphic coords="15,230.09,298.62,123.12,93.12" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>CC</head><label></label><figDesc><div><p><s>ii (τ )(T -|τ |) dτ.<ref type="bibr" target="#b39">(40)</ref></s><s>By normalizing by the time window and taking the limit as T → ∞, ij (τ ) dτ = Cij (0),<ref type="bibr" target="#b40">(41)</ref> we can see that, for an integrable cross-correlation function, we can use Cij (0) as a measure of long-time covariance.</s><s>Similarly, the long-time limit of the Pearson correlation coefficient of the spike counts, limT →∞ ρ T ,ij = lim T →∞ Cov T (n i , n j )Var T (n i ) Var T (n j ) = Cij (0)</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="7,72.92,69.49,316.65,222.34" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 1</head><label>1</label><figDesc><div><p><s>Intrinsic parameters that are fixed throughout</s></p></div></figDesc><table><row><cell></cell><cell>Parameter</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell>τ m</cell><cell>E E</cell><cell>E I</cell><cell>τ ref</cell><cell>α E</cell><cell>α I</cell><cell>τ r,E</cell><cell>τ d,E</cell><cell>τ r,I</cell><cell>τ d,I</cell></row><row><cell>Value</cell><cell>20 ms</cell><cell>6.5</cell><cell>-0.5</cell><cell>2 ms</cell><cell>1</cell><cell>2</cell><cell>1 ms</cell><cell>5 ms</cell><cell>2 ms</cell><cell>10 ms</cell></row><row><cell cols="5">Fixed parameters for model networks; see Eqs. (</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2</head><label>2</label><figDesc><div><p><s>Excitatory connection strengths mediate different firing regimesConnectivity details for networks examined in Sect.</s><s>2.2.</s><s>Here W Y X denotes X → Y connections; e.g.</s><s>W I E denotes the strength of excitatory connections onto inhibitory neurons.</s><s>The parameter σ i denotes the strength of background noise in units of (scaled) voltage, and depends only on cell type (E or I ).</s><s>The parameters W EE , W I E , σ E and σ I will vary in Sects.</s><s>2.4 and 2.5; see text for details.</s><s>For reference, W XY = 1 is when the presynaptic input is exactly the average population firing rate (filtered by the synapse) in an all-to-tall homogeneous network.</s></p></div></figDesc><table><row><cell>Parameter</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell cols="5">W EI (I → E) W I E (E → I ) W EE W I I σ E</cell><cell>σ I</cell><cell>Figures</cell></row><row><cell>Asynchronous 10 Str. Asynch. 10</cell><cell>5 8</cell><cell>0.5 9</cell><cell>5 5</cell><cell cols="2">2/ √ 1.5/ √ 2 3/ √ 2 2.5/ √ 2 Figs.1, 2, 5(A) and (B) 2 Figs. 3, 5(C) and (D)</cell></row><row><cell>% connectivity 35 %</cell><cell>20 %</cell><cell cols="2">40 % 40 %</cell><cell></cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgements This work was motivated in part by useful feedback we received at the <rs type="projectName">Third Annual International Conference on Mathematical Neurosciences, held in Boulder CO in May-June 2017</rs>.We would like to thank the organizers for an enjoyable and stimulating conference.</p><p>Funding Not applicable.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funded-project" xml:id="_3YdNKMb">
+					<orgName type="project" subtype="full">Third Annual International Conference on Mathematical Neurosciences, held in Boulder CO in May-June 2017</orgName>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Availability of data and materials Software used to generate the computational results shown here can be found at: https://github.com/andreakbarreiro/LR_CondBased.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Ethics approval and consent to participate Not applicable.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing interests</head><p><s>The authors declare that they have no competing interests.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Consent for publication Not applicable.</head><p><s>Authors' contributions AKB and CL designed the project.</s><s>AKB and CL wrote software.</s><s>AKB performed simulations.</s><s>AKB and CL designed figures.</s><s>AKB and CL wrote the paper.</s><s>All authors read and approved the final manuscript.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Publisher's Note</head><p><s>Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Neural correlations, population coding and computation</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Averbeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="358" to="366" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Correlated firing in macaque visual area mt: time scales and relationship to behavior</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zohary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1676" to="1697" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A theoretical framework for analyzing coupled neuronal networks: application to the olfactory system</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Barreiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Gautam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Shew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page">1005780</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">When do correlations increase with firing rate in recurrent networks?</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Barreiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">1005506</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Attention improves performance primarily by reducing interneuronal correlations</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jhr</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1594" to="1600" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">High-fidelity coding with correlated neurons</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Da Silveira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Berry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">1003970</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Theoretical neuroscience: computational and mathematical modeling of neural systems</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+			<publisher>Taylor &amp; Francis</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Correlation between neural spike trains increases with firing rate</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>De La Rocha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josić</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Reyes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">448</biblScope>
+			<biblScope unit="page" from="802" to="806" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">The mechanics of state-dependent neural correlations</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Litwin-Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rosenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Ocker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josić</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="383" to="393" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">The effect of noise correlations in populations of diversely tuned neurons</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Ecker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Tolias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bethge</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">40</biblScope>
+			<biblScope unit="page" from="14272" to="14283" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Azeredo da Silveira R. Structures of neural correlation and how they favor coding</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Franke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fiscella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sevelev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Roska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hierlemann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="409" to="422" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Neuronal dynamics: from single neurons to networks and models of cognition</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Gerstner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Kistler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Naud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Paninski</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<publisher>Cambridge University Press</publisher>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">The correlation structure of local neuronal networks intrinsically results from recurrent dynamics</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Helias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tetzlaff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Diesmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">1003428</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Motif statistics and spike correlations in neuronal networks</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Trousdale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Stat Mech Theory Exp</title>
+		<imprint>
+			<biblScope unit="volume">2013</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">3012</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">The sign rule and beyond: boundary effects, flexibility, and noise correlations in neural population codes</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zylberberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">1003469</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Stimulus-dependent correlations and population codes</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josić</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>De La Rocha</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="2774" to="2804" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Fundamentals of statistical signal processing</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Kay</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1993">1993</date>
+			<publisher>Prentice Hall</publisher>
+			<biblScope unit="volume">1</biblScope>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note>estimation theory</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Correlations and neuronal population information</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Coen-Cagli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kanitscheider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="237" to="256" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The nature of shared cortical variability</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">C</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Okun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="644" to="656" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Theory of oscillatory firing induced by spatially correlated noise and delayed inhibitory feedback</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lindner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Longtin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev E</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">61919</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Slow dynamics and high variability in balanced cortical networks with clustered connections</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Litwin-Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="1498" to="1505" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Formation and maintenance of neuronal assemblies through synaptic plasticity</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Litwin-Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">5319</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Firing rate dynamics in recurrent spiking neural networks with intrinsic and network heterogeneity</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="311" to="327" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Microcircuits in visual cortex</title>
+		<author>
+			<persName><forename type="first">Kac</forename><surname>Martin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="418" to="425" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Information-limiting correlations</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Moreno-Bote</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Beck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kanitscheider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Pitkow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Latham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1410" to="1417" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">How connectivity, background activity, and synaptic properties shape the cross-correlation between spike trains</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ostojic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Hakim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="10234" to="10253" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">How structure determines correlations in neuronal networks</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Pernice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Staude</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cardanobile</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rotter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">1002059</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">The asynchronous state in cortical circuits</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Renart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>De La Rocha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bartho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hollender</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Parga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Reyes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">327</biblScope>
+			<biblScope unit="page" from="587" to="590" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Firing-rate response of linear and nonlinear integrate-and-fire neurons to modulated current-based and conductance-based synaptic drive</title>
+		<author>
+			<persName><forename type="first">Mje</forename><surname>Richardson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev E</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page">21919</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Spike-train spectra and network response functions for non-linear integrate-and-fire neurons</title>
+		<author>
+			<persName><forename type="first">Mje</forename><surname>Richardson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biol Cybern</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="381" to="392" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">The Fokker-Planck equation: methods of solutions and applications</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Risken</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1989">1989</date>
+			<publisher>Springer</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">The spatial structure of correlated neuronal variability</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rosenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="107" to="114" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Attention can either increase or decrease spike count correlations in visual cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Ruff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="1591" to="1597" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Cellular and network mechanisms of rhythmic recurrent activity in neocortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Sanchez-Vives</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1027" to="1034" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Fundamental activity constraints lead to specific interpretations of the connectome</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schuecker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Van Albada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Diesmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Helias</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">1005179</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Five key factors determining pairwise correlations in visual cortex</title>
+		<author>
+			<persName><forename type="first">Dpa</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sahani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="1022" to="1033" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Implications of neuronal diversity on population coding</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shamir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1951" to="1986" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Correlation and synchrony transfer in integrate-andfire neurons: basic properties and consequences for coding</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>De La Rocha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev Lett</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page">108102</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Turning on and off recurrent balanced cortical activity</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hasenstaub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">423</biblScope>
+			<biblScope unit="issue">6937</biblScope>
+			<biblScope unit="page" from="288" to="293" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Decorrelation of neural-network activity by inhibitory feedback</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tetzlaff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Helias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Einevoll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Diesmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">e1002596</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Impact of network structure and cellular response on spike time correlations</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Trousdale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">1002408</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Chaos in neuronal networks with balanced excitatory and inhibitory activity</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Van Vreeswijk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">274</biblScope>
+			<biblScope unit="page" from="1724" to="1726" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Synchronization from second order network connectivity statistics</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Beverlin</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Netoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">Q</forename><surname>Nykamp</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="16" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Direction-selective circuits shape noise to ensure a precise population code</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zylberberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cafaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Turner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rieke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="369" to="383" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

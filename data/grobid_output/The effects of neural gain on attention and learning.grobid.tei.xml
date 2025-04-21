@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The effects of neural gain on attention and learning</title>
+				<funder ref="#_nMQUdkB">
+					<orgName type="full">Howard Hughes Medical Institute International Student Research fellowship</orgName>
+				</funder>
+				<funder ref="#_Fe8JWbs #_VnnYZUE">
+					<orgName type="full">National Institutes of Health</orgName>
+					<orgName type="abbreviated">NIH</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Regina and John Scully Center for the Neuroscience of Mind and Behavior</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2014-02-01">2014 February 01</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Eran</forename><surname>Eldar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Princeton Neuroscience Institute</orgName>
+								<address>
+									<country>Princeton University</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jonathan</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Princeton Neuroscience Institute</orgName>
+								<address>
+									<country>Princeton University</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Psychology Department</orgName>
+								<orgName type="institution">Princeton University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yael</forename><surname>Niv</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Princeton Neuroscience Institute</orgName>
+								<address>
+									<country>Princeton University</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Psychology Department</orgName>
+								<orgName type="institution">Princeton University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The effects of neural gain on attention and learning</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Neuroscience</title>
+						<title level="j" type="abbrev">Nat Neurosci</title>
+						<idno type="ISSN">1097-6256</idno>
+						<idno type="eISSN">1546-1726</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">16</biblScope>
+							<biblScope unit="issue">8</biblScope>
+							<biblScope unit="page" from="1146" to="1153"/>
+							<date type="published" when="2014-02-01">2014 February 01</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7D4AB8586EA7F1EB785432205057F6B5</idno>
+					<idno type="DOI">10.1038/nn.3428</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Attention is commonly thought to be manifest through local variations in neural gain.</s><s>However, what would be the effects of brain-wide changes in gain?</s><s>Here, we hypothesize that global fluctuations in gain modulate the breadth of attention, and thus, the degree to which processing is focused on aspects of the environment to which one is predisposed to attend.</s><s>In accordance with this hypothesis, we show that measures of pupil diameter, which are thought to track levels of LC-NE activity and neural gain, are correlated with the degree to which learning is focused on stimulus dimensions that individual human participants are more predisposed to process.</s><s>In support of our interpretation of this effect in terms of global changes in gain, we further show that the measured pupillary and behavioral variables are strongly correlated with global changes in the strength and clustering of functional connectivity, as brain-wide fluctuations of gain would predict.</s></p><p><s>Users may view, print, copy, download and text and data-mine the content in such documents, for the purposes of academic research, subject always to the full Conditions of use: http://www.nature.com/authors/editorial_policies/license.html#terms</s><s>Author contributions EE and YN designed the study with consultation from JDC. EE and YN analyzed the data, and all authors contributed to discussion and interpretation of the findings and writing the manuscript.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>When presented with a set of stimuli, some people may attend to, and therefore learn most about concrete visual details, while others may attend to abstract semantic concepts associated with those stimuli.</s><s>Evidence suggests that such variations in attention and learning may reflect stable individual predispositions <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b2">3</ref> .</s><s>We hypothesize that the expression of these predispositions is modulated by global variations in neural gain.</s><s>Specifically, we propose that high gain focuses attention and learning on dimensions of the environment to which one is predisposed to attend, whereas low gain broadens attention, thereby weakening the constraint of prior dispositions on attention and learning.</s></p><p><s>By what mechanism can gain exert these effects on attention?</s><s>Neural gain can be thought of as an amplifier of neural communication: when gain is increased, excited neurons become even more active and inhibited neurons become even less active <ref type="bibr" target="#b0">1</ref> (Fig. <ref type="figure" target="#fig_0">1a</ref>).</s><s>Existing evidence suggests that the locus coeruleus-norepinephrine (LC-NE) system serves to modulate neural gain throughout the brain <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b5">6</ref> .</s><s>We first use a simple neural network model in which different neural representations compete through mutual inhibition, to demonstrate that applying a high global level of gain to all network units can make strong neural representations even more dominant, while further weakening weaker competing representations.</s><s>Accordingly, we hypothesized that high gain results in processing that is more narrowly focused on the most strongly represented features of perceived information.</s></p><p><s>To test our hypotheses, we used a novel task that quantifies the degree of learning about perceptual versus semantic features of stimuli (Fig. <ref type="figure" target="#fig_0">1b</ref>), together with a standard trait questionnaire that assesses predispositions to attend to and learn about perceptual versus semantic dimensions of stimuli <ref type="bibr" target="#b2">3</ref> .</s><s>In general, we expected participants to exhibit better learning for the type of features (perceptual or semantic) to which they are predisposed.</s><s>More importantly, we hypothesized that this relationship would be modulated by neural gain.</s></p><p><s>While it is impossible to directly measure gain in human participants, pupil diameter, easily measurable noninvasively, has been suggested to track levels of neural gain <ref type="bibr" target="#b4">5</ref> .</s><s>Converging evidence suggests that baseline pupil diameter is correlated with tonic levels of LC-NE activity in rats, cats and monkeys <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b0">1</ref> , as well as with human behaviors predicted to be associated with tonic LC-NE activity in a variety of experimental tasks and manipulations <ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2</ref> .</s><s>While baseline pupil diameter between individuals can be used to monitor changes in gain within individual, phasic pupil dilations normalized to baseline diameter are better suited for between-subject comparisons, as they are better dissociated from factors that can confound between-subject baseline measures.</s><s>Because phasic responses are inversely related to baseline pupil diameter and tonic LC-NE activity <ref type="bibr" target="#b4">5</ref> , pupil dilation responses provide an inverse measure of tonic gain.</s></p><p><s>To test neural predictions of our gain-modulation hypothesis concerning the relationship between pupil diameter and the match between individual predispositions and learning performance, we used functional magnetic resonance imaging (fMRI).</s><s>First, increased gain implies that neural signals are enhanced, which in turn predicts that interactions between connected parts of the network should increase.</s><s>Indeed, gain modulation has been proposed as a mechanism for flexible control of network functional connectivity <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b2">3</ref> .</s><s>This suggests that global fluctuations in neural gain should be associated with global fluctuations in the strength of functional connectivity, and furthermore, that these fluctuations in functional connectivity should correlate with changes in pupil diameter.</s><s>To test these predictions, we measured the degree to which fluctuations in functional connectivity within brain areas were correlated between areas, as well as with changes in pupil diameter.</s></p><p><s>Second, our neural network modeling of the effect of gain on learning suggested that the link between gain and focused learning should be mediated by a more tightly-clustered pattern of neural interactions through which processing is selectively focused on particular input streams.</s><s>In contrast, when gain in the model was low, widely-distributed interactions mediated the concurrent processing of multiple stimulus features.</s><s>Accordingly, we predicted that within-participant baseline pupil diameter would correlate throughout the experiment with the degree to which functional connectivity is clustered, as measured using graphtheoretic analysis <ref type="bibr" target="#b0">1</ref> , and that the degree of clustering would, in turn, correlate with a bias in learning performance toward the type of features that individual participants are predisposed to process.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A model of neural gain and predispositions in learning</head><p><s>First, to formalize our hypothesis about the effect of gain on attention and learning, we constructed a simple neural network model of the task, that learned a stimulus-reward relationship from examples (Fig. <ref type="figure" target="#fig_0">1c,</ref><ref type="figure">d</ref>).</s><s>The input to the network consisted of two separate streams of information, each representing one dimension (e.g.</s><s>visual or semantic).</s><s>One feature in each dimension was associated with a monetary reward while the other was not.</s><s>We simulated a predisposition to attend to one dimension more than to the other by making connection weights in one stream stronger than those in the other stream.</s><s>We then examined the degree to which the network learned to associate the reward-predicting feature in each stream with a reward output, as a function of both the predisposition of the network and the level of gain.</s></p><p><s>With low gain, inputs from both the strong and weak streams propagated to the subsequent layers (Fig. <ref type="figure" target="#fig_0">1c</ref>), and the relationship with reward was learned for both types of features (that is, predisposition did not significantly bias learning; Fig. <ref type="figure" target="#fig_0">1e,</ref><ref type="figure">black</ref>).</s><s>In contrast, when gain was high, inputs in the strong stream dominated representations in the middle layer (Fig. <ref type="figure" target="#fig_0">1d</ref>) and learning of the input-reward relationship tended to proceed only on strongly-represented features (i.e., learning was biased towards features that the network was predisposed to represent; Fig. <ref type="figure" target="#fig_0">1e,</ref><ref type="figure">gray</ref>).</s><s>Thus, the simulations demonstrate that increased gain can focus learning on those features that the network is predisposed to represent.</s><s>The simulations also demonstrate that gain affects communication patterns in the network: with lower gain multiple input streams interact (Fig. <ref type="figure" target="#fig_0">1c</ref>); but with higher gain weak input streams have less of an effect on other parts of the network, with the result that network connectivity is more tightly clustered and separate subnetworks are formed (Fig. <ref type="figure" target="#fig_0">1d</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Pupil responses and adherence to predispositions</head><p><s>To test for the predicted relationship between pupil responses (as an index of neural gain) and the influence of attentional predispositions on learning, we asked participants to choose between pairs of multidimensional images (comprised of visual and semantic features) and rewarded them according to their choices.</s><s>Unbeknownst to the participants, within each stimulus set one visual feature and one semantic feature predicted monetary reward (Fig. <ref type="figure" target="#fig_0">1b</ref>).</s><s>For example, in one stimulus set, office-related images but not food-related images (semantic features) yielded reward and, similarly, grayscale images but not color images (visual features) yielded reward (rewards were additive so that a grayscale office-related image yielded twice the reward).</s><s>Throughout 18 games, each with different semantic and visual dimensions and unique stimuli, we measured participants' visual and semantic performance separately using trials in which stimuli differed on either the visual or the semantic features, but not both.</s></p><p><s>In addition, we assessed each participant's predisposition to process either the visual or semantic features using the Index of Learning Styles (ILS) questionnaire <ref type="bibr" target="#b2">3</ref> .</s><s>The ILS questionnaire contrasts a 'sensing' learning style that indicates a predisposition to process and learn about sense-related data such as visual features, with an 'intuitive' learning style that indicates a predisposition to learn about abstract concepts such as semantic categories.</s></p><p><s>The results showed that a more intuitive (and less sensing) learning style was correlated with better performance on the semantic trials compared to the visual trials (r = 0.28, p = 0.05 one tailed; Fig. <ref type="figure" target="#fig_1">2a</ref>; see Supplementary Fig. <ref type="figure" target="#fig_0">1</ref> for overall performance levels), consistent with a predisposition to attend to and learn about semantic vs. visual features of the stimuli.</s><s>Critically, the degree to which task performance matched individual predisposition was strongly anti correlated with mean pupil dilation response across individuals (r = -0.96,</s><s>p &lt; 0.01; Fig. <ref type="figure" target="#fig_1">2b,</ref><ref type="figure">c</ref>).</s><s>Given the inverse relationship between pupil response and gain discussed above, our finding suggests that the association between task performance and individual predisposition was itself associated with high gain.</s><s>These behavioral results were fully replicated in a second experiment in which a different group of participants performed the same task while being scanned using fMRI (Fig. <ref type="figure" target="#fig_1">2d,</ref><ref type="figure">e</ref>).</s><s>Moreover, in both experiments mean pupil dilation response did not correlate with overall task performance (behavioral experiment: n = 35, r = -0.13,</s><s>p = 0.44; imaging experiment: n = 30, r = 0.04, p = 0.82), mean reaction times (following log transform; behavioral experiment: n = 35, r = 0.17, p = 0.33; imaging experiment: n = 30, r = 0.06, p = 0.77), or with answers to debriefing questions regarding interest, motivation and attention (see Supplementary Table <ref type="table">1</ref>).</s><s>These results suggest that the relationship between pupil responses and adherence to one's learning predisposition cannot be explained in terms of fluctuations in overall level of arousal or attention to the task.</s><s>Further analysis confirmed that the decrease in correlation between ILS score and task performance for participants withhigher pupil response (lower gain) was not simply a result of a more limited range of ILS scores for these participants (see Supplementary Fig. <ref type="figure" target="#fig_1">2</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Pupil diameter and fMRI indicators of gain</head><p><s>We next examined the fMRI data for evidence of fluctuations in gain within individual participants, and tested whether these correlate with pupillary indices of gain.</s><s>Increased gain entails that neural activation is driven toward maximal or minimal levels (Fig. <ref type="figure" target="#fig_0">1a</ref>).</s><s>Thus, large baseline pupil diameter should be associated with more extreme fMRI activations.</s><s>Indeed, we found that the fMRI blood-oxygen-level-dependent (BOLD) signal was farther from the mean when baseline pupil diameter was large (mean absolute deviation from the mean 8.36) compared to when it was small (mean absolute deviation 8.02; t 29 = 3.79, p &lt; 1D, paired t-test comparing 10% of trials with highest pupil diameter to 10% of trials with lowest pupil diameter).</s></p><p><s>An additional prediction that stems from the assumed relationship between pupil diameter and gain is that the magnitude of pupil dilation in response to task-relevant stimuli should correlate with the magnitude of the BOLD response to task-relevant stimuli, but not to taskirrelevant stimuli <ref type="bibr" target="#b4">5</ref> .</s><s>To test this prediction, we had included in the experiment random, taskirrelevant, auditory stimuli that participants were instructed to ignore.</s><s>As predicted, both low baseline pupil diameter and high pupil dilation response were associated with stronger BOLD responses to task-relevant stimuli, but not to task-irrelevant stimuli (baseline diameter: t 27 = -5.04,</s><s>p &lt; 10 -5 ; dilation response: t 27 = 2.56, p &lt; 0.05; Fig. <ref type="figure" target="#fig_2">3</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Pupil diameter and global fluctuations in functional connectivity</head><p><s>The neural network learning model described above suggests that global changes in gain should be associated with global changes in the strength of functional connections.</s><s>To examine this suggestion in a more general setting, we simulated the effects of gain on functional connectivity (unit-to-unit correlations) in large (1000 units) randomly-constructed networks that were not designed to perform any particular task.</s><s>This simulation as well suggested that high gain should be associated with stronger mean functional connectivity (Fig. <ref type="figure" target="#fig_3">4a-c</ref>; r = 0.99, p &lt; 10 -13 ).</s></p><p><s>Thus, we first examined whether the fMRI data is characterized by global fluctuations in the strength of functional connections.</s><s>Towards this end, we measured functional connectivity while participants performed the learning task and assessed the extent to which fluctuations in functional connectivity in different brain areas were correlated with each other.</s><s>To do this, we divided each participant's brain arbitrarily into 32 boxes, which contained roughly similar volumes of gray matter (27.1 ± 2.6 cm 3 ; Fig. <ref type="figure" target="#fig_4">5a</ref>).</s><s>We then measured the mean strength of functional connectivity within each box during each game (quantified as the mean absolute correlation of the time series of the fMRI signal among pairs of voxels within the box).</s><s>Finally, we correlated the time series of mean functional connectivity values over games for each pair of boxes.</s><s>Mean functional connectivity strength across games was positively correlated for 96% of all box pairs, and the mean correlation coefficient was 0.72 (range 0.27 to 0.95 across participants, t 29 = 10.85,</s><s>p &lt; 10 -10 ; Fig. <ref type="figure" target="#fig_4">5b</ref>).</s><s>Notably, this correlation did not simply reflect a common global signal component, since the mean graymatter signal was regressed out of the data prior to the functional connectivity analysis.</s><s>Thus, even though our measurements of functional connectivity in different boxes involved strictly disjoint brain areas, we found very strong correlationsin fluctuations of these measurements throughout the brain.</s></p><p><s>While this result is strongly suggestive of global modulation of neural signaling, it is nevertheless possible that global fluctuations in local functional connectivity reflect correlated local instabilities of the MRI scanner.</s><s>Such a confound could be dismissed if the measured fluctuations in functional connectivity were also to covary with the separately attained measures of baseline pupil diameter.</s><s>Indeed, we found that when baseline pupil diameter was highest (indicative of high gain), high functional connectivity measurements were more prevalent (Fig. <ref type="figure" target="#fig_5">6a</ref>, gray, whereas when baseline pupil diameter was lowest (low gain) weaker functional connectivity was more prevalent (Fig. <ref type="figure" target="#fig_5">6a,</ref><ref type="figure">black</ref>).</s><s>Accordingly, baseline pupil diameter was positively correlated with mean functional connectivity strength (mean r = 0.27 across participants, t 27 = 2.98, p &lt; 0.01), and, similarly, pupil responses were anticorrelated with mean functional connectivity strength (mean r = -0.24</s><s>across participants, t 27 = -3.63,</s><s>p &lt; 0.01).</s><s>In particular, baseline diameter was positively correlated with the number of functional connectivity measurements stronger than ± 0.17, and anticorrelated with the number of weaker functional connectivity measurements (Fig. <ref type="figure" target="#fig_5">6b</ref>).</s></p><p><s>Remarkably, this non-monotonic relationship between functional connectivity strength and its correlations with baseline diameter was predicted by our simulation of the effects of gain on functional connectivity in randomly connected neural networks (cf.</s><s>Fig. <ref type="figure" target="#fig_3">4b</ref>).</s></p><p><s>To verify that the relationship between functional connectivity and pupil diameter was not specific to particular brain regions, but rather was manifest throughout the brain, we examined this relationship separately in each of the 32 boxes.</s><s>Functional connectivity strength was positively correlated with baseline pupil diameter in 70% of the boxes (22 out of 32 boxes per participant on average; Fig. <ref type="figure" target="#fig_7">7a</ref>), and the mean correlation coefficient was 0.19 (t 27 = 3.19, p &lt; 0.01; Fig. <ref type="figure" target="#fig_7">7b</ref>).</s><s>Notably, baseline pupil diameter was not correlated with the mean box fMRI signal (mean r = -0.004,</s><s>t 27 = -0.35,</s><s>p = 0.73), indicating that the relationship with functional connectivity strength did not reflect pupil-related variations in signal strength.</s><s>Further, the relationship between baseline diameter and functional connectivity strength was fairly consistent throughout the brain: for every box, functional connectivity was positively correlated with baseline pupil diameter in at least half of the participants.</s><s>As expected, functional connectivity strength was also anticorrelated with pupil dilation response in 75% of the boxes (Fig. <ref type="figure" target="#fig_7">7c</ref>), and the mean correlation coefficient was -0.20 (t 27 = -3.54,</s><s>p &lt; 0.01; Fig. <ref type="figure" target="#fig_7">7d</ref>).</s><s>Our results thus suggest that the strength of functional connectivity fluctuated in a similar manner throughout the brain, and these fluctuations were tracked closely by both pupil diameter indices.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Pupil diameter, neural clustering and task performance</head><p><s>The results of our learning neural network model also suggested that with high gain functional connectivity should be more tightly clustered rather than evenly distributed.</s><s>To examine this in a more general setting, we constructed a functional connectivity graph for each of the random 1000-unit networks described above.</s><s>Each of the graphs' nodes represented a unit and two units were connected by an edge if the correlation of activity between them was in the top 1% of all such correlations.</s><s>The clustering coefficient 1 of such a graph indicates the degree to which functional connectivity is tightly clustered in the network.</s><s>As expected, higher gain was associated with higher clustering coefficients (Fig. <ref type="figure" target="#fig_3">4d</ref>; r = 0.99, p &lt; 10 -12 ).</s></p><p><s>To test the degree to which functional connectivity was tightly clustered in the brain, we then constructed a functional connectivity graph for each participant and each game (18 graphs per participant).</s><s>The graphs were constructed as done for the simulated networks, except that in this case each of the graphs' nodes represented a voxel (see Supplementary Figs. <ref type="figure" target="#fig_2">3</ref> and<ref type="figure" target="#fig_3">4</ref> for example graphs).</s><s>As predicted, we found a significant game-by-game correlation between the clustering coefficient of these graphs and baseline pupil diameter (mean r = 0.14 across participants, t 27 = 1.82, p &lt; 0.05 one tailed; Fig. <ref type="figure" target="#fig_8">8a</ref>).</s><s>That is, when participants' pupil diameter indicated high gain, their neural functional connectivity tended to be more tightly clustered.</s><s>Moreover, we found a similar correlation when the analysis was restricted to prefrontal cortex, an area that is not involved in primary visual processing (mean r = 0.14 across participants, t 27 = 2.05, p &lt; 0.05), suggesting that the relationship between pupil diameter and clustering was indeed due to global fluctuations in gain and not differences in activation to the visual stimuli.</s></p><p><s>Finally, to the extent that functional connectivity clustering reflects the effects of gain on attention, we expected the degree of clustering to be associated with the degree to which learning was focused on stimulus features to which the individual was predisposed to attend.</s><s>Consistent with this prediction, we found a significant game-by-game correlation between the clustering coefficient and a shift in learning performance toward the type of feature that the ILS scores indicated as preferred by each participant (mean r = 0.08 across participants, t 29 = 2.2, p &lt; 0.05).</s><s>Concordantly, ILS score was correlated with the relationship between clustering coefficient and task performance (r = 0.35, p &lt; 0.05; Fig. <ref type="figure" target="#fig_8">8b</ref>).</s><s>Thus, when participants' neural functional connections were more tightly clustered, task performance more strongly reflected individual predispositions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>We investigated the relationship between global, brain-wide fluctuations in neural gain and the effect of individual priors or attentional predispositions (so-called 'learning styles') on trial-and-error learning behavior.</s><s>More specifically, we used pupil-diameter measures as a proxy for global levels of neural gain, to test the hypothesis that predispositions constrain learning more strongly when gain is higher.</s><s>In two experiments, the degree to which learning performance followed individual predisposition was strongly correlated with pupil response.</s><s>We then provided more direct neural evidence in support of our interpretation of this correlation.</s><s>First, we showed that brain function is characterized by global fluctuations in the strength of functional connectivity, as would be expected from global modulation of gain, and that these fluctuations are tracked by pupillary indices of gain.</s><s>Second, we showed that these pupillary indices are correlated with the degree to which functional connectivity is clustered, as was predicted by our neural network modeling.</s><s>Finally, we showed that increases in such clustering are associated with a shift in the content of learning towards the type of information that individual participants are predisposed to process.</s><s>Taken together, these results provide strong converging evidence in favor of the hypothesis that high gain constrains the type of information that is learned from multidimensional sensory input in accordance with one's prior processing dispositions.</s></p><p><s>The finding that local fluctuations in functional connectivity are globally correlated across the brain, and that these fluctuations are correlated with pupillary indices supports existing theory that implicates the LC-NE system in global modulation of neural gain <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5</ref> .</s><s>We note however that the relationship between gain and functional connectivity may not be as simple as we portray here, due to factors such as saturation of neural activity, network dynamics and spiking dynamics.</s><s>Nevertheless, the results of our study, understood in the context of existing evidence and theory, conform to the expectation that gain and functional connectivity should covary.</s><s>In addition, our clustering analysis findings extend this theory by suggesting that high gain is associated with a shift from a widely distributed pattern of neural processing to a more tightly-clustered pattern dominated by the strongest input streams.</s></p><p><s>The results of our study provide a neural-computational framework within which past findings concerning the relationship of stress and norepinephrine levels to cognitive function can be understood.</s><s>A large body of psychological research in humans suggests that stress (which is associated with high levels of norepinephrine) reduces the breadth of attention <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2</ref> .</s><s>Another line of studies shows that stress and norepinephrine shift rat and human behavior from a flexible mode of behavior to a more rigid habitual mode in which previously established stimulus-response associations are followed <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4</ref> .</s><s>Stress and norepinephrine have also been linked to diminished performance in tasks requiring cognitive flexibility <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2</ref> .</s><s>Our findings suggest an explanation of these previously observed phenomena in terms of the influence of the LC-NE system in globally modulating neural gain.</s><s>Increased gain narrows attention by strengthening already strong neural representations at the expense of competing weaker representations.</s><s>This, in turn, favors previously established patterns of behavior, which are subserved by well-established neural circuits and thus tend to form stronger representations.</s></p><p><s>We attempted to identify the effects of neural gain -a computational concept defined in terms of the input-output function of neural units -on behavior and on whole-brain fMRI metrics.</s><s>This constitutes a novel, promising approach by which low-level principles of neural function may be linked via computational modeling to system-level neural and behavioral phenomena.</s><s>However, the disadvantage of our approach is that it necessarily relies on a broad set of assumptions.</s><s>Specifically, in making our predictions we assumed that changes in pupil diameter would track changes in neural gain.</s><s>Furthermore, our fMRI predictions were based on the assumption that the BOLD signal would reflect the neural effects of gain simulated by changes in firing rates in our computational models.</s><s>This last assumption is particularly tenuous, since several studies have found dissociations between spiking activity and the BOLD signal specifically under conditions that are thought to involve changes in neuromodulation <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b2">3</ref> .</s><s>Nevertheless, we presented here a diverse set of behavioral and imaging results that precisely match the predictions made by our neural network simulations of the effect of gain on neural activity, connectivity and behavior.</s><s>This set of converging results, in addition to evidence from past studies, provides substantial support for the assumptions underlying this study.</s></p><p><s>The focusing effect of neural gain on processing may at first glance seem to be in conflict with previous accounts suggesting that tonically high gain reduces task-focused attention <ref type="bibr" target="#b4">5</ref> .</s><s>However, while our findings suggest that increased gain focuses attention on predisposed dimensions of sensory stimuli, these need not be related to the task at hand.</s><s>Rather, if distracting stimuli are salient enough to evoke strong neural representations, our theory predicts that high gain would be associated with increased attention to distracters, and thus, with reduced task-focused attention.</s><s>Our findings also fit well with a previous suggestion 1 that phasic norepinephrine responses, which are stronger in low gain states (low tonic LC-NE activity), facilitate behavioral flexibility in response to unexpected target stimuli.</s></p><p><s>Several of our results drew upon graph-theoretic methods, that have increasingly been used to analyze both structural and functional brain imaging data <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2</ref> .</s><s>The strength of these methods lies in their ability to capture, by simple quantitative measures, characteristics of networks that are comprised of a very large number of elements.</s><s>Most previous studies employing graph-theoretic analyses have investigated stationary aspects of neural processing networks, but a few recent studies have begun to examine how measures of functional brain network topology vary with behavior 1, 2, 3.</s><s>The latter, however, analyzed relatively small networks (&lt; 120 nodes).</s><s>In contrast, we used graph-theoretic measures to examine how the topology of high-resolution whole-brain networks (&gt; 20000 nodes) varies with behavior.</s><s>Our results indicate that such an analysis can provide meaningful insights into the way sensory information is processed and learned.</s></p><p><s>In conclusion, our findings suggest that processing predispositions can influence learning, but that these priors are not always binding.</s><s>Rather, brain-wide fluctuations in neural gain induce different modes of neural communication, that modulate the breadth of attention, and thus the extent to which processing and learning are constrained by prior dispositions.</s><s>The adaptive value of modulating this aspect of processing in accord with situational variables is clear.</s><s>The question now is what drives these changes in gain, and how does the brain determine what mode of processing is suitable at any given moment.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Online methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Learning neural network model</head><p><s>We modeled learning of stimulus-reward mapping from examples using a three-layer neural network.</s><s>The network consisted of a 4-node "stimulus" input layer, in which the stimulus was represented using two types of features (e.g., in the case of our task, semantic and visual features of the stimulus), a "representation" middle layer and a "reward" output layer in which activity represented the expected reward (Fig. <ref type="figure" target="#fig_0">1c,</ref><ref type="figure">d</ref>).</s><s>As in our task, there were two possible features in each type, one of which was associated with a reward output.</s><s>Our aim was to examine how associative learning changes as a function of gain and of the network's predisposition to represent either of the stimulus features more strongly.</s><s>Thus, each stimulus consisted of a binary input vector where one input feature of each type was set to 1 (and the rest were set to 0), and the weights associated with each input reflected the degree to which the network is predisposed to represent that type of feature.</s><s>In addition, middle layer units inhibited each other (weight = -1), to simulate competition for attention between different representations.</s><s>Unit i activation was computed as: (1)   where w ij is the connection weight from unit j to unit i, and f(x) is the sigmoid activation function:</s></p><p><s>(2)</s></p><p><s>The parameter gain reflected the level of neural gain in the network, and had the same value for all units.</s><s>To determine how much inhibition each middle layer unit should exert, the activation level of each unit was first computed based on the input from the input layer.</s><s>Then, the resulting values were used to compute the magnitude of lateral inhibition in the middle layer, and activation levels were recomputed.</s></p><p><s>We ran the simulation with 15 different values of gain between 0.1 and 20, and with 16 different settings of predisposition to one of the input streams for each level of gain.</s><s>Network predisposition to represent feature 1 relative to feature 2 was varied between 1/2 and 2/1, and input-to-middle layer weights were set accordingly, under the constraint that both weights sum to one (e.g. for a ratio of 1/2, weight 1 was set as 0.33 and weight 2 was set as 0.67).</s></p><p><s>On each run, each of the 4 possible stimuli and its associated reward output were presented to the network.</s><s>The network's task was to learn to associate between the reward-associated features and a reward output, and we examined the extent to which that was learned for each of the input streams.</s><s>Learning proceeded as follows: weights from the middle layer units to the output unit (w oi ) were initialized to0, and the output unit activation (o) was computed according to equation 1.</s><s>Then, the difference between the target (t) and actual output activation was used to update the weights to the output unit using the delta rule 1 :</s></p><p><s>(3)</s></p><p><s>where f′(x) is the derivative of the activation function, which in this case is:</s></p><formula xml:id="formula_0">(4)</formula><p><s>The learned weights w oi reflected the degree to which the network learned to associate each of the stimulus features with the reward output.</s><s>We thus used the ratio between these weights to represent the bias in learning performance towards either of the rewardassociated features.</s><s>It is easy to see that the only term that differentiates between the update equations of the two weights is a i , the activation of the respective middle layer unit.</s><s>Indeed, the ratio between the learned weights followed the ratio between the activation of the two middle layer units.</s><s>Each run was repeated 100 times, with a random ordering of the stimuli, and the resulting weight ratios were averaged.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Randomly-constructed neural network model</head><p><s>To examine the effects of gain on functional connectivity in a general setting, we constructed a recurrent neural network of 1000 fully connected units.</s><s>Weights were randomly sampled from a uniform distribution between -0.01 and 0.01.</s><s>On every trial, activations were randomly sampled from a uniform distribution between 0 and 1, and then updated in a random order using equation (1) until each unit was updated 5 times.</s><s>The same gain was used for all units.</s><s>The end state was considered as the activation pattern of that trial.</s><s>For each level of gain, we conducted 500 trials and computed the degree to which each pair of units was correlated across trials.</s><s>The full unit-to-unit correlation matrix was used to compute the clustering coefficient as described below for the fMRI data.</s><s>We repeated the simulation 100 times, each time with a different randomly determined weight matrix.</s><s>The gain parameter was limited to values which did not result in consistent widespread saturation (i.e., so that on average most units are neither above 95% nor below 5% of the maximal activation).</s><s>We tested the relationship between gain and mean unit-to-unit correlation in two additional alternative settings: when each unit is only connected to a minority (10%) of the other units, and when correlations are measured between groups of 10 units instead of between single units.</s><s>Results were qualitatively similar and are thus not shown.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Participants</head><p><s>36 naïve participants (mean age 25.1, age range 18-61, 22 females) performed the behavioral experiment and 35 naïve participants (mean age 20.5, age range 18-30, 25 females) performed the fMRI experiment.</s><s>Participants were from the Princeton University area, and gave written informed consent before taking part in the study, which was approved by the university's institutional review board.</s><s>Participants in the behavioral experiment received monetary compensation according to their performance on the task (6 cents per reward point, $13.5-$16.2</s><s>total, mean $14.88).</s><s>fMRI Participants received monetary compensation for their time, as well as a bonus according to their performance (4 cents per reward point, $8.04-$10.72,</s><s>mean $9.47).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stimuli</head><p><s>The experiment involved 18 stimulus sets, half of which consisted of images of objects and the other half consisted of images of words.</s><s>Words were generated using the Processing programming environment <ref type="bibr" target="#b35">36</ref> , and object images were collected from various sources on the internet using the Creative Commons search interface (http://search.creativecommons.org/),</s><s>and edited using Adobe Photoshop CS5 (Adobe Systems Inc.).</s><s>To minimize luminancerelated changes in pupil diameter, all stimuli were made isoluminant with the background, to best approximation.</s><s>Word colors were adjusted to be isoluminant using the flicker-fusion procedure <ref type="bibr" target="#b0">1</ref> on the display systems that were used in each experiment.</s><s>More complex images, which consisted of many colors, were adjusted by scaling all colors so as to equate the mean estimated luminance with the background.</s><s>For this purpose, luminance of each color was estimated based on its RGB values as 0.2126 • R + 0.7152 • G + 0.0722 • B (http:// www.w3.org/Graphics/Color/sRGB). The mean deviation of luminance within images was 29% (range 0% to 76%).</s><s>Since within-image variance and deviation of the display system from the sRGB standard might cause slight differences in luminance perception, all of the analyses based on pupil dilation response were repeated using pupil responses to word stimuli only, which did not suffer from these sources of variance.</s><s>The results of these analyses were similar to those reported here, and are thus not reported for the sake of brevity.</s></p><p><s>Stimuli were presented using MATLAB software (MathWorks) and the Psychophysics Toolbox 1 on a computer monitor (behavioral experiment), or using a projector outside the MRI scanner that displayed the stimuli onto a translucent screen located at the end of the scanner bore (fMRI experiment), which participants viewed through a mirror attached to the head coil.</s><s>To compare BOLD responses to task-relevant and task-irrelevant stimuli, 72 taskirrelevant auditory stimuli (phonemes), which participants were instructed to ignore, were played at random times during the inter-trial intervals in the fMRI experiment (4 stimuli per game).</s><s>The phonemes were obtained from http://www.wikipedia.org and were at most 1 s long.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral task</head><p><s>Participants chose between pairs of stimuli and received monetary reward according to their choices.</s><s>On each trial, participants had 3 s to choose between two stimuli, after which the reward was presented for 2 s.</s><s>Inter-trial interval was varied randomly (uniformly) between 6 s and 10 s.</s><s>We used a relatively long inter-trial interval to allow enough time following each trial for the pupil dilation response to evolve 1 .</s><s>To minimize inter-subject variability, all participants encountered the same stimulus sets in the same order.</s><s>For the same reason, as well as to speed up learning, participants were presented with both the reward for their choice above the chosen stimulus, and (slightly dimmed) the reward that they could have received if they had chosen the other stimulus (Fig. <ref type="figure" target="#fig_0">1b</ref>).</s><s>No stimulus appeared more than once.</s></p><p><s>Participants were instructed that stimuli had some properties that predict reward.</s><s>They then underwent a short training session with a few example trials before starting the task.</s><s>Unbeknownst to the participants, each stimulus set had one visual feature (bright background, blurry texture, etc.) and one semantic feature (food, sea-related, etc.) that was rewarded, and these differed from game to game.</s><s>For example, in a particular game, choosing a grayscale image or an image of food led to reward while choosing a color image or of office equipment did not lead to reward.</s><s>Rewards for the two features were additive such that choice of a stimulus that possessed both rewarding features resulted in two reward points.</s></p><p><s>Each of the first two trials included one stimulus that possessed the rewarding visual and semantic features, and thus yielded two reward points, and one stimulus that possessed neither of the rewarding features, and thus yielded no reward.</s><s>In the following ten trials stimuli differed on either the visual (5 trials) or the semantic (5 trials) dimension, but not both.</s><s>These trials allowed us to measure performance on the visual and semantic dimensions separately.</s><s>Performance was computed as the proportion of trials in which the more highly rewarding stimulus was chosen.</s><s>One fMRI participant was excluded from the analysis due to lack of cooperation, as evidenced by performance that was lower than chance and frequent eye closing.</s><s>Performance of all other participants was better than chance.</s><s>Following completion of the task, participants completed the Index of Learning Styles questionnaire <ref type="bibr" target="#b2">3</ref> .</s><s>Finally, participants filled out a standard debriefing questionnaire in which they were asked to rate on a scale of 1 to 5 how interesting they found the experiment, how motivated they were to earn as much as possible, and, in the imaging experiment, how difficult it was for them to maintain attention during the task.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Eye tracking</head><p><s>A desk-mounted ASL model 504 eye-tracker (Applied Science Laboratories, MA) was used to measure participants' left pupil diameter at a rate of 60 samples per s while they were performing the behavioral task with their head fixed on a chinrest.</s><s>An ASL Long Range Optics unit was used to measure pupil diameter during the fMRI experiment.</s><s>Pupil diameter data were processed to detect and remove blinks and other artifacts.</s><s>At the beginning of the experiment, a measurement of pupil diameter at rest was taken for a period of 45 s.</s><s>All subsequent pupil dilation responses were normalized by the pre-experiment resting pupil diameter.</s><s>For each trial, baseline pupil diameter was computed as the average diameter over a period of 1 s prior to the beginning of the trial (at the end of the inter-trial interval, at which point pupil activity from the trial itself should have subsided).</s><s>Pupil dilation response was computed as the difference between the peak diameter recorded during the 4s following trial onset and the preceding baseline diameter (Fig. <ref type="figure" target="#fig_1">2c</ref>).</s><s>Baseline pupil diameter and dilation response measurements in which more than half of the samples contained artifacts were considered invalid and excluded from the analysis.</s><s>Only participants with at least 30 valid trials were included in the across-participant analysis of mean pupil dilation (n = 35 for the behavioral experiment, n = 30 for the imaging experiment).</s><s>Only participants for whom at least 6 games included 6 valid trials each were included in the game-by-game analysis of baseline pupil diameter (n = 28 for the imaging experiment).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>fMRI Data Acquisition and Preprocessing</head><p><s>Functional (EPI sequence; 34 slices covering whole cerebrum; resolution = 3 × 3 × 3 mm with 1-mm gap; repetition time (TR) = 2.0 s; echo time (TE) = 30 ms; flip angle = 90°) and anatomical (MPRAGE sequence; 256 matrix; TR, 2.5 s; TE, 4.38 ms; flip angle, 8°; 1 × 1 × 1 mm resolution) images were acquired using a 3T Allegra MRI scanner (Siemens, Erlangen, Germany).</s><s>Data were processed using MATLAB and SPM8 (Wellcome Trust Centre for Neuroimaging, UCL).</s><s>Functional data were motion corrected, and low-frequency drifts were removed with a temporal high-pass filter (cutoff of 0.0078 Hz).</s><s>Data from 4 participants whose head moved by more than 2 mm or 2° were excluded from further analysis, leaving 30 participants.</s><s>Images were normalized to Montreal Neurological Institute (MNI) coordinates.</s><s>No spatial smoothing was applied.</s><s>Brains were segmented into gray matter, white matter and cerebrospinal fluid (CSF).</s><s>Mean Gray-matter, white-matter and CSF fMRI signals and movement parameters were regressed out of functional data.</s><s>Cerebrum and frontal lobe MNI coordinates provided with xjView (http:// www.alivelearn.net/xjview8/)</s><s>were used to restrict analysis to grey matter within these areas.</s></p><p><s>To further validate the results of the regional and whole-brain functional connectivity analyses, we repeated these analyses with alternative preprocessing in which: 1. stimulus and outcome presentation events (convolved with SPM's canonical hemodynamic response function) were regressed out of the data.</s><s>2. Mean gray-matter signal was not regressed out.</s><s>3. The analysis was restricted to voxels that were activated in response to task stimuli or outcomes (p &lt; 0.001 uncorrected), as determined by a general linear model that included regressors for stimulus and outcome presentation and for movement parameters.</s><s>Results were qualitatively similar to the original analysis and are included as supplementary material (Supplementary Figs.</s><s><ref type="figure" target="#fig_4">5</ref><ref type="figure" target="#fig_5">6</ref><ref type="figure" target="#fig_7">7</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>General Linear Model analysis</head><p><s>Two general linear models were used to compare the way the fMRI BOLD signal response to task-relevant and task-irrelevant stimuli varied with baseline pupil diameter and pupil dilation response.</s><s>Each model included regressors for task-relevant stimuli onset, taskirrelevant stimuli onset, and for each of these -a parametric regressor that reflected the trial-to-trial variability of either the baseline pupil diameter or the pupil dilation response.</s><s>In addition, regressors that reflect head movement parameters were included in both models.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Regional functional connectivity analysis</head><p><s>To divide gray-matter voxels into uniformly-sized regions, we partitioned each brain recursively into 32 boxes as follows: first, the median X coordinate was used to split all voxels into two boxes.</s><s>Then, each of the resulting subsets of voxels was divided by its median Y coordinate into two boxes.</s><s>The same procedure was then repeated recursively with the median Z coordinates, with the median X coordinates and finally, with the median Y coordinates, resulting in 32 boxes of voxels.</s><s>Mean functional connectivity strength was measured for each box in each game as the mean absolute correlation between all voxel pairs within the box.</s><s>We then computed the across-games correlations of boxes' mean functional connectivity strength, both between the boxes, and with the baseline pupil diameter and the pupil dilation response.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Whole-brain functional connectivity analysis</head><p><s>To assess pupil-diameter related changes in global functional connectivity we first computed a full voxel-to-voxel correlation matrix (21386-29254 voxels per participant) for each of the 18 games for each participant, using the time series of all cerebral gray matter voxels.</s><s>Then, we constructed a 2000-bin histogram of correlation (connectivity) strengths using the values of each matrix.</s><s>Game-by-game correlation between the pupil measurements and the number of functional connections was then computed for each bin separately, in order to assess whether there were fewer or more connections of this strength when gain increased (as assessed by pupil measurements).</s><s>We also calculated the correlation between the pupil measurements and the mean functional connection strength.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Functional-connectivity clustering analysis 17</head><p><s>Foreach functional-connectivity correlation matrix, we constructed a 'functional connectivity graph' in which each voxel was represented by a vertex and two vertices were connected if the absolute value of the correlation between their respective voxels was in the top 0.05% of all voxel-voxel correlations.</s><s>The 0.05% threshold was chosen so as to limit computing time to an acceptable level, resulting in 233929 to 431794 connections per graph.</s><s>To quantify the degree to which functional connectivity was clustered, we computed each graph's clustering coefficient <ref type="bibr" target="#b17">18</ref> , defined as the number of closed triplets of vertices divided by the number of all connected triplets of vertices.</s><s>The same analysis was repeated for frontal lobe gray matter voxels alone.</s><s>Images of connectivity graphs were produced using custom-made software in the Processing programming environment <ref type="bibr" target="#b35">36</ref> .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistical analysis</head><p><s>Statistical analysis was carried out using MATLAB.</s><s>All correlations values reported are Pearson correlation coefficients.</s><s>Averaging of correlation coefficients was preceded by Fisher r-to-z transformation and followed by Fisher's z-to-r transformation, so as to mitigate the problem of the non-additivity of correlation coefficients 1 .</s><s>Group-level significance of within-participant correlations was tested statistically by converting the correlation coefficients to z values, and then using a t test to determine whether the mean of this set of values is significantly different from 0. Significance of across-participant Pearson correlation coefficients was computed using the Student's t-distribution.</s><s>All tests were two tailed except where indicated otherwise.</s><s>The effect of gain on attention and learning.</s><s>(a) Input-output function of a neuron with low and high gain.</s><s>High gain amplifies the effect of input on output, causing stronger excitation and inhibition.</s><s>(b) Experimental design of the visual/semantic learning task.</s><s>In each trial, participants were presented with a choice between two images (objects or words).</s><s>Participants were rewarded according to their choices, with counterfactual rewards also displayed.</s><s>In this particular game, to maximize reward participants had to learn by trial and error that office-related images provide a higher reward than food-related images (semantic features), and that grayscale images provide a higher reward than color images (visual features).</s><s>Each trial involved two new stimuli.</s><s>(c,d) Simple reward-learning neural network.</s><s>Arrows denote excitatory connections, round edges denote inhibitory connections.</s><s>Darker fill color indicates more activity and thicker lines indicate stronger weights in examples with low (c) and high (d) gain.</s><s>With high gain, activity of weakly represented features (type 2) is blocked at the middle layer (circled), so the mapping between type 2 features and reward cannot be learned.</s><s>This condition effectively separates the second input stream from the rest of the network.</s><s>(e) Simulated learning of mapping between the reward-predicting features and reward.</s><s>The relative strength of learning for the two features is shown as a function of the ratio between the input weights (varied between 1/2 and 2/1), for different levels of gain.</s><s>The higher the gain, the more learning performance depends on the relative weight of each input stream.</s><s>ILS score in participants with different levels of pupil response, participants were divided into 5 bins according to mean pupil dilation.</s><s>Each data point represents a group of 7 participants.</s><s>To illustrate, data points from the individual members of the group with lowest mean pupil response appear in black in a. (c) Pupil diameter normalized by its value at trial onset (time 0), averaged within participants across trials, and then across participants (lighter shade: s.e.m. across participants; n = 28).</s><s>Pupil dilation response was computed as the difference between the peak pupil diameter during the 4 s that followed trial onset and the pre-trial baseline diameter, normalized by the pre-experiment resting diameter.</s><s>As expected, baseline pupil diameter and pupil response were anticorrelated in all participants (mean r = -0.77,</s><s>range -0.89 to -0.54, t 27 = -28.9,</s><s>p &lt; 10 -21 ).</s><s>While baseline diameter is thought to be a more direct indicator of tonic LC-NE function, the normalized pupil dilation response can serve as an inverse index that is comparable between individuals.</s><s>(d,e) Replication of behavioral results in the fMRI experiment with a different group of participants.</s><s>n = 30.</s><s>(e) Each data point represents a group of 6 participants.</s><s>Relationship between pupil diameter and BOLD response to task-relevant and taskirrelevant stimuli.</s><s>High baseline pupil dilation was associated with a weaker response to task-relevant stimuli compared to task-irrelevant stimuli, whereas high pupil dilation response was associated with a stronger response to task-relevant stimuli compared to taskirrelevant stimuli.</s><s>n = 28, *: p &lt; 0.05, **: p &lt; 10 -4 , errors bars: between subject s.e.m.</s><s>Pupil diameter and whole-brain functional connectivity.</s><s>(a) Distribution of functional connections by connection strength (n = 28).</s><s>The distribution is shown separately for all games (gray shading), for the third of each participant's games in which the participant's baseline pupil diameter was lowest (solid line), and for the third of games in which pupil diameter was highest (dashed line).</s><s>Insets: magnification of boxed areas to show differences between lowest and highest pupil diameter games.</s><s>(b) Game-by-game correlation between baseline pupil diameter and frequency of functional connectivity measurements as a function of functional connectivity value (n = 28).</s><s>The Y axis indicates whether large pupil diameter was associated with more (positive values) or fewer (negative values) voxel pairs for which functional connectivity strength is indicated on the X axis.</s><s>For each participant, we computed the distribution of functional connections during each game, and then computed the correlation across games between baseline pupil diameter and the number of voxel pairs in each bin of the distribution.</s><s>The curve shows the correlations averaged over participants with s.e.m. indicated by the lighter shading.</s><s>Larger pupil diameter was associated with more strong functional connectivity measurements (absolute strength &gt; 0.17) and fewer weak functional connectivity measurements (between -0.17 and +0.17</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s></p></div></figDesc><graphic coords="18,90.48,62.00,491.04,416.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Relationship between learning performance and ILS scores.</s><s>(a) Difference in learning about semantic and visual features in the behavioral experiment as a function of sensing-intuitive score on ILS questionnaire.</s><s>Negative values indicate better visual performance (Y axis) and a sensing learning style (X axis), while positive values indicate better semantic performance and an intuitive learning style.</s><s>n = 35.</s><s>(b) Correlation between ILS sensing-intuitive score and visual-semantic performance difference on the task (as shown in a), as a function of mean pupil dilation response.</s><s>To examine the degree to which task performance matched</s></p></div></figDesc><graphic coords="20,129.36,62.00,413.28,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3.</s></p></div></figDesc><graphic coords="22,84.00,62.00,504.00,200.16" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Simulation of the effect of global changes in gain on functional connectivity strength and clustering.</s><s>Recurrent neural networks were composed of 1000 fully connected units with random connection weights.</s><s>Unit-to-unit correlations were computed across 500 trials for each level of gain, for each of 100 networks.</s><s>(a) Distribution of correlation coefficients for each of 15 different levels of gain.</s><s>Higher gain results in stronger functional connections (correlations or anti-correlations).</s><s>(b) Mean correlation coefficient increases as a function of gain.</s><s>s.e.m. is too small to observe.</s><s>Different simulations, in which each unit was only connected to a minority of other units (10%), or in which correlations were measured between the mean activity of groups of 10 units, yielded qualitatively similar results.</s><s>This suggests that our results are robust to network density and measurement granularity.</s><s>(c) Correlation between the global gain parameter and the frequency of correlation coefficients as a function of correlation coefficient.</s><s>Stronger correlations are more prevalent (and weaker correlations are less prevalent) when gain is higher.</s><s>(d) Clustering coefficient of the networks' functional connectivity graphs as a function of gain.</s><s>Clustering coefficient tended to increase with gain.</s><s>Ligher shade: s.e.m.</s></p></div></figDesc><graphic coords="23,84.19,62.00,503.62,317.52" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Global fluctuations in local functional connectivity.</s><s>(a) 3D rendering of one participant's gray-matter voxels divided into 32 boxes, viewed from the right and from above.</s><s>Each sphere represents a voxel.</s><s>Adjacent boxes are denoted in different colors.</s><s>Voxel division is visualized using custom-made software created in the Processing programming environment 1 .</s><s>(b) Histogram of between-box correlations of mean within-box functional connectivity strength (light blue, left Y axis), and of participants' mean correlation values (dark blue, right Y axis).</s></p></div></figDesc><graphic coords="24,84.00,62.00,504.00,452.16" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s></p></div></figDesc><graphic coords="25,86.52,62.00,498.96,369.30" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head></head><label></label><figDesc><div><p><s>).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 7 .</head><label>7</label><figDesc><div><p><s>Figure 7. Pupil diameter and local functional connectivity.</s><s>(a, c) Proportion of boxes within which mean functional connectivity strength was positively correlated with baseline pupil diameter (a) or negatively correlated with pupil dilation response (c) for each participant.</s><s>(b, d) Mean correlation between within-box functional connectivity strength and baseline pupil diameter (b) or pupil dilation response (d) for each participant.</s><s>Solid horizontal line: group means, dashed horizontal lines: s.e.m.</s></p></div></figDesc><graphic coords="26,86.64,62.00,498.72,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 8 .</head><label>8</label><figDesc><div><p><s>Figure 8.</s><s>The clustering of functional connections, pupil diameter and task performance.</s><s>(a) Gameby-game correlation between clustering coefficient and baseline pupil diameter by participant.</s><s>n = 28.</s><s>(b) Game-by-game correlation between clustering coefficient and visualsemantic performance difference in task as a function of sensing-intuitive score on the ILS questionnaire.</s><s>n = 30.</s></p></div></figDesc><graphic coords="27,84.27,62.00,503.46,225.36" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nat Neurosci.</s><s>Author manuscript; available in PMC 2014 February 01.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>This research was funded by <rs type="funder">NIH</rs> grants <rs type="grantNumber">R03 DA029073</rs> and <rs type="grantNumber">R01 MH098861</rs>, a <rs type="funder">Howard Hughes Medical Institute International Student Research fellowship</rs> to EE and a <rs type="grantName">Sloan Research Fellowship</rs> to YN.The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.The authors also wish to thank the generous support of the <rs type="funder">Regina and John Scully Center for the Neuroscience of Mind and Behavior</rs> within the <rs type="institution">Princeton Neuroscience Institute</rs>, and <rs type="person">Nicholas Turk-Browne</rs> and <rs type="person">Peter Dayan</rs> for helpful comments on earlier versions of the manuscript.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_Fe8JWbs">
+					<idno type="grant-number">R03 DA029073</idno>
+				</org>
+				<org type="funding" xml:id="_VnnYZUE">
+					<idno type="grant-number">R01 MH098861</idno>
+				</org>
+				<org type="funding" xml:id="_nMQUdkB">
+					<orgName type="grant-name">Sloan Research Fellowship</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Learning and teaching styles in engineering education</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Felder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">K</forename><surname>Silverman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Eng Educ</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="674" to="681" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Learning Styles and Pedagogy in Post-16 Learning: A Systematic and Critical Review</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Coffield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Moseley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ecclestone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Learning and Skills Research Centre</title>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Application, Reliability and Validity of the Index of Learning Styles</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Felder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Spurlin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Education</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="103" to="112" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">A network model of catecholamine effects: gain, signalto-noise ratio, and behavior</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Servan-Schreiber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Printz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">249</biblScope>
+			<biblScope unit="page" from="892" to="895" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 2392679</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">An integrative theory of locus coeruleus-norepinephrine function: adaptive gain and optimal performance</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="403" to="450" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16022602</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Pupil diameter tracks changes in control state predicted by the adaptive gain theory of locus coeruleus function</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Gilzenrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nieuwenhuis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jepma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cogn Affect Behav Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="252" to="269" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20498349</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Pupil diameter predicts changes in the exploration-exploitation trade-off: evidence for the adaptive gain theory</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jepma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nieuwenhuis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Cogn Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="1587" to="1596" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20666595</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Noradrenergic modulation of somatosensory cortical neuronal responses to lontophoretically applied putative neurotransmitters</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Waterhouse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Moises</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Woodward</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp Neurol</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page">7389849</biblScope>
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Comparison of norepinephrineand benzodiazepine-induced augmentation of Purkinje cell responses to gamma-aminobutyric acid (GABA)</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Waterhouse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Moises</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Yeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Geller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Woodward</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Pharmacol Exp Ther</title>
+		<imprint>
+			<biblScope unit="volume">228</biblScope>
+			<biblScope unit="page" from="257" to="267" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 6319673</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Interaction of norepinephrine with cerebrocortical activity evoked by stimulation of somatosensory afferent pathways in the rat</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Waterhouse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Woodward</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp Neurol</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page">7349980</biblScope>
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Pupillary dilation as an index of central nervous system α 2 -adrenoceptor activation</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Koss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Pharmacol Method</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="1" to="19" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Pupil dilation reflects perceptual selection and predicts subsequent stability in perceptual rivalry</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Einhäuser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Stout</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">L</forename><surname>Carter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS USA</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="1704" to="1709" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18250340</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Pupillometry and P3 index the locus coeruleus-noradrenergic arousal function in humans</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Murphy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Robertson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Balsters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O'</forename><surname>Connell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychophys</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="1532" to="1543" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Fast remapping of sensory stimuli onto motor actions on the basis of contextual modulation</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Salinas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosc</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="1113" to="1118" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Gain Modulation as a Mechanism for Switching Reference Frames, Tasks, and Targets. Coherent Behavior in Neuronal Networks</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Salinas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Bentley</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="121" to="142" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Rapid neocortical dynamics: cellular and network mechanisms</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Haider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="171" to="189" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19409263</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Scale-free brain functional networks</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Eguíluz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Chialvo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Cecchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Baliki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Apkarian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev Lett</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page">18102</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15698136</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">A method of matrix analysis of group structure</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Luce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Perry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychometrika</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">18152948</biblScope>
+			<date type="published" when="1949">1949</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The effect of emotion on cue utilization and the organization of behavior</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Easterbrook</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol Rev</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="187" to="201" />
+			<date type="published" when="1959">1959</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title level="m" type="main">Stress, cognition, and human performance: A literature review and conceptual framework</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Staal</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<publisher>Ames Research Center</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Chronic stress causes frontostriatal reorganization and affects decisionmaking</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Dias-Ferreira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">325</biblScope>
+			<biblScope unit="page" from="621" to="625" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19644122</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Stress-induced modulation of instrumental behavior: from goal-directed to habitual control of action</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Schwabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">T</forename><surname>Wolf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">219</biblScope>
+			<biblScope unit="page" from="321" to="328" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21219935</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Concurrent glucocorticoid and noradrenergic activity shifts instrumental behavior from goal-directed to habitual control</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Schwabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tegenthoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Höffken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">T</forename><surname>Wolf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="8190" to="8196" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20554869</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Preventing the stress-induced shift from goaldirected to habit action with a β-adrenergic antagonist</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Schwabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Höffken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tegenthoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">T</forename><surname>Wolf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="17317" to="17325" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22114298</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Beta-adrenergic modulation of cognitive flexibility during stress</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Alexander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hillier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tivarus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Beversdorf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Cognitive Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="468" to="478" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Increased task difficulty results in greater impact of noradrenergic modulation of cognitive flexibility</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">L</forename><surname>Campbell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Tivarus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hillier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">Q</forename><surname>Beversdorf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Pharmacol Biochem Behav</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="222" to="229" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17884154</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Divergence of fMRI and neural signals in V1 during perceptual suppression in the awake monkey</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Maier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wilke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Aura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">Q</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Leopold</forename><forename type="middle">Da</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="1193" to="1200" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18711393</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Anticipatory haemodynamic signals in sensory cortex not predicted by local neuronal activity</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">B</forename><surname>Sirotin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Das</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">457</biblScope>
+			<biblScope unit="page" from="475" to="479" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19158795</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">What we can do and what we cannot do with fMRI</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Logothetis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">453</biblScope>
+			<biblScope unit="page" from="869" to="878" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18548064</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Norepinephrine and Neural Interrupts</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">NIPS</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Complex brain networks: graph theoretical analysis of structural and functional systems</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bullmore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sporns</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="186" to="198" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19190637</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">The economy of brain network organization</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bullmore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sporns</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="336" to="349" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22498897</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Dynamic reconfiguration of human brain networks during learning</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Bassett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci USA</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="7641" to="7646" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21502525</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Cognitive effort drives workspace configuration of human brain functional networks</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Kitzbichler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N</forename><surname>Henson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Nathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">T</forename><surname>Bullmore</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="8259" to="8270" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21632947</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Fast reconfiguration of high-frequency brain networks in response to surprising changes in auditory input</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Nicol</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page" from="1421" to="1430" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22170972</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Processing : a programming handbook for visual designers and artists</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Reas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Fry</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>MIT Press</publisher>
+			<pubPlace>Cambridge, Mass</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<title level="m" type="main">Explorations in parallel distributed processing : a handbook of models, programs, and exercises</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Mcclelland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Rumelhart</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1988">1988</date>
+			<publisher>MIT Press</publisher>
+			<pubPlace>Cambridge, Mass</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Do isoluminant color changes capture attention?</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lambert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Wells</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kean</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Percept Psychophys</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="495" to="507" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12812274</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">The psychophysics toolbox</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Brainard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Spat Vis</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="433" to="436" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9176952</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Pupillary dilation as a measure of attention: A quantitative system analysis</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hoeks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wjm</forename><surname>Levelt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav Res Meth Ins C</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="16" to="26" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">On the &quot;probable error&quot; of a coefficient of correlation deduced from a small sample</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Fisher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Metron</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="3" to="32" />
+			<date type="published" when="1921">1921</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

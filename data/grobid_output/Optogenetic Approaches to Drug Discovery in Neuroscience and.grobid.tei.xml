@@ -1,0 +1,2231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Optogenetic Approaches to Drug Discovery in Neuroscience and Beyond</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Elsevier BV</publisher>
+				<availability status="unknown"><p>Copyright Elsevier BV</p>
+				</availability>
+				<date type="published" when="2018-07-01">2018 July 01.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hongkang</forename><surname>Zhang</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Adam</forename><forename type="middle">E</forename><surname>Cohen</surname></persName>
+							<email>cohen@chemistry.harvard.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Chemistry and Chemical Biology</orgName>
+								<orgName type="department" key="dep2">Department of Physics</orgName>
+								<orgName type="institution">Harvard University</orgName>
+								<address>
+									<postCode>02138</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Howard Hughes Medical Institute</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Optogenetic Approaches to Drug Discovery in Neuroscience and Beyond</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Trends in Biotechnology</title>
+						<title level="j" type="abbrev">Trends in Biotechnology</title>
+						<idno type="ISSN">0167-7799</idno>
+						<imprint>
+							<publisher>Elsevier BV</publisher>
+							<biblScope unit="volume">35</biblScope>
+							<biblScope unit="issue">7</biblScope>
+							<biblScope unit="page" from="625" to="639"/>
+							<date type="published" when="2018-07-01">2018 July 01.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">404A794F097ACB7BE12BA6E2BC1CBA80</idno>
+					<idno type="DOI">10.1016/j.tibtech.2017.04.002</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Optogenetics</term>
+					<term>neuroscience</term>
+					<term>optopatch</term>
+					<term>phenotypic screening</term>
+					<term>drug discovery</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Recent advances in optogenetics have opened new routes to drug discovery, particularly in neuroscience.</s><s>Physiological cellular assays probe functional phenotypes that connect genomic data to patient health.</s><s>Optogenetic tools, and in particular tools for all-optical electrophysiology, now provide means to probe cellular disease models with unprecedented throughput and information content.</s><s>These techniques promise to identify functional phenotypes associated with disease states and to identify compounds that improve cellular function regardless of whether the compound acts directly on a target or through a bypass mechanism.</s><s>This review discusses opportunities and unresolved challenges in applying optogenetic techniques throughout the discovery pipeline, from target identification and validation, to target-based and phenotypic screens, to clinical trials.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>The essence of drug discovery is to find compounds that modulate a specific physiological process in a particular subset of cells.</s><s>The challenge is that minimalist high-throughput assays often have little physiological relevance, while richer phenotypic assays are slow and expensive.</s><s>Typically, hundreds of thousands, or sometimes millions, of compounds fed into a screening campaign are whittled down to a few leads.</s><s>A discovery team is fortunate if one lead molecule survives clinical trials.</s><s>The high attrition arises because each step of the development pipeline challenges compounds against new aspects of biology which upstream assays did not address.</s><s>Recently developed and emerging optogenetic tools provide a means to improve this tradeoff between throughput and realism at each step.</s></p><p><s>Optogenetics-optical perturbation and optical measurement of physiological processeshas several attributes that make it a useful tool for drug discovery.</s><s>Optical assays have the potential for high throughput and low cost.</s><s>This feature has been appreciated at least since the introduction of the Fluorescent Imaging Plate Reader (FLIPR) (see Glossary) system more than 20 years ago.</s><s><ref type="bibr" target="#b0">[1]</ref> Where optogenetics goes beyond traditional cell-based assays is in <ref type="bibr" target="#b0">(1)</ref> the ability to deliver temporally and spatially precise stimuli to elicit defined patterns of molecular and cellular activity, <ref type="bibr" target="#b1">(2)</ref> the rapid proliferation of fluorescent protein reporters for a huge diversity of molecular and physiological signals, and (3) the ability to use genetic techniques to target stimulus and readout to specified cell-types within a possibly complex multicellular milieu.</s><s>These capabilities give optogenetic assays throughput and information content that transcend the limits of more traditional approaches.</s></p><p><s>An optogenetic disease signature can aid discovery throughout the development process, from target identification to clinical trials (Figure <ref type="figure" target="#fig_1">1</ref>, Key Figure).</s><s>For instance, optogenetic measures of neuronal excitability can be used first to screen for targets via CRISPR-based knockout or knockdown, then to validate the efficacy and specificity of a screening hit via comparison of its effect on knockout and wild-type cells, and finally in a clinical trial with patient stem cell-derived neurons to segregate likely responders from likely non-responders.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Optogenetics in neuroscience drug discovery</head><p><s>The impact of optogenetics will likely be greatest in drug discovery for neuroscience.</s><s>On the one hand, genetic studies are implicating an ever widening array of mutations, ranging from rare large effect-size mutations in the epilepsies <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b2">3]</ref> to common individually weak mutations in psychiatric disease <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b4">5]</ref>.</s><s>On the other hand, the core functions of neurons are electrical spiking and synaptic transmission.</s><s>Due to the complex nonlinear interactions of multiple ion channels within cells, and of multiple cell types within circuits, the neurophysiological consequences of newly identified mutations can almost never be predicted a priori, nor can one reliably predict how pharmacological modulation of a particular target will affect brain function overall.</s><s>Even as more targets are identified, neuroscience drug discoverers are turning toward a cell-and circuit-centric phenotypic approach <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b6">7]</ref>, rather than focusing on specific targets.</s></p><p><s>Cell-based models provide a means to instantiate newly identified mutations in a physiological yet pharmacologically addressable format and thus are an attractive substrate for phenotypic assays.</s><s>Human induced pluripotent stem cell (hiPSC) technology provides a direct link between in vitro models and real patients.</s><s>Genome editing technologies provide the ability to introduce and correct targeted mutations in human and rodent neuronal models.</s><s>These rapidly improving cellular substrates hold the promise of connecting human genetics to the underlying physiology.</s></p><p><s>The weak link in this chain is the measurement: how to determine the effects of mutations and candidate therapeutics on neural function.</s><s>The challenge of functional assays in neurons is severe.</s><s>Electrical spiking and synaptic transmission cannot be purified or measured posthoc; they must be measured in live cells in situ.</s><s>Neural firing occurs on the millisecond timescale, beyond the reach of most screening tools.</s><s>State-dependent drugs bind to ion channels with affinities that vary by orders of magnitude depending upon the patterns of neural activity <ref type="bibr" target="#b7">[8]</ref>.</s><s>Feed-forward and feedback mechanisms can produce circuit-level effects that are opposite to the effects of a compound on isolated cells <ref type="bibr" target="#b8">[9]</ref>.</s></p><p><s>Optogenetic approaches are starting to address these challenges.</s><s>Recent reviews have discussed optogenetic actuators <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b10">11]</ref> and reporters <ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref> in detail.</s><s>In this review, we discuss how optogenetics can facilitate target discovery and validation, high-throughput screening, functional phenotypic assays, safety pharmacology and toxicity, and patient stratification for clinical trials.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Optogenetics for high-throughput screening</head><p><s>Drugs and ion channels perform an intricate dance, wherein the affinity of the drug depends on the state of the channel, and the dynamics of the channel depend on the binding of the drug.</s><s>For instance, activity-dependent block of Na V channels is crucial for targeting analgesic action to hyperactive neurons, while sparing less active neighbors.</s><s>Ideally, a targeted screen for ion channel modulators would allow one to define state-dependent selection criteria, but conventional fluorescence screens are insensitive to the details of this dance (Box 1).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Optogenetic control of membrane potential</head><p><s>Light-gated ion channels and pumps provide a robust means to modulate membrane potential rapidly and reversibly.</s><s>The light-gated cation channelrhodopsins are the exemplars of this class <ref type="bibr" target="#b24">[25,</ref><ref type="bibr" target="#b25">26]</ref>.</s><s>Upon illumination, they mediate modestly inward-rectifying currents, with reversal potential around 0 mV.</s><s>Many channelrhodopsins have been discovered and engineered, with differing action spectra, <ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref><ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref> kinetics, <ref type="bibr" target="#b31">[32,</ref><ref type="bibr" target="#b32">33]</ref> and ionic selectivities <ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref>.</s></p><p><s>To modulate membrane potential optically, one can pair an optogenetic actuator with an inwardly rectifying potassium channel, such as K ir 2.1 or K ir 2.3.</s><s>In the dark, the K ir channel sets the cell resting potential to near the K + reversal potential, typically ∼-80 mV.</s><s>Illumination depolarizes the cell toward 0 mV.</s><s>Channels that activate within this window can be modulated in temporal patterns governed by the time-course of illumination.</s></p><p><s>To hyperpolarize a membrane one can use light-powered inward chloride pumps (e.g.</s><s>halororhodopsin <ref type="bibr" target="#b36">[37]</ref>), outward proton pumps (e.g.</s><s>Archaerhodopsin 3 <ref type="bibr" target="#b37">[38]</ref>) or outward sodium pumps (e.g.</s><s>KR2 <ref type="bibr" target="#b34">[35]</ref>).</s><s>Light-gated chloride channels (ChloC <ref type="bibr" target="#b38">[39,</ref><ref type="bibr" target="#b39">40]</ref> and recently discovered gtACR <ref type="bibr" target="#b35">[36]</ref>) also provide hyperpolarizing drive, if the chloride reversal potential is negative.</s><s>In HEK cells, the chloride reversal potential is typically ∼-50 mV.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fluorescent reporters compatible with optogenetic stimulation</head><p><s>An optical readout is required to monitor the activity of a target protein.</s><s>The key challenge is to avoid optical crosstalk between the measurement and the optogenetic actuation.</s><s>Near infrared QuasAr proteins provide a fast and sensitive, but dim, readout of membrane voltage, and it avoids spectral crosstalk with blue-excited channelrhodopsins <ref type="bibr" target="#b40">[41]</ref>.</s><s>A recently developed red-shifted voltage-sensitive dye, BeRST1, is also spectrally compatible with channelrhodopsin activation and shows excellent speed, sensitivity and brightness <ref type="bibr" target="#b41">[42]</ref>.</s><s>For Ca 2+ -based readouts, red-shifted Ca 2+ -reporter dyes (e.g.</s><s>CaRuby-Nano <ref type="bibr" target="#b42">[43]</ref>) or proteins (e.g.</s><s>RCaMP2 <ref type="bibr" target="#b43">[44]</ref>, jRGECO1a, jRCaMP1a,b <ref type="bibr" target="#b44">[45]</ref>) have recently been introduced.</s><s>Unfortunately most protein-based fluorescent reporters are based on GFP or spectrally similar fluorophores, and thus suffer optical crosstalk with most optogenetic actuators, i.e. the light used to excite the reporter spuriously activates the actuator, or vice versa.</s></p><p><s>Development of far-red fluorescent reporters remains a pressing need.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Examples of optogenetically enabled screens</head><p><s>Voltage-gated sodium (Na V ) channels are a natural target for screening via all-optical electrophysiology (Figure <ref type="figure" target="#fig_2">2a</ref>), and are of interest as targets in pain and epilepsies <ref type="bibr" target="#b45">[46]</ref>.</s><s>In HEK293 cells heterologously expressing a K ir channel and a Na V channel, a depolarizing influence can activate the Na V channel, causing a sharp voltage spike to the Na + reversal potential, followed by Na V channel inactivation and return to baseline driven by the K ir channel.</s><s>Electrically spiking HEK cells have been demonstrated with Na V 1.3 <ref type="bibr" target="#b46">[47]</ref>, Na V 1.5 <ref type="bibr" target="#b47">[48]</ref>, Na V 1.7 <ref type="bibr" target="#b48">[49]</ref> and Na V 1.9.</s><s>A recent all-optical screen of 320 FDA-approved compounds for activity-dependent block of Na V 1.7 yielded results in close concordance with manual patch clamp (Fig. <ref type="figure" target="#fig_3">3</ref>).</s><s><ref type="bibr" target="#b48">[49]</ref> By varying the intensity and duration of the optical stimulus pulses, one could probe subtle features of state-dependent pharmacology in a highthroughput format.</s></p><p><s>A similar approach has been used to probe the Ca V 1.3 voltage-gated calcium channel (Fig. <ref type="figure" target="#fig_2">2b</ref>) <ref type="bibr" target="#b49">[50]</ref>, a potential target in Parkinson's disease <ref type="bibr" target="#b50">[51]</ref>.</s><s>Here the channel was paired with K ir 2.3 to set theresting potential and a "step-function" channelrhodopsin variant, ChR2(D156A) <ref type="bibr" target="#b32">[33]</ref> was used to inducea slowly varying membrane potential.</s><s>Channel activity was probed via a small-molecule Ca 2+ indicator,Fluo-8.</s><s>Although the Ca 2+ reporter was excited at a blue wavelength that also drove the channelrhodopsin, crosstalk was minimized by performing the fluorescence measurement on a timescale much shorter than that of Ca 2+ influx.</s><s>The activity of Ca V channels could likely also be probed with red-shifted Ca 2+ reporters to avoid optical crosstalk.</s></p><p><s>Cyclic nucleotide-gated (CNG) cation channels are a possible target for neuropathic pain <ref type="bibr" target="#b51">[52]</ref>.</s><s>Figure <ref type="figure" target="#fig_2">2c</ref> illustrates an optogenetic screen for the HCN2 channel <ref type="bibr" target="#b49">[50]</ref>.</s><s>Upon blue illumination, a light-activated adenylyl cyclase, bPAC <ref type="bibr" target="#b52">[53]</ref>, produced cAMP, which then activated the HCN channel.</s><s>Channel activation was probed via a slow voltage-sensitive dye.</s><s>Although the wavelength used to excite the dye also activated the bPAC, the dye measurement happened fast enough that the measurement-triggered bPAC activation did not affect the measurement.</s><s>The HCN channels are also activated by membrane hyperpolarization, so optogenetic approaches could be used, in principle, to probe voltagedependent pharmacology of these channels.</s></p><p><s>Receptor tyrosine kinases (RTKs) are interesting targets in oncology, metabolic disorders, and neurodegeneration.</s><s>However, a lack of known ligands presents a problem for screening against some RTKs.</s><s>Fig. <ref type="figure" target="#fig_2">2d</ref> shows an optogenetic screen for modulators of RTK signaling.</s><s><ref type="bibr" target="#b53">[54]</ref> Light-sensitive "Opto-RTKs" were formed by incorporation of a light-oxygen-voltagesensing (LOV) domain which caused dimerization and thereby activation of the RTK in the light.</s><s>Downstream activation of the MAPK/ERK pathway drove expression of a gene for a fluorescent reporter protein, and the pharmacological modulation of this response was readily detected in a high-throughput format.</s><s>Remarkably, this approach worked even for RTKs with no known ligand.</s><s>As in the screens of the Ca V and HCN channels, crosstalk between stimulation and readout was avoided by using a slow reporter mechanism, in this case GFP expression.</s></p><p><s>In these examples, optogenetics offers several key advantages over ligand-based activation of the target pathways.</s><s>First, for rapid processes, one can achieve precise temporal synchronization across a well, and correspondingly high time resolution in whole-well fluorescence measurements.</s><s>Second, it is possible to mix cell lines with different actuators paired with spectrally distinct reporters to provide in-well controls.</s><s>For instance, one could screen for compounds that have differential activation of structurally similar targets.</s><s>Third, one can vary the illumination intensity across a well to perform in-well dose-response measurements.</s><s>While sophisticated instrumentation is needed to produce precise optical gradients, a simple shadow mask can divide a well between optogenetically activated and un-activated cells for an in-well reference.</s><s>These benefits could be applied to many novel optogenetic screens that have not yet been implemented (Box 2).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Optogenetics for phenotypic screening</head><p><s>Following the maxim, "you get what you screen for," <ref type="bibr" target="#b73">[74]</ref> target-based screens identify modulators of specific targets.</s><s>But a modulator of a disease-relevant target might still make a poor drug for several reasons: (1) the hit compounds might also modulate other targets.</s><s>Indeed, many neuro-active drugs developed around a nominal target turned out later to modulate other ion channels.</s><s><ref type="bibr" target="#b74">[75]</ref> (2) Selective modulation of a specific target can be a poor therapeutic strategy.</s><s>Dysregulated neural circuits might not contain a unique target whose modulation will restore the defective function; and selective modulation of a single broadly distributed target might still cause undesirable effects in other brain regions or organs.</s><s>(3) Many effective drugs were developed without a clear target, or modulate multiple targets.</s><s>For instance, gabapentin, pregabalin, <ref type="bibr" target="#b75">[76]</ref> and levetiracetam, <ref type="bibr" target="#b76">[77]</ref> all widely prescribed antiepileptic drugs, were developed without a clear understanding of mechanism.</s><s>Screens that directly probe the effects of compounds on neuronal firing or synaptic transmission select for mechanisms relevant to disease biology, agnostic to molecular target.</s><s>Optogenetic assays now enable phenotypic measurements across a range of context relevant to neuroscience drug discovery (Figure <ref type="figure" target="#fig_4">4</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Neuronal excitability</head><p><s>Neuronal firing patterns arise from complex interactions of many ion channels and metabolic factors; and neuronal firing converts these molecular interactions into sensations and behavior.</s><s>Thus neuronal excitability is a powerful integrative phenotype for disease modeling and drug discovery.</s><s>Optogenetic techniques now provide high-throughput access to this phenotype.</s></p><p><s>Optogenetic measures of neuronal excitability can be used in several contexts (Fig. <ref type="figure" target="#fig_5">5</ref>): (1) Target identification.</s><s>Genetic perturbations, e.g.</s><s>via CRISPR/Cas9 technology, can identify prospective drug targets that modulate neuronal excitability, or validate targets suggested by other means, e.g.</s><s>genetic studies; (2) Target-based screens.</s><s>Comparisons of drug effects on excitability of neurons +/-a specific target can distinguish on-target from off-target mechanisms of action; (3) Purely phenotypic screens.</s><s>Comparisons of drug effects on different neuronal sub-types, e.g.</s><s>excitatory vs. inhibitory neurons, can identify compounds that have differential effects on excitability, regardless of mechanism of action; (4) Patient stratification.</s><s>Comparisons of drug effects on patient iPSC-derived neurons and on wild-type controls can seek to match patients with therapeutics or to stratify patients for clinical trials -even when the underlying genetic cause of the patient's illness is not known or is poorly understood.</s></p><p><s>A paired stimulus and readout are needed to perform high-throughput measures of neuronal excitability.</s><s>Electric field stimulation (EFS) is a convenient means of whole-well stimulation that leaves the visible spectrum free for a variety of optogenetic readouts.</s><s>EFS has been paired with whole-well measures of Ca 2+ dynamics (via GCaMP reporters) in screening format for CNS <ref type="bibr" target="#b5">[6]</ref> and DRG <ref type="bibr" target="#b77">[78]</ref> neurons and with voltage-sensitive dyes <ref type="bibr" target="#b74">[75]</ref>.</s><s>By using genetically encoded reporters, one could probe the effect of test compounds on neural activity-dependent changes in other parameters as well, such as cAMP (via ICUE3 <ref type="bibr" target="#b78">[79]</ref>), ATP (via Percival <ref type="bibr" target="#b79">[80]</ref>), or other metabolic factors.</s></p><p><s>When EFS is applied in an imaging format, cell type-specific markers in one color channel, and broadly expressed activity markers in another channel, could be used to probe for celltype-specific effects of compounds on excitability.</s><s>Such an approach could be useful, for instance, to detect compounds that differentially suppress firing in nociceptive vs. nonnociceptive sensory neurons; or to detect compounds that differentially affect excitability in excitatory vs. inhibitory CNS neurons.</s></p><p><s>While EFS leaves the entire optical spectrum available for functional measurements, this technique does not allow targeted stimulation of specific subsets of cells, or stimulation in precisely controlled temporal waveforms.</s><s>Devoting the blue part of the spectrum to optogenetic actuation still leaves the yellow and red parts of the spectrum for imaging voltage, Ca 2+ , or other functional reporters.</s></p><p><s>Simultaneous optogenetic stimulation and readout of membrane voltage has been achieved through pairing a blue-shifted channelrhodopsin variant, CheRiff, with near-IR QuasAr voltage indicators.</s><s><ref type="bibr" target="#b40">[41]</ref> These paired 'Optopatch' constructs enabled wide-field all-optical stimulation and readout of neural activity.</s><s>Optopatch measurements have been used to probe the excitability of primary rodent and human iPSC-derived CNS <ref type="bibr" target="#b40">[41]</ref> and sensory DRG <ref type="bibr" target="#b80">[81]</ref> neurons.</s><s>A recent application probed the excitability of human iPSC-derived motor neurons containing a mutation causal for ALS.</s><s><ref type="bibr" target="#b81">[82]</ref></s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Synaptic transmission</head><p><s>Synaptic dysfunction is implicated in many neuropsychiatric and neurodegenerative diseases.</s><s>The immense morphological and biochemical complexity of the synapse presents a forbidding obstacle to target-based drug development in this domain.</s><s>Recently developed tools are beginning to enable optogenetic interrogation of synaptic function.</s><s>Calcium indicators targeted to presynaptic boutons <ref type="bibr" target="#b82">[83]</ref> report Ca 2+ entry at the site of vesicle release.</s><s>pH indicators targeted to the lumen of synaptic vesicles report the de-acidification that occurs during vesicle fusion.</s><s><ref type="bibr" target="#b83">[84]</ref> A recently developed glutamate indicator, iGluSnfr, reports glutamate release.</s><s><ref type="bibr" target="#b84">[85]</ref> On the postsynaptic side, spine-targeted Ca 2+ indicators are in development <ref type="bibr" target="#b85">[86]</ref>.</s><s>By pairing optogenetic stimulation of a channelrhodopsin (CheRiff) in a presynaptic cell with fluorescence imaging of membrane voltage in a postsynaptic cell expressing QuasAr2, one can detect excitatory and inhibitory postsynaptic potentials.</s><s>By adding selective blockers of AMPA, NMDA, or glutamate receptors one can isolate the contributions to the post-synaptic potential from specific classes of receptors.</s><s>Furthermore, genetic targeting of presynaptic actuator and, when appropriate, postsynaptic reporter enables targeted measurements of synaptic transmission between genetically defined neuronal sub-types.</s></p><p><s>Several challenges must be addressed before synaptic assays can transition from the research domain to screening applications.</s><s>Homeostatic feedbacks render synaptic strengths highly sensitive to density of neurons and glia, and to the past history of activity.</s><s><ref type="bibr" target="#b86">[87]</ref> It is technically challenging to achieve sufficiently tight control over these parameters for screening.</s><s>Assays that measure the same cells pre-and post-compound are likely to be more useful in the near term because one can null-out cell-to-cell variability.</s><s>Microchannel devices that compartmentalize pre-and post-synaptic cells offer an intriguing possibility for assays in a standardized geometry <ref type="bibr" target="#b87">[88]</ref>, but scale-up engineering will be needed before these devices are useful for screening.</s><s>Given the transformative promise of synaptic assays, one can anticipate rapid progress in this domain.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Measurements in brain slice and tissue</head><p><s>Due to circuit-level feedbacks, modulation of cell-autonomous excitability or monosynaptic transmission can have counterintuitive effects at the level of microcircuit function in intact tissue.</s><s>Furthermore, one important goal is to identify compounds that selectively modulate function of particular microcircuits.</s><s>This modulation could arise from pleiotropic molecular mechanisms.</s><s>Thus there is strong demand for optogenetic tools to map neuronal function in the context of intact tissue, e.g. in acute brain slice.</s></p><p><s>Recent advances in ultrawide-field imaging have opened the possibility of two-photon Ca 2+ or glutamate imaging over areas almost covering a complete brain slice <ref type="bibr" target="#b88">[89,</ref><ref type="bibr" target="#b89">90]</ref>.</s><s>The challenge with passive imaging in acute slice is that under typical conditions, there is little spontaneous activity.</s><s>Recently, Optopatch measurements of excitability were demonstrated in acute slice, using a transgenic Cre-dependent Optopatch mouse to target Optopatch expression to genetically specified subsets of neurons <ref type="bibr" target="#b80">[81]</ref>.</s><s>It has not yet been possible to perform Optopatch measurements of synaptic transmission in acute slice because postsynaptic potentials in tissue are ∼20-fold smaller than in culture <ref type="bibr" target="#b90">[91]</ref>.</s><s>Due to the low throughput of measurements slice-based measurements, these assays will likely find most use in target validation, e.g.</s><s>via studies on genetically modified mice, and on hit validation or prioritization, where a small number of molecules can be tested for effects on the target circuit and on other brain regions.</s><s>Despite these limitations on throughput, optogenetic mapping of compound effects on circuit excitability is a promising frontier for drug discovery.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Measurements in vivo</head><p><s>Most drugs go through tests of efficacy in rodent models before human clinical trials.</s><s>Optogenetic activation of specific circuits can elicit a wide range of disease-relevant behaviors <ref type="bibr" target="#b91">[92,</ref><ref type="bibr" target="#b92">93]</ref>, including fear <ref type="bibr" target="#b93">[94]</ref>, aggression <ref type="bibr" target="#b94">[95]</ref>, feeding <ref type="bibr" target="#b95">[96]</ref>, pain <ref type="bibr" target="#b96">[97,</ref><ref type="bibr" target="#b97">98]</ref> and sleep <ref type="bibr" target="#b98">[99]</ref>.</s><s>The temporal precision and repeatability with which these behaviors can be evoked via optogenetic stimulation provides a robust baseline against which to test the effect of perturbations in candidate target genes or to test application of candidate therapeutics, though one should keep in mind that patterns of neural activity induced by synchronous activation of large ensembles are likely to differ substantially from naturally occurring patterns.</s></p><p><s>Implantable microscopes <ref type="bibr" target="#b99">[100]</ref> and ultra-wide-field imaging preparations <ref type="bibr" target="#b100">[101]</ref> further enable optogenetic recording of Ca 2+ dynamics in large populations of cells in vivo, which can be used to validate the effect of a test compound on circuit dynamics.</s><s>Recently developed implants that combine optogenetic stimulation with drug delivery provide a means to test compound effects in a minimally invasive manner.</s><s><ref type="bibr" target="#b101">[102]</ref> As with measurements in acute brain slice, the low throughput of optogenetic measurements in vivo will most likely restrict applications to target and hit validation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Optogenetics in safety and toxicology</head><p><s>Safety remains a key hurdle in drug development, and cardiac safety is of paramount concern due to the potential severity of cardiac side-effects.</s><s>Traditional safety assessments require testing against the cardiac hERG channel, a common cause of off-target cardiotoxicity, followed by tests in dog and human.</s><s><ref type="bibr" target="#b102">[103]</ref> However, hERG testing may reject some potentially promising candidates.</s><s>Indeed, several drugs known to be safe and approved before hERG testing became standard would not pass current safety tests.</s><s>The Cardiac in vitro Pro-Arrhythmia (CiPA) initiative aims to develop more accurate in vitro assays of cardiac risk.</s><s><ref type="bibr" target="#b103">[104]</ref> Tests in human iPSC-derived cardiomyocytes (hiPSC-CM) provide one arm of this new approach.</s><s>Optogenetic measurements of voltage <ref type="bibr" target="#b104">[105]</ref> and calcium <ref type="bibr" target="#b105">[106]</ref>, combined with optogenetic pacing <ref type="bibr" target="#b106">[107]</ref>, provide a rich functional phenotype for exploring drug effects on human cardiac activity.</s><s>Similarly, the all optical electrophysiology method can also be used for neuro-toxicity study to evaluate compound effect on neuron intrinsic excitability and synaptic transmission.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Future directions: Optogenetics in patient stratification and precision medicine</head><p><s>For many diseases of the nervous system, symptoms alone poorly predict a patient's response to a candidate therapeutic.</s><s>Despite some notable successes of genetic stratification <ref type="bibr" target="#b107">[108]</ref>, in many instances genetics provides little additional guidance.</s><s>Optogenetic measurements on patient iPSC-derived neurons provide a means to instantiate a patient's entire genome in a physiologically relevant and pharmacologically accessible format.</s><s>A likely direction of future progress will be toward patient stratification based on functional cell-based measurements.</s><s>Initially this work will occur in the presence of stratification for clinical trials, though ultimately the approach may be extended to individual patients seeking to select among many possible therapeutic options.</s><s>Patient iPSC-derived neurons are most likely to replicate disease pathology for monogenic channelopathies, where one can reasonably expect a robust cell-autonomous phenotype.</s><s>The extent to which these cells can recapitulate complex neurodevelopmental and neurodegenerative disease processes remains a topic of active research.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Challenges for optogenetics-enabled drug discovery</head><p><s>Optogenetic techniques offer great promise for accelerating drug discovery.</s><s>But technical challenges remain (see Outstanding Questions).</s><s>The set of spectrally compatible optogenetic actuators and reporters is limited, due to the very broad action spectra of microbial rhodopsin-based actuators and the reliance of most reporters on GFP or spectrally similar proteins.</s><s>Development of far red or near infrared genetically encoded reporters would greatly expand the scope of possible applications.</s><s>One would also like to see reporters for more analytes than are currently available, particularly for neurotransmitters and neuromodulators, e.g.</s><s>GABA, glycine, dopamine, serotonin, acetylcholine.</s></p><p><s>A further challenge is quantification.</s><s>In conventional patch clamp measurements, one knows the accurate value of the membrane current and voltage.</s><s>For both optogenetic stimulation and measurement, the strength of the signal depends on the expression level and trafficking of the transducer, the membrane area, and the distribution of illumination intensity.</s><s>These parameters are challenging to know precisely, though there are several promising remedies.</s><s>Stable transgenic cell lines can have more homogeneous expression compared to transiently transfected cells, leading to less cell-to-cell variability.</s><s>Co-expression of a stable fluorescent tag can further provide a means to estimate expression level ratiometrically.</s><s>The electronic excited state lifetime of some fluorescent reporters can also provide an expression levelindependent measure of activation.</s><s>These techniques have been applied for voltage <ref type="bibr" target="#b108">[109,</ref><ref type="bibr" target="#b109">110]</ref> and calcium <ref type="bibr" target="#b110">[111,</ref><ref type="bibr" target="#b111">112]</ref>, but not yet in a high-throughput format.</s><s>Ultimately, quantitative measurements come from careful experimental design, including e.g.</s><s>mixed positive and negative control cells in the same well, pre-and post-drug measurements on the same cells, or tool pharmacology for post-measurement calibration of signal magnitudes.</s></p><p><s>We also need better instrumentation and software.</s><s>Existing screening tools lack the capabilities for spatially and spectrally patterned illumination, and lack the temporal resolution, spatial resolution and sensitivity needed for high-speed measurements of neuronal firing.</s><s>While optical stimulation capabilities are starting to be added to existing screening platforms [113], these capabilities remain rudimentary.</s><s>This challenge will likely be addressed through a series of instruments with differing tradeoffs in throughput and information content.</s><s>A key divide is whether the instrument provides cellular resolution in a single-well format, or averages over the whole well and probes multiple wells in parallel.</s><s>For truly high-throughput screens (&gt; 105 compounds), the latter approach will be essential.</s><s>Whole-well average measurements are most appropriate for screens on heterologously expressed proteins, e.g. in spiking HEK cells, or for measures of neuronal activity where the population-level response is expected to be homogeneous.</s><s>Follow-up lower throughput assays can use instruments with single-cell resolution and more complex stimulation, but with serial scanning over multiple wells.</s><s>Both types of measurements have been demonstrated academically, but no company has yet undertaken the engineering to make these tools commercially available.</s></p><p><s>Finally, we need better software.</s><s>Imaging a wide area at high speed and high resolution leads to prodigious data rates, typically ∼1 GByte/s.</s><s>Specialized software pipelines are needed to store, segment, and process these data.</s><s>Each discovery project must address the challenge of converting terabytes of movies into actionable screening data.</s><s>Despite these challenges, optogenetic tools are already making headway in drug discovery.</s><s>Further technical advances offer the promise to bring in a new age of functional screening for diseases of cellular excitability.</s><s>Traditional screening approaches have led to high rates of expensive attrition during clinical trials.</s><s>By testing drugs for functional modulation of neurons, circuits, and patient-derived cells, there is reason for optimism that the initial assays will more closely approximate the patient-relevant biology.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Glossary</head><p><s>Bouton a swelling in a neuronal axon that contains synaptic vesicles.</s><s>A synapse comprises a junction of a presynaptic bouton and a postsynaptic dendritic spine Channelrhodopsin a class of transmembrane proteins that transport cations across the plasma membrane in response to light stimulation CheRiff a type of channelrhodopsin that shows good sensitivity to blue light illumination and rapid opening and closing kinetics</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Depolarization</head><p><s>In the resting state of most cells, the inside of the cell is electrically negative relative to the outside ("polarized").</s><s>Depolarization refers to a shift to a less negative voltage, often caused by a flow of positive ions into the cell Fluorescent Imaging Plate Reader (FLIPR) a commercially available instrument that monitors the simultaneous fluorescence dynamics of each well in a multi-well plate.</s><s>This instrument is widely used for high-throughput screening to identify modulators of GPCR and ion channel targets GCaMP a class of protein-based calcium indicators that emit green fluorescence.</s><s>The brightness of these reporters is highly sensitive to local Ca 2+ concentration K ir channel inwardly rectifying potassium channel.</s><s>These ion channels have greater conductance for potassium at negative potentials than at positive potentials.</s><s>K ir channels do not show voltage-gated behavior, i.e. the current is only a function of the instantaneous voltage as opposed to depending on past voltages too.</s><s>In neurons and cardiomyocytes Kir channels are critical to stabilize a negative resting membrane potential, close to the potassium reversal potential Na v channels voltage gated sodium channels.</s><s>When activated by a depolarizing shift in membrane voltage, these ion channels open and conduct sodium ions into the cell.</s><s>This inward current leads to further depolarization, creating a positive feedback that produces a spike in the membrane voltage.</s><s>Most Na V channels spontaneously close after a short time, so Na V activation only produces a brief spike in membrane voltage.</s><s>Na V channels produce the upstroke of the action potential in neurons and cardiomyocytes QuasAr a near infrared fluorescent protein reporter of membrane voltage.</s><s>This protein responds to changes in membrane voltage quickly and sensitively, but is very dim RCaMP a class of protein-based calcium indicators that emit red fluorescence.</s><s>The red-shifted spectrum of these reporters facilitates pairing with blue-activated channelrhodopsins</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reversal potential</head><p><s>the value of the membrane potential at which an ion will neither flow into or out of a cell.</s><s>The reversal potential for each ion depends on its concentrations inside and outside the cell, via the Nernst equation Box 1</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Ion channel screening tools</head><p><s>Several fluorescence assays have been developed for screening ion channel modulators.</s><s>Typically, a static membrane voltage is set via the ionic content of the extracellular medium.</s><s>Sometimes a tool compound is applied to force the channels into a particular state (e.g.</s><s>veratridine for Na V channels).</s><s>The response to a test compound is then monitored either via fluorescence of a voltage-sensitive dye or via modulation of the flux of a readily detected ion (e.g.</s><s>Ca 2+ for Ca V channels <ref type="bibr" target="#b14">[15]</ref>, Tl + for Na V <ref type="bibr" target="#b15">[16]</ref> and K V <ref type="bibr" target="#b16">[17]</ref> channels, I -for chloride channels <ref type="bibr" target="#b17">[18]</ref>).</s><s>Screens of this sort cannot select for particular binding modes or kinetics.</s></p><p><s>Automated patch clamp electrophysiology <ref type="bibr" target="#b18">[19]</ref> provides accurate programming of membrane potential and readout of membrane current, and is becoming widely used in ion channel screening <ref type="bibr" target="#b19">[20]</ref>.</s><s>However, this approach becomes expensive for large-scale screens and still suffers from technical limitations including a ∼17% drop-out rate of individual wells <ref type="bibr" target="#b20">[21]</ref> and difficulty probing channels with small overall currents.</s><s>For instance, the voltage-gated sodium channels Na V 1.8 and Na V 1.9, which play an important role in mediating pain transmission, are difficult to express at sufficiently high levels for automated patch clamp measurements <ref type="bibr" target="#b21">[22,</ref><ref type="bibr" target="#b22">23]</ref>.</s><s>Automated patch clamp measurements are typically restricted to stable cell lines, though applications in cardiomyocytes have been demonstrated <ref type="bibr" target="#b23">[24]</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Box 2</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Optogenetics for novel target-based screens</head><p><s>The power of optogenetically enabled high-throughput screens is just beginning to be realized.</s><s>Here we give several examples of prospective screening approaches.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Gap junctions</head><p><s>Gap junctions, which are electrical conduits between neighboring cells, are an interesting target in epilepsy <ref type="bibr" target="#b54">[55]</ref>.</s><s>When HEK cells are grown to confluence, they form gap junctionmediated electrical contacts.</s><s>Overexpression of gap junctions can further strengthen this electrotonic coupling <ref type="bibr" target="#b55">[56]</ref>.</s><s>In syncytial monolayers of spiking HEK cells, optogenetically induced depolarizations lead to propagating waves which are sensitive to gap junction modulators.</s><s><ref type="bibr" target="#b47">[48]</ref> Mixed co-culture of HEK cells expressing either an optogenetic actuator or a fluorescent voltage indicator would provide a robust means to probe gap junctionmediated electrical conduction.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Transporters and pumps</head><p><s>Membrane voltage is important in the dynamics of many transmembrane proteins beyond ion channels <ref type="bibr" target="#b56">[57]</ref>.</s><s>Indeed, every transmembrane protein that binds a charged ligand, undergoes conformational shifts, or transports charged moieties across the membrane is, in principle, susceptible to changes in membrane voltage <ref type="bibr" target="#b57">[58]</ref>.</s><s>Electrogenic transporters are sensitive to membrane voltage, as are some GPCRs <ref type="bibr" target="#b58">[59,</ref><ref type="bibr" target="#b59">60]</ref>.</s><s>Voltage affects the activity of the multidrug resistance proteins MRP4 and MRP5 <ref type="bibr" target="#b60">[61]</ref>, though there has been controversy over whether voltage also affects the multi-drug efflux transporter P-gp (also known as MDR1) <ref type="bibr" target="#b61">[62,</ref><ref type="bibr" target="#b62">63]</ref>.</s><s>Indeed, changes in membrane voltage have been implicated in regulating the cell cycle <ref type="bibr" target="#b63">[64]</ref> and in the progression of cancer <ref type="bibr" target="#b64">[65]</ref>.</s><s>For these targets, optogenetic modulation of membrane potential could augment screening pipelines.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>GPCRs and other signaling pathways</head><p><s>Optogenetics can also augment drug discovery for targets where membrane voltage is not a factor.</s><s>Optogenetic control has been exerted over the three major classes of GPCRbased signaling (G s <ref type="bibr" target="#b65">[66]</ref>, G i/o <ref type="bibr" target="#b66">[67]</ref>, and G q/11 <ref type="bibr" target="#b67">[68]</ref>).</s><s>Chimeras of bovine rhodopsins and endogenous receptors have been used to make light-activated mimics of the adrenergic receptor (optoXR) <ref type="bibr" target="#b67">[68]</ref> and the serotonin receptor (Rh-CT 5-ht1a ) <ref type="bibr" target="#b66">[67]</ref>.</s><s>Light-responsive soluble proteins have been coupled to the MAPK pathway, PI3K pathway, Rho GTPase signaling, and RTK signaling <ref type="bibr" target="#b68">[69]</ref>.</s><s>Broadly applicable strategies have been developed for controlling protein localization, activity, oligomerization, and secretion with light <ref type="bibr" target="#b68">[69]</ref>.</s></p><p><s>Recently, the optogentic tool box was further expanded with a light-controlled CRISPRa activator, which can control endogenous gene expression with spatial and temporal precision.</s><s><ref type="bibr" target="#b69">[70]</ref> These powerful capabilities are just beginning to enter drug discovery pipelines.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Target-based screening in primary cells</head><p><s>Target proteins can behave very differently in heterologous expression systems and in native cells, due to alternative splicing, post-translational modifications, variations in trafficking, clustering, and degradation, and interactions with modulatory subunits.</s><s>For instance, dynamic clustering of the soma-localized potassium channel K v 2.1 regulates its activity <ref type="bibr" target="#b70">[71]</ref>, while trafficking of the sodium channel Na V 1.2 along the axon initial segment regulates neuronal excitability <ref type="bibr" target="#b71">[72]</ref>.</s><s>Thus, even for target-based screens, there is merit to assessing target function in its native cellular context.</s></p><p><s>A few optogenetic tools have been developed to probe function of specific targets in a complex cellular milieu.</s><s>Fluorescently labeled toxins with state-dependent binding probe activation of native K v 2.1 ion channels <ref type="bibr" target="#b72">[73]</ref>.</s><s>FRET-based reporters can probe activation of specific kinases, GPCRs, and other targets <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b13">14]</ref>.</s><s>With these tools, one can perform target-based screens in native cells.</s><s>There remains a strong need for improved fluorescent reporters for tracking the location and activity of specific drug targets within a complex cellular milieu.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Trends Box</head><p><s>• Optogenetic approaches have potential to contribute throughout the drug discovery pipeline, from target identification to clinical trials.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>•</head><p><s>Optogenetic assays can probe specific targets and cell-types within a rich physiological context.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>•</head><p><s>Optogenetic measurements in patient-derived neurons can elucidate genotypephenotype relationships and probe disease mechanisms.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>•</head><p><s>The integration of optogenetics with high-throughput screening requires advances in molecular tools, instrumentation and data analytics.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc><div><p><s>113.</s><s>Clements IP, et al.</s><s>Optogenetic stimulation of multiwell MEA plates for neural and cardiac applications.</s><s>2016:96902C-96902C-10.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Key Figure.</s><s>Optogenetics throughout the discovery pipelineOptogenetic assays can contribute at each stage of drug discovery.</s><s>A) Comparative measures on rodent or human neurons +/-a disease-causing mutation can establish a screenable phenotype.</s><s>Alternatively, optogenetic screens of genetic knockouts can identify novel targets which can then be the subject of optogenetic or conventional drug screens.</s><s>B) Targets identified in culture-based assays should be validated via knockout and functional measurements in acute slice, and ideally in vivo.</s><s>Optogenetically triggered behaviors can provide a low-variance phenotype for testing the effects of mutations.</s><s>C) Target-based optogenetic screens can be performed in a wide variety of cell-based assays.</s><s>Alternatively, phenotypic optogenetic screens can identify compounds that modulate a disease-relevant functional phenotype regardless of mechanism.</s><s>D) Screening hits should be validated in the same assays used for target validation.</s><s>In addition, optogenetic assays in human iPSCderived cardiomyocytes can help with cardiotoxicity assessment.</s><s>E) Functional optogenetic measurements in human iPSC-derived neurons can seek to distinguish likely responders from non-responders prior to a clinical trial; or to match genetically heterogeneous patients with existing medications.</s></p></div></figDesc><graphic coords="22,156.00,62.00,360.00,194.88" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Optogenetic high-throughput target-based screensA) Screens for state-dependent modulators of Na V channels can be carried out in Optopatch spiking HEK cells<ref type="bibr" target="#b48">[49]</ref>.</s><s>B) Screens for state-dependent modulators of Ca V channels use the gradual recovery of a step function channelrhodopsin, ChR2(D156A),<ref type="bibr" target="#b32">[33]</ref> to induce a slowly varying membrane voltage<ref type="bibr" target="#b49">[50]</ref>.</s><s>C) Screens for modulators of cyclic nucleotide gated (CNG) channels use a photo-activated adenylyl cyclase, bPAC,<ref type="bibr" target="#b52">[53]</ref> to induce a step in cAMP concentration.</s><s>D) Screens for modulators of receptor tyrosine kinase (RTK) signaling use a light-activated RTK and a transcriptional readout.<ref type="bibr" target="#b53">[54]</ref></s></p></div></figDesc><graphic coords="23,156.00,62.00,360.00,325.92" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Optical high-throughput screen of sodium channel modulatorsA) HEK293 cell engineered for optogenetic studies on Na V 1.7.</s><s>The cell stably expressed the test channel, Na V 1.7, and K ir 2.1 to lower the resting potential to near the K + reversal potential.</s><s>The blue light-activated ion channel CheRiff induced action potentials upon blue illumination.</s><s>Fluorescence of the voltage indicator QuasAr2 reported the dynamics.</s><s>B) Optically induced and optically recorded spikes followed the stimulus pattern in the absence of drug, but in the presence of a state-dependent blocker, lidocaine, the spikes failed at high stimulus frequency (arrows).</s><s>Scale bar 1 s.</s><s>C) All-optical screen of 320 FDA-approved compounds for use-dependent block.</s><s>Each response was characterized by the overall decay in the spike amplitude (use-dependence index) and the standard deviation in the spike amplitude.</s><s>State-dependent blockers showed clear functional clustering.</s><s>Image adapted from<ref type="bibr" target="#b48">[49]</ref>.</s></p></div></figDesc><graphic coords="24,156.19,62.00,359.61,223.92" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Optogenetics-enabled phenotypic assays A) High-throughput measures of excitability in cultured neurons can characterize rodent and human iPSC-derived neurons.</s><s>Here Optopatch recordings are shown from human iPSCderived motor neurons comparing a wild-type genotype with cells containing an ALScausing mutation, SOD1(A4V).</s><s>The mutation causes differences in spontaneous and optogenetically induced firing patterns.</s><s>Figure adapted from [82].</s><s>B) All-optical measures of synaptic transmission can identify mutations or compounds that modulate excitatory or inhibitory signaling in cultured neurons.</s><s>Here a single rat hippocampal neuron is stimulated with patterned illumination, and excitatory post-synaptic potentials are recorded in a neighboring cell.</s><s>Figure adapted from [41].</s><s>C) All-optical measures of excitability in acute brain slice can identify characteristic firing patterns in genetically defined neuronal subtypes in defined brain regions.</s><s>Here an Optopatch recording from a somatostatin-positive interneuron is overlaid on an image of a brain slice expressing Optopatch under control of somatostatin-Cre.</s><s>Figure adapted from [81].</s><s>D) A mouse expressing channelrhodopsin 2 in its sensory neurons exhibits nocifensive behavior upon blue light illumination of its left hindpaw (left), while a control mouse does not (right).Figure adapted from [98].</s></p></div></figDesc><graphic coords="25,156.00,62.00,360.00,267.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Optogenetic excitability assays can be used throughout the discovery pipeline A) Target identification.</s><s>Each well contains neurons with a distinct genetic perturbation (e.g.</s><s>gene knockout).</s><s>Optogenetic measurements can identify genetic modulators of neuronal excitability.</s><s>B) Target-based screen.</s><s>Each well contains a mixture of cells expressing and not expressing a specific drug target, and a fluorescent marker to distinguish the populations (green).</s><s>Optogenetic excitability measurements are performed with single-cell resolution.</s><s>Compounds that modulate the excitability only of the cells with the target are judged to be functionally selective for the target in the native cellular milieu.</s><s>C) Cell type-selective screen.</s><s>Each well contains a mixture of two or more cell types with fluorescent markers identifying the cell type (green vs. red).</s><s>Optogenetic excitability measurements are performed with single-cell resolution.</s><s>Compounds that modulate the excitability of only one cell type are judged to have cell type-selectivity, regardless of mechanism of action.</s><s>D) Patient stratification.</s><s>Each well contains iPSC-derived neurons from a different patient.</s><s>Optogenetic excitability measurements in the presence of a test compound can determine how the patient's cells will respond to the compound.</s></p></div></figDesc><graphic coords="26,156.00,62.00,360.00,152.64" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Trends Biotechnol.</s><s>Author manuscript; available in PMC 2018 July 01.</s></p></note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Outstanding Questions Box</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>•</head><p><s>Can we develop red-shifted reporters for neurotransmitters and neuromodulators, which are compatible with optogenetic stimulation?</s></p><p><s>• Can optogenetic measurements on human iPSC-derived neurons be used to predict patient response to drugs?</s></p><p><s>• How best to parameterize and classify the complex stimulus-dependent firing patterns of neuronal disease models in vitro?</s></p><p><s>• How can one attain optogenetic stimuli of precisely calibrated magnitude, and fluorescence measurements of accurately calibrated concentrations or voltages?</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">FLIPR: a new instrument for accurate, high throughput optical screening</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Schroeder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Neagle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Biomolecular Screening</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="75" to="80" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Epi4K Consortium. De novo mutations in epileptic encephalopathies</title>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">501</biblScope>
+			<biblScope unit="page" from="217" to="221" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23934111</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Epi4K consortium. Ultra-rare genetic variation in common epilepsies: a case-control sequencing study</title>
+	</analytic>
+	<monogr>
+		<title level="j">The Lancet Neurology</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="135" to="143" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28102150</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">De novo mutations in schizophrenia implicate synaptic networks</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fromer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">506</biblScope>
+			<biblScope unit="issue">7487</biblScope>
+			<biblScope unit="page" from="179" to="184" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24463507</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">A polygenic burden of rare disruptive mutations in schizophrenia</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Purcell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">506</biblScope>
+			<biblScope unit="issue">7487</biblScope>
+			<biblScope unit="page" from="185" to="190" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24463508</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">A system for performing high throughput assays of synaptic function</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Hempel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PloS One</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<date type="published" when="2011">2011. 25999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21998743</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Phenotypic screens as a renewed approach for drug discovery</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Drug Discov Today</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">21</biblScope>
+			<biblScope unit="page" from="1067" to="1073" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23850704</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Neurological perspectives on voltage-gated sodium channels</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Eijkelkamp</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain</title>
+		<imprint>
+			<biblScope unit="volume">135</biblScope>
+			<biblScope unit="page" from="2585" to="2612" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>Pt 9. PubMed: 22961543</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Microcircuits and their interactions in epilepsy: is the focus out of focus?</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Paz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Huguenard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="351" to="359" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25710837</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">Optogenetics : 10 years of microbial opsins in neuroscience</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1213" to="1225" />
+		</imprint>
+	</monogr>
+	<note>PubMed: 26308982</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">A user&apos;s guide to channelrhodopsin variants: features, limitations and future developments</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp Physiol</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="19" to="25" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20621963</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Genetically encoded indicators of neuronal activity</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Z</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Schnitzer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1142" to="1153" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27571193</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Reporting from the field: genetically encoded fluorescent reporters uncover signaling dynamics in living biological systems</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mehta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Biochem</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="375" to="401" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21495849</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Recent developments of genetically encoded optical sensors for cell biology</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bolbat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Schultz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biology of the Cell</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">HTS assays for developing the molecular pharmacology of ion channels</title>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">B</forename><surname>Mcmanus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Opinion in Pharmacology</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="91" to="96" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24556186</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Development and validation of a thallium flux-based functional assay for the sodium channel NaV1. 7 and its utility for lead discovery and compound profiling</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Du</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Chemical Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="871" to="878" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25879403</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">A thallium-sensitive, fluorescence-based assay for detecting and characterizing potassium channel modulators in mammalian cells</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Weaver</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Biomolecular Screening</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="671" to="677" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15634793</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Optimization of a yellow fluorescent protein-based iodide influx high-throughput screening assay for cystic fibrosis transmembrane conductance regulator (CFTR) modulators</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sui</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Assay and Drug Development Technologies</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="656" to="668" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21050066</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Automated patch clamping</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sawada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yoshinaga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Patch Clamp Techniques: From Beginning to Advanced Protocols</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="323" to="332" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Ion channel screening-automated patch clamp on the rise</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Farre</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Drug Discovery Today: Technologies</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="23" to="e28" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">High-Throughput Screening of Na(V)1.7 Modulators Using a Giga-Seal Automated Patch Clamp Instrument</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chambers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Assay Drug Dev Technol</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="93" to="108" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26991360</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">The voltage-gated Na+ channel Nav1.8 contains an ER-retention/retrieval signal antagonized by the beta3 subunit</title>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">N</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Cell Sci</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="3243" to="3252" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>Pt 19. PubMed: 18782866</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Mechanism of sodium channel NaV1.9 potentiation by G-protein signaling</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Vanoye</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Gen Physiol</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="193" to="202" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23359282</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Action potential characterization of human induced pluripotent stem cell-derived cardiomyocytes using automated patch-clamp technology</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Scheel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Assay and Drug Development Technologies</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="457" to="469" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25353059</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Channelrhodopsin-2, a directly light-gated cation-selective membrane channel</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nagel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="issue">24</biblScope>
+			<biblScope unit="page" from="13940" to="13945" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14615590</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Millisecond-timescale, genetically targeted optical control of neural activity</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Boyden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1263" to="1268" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16116447</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">ReaChR: a red-shifted variant of channelrhodopsin enables deep transcranial optogenetic excitation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1499" to="1508" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23995068</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Independent optical excitation of distinct neural populations</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Klapoetke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Meth</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="338" to="346" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Bimodal activation of different neuron classes with the spectrally red-shifted channelrhodopsin chimera C1V1 in Caenorhabditis elegans</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Erbguth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS One</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23056472</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Characterization of a highly efficient blue-shifted channelrhodopsin from the marine alga Platymonas subcordiformis</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Govorunova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">288</biblScope>
+			<biblScope unit="issue">41</biblScope>
+			<biblScope unit="page" from="29911" to="29922" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23995841</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Red-shifted optogenetic excitation: a tool for fast neural control derived from Volvox carteri</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="631" to="633" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18432196</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Characterization of engineered channelrhodopsin variants with improved properties and kinetics</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophys J</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1803" to="1814" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19254539</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Bi-stable neural state switches</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Berndt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">19079251</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Ultra light-sensitive and fast neuronal activation with the Ca 2+ -permeable channelrhodopsin CatCh</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kleinlogel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="513" to="518" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21399632</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">A light-driven sodium ion pump in marine bacteria</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Inoue</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="1678">2013. 1678</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23575682</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Natural light-gated anion channels: A family of microbial rhodopsins for advanced optogenetics</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Govorunova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">349</biblScope>
+			<biblScope unit="issue">6248</biblScope>
+			<biblScope unit="page" from="647" to="650" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26113638</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">eNpHR: a Natronomonas halorhodopsin enhanced for optogenetic applications</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Gradinaru</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="129" to="139" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18677566</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">High-performance genetically targetable optical neural silencing by light-driven proton pumps</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Chow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">463</biblScope>
+			<biblScope unit="page" from="98" to="102" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20054397</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Structure-guided transformation of channelrhodopsin into a light-activated chloride channel</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Berndt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">344</biblScope>
+			<biblScope unit="issue">6182</biblScope>
+			<biblScope unit="page" from="420" to="424" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24763591</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Conversion of channelrhodopsin into a light-gated chloride channel</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wietek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">344</biblScope>
+			<biblScope unit="issue">6182</biblScope>
+			<biblScope unit="page" from="409" to="412" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24674867</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">All-optical electrophysiology in mammalian neurons using engineered microbial rhodopsins</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Hochbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="825" to="833" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24952910</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">A photostable silicon rhodamine platform for optical voltage sensing</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">L</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Am Chem Soc</title>
+		<imprint>
+			<biblScope unit="volume">137</biblScope>
+			<biblScope unit="issue">33</biblScope>
+			<biblScope unit="page" from="10767" to="10776" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26237573</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">CaRuby-Nano: a novel high affinity calcium probe for dual color imaging</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Collot</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.05808</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="page">4</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Rational design of a high-affinity, fast, red calcium indicator R-CaMP2</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Inoue</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Methods</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="64" to="70" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25419959</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Sensitive red protein calcium indicators for imaging neural activity</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Dana</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.12727</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="page">5</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Voltage gated sodium channels as drug discovery targets</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Bagal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Channels</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="360" to="366" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26646477</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Screening fluorescent voltage indicators with spontaneously spiking HEK cells</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Park</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS One</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24391999</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Optically Controlled Oscillators in an Engineered Bioelectric Tissue</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Mcnamara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review X</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">31001</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Optical electrophysiology for probing function and pharmacology of voltage-gated ion channels</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ELife</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="2016">2016. 15202</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27215841</note>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Bringing the light to high throughput screening: use of optogenetic tools for the development of recombinant cellular assays</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Agus</surname></persName>
+		</author>
+		<idno type="DOI">10.1117/12.2077579</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc SPIE</title>
+		<imprint>
+			<biblScope unit="volume">9305</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">CaV1. 3-selective L-type calcium channel antagonists as potential new therapeutics for Parkinson&apos;s disease</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Communications</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">1146</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">HCN channels as targets for drug discovery</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Maher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comb Chem High Throughput Screen</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="64" to="72" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19149492</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Light modulation of cellular cAMP by a small bacterial photoactivated adenylyl cyclase, bPAC, of the soil bacterium Beggiatoa</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stierl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">286</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1181" to="1188" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21030594</note>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Light-assisted small-molecule screening against protein kinases</title>
+		<author>
+			<persName><forename type="first">Á</forename><surname>Inglés-Prieto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Chemical Biology</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Roles of gap junctions, connexins, and pannexins in epilepsy</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mylvaganam</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in Physiology</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">172</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24847276</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Engineering biosynthetic excitable tissues from unexcitable cells for electrophysiological and cell therapy studies</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Kirkton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Bursac</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">300</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21556054</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">How membrane proteins sense voltage</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bezanilla</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Mol Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="323" to="332" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18354422</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Bringing bioelectricity to light</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Venkatachalam</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Biophys</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="11" to="11" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">A role for membrane potential in regulating GPCRs?</title>
+		<author>
+			<persName><forename type="first">Mahaut-Smith</forename><surname>Mp</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Pharmacol Sci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="421" to="429" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18621424</note>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Membrane potentials regulating GPCRs: insights from experiments and molecular dynamics simulations</title>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">N</forename><surname>Vickery</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Opinion in Pharmacology</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="44" to="50" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27474871</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Dependence of multidrug resistance protein-mediated cyclic nucleotide efflux on the background sodium conductance</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kucka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Pharmacol</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="270" to="279" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19903828</note>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">MDR1 P-glycoprotein reduces influx of substrates without affecting membrane potential</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Luker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">276</biblScope>
+			<biblScope unit="issue">52</biblScope>
+			<biblScope unit="page" from="49053" to="49060" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11598111</note>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Purified human MDR 1 modulates membrane potential in reconstituted proteoliposomes</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Howard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Roepe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochemistry (N Y)</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="3544" to="3555" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">SIGNAL TRANSDUCTION. Membrane potential modulates plasma membrane phospholipid dynamics and K-Ras signaling</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">349</biblScope>
+			<biblScope unit="issue">6250</biblScope>
+			<biblScope unit="page" from="873" to="876" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26293964</note>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Membrane potential and cancer progression</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Brackenbury</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in Physiology</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">185</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23882223</note>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Reproducible and sustained regulation of Gαs signalling using a metazoan opsin as an optogenetic tool</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Bailes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PloS One</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22292038</note>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Substitution of 5-HT1A receptor signaling by a light-activated G protein-coupled receptor</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Oh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">285</biblScope>
+			<biblScope unit="issue">40</biblScope>
+			<biblScope unit="page" from="30825" to="30836" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20643652</note>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Temporally precise in vivo control of intracellular signalling</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Airan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">458</biblScope>
+			<biblScope unit="issue">7241</biblScope>
+			<biblScope unit="page" from="1025" to="1029" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19295515</note>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Optogenetic control of intracellular signaling pathways</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Cui</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="92" to="100" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25529484</note>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">A light-inducible CRISPR-Cas9 system for control of endogenous gene activation</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">R</forename><surname>Polstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Gersbach</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Chemical Biology</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="198" to="200" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25664691</note>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">A novel targeting signal for proximal clustering of the Kv2. 1 K channel in hippocampal neurons</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Lim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="385" to="397" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10719893</note>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Grubb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Burrone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">465</biblScope>
+			<biblScope unit="issue">7301</biblScope>
+			<biblScope unit="page" from="1070" to="1074" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20543823</note>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Chemoselective tarantula toxins report voltage activation of wild-type ion channels in live cells</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Tilley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="issue">44</biblScope>
+			<biblScope unit="page" from="4789" to="4796" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25331865</note>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Directed evolution of industrial enzymes</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Schmidt-Dannert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H</forename><surname>Arnold</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="135" to="136" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10203769</note>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Characterization of voltage-gated sodium-channel blockers by electrical stimulation and fluorescence detection of membrane potential</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="439" to="446" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16550174</note>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">The mechanisms of action of gabapentin and pregabalin</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>Sills</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Opinion in Pharmacology</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="108" to="113" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16376147</note>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">The synaptic vesicle protein SV2A is the binding site for the antiepileptic drug levetiracetam</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Lynch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="issue">26</biblScope>
+			<biblScope unit="page" from="9861" to="9866" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15210974</note>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">The development of cell-based assays for pain drug discovery</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Karila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Blom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Drug Discovery World</title>
+		<imprint>
+			<biblScope unit="page" from="40" to="44" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">The role of membrane microdomains in shaping β2-adrenergic receptormediated cAMP dynamics</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Dipilato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Molecular Biosystems</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="832" to="837" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19603118</note>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">Imaging energy status in live cells with a fluorescent biosensor of the intracellular ATP-to-ADP ratio</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tantama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">2550</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Genetically targeted all-optical electrophysiology with a transgenic Cre-dependent Optopatch mouse</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">43</biblScope>
+			<biblScope unit="page" from="11059" to="11073" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27798186</note>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<monogr>
+		<title level="m" type="main">Alterations in neuronal excitability in ALS probed through optical electrophysiology studies of human iPSC-derived motor neurons</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kiskinis</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>Submitted</note>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Visualizing Presynaptic Calcium Dynamics and Vesicle Fusion with a Single Genetically Encoded Reporter at Individual Synapses</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Jackson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Burrone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in Synaptic Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title level="a" type="main">Visualizing secretion and synaptic transmission with pH-sensitive green fluorescent proteins</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Miesenbock</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">394</biblScope>
+			<biblScope unit="issue">6689</biblScope>
+			<biblScope unit="page" from="192" to="195" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9671304</note>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title level="a" type="main">An optimized fluorescent probe for visualizing glutamate neurotransmission</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Marvin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="162" to="170" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23314171</note>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ohkura</surname></persName>
+		</author>
+		<title level="m">Optogenetic Manipulation and Probing</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="133" to="147" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<analytic>
+		<title level="a" type="main">Synaptic scaling rule preserves excitatory-inhibitory balance and salient neuronal network dynamics</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Barral</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Reyes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1690" to="1696" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27749827</note>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">Microfluidic devices for culturing primary mammalian neurons at low densities</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Millet</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Lab on a Chip</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page">17653340</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title level="a" type="main">A large field of view two-photon mesoscope with subcellular resolution for in vivo imaging</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Sofroniew</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BioRxiv</title>
+		<imprint>
+			<biblScope unit="page">55947</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<title level="a" type="main">Ultra-large field-of-view two-photon microscopy</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Tsai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Optics Express</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="13833" to="13847" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26072755</note>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">Somatic EPSP amplitude is independent of synapse location in hippocampal pyramidal neurons</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Magee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Cook</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="895" to="903" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10966620</note>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<analytic>
+		<title level="a" type="main">Optogenetic tools for analyzing the neural circuits of behavior</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Bernstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Boyden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Cogn Sci</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="592" to="600" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22055387</note>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<analytic>
+		<title level="a" type="main">Optogenetic investigation of neural circuits underlying brain disease in animal models</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Tye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="251" to="266" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22430017</note>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<analytic>
+		<title level="a" type="main">Controlling the elements: an optogenetic approach to understanding the neural circuits of fear</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Johansen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biol Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1053" to="1060" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22169096</note>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<analytic>
+		<title level="a" type="main">Functional identification of an aggression locus in the mouse hypothalamus</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">470</biblScope>
+			<biblScope unit="issue">7333</biblScope>
+			<biblScope unit="page" from="221" to="226" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21307935</note>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<analytic>
+		<title level="a" type="main">AGRP neurons are sufficient to orchestrate feeding behavior rapidly and without training</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aponte</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="351" to="355" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21209617</note>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<analytic>
+		<title level="a" type="main">Remote optogenetic activation and sensitization of pain pathways in freely moving mice</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Daou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">47</biblScope>
+			<biblScope unit="page" from="18631" to="18640" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24259584</note>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<analytic>
+		<title level="a" type="main">Virally mediated optogenetic excitation and inhibition of pain in freely moving nontransgenic mice</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Iyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="274" to="278" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24531797</note>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<analytic>
+		<title level="a" type="main">Acute optogenetic silencing of orexin/hypocretin neurons induces slow-wave sleep in mice</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tsunematsu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">29</biblScope>
+			<biblScope unit="page" from="10529" to="10539" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21775598</note>
+</biblStruct>
+
+<biblStruct xml:id="b99">
+	<analytic>
+		<title level="a" type="main">Cellular Level Brain Imaging in Behaving Mammals: An Engineering Approach</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Hamel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="140" to="159" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25856491</note>
+</biblStruct>
+
+<biblStruct xml:id="b100">
+	<analytic>
+		<title level="a" type="main">Long-Term Optical Access to an Estimated One Million Neurons in the Live Mouse Cortex</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell Reports</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="3385" to="3394" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28009304</note>
+</biblStruct>
+
+<biblStruct xml:id="b101">
+	<analytic>
+		<title level="a" type="main">Wireless optofluidic systems for programmable in vivo pharmacology and optogenetics</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jeong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">162</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="662" to="674" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26189679</note>
+</biblStruct>
+
+<biblStruct xml:id="b102">
+	<analytic>
+		<title level="a" type="main">Revolution dawning in cardiotoxicity testing</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Chi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Drug Discovery</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="565" to="567" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b103">
+	<analytic>
+		<title level="a" type="main">The comprehensive in vitro proarrhythmia assay (CiPA) initiative-Update on progress</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Colatsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Pharmacol Toxicol Methods</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page" from="15" to="20" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27282641</note>
+</biblStruct>
+
+<biblStruct xml:id="b104">
+	<analytic>
+		<title level="a" type="main">OptoDyCE as an automated system for high-throughput all-optical dynamic cardiac electrophysiology</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Klimas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Communications</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b105">
+	<analytic>
+		<title level="a" type="main">High throughput measurement of Ca 2+ dynamics for drug risk assessment in human stem cell-derived cardiomyocytes by kinetic image cytometry</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cerignoli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Pharmacol Toxicol Methods</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="246" to="256" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22926323</note>
+</biblStruct>
+
+<biblStruct xml:id="b106">
+	<analytic>
+		<title level="a" type="main">Cardiotoxicity screening with simultaneous optogenetic pacing, voltage imaging and calcium imaging</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Dempsey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Pharmacol Toxicol Methods</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b107">
+	<analytic>
+		<title level="a" type="main">A new initiative on precision medicine</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">S</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Varmus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">N Engl J Med</title>
+		<imprint>
+			<biblScope unit="volume">372</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="793" to="795" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25635347</note>
+</biblStruct>
+
+<biblStruct xml:id="b108">
+	<analytic>
+		<title level="a" type="main">Temporal dynamics of microbial rhodopsin fluorescence reports absolute membrane voltage</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Hou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophys J</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="639" to="648" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24507604</note>
+</biblStruct>
+
+<biblStruct xml:id="b109">
+	<analytic>
+		<title level="a" type="main">Two-photon fluorescence lifetime imaging microscopy (2P-FLIM) of genetically encoded voltage indicators as a probe of absolute membrane voltage</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brinks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophys J</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="914" to="921" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26331249</note>
+</biblStruct>
+
+<biblStruct xml:id="b110">
+	<analytic>
+		<title level="a" type="main">Optimized ratiometric calcium sensors for functional in vivo imaging of neurons and T lymphocytes</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Thestrup</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Methods</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="175" to="182" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24390440</note>
+</biblStruct>
+
+<biblStruct xml:id="b111">
+	<analytic>
+		<title level="a" type="main">Monitoring single-synapse glutamate release and presynaptic calcium concentration in organised brain tissue</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Jensen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell Calcium</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

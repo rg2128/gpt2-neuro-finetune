@@ -1,0 +1,1754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Fast near-whole–brain imaging in adult Drosophila during responses to stimuli and behavior</title>
+				<funder ref="#_UDzexCS">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Public Library of Science (PLoS)</publisher>
+				<availability status="unknown"><p>Copyright Public Library of Science (PLoS)</p>
+				</availability>
+				<date type="published" when="2019-02-15">February 15, 2019</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Sophie</forename><surname>Aimon</surname></persName>
+							<email>aimon.sophie@gmail.com</email>
+							<idno type="ORCID">0000-0002-0990-0342</idno>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Kavli Institute for Brain and Mind</orgName>
+								<orgName type="institution" key="instit2">UCSD</orgName>
+								<address>
+									<addrLine>La Jolla</addrLine>
+									<region>California</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Computational Neurobiology Laboratory</orgName>
+								<orgName type="institution">Salk Institute for Biological Studies</orgName>
+								<address>
+									<addrLine>La Jolla</addrLine>
+									<region>California</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Neurobiology Section</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<addrLine>San Diego, La Jolla</addrLine>
+									<region>California</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Takeo</forename><surname>Katsuki</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Kavli Institute for Brain and Mind</orgName>
+								<orgName type="institution" key="instit2">UCSD</orgName>
+								<address>
+									<addrLine>La Jolla</addrLine>
+									<region>California</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tongqiu</forename><surname>Jia</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Computational Neurobiology Laboratory</orgName>
+								<orgName type="institution">Salk Institute for Biological Studies</orgName>
+								<address>
+									<addrLine>La Jolla</addrLine>
+									<region>California</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Logan</forename><surname>Grosenick</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Departments of Computer Science and Bioengineering</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>California</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Broxton</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Departments of Computer Science and Bioengineering</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>California</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Karl</forename><surname>Deisseroth</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="department" key="dep1">Departments of Bioengineering and Psychiatry</orgName>
+								<orgName type="department" key="dep2">United States of America</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>California</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">United States of America</orgName>
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Stanford University</orgName>
+								<address>
+									<settlement>Stanford, Stanford</settlement>
+									<region>California</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Terrence</forename><forename type="middle">J</forename><surname>Sejnowski</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Computational Neurobiology Laboratory</orgName>
+								<orgName type="institution">Salk Institute for Biological Studies</orgName>
+								<address>
+									<addrLine>La Jolla</addrLine>
+									<region>California</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff6">
+								<orgName type="department" key="dep1">Division of Biological Sciences</orgName>
+								<orgName type="department" key="dep2">United States of America</orgName>
+								<orgName type="institution">University of California San Diego</orgName>
+								<address>
+									<addrLine>La Jolla</addrLine>
+									<region>California</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ralph</forename><forename type="middle">J</forename><surname>Greenspan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Kavli Institute for Brain and Mind</orgName>
+								<orgName type="institution" key="instit2">UCSD</orgName>
+								<address>
+									<addrLine>La Jolla</addrLine>
+									<region>California</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Neurobiology Section</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<addrLine>San Diego, La Jolla</addrLine>
+									<region>California</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff6">
+								<orgName type="department" key="dep1">Division of Biological Sciences</orgName>
+								<orgName type="department" key="dep2">United States of America</orgName>
+								<orgName type="institution">University of California San Diego</orgName>
+								<address>
+									<addrLine>La Jolla</addrLine>
+									<region>California</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff7">
+								<orgName type="department">Department of Cognitive Science</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<addrLine>San Diego, La Jolla</addrLine>
+									<region>California</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff8">
+								<orgName type="institution">Stony Brook University</orgName>
+								<address>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Fast near-whole–brain imaging in adult Drosophila during responses to stimuli and behavior</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">PLOS Biology</title>
+						<title level="j" type="abbrev">PLoS Biol</title>
+						<idno type="eISSN">1545-7885</idno>
+						<imprint>
+							<publisher>Public Library of Science (PLoS)</publisher>
+							<biblScope unit="volume">17</biblScope>
+							<biblScope unit="issue">2</biblScope>
+							<biblScope unit="page">e2006732</biblScope>
+							<date type="published" when="2019-02-15">February 15, 2019</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6D86EBAB716B31C056CD8E7B36654BE2</idno>
+					<idno type="DOI">10.1371/journal.pbio.2006732</idno>
+					<note type="submission">Received: June 6, 2018 Accepted: January 28, 2019</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>AMMC, antennal mechanosensory and motor center</term>
+					<term>CNCRS, Collaborative Research in Computational Neuroscience</term>
+					<term>DDC, Dopa decarboxylase</term>
+					<term>fMRI, functional magnetic resonance imaging</term>
+					<term>GFP, green fluorescent protein</term>
+					<term>GPU, graphical processing unit</term>
+					<term>ICA, independent component analysis</term>
+					<term>NA, numerical aperture</term>
+					<term>PCA, principal component analysis</term>
+					<term>RFP, red fluorescent protein</term>
+					<term>ROI, region of interest</term>
+					<term>SCAPE, swept confocally aligned planar excitation</term>
+					<term>sCMOS, scientific complementary metal-oxidesemiconductor</term>
+					<term>TH, tyrosine hydroxylase</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Whole-brain recordings give us a global perspective of the brain in action.</s><s>In this study, we describe a method using light field microscopy to record near-whole brain calcium and voltage activity at high speed in behaving adult flies.</s><s>We first obtained global activity maps for various stimuli and behaviors.</s><s>Notably, we found that brain activity increased on a global scale when the fly walked but not when it groomed.</s><s>This global increase with walking was particularly strong in dopamine neurons.</s><s>Second, we extracted maps of spatially distinct sources of activity as well as their time series using principal component analysis and independent component analysis.</s><s>The characteristic shapes in the maps matched the anatomy of subneuropil regions and, in some cases, a specific neuron type.</s><s>Brain structures that responded to light and odor were consistent with previous reports, confirming the new technique's validity.</s><s>We also observed previously uncharacterized behavior-related activity as well as patterns of spontaneous voltage activity.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Measuring activity simultaneously in the whole brain is critical to understanding how different brain regions interact to process and control sensory inputs, internal states, and behavior.</s><s>Whole-brain recordings not only reveal which regions are involved in which functions and with what network dynamics but also help to interpret the effects of a targeted intervention (e.g., a lesion or a local alteration with optogenetics) on the whole network and give context to local electrophysiology recordings.</s><s>Furthermore, they are necessary to characterize global changes affecting the brain on a large scale (such as different behavioral states) and detect patterns of activity involving distant regions.</s><s>This is already possible in humans, for which functional magnetic resonance imaging (fMRI) has opened a new chapter in the study of brain activity underlying behavior, but this technique has low spatial and temporal resolution.</s><s>In animals, techniques for imaging a whole brain so far have allowed us to record activity at much higher resolutions but are still ordersof-magnitude slower than neuronal electrical activity.</s><s>For example, recent reports of scanning-based whole-brain imaging in zebrafish and Drosophila larvae had a frame rate of 12 Hz <ref type="bibr" target="#b0">[1]</ref> and 5 Hz <ref type="bibr" target="#b1">[2]</ref>, respectively.</s><s>By contrast, light field microscopy <ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref> makes it possible to image large volumes of scattering brain tissue at more than 100 Hz.</s><s>In this study, we leverage this technique to record large-scale activity in the brain of behaving adult fruit flies.</s><s>We present a method to optically access the fly's brain while enabling it to retain the ability to walk or groom.</s><s>We show that the near-whole brain can be imaged with a 20x objective at a frame rate up to 200 Hz and fluorescence recorded from pan-neuronally expressed calcium (GCaMP6 <ref type="bibr" target="#b9">[10]</ref>) or voltage (ArcLight <ref type="bibr" target="#b10">[11]</ref>) probes.</s><s>We present rich data sets of near-whole brain activity and behavior as well as two analysis methods.</s><s>First, we map activity for specific stimuli and behaviors with short time-scales; for example, we compared activity when the fly rested, walked, and groomed.</s><s>Second, we apply a computational method (principal component analysis [PCA], followed by independent component analysis <ref type="bibr">[ICA]</ref>) to extract components representing spatially distinct sources of activity <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b12">13]</ref>.</s><s>We show that these sources correspond to subneuropil areas or processes from small populations of neurons that are anatomically well characterized, and we compare their responses to flashes of light or odor puffs with those in literature reports of experiments done on restricted regions.</s><s>Additionally, by using this method, we discovered neuronal projections whose activity correlated with turning as well as previously unreported patterns of spontaneous voltage activity.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Imaging the near-whole brain of behaving adult Drosophila</head><p><s>We first fixed a fly's head by rotating it 45 degrees or more around the transversal axis to decrease the depth of the volume imaged and to improve access to the brain.</s><s>We then exposed the brain while keeping the eyes, antennae, and legs intact and clean (see Methods section and S1 Fig) .</s><s>A ball was placed under the fly's tarsi so that it could typically rest, walk, and groom.</s><s>We imaged the fly brain's fluorescence using light field microscopy.</s><s>As shown in Fig 1A , we modified an upright epifluorescence microscope (equipped with a 20x 1.0 numerical aperture [NA] or a 40x 0.8 NA objective) by adding a microlens array at the image plane of the objective and placing the camera sensor at the image plane of the microlens array through relay lenses.</s><s>We recorded light field images continuously with a high-speed scientific complementary metal-oxide-semiconductor (sCMOS) camera up to 100 Hz for GCaMP6 and 200 Hz for Arc-Light (using the middle of the camera sensor).</s></p><p><s>We then reconstructed the volumes-typically 600 x 300 x 200 μm 3 to encompass the whole brain (Fig 1B )-using the volumetric deconvolution method for light field microscopy described in <ref type="bibr" target="#b2">[3]</ref>.</s><s>Note that unlike other microscopy techniques that are based on scanning (e.g., two-photon, confocal, or light-sheet microscopy), excitation light illuminates the entire brain continuously, and all the photons emitted in the numerical aperture of the objective are used to reconstruct the image (minus an approximately 40% loss through the objective, tube lens, microlens array, and relay lenses).</s><s>This maximizes the number of photons collected (and thus information about brain activity) per units of volume and time.</s></p><p><s>We used 2-μm fluorescent beads embedded in a gel to measure the point spread function and found that it widens with distance from the focal plane, varying from 3.  We also examined near-whole brain activity in the absence of external stimuli (i.e., spontaneous behavior), which consisted of walking, grooming, and resting (see S3-S7 Movies).</s><s>Most strikingly, the brain was more active on a global scale when the fly walked than when it rested or groomed (see S3 Movie, Fig 2A, and S5A, S8, and S9 Figs), and global activity (average ΔF/ F) was correlated with walking (R 2 = 0.37 +/-0.19,</s><s>average +/-STD, N = 6).</s><s>To verify that this response was linked to walking rather than the optic flow from the ball, we repeated the experiment with a visually impaired norpA mutant fly and again found a global increase during walking in comparison with rest (see S4 Movie and S5A Fig) .</s><s>In contrast, we found only local activation in the region of the saddle, wedge, and antennal mechanosensory and motor center (in four out of five flies) during grooming.</s><s>To investigate whether the global increase during walking was coming exclusively from neurons expressing one type of neurotransmitter or neuromodulator, we performed the same experiments with more restricted lines.</s><s>We also found a global increase when GCaMP6f was expressed in cholinergic neurons, which form the majority of excitatory neurons in the fly brain (R 2   Near-whole brain activity maps for various conditions.</s><s>A) Comparison of fluorescence intensity when the fly rests and when it is active (either walking or grooming).</s><s>The pixel value is green if the fluorescence is higher during the behavior and magenta if the fluorescence is higher during rest.</s><s>Arrows point to regions (in the antennal mechanosensory and motor center) corresponding to the higher average change between groom and rest among flies (see also S9 Fig) .</s><s>The pan-neuronal driver was nsyb-Gal4 and the dopamine driver was TH-Gal4.</s><s>Both flies expressed GCaMP6f.</s><s>Note that there is an angle (39 degrees for the pan-neuronal experiment and 20 degrees for the dopamine experiment) between the z-axis and the anterior-posterior axis.</s><s>B) Comparison of fluorescence intensity when the fly turns left or right.</s><s>The arrows point to regions (in the posterior slope, gnathal ganglia, and superior lateral protocerebrum or anterior tubercule) symmetrical and reproducible from fly to fly.</s><s>The fly's genotype was nsyb-Gal4 and UAS-GCaMP6f.</s><s>Note that there is a 40 degree angle between the z-axis and the anterior-posterior axis.</s><s>The pixel value is green if the fluorescence is higher during turning left, magenta if the fluorescence is higher during turning right.</s><s>C) Comparison of fluorescence increase during the response to stimuli for odor (magenta) and light (green).</s><s>The arrows point to the posterior slope (bottom panel) and the optical glomeruli (middle panel).</s><s>The fly's genotype was Cha-Gal4, GMR57C10-Gal4, and UAS-GCaMP6f.</s><s>Note that the brain is tilted 19 degrees along the lateral axis.</s><s>See also S4-S9 Figs.</s><s>Data can be found on CNCRS.org</s><s>(http://dx.doi.org/10.6080/</s><s>K01J97ZN).</s><s>CNCRS, Collaborative Research in Computational Neuroscience; nsyb-Gal4, nSynaptobrevin-Gal4; TH-Gal4, tyrosine hydroxylase-Gal4; Cha-Gal4, choline acetyltransferase-Gal4. https://doi.org/10.1371/journal.pbio.2006732.g002 of activity tightly locked with walking.</s><s>We also found surprisingly little activity during resting or grooming, apart from the mushroom body area.</s><s>This increase was observed in flies expressing GCaMP6f in both dopamine and serotonin neurons (TH-Gal4 and DDC-Gal4), but in that case, we also observed more background activity unrelated to behavior (S7 Movie and S5A Fig).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Global activity during response to stimuli and behavior</head><p><s>We investigated the difference in activity when the fly turned left compared to right (Fig 2B and S5B Fig) .</s><s>Although there was a strong variability from fly to fly that will need to be characterized in future studies, we observed antisymmetric patterns in the ventral areas and in the lateral superior protocerebrum (as indicated by the arrows) in all flies.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Source-extraction algorithm reveals functional maps at the subneuropil level</head><p><s>We used a combination of statistical methods to extract maps and time series of spatially distinct sources of activity (see Methods section for details).</s><s>Briefly, we first applied PCA (using singular value decomposition) to find maps of correlated activity and to reduce dimensionality.</s><s>We then applied ICA to unmix the PCA maps and find sparse functional regions (see analysis pipeline in S4 Fig) .</s><s>Fig <ref type="figure" target="#fig_5">3</ref> shows z-stacks containing all components (z-score &gt; 3) from pan-neuronal GCaMP6 recordings (see also additional flies in S10 and S11 Figs).</s><s>We also performed the same analysis with flies that pan-neuronally expressed activity-independent green fluorescent protein (GFP) to help identify artifact-related components-movement, aliasing, or noise, as shown in S12 Fig.</s></p><p><s>Even though PCA and ICA are mathematical algorithms that make minimal assumptions about the brain, most functional maps matched well with anatomical structures.</s><s>We aligned the brain with an anatomical template <ref type="bibr" target="#b13">[14]</ref> using landmarks registration and automatically sorted the components by brain region (Fig <ref type="figure" target="#fig_6">4A</ref>).</s><s>In Fig <ref type="figure" target="#fig_6">4B</ref>, the left column presents the component's thresholded maps, whereas the right column presents central complex structures or neuronal processes from <ref type="bibr" target="#b14">[15]</ref>, assembled using Virtual Fly Brain <ref type="bibr" target="#b15">[16]</ref>.</s><s>Several subneuropil regions are recognizable from the shape of the maps (e.g., protocerebral bridge glomeruli, ellipsoid body rings, and fan-shaped body layers).</s></p><p><s>For some components, the combination of subneuropil regions present in the map allowed to assign it to a specific major neuron type (see Fig 4B, bottom part).</s><s>For example, z-scored maps with signals spanning both the alpha and the beta mushroom body lobes likely resulted from activity in alpha/beta Kenyon cell axons, maps with signals spanning both the alpha' and the beta' mushroom body lobes likely resulted from activity in alpha'/beta' Kenyon cell axons, whereas maps with signal in the gamma lobe likely resulted from activity in the gamma Kenyon cell axons.</s><s>Likewise, z-scored maps containing signals in one antennal lobe subneuropil region (with a glomerulus-like shape), in the calyx and in the lateral horn likely resulted from the activity of antennal lobe projection neurons.</s><s>Maps spanning a medulla column and a lobular layer were likely from transmedullar neurons.</s><s>Finally, the maps of the components matching the protocerebral bridge glomeruli also often contained radial parts of the ellipsoid body (e.g., Fig <ref type="figure" target="#fig_6">4B</ref>, left column, top panel), suggesting that these components might originate from tile or wedge neurons <ref type="bibr" target="#b17">[18,</ref><ref type="bibr" target="#b18">19]</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Extracted sources' time series retrieve known physiology in response to stimuli and reveal projections involved in turning left or right during walking</head><p><s>The component's time series (resulting from PCA/ICA or from region of interest [ROI] ΔF/F averages; S13 and S15-S17 Figs) were consistent with previous reports of activity from the  could be inaccurate in the case of maps containing small parts of large regions and noise in very small regions (i.e., the bulb or gall).</s><s>Data can be found on CNCRS.org</s><s>(http://dx.doi.org/10.6080/K01J97ZN).</s><s>B) Comparison between functional and anatomical maps.</s><s>Left: functional maps from a pan-neuronal (GMR57C10-Gal4 and Cha-Gal4) GCaMP6f experiment.</s><s>Right: corresponding anatomical structures.</s><s>Maps were constructed using the Virtual Fly Brain database.</s><s>Three bottom images show neurons from major neuron types (three different Kenyon cell types, antennal lobe projection neuron, and transmedullar neurons) matching the functional maps.</s><s>The brain for the functional data is brain structures identified in the components' maps.</s><s>Most of the components responding to the onset and/or offset of light were in the optic lobe <ref type="bibr" target="#b19">[20]</ref> (S14 and S15 Figs).</s><s>In contrast, components responding to puffs of odors were mostly in the antennal lobe, the lateral horn, and the mushroom body <ref type="bibr" target="#b20">[21]</ref> (S14 and S16 Figs).</s><s>Components likely representing the activity of antennal projection neurons were spontaneously active in the absence of odor, but some of them became more active when the odor was presented (S14C and S16A Figs), consistent with previous reports <ref type="bibr" target="#b21">[22]</ref>.</s></p><p><s>In addition, regions in the lateral protocerebrum, the posterior slope, the antennal mechanosensory and motor center (AMMC), the saddle, and the protocerebral bridge were strongly active when the fly walked (S17 Fig).</s><s>This is consistent with previous anatomical studies; the projection from the descending neurons are most dense in the posterior slope, ventrolateral protocerebrum, and the AMMC <ref type="bibr" target="#b22">[23]</ref>.</s><s>Some of these walking-related components were strongly correlated with turning left or right (see red components).</s><s>Their distribution in the brain as well as strong structural characteristics (e.g., tracks forming an inverted "V" shape, fine dorsal claw-like neurites) suggest that they were generated by the same neurons across flies.</s><s>Furthermore, the V-shaped components always preceded the other component correlated with turning toward the same direction-the peak of the cross-correlation function was at 68 ms for GCaMP6F (SEM = 11 ms, N = 6 pairs of components).</s><s>As shown in S18 Fig, we found similar components when using a Cha-Gal4 driver instead of a pan-neuronal driver (average cross-correlation peak time was 80 ms), which suggests that those neurons are cholinergic.</s><s>Note that these components are mostly present in the posterior slope, as are neurons involved in turning during flight <ref type="bibr" target="#b23">[24]</ref>.</s><s><ref type="bibr" target="#b15">[16]</ref>.</s><s>Some maps had unequivocal anatomical counterparts.</s><s>For example, the first three maps matched well with the anatomy of processes from dopaminergic PPL1 neurons innervating mushroom body vertical lobe compartments, each component thus corresponding to only one or two cells per hemisphere <ref type="bibr" target="#b24">[25]</ref>.</s><s>number of components per brain region was typically smaller than it was for GCaMP6-we extracted an average 174 (STD = 68, N = 12) activity-related components (i.e., not noise or movement artifacts as detailed in the Methods section) from GCaMP6 recordings and 54 (STD = 14, N = 6) from ArcLight recordings, probably because of the probe's lower signal-to-noise ratio.</s><s>However, ArcLight components were similar to those found with GCaMP6: in the optic lobe, some components responded to the onset and/or offset of light, with various degrees of habituation.</s><s>In the posterior slope, we found peaks at the onsets of light.</s><s>We also recorded large peaks of activity in the ventrolateral protocerebrum.</s><s>Finally, we found components in the antennal lobe, lateral horn, and mushroom body responding to odor (S23 Fig).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Restricted drivers' functional maps match single neuron's anatomy</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Components from pan-neuronal voltage recordings</head><p><s>One clear difference between voltage and calcium was the presence in the ArcLight data of slow, spontaneous switches between the up and down levels of activity for components in a nodulus and contralateral part of the protocerebral bridge (Fig <ref type="figure" target="#fig_13">8</ref>).</s><s>We did not observe those components in controls in which GFP was expressed pan-neuronally.</s><s>Furthermore, although some movement artifacts could generate slow fluctuations in those regions, we only observed asynchronous steps when using ArcLight (see difference between the two sides in S24 Fig) .</s><s>Other patterns of spontaneous activity included oscillations in the antennal lobe and lateral horn and fast, ongoing activity in the ellipsoid body and the protocerebral bridge (see S25 Fig for an experiment in which different time scales of spontaneous activity were detected).</s><s>More work is necessary to establish the conditions and consistency of these patterns of activity.</s></p><p><s>Note that time series from single trials had high enough signal-to-noise ratios to detect graded potentials (e.g., components in the optic lobe in response to the onset and/or offset of flashes of light) and spike-like signals, possibly containing several action potentials (e.g., spontaneous activity and odor response for components in the antennal lobe, mushroom body, and lateral horn [</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Comparison of light field imaging to other techniques for adult Drosophila large-scale imaging</head><p><s>Recent studies have shown that large-scale brain imaging in flies is possible with other imaging methods.</s><s>Mann and colleagues <ref type="bibr" target="#b25">[26]</ref> used a high-speed, two-photon microscope to image the brain with higher resolution but at a slower rate (1 Hz) in the absence of stimuli or behavior.</s><s>We applied our analysis pipeline to these data to compare it to the results from the light field microscope (see S27 Fig) .</s><s>Out of a total of 23 activity-related components (compared to an average of 174 for our light field recordings, as described above), eight could be interpreted as cell bodies that could not be extracted at this resolution from the light field data.</s><s>Other components-components covering the antennal lobe, mushroom body, and lateral horn; components in the pars intercerebralis; and components in the antennal lobe glomerulus, calyx, and lateral horn (likely representing activity from antennal lobe projections neurons)-had similar spatial distribution as components extracted from the light field data.</s></p><p><s>Faster techniques have also been used to image large-scale activity in flies: <ref type="bibr" target="#b26">[27]</ref> used a Bessel beam to image 25% of the brain at 3.6 Hz, and <ref type="bibr" target="#b27">[28]</ref></s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>In this article, we presented a method to record fast, near-whole brain activity in behaving flies, offered unique data sets produced by the method, and provided two examples of analysis pipelines that highlight this technique's advantages.</s></p><p><s>First, we showed that the technique helps characterize global state changes related to response to stimuli and behavior.</s><s>In particular, when looking at global activity in response to stimuli from different modalities, we obtained activity increases in brain regions known to be involved in processing these stimuli.</s><s>Furthermore, we found a global pattern of activation when the fly walked in comparison to when it rested.</s><s>In contrast, the activation was highly localized (in the areas of the AMMC, wedge, and saddle) when it groomed.</s><s>This is consistent with a recent large-scale optogenetic study that reported that the manipulation of many regions throughout the brain altered walking but only a small region-the saddle-altered grooming <ref type="bibr" target="#b28">[29]</ref>.</s><s>The global activation during walking could be mediated by neuromodulators, and we indeed found that most dopamine neurons had low activity during resting or grooming but that many of these neurons, distributed over the whole brain, were strongly active during walking.</s><s>Dopamine activity could affect processing of underlying circuits (e.g., changing gain <ref type="bibr" target="#b29">[30]</ref>) but could also be important for operant learning.</s></p><p><s>Second, we used a blind source-separation algorithm to extract spatially distinct sources of activity.</s><s>These sources matched anatomical subneuropil regions and thus helped identify neuron classes and sometimes a specific neuron type involved in the processing of specific stimuli or behavior but also helped detect areas that were spontaneously active in the absence of changing stimuli and behavior.</s><s>For example, we extracted activity in a nodulus and opposite side of the protocerebral bridge that switched between up and down states of activity.</s><s>The maps had some intensity in the lowest layers of the fan-shaped body and thus were similar to the pattern of expression of genetic drivers known to be involved in the fly's handedness (PB-FB-No neurons from <ref type="bibr" target="#b30">[31]</ref>) but different from neurons directly involved in turning during walk (PB-EB-No neurons from <ref type="bibr" target="#b31">[32]</ref>).</s><s>The time series resembled the flip flop pattern that was measured in the moth with intracellular recordings from neurons in the lateral accessory lobe <ref type="bibr" target="#b32">[33]</ref>, which is directly connected with the protocerebral bridge <ref type="bibr" target="#b17">[18]</ref>.</s><s>Note that the ability to record membrane voltage signals in the actual neuronal processes <ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref> performing the computation is an advantage over patch clamp experiments, which can only be recorded from the cell body at the periphery of the brain in Drosophila and thus may not be representative of the activity in the neuronal processes <ref type="bibr" target="#b36">[37]</ref>.</s></p><p><s>The data sets (available on CNCRS.org) of near-whole brain imaging and behavior contain additional, unexplored patterns of activity.</s><s>More analysis and other techniques will be necessary to extract all meaningful information.</s></p><p><s>The current method has several limitations that would benefit from being addressed in future work.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Temporal resolution</head><p><s>The method permits imaging of the near-whole brain with a frame rate of 200 Hz; however, the time response of the probes we used in this study is slower (rise time to spike peak of approximately 0.15 seconds for GCaMP6f and approximately 0.1 seconds for ArcLight in our hands).</s><s>Fast activity can still be detected, but the probe's response imposes a temporal filter on the underlying activity.</s><s>The ability to record high signal-to-noise transients with such a high frame rate suggests that the light field microscope will be suited to measure activity from faster probes.</s><s>This will help bridge the gap between the current fast local methods using microelectrodes (e.g., recording spikes and fast oscillations) and slower large-scale methods (e.g., calcium imaging).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Effect of the excitation light</head><p><s>The excitation light excites the eye photoreceptors, thus affecting the fly's ability to see as well as potentially changing brain activity states and behavior.</s><s>The fly's blue light receptors could be genetically removed and potentially replaced by another receptor, such as one for UV light, if a future researcher wanted to study brain responses to visual inputs without the strong background activation from the excitation light.</s><s>For applications that do not necessitate visual inputs, blind fly mutants (e.g., a norpA, cryptochrome mutant) could be used to affect all light detection in the brain.</s><s>Finally, blue-light excitation probes could be replaced with probes with longer excitation wavelengths.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Effect of the preparation on the state of the fly</head><p><s>Dissection could have affected the fly's state.</s><s>Removing the cuticle on the back of the brain could affect brain activity by activating nociceptor neurons (e.g., those in the bristles).</s><s>Dissection could also have affected the fly's global health state.</s><s>Indeed, we found that flies expressing ArcLight pan-neuronally were usually less active after dissection than they were before, making it difficult to obtain reliable behaviors with this genotype.</s><s>Finding the optimal recovery time after dissection could help minimize these effects.</s><s>Imaging the brain of nondissected flies genetically modified to have a cuticle with low absorbance (e.g., yellow flies) could also help characterize the effects of the dissection.</s></p><p><s>Although the fly could still move its legs, abdomen, and (to a limited extent) its wings, the immobilization of its head, proboscis, and thorax could have affected brain activity and behavior by imposing unnatural constraints.</s><s>Furthermore, the fly's head was tilted more than 45 degrees in comparison to its natural position in order to better align the thinner part of the brain to the z-axis.</s><s>This helped minimize the loss of resolution with depth.</s><s>We observed a seemingly natural behavior in this configuration (with alternations between grooming and walking as free flies do); however, we sometimes found the fly displaying unnatural behaviors, such as pushing the ball away (see behavior and corresponding brain activity in S5 Movie) or touching the holder with its legs.</s></p><p><s>Another problem resulting from immobilizing the fly's head was the lack of coupling between the stimuli position and the fly's movement that would normally occur in a natural setting.</s><s>This problem can be solved by using a virtual reality setup in a closed loop configuration (e.g., using the movements of the ball to change the stimuli position).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data production rate</head><p><s>The whole procedure made it impractical to obtain data from a large number of flies.</s><s>Even with practice, fly preparation remained challenging to the extent that it was difficult to obtain more than one good preparation per day.</s><s>Another factor limiting data production-but that should be less and less of a problem as computing cost continues to drop-was the reconstruction step, which takes approximately 10 hours on a cluster of 16 graphical processing units (GPUs) for a data set of 60 GB (which corresponds to approximately 1 minute of recording at 200 Hz).</s><s>This method is thus suited for studying complex spatiotemporal patterns and identifying neurons and brain structures in a few trials and flies but not for larger studies, such as genetic screens.</s><s>Detecting sources from the raw light field data could help reduce the cost of reconstruction.</s><s>For example, anatomical maps could be transformed back to a light field image and used as seeds for the source extraction algorithm <ref type="bibr" target="#b7">[8]</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Detection of neuropil regions and neurons</head><p><s>Although we can observe the whole central brain (though the access to the gnathal ganglia depended on the quality of the preparation) as well as a large part of the optic lobes (typically the lobula and most of the medulla), we cannot observe all of the fly neurons.</s><s>In particular, the ventral cord in the fly thorax is not accessible with the current setup.</s><s>Imaging the ventral nerve cord in addition to the brain might be feasible with an objective with a larger field of view and the appropriate dissection preparation <ref type="bibr" target="#b37">[38]</ref>.</s></p><p><s>As the brain contains approximately 10 5 neurons, and we record, at most, several hundred activity-related components, we are far from obtaining recordings from all neurons.</s><s>This could be due to various reasons.</s><s>First, some neurons might be silent and thus undetectable by our algorithm, which is based on temporal changes.</s><s>Second, the signal-to-noise ratio might be insufficient for PCA and ICA to detect the activity in some processes.</s><s>To increase the signalto-noise ratio and obtain more components, future researchers could use a more sensitive probe, record longer time series, or use faster probes to obtain more temporal information.</s><s>Third, several neurons might contribute to one component.</s><s>Indeed, neurites with similar presynaptic inputs and thus similar activity patterns will likely have similar geometry, making them indistinguishable to the algorithm.</s><s>Additionally, the resolution of the microscope is, in general, larger than individual somata and neurites.</s><s>In particular, the low-axial resolution far from the focal plane (which could be improved with improved light field techniques <ref type="bibr" target="#b8">[9]</ref>) makes it difficult to sort out the activity from regions that are close to each other, such as the antennal lobe and the lateral accessory lobe or the protocerebral bridge and the antler.</s></p><p><s>However close to the focal plane, the functional maps were the same scale as functional maps obtained with higher-resolution microscopy techniques (e.g., in the fan-shaped body <ref type="bibr" target="#b16">[17]</ref> and the lateral horn <ref type="bibr" target="#b38">[39]</ref>) or regions known to be functional units (e.g., antennal lobe glomeruli and ellipsoid body wedges and tiles).</s><s>Using a second color and complementary drivers (e.g., drivers for excitatory versus inhibitory neurons or drivers for main neurotransmitters versus drivers for neuromodulatory neurons) could increase the number of components that can be detected.</s></p><p><s>The identification of anatomical structures could also be improved.</s><s>Currently, the registration of the light field data with the anatomy is done using landmark registration.</s><s>This method is imprecise in brain areas that lack clear landmarks, such as the ventral areas.</s><s>Concurrently imaging the brains using a different microscopy technique with higher resolution could help detect more landmarks or make it possible to use different registration techniques.</s><s>Another way to improve registration would be to use driver lines for specific regions expressing a fluorophore with another color (e.g., red fluorescent protein [RFP]).</s><s>Expressing activity probes with drivers for specific regions could also be used to verify the presence of components in those regions.</s><s>Automating the search for matches between components' maps and neurons in large databases such as Flycircuit or Virtual Fly Brain would help to get to the level of neurons rather than brain regions.</s></p><p><s>The maps obtained using PCA and ICA can have regions with both positive and negative values, but this study has ignored the negative parts of the maps.</s><s>More work is necessary to characterize the meaning of those negative values.</s><s>In particular, neurons underlying the positive part of the maps could be inhibiting the neurons underlying the negative part of the maps or vice versa.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Time series interpretation</head><p><s>The PCA/ICA algorithm used here helps to unmix neural activity from movement artifacts or from other overlapping processes as well as scattered activity coming from other parts of the brain (see S12, S13, S15-S17, and S21 Figs).</s><s>However, the interpretation of these time series is not straightforward, as there is no guarantee that the algorithm will extract the full neural activity from one source.</s><s>Furthermore, the imperfect spatial separation of the sources can lead to artifacts in the case of strong synchronous fluorescence changes in large parts of the brain.</s><s>For example, a negative signal can be present for components in the optic lobe after the odor is presented.</s><s>As this signal is not present when measuring fluorescence in the region of interest delimited by the z-scored maps (putting all pixel values below three times the standard deviation to zero) or when applying PCA and ICA in the region of the optic lobes only, it is likely due to an imperfect separation of the optic lobe components from the regions in the middle of the brain where fluorescence strongly changes in response to the odor.</s><s>Indeed, the maps for the optic lobe components have small negative values in the mushroom body and antennal lobe areas.</s><s>To recognize these artifacts, observing both the unmixed time series and the fluorescence of ROI is thus advisable, as done in S13 and S15-S17 Figs.</s><s>Using different algorithms might help prevent these artifacts.</s><s>For example, non-negative matrix factorization could better separate overlapping processes and avoid spurious negative values in the maps; however, in our hands, the components were less localized and thus more difficult to interpret than with PCA/ICA.</s></p><p><s>Movement correction with 3dvolreg can be imperfect and even can, in some cases, introduce additional artifacts when strong fluorescence changes are present in large parts of the brain.</s><s>Furthermore, the algorithm uses rigid registration and does not correct for local deformations.</s><s>Although we partly subtract these artifacts at the PCA and ICA stages of the analysis, they can complicate the interpretation of some of the time series.</s><s>Better movement-correction methods with a limited sensitivity to fluorescence changes (such as sparse and low-rank decomposition <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b39">40]</ref>) and nonrigid registration <ref type="bibr" target="#b40">[41]</ref><ref type="bibr" target="#b41">[42]</ref><ref type="bibr" target="#b42">[43]</ref> as well as using an activity-independent fluorophore in another color channel as a reference would improve the reliability of the time series.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusion</head><p><s>Despite these limitations, the methods presented in this study can be used as a functional screen to identify brain regions and neurons involved in processing any stimulus or behavior that a fly can perform under the microscope.</s><s>Furthermore, complementary to screens using activation or silencing of specific neurons, the voxels', regions', and components' time series give insight into the dynamics of the network.</s><s>For example, the widespread activity patterns observed here during walking suggest that coordination between different brain areas is involved.</s><s>This is just the first step in exploring large-scale brain states, as this technique opens up a new window into the neural mechanisms underlying fly behavior.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fly rearing and preparation for imaging</head><p><s>We used the GAL4/UAS system to express activity probes in neurons.</s><s>The fly genotype was as described in the figure legends, and fly stocks were obtained from the Drosophila Bloomington Stock Center, Bloomington, Indiana.</s><s>Flies were reared at 25 ˚C with a 24 hour light/dark cycle on brown food (containing cornmeal, molasses, yeast, soy flour, agar, proprionate, and nipogen), which had lower autofluorescence than yellow food (such as the one from the Bloomington Stock Center, which contains yellow cornmeal, malt extract, corn syrup, yeast, soy flour, agar, and proprionic acid).</s></p><p><s>Fly holders were 3D printed using S1 File.</s><s>A piece of tape (0.75 inches wide) was shaped as a 1-mm high step using a 1-mm thick glass slide, and an aperture, as is shown in S1 Fig ( <ref type="figure" target="#fig_0">1 mm</ref> wide for the body and 0.6 mm wide for the head), was made by hand using a sharpened scalpel or a thin lancet (36 gauge).</s><s>The tape was then stuck onto the chamber, aligning the opening of the tape to the center of the holder.</s><s>We added nail polish at the contact between the tape and the holder to avoid leaks.</s><s>We also added black nail polish to the tape to block the excitation light from hitting the fly's eyes.</s></p><p><s>Note that although the black painted tape protected the flies' eyes from direct illumination by the microscope's excitation light, the light scattered by the brain can still activate the eye's receptors for blue light, as the transient activity in the first few seconds of each experiment demonstrates (see, for example, the optic lobe trace in S6 Fig) .</s><s>To verify that these receptors were not saturated, we presented flashes of 470-nm blue light as external stimuli (see S29 Fig) .</s><s>Although the stimuli excited fluorophores nonspecifically, PCA and ICA could still extract neuronal calcium responses in the optic lobes and the protocerebral bridge, thus demonstrating that the fly could still perceive external blue stimuli.</s></p><p><s>Besides activation at the onset of excitation light, we observed two types of activity patterns, likely due to the excitation light (in particular when the ommatidia were not completely protected by the black tape) but that could also be intrinsic activity (perhaps important for development).</s><s>First, we observed sudden discharges in medulla columns projecting to lobula layers (for example, see <ref type="bibr">Fig 7,</ref><ref type="bibr"></ref> second and third traces).</s><s>Second, in some calcium recordings, we observed large oscillating waves propagating onto the medulla and along the lobula.</s></p><p><s>At the start of an experiment, flies were transferred to an empty glass vial and left on ice for approximately 1 minute.</s><s>The holder was put in contact with wet tissues on ice under a stereomicroscope.</s><s>A fly from the cold vial was pushed into the holder's opening so that the posterior part of the head was in contact with the tape.</s><s>UV-curing glue was added at the junction between the tape and the head between the eyes and cured for 5 seconds using a 365-nm Thorlabs LED light at 20% of power for 5 seconds.</s><s>A piece of thin copper wire (wire magnet, 40 gauge) or a piece of tape was placed above the legs to push them away from the proboscis (see S1 Fig) .</s><s>UV glue was then added at the rim of the eye and all around the proboscis (which was pushed into the head), without touching the antenna or the legs, and was cured for 5 seconds.</s><s>Uncured glue was carefully removed with tissues.</s><s>A small amount of vacuum grease was placed around the neck behind the proboscis to avoid later leaks.</s><s>The wire or tape was then removed, and a small piece of tissue paper or a small polystyrene foam ball was given to the fly to walk on to monitor its health during the following steps.</s></p><p><s>The holder was turned over, and the fly's thorax was pushed down to clear the way to the back of the brain.</s><s>Small pieces of tape were added onto any remaining holes around the fly's body, and UV glue was added on top of them and cured around the thorax to fix it in place.</s><s>Vacuum grease was then pushed toward the neck with a tissue.</s><s>Saline (108 mM NaCl, 5 mM KCl, 3 mM CaCl2,4 mM MgCl2, 4 mM NaHCO3, 1 mM NaH2PO4, 5 mM trehalose, 10mM sucrose, 5 mM HEPES adjusted to pH 7.35 +/-0.05 with NaOH, prepared weekly) was added and left for a few minutes to make sure that there were no leaks.</s></p><p><s>Fresh saline was added, and dissection was started with forceps that had been previously sharpened as finely as possible by hand.</s><s>We first removed the cuticle in the middle of the back of the head, being careful to cut pieces before pulling them out.</s><s>This exposed the hole in the middle of the brain where muscle 16 resides.</s><s>The pulsatile piece was pulled out.</s><s>Fresh saline was added, and the remainder of the cuticle was removed piece by piece.</s><s>The brain was washed with saline several times to remove fat bodies.</s><s>The air sacs were then removed very carefully as to try not to displace the brain.</s><s>After a new wash with saline, the fly was ready for imaging.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Imaging setup</head><p><s>The microscope was modified from an upright Olympus BX51W with a 20x NA 1.0 XLUM-PlanFL or a 40x 0.8 NA LUMPLFLN objective (from Olympus).</s><s>A microlens array with pitch = 125 μm and f/10 to match the 20x objective or f/25 to match the 40x objective <ref type="bibr" target="#b2">[3]</ref> (from RPC Photonics) was positioned at the image plane using a custom-made holder (with some parts from Bioimaging Solutions, Inc.).</s><s>Two relay lenses (50 mm f/1.4 NIKKOR-S Auto from Nikon) projected the image onto the sensor of a scientific CMOS camera (Hamamatsu ORCA-Flash 4.0).</s><s>Note that when using half of the camera frame to attain 200 Hz for voltage recordings, the brain fit within the field of view, but rays coming from points far from the focal plane with a large angle were missed, slightly impairing reconstruction.</s><s>A 490 nm LED (pE100 CoolLED) at approximately 10% of its full power was used for excitation.</s><s>We used a 482/25 bandpass filter, a 495-nm dichroic beam splitter, and a 520/35 bandpass emission filter (BrightLine, Semrock) for the fluorescence.</s><s>We measured the power at the sample with a power meter and found that it was up to 1 mW for the 40x objective and 4 mW for the 20x objective.</s><s>Photobleaching led to a decrease in intensity after 30 seconds of 13% (N = 12, SD = 9%) for GCaMP6 and 20% (N = 6, SD = 13%) for ArcLight.</s><s>Note that the full setup cost approximately US$50,000 (US$65,000 with the 64 Gb of RAM acquisition computer and the 256 Gb of RAM analysis computers), which was substantially cheaper than other cutting-edge microscopy techniques such as two-photon microscopes.</s></p><p><s>The resolution as a function of depth (see S2 The lateral field of view for the 20x objective was 624 x 636 square microns (312 x 309 for the 40x objective), as was determined using a mire.</s></p><p><s>The fly holder was positioned on a U-shaped stage above an air-supported ball so that the fly could walk (see <ref type="bibr">Fig 1)</ref>.</s><s>The ball was either polyurethane foam (10 mm in diameter), Styrofoam, or hollow HDPE (one-fourth inch).</s><s>We prepared a cup matching the ball diameter and with a 1.2-mm hole using self-curing rubber (from Sugru) or machining aluminum.</s><s>A bottle of compressed air provided a steady flow in a pipeline consisting of a tube and a pipette tip connected to the cup hole.</s><s>A micromanipulator (from Narishige) positioned the ball under the fly's legs.</s><s>For some flies, we instead provided a small Styrofoam ball that the fly could hold.</s><s>The fly and the ball were illuminated by a row of IR LEDs (940 nm) in front of the fly and were observed at 100 Hz using a small camera (FFMV-03M2M from Point Grey).</s></p><p><s>To better align the behavior with the fluorescence in some experiments, the camera for monitoring the behavior and the fluorescence were synchronized by using the output of the Flash4.0</s><s>camera to trigger the acquisition from the behavior camera.</s><s>When imaging fluorescence at 200 Hz, one triggering signal out of two was ignored by the slower behavior camera that recorded at 100 Hz.</s><s>We recorded the fluorescence images with HCImage (from Hamamatsu) and streamed them to RAM on a 64 Gb of RAM computer, which allowed us to record approximately one continuous minute.</s></p><p><s>For the odor stimulus, air was delivered by a pump through an electrically controlled valve (12 Vdc normally closed solenoid valve), bubbled in 50% ethanol or 50% apple cider vinegar in a vial, and blown toward the fly through an inverted 1-mL pipette tip.</s><s>The valve circuit was controlled by a relay connected to a LabJack U3-HV through a LJTick-RelayDriver (from Lab-Jack).</s><s>For visual stimulation, the excitation light and a 365 nm or 470 nm LED were also triggered by the LabJack.</s><s>The LabJack was controlled using MATLAB programs (see https:// github.com/sophie63/FlyLFM</s><s>for the code).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Analysis</head><p><s>We reconstructed the light field images using a program in Python, as described in <ref type="bibr" target="#b2">[3]</ref>.</s><s>Briefly, a point spread function library corresponding to the specific setup was first generated; we typically chose to reconstruct a stack of 40 layers (separated by 6 microns), with a lateral sampling distance of either 3 or 6 microns.</s><s>The voltage probe's low signal-to-noise ratio made it more difficult to detect signals with a finer sampling, so we typically reconstructed the voltage data with a lateral sampling distance of 6 microns and the calcium data with a lateral sampling of 3 microns.</s><s>We reconstructed the images using 3D deconvolution on a cluster of GPUs (generously provided by the Qualcomm Institute at UCSD).</s><s>Note that reconstruction using cloud computing (AWS) would cost approximately US$0.003 dollars per volume.</s><s>A data set of 10,000 time steps required approximately 8 hours to reconstruct on a cluster of 15 GPUs.</s></p><p><s>We assembled the images in a Nifti file using a python routine (Tiff2niiV2 in https://github.</s><s>com/sophie63/FlyLFM), inspected and cropped them in FIJI <ref type="bibr" target="#b43">[44]</ref>, and often discarded the first 5 seconds because the strong activity in response to the excitation light made it difficult to correct for movement and photobleaching.</s><s>The 3D image registration function 3dvolreg <ref type="bibr" target="#b44">[45]</ref> from AFNI was then used to correct for rigid movements.</s><s>We removed the background fluorescence and the decrease in intensity from photobleaching by subtracting a signal smoothed using a box average over 15 to 30 seconds, depending on the severity of the bleaching and the length of the recording.</s><s>The time series were then multiplied by -1 for ArcLight data.</s><s>For denoising, we found that a Kalman filter (from https://www.mathworks.com/matlabcentral/</s><s>fileexchange/26334-kalman-filter-for-noisy-movies) with a gain of 0.5 was better than a median filter over 3 points, and we used this for the data in this paper.</s><s>We then applied SVD to subtract components that were most clearly related to movement; their maps contained shadows around areas with different background intensities as shown in S4 Fig.</s><s>For some flies, different conditions corresponded to different recordings, which we concatenated in time after preprocessing.</s><s>The reconstructed data as well as the data after preprocessing is available on the CRCNS website (https://crcns.org/NWB/Data_sets).</s></p><p><s>For early data sets (before direct synchronization of the cameras), the fluorescence and the behavior were aligned using the onset and offset of the excitation light.</s><s>The small discrepancy (approximately 30 ms per minute) between the total time given by the camera for the fluorescence and the camera for the behavior was corrected linearly.</s><s>The fluorescence data was then interpolated to match the behavior data using the MATLAB function Interpolate2vid.</s></p><p><s>We manually analyzed the behavior (noting the times of the behaviors or pressing different keyboard keys when we recognized different behavior using the MATLAB GUI Video_Annotate in https://github.com/sophie63/FlyLFM).</s><s>We also characterized the fly's walk by tracking the movements of the ball using FIJI's optic flow plugin (Gaussian Window MSE).</s></p><p><s>Maps comparing the activity during rest and walking, resting and grooming, turning left and turning right, and 1 second after stimulus presentation compared to 1 second before were obtained by simply averaging the time series in each voxel for the different conditions and subtracting these maps from one another.</s><s>The positive value was colored in magenta and the negative in green, thus showing which condition dominated in which voxel.</s></p><p><s>The average of the volume time series was aligned to an anatomical template (available from https://github.com/VirtualFlyBrain/DrosAdultBRAINdomains) in which the brain is segmented into regions according to the nomenclature described in <ref type="bibr" target="#b13">[14]</ref>.</s><s>The registration was performed using landmarks with ImageJ (as described in http://imagej.net/Name_</s><s>Landmarks_and_Register).</s><s>We marked several points in the protocerebral bridge, the tips of the mushroom body (between the alpha and alpha' lobes), the middle of the noduli, the lateral tip of the lateral triangles, the lateral tip of the lateral horns, the center of the ellipsoid boy, the center of the antennal lobes, and the bottom part of the trachea at the level of the noduli.</s><s>Although the landmarks were readily observable with the background fluorescence (see S3 Fig, for example), making a template superposing the components to the volume average helped to visually find the landmarks.</s></p><p><s>Dimensionality was then reduced by separating the volumes into slices of thickness corresponding to the point spread function height and averaging in z for each slice.</s><s>The 4D data sets were typically (x, y, z, t) = 200 x 100 x 10 x 10,000 at this stage.</s></p><p><s>For source extraction, we found that using melodic <ref type="bibr" target="#b11">[12]</ref> from the FSL package readily produced meaningful components.</s><s>However, as the code was running slowly on our large data sets, we adapted it in MATLAB to parallelize some steps.</s><s>A first step of SVD was used to remove the largest part of the components before calculating the pixel-wise temporal variance (without spatial filtering) that was used to normalize the data.</s><s>We then reapplied SVD and plotted the log of the singular value spectrum to automatically detect the shoulder at the point with a 45˚tangent.</s><s>We found that although the components with the smallest variance were noise, some activity-related components were still present after the shoulder point.</s><s>As such, choosing twice the number of components at the shoulder gave a good compromise between keeping activity and removing noise components.</s><s>ICA was then applied to the SVD spatial components with FastICA <ref type="bibr" target="#b45">[46]</ref> (see ICAalamelodic.m file from https://github.com/sophie63/</s><s>FlyLFM).</s><s>The sign was chosen so that the average of the positive side of the map was larger than the negative side.</s><s>The components were then automatically sorted by brain region; after registering the standard brain to the data, we averaged the components maps in anatomically defined regions <ref type="bibr" target="#b13">[14]</ref> using regions masks and chose the main region as the one with the highest average.</s><s>We removed components corresponding to movement or noise partly automatically (removing components present in more than five regions and containing more than 200 separate objects) and partly by hand (see example of typical artifactual components in S11 Fig) using a Jupyter notebook (the notebooks corresponding to the choices made for the figures in this paper can be found at https://github.com/sophie63/FlyLFM).</s></p><p><s>To obtain the time series from regions of interest, we first made masks using the PCA/ICA maps.</s><s>We calculated the standard deviation from the value in the map and set all voxels with values inferior to three times that standard deviation to zero.</s><s>We then used those masks to do a weighted average of the ΔF/F time series.</s></p><p><s>The time series for turning left or right were obtained by convolving the optic flow for the ball going left or right, with a kernel corresponding to the GCaMP6 impulse response.</s><s>These time series were then regressed with the components' time series, and we inspected the maps with the strongest regression coefficients.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Image manipulations</head><p><s>Fig 1B bar was added with ImageJ, and the 3D rendering was done in Icy <ref type="bibr" target="#b46">[47]</ref>, in which transparency and contrast were adjusted globally on the volume.</s><s>The component's maps were thresholded at 3x standard deviation, and only the positive part of the maps was displayed.</s><s>The image contrast was then globally adjusted in ImageJ, and the figures panels were assembled in Inkscape.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig 1 .</head><label>1</label><figDesc><div><p><s>Fig 1. Imaging the brain of adult behaving flies using light field microscopy.</s><s>A) Experimental setup.</s><s>The fly is head fixed, and its tarsi are touching a ball.</s><s>The light from the brain's fluorescence goes through the objective, the microscope tube lens, a microlens array, and relay lenses onto the sensor of a high-speed sCMOS camera.</s><s>Another camera in front of the fly records its behavior.</s><s>B) Example of a light field deconvolution (fly's genotype: nsyb-Gal4, UAS-ArcLight).</s><s>Top: 2D light field image acquired in 5 ms-one camera acquisition period-with a 20x NA 1.0 objective.</s><s>Bottom: anterior and posterior views (slightly tilted sideways) of the computationally reconstructed volume.</s><s>3D bar is 90 x 30 x 30 microns.</s><s>See also S1-S3 Figs.</s><s>NA, numerical aperture; nysb-Gal4, nSynaptobrevin-Gal4; sCMOS, scientific complementary metal-oxide-semiconductor. https://doi.org/10.1371/journal.pbio.2006732.g001</s></p></div></figDesc><graphic coords="3,200.01,68.88,311.98,556.04" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head></head><label></label><figDesc><div><p><s>5 to 12 μm laterally and from 6 to 35 μm axially for 20x 1.0 NA objective and varying from 2 to 7 μm laterally and from 4 to 22 μm axially for 40x 0.8 NA objective (S2 Fig and theoretical expression in [3]).</s><s>As shown in S3 Fig (presenting ArcLight's baseline fluorescence) and below, this resolution was sufficient to recognize neuropil structures and extract activity from subneuropil compartments.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head></head><label></label><figDesc><div><p><s>S1 and S2 Movies present maximum z projections of near-whole brain activity (after preprocessing as described in S4 Fig and the Methods section) when stimuli were presented to the fly.</s><s>Fig 2C and S5C Fig show maps of the response to stimuli.</s><s>We found strong increases in activity at the onset of puffs of odor and flashes of UV light in specific parts of the brain (see S5-S7 and S9 Figs), in accordance with previous reports in the literature: the strongest responses to light involved the optic lobes, optical glomeruli, and posterior slope, and the responses to odor involved the antennal lobe and most of the dorsal neuropils including the lateral horn, superior neuropils, and the mushroom body (S5C, S6, S7 and S9 Figs).</s><s>The global map of the response to stimuli was similar for calcium (GCaMP6) and voltage (ArcLight) activity (S5C and S9 Figs).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head></head><label></label><figDesc><div><p><s>= 0.49 for the correlation of average ΔF/F with walk) (S5 Movie and S5A Fig).</s><s>When GCaMP6f was expressed in dopamine neurons only (with TH-Gal4: S6 Movie, Fig 2A, and S5A Fig), we observed a strong large-scale increase</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig 2 .</head><label>2</label><figDesc><div><p><s>Fig 2.Near-whole brain activity maps for various conditions.</s><s>A) Comparison of fluorescence intensity when the fly rests and when it is active (either walking or grooming).</s><s>The pixel value is green if the fluorescence is higher during the behavior and magenta if the fluorescence is higher during rest.</s><s>Arrows point to regions (in the antennal mechanosensory and motor center) corresponding to the higher average change between groom and rest among flies (see also S9 Fig).The pan-neuronal driver was nsyb-Gal4 and the dopamine driver was TH-Gal4.</s><s>Both flies expressed GCaMP6f.</s><s>Note that there is an angle (39 degrees for the pan-neuronal experiment and 20 degrees for the dopamine experiment) between the z-axis and the anterior-posterior axis.</s><s>B) Comparison of fluorescence intensity when the fly turns left or right.</s><s>The arrows point to regions (in the posterior slope, gnathal ganglia, and superior lateral protocerebrum or anterior tubercule) symmetrical and reproducible from fly to fly.</s><s>The fly's genotype was nsyb-Gal4 and UAS-GCaMP6f.</s><s>Note that there is a 40 degree angle between the z-axis and the anterior-posterior axis.</s><s>The pixel value is green if the fluorescence is higher during turning left, magenta if the fluorescence is higher during turning right.</s><s>C) Comparison of fluorescence increase during the response to stimuli for odor (magenta) and light (green).</s><s>The arrows point to the posterior slope (bottom panel) and the optical glomeruli (middle panel).</s><s>The fly's genotype was Cha-Gal4, GMR57C10-Gal4, and UAS-GCaMP6f.</s><s>Note that the brain is tilted 19 degrees along the lateral axis.</s><s>See also S4-S9 Figs.</s><s>Data can be found on CNCRS.org</s><s>(http://dx.doi.org/10.6080/</s><s>K01J97ZN).</s><s>CNCRS, Collaborative Research in Computational Neuroscience; nsyb-Gal4, nSynaptobrevin-Gal4; TH-Gal4, tyrosine hydroxylase-Gal4; Cha-Gal4, choline acetyltransferase-Gal4.</s></p></div></figDesc><graphic coords="5,120.02,70.02,455.98,492.95" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig 3 .</head><label>3</label><figDesc><div><p><s>Fig 3. Z-stack slices of the 3D map for all the components extracted using PCA/ICA.</s><s>The maps from calcium activity (GCaMP6f) are compared with the maps obtained with an activity-independent fluorophore (GFP).</s><s>Different colors are assigned randomly to different components.</s><s>Note that the slice depth is larger when it is farther from the middle of the brain (see Methods section).</s><s>See S10 and S11 Figs for maps aligned to an anatomical template and S12 Fig for examples of individual artifactual components.</s><s>GCaMP6f data can be found on CNCRS.org</s><s>(http://dx.doi.org/</s><s>10.6080/K01J97ZN).</s><s>CNCRS, Collaborative Research in Computational Neuroscience; GFP, green fluorescent protein; ICA, independent component analysis; PCA, principal component analysis.</s><s>https://doi.org/10.1371/journal.pbio.2006732.g003</s></p></div></figDesc><graphic coords="7,200.01,78.01,335.96,518.12" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig 4 .</head><label>4</label><figDesc><div><p><s>Fig 4.Functional components match anatomical structures.</s><s>A) Components automatically sorted by region and projected along the z-axis.</s><s>Note that the sorting (the component's maps are averaged in anatomical regions of interest) could be inaccurate in the case of maps containing small parts of large regions and noise in very small regions (i.e., the bulb or gall).</s><s>Data can be found on CNCRS.org</s><s>(http://dx.doi.org/10.6080/K01J97ZN).</s><s>B) Comparison between functional and anatomical maps.</s><s>Left: functional maps from a pan-neuronal (GMR57C10-Gal4 and Cha-Gal4) GCaMP6f experiment.</s><s>Right: corresponding anatomical structures.</s><s>Maps were constructed using the Virtual Fly Brain database.</s><s>Three bottom images show neurons from major neuron types (three different Kenyon cell types, antennal lobe projection neuron, and transmedullar neurons) matching the functional maps.</s><s>The brain for the functional data is</s></p></div></figDesc><graphic coords="8,200.01,78.01,288.00,546.92" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head></head><label></label><figDesc><div><p><s>Fig 5. Z-stacks of components among the six most correlated to turning left (cyan and blue) or right (red and yellow).</s><s>Each color corresponds to one component.</s><s>Flies expressed GCaMP6 pan-neuronally.</s><s>A) Anterior, medial, and posterior slices in the original orientation.</s><s>The arrows point to characteristic shapes (inverted V for blue and red and fine claw-like dorsal neurites for yellow and cyan).</s><s>B) The same components aligned to an anatomical template's z-stack.</s><s>See also S18 Fig. Data can be found on CNCRS.org</s><s>(http://dx.doi.org/10.6080/</s><s>K01J97ZN).</s><s>CNCRS, Collaborative Research in Computational Neuroscience.</s><s>https://doi.org/10.1371/journal.pbio.2006732.g005</s></p></div></figDesc><graphic coords="9,120.02,341.52,455.98,303.70" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig 6 and</head><label>6</label><figDesc><div><p><s>Fig 6 and S19 Fig show components obtained when using a more restricted driver, expressing in dopamine neurons only: TH-Gal4 (data are the same as in S6 Movie).</s><s>As shown in Fig 6A, in agreement with our observation from S6 Movie, most components were tightly correlated with the fly walking (forest green traces interleaved with the components' traces).</s><s>Fig 6B reproduces some of the maps in Fig 6A along with anatomical maps of single dopaminergic neurons from the Virtual Fly Brain database<ref type="bibr" target="#b15">[16]</ref>.</s><s>Some maps had unequivocal anatomical counterparts.</s><s>For example, the first three maps matched well with the anatomy of processes from dopaminergic PPL1 neurons innervating mushroom body vertical lobe compartments, each component thus corresponding to only one or two cells per hemisphere<ref type="bibr" target="#b24">[25]</ref>.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>As Fig 7</head><label>7</label><figDesc><div><p><s>and S20 Fig demonstrate, voltage recordings with ArcLight also gave rise to maps portraying specific neuropils (and clearly distinguishable from artifacts shown in S21 Fig).</s><s>As S22 Fig shows, the</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head></head><label></label><figDesc><div><p><s>Fig 7 and S25 Fig]), which are consistent with previous literature [21] [20].</s><s>Spike-</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Fig 6 .</head><label>6</label><figDesc><div><p><s>Fig 6.</s><s>Components from flies expressing GCaMP6f in dopamine neurons (TH-Gal4 driver).</s><s>A) All activity-related components are presented and sorted by brain region, with the color of the time series (which are variance normalized) on the left, matching the color of the maps on the right (e.g., the first image corresponds to the first trace, the second image to the next three traces, and so on).</s><s>Note that most components are strongly correlated with the fly walking (forest green traces interleaved with the component traces).</s><s>The fly was resting or grooming the rest of the time.</s><s>Data can be found on CNCRS.org</s><s>(http://dx.doi.org/10.6080/</s><s>K01J97ZN).</s><s>B) Example of TH-positive neuron from the Virtual Fly Brain database (right) matching the components' maps (left).</s><s>Note that the brain is tilted 20 degrees along the lateral axis compared to the template presented on the right.</s><s>(See also S19 Fig).</s><s>CNCRS, Collaborative Research in Computational Neuroscience; TH-Gal4, tyrosine hydroxylase-Gal4; Cha-Gal4, choline acetyltransferase-Gal4. https://doi.org/10.1371/journal.pbio.2006732.g006</s></p></div></figDesc><graphic coords="11,156.02,78.01,419.98,525.32" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Fig 7 .</head><label>7</label><figDesc><div><p><s>Fig 7. Components extracted from voltage activity.</s><s>ArcLight was expressed pan-neuronally (nsyb-Gal4).</s><s>The fly was presented with periodic flashes of UV light (violet bars) and puffs of apple cider vinegar (pink bars).</s><s>The component time series are shown on the left (variance normalized), and the corresponding maps are on the right, sorted by the brain region that was majorly present in the map.</s><s>Note that the coronal plane was tilted 37 degrees away from the horizontal plane for this fly.</s><s>See also S20-S23 and S25 Figs.</s><s>Data can be found on CNCRS.org</s><s>(http:// dx.doi.org/10.6080/K01J97ZN).</s><s>CNCRS, Collaborative Research in Computational Neuroscience; FB, fan-shaped body; LH, lateral horn; MB, mushroom body, nsyb-Gal4, nSynaptobrevin-Gal4; PB, protocerebral bridge; SMP, superior medial protocerebrum.</s><s>https://doi.org/10.1371/journal.pbio.2006732.g007</s></p></div></figDesc><graphic coords="12,120.02,78.01,455.98,541.53" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Fig 8 .</head><label>8</label><figDesc><div><p><s>Fig 8. Spontaneous switches between up-and down-activity states for components in a nodulus and the contralateral part of the protocerebral bridge.</s><s>We detected these components in all flies examined (genotype: UAS_ArcLight and from top to bottom: nsyb-Gal4, nsyb-Gal4, Cha-Gal4, and GMR57C10-Gal4, nsyb-Gal4).</s><s>The images on the right present the two components (in different colors) at two different z planes (at the level of the noduli and fan-shaped body and at the level of the protocerebral bridge).</s><s>Note that the flies were not walking in those experiments.</s><s>See also S24 Fig. Cha-Gal4, choline acetyltransferase-Gal4; nsyb-Gal4, nSynaptobrevin-Gal4. https://doi.org/10.1371/journal.pbio.2006732.g008</s></p></div></figDesc><graphic coords="13,120.02,78.01,455.98,520.27" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head></head><label></label><figDesc><div><p><s>used a light sheet approach (swept confocally aligned planar excitation[SCAPE]) to image a large portion of the brain at 10 Hz.</s><s>To test whether the fast-frame rate of the light field method enabled detecting signals otherwise undetectable with slower imaging methods, we subtracted the data smoothed over 100 ms, thus revealing only the activity above 10 Hz.</s><s>All GCaMP6f data sets (N = 7) maintained some activity-related components (e.g., S28 Fig) that could be different in different flies.</s><s>When we did the same analysis with ArcLight data, four out of seven flies had at least one activity-related component.</s><s>Note that more information from fast activity could be present in the data, but the low signal-to-noise ratio makes it difficult to detect it with PCA/ICA.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><head></head><label></label><figDesc><div><p><s>Fig) was determined by imaging 2-μm fluorescent beads dispersed in an agarose gel.</s><s>After reconstruction, the center of beads at different distances from the focal plane were recorded using ImageJ, and a MATLAB program measured the point spread function's axial and lateral full width at half maximum (see https:// github.com/sophie63/FlyLFM</s><s>for the code).</s></p></div></figDesc></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>PLOS Biology | https://doi.org/10.1371/journal.pbio.2006732</s><s>February 15, 2019</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We thank <rs type="person">Ju ¨rgen Schulze</rs>, <rs type="person">Joseph Keefe</rs>, and <rs type="grantNumber">Calit2</rs> for generously providing a GPU cluster.<rs type="person">Charles F. Stevens</rs> and <rs type="person">Jason Fleischer</rs> contributed many helpful discussions.<rs type="person">Angelique Paulk</rs> provided valuable advice on the floating-ball setup.<rs type="person">Stephen M. Smith</rs> helped with reproducing parts of melodic in MATLAB, <rs type="person">Ryan Shultzaberger</rs> helped with R and bash, <rs type="person">Daniel Soudry</rs> helped with source extraction, and <rs type="person">Nicolas Aimon</rs> helped with fitting time series in Python.Alexander Pope helped with fly preparation.<rs type="person">M. Nitabach</rs> and <rs type="person">V. Pieribone</rs> gave us <rs type="institution">UAS-Arc-Light</rs> flies, and the <rs type="institution">Nitabach laboratory</rs> provided technical support on imaging ArcLight.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_UDzexCS">
+					<idno type="grant-number">Calit2</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Reconstructed volumes, preprocessed data, and behavioral movies are available from the CRCNS database (accession number http://dx.doi.org/10.6080/</s><s>K01J97ZN).</s></p></div>
+			</div>
+
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code availability</head><p><s>The MATLAB and Python code for preprocessing, PCA/ICA, and sorting of the components is available at https://github.com/sophie63/FlyLFM.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supporting information</head><p><s>S1 Movie.</s><s>Maximum projection of pan-neuronal GCaMP6F activity, in response to odor, with the simultaneous behavior.</s><s>The white square corresponds to the presentation of a puff of ethanol.</s><s>Note that there is an angle of 19 degrees between the z-axis and the anterior-posterior axis.</s><s>Data can be found on CNCRS.org</s><s>(http://dx.doi.org/10.6080/K01J97ZN).</s><s>CNCRS, Collaborative Research in Computational Neuroscience.</s><s>(AVI) S2 Movie.</s><s>Maximum projection of pan-neuronal GCaMP6F activity, in response to light, with the simultaneous behavior.</s><s>The white square corresponds to the presentation of flashes of UV light.</s><s>Note that there is an angle of 19 degrees between the z-axis and the anterior-posterior axis.</s><s>Data can be found on CNCRS.org</s><s>(http://dx.doi.org/10.6080/K01J97ZN).</s><s>CNCRS, Collaborative Research in Computational Neuroscience.</s><s>(AVI) S3 Movie.</s><s>Maximum projection of pan-neuronal GCaMP6F activity, with the simultaneous behavior, in the absence of stimuli.</s><s>Note that there is an angle of 39 degrees between the zaxis and the anterior-posterior axis.</s><s>Data can be found on CNCRS.org</s><s>(http://dx.doi.org/10.</s><s>6080/K01J97ZN).</s><s>CNCRS, Collaborative Research in Computational Neuroscience.</s><s>(AVI) S4 Movie.</s><s>Maximum projection of pan-neuronal GCaMP6F activity in a norpA mutant background, with the simultaneous behavior, in the absence of stimuli.</s><s>Note that there is an angle of 27 degrees between the z-axis and the anterior-posterior axis.</s><s>(AVI) S5 Movie.</s><s>Maximum projection of GCaMP6F activity in acetylcholine neurons, with the simultaneous behavior, in the absence of stimuli.</s><s>Note that there is an angle of 55 degrees between the z-axis and the anterior-posterior axis. .</s><s>Different panels correspond to different flies.</s><s>All the data was recorded with a 20x NA = 1.0 objective unless noted otherwise.</s><s>A) Comparison of fluorescence intensity when the fly rests and when it is active (either walk or groom).</s><s>The pixel value is green if the fluorescence is in average higher during the behavior than during rest and magenta if the fluorescence is in average higher during rest than during the behavior.</s><s>Note that some flies were walking but not grooming (or grooming too little to extract the grooming activity map).</s><s>B) Comparison of fluorescence intensity when the fly turns left or right.</s><s>The pixel value is green if the fluorescence is higher during turning left and magenta if the fluorescence is higher during turning right.</s><s>C) Comparison of fluorescence between response to stimuli and baseline activity (magenta, odor; green, light), for both calcium (GCaMP6) and voltage probes (ArcLight).</s><s>Data can be found on CNCRS.org</s><s>(http://dx.doi.org/10.6080/K01J97ZN).</s><s>CNCRS, Collaborative Research in Computational Neuroscience; NA, numerical aperture.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>S18 Fig. Components most correlated with turning left or right, using an acetylcholine neurons line (Cha-Gal4 and UAS-GCaMP6F</head><p><s>). A) Anterior, medial and posterior slices of the components most correlated to turning left (cyan and blue) and right (red and yellow).</s><s>The arrows point to characteristic shapes (inverted V or fine claw-like dorsal neurites).</s><s>B) Example time series (variance normalized) for the four different components along with turning behavior.</s><s>Top panel shows data from a pan-neuronal line (nsyb-Gal4, UAS-GCaMP6F), and bottom panel, from the same fly as A).</s><s>In each panel, the top two traces (green and blue) are proportional to angular speed of the ball towards left or right, convolved with a GCaMP6 kernel.</s><s>The four bottom traces show activity components (same color code as the maps).</s><s>Note that the cyan (or yellow) trace is slightly delayed compared to the blue trace (or red trace respectively).</s><s>Cha-Gal4, choline acetyltransferase-Gal4; nsyb-Gal4, nSynaptobrevin-Gal4.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author Contributions</head><p><s>Conceptualization: Sophie Aimon, Takeo Katsuki, Terrence J. Sejnowski, Ralph J. Greenspan.</s></p><p><s>Data curation: Sophie Aimon, Tongqiu Jia, Logan Grosenick, Michael Broxton.</s></p><p><s>Formal analysis: Sophie Aimon, Logan Grosenick, Michael Broxton.</s></p><p><s>Funding acquisition: Sophie Aimon, Terrence J. Sejnowski, Ralph J. Greenspan.</s></p><p><s>Investigation: Sophie Aimon, Takeo Katsuki, Tongqiu Jia, Terrence J. Sejnowski.</s><s>Methodology: Sophie Aimon, Takeo Katsuki, Logan Grosenick, Michael Broxton, Karl Deisseroth, Ralph J. Greenspan.</s></p><p><s>Project administration: Sophie Aimon, Terrence J. Sejnowski, Ralph J. Greenspan.</s></p><p><s>Resources: Sophie Aimon, Logan Grosenick, Michael Broxton, Karl Deisseroth, Terrence J. Sejnowski, Ralph J. Greenspan.</s></p><p><s>Software: Sophie Aimon, Tongqiu Jia, Logan Grosenick, Michael Broxton, Karl Deisseroth.</s></p><p><s>Supervision: Sophie Aimon, Takeo Katsuki, Terrence J. Sejnowski, Ralph J. Greenspan.</s></p><p><s>Validation: Sophie Aimon, Tongqiu Jia.</s></p><p><s>Visualization: Sophie Aimon, Tongqiu Jia.</s></p><p><s>Writing -original draft: Sophie Aimon.</s></p><p><s>Writing -review &amp; editing: Sophie Aimon, Takeo Katsuki, Tongqiu Jia, Logan Grosenick, Michael Broxton, Karl Deisseroth, Terrence J. Sejnowski, Ralph J. Greenspan.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">SPED Light Sheet Microscopy: Fast Mapping of Biological System Structure and Function</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tomer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lovett-Barron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kauvar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Andalman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Burns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sankaran</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell. Cell Press</title>
+		<imprint>
+			<biblScope unit="volume">163</biblScope>
+			<biblScope unit="page" from="1796" to="1806" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Whole-central nervous system functional imaging in larval Drosophila</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Lemon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Pulver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hockendorf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mcdole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Branson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Freeman</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/ncomms8924</idno>
+		<ptr target="http://dx.doi.org/10.1038/ncomms8924" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun. Nature Publishing Group</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<publisher>Macmillan Publishers Limited</publisher>
+		</imprint>
+	</monogr>
+	<note>All Rights Reserved</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Wave optics theory and 3-D deconvolution for the light field microscope</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Broxton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Grosenick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Andalman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<idno type="DOI">10.1364/OE.21.025418</idno>
+		<idno type="PMID">24150383</idno>
+		<ptr target="https://doi.org/10.1364/OE.21.025418" />
+	</analytic>
+	<monogr>
+		<title level="j">Opt Express</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="25418" to="25439" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Simultaneous whole-animal 3D imaging of neuronal activity using light-field microscopy</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Prevedel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y-G</forename><surname>Yoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hoffmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Wetzstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kato</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.2964</idno>
+		<idno type="PMID">24836920</idno>
+		<ptr target="https://doi.org/10.1038/nmeth.2964" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="727" to="730" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Light field microscopy</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Levoy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Adams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Footer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Horowitz</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1141911.1141976</idno>
+		<ptr target="https://doi.org/10.1145/1141911.1141976" />
+	</analytic>
+	<monogr>
+		<title level="j">ACM Trans Graph</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page">924</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Elastic Source Selection for in vivo imaging of neuronal ensembles</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Grosenick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings IEEE International Symposium on Biomedical Imaging: From nano to macro</title>
+		<meeting>IEEE International Symposium on Biomedical Imaging: From nano to macro</meeting>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="6" to="9" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Identification Of Cellular-Activity Dynamics Across Large Tissue Volumes In The Mammalian Brain</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Grosenick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Broxton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Liston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Poole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yang</surname></persName>
+		</author>
+		<ptr target="http://biorxiv.org/content/early/2017/05/01/132688.abstract" />
+	</analytic>
+	<monogr>
+		<title level="j">bioRxiv</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Video rate volumetric Ca2+ imaging across cortex using seeded iterative demixing (SID) microscopy</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>No ¨bauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Skocek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Pernı ´a-Andrade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Weilguny</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martı</forename><surname>´nez Traub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Molodtsov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.4341</idno>
+		<idno type="PMID">28650477</idno>
+		<ptr target="https://doi.org/10.1038/nmeth.4341" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="811" to="818" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Rapid whole brain imaging of neural activity in freely behaving larval zebrafish (Danio rerio)</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hang</forename><forename type="middle">W</forename><surname>Shang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.28158</idno>
+		<idno type="PMID">28930070</idno>
+		<ptr target="https://doi.org/10.7554/eLife.28158" />
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Ultrasensitive fluorescent proteins for imaging neuronal activity</title>
+		<author>
+			<persName><forename type="first">T-W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Wardill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Pulver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Renninger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Baohan</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature12354</idno>
+		<idno type="PMID">23868258</idno>
+		<ptr target="https://doi.org/10.1038/nature12354" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">499</biblScope>
+			<biblScope unit="page" from="295" to="300" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Single Action Potentials and Subthreshold Electrical Events Imaged in Neurons with a Fluorescent Protein Voltage Probe</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Platisa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jra</forename><surname>Wooltorton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">B</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">A</forename><surname>Pieribone</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2012.06.040</idno>
+		<idno type="PMID">22958819</idno>
+		<ptr target="https://doi.org/10.1016/j.neuron.2012.06.040" />
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page" from="779" to="785" />
+			<date type="published" when="2012">2012</date>
+			<publisher>Elsevier Inc</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Probabilistic independent component analysis for functional magnetic resonance imaging</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Beckmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Smith</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TMI.2003.822821</idno>
+		<idno type="PMID">14964560</idno>
+		<ptr target="https://doi.org/10.1109/TMI.2003.822821" />
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Med Imaging</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="137" to="152" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Automated analysis of cellular signals from large-scale calcium imaging data</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Mukamel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nimmerjahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Schnitzer</surname></persName>
+		</author>
+		<ptr target="http://www.ncbi.nlm.nih.gov/pubmed/19778505" />
+	</analytic>
+	<monogr>
+		<title level="j">Neuron. Elsevier Ltd</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="747" to="760" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">A systematic nomenclature for the insect brain</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinomiya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Armstrong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Boyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Hartenstein</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2013.12.017</idno>
+		<idno type="PMID">24559671</idno>
+		<ptr target="https://doi.org/10.1016/j.neuron.2013.12.017" />
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page" from="755" to="765" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Three-dimensional reconstruction of brain-wide wiring networks in Drosophila at single-cell resolution</title>
+		<author>
+			<persName><forename type="first">A-S</forename><surname>Chiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C-Y</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C-C</forename><surname>Chuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H-M</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C-H</forename><surname>Hsieh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C-W</forename><surname>Yeh</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cub.2010.11.056</idno>
+		<idno type="PMID">21129968</idno>
+		<ptr target="https://doi.org/10.1016/j.cub.2010.11.056" />
+	</analytic>
+	<monogr>
+		<title level="j">Curr Biol. Elsevier Ltd</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="1" to="11" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The virtual fly brain browser and query interface</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Milyaev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Osumi-Sutherland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Reeve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Burton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Baldock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Armstrong</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/bioinformatics/btr677</idno>
+		<idno type="PMID">22180411</idno>
+		<ptr target="https://doi.org/10.1093/bioinformatics/btr677" />
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="411" to="415" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Functional divisions for visual processing in the central brain of flying Drosophila</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">T</forename><surname>Weir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Dickinson</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1514415112</idno>
+		<idno type="PMID">26324910</idno>
+		<ptr target="https://doi.org/10.1073/pnas.1514415112" />
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="E5523" to="5532" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">A Comprehensive Wiring Diagram of the Protocerebral Bridge for Visual Information Processing in the Drosophila Brain</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Chuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Hua</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Dickson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Greenspan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.celrep.2013.04.022</idno>
+		<idno type="PMID">23707064</idno>
+		<ptr target="https://doi.org/10.1016/j.celrep.2013.04.022" />
+	</analytic>
+	<monogr>
+		<title level="j">Cell Rep</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1739" to="1753" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Neuroarchitecture and neuroanatomy of the Drosophila central complex: A GAL4-based dissection of protocerebral bridge neurons and circuits</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wolff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Iyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Rubin</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/cne.23705</idno>
+		<idno type="PMID">25380328</idno>
+		<ptr target="https://doi.org/10.1002/cne.23705" />
+	</analytic>
+	<monogr>
+		<title level="j">J Comp Neurol</title>
+		<imprint>
+			<biblScope unit="volume">523</biblScope>
+			<biblScope unit="page" from="997" to="1037" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Processing properties of ON and OFF pathways for Drosophila motion detection</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Behnia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Carter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Clandinin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Desplan</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature13427</idno>
+		<idno type="PMID">25043016</idno>
+		<ptr target="https://doi.org/10.1038/nature13427" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">512</biblScope>
+			<biblScope unit="page" from="427" to="430" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Early olfactory processing in Drosophila: mechanisms and principles</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Wilson</surname></persName>
+		</author>
+		<idno type="DOI">10.1146/annurev-neuro-062111-150533</idno>
+		<idno type="PMID">23841839</idno>
+		<ptr target="https://doi.org/10.1146/annurev-neuro-062111-150533" />
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="217" to="241" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Origins of correlated activity in an olfactory circuit</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kazama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Wilson</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.2376</idno>
+		<idno type="PMID">19684589</idno>
+		<ptr target="https://doi.org/10.1038/nn.2376" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1136" to="1144" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Organization of descending neurons in Drosophila melanogaster</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Hsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Bhandawat</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep20259</idno>
+		<idno type="PMID">26837716</idno>
+		<ptr target="https://doi.org/10.1038/srep20259" />
+	</analytic>
+	<monogr>
+		<title level="j">Sci Rep</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">20259</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">An Array of Descending Visual Interneurons Encoding Self-Motion in Drosophila</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Suver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Huda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Iwasaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Safarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Dickinson</surname></persName>
+		</author>
+		<ptr target="http://www.jneurosci.org/content/36/46/11768.long" />
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">The neuronal architecture of the mushroom body provides a logic for associative learning</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hattori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Johnston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Iyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T-Tt</forename><surname>Ngo</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.04577</idno>
+		<idno type="PMID">25535793</idno>
+		<ptr target="https://doi.org/10.7554/eLife.04577" />
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1" to="48" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Whole-Brain Calcium Imaging Reveals an Intrinsic Functional Network in Drosophila</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Gallen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Clandinin</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cub.2017.06.076</idno>
+		<idno type="PMID">28756955</idno>
+		<ptr target="https://doi.org/10.1016/j.cub.2017.06.076" />
+	</analytic>
+	<monogr>
+		<title level="j">Curr Biol</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="2389" to="2396" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Video-rate volumetric functional imaging of the brain at synaptic resolution</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kerlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bierfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Seelig</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.4516</idno>
+		<idno type="PMID">28250408</idno>
+		<ptr target="https://doi.org/10.1038/nn.4516" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="620" to="628" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">SCAPE Microscopy for High Speed, 3D Whole-Brain Imaging in Drosophila Melanogaster</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Voleti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Schaffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Vaadia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">B</forename><surname>Grueber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Richard</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">2016</biblScope>
+			<biblScope unit="page" from="4" to="6" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Mapping the Neural Substrates of Behavior</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Robie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hirokawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Edwards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Simpson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Reiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Branson</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cell.2017.06.032</idno>
+		<idno type="PMID">28709004</idno>
+		<ptr target="https://doi.org/10.1016/j.cell.2017.06.032" />
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">170</biblScope>
+			<biblScope unit="page" from="393" to="406" />
+			<date type="published" when="2017">2017</date>
+			<publisher>Elsevier Inc</publisher>
+		</imprint>
+	</monogr>
+	<note>e28</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Walking modulates speed sensitivity in drosophila motion vision</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Chiappe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Seelig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Reiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cub.2010.06.072</idno>
+		<idno type="PMID">20655222</idno>
+		<ptr target="https://doi.org/10.1016/j.cub.2010.06.072" />
+	</analytic>
+	<monogr>
+		<title level="j">Curr Biol</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1470" to="1475" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Neuronal control of locomotor handedness in Drosophila</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Buchanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Kain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>De Bivort</surname></persName>
+		</author>
+		<idno type="PMID">25953337</idno>
+		<ptr target="http://www.pnas.org/content/112/21/6700.abstract" />
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="6700" to="6705" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Angular velocity integration in a fly heading circuit</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Turner-Evans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wegener</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Rouault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Franconville</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wolff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Seelig</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.23496</idno>
+		<idno type="PMID">28530551</idno>
+		<ptr target="https://doi.org/10.7554/eLife.23496" />
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Information flow through neural circuits for pheromone orientation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Namiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Iwabuchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pansopha</forename><surname>Kono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kanzaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename></persName>
+		</author>
+		<idno type="DOI">10.1038/ncomms6919</idno>
+		<idno type="PMID">25533353</idno>
+		<ptr target="https://doi.org/10.1038/ncomms6919" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">5919</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Subcellular Imaging of Voltage and Calcium Signals Reveals Neural Processing In Vivo</title>
+		<author>
+			<persName><forename type="first">Hhh</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>St-Pierre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mzz</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Trr</forename><surname>Clandinin</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cell.2016.05.031</idno>
+		<idno type="PMID">27264607</idno>
+		<ptr target="https://doi.org/10.1016/j.cell.2016.05.031" />
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">166</biblScope>
+			<biblScope unit="page" from="245" to="257" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">High-speed recording of neural spikes in awake mice and flies with a fluorescent voltage sensor</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">F</forename><surname>Grewe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Eismann</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aab0810</idno>
+		<idno type="PMID">26586188</idno>
+		<ptr target="https://doi.org/10.1126/science.aab0810" />
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">350</biblScope>
+			<biblScope unit="page" from="1361" to="1366" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Genetically targeted optical electrophysiology in intact neural circuits</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Platisa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">A</forename><surname>Pieribone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raccuglia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kunst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Nitabach</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cell.2013.07.027</idno>
+		<idno type="PMID">23932121</idno>
+		<ptr target="https://doi.org/10.1016/j.cell.2013.07.027" />
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">154</biblScope>
+			<biblScope unit="page" from="904" to="913" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Signal propagation in Drosophila central neurons</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">W</forename><surname>Gouwens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Wilson</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.0764-09.2009</idno>
+		<idno type="PMID">19439602</idno>
+		<ptr target="https://doi.org/10.1523/JNEUROSCI.0764-09.2009" />
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="6239" to="6249" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Imaging neural activity in the ventral nerve cord of behaving adult Drosophila</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hermans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Viswanathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Fortun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Aymanns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Unser</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41467-018-06857-z</idno>
+		<idno type="PMID">30348941</idno>
+		<ptr target="https://doi.org/10.1038/s" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Decoding odor quality and intensity in the Drosophila brain</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Strutz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Soelter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Baschwitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Farhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Grabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rybak</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.04147</idno>
+		<idno type="PMID">25512254</idno>
+		<ptr target="https://doi.org/10.7554/eLife.04147" />
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">4147</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">RASL: Robust alignment by sparse and low-rank decomposition for linearly correlated images</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ganesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ma</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE Computer Society Conference on Computer Vision and Pattern Recognition</title>
+		<imprint>
+			<date type="published" when="2010">2010. 2010</date>
+			<biblScope unit="page" from="763" to="770" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Pan-neuronal calcium imaging with cellular resolution in freely swimming zebrafish</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Marques</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dgc</forename><surname>Hildebrand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Gu</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.4429</idno>
+		<idno type="PMID">28892088</idno>
+		<ptr target="https://doi.org/10.1038/nmeth.4429" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1107" to="1114" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Whole-brain calcium imaging with cellular resolution in freely behaving Caenorhabditis elegans</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">B</forename><surname>Shipley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Linder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Plummer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">U</forename><surname>Setru</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1507110112</idno>
+		<idno type="PMID">26712014</idno>
+		<ptr target="https://doi.org/10.1073/pnas.1507110112" />
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">An online algorithm for piecewise rigid motion correction of calcium imaging data</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Pnevmatikakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Giovannucci</forename><forename type="middle">A</forename><surname>Normcorre</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jneumeth.2017.07.031</idno>
+		<idno type="PMID">28782629</idno>
+		<ptr target="https://doi.org/10.1016/j.jneumeth.2017.07.031" />
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci Methods</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="page" from="83" to="94" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Fiji: An open-source platform for biological-image analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schindelin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Arganda-Carreras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Frise</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kaynig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Longair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pietzsch</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.2019</idno>
+		<idno type="PMID">22743772</idno>
+		<ptr target="https://doi.org/10.1038/nmeth" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Methods</title>
+		<imprint>
+			<date type="published" when="2012">2012. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Real-time 3D image registration for functional MRI</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Cox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jesmanowicz</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/(sici)1522-2594(199912)42:6&lt;1014::aid-mrm4&gt;3.0.co;2-f</idno>
+		<idno type="PMID">10571921</idno>
+		<ptr target="https://doi.org/10.1002/(sici)1522-2594" />
+	</analytic>
+	<monogr>
+		<title level="j">Magn Reson Med</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1014" to="1018" />
+			<date type="published" when="1999">1999. 199912</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Fast and robust fixed-point algorithms for independent component analysis</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hyva ¨rinen</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/72.761722</idno>
+		<idno type="PMID">18252563</idno>
+		<ptr target="https://doi.org/10.1109/72.761722" />
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Neural Netw</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="626" to="634" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Icy: an open bioimage informatics platform for extended reproducible research</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>De Chaumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dallongeville</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Chenouard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">´n</forename><surname>Herve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pop</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Provoost</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.2075</idno>
+		<idno type="PMID">22743774</idno>
+		<ptr target="https://doi.org/10.1038/nmeth.2075" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="690" to="696" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,1388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The primacy model and the structure of olfactory space</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Cold Spring Harbor Laboratory</publisher>
+				<availability status="unknown"><p>Copyright Cold Spring Harbor Laboratory</p>
+				</availability>
+				<date type="published" when="2018-01-29">2018-01-29</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hamza</forename><surname>Giaffar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Cold Spring Harbor Laboratory</orgName>
+								<address>
+									<addrLine>Cold Spring Harbor</addrLine>
+									<postCode>11724</postCode>
+									<region>NY</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sergey</forename><surname>Shuvaev</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dmitry</forename><surname>Rinberg</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">NYU Neuroscience Institute</orgName>
+								<orgName type="institution" key="instit2">New York University Langone Medical Center</orgName>
+								<address>
+									<postCode>10016</postCode>
+									<settlement>New York</settlement>
+									<region>NY</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexei</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Cold Spring Harbor Laboratory</orgName>
+								<address>
+									<addrLine>Cold Spring Harbor</addrLine>
+									<postCode>11724</postCode>
+									<region>NY</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The primacy model and the structure of olfactory space</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<publisher>Cold Spring Harbor Laboratory</publisher>
+							<date type="published" when="2018-01-29" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">231E5914355A746B2731A834979AA9B7</idno>
+					<idno type="DOI">10.1101/255661</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>For many animals, the neural activity in early olfactory circuits during a single sniff cycle contains sufficient information for fine odor discrimination.</s><s>Whilst much is known about the transformations of neural representations in early olfactory circuits, exactly how odorant evoked activity in the main olfactory bulb shapes the perception of odors remains largely unknown.</s><s>In olfaction, odorant identity is generally conserved over a wide range of conditions, including concentration.</s><s>We present a theory of identity assignment in the olfactory system that accounts for this invariance with respect to stimulus intensity.</s><s>We suggest that the identities of relatively few high affinity olfactory receptor types determine an odorant's perceived identity.</s><s>This set of high-affinity receptors is defined as the primary set and the coding model based on their responses is called the primacy theory.</s><s>In this study, we explore the impact that primacy coding may have on the evolution of the ensemble of olfactory receptors.</s><s>A primacy coding mechanism predicts the arrangement of different receptor types in a low-dimensional structure that we call a primacy hull.</s><s>We present several statistical analyses that can detect the presence of this structure, allowing the predictions of the primacy model to be tested experimentally.</s></p><p><s>.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p><s>The olfactory system faces a range of computational tasks, including the assignment of odorant intensity and identity.</s><s>As with the objects of other senses, an odorant identity is generally stable over a range of stimulus and neural parameters, including odorant concentrations, background, and noise in neural circuits <ref type="bibr" target="#b3">(Bhagavan, 1997;</ref><ref type="bibr" target="#b8">Cleland, 2014;</ref><ref type="bibr" target="#b16">Gross-Isseroff, 1988;</ref><ref type="bibr" target="#b28">Krone, 2001;</ref><ref type="bibr" target="#b47">Uchida, 2007)</ref>.</s><s>The concentration-invariant representation of an odor object should emerge fairly early in olfactory networks, as cortical processing is only two synapses away from receptor neurons.</s></p><p><s>The basic organization of early olfactory circuits is conserved from insects to mammals <ref type="bibr" target="#b0">(Ache, 2005)</ref>.</s><s>The olfactory system is equipped with a set of olfactory receptors (ORs) that are tuned to features of odorant molecules <ref type="bibr" target="#b1">(Axel, 1995)</ref>.</s><s>The number of functional OR types is species dependent, with current estimates at 60 in fly, ~300-350 in humans and ~1000 in rodents <ref type="bibr" target="#b14">(Go, 2008;</ref><ref type="bibr" target="#b36">Olender et al., 2013)</ref>.</s><s>The olfactory epithelium contains olfactory sensory neurons (OSNs), each of which expresses a single functional OR type <ref type="bibr" target="#b34">(Mori et al., 1999)</ref>.</s><s>OSNs send their axons to the olfactory bulb (OB) which contains the first neuronal network dealing with processing information about odorants.</s><s>The surface of olfactory bulb is covered with glomeruli, small spherical structures that receive direct inputs from OSNs.</s><s>Each glomerulus is thought to receive direct inputs from OSNs expressing a single OR type.</s><s>In glomeruli, OSN axons are met by the dendrites from mitral and tufted (MT) cells, which, in turn, project onto circuits in a collection of cortical and subcortical structures including the piriform cortex (PC) <ref type="bibr" target="#b17">(Haberly, 2001)</ref>.</s><s>In insects, OSNs synapse to projection neurons (PNs), putative MT cell homologues, which send their axons to the mushroom body and lateral horn.</s><s>Here we primarily adopt the nomenclature of the mammalian olfactory system, however, most of our conclusions are equally applicable to other vertebrates and insects.</s></p><p><s>Activity levels at glomeruli are considered to represent the pooled and averaged activity levels of OR type projecting to them.</s><s>Because each odorant has a different set of affinities to the set of ORs, each stimulus evokes an odorant specific spatiotemporal pattern of glomerular activation, generating a combinatorial representation of odorant identity <ref type="bibr" target="#b30">(Malnic et al., 1999;</ref><ref type="bibr" target="#b39">Saito, 2009)</ref>.</s><s>Odor recognition can therefore be described as a pattern recognition problem across 10 2 -10 3 input channels.</s><s>Exactly how the brain deciphers these spatiotemporal activity patterns to form stable percepts remains unclear <ref type="bibr" target="#b46">(Uchida, 2014)</ref>.</s></p><p><s>Studies have examined a range of potential olfactory coding schemes, from purely spatial combinatorial codes <ref type="bibr" target="#b12">(Firestein, 2004;</ref><ref type="bibr" target="#b26">Koulakov A, 2007)</ref> to models, in which olfactory information is contained in temporal correlations between spike trains and/or in spiking synchronized to collective neuronal oscillations <ref type="bibr" target="#b5">(Brody, 2003;</ref><ref type="bibr" target="#b19">Hopfield, 1995)</ref>.</s><s>Although a simple combinatorial spatial code is sufficient to qualitatively account for a number of results from human/rodent psychophysics <ref type="bibr" target="#b26">(Koulakov A, 2007)</ref>, there is also significant evidence for the presence of temporal codes in olfaction <ref type="bibr" target="#b10">(Cury and Uchida, 2010;</ref><ref type="bibr" target="#b18">Haddad et al., 2013;</ref><ref type="bibr" target="#b40">Sanders et al., 2014;</ref><ref type="bibr" target="#b43">Shusterman et al., 2011)</ref>.</s></p><p><s>The recent work by <ref type="bibr" target="#b49">(Wilson et al., 2017)</ref> proposed an odor coding scheme based on a small number of the most sensitive OR types for any given odorant.</s><s>The activity of these receptor types forms an approximately concentration invariant component of the neural representation, which is argued to form the basis of a stable stimulus identity <ref type="bibr" target="#b49">(Wilson et al., 2017)</ref>.</s><s>The concentration invariance in this model results from the assumption that, for any given stimulus, the most sensitive receptor types, and their corresponding glomeruli, would be activated at all concentrations, low and high, and that these glomeruli are activated first during odor inhalation.</s><s>Evidence for this hypothesis comes from the optogenetic masking experiments <ref type="bibr" target="#b49">(Wilson et al., 2017)</ref>.</s><s>This series of experiments demonstrated that mice use an initial time interval of the sniff cycle as short as ~100 milliseconds to make concentration invariant odor discrimination decisions <ref type="bibr" target="#b49">(Wilson et al., 2017)</ref>.</s><s>As the aggregate number of OSN types activated by a given odorant increases as a function of time in the sniff cycle and because it takes much longer than 100 ms to activate the full glomerular pattern <ref type="bibr">(Carey, 2009;</ref><ref type="bibr" target="#b43">Shusterman et al., 2011)</ref>, it was suggested that relatively few OSN types are required to encode odor identity <ref type="bibr" target="#b49">(Wilson et al., 2017)</ref>.</s><s>This observation leads us to explore the implications and limitations of an olfactory code in which odor identities are encoded by relatively few high-affinity OSN types.</s><s>We call this model the primacy coding model.</s></p><p><s>In this paper, we will explore a theory of olfactory coding based on three assumptions.</s><s>First, we assume the primacy coding hypothesis, according to which odor identity is represented by a small number of OR types of highest affinity to given odorant.</s><s>Second, we will adopt the hypothesis of low dimensional olfaction, i.e. that odor percepts and underlying odorant properties are arranged in a space with relatively low intrinsic dimensionality D. Finally, we assume that the OR ensemble has adapted to accommodate these features in the course of evolution.</s><s>Our goal here is to explore the implications of these assumptions, taken separately and in combination.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Spatial primacy coding</head><p><s>We will consider a model in which the activation of a receptor r f , as a function of odorant concentration, o C , can be described by the mass action law:</s></p><formula xml:id="formula_0">1 r ro o r f K C f   . (<label>1</label></formula><formula xml:id="formula_1">)</formula><p><s>Here ro K is the affinity of receptor r to odorant o.</s><s>In logarithmic concentration coordinates, ( ) <ref type="figure" target="#fig_0">1A</ref>).</s><s>In this model, for each odorant, receptors can be ordered by the values of their affinities.</s><s>Thus, for any given concentration, roughly speaking, an odor activates all receptors for which 1 / o ro C K  .</s><s>An increase in odorant concentration recruits additional receptors.</s><s>Receptors activated at the lowest concentration remain active at higher concentrations.</s><s>Following previous studies, the binding model described by equation (1) includes several simplifying assumptions.</s><s>The model is valid if, for example, a single odorant binding site is present in an OR molecule or if several binding sites interact in a linear manner.</s><s>It disregards a number of important mechanisms involved in odorant-OR interactions, such as antagonism <ref type="bibr" target="#b37">(Reddy et al., 2017)</ref>, potential multiple odorant binding sites per OR <ref type="bibr" target="#b25">(Kim and Goddard, 2014)</ref>, etc.</s><s>We will adopt the approximation provided by equation (1), following <ref type="bibr" target="#b15">(Grabska-Barwinska et al., 2017;</ref><ref type="bibr" target="#b20">Hopfield, 1999;</ref><ref type="bibr" target="#b24">Kepple et al., 2016;</ref><ref type="bibr" target="#b32">Mathis et al., 2016;</ref><ref type="bibr" target="#b50">Zhang and Sharpee, 2016;</ref><ref type="bibr" target="#b52">Zwicker et al., 2016)</ref>, for mathematical convenience.</s><s>Within a primacy coding hypothesis, the identities of a few most sensitive receptor types encode an odorant identity.</s><s>The most sensitive receptors for a given odorant are called primary.</s><s>In the spatial primacy model, the identities of the small set of strongest activated primary receptors define the odorant identity (Figure <ref type="figure" target="#fig_0">1</ref>).</s><s>In the model type, receptor sensitivity is measured via OR response magnitude.</s><s>For receptor activation given by equation ( <ref type="formula" target="#formula_0">1</ref>), primary receptors are invariant over a range of odorant concentrations (Figure <ref type="figure" target="#fig_0">1A,</ref><ref type="figure">B</ref>).</s><s>Thus, a small set of identity encoding glomeruli can represent a unique fixed template present across a wide range of concentrations for a given odor.</s><s>Different odorants evoke different sets of most sensitive receptors (primacy sets, red in Figure <ref type="figure" target="#fig_0">1C</ref>).</s><s>The size of a primacy set is described by the parameter p -the primacy number.</s><s>In principle, the primacy number can be different for different odorants, however here, for simplicity, we will assume it is fixed.</s><s>According to this formulation of the primacy model, a fixed number, p, of glomeruli encodes each odor identity.</s></p><formula xml:id="formula_2">r r o f f C  is a logistic function (Figure</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Temporal primacy</head><p><s>For air breathing animals, the most sensitive receptors are activated earliest during odor inhalation.</s><s>This may occur as a result of multiple processes, including intracellular signal integration <ref type="bibr" target="#b13">(Ghatpande, 2011)</ref> and the temporal dynamics of odorant concentration <ref type="bibr" target="#b21">(Jiang, 2010;</ref><ref type="bibr" target="#b23">Kent, 1996;</ref><ref type="bibr" target="#b35">Mozell, 1970)</ref>.</s><s>The primacy model as described above can be reformulated as a temporal code, given the general relationship between the latency of glomerular responses and the levels of OSN activation by different odorants <ref type="bibr" target="#b11">(Duchamp-Viret, 1999)</ref>.</s></p><p><s>In the temporal primacy model, the primacy set includes the p first active glomeruli within, for instance, a sniff cycle.</s><s>Therefore, in this model, the relative latencies of the glomerular responses of the most sensitive OR types encode odor identity.</s></p><p><s>The temporal ordering of glomerular activation is preserved over a range of concentrations, with the additional glomeruli activated at high concentration having longer response latencies than those activated at low concentration <ref type="bibr" target="#b45">(Spors and Grinvald, 2002)</ref>.</s><s>Assuming that the ordering of onset times for those glomeruli activated in the early part of the sniff cycle remains constant, membership of the primacy set is invariant with respect to changing odorant concentration.</s></p><p><s>As odorant concentration increases, the glomerular response onset time typically moves towards sniff onset, as the corresponding OR type is activated earlier in the sniff cycle <ref type="bibr" target="#b45">(Spors and Grinvald, 2002)</ref>.</s><s>For a given OR, the onset time is a monotonically decreasing function of both affinity and concentration.</s><s>The temporal primacy model may be more robust than primacy model based on relative response magnitude (Figure <ref type="figure" target="#fig_0">1</ref>).</s></p><p><s>Whilst the relative intensity and temporal primacy models are distinct in some ways, in terms of computational properties, these two forms of primacy codes share computational properties.</s><s>Indeed, since the concentration of odorants in the nose increases gradually within the sniff cycle, timing and response magnitude are related.</s><s>We will consider a primacy model based on the relative intensities of glomerular responses in this paper, with the expectation that all key ideas hold true for a temporal primacy code.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Dimensionality of odor space</head><p><s>The predictions of the primacy model differ in an important way depending on the dimensionality of the space sampled by ORs.</s><s>There are two qualitatively different regimes describing the relationship between the dimensionality of the space of molecular features sampled by the olfactory system, D, and the size of the receptor repertoire N. At one extreme, each OR represents a substantial part of a dimension of the stimulus space, i.e.</s><s>D N .</s><s>Because the number of ORs is large, 300 1000 N   , this is the regime of what we will call here a high-dimensional olfactory space.</s><s>In the other limit, the number of dimensions sampled by each OR is small, i.e.</s><s>D N  .</s></p><p><s>There is mounting evidence that olfactory perceptual space is indeed low dimensional.</s><s>One line of evidence arises from the observed low dimensional embedding of perceptual data.</s><s>A curved manifold of dimension D&lt;10 can account for &gt;80% of variance contained in human perceptual data <ref type="bibr" target="#b27">(Koulakov et al., 2011)</ref> suggesting that the number of odorant parameters relevant to the human olfactory system is &lt;10.</s><s>In addition to this evidence, extensive lesions of the rat OB do not lead to significant changes in detection or discrimination thresholds <ref type="bibr">(Bisulco, 2003;</ref><ref type="bibr" target="#b44">Slotnick, 2003)</ref>.</s><s>If removal of a population of receptors does not cause a visible loss of function, the number of features detected by the olfactory system is smaller than the number of receptors.</s><s>If each receptor were coding an independent property (dimension) of odorants, removal of a substantial fraction of receptors would substantially impair olfactory performance, in seeming contrast to the results of lesion experiments.</s><s>Of course, this conclusion is contingent upon the assumption that lesion experiments adequately test the capacity of the impaired olfactory system to discriminate odorants based on their identity.</s><s>The phenomenon of 'olfactory whiteness', in which mixtures of &gt; 20 components tend to be perceived similarly, irrespective of the structure or physicochemical properties of individual components, further supports the hypothesis of a low dimensional perceptual space <ref type="bibr" target="#b48">(Weiss et al., 2012)</ref>.</s><s>We will therefore adopt this hypothesis ( D N  ) when discussing the implications of the primacy model for the evolution of olfactory receptors.</s><s>We will later briefly address the predictions of the primacy model in the case of a highdimensional olfactory space, i.e. when D N .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Evolution of the olfactory receptors: Twodimensional odor space</head><p><s>To understand the implications of the primacy model for the evolution of ORs, let us first consider a toy model of the world in which only two odorants exist.</s><s>These two odorants may represent two different molecules found in the environment or, perhaps, two molecular features relevant to the olfactory system, i.e. two olfactory perceptual dimensions.</s><s>For simplicity, here, we will treat these two odorants as simple molecules named X and Y.</s></p><p><s>An animal has a repertoire of receptor types that respond to these odorants and their mixtures.</s><s>We assume that receptor-ligand interactions can be approximated by a single parameter, ro K -the affinity of receptor r for odorant o [equation ( <ref type="formula" target="#formula_0">1</ref>)].</s><s>Affinity is a proxy for the strength of interaction between the OR and the odorant.</s><s>Therefore, in our 2D example, each OR type can be represented as a point in a 2D space of affinities for the two odorants, X and Y, with coordinates ( , ) Similarly, the primacy set corresponding to odor Y can be assigned by introducing pure odor Y at a low concentration and expanding the active zone by increasing the concentration until the first p glomeruli are activated (Figure <ref type="figure" target="#fig_1">2C</ref>).</s></p><formula xml:id="formula_3">rX rY R K K  (Figure 2).</formula><formula xml:id="formula_4">2 2 1/2 ( ) X Y C C C  </formula><p><s>).</s></p><p><s>To consider mixtures, we extend equation ( <ref type="formula" target="#formula_0">1</ref>) for two ligands.</s><s>Assuming the independence of individual ligand-receptor interactions, we have (see Methods section):</s></p><formula xml:id="formula_5">1 r rX X rY Y r f K C K C f    (2)</formula><p><s>This equation can be rewritten in vector form:</s></p><formula xml:id="formula_6">1 r X Y rX rY r r f C C C K K C q K f C C            (3)</formula><p><s>where is a unit vector in the direction defined by the ratio between mixture components, is the receptor position in the 2D plane of odor affinities, and</s></p><formula xml:id="formula_7">2 2 1/2 ( ) X Y C C C  </formula><p><s>is a total mixture concentration.</s><s>For a given mixture concentration C , the boundary between active and inactive receptors is perpendicular to the unit vector q  .</s><s>Thus, the most active ORs for a given mixture can be found as receptors having the largest projection of their binding affinity vector onto the unit vector (Figure <ref type="figure" target="#fig_1">2D</ref>).</s><s>Thus, the primary set of ORs can be found by sweeping the active-inactive boundary perpendicular to the unit vector across the set of receptors toward</s></p><p><s>. For a p=2 primacy model, two primary receptors are found as two points with the largest projection onto vector , i.e. as two ORs activated at the lowest concentration by a given mixture (Figure <ref type="figure" target="#fig_1">2D</ref>).</s></p><p><s>Any mixture of odorants X and Y, corresponding to a unique vector , generates its own primacy set.</s></p><p><s>However, the number of all possible primacy sets is limited to combinations of receptors that belong to a set of p most sensitive receptors for at least one of the mixtures.</s><s>Indeed, in the example of Figure <ref type="figure" target="#fig_1">2</ref>, only four distinct sets, or odor identities, are possible under a p=2 code.</s><s>These four odor identities together constitute a low dimensional surface (~ 1D line in this 2D odorspace) that we call a primacy hull shown in Figure <ref type="figure" target="#fig_2">3A</ref>.</s><s>The primacy hull contains all OR types which belong to at least one primacy set.</s><s>According to the primacy model, odor identity is encoded by the OR types of highest affinity to a given odorant.</s><s>Therefore, ORs that have low affinity to any odor and are consequently not a member of any primacy set, are not expected to participate in odor identity coding.</s><s>Such OR types may be pseuodogenised and eventually eliminated from the genome, or are perhaps conserved for other nonolfactory coding roles <ref type="bibr" target="#b42">(Secundo et al., 2014)</ref>.</s><s>Thus, the receptors that remain should belong to the primacy hull.</s></p><p><s>Overall, we can derive two predictions from our simple 2D example.</s><s>First, the affinities of existing ORs should occupy a narrow low-dimensional shell that we call the primacy hull.</s><s>The primacy hull contains representations of all odorant identities as segments connecting primary ORs.</s><s>Second, we suggest that ORs that are not on the primacy hull (i.e.</s><s>those that are not used to identify at least one odorant) are under reduced pressure to be maintained in the genome and are therefore prone to be eliminated (pseudogenized).</s><s>These two observations will help us formulate two statistical tests for the presence of correlations implied by the primacy hull in the responses of ORs later in this paper.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Primacy number larger than two</head><p><s>The primacy number defines the fixed number of OR types required to encode any odor identity.</s><s>A primacy set, of size p, contains the ORs or glomeruli that encode a given odor identity.</s><s>Each primacy set can be represented as a geometric object called a (p-1)simplex, where p denotes the primacy number.</s><s>For example, for p=2 an odorant identity is represented by a 1-simplex, which is a segment.</s><s>Similarly, in p=3 model, odorant identities are represented by 2-simplexes, i.e. triangles (Figure <ref type="figure" target="#fig_3">4</ref>).</s><s>According to this scheme, a p=3 odorant identity is a 2-simplex (tetrahedron), etc.</s><s>For higher p, an odorant identity is defined by a (p-1)simplex in an odor space.</s><s>OR evolution in higher dimensional odor spaces.</s></p><p><s>One can generalize the definition of the primacy hull, described above in a 2D odor space, to a higher (&gt; 2) dimensional odor space.</s><s>As with the 2D case, glomeruli/ORs can be represented by points in the multidimensional space of affinities, reflecting the tuning of their OR type to the molecules defining the space.</s><s>In a 3D odor space, any mixture of odors can be represented by the unit vector q </s></p><formula xml:id="formula_8">[ C 1 C , C 2 C , C 3 C ] of relative component concentrations. A plane (D=2)</formula><p><s>perpendicular to this vector separates the half space in which receptors are active from that in which they are not.</s><s>As in 2D example, sweeping this plane from low to high concentration will define the primacy set for that odorant or mixture.</s><s>As before, the union of all primacy sets and p-1-simplexes connecting them is defined as the primacy hull of a given OR set.</s></p><p><s>Individual (p-1)-simplexes, each representing an odor identity, tessellate the primacy hull.</s><s>An example of a primacy hull in a 3D odor space in which odor identities are represented by 2-simplexes (triangles, p=3) is shown in Figure <ref type="figure" target="#fig_4">5A</ref>. Figure <ref type="figure" target="#fig_4">5B</ref> shows the 3D projection of a primacy hull in 7D odor space tessellated by 5simplexes (p=6).</s><s>In general, there need not be any relation between the dimension of the odor space (D) and the primacy number (p).</s><s>Primacy hulls are novel mathematical objects that have never been studied before.</s><s>It can be shown, for example, that a primacy hull for a set of points is different from a convex hull, although, the former includes the latter as a subset.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The Q-space</head><p><s>Until now, we have assumed that the dimensionality of the olfactory sensory space is smaller than the number of olfactory receptors ( D N  ).</s><s>The dimensionality of the sensory space can, somewhat simplistically, be viewed as the number of types of simple odorants present in the environment.</s><s>More realistically, however, each dimension in the sensory space can be viewed as a combination of simple odorants that represent complex features important to the olfactory system.</s><s>We assumed that the number of such features D is small compared to the number of OR types N. Here, we would like to define the features relevant to the olfactory system somewhat more concretely and to show that our previous analysis could, under certain assumptions, apply to both the case of simple monomolecular odorants and complex features.</s></p><p><s>According to the low-dimensional olfactory space hypothesis, the goal of the olfactory system is to project a given odorant onto the space of features.</s><s>This implies that the binding affinity of receptor r to odorant o, ro K , depends on the features present in the molecule.</s><s>In the simplest case of a linear model We argue that the evolution of olfactory receptors occurs in the low-dimensional space of molecular properties as described above.</s><s>In particular, if our assumptions are true, we argue that the primacy hull is formed in the above-defined Q-space.</s></p><p><s>Primacy hull in high-dimensional odorant space.</s></p><p><s>If the odorant space is highly multidimensional, i.e. if the number of OR types, N , is the same order of magnitude as the number of features sampled by the olfactory system, D , i.e.</s><s>D N , the primacy coding model may still be valid.</s><s>This implies that an odorant identity may be represented by the identities of p earliest or strongest activated OR types.</s><s>However, in this case, any OR can be a member of the primacy set for an odorant, and, therefore, there is no evolutionary pressure to eliminate any ORs.</s><s>Although there is still a primacy hull in this case, even for an arbitrary (unevolved) set of ORs, every OR type belongs to the primacy hull.</s><s>Thus, only in the low dimensional case ( D N  ) does a selection pressure exists for the ORs to reside along a narrow low-dimensional shell that we call a primacy hull.</s><s>We conclude therefore that the primacy coding mechanism has implications for the evolution of the OR repertoire only in the case of low dimensional perceptual manifold.</s><s>For this reason, below, we propose several experimental tests that could validate primacy coding in the low-dimensional case, i.e. when D N  .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimental predictions</head><p><s>According to the primacy model, the arrangement of ORs in affinity space is not random (Figures <ref type="figure" target="#fig_2">3</ref> and<ref type="figure" target="#fig_4">5</ref>); OR affinities occupy a low dimensional structure which is confined to a high affinity subspace of the response space.</s><s>If we had affinity data for a large panel of odorants and all glomeruli, we would be able to reconstruct the entire primacy hull, estimate its dimensionality, and establish the relationships that exist between different receptors.</s><s>However, even limited datasets could be used to test our predictions formulated earlier: 1) OR occupancy of low dimensional manifold and 2) OR occupancy of high sensitivity/affinity subspace.</s><s>Below, we investigate methods to test these predictions based experimental and simulated data.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I -Nearest Neighbor Test</head><p><s>We have suggested that the processing of olfactory information according to a primacy code would put evolutionary pressure on the ensemble of OR types to occupy a low dimensional manifold that we call the primacy hull.</s><s>The intrinsic dimensionality of this manifold is expected to be lower by one than the dimensionality of the K-or Q-space in which it is embedded.</s><s>This is illustrated in the case of the ~1D primacy hull generated in a 2D odorspace shown in Figure <ref type="figure" target="#fig_2">3B</ref>.</s><s>The ~1D primacy hull from this example is tessellated by four line segments (p = 2, 1-simplexes), each representing an individual odor identity.</s></p><p><s>More complex examples of primacy hulls are shown in Figure <ref type="figure" target="#fig_4">5</ref>.</s><s>The arrangement of OR affinities into a primacy hull implies particular high order correlations between these affinity profiles.</s><s>Indeed, within the primacy coding mechanism, odorant identities represented by (p-1)-simplexes are expected to tessellate the primacy hull.</s><s>This observation suggests that the primacy sets of ORs representing different odorant identities share more nearest neighbor (NN) relationships than would be expected at random.</s><s>Examples of NN relationships between primacy sets of OR types are illustrated in Figure <ref type="figure" target="#fig_6">6</ref>.</s><s>Thus, we hypothesize that the presence of the primacy hull could be detected by observing the number of nearest neighbors between different primacy sets and comparing this number to the case of random permutations.</s><s>This hypothesis can be tested on the matrix of responses of different ORs to a set of odorants (Figure <ref type="figure" target="#fig_7">7A</ref>).</s><s>First, for a given p-number, we determine the set of primary ORs for each odorant by selecting the p topmost responses (red highest ranking responses in each column in the Figure ).</s><s>Alternatively, if concentration series are available, the primacy sets can be chosen as the p most sensitive ORs for a given odorant.</s><s>Second, we generate a primacy matrix ro S that contains the identities of primary receptors for each odorant (Figure <ref type="figure" target="#fig_7">7B</ref>).</s><s>An element of matrix ro S is equal to 0 or 1 depending on whether OR number r belongs to the primacy set of the odorant number o.</s><s>Finally, to determine the number of in the primacy hull, one can find the number of pairs of rows in the matrix ro S that have overlap equal to p-1 (Figure <ref type="figure" target="#fig_7">7B</ref>).</s></p><p><s>The number of NNs present in the primacy sets should be compared to the null hypothesis that no correlations are present in receptor responses.</s><s>One way to generate the response matrix satisfying the null hypothesis is to randomize the existing dataset.</s><s>One can, for example, randomly permute the responses for each individual odorant, which would randomize primacy sets and destroy most of the correlations present in the response matrix.</s><s>Such an analysis, when applied to the surrogate datasets, shows significant enhancement in the number of NNs present in the surrogate data (containing a primacy hull) versus randomized data.</s><s>This is demonstrated in the case of a primacy hull in a 6D olfactory space with p=7 (Figure <ref type="figure" target="#fig_7">7C</ref>), for which the number of NNs in the primacy hull exceeds the number of NNs in the random dataset by a factor of 4 ~10</s></p><p><s>(Figure <ref type="figure" target="#fig_7">7C</ref>).</s><s>Thus, using the NN test, one can detect the presence of low-dimensional correlations in the OR responses.</s><s>Such correlations follow from the assumption of low dimensionality of the manifold sampled by the ORs, i.e. the assumption D N  .</s><s>To illustrate this analysis, we applied it to the OR responses obtained in D. Melanogaster [data from <ref type="bibr">Hallem and Carlson (2006)</ref>].</s><s>We found an enrichment in the number of NNs observed in the primacy hull obtained for p=6 (Figure <ref type="figure" target="#fig_8">8</ref>) and higher primacy numbers.</s><s>This result suggests that the OR affinities in the Drosophila olfactory system reside near a lowdimensional manifold consistent with the assumption of the primacy theory.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II -Frequency of use test</head><p><s>The nearest neighbor test allows one to determine whether OR affinities sample a low-dimensional manifold.</s><s>The origins of this manifold and its interpretation as a primacy hull require further verification.</s><s>Here, we propose a statistical technique that is intended to test primacy coding as the mechanism responsible for the formation of the lowdimensional surface.</s></p><p><s>The primacy model predicts that ORs occupy a high sensitivity/affinity subspace of the response space.</s><s>A prediction of the primacy theory is therefore that every intact OR belongs to a primacy set for at least one odorant.</s><s>Non-primary ORs are expected to be evolutionary eliminated/pseudogenized.</s><s>Thus, in the primacy matrix Ŝ (Figure <ref type="figure" target="#fig_7">7B</ref>), every row describing one OR should contain at least one non-zero element, i.e. every OR would be a member of at least one primacy set.</s><s>Our goal in this section is to make this prediction more quantitative.</s></p><p><s>Several issues complicate testing this hypothesis directly.</s><s>First, one cannot measure responses to all possible odorants present in the environment.</s><s>Therefore some of the ORs can appear to lack associations with any primacy set (they are 'orphaned') despite being parts of primacy sets for broader panels of odorants.</s><s>Second, one cannot assume that all irrelevant ORs are immediately eliminated.</s><s>Some ORs may be present in the genome as artifacts or due to other non-olfactory roles, despite their irrelevance to the primacy mechanism.</s><s>Finally, since the identities of primary receptors for each odorant depend on the value of the primacy number p, a parameter that is not known a priori, the information about the frequency of use for each OR cannot be exactly determined.</s><s>In view of these complications, we propose to use a statistical strategy that computes the frequency of OR use and compares this frequency to randomized data.</s><s>The prediction of the primacy theory is that real ORs are used more frequently as members of primacy sets compared to randomized data.</s><s>This technique is called the frequency of use test.</s></p><p><s>To generate random data, one has to confine neural responses to the low dimensional manifold found in the previous analysis (I).</s><s>Indeed, if our resampling procedure increases the dimensionality of responses, this increase could explain the changes in the frequency of OR use in primacy sets.</s><s>To address this issue, the randomized data has to be generated by embedding responses to odorants in a low dimensional subspace, using a standard embedding technique.</s><s>We will describe our analysis using the example of OR-ligand affinity matrices, however using other data may also be possible.</s></p><p><s>Let us consider the matrix of concentration thresholds  <ref type="formula">4</ref>) and ( <ref type="formula">5</ref>) allow such a matrix to be represented as a product of two low-dimensional matrices:</s></p><formula xml:id="formula_9">ˆK Q P   (7)</formula><p><s>This representation can be obtained by using singular value decomposition (SVD), non-negative matrix factorization (NMF) <ref type="bibr" target="#b29">(Lee and Seung, 1999)</ref>, or other dimensionality reduction techniques.</s></p><p><s>In equation ( <ref type="formula">7</ref>) Q is the number of ORs-by-D matrix describing the coordinates of the ORs in the lowdimensional affinity space.</s><s>These coordinates describe the tuning of a given OR type to the physico-chemical features of interest to olfaction, i.e. the internal dimensions of the olfactory space.</s><s>The arrangement of ORs in the low dimensional space corresponding to the primacy hull is illustrated for the case of D=2 in Figure <ref type="figure" target="#fig_11">9A</ref>.</s><s>The correlations present in the primacy hull can easily be destroyed if one randomly permutes one of the coordinates (horizontal, K X , Figure <ref type="figure" target="#fig_11">9B</ref>) leading to the production of a sham matrix ˆsham Q .</s><s>Applying equation ( <ref type="formula">7</ref>), one can generate the sham affinity matrix .</s><s>The prediction of the primacy theory is that ORs are more often members of primacy sets when ORs reside in a primacy hull than would be expected from random data of the same dimensionality.</s><s>The third dimension was permuted to obtain sham data.</s><s>(D) -(F) In the case of no primacy hull in the surrogate data, this test yields no difference between surrogate and resampled data.</s></p><p><s>To illustrate the proposed test, we generated surrogate OR responses corresponding to OR sampling a 3D subspace and forming a primacy hull (Figure <ref type="figure" target="#fig_11">9C</ref>).</s><s>After performing SVD and randomly permuting the third coordinate of the OR distribution, we reassembled the affinity matrix ( K ) and determined sham primacy sets for each odorant.</s><s>This procedure yields significant differences between the data containing a primacy hull and the data in which the primacy hull was destroyed via permutation (Figure <ref type="figure" target="#fig_11">9C</ref>).</s><s>Notably, in the randomized data, most ORs belong to no primacy sets for any odorant (large blue spike at zero in Figure <ref type="figure" target="#fig_11">9C</ref>).</s><s>In the case of a primacy hull arrangement, all ORs are used for at least one odorant.</s><s>Also, there is a significant enrichment in the number of ORs used multiple times, which can be verified using bootstrap.</s><s>Importantly, when the primacy hull was not present in the data (Figure <ref type="figure" target="#fig_11">9D-F</ref>) the frequency of use test showed no difference between the original and randomized data.</s></p><p><s>Here, we have proposed the frequency of use test of the primacy hypothesis.</s><s>We suggest that a combination of the low-dimensionality of the space sampled by ORs and the primacy coding mechanism should restrict ORs to a narrow high-affinity manifold in the affinity space, which we call the primacy hull.</s><s>We propose that if ORs have evolved to represent odorants using primacy coding, each OR is expected to be a member of the primacy set more often than expected on random.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Primacy model suggests that primacy hull is contained in the feedforward olfactory connectivity.</head><p><s>The primacy theory has implications for neural connectivity in the olfactory system.</s><s>One way to identify primacy sets is if the primacy hull is encoded in the feedforward connectivity between ORs/glomeruli and the higher processing centers.</s><s>In particular, the primacy model suggests that projections from simplexes representing individual primacy sets of ORs/glomeruli converge on distinct cell in the piriform cortex (PC) or its insect homolog, the mushroom body (MB) (Figure <ref type="figure" target="#fig_12">10</ref>).</s><s>Thus, individual PC neurons are tuned to respond when individual primacy groups on the primacy hull are co-activated.</s><s>This prediction implies that the bulbar-cortical (or antennal lobe-mushroom body) feedforward connectivity can be described by the simplex matrix Ŝ defined above (Figures <ref type="figure" target="#fig_7">7B</ref> and<ref type="figure" target="#fig_8">8B</ref>).</s></p><p><s>As a corollary, this observation suggests that although feedforward connectivity may appear random, it may contain high-order correlations induced by the presence of the primacy hull in responses.</s><s>These correlations may be detected using the nearest neighbor test described by us previously.</s><s>In addition, we propose that the connectivity may be obtained on the basis of neuronal responses, by combining neurons with the strongest affinity for a relevant set of odorants.</s><s>These predictions are experimentally verifiable and could be used to refine or rule out the proposed primacy model.</s><s>Overall, we propose that responses of cells in PC reflect activations of simplexes that are subsets or faces of the primary simplex corresponding to the presented odorant's identity.</s><s>Because the number of such faces is given by a binomial formula, it can be astronomically large, which may explain the large population of cells activated in PC.</s><s>A possible reason for such a coding strategy may be in the robustness of representation: a pattern of activation representing the faces of the primary simplex is more robust to noise than the activity of a single cell representing the primary simplex itself.</s><s>We will further call the faces of the primary simplex, the subprime simplexes.</s><s>Interestingly, a complete set of subprime faces of a given degree uniquely represents the primary simplex.</s><s>Indeed, in Figure <ref type="figure" target="#fig_3">4</ref>, the set of four triangles represents uniquely the primary tetrahedron.</s><s>The same is true about the complete set of six segments.</s><s>In the case that some of the subprime simplexes fail to be activated, due to the presence of noise, for instance, the excitatory circuit in PC may implement pattern fill-in.</s><s>This can be accomplished if subprime simplexes corresponding to the same primary simplex are connected by synapses with positive strength, in a manner similar to Hopfield networks.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DISCUSSION</head><p><s>In this work, we consider the problem of reconciling the perceptual stability of odor quality over a wide range of odorant concentrations with the variability in odorant evoked neural activity over that concentration range.</s><s>We suggest the primacy code as a relatively simple solution to this computationally difficult problem.</s><s>We find that under certain assumptions, the primacy model can be tested using the responses of ORs to panels of odorants.</s><s>The statistical tests that we propose could be used to test both the primacy model and some of the assumptions that we have made.</s></p><p><s>According to the primacy model, the identity of an odorant is encoded by the activity of the set of OR types of highest affinity, defined as the primacy set for a given odorant.</s><s>In the simplest implementation, each primacy set includes exactly p OR types.</s><s>The primacy number, p, is therefore an important parameter of this model.</s><s>Because highest affinity ORs are expected to respond with the shortest latency or the greatest magnitude for a range of odorant concentrations, detecting the earliest or strongest responding receptors yields a concentration-invariant odorant representation.</s><s>For example, if Olfr66 and Olfr55 form a primacy set for an odorant (p=2), they are assumed to be the first two OR types activated by this odorant following inhalation onset for both high and low ambient concentrations.</s></p><p><s>If one focuses on the computational problem of determining the identity of an odorant, it is hard to imagine alternatives to the primacy mechanism.</s><s>Indeed, as the concentration of an odorant increases, more receptor types are expected to be activated within a sniff cycle.</s><s>How can the nervous system link the representation of the same odorant of low and high concentrations into the same perceived identity?</s><s>Hopfield proposed a model that attributes an odor identity to the sequence of receptor neuron activation in which concentration is encoded by the latency of OR activation <ref type="bibr" target="#b19">(Hopfield, 1995)</ref>.</s><s>In his model, an increase of concentration leads to temporal shift in the entire OR activity pattern <ref type="bibr" target="#b31">(Margrie and Schaefer, 2003;</ref><ref type="bibr" target="#b40">Sanders et al., 2014;</ref><ref type="bibr" target="#b41">Schaefer and Margrie, 2007;</ref><ref type="bibr" target="#b43">Shusterman et al., 2011)</ref>.</s><s>However, it is not clear how the system might process the additional signals from receptors that were not activated at low concentrations, but are recruited at higher concentrations.</s><s>Alternative models of concentration invariant identity assignment based on normalization of bulbar responses may only partially solve this problem <ref type="bibr" target="#b2">(Banerjee et al., 2015;</ref><ref type="bibr" target="#b9">Cleland et al., 2011;</ref><ref type="bibr" target="#b22">Kato et al., 2013;</ref><ref type="bibr" target="#b33">Miyamichi et al., 2013)</ref>.</s><s>Indeed, normalization requires integration across all channels, or glomeruli <ref type="bibr" target="#b51">(Zhu et al., 2013)</ref> including those that are activated later in the sniff cycle <ref type="bibr">(Carey et al., 2009)</ref>.</s><s>Such mechanisms seem to preclude observed odor guided decisions based on early olfactory inputs <ref type="bibr" target="#b49">(Wilson et al., 2017)</ref>.</s><s>Thus, both onset latency and normalization models should rely on the odorant representations emerging at the lowest concentrations.</s><s>It would therefore be interesting to understand the interplay between onset latency/normalization models and the primacy mechanism proposed here.</s></p><p><s>Since neural representations at high and low concentrations are different, it seems straightforward to link them via their overlap, i.e. the ORs that respond at the lowest concentration.</s><s>Thus, the primacy model postulates that odorant identity is determined by the unifying features of the odorant's neural representation across a range of concentrations, i.e. responses of the highest affinity ORs.</s><s>In the simplest implementation of the primacy model described in this paper, it is assumed that the activation order of primary OR activation is not important.</s><s>This is order-independent primacy coding mechanism.</s><s>Alternatively, the order of recruitment of the primary receptors may play a role in encoding odorant identity.</s><s>Approximation of rodent psychophysical performance with a computational model based on a neural network suggests that an order-independent primacy mechanism is more likely to be implemented than the order-dependent counterpart <ref type="bibr" target="#b49">(Wilson et al., 2017)</ref>.</s><s>Both order-dependent and orderindependent primacy mechanisms, however, postulate that the activities of low-affinity ORs are not used in encoding odorant identity.</s><s>This prediction stands in contrast to alternative approaches, which formulate olfactory algorithm in compressed sensing terms <ref type="bibr" target="#b28">(Krishnamurthy et al., 2017)</ref>, stressing the importance of both high and low affinity OR types in the implicit computation of identity for flexible learning.</s></p><p><s>To derive the properties of the primacy model we have made several assumptions.</s><s>Here, we discuss the impact of these assumptions on our predictions.</s><s>Our main assumptions include: (i) the primacy coding mechanism (primacy assumption) (ii) the hypothesis that the olfactory system samples a low-dimensional subspace in the space of odorant properties (the lowdimensional olfaction), and (iii) the hypothesis that the set of OR has evolved to optimally implement the coding strategy (the evolution assumption).</s><s>We concluded that if the olfactory space is low-dimensional [i.e.</s><s>hypothesis (ii) is valid], the primacy coding mechanism will render many ORs useless, unless they reside along a thin high-affinity boundary that we call the primacy hull.</s><s>Thus, all three assumptions are necessary for the primacy hull to exist.</s><s>If, for example, the olfactory space is instead high-dimensional, i.e. hypothesis (ii) is violated, the primacy mechanism may still be valid.</s><s>In this case, every OR can be a member of the primacy set, and, thus, evolution will favor the retention of all of the ORs in the genome.</s><s>The two statistical tests that we have proposed, the nearest neighbor and frequency of use tests, will both fail in this case.</s><s>This observation suggests that these tests cannot completely rule out the importance of the primacy coding mechanism.</s><s>They are useful only if our basic assumptions are valid.</s><s>If the evolution of ORs is somehow irrelevant, i.e. if the optimization of the receptor repertoire to process a primacy code does not impact an organisms fitness, many functional OR genes may be present in the genome that are not members of any primacy sets.</s><s>In this case, the nearest neighbor test may detect the low-dimensional olfactory space, while the frequency of use test will fail (Figure <ref type="figure" target="#fig_11">9D-F</ref>).</s><s>A similar prediction can be made in the case of failure of the primacy-coding hypothesis: OR responses may be limited to a low dimensional manifold, making the nearest neighbor test valid.</s><s>At the same time, the frequency of use test will fail, as ORs have no reason to reside along a high-affinity boundary.</s><s>Overall, we suggest that the nearest neighbor test can help verify the importance of assumptions (ii) and (iii), while the frequency of use test can falsify hypothesis (i) and (iii).</s></p><p><s>Our approach also adopts the idea that perceptually new odor mixtures can be generated by superpositions of two or more odorants, resulting in a new primacy set.</s><s>Thus, the primacy model is at its essence synthetic, postulating that neural representations of mixtures are not distinguishable from monomolecular odorants.</s><s>Within this approach, different components of odor mixtures can still be identified, if a network is separately trained to identify components based of synthetic primacy representations.</s><s>Thus, experiments in which animals were able to identify individual mixture components <ref type="bibr" target="#b38">(Rokni et al., 2014)</ref> are not inconsistent with the primacy model.</s><s>In one implementation of primacy networks based on duality, for example, it is proposed that olfactory cortex contains synthetic primacy representations, while decomposition of mixtures into components is outsourced to the granule cells of the olfactory bulb <ref type="bibr" target="#b24">(Kepple et al., 2016)</ref>.</s><s>This suggestion is based, in part, on the observation that the number of olfactory bulb granule cells is similar to the number of known volatile molecules <ref type="bibr" target="#b24">(Kepple et al., 2016)</ref>.</s><s>One corollary of the synthetic nature of primacy representations, is that synthetic representations exist for both familiar and novel odorants.</s><s>Therefore, within the primacy approach, the cortical representations of both types of stimuli are not different.</s><s>From a statistical standpoint, the simplexes representing novel odorants are the same as the ones coding for the odorants already experienced.</s><s>This property of the primacy model is a consequence of the low-dimensional nature of the olfactory space, i.e. that ORs form synthetic representations that code for a finite set of feature dimensions.</s><s>This prediction is distinct from the model based of Bayesian inference <ref type="bibr" target="#b15">(Grabska-Barwinska et al., 2017)</ref>.</s></p><p><s>In conclusion, we propose a theory of odor perception based on a small number of assumptions.</s><s>We propose that a concentration invariant odor identity could be computed given a set of olfactory receptors most sensitive to the given odorant.</s><s>We have shown that evolutionary pressure to represent odorants using this primacy model leads to a unique arrangement of receptors along a high-affinity surface.</s><s>This primacy hull is a novel mathematical object.</s><s>We have proposed two statistical tests that could guide further data collection and help to identify the presence of a primacy hull experimentally.</s><s>The primacy model accounts for the stable computation of odor identity despite wide variations in neural activity associated with odorant concentration.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>METHODS</head><p><s>Generating surrogate primacy hulls.</s><s>Primacy hulls are parameterized by N, the number of OR types, D, the dimension of the odorspace and the primacy number, p.</s><s>To generate the primacy hull, we filled a positive orthant of a unit sphere in D dimensions with a large number of points representing individual ORs.</s><s>A stimulus of dimension D, i q  , is represented by a random vector of length one (uniformly distributed on the positive orthant of the hypersphere surface).</s></p><p><s>The simplex corresponding to i q  is found by calculating the dot product of i q  with all receptors j r  and associating the top p OR types into a simplex.</s><s>This process is repeated 10 6 -10 8 times until all unique simplexes are identified.</s><s>The ORs that are not members of primacy sets are excluded from further analyses.</s><s>We defined the simplex matrix or S , which is equal to 1 if the receptor r is a member of the primacy set for the odorant o and 0 otherwise.</s><s>The number of unique odorant identities is determined by the number of unique rows in this matrix, s N .</s></p><p><s>Generating randomized simplicial complexes.</s><s>In order to generate null simplicial complexes against which to compare the statistics of the primacy hull, we randomly permute each row of matrix or S .</s><s>The number of unique simplexes in the primacy hull and the random simplicial complex should be equal, therefore random simplexes will be added until the number of unique simplexes is equal to s N .</s><s>This method will remove the high order correlations in the receptor response profiles induced by the primacy hull.</s><s>/ ( <ref type="formula" target="#formula_0">1</ref>)</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I -Nearest</head><formula xml:id="formula_10">o all ro o ro o o o o R R K C K C     </formula></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Spatial primacy model.</s><s>A. Glomerulus response curves as a function of odorant concentration.</s><s>At concentration C1, two glomeruli are active (shown in red).</s><s>B. Glomerulus response patterns for three concentrations of the same odorant, from low (C1) to high (C3).</s><s>The primacy set (red circles) of most strongly activated glomeruli does not change with concentration.</s><s>C. Different odorants are represented by different primacy sets.</s></p></div></figDesc><graphic coords="3,61.92,71.76,209.28,193.44" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Representation of receptors in affinity space.</s><s>A. Receptors of a given type can be represented as points in a twodimensional space of binding affinities for odorants X and Y: KX and KY.</s><s>B. Introducing an odor partitions the space of affinities into regions in which ORs are active (</s></p></div></figDesc><graphic coords="5,51.36,133.20,229.92,189.36" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3.</s><s>The primacy hull for a set of receptors distributed in a two-dimensional odor space.</s><s>A. Primacy sets for all possible mixtures.</s><s>Red segments define individual odor identities, red dots are all receptors which belong to at least one primacy set.</s><s>B. ORs in the primacy set for at least one odorant form a primacy</s></p></div></figDesc><graphic coords="5,318.96,534.96,252.96,115.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Odorant identities are encoded by a set of ORs of size p, which can be geometrically represented as (p-1) simplexes: for p = 2 this simplex is a segment, for p = 3 -a triangle, and for p = 4 -a tetrahedron, etc.</s></p></div></figDesc><graphic coords="6,345.36,71.76,199.44,67.44" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Primacy hulls in dimensions D &gt; 2. A. D = 3, p = 3: ~2D surface of the primacy hull in 3D is tessellated by triangles (p = 3), which represent different odor identities.</s><s>Receptors inside the hull are eliminated in the course of evolution, as they are not active in encoding odor identities.</s><s>B. D = 6, p = 7: a primacy hull in 6D with odors represented by seven receptors, projected onto three dimensions.</s></p></div></figDesc><graphic coords="7,35.76,161.04,257.52,115.92" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head></head><label></label><figDesc><div><p><s>d indexes the property sampled by the ORs, rd Q is the sensitivity of OR number r to the property d, and do P , the property d content in odorant o.</s><s>For example, if receptors were discriminating molecules on the basis of their molecular weight, do P would contain the molecular weights of different molecules indexed by o.</s><s>If ORs were sensitive to the Debye dipole moment (Koulakov et al., 2011), do P would include the value of the Debye moment for all molecules, while rd Q would describe the sensitivity of receptor r to this feature.</s><s>Although it is not entirely clear what the important molecular features are, on the basis of behavioral data (Koulakov et al., 2011), we can assume that the number of these features D is small.</s><s>Equation (4) can be viewed as the dimensionality reduction equation for the affinity matrix using Principal Component Analysis (PCA) or Non-Negative Matrix factorization (NMF).</s><s>The assumption used in this equation is that the number of intrinsic degrees of freedom in the matrix K is smaller than the number of receptors, i.e.</s><s>D N  .</s><s>Assume that the odorant is a mixture of several monomolecular components described by the vector of molecular concentrations o C .</s><s>Here o, as before, is the index enumerating monomolecular components.</s><s>The activation of a receptor r f is then described by the mass action law: (5) Here, we introduced the concentration of molecular feature number d (6)Within this approach, the concentrations of molecular features do not depend on the odorant receptor.</s><s>As such, they act equally on all receptors and are not distinguishable mathematically from the concentrations of odorants.</s><s>Importantly, however, the number of feature concentrations, D , is small, according to our assumption that the olfactory system samples only a small number of odorant properties.</s><s>These observations allow us to treat molecular features as simple odorants, the sensitivities of a particular receptor to features rd Q as the affinities ro K .</s><s>We suggest therefore that the pairs of variables ( , ) ro o K C and can be used interchangeably to determine the strength of receptor activation.</s><s>Because the latter pair contains only D properties, our model D N  applies to the system of receptors in the space defined by rd Q instead of binding affinities ro K .</s><s>If before we defined the coordinates of receptors via ro K , we can define such coordinates through rd Q .</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>Overlaps in odorant representation.</s><s>A. All possible overlaps between two simplexes (odorant identities), where an odorant is represented asa tetrahedron ( 4 p  ) and overlap, O is defined as the number of common nodes between two simplexes: no overlap 0 O  , complete overlap 4 O p   .</s><s>B.</s></p></div></figDesc><graphic coords="9,35.76,71.76,258.48,164.40" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 7 .</head><label>7</label><figDesc><div><p><s>Figure 7. Analysis of surrogate data.</s><s>A. An example response matrix R or contains the strength of OR responses to a set of odorants in the form of spike counts, p=3 strongest responses marked red.</s><s>B. The primacy matrix S or : S or = 1 or 0, if receptor r belongs or does not belong to a primacy set for an odor o The NN odorants can be identified as columns in the simplex matrix (shaded) that have an overlap equal to p-1. C. The number of neighbors present in the surrogate data (Figure 5B, D=6, p=7) as a function of degree of overlap.</s><s>Red bars show surrogate data.</s><s>Blue bars show randomized surrogate data.</s><s>Nearest neighbors</s></p></div></figDesc><graphic coords="9,340.32,248.64,210.48,334.56" type="vector_box" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 8 .</head><label>8</label><figDesc><div><p><s>Figure 8. A,B.</s><s>The response ( ro R ) and binary primacy matrix (</s></p></div></figDesc><graphic coords="10,35.76,270.24,261.60,220.80" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head></head><label></label><figDesc><div><p><s>for a receptor r and odor o, 50 ro C .</s><s>This value can be defined as a concentration for which activity element of this matrix refers to the concentration of the odorant number o needed to induce the response in the OR number r halfway between the baseline and maximum.</s><s>If one introduces the affinity matrix using</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head></head><label></label><figDesc><div><p><s>this matrix, the primacy sets for each odorant and the frequency of use for each OR can be determined.</s><s>The frequency of use obtained for ˆsham K can then be compared to the real data matrix</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 9 .</head><label>9</label><figDesc><div><p><s>Figure 9. Frequency of use test of the primacy hypothesis.</s><s>(A)The arrangement of receptors in the reduced dimensionality affinity space (Q-space) corresponding to a primacy hull.</s><s>(B) randomized arrangement obtained from (A) by permuting the horizontal coordinates.</s><s>A sham Q-matrix corresponding to the permuted data can be used to generate a resampled K-matrix.</s><s>(C) Number of ORs that belong to primacy sets of the given number of odorants for surrogate (computer generated) dataset containing a primacy hull (red) and after resampling (blue).</s><s>For the resampled dataset, most ORs belong to no primacy sets (a large blue bar at zero).</s><s>In this simulation we used N=1000 ORs, out of which only 100 were observed, responding to 100 odorants.</s><s>The ORs formed a primacy hull in D=3 dimensions.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 10 .</head><label>10</label><figDesc><div><p><s>Figure 10.</s><s>Primacy model prediction about receptor-cortical connectivity.</s><s>A. Left: Primacy hull for D = 2 and p = 2, a, b, c, d are discriminable odor identities.</s><s>Right: connectivity between ORs 1, 2, …5 and cortical cells corresponding to different odor identities.</s><s>The glomeruli from the same primacy sets converge to the same cortical cells.</s><s>B. The same for D = 3 and p = 3.</s><s>Only two example simplexes are illustrated.Additional insights into OB-OC connectivity can be gained from the sparseness of PC responses to odorants.</s><s>In the connectivity model proposed above, taken without modifications, only a single PC neuron</s></p></div></figDesc><graphic coords="12,331.92,327.12,227.28,237.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head></head><label></label><figDesc><div><p><s>To distinguish between the possible low dimensional distributions of the receptor ensemble in Kspace, the affinity score matrix ( or K ) is randomized whilst preserving low dimensional structure.</s><s>First we computed the low dimensional representation of we randomized the coordinates of receptors (matrix V ) along one of the hidden dimensions to generate the sham matrix ˆsham V .</s><s>We used the third hidden dimension sorted according to the amplitude of diagonal in matrix D .</s><s>Finally, we reassembled three SVD matrices into the sham matrix of OR affinities ˆˆˆˆT</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Neighbor Test Comparison of surrogate to random simplicial complexes</head><label></label><figDesc><div><p><s> for various combinations of parameters p and O is represented as a matrix in Figure8Bfor a fixed D and N. The nearest neighbors are represented in this matrix by the diagonal for which Data is organized into matrix or R (odor x receptor response).</s><s>The primacy set for each odor identity can be defined in the odor-response matrix as follows: the p strongest responses for each odorant are identified in the response matrix or The ratio  of the number of overlaps of degree , 1...</s></p></div></figDesc><table><row><cell cols="5">parameters</cell><cell cols="5">{ , , } g N D p </cell><cell>,</cell><cell>( , ) i f O g (averaged over PH</cell></row><row><cell cols="10">100 instantiations), to the average of 1000 randomized</cell></row><row><cell cols="10">simplical complexes also defined by g,</cell><cell>f</cell><cell>RANDOM</cell><cell>( , ) i O g ,</cell></row><row><cell cols="10">can be given as a log quotient:</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell cols="2"></cell><cell>10 log</cell><cell>  </cell><cell>f</cell><cell>( , ) ( , ) i RANDOM PH i f O g O g</cell><cell>  </cell><cell>(8)</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>1   . O p</cell></row><row><cell cols="5">Identifying</cell><cell></cell><cell cols="4">(p-1)-simplexes</cell><cell>in</cell><cell>odor-receptor</cell></row><row><cell cols="10">response data: R and assigned a</cell></row><row><cell cols="10">value of 1 in the binary matrix or S (Figure 7). The</cell></row><row><cell cols="10">number of overlaps between primacy sets (rows) of</cell></row><row><cell cols="10">varying degrees, from</cell><cell>, O i i</cell><cell>1...</cell><cell>p</cell><cell>, can be counted</cell></row><row><cell cols="10">from the lower triangle of the overlap matrix</cell><cell>Q SS </cell><cell>T</cell></row><row><cell cols="2">i O i</cell><cell></cell><cell></cell><cell cols="2">p</cell><cell></cell><cell cols="2">in</cell><cell>the</cell><cell>data</cell><cell>with</cell><cell>underlying</cell></row><row><cell>g</cell><cell cols="2">' { N </cell><cell></cell><cell cols="2">24,</cell><cell>D</cell><cell></cell><cell cols="2">110, } p</cell><cell>, [</cell><cell>( , ') i f O g ] and the PH</cell></row><row><cell cols="10">average of 1000 randomized simplicial complexes</cell></row><row><cell cols="4">defined by</cell><cell>f</cell><cell cols="4">RANDOM</cell><cell>( , ') i O g is given by equation (8).</cell></row><row><cell cols="2">II -</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>i O i</cell><cell></cell><cell>p</cell><cell>in a primacy hull defined by</cell></row></table><note><p><s>. The ratio  of the number of overlaps of degree , 1... .</s><s>Comparison of D. Melanogaster data to randomized data.</s></p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Frequency of use test Comparison of Surrogate to Randomized Affinity Scores.</head><label></label><figDesc><div><p><s>Generation of surrogate affinity matrix:We generated 1000 ORs on a sphere in 3D (positive orthant).</s><s>We took a subset of 100 ORs to generate conditions close to experimental data.</s><s>We presented the ensemble of 100 ORs with 100 odorants represented by unit vectors in 3D.</s><s>These vectors formed columns of matrix Q .</s></p></div></figDesc><table><row><cell>calculated as inner products between receptor and</cell></row><row><cell>stimulus vectors:</cell></row><row><cell>Affinity scores for each receptor-stimulus pair are</cell></row></table></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Olfaction: Diverse Species, Conserved Principles</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Ache</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Young</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="417" to="430" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">The molecular logic of smell</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Axel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Am</title>
+		<imprint>
+			<biblScope unit="volume">273</biblScope>
+			<biblScope unit="page" from="154" to="159" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">An Interglomerular Circuit Gates Glomerular Output and Implements Gain Control in the Mouse Olfactory Bulb</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Banerjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Marbach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Anselmi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Koh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Garcia Da Silva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Delevich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Oyibo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="193" to="207" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Olfactory conditioning in the honey bee, Apis mellifera:effects of odor intensity</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Bhagavan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">H</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol Behav</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="107" to="117" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Olfactory discrimination of short chain fatty acids in rats with large bilateral lesions of the olfactory bulbs</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Bisulco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem Senses</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="361" to="370" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Simple networks for spike-timing-based computation, with application to olfactory processing</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Hopfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="843" to="852" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Temporal structure of receptor neuron input to the olfactory bulb imaged in behaving rats</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Carey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Verhagen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Wesson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pírez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wachowiak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="1073" to="1088" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Temporal structure of receptor neuron input to the olfactory bulb imaged in behaving rats</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M V</forename><surname>Carey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Wesson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Pirez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Wachowiak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="1073" to="1088" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Construction of odor representations by olfactory bulb microcircuits</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Cleland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Prog Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">208</biblScope>
+			<biblScope unit="page" from="177" to="203" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Sequential mechanisms underlying concentration invariance in biological olfaction</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Cleland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Hozer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">N</forename><surname>Ukatu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Neuroeng</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">21</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Robust odor coding via inhalation-coupled transient activity in the mammalian olfactory bulb</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Cury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="570" to="585" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Odor Response Properties of Rat Olfactory Receptor Neurons</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Duchamp-Viret</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Duchamp</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sccience</title>
+		<imprint>
+			<biblScope unit="volume">284</biblScope>
+			<biblScope unit="page" from="2171" to="2174" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">A code in the nose</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Firestein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science Signaling</title>
+		<imprint>
+			<biblScope unit="page">e15</biblScope>
+			<date type="published" when="2004">2004. 2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Olfactory receptor neuron responses coding for rapid odour sampling</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S R</forename><surname>Ghatpande</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Physiol</title>
+		<imprint>
+			<biblScope unit="volume">589</biblScope>
+			<biblScope unit="page" from="2261" to="2273" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Similar numbers but different repertoires of olfactory receptor genes in humans and chimpanzees</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Go</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Niimura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Biol Evol</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="1897" to="1907" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">A probabilistic approach to demixing odors</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grabska-Barwinska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Barthelme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Beck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="98" to="106" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Concentrationdependent changes of perceived odor quality</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Gross-Isseroff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem Senses</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="191" to="204" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Parallel-distributed processing in olfactory cortex: new insights from morphological and physiological analysis of neuronal circuitry</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">B</forename><surname>Haberly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem Senses</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="551" to="576" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Olfactory cortical neurons read out a relative time code in the olfactory bulb</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Haddad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lanjuin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Madisen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">N</forename><surname>Murthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="949" to="957" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Pattern recognition computation using action potential timing for stimulus representation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Hopfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">376</biblScope>
+			<biblScope unit="page" from="33" to="36" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Odor space and olfactory processing: collective algorithms and neural implementation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Hopfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="12506" to="12511" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Airflow and nanoparticle deposition in rat nose under various breathing and sniffing conditions: a computational evaluation of the unsteady effect</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Aerosol Sci</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="1030" to="1043" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Parvalbumin-expressing interneurons linearly control olfactory bulb output</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Kato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Gillet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Isaacson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Komiyama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="1218" to="1231" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">The interaction of imposed and inherent olfactory mucosal activity patterns and their composite representation in a mammalian species using voltage-sensitive dyes</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">F</forename><surname>Kent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Mozell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Murphy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Hornung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="345" to="353" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">Deconstructing Odorant Identity via Primacy in Dual Networks</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kepple</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Giaffar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<ptr target="https://arxivorg/abs/160902202" />
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Predicted 3D structures of olfactory receptors with details of odorant binding to OR1G1</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Goddard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Aided Mol Des</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="1175" to="1190" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Olfactory coding with all-or-nothing glomeruli</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Rinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="3134" to="3142" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Kolterman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Enikolopov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">search of the structure of human olfactory space</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">65</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Qualitative and quantitative olfactometric evaluation of different concentrations of ethanol peppermint oil solutions</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Krishnamurthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Hermundstad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Walczak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Balasubramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Krone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mannel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Pauli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hummel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phytother Res</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="135" to="138" />
+			<date type="published" when="2001">2017. 2001</date>
+		</imprint>
+	</monogr>
+	<note>bioRxiv</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Learning the parts of objects by non-negative matrix factorization</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">401</biblScope>
+			<biblScope unit="page" from="788" to="791" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Combinatorial receptor codes for odors</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Malnic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hirono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">B</forename><surname>Buck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="713" to="723" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Theta oscillation coupled spike latencies yield computational vigour in a mammalian sensory system</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Margrie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Schaefer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Physiology</title>
+		<imprint>
+			<biblScope unit="volume">546</biblScope>
+			<biblScope unit="page" from="363" to="374" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Reading Out Olfactory Receptors: Feedforward Circuits Detect Odors in Mixtures without Demixing</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mathis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rokni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kapoor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bethge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">N</forename><surname>Murthy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="1110" to="1123" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Dissecting local circuits: parvalbumin interneurons underlie broad feedback control of olfactory bulb output</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Miyamichi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shlomai-Fuchs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Weissbourd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mizrahi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="1232" to="1245" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">The olfactory bulb: coding and processing of odor molecule information</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nagao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yoshihara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">286</biblScope>
+			<biblScope unit="page" from="711" to="715" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Evidence for a Chromatographic Model of Olfaction</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Mozell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Gen Physiol</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="46" to="63" />
+			<date type="published" when="1970">1970</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">HORDE: comprehensive resource for olfactory receptor genomics</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Olender</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Nativ</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lancet</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Methods Mol Biol</title>
+		<imprint>
+			<biblScope unit="volume">1003</biblScope>
+			<biblScope unit="page" from="23" to="38" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Antagonism in olfactory receptor neurons and its implications for the perception of odor mixtures</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Reddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vergassola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">N</forename><surname>Murthy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">bioRxiv</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">An olfactory cocktail party: figure-ground segregation of odorants in rodents</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rokni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Hemmelder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kapoor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">N</forename><surname>Murthy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1225" to="1232" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Odor coding by a Mammalian receptor repertoire</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Saito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Chi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Matsunami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Mainland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Signal</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">A network that performs brute-force conversion of a temporal sequence to a spatial pattern: relevance to odor recognition</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sanders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Kolterman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shusterman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lisman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">108</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Schaefer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Margrie</surname></persName>
+		</author>
+		<title level="m">Spatiotemporal representations in the olfactory system. Trends in neurosciences</title>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="92" to="100" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">The perceptual logic of smell</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Secundo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Snitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sobel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Opinion in Neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="107" to="115" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Precise olfactory responses tile the sniff cycle</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shusterman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Smear</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1039" to="1044" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Detection and discrimination of carvone enantiomers in rats with olfactory bulb lesions</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Slotnick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bisulco</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="451" to="457" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<author>
+			<persName><forename type="first">H</forename><surname>Spors</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grinvald</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Spatio-temporal dynamics of odor representations in the mammalian olfactory bulb</title>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="301" to="315" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Coding and transformations in the olfactory system</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Poo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Haddad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Odor concentration invariance by chemical ratio coding</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Syst Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Perceptual convergence of multi-component mixtures in olfaction implies an olfactory white</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Weiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Snitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yablonka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gafsou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Schneidman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sobel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="19959" to="19964" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">A primacy code for odor identity</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">O</forename><surname>Serrano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">1477</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">A Robust Feedforward Model of the Olfactory System</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">O</forename><surname>Sharpee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">1004850</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Equalization of odor representations by a network of electrically coupled inhibitory interneurons</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1678" to="1686" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Receptor arrays optimized for natural odor statistics</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zwicker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Murugan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Brenner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="5570" to="5575" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

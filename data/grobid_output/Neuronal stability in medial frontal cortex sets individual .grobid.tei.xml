@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Individual differences in perceptual decision making reflect neural variability in medial frontal cortex</title>
+				<funder>
+					<orgName type="full">MEXT</orgName>
+				</funder>
+				<funder ref="#_657aWeC #_G9aHfYs">
+					<orgName type="full">KAKENHI</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Cold Spring Harbor Laboratory</publisher>
+				<availability status="unknown"><p>Copyright Cold Spring Harbor Laboratory</p>
+				</availability>
+				<date type="published" when="2017-05-18">2017-05-18</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tomoki</forename><surname>Kurikawa</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Laboratory for Neural Circuit Theory</orgName>
+								<orgName type="institution">RIKEN Brain Science Institute</orgName>
+								<address>
+									<addrLine>Hirosawa 2-1</addrLine>
+									<postCode>351-0198</postCode>
+									<settlement>Wako</settlement>
+									<region>Saitama</region>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Takashi</forename><surname>Handa</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Behavior and Brain Organization</orgName>
+								<orgName type="institution">Research Center Caesar</orgName>
+								<address>
+									<addrLine>Ludwig-Erhard-Allee 2</addrLine>
+									<postCode>53175</postCode>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tomoki</forename><surname>Fukai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Laboratory for Neural Circuit Theory</orgName>
+								<orgName type="institution">RIKEN Brain Science Institute</orgName>
+								<address>
+									<addrLine>Hirosawa 2-1</addrLine>
+									<postCode>351-0198</postCode>
+									<settlement>Wako</settlement>
+									<region>Saitama</region>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Individual differences in perceptual decision making reflect neural variability in medial frontal cortex</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<publisher>Cold Spring Harbor Laboratory</publisher>
+							<date type="published" when="2017-05-18" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">005B3FF02754C0ABF1C5C805C1C9C856</idno>
+					<idno type="DOI">10.1101/139493</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:08+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>behavioral bias</term>
+					<term>recurrent network model</term>
+					<term>reservoir computing</term>
+					<term>reinforcement learning</term>
+					<term>eligibility</term>
+					<term>probabilistic decision making</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Decision making obeys common neural mechanisms, but there is considerable variability in individuals' decision making behavior particularly under uncertainty.</s><s>How individual differences arise within common decision making brain systems is not known.</s></p><p><s>Here, we explored this question in the medial frontal cortex (MFC) of rats performing a sensory-guided choice task.</s><s>When rats trained on familiar stimuli were exposed to unfamiliar stimuli, choice responses varied significantly across individuals.</s><s>We examined how variability in MFC neural processing could mediate this individual difference and constructed a network model to replicate this.</s><s>Our model suggested that susceptibility of neural trajectories is a crucial determinant of the observed choice variability.</s><s>The model predicted that trial-by-trial variability of trajectories are correlated with the susceptibility, and hence also correlated with the individual difference.</s><s>This prediction was confirmed by experiment.</s><s>Thus, our results suggest that variability in neural dynamics in MFC networks underlies individual differences in decision making.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Animals need to respond to sensory input from the environment and make adaptive decisions, even when the sensory information is ambiguous.</s><s>When animals are familiar with given sensory stimulus, their behavioral responses are stereotyped.</s><s>However, when sensory input is unfamiliar to animals, their responses are more variable and exhibit a highly probabilistic nature.</s><s>Decision making in such ambiguous situations is expected to show a wide spectrum of individual differences depending on the behavioral traits of each subject.</s></p><p><s>Many studies have explored the general tendencies and underlying neural mechanisms of probabilistic decision making <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref>.</s><s>In particular, many studies have suggested the crucial role of choice-specific neural activity sequences in decision making behavior <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref>.</s><s>However, surprisingly little is known about the characteristic features of neural activity that influence the behavioral variability of individual animals.</s></p><p><s>In this study, we experimentally and computationally explore such features and the underlying mechanisms in choice-specific sequences in medial frontal cortex (MFC).</s></p><p><s>Inactivation of the MFC is known to impair motor responses driven by sensory input <ref type="bibr" target="#b6">[7]</ref>,</s></p><p><s>and recent studies have shown that the MFC is engaged in decision making and goal-directed behavior <ref type="bibr" target="#b7">[8]</ref>.</s></p><p><s>Choice-specific neural trajectories have been found in the MFC of rats performing an alternative choice task in response to auditory stimuli <ref type="bibr" target="#b8">[9]</ref>.</s><s>In this task, after rats had been trained with familiar tone stimuli, they were required to respond to unfamiliar tone stimuli that had not been used during training.</s><s>MFC neurons in these animals formed choice-specific trajectories for familiar stimuli.</s><s>Furthermore, the probabilistic choice responses of the rats showed substantial individual differences in psychometric curves, presumably reflecting different preferences and/or strategies in decision making.</s><s>These findings motivated us to explore the cortical mechanisms underlying the reward-driven formation of choice specific sequences and their influences on the individual differences.</s><s>Cortical mechanisms have been extensively studied to account for general tendencies in decision making behavior <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b2">3]</ref>, but little has been explored about the neural correlates of individual differences.</s></p><p><s>In this study, we first address how neural trajectories emerge for familiar stimuli and guide decision making for unfamiliar stimuli.</s><s>We then ask whether and how the properties of these trajectories influence choice responses and the resultant psychometric curves.</s><s>For this purpose, we construct a recurrent network model <ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref> based on experimental observations from the rat MFC, and train it with a reinforcement learning algorithm for an association task <ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref>.</s><s>Our model generates a spectrum of decision behavior that is compatible to the observed variability in behavioral performance across different rats.</s><s>We found that susceptibility of neural trajectories to perturbation predicted variability in behavior and that trial-by-trial variability reflected the susceptibility and, consequently, the behavioral variability.</s><s>Our results suggest that the susceptibility of neural dynamics correlate the trial-by-trial variability in MFC with individual differences in choice responses to uncertain stimuli.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral variability in decision making with unfamiliar sensory cues</head><p><s>Our hypothesis is that individual differences in ambiguous choice responses partly emerge from neural dynamics formed in MFC through previous experiences.</s><s>We examined this hypothesis in a sensory-guided alternative choice task.</s><s>Rats were trained to make either Left or Right licking in response to high-frequency <ref type="bibr">(13 kHz)</ref> or low-frequency (10 kHz) auditory cues (called familiar cues), respectively (Figure <ref type="figure" target="#fig_9">1A</ref>).</s></p><p><s>Each cue was presented for 200 ms, and correct choices after the cue presentation were rewarded.</s><s>Among 36 trained rats, 21 rats reached a criterion correct rate (75 %), and multi-neuron recordings were performed from MFC of these rats.</s><s>During the recordings, the rats were exposed to unfamiliar cue tones (10.5 to 12.5 kHz) in 20% of trials besides the familiar tones.</s><s>Because these tones were unfamiliar to the rats, their choice responses were ambiguous and probabilistic.</s><s>Finally, eight rats yielded sufficiently many neurons for the present analysis.</s><s>Further experimental details are found in Methods.</s><s>This experiment revealed an interesting feature of decision-making in unfamiliar situations: The choice behavior of the rats showed large differences across the rats.</s></p><p><s>The choice probability of Left licking generally increased with the tone frequency in all rats, but psychometric curves for unfamiliar cues exhibited large individual differences (Figure <ref type="figure" target="#fig_9">1B</ref>).</s><s>Some rats varied choice probability sensitively to the frequency of unfamiliar cues (Figure <ref type="figure" target="#fig_9">1C2</ref>), but other rats made biased or chance-level choices irrespective of the tone frequency (Figure <ref type="figure" target="#fig_9">1C1</ref>).</s><s>Throughout this study, we quantified the individual differences in psychometric curves by fitting these curves with a nonlinear function P L (Methods).</s><s>Choice probabilities are inevitably deflected by sampled data.</s><s>Therefore, we examined the stability of parameter fitting as follows.</s><s>We resampled a different set of 30 trials out of the entire data set (comprising several tens of unfamiliar trials and several hundreds of familiar trials) for each tone and rat.</s><s>This allows us to generate a psychometric curve per rat.</s><s>Then, for each rat we repeated this procedure 30 times to generate 30 samples of psychometric curves and to collect the corresponding 30 values of sensitivity S. We plotted these values in an increasing order of the original sensitivity of the rats (Figure <ref type="figure" target="#fig_9">1D</ref>).</s><s>Though the variance was large in some rats, the average values of S monotonically increased while preserving the serial order of S, indicating that the sensitivity adequately characterizes the behavioral tendency of each rat irrespective of data sampling.</s><s>We further confirmed the stability of our fitting scheme by choosing a different fitting function (Figure <ref type="figure" target="#fig_9">S1</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reinforcement learning for reservoir network model</head><p><s>To clarify how the behavioral differences may emerge among rats, we constructed a stochastic recurrent network of spiking neurons based on the anatomical structure from MFC (Figure <ref type="figure" target="#fig_2">2A</ref>).</s><s>Our model extends the reservoir computing proposed for supervised motor learning <ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref> to reward-driven sequence learning <ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref>.</s><s>The recurrent network (reservoir) consists of 5000 excitatory and 1000 inhibitory neurons, and a subset of these neurons receive random projections from 200 input terminal neurons having different preferred tone 'frequencies'.</s><s>Anatomically, the input terminal and recurrent network may correspond to the auditory cortex and MFC, respectively <ref type="bibr" target="#b17">[18,</ref><ref type="bibr" target="#b18">19]</ref>.</s><s>Random projections were assumed because tone-selective MFC neurons showed no systematic frequency dependence <ref type="bibr" target="#b8">[9]</ref>.</s><s>Excitatory neurons in the reservoir project to two rate-coding neurons (readout neurons), L-neuron and R-neuron, which are mutually inhibiting.</s><s>The readout neurons send feedback connections to the reservoir.</s><s>We also assumed these readout neurons are representative of motor cortex generating licking behavior <ref type="bibr" target="#b19">[20]</ref>.</s><s>The network model makes a decision when the difference in output between L and R neurons reaches a threshold θ.</s><s>Due to the noise applied to the reservoir and trial-to-trial variability in the initial states, the decisions are stochastic even for an identical sensory input.</s></p><p><s>We trained the network model through a reward-driven learning rule such that it correctly generated "Left" or "Right" choice for familiar "high-frequency" (FH) or "low-frequency" (FL) input, respectively (Methods).</s><s>To take advantage of sequence generation <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b21">22]</ref>, we made recurrent excitatory connections obey a lognormal weight distribution, which has been ubiquitously found in cerebral cortices <ref type="bibr" target="#b21">[22,</ref><ref type="bibr" target="#b22">23]</ref>.</s></p><p><s>We also assumed a minimal model in which only readout connections were modifiable.</s></p><p><s>Although recurrent connections were unchanged to keep the lognormal weight distribution stable against spiking dynamics, the reservoir dynamics is modulated through the feedback connection from the read-out neurons.</s><s>We then introduced the following reinforcement learning by using eligibility trace <ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref>:</s></p><formula xml:id="formula_0">݀݁ ՜,ோ ‫ݐ݀‬ ⁄ ൌ ሺܽ ሺ‫ݐ‬ሻሺ‫ݎ‬ ,ோ ሺ‫ݐ‬ሻ െ ‫ݎ‬ ,ோ ௦௪ ሺ‫ݐ‬ሻሻ െ ݁ ՜,ோ ሻ/߬ , (1) ܹ ՜,ோ ሺܶ 1ሻ ՚ ܹ ՜,ோ ሺܶሻ ߙ∆ܹ ՜,ோ ሺܶሻ,<label>(2)</label></formula><p><s>∆ܹ ՜,ோ ሺܶሻ ൌ ܷሺܶሻሺ݁Ԣ ՜,ோ െ൏ ݁Ԣ ՜,ோ ሻ, <ref type="bibr" target="#b2">(3)</ref> where ܹ ՜,ோ ሺܶሻ is the weights of readout connections from the i-th reservoir neuron to L-or R-neuron at learning step T, ߙ is a learning rate, ܽ ሺ‫ݐ‬ሻ is the average activity of presynaptic reservoir neuron (Equation 13 in Methods), and ‫ݎ‬ ,ோ ሺ‫ݐ‬ሻ and ‫ݎ‬ ,ோ ௦௪ are the firing rate of each readout neuron and its low-pass-filtered version, respectively.</s><s>Throughout the paper, α = 10.</s><s>Eligibility trace ݁ ՜,ோ is assigned to each readout connection and measures the extent to which a particular connection contributes to decision making at a particular learning step.</s><s>In Equation <ref type="formula" target="#formula_6">1</ref>, the eligibility trace is calculated from correlations between ܽ ሺ‫ݐ‬ሻ and high-pass-filtered readout activity ሺ‫ݎ‬ ,ோ ሺ‫ݐ‬ሻ െ ‫ݎ‬ ,ோ ௦௪ ሺ‫ݐ‬ሻሻ.</s><s>In Equation 3, ݁Ԣ ՜,ோ is the normalized eligibility trace of this connection, and ൏ ݁Ԣ ՜,ோ ,ோ is the average over all such connections (Methods).</s><s>Modification of the readout connections (Equation <ref type="formula" target="#formula_0">2</ref>) occurs only after one learning step finishes.</s><s>After a success trial (learning step) U is taken to be positive (i.e., potentiation of influential connections), or U is negative after a failure trial (depression of such connections).</s><s>In each trial, the network was exposed to one of the familiar inputs from 0 to 200 ms and made a decision within 250 to 900 ms after the stimulus onset.</s><s>If the readout neurons did not reach the threshold within this interval, the trial was failed and a new trial was started.</s><s>Though the learning rule is somewhat heuristic, the minimal model accounted for most of the essential results of experiment as shown below.</s></p><p><s>Figure <ref type="figure" target="#fig_2">2B</ref> shows a typical example of a rewarded trial during learning.</s><s>We trained 30 networks with different realizations of recurrent connections obeying an identical weight distribution (Methods).</s><s>For each network, either FH or FL is randomly applied during learning.</s><s>After 300 training steps, more than the two-third of model networks (20 networks) achieved a criteria correct rate of 75 % (Figure <ref type="figure" target="#fig_2">2C</ref>).</s><s>Successful learners occupied similar fractions in both models and rats, indicating that the task difficulty was adequately modeled.</s><s>Throughout this study, we analyzed the neural dynamics of these 20 successful learners and 8 rats, and compared them in their behavioral variabilities.</s></p><p><s>Next, we analyzed the highly stochastic choice responses of our models to unfamiliar cues (U1 to U5 in Figure <ref type="figure" target="#fig_2">2A</ref>).</s><s>As in the rats, the psychometric curves of the successful learners displayed large individual differences (Figure <ref type="figure" target="#fig_2">2D</ref>), where we used the same fitting function (Figure <ref type="figure" target="#fig_2">2E</ref>) as used in the rats (Figure <ref type="figure" target="#fig_9">1C</ref>).</s><s>The sensitivity values thus obtained for the different models were robust against the resampling of psychometric curves (Figure <ref type="figure" target="#fig_2">2F</ref>).</s><s>As the width of tuning curves (see Figure <ref type="figure" target="#fig_2">2A</ref>) influences the initial network states set by external stimuli, it also influences the behavioral characteristics of each network.</s><s>In Figure <ref type="figure" target="#fig_2">2G</ref>, we compared the distributions of sensitivity values of the models for different widths of tuning curve.</s></p><p><s>The model networks tend to exhibit a broader sensitivity distribution for a narrower width (i.e., a higher input selectivity).</s><s>When the width is 0.3 to 0.4, the ranges of sensitivity covered by the models are as broad as the range covered by the rats.</s><s>Below, we use the width of 0.4 as it gives a smaller average fitting error than the other value.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Neural trajectories formed in MFC and the reservoir</head><p><s>We have shown that the network models produce the divergent psychometric curves that are consistent with those observed in experiment.</s><s>However, whether neural activities in the reservoir and in the MFC are also similar has yet to be clarified.</s><s>To this end, we first studied the time evolution of neural activities.</s><s>Figures <ref type="figure" target="#fig_3">3A</ref> and<ref type="figure" target="#fig_3">3B</ref> compare neural activities averaged over familiar trials between in MFC and in the reservoir under given cue and choice conditions.</s><s>Both experimental and modeled neural activities exhibited distinct trajectories when neurons were sorted according to their times of peak firing rates in correct trials for given stimulus.</s><s>However, neural activities sorted in the peak-time orders observed in different stimulus conditions showed no clear trajectories.</s><s>These results demonstrate that the neural trajectories are choice-specific in both MFC and the reservoir.</s></p><p><s>We analyzed the principal components (PC) of population neural responses in MFC and the reservoir in Figures <ref type="figure" target="#fig_3">3C</ref> and<ref type="figure" target="#fig_3">3D</ref>, respectively.</s><s>In MFC, decision making with familiar cues formed neural trajectories selective to stimulus and choice.</s><s>Note that the first principal component (PC1) represented a frequency-nonselective component of auditory responses (Figure <ref type="figure" target="#fig_2">S2</ref>) and hence is not shown here.</s><s>In the reservoir, similar condition-selective trajectories are formed except that PC1 and PC2 in the former corresponded to PC2 and PC3 in the latter, respectively.</s></p><p><s>Frequency-nonspecific stimulus-evoked responses (PC1 in the experiment) were almost missing in our models.</s></p><p><s>We then investigated how these familiar trajectories lead to correct choice responses in MFC and the reservoir networks.</s><s>As PCA does not identify task-relevant axes, we applied a linear regression method <ref type="bibr" target="#b25">(Mante et al., 2013</ref> and Methods) to trial-averaged neural activities for given combination of stimulus and choice, and identified two axes: the stimulus axis explains the maximal difference in trajectories between FH and FL while the choice axis reveals the maximal difference between Left and Right choices.</s><s>In both rats (Figure <ref type="figure" target="#fig_3">3E</ref>) and models (Figure <ref type="figure" target="#fig_3">3F</ref>), familiar trajectories projected onto the stimulus axis or the choice axis started to separate into correct choices almost simultaneously with cue onset.</s><s>These results suggest that the integration of sensory evidence occurs during the cue presentation in both MFC and the reservoir.</s></p><p><s>The familiar trajectories also revealed interesting differences between the computational models and rats.</s><s>First, the trajectory separation along the stimulus axis was generally smaller in the rats compared to the models.</s><s>Though the cause of this discrepancy is not entirely clear, it was partly due to that the number of tone-selective MFC neurons was small and difference in their responses to different tones were also weak (at most several spikes per second in average).</s><s>Second, trajectory separation along the choice axis stopped in the rats after the termination of sensory cues, whereas the separation continued to grow in the models presumably due to positive feedback from readout neurons.</s><s>It was previously shown in the rat MFC that trajectories reach an almost maximal separation just prior to cue termination <ref type="bibr">(Handa et al., 2017)</ref>.</s><s>The gamma-band power of the local field potentials also abruptly increased in MFC, indicating that some internal event, for instance the formation and transmission of a preparatory signal for choice response, might occur at this timing.</s><s>Such an internal process was not modeled here, which might cause the discrepancy between rats and models.</s><s>Except for these differences, our computational model well reproduced neural dynamics in the rat MFC.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Neural dynamics in MFC and reservoir predicts choice behaviors</head><p><s>To confirm the importance of neural trajectories for choice behavior, we examined whether neural trajectories in MFC and our model have sufficient information about consequent choice responses.</s><s>We predicted a probable choice from neural trajectories by using Fisher discriminant analysis (FDA) with a hyperplane that optimally divides the population activity patterns corresponding to Left and Right choices (Methods).</s><s>The optimal hyperplane was determined from neural ensembles at the time of choice response for familiar trials, and we denote its normal vector as W opt .</s><s>In our model, if the readout neurons can discriminate optimally between Left-and Right-choice familiar trajectories, the normalized weight vector of readout connections should be close to W opt .</s><s>However, the two vectors cannot be exactly the same because the readout neurons are not passive linear filters but are active nonlinear filters performing temporal integration of inputs under mutual inhibition.</s></p><p><s>Averaged familiar trajectories projected onto W opt are shown for the rats (Figure <ref type="figure" target="#fig_4">4A</ref>) and models (Figure <ref type="figure" target="#fig_4">4B</ref>) for different cue and choice conditions.</s><s>The projected trajectories linking given sensory cue to different choices were distinctive in both rats and models.</s><s>Importantly, W opt obtained from familiar cues was also valid for discriminating between Left-and Right-choice trajectories evoked by unfamiliar cues.</s><s>This means that unfamiliar trajectories converge at similar locations at which familiar trajectories also converge.</s><s>We computed the distributions of projected activities in a rat (Figure <ref type="figure" target="#fig_9">4C1</ref>) and a model (Figure <ref type="figure" target="#fig_4">4C2</ref>) at the choice time points of Left-choice and Right-choice trials.</s><s>In the rats, the activity distributions for different choices have small overlaps corresponding to incorrect choices.</s><s>To infer trial-by-trial choice responses from the projected neural activity, we adopted a naive criterion boundary given as the mid-point of the means of Left-and Right-choice distributions.</s><s>Then, Left-choice probability is predicted to be the area of the distribution lying on the left side of this boundary, and so on.</s><s>On average about 75 % of neural trajectories in MFC were discriminable by this criterion, although the discriminability fluctuated across rats (Figure <ref type="figure" target="#fig_4">4D</ref>).</s><s>In the models, choice responses were correctly inferred in about 90 % of the trials, and fluctuations in the discriminability were small (Figure <ref type="figure" target="#fig_4">4E</ref>).</s><s>Thus, neural trajectories in MFC and the reservoir determine choice responses on a single-trail basis.</s><s>This is expected in the model as it was trained as such, but the finding is non-trivial in the rat MFC.</s></p><p><s>However, the linear discrimination analysis was insufficient for predicting individual differences in choice responses across different rats and different models.</s></p><p><s>We did not find significant correlations between the sensitivity to stimuli and the discriminability of neural trajectories in both rats (Figure <ref type="figure" target="#fig_4">4F</ref>, p=0.86) and models (Figure <ref type="figure" target="#fig_4">4G</ref>, p=0.82) although this could be partly due to small data size in the case of rats.</s><s>These results suggest that the significantly different behavioral characteristics are not mere reflections of neural states at the choice point.</s><s>Therefore, we investigate how neural population dynamics preceding the choice point determines the behavioral characteristics.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Susceptibility of neural dynamics influences behavioral characteristics</head><p><s>Decision making in our model depends on the interplay between its internal dynamics and sensory input.</s><s>Therefore, we expected that different characteristics of internal dynamics result in different behavioral characteristics.</s><s>To characterize internal dynamics, we applied a perturbative input to networks receiving no sensory stimuli.</s></p><p><s>The perturbative input was applied 30 times to each network at the identical neural state (perturbed state) to which sensory stimuli were applied in the previous simulations, and the Euclidian distances (susceptibility χ) among the perturbed trajectories and a non-perturbed trajectory were measured at 300 ms after the perturbation.</s><s>The time of measurement did not change the essential results.</s><s>Note that χ is defined for every different state in the neural state space (Methods).</s><s>Perturbed neural trajectories evolving from a state with high χ may diverge broadly, while those trajectories from a state with low χ may hardly diverge.</s></p><p><s>We first show neural responses of a sensitive network and an insensitive network, respectively.</s><s>For a particular state in the sensitive network, unfamiliar stimuli U1, U2 and U3 (close to FH) evoked trajectories evolving into Left choice, whereas those evoked by U4 and U5 (close to FL) evolved into Right choice, implying that the similarity of unfamiliar stimuli to familiar stimuli determined choice responses (Figure <ref type="figure" target="#fig_9">5A1</ref>).</s><s>In contrast, all unfamiliar trajectories resulted in Left choice for another state in the insensitive network, implying that internal dynamics governed the choice responses (Figure <ref type="figure" target="#fig_5">5A2</ref>).</s><s>We then show how perturbed and non-perturbed trajectories evolve in these networks from the same initial states.</s><s>In the sensitive network, perturbed trajectories diverged broadly, implying that a weak perturbation tends to give high χ values (0.014, Figure <ref type="figure" target="#fig_9">5B1</ref>).</s><s>In contrast, the insensitive network generally yielded more localized perturbed trajectories and hence low χ values (0.0045, Figure <ref type="figure" target="#fig_5">5B2</ref>).</s><s>Thus, networks with high susceptibility responded differently to different unfamiliar stimuli, whereas those with low susceptibility responded similarly to different stimuli.</s></p><p><s>We then examined a quantitative relationship between the susceptibility and responses to the seven stimuli (FL, U1, …, U5, FH).</s><s>To this end, we define the response bias as |#Left -7/2| for each perturbed state, where #Left is the number of Left choices resulting from each perturbed state in response to the seven stimuli.</s><s>The response bias is 0.5 if three or four of seven choices are Left (weak biases), while it is 3.5 if all choices are only Left or Right (strong biases).</s><s>Both in a sensitive (Figure <ref type="figure" target="#fig_9">5C1</ref>) and an insensitive successful learner (Figure <ref type="figure" target="#fig_5">5C2</ref>), the response bias is significantly and negatively correlated with the value of χ (p&lt;10 -5 for the sensitive and p&lt;10 -6 for the insensitive).</s><s>We quantified the susceptibility of each model network by averaging the values of χ over randomly chosen 50 perturbed states.</s><s>A network with a sensitive psychometric curve yielded a distribution biased towards higher values of χ (Figure <ref type="figure" target="#fig_9">5C1</ref>), whereas a network with an insensitive psychometric curve yielded a distribution biased towards lower values (Figure <ref type="figure" target="#fig_5">5C2</ref>).</s><s>We plotted the sensitivity values of 20 successful learners against their average χ values to find a significant positive correlation (p&lt;0.004) between the sensitivity (behavioral metric) and susceptibility (neural metric) (Figure <ref type="figure" target="#fig_5">5D</ref>).</s><s>These results are summarized as the following intuitive picture of the neural mechanism of individual differences: higher susceptibility implies a shallower landscape around the trajectory and produces a sensitive choice behavior, while lower susceptibility implies a deeper landscape and generates an insensitive choice behavior (Figure <ref type="figure" target="#fig_5">5E</ref>).</s></p><p><s>In contrast, we did not find significant correlations between the sensitivity and the average susceptibility in the presence of learned stimuli (Figure <ref type="figure" target="#fig_5">5G</ref>).</s><s>Perturbed and unperturbed trajectories did not show large quantitative and qualitative differences in the presence of FH both in a sensitive and an insensitive network (Figure <ref type="figure" target="#fig_5">5F</ref>).</s><s>Similar results were obtained for FL (data not shown).</s><s>Thus, our model suggests that internal network dynamics is an influential factor on the behavioral variability, but the influences are easily masked by external input (Figure <ref type="figure" target="#fig_5">5E</ref>).</s><s>This explains why we could not uncover a convincing relationship between neural population responses and behavioral variability in the rats.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Trail-by-trial variance probes susceptibility</head><p><s>Susceptibility cannot be computed from the experimental data in rats.</s><s>To find an alternative quantity to characterize the individual differences, we investigated trial-by-trial variances evoked by all stimuli in the models and rats, which was suggested to reflect the neural dynamics of decision-making <ref type="bibr" target="#b23">[24,</ref><ref type="bibr" target="#b24">25]</ref>.</s><s>First, we calculated trial-by-trial variability before and after stimulus onset in the models (Methods).</s><s>To reduce an artifact from neuron sampling, we normalized the post-stimulus-onset variability by the pre-stimulus-onset variability.</s><s>Interestingly, the normalized variability is significantly correlated with the susceptibility in the models (Figure <ref type="figure" target="#fig_6">6A</ref>), implying that trial-by-trial variance can be used as a proxy of the susceptibility.</s><s>We also confirmed that the variability is correlated with the sensitivity in the models (Figure <ref type="figure" target="#fig_9">6B1</ref>).</s></p><p><s>Next, we calculated the normalized variability in the eight rats and examined its correlation with the sensitivity.</s><s>(Figure <ref type="figure" target="#fig_6">6B2</ref>).</s><s>Due to the small number of the rats, we resampled experimental data 1000 times (Methods) and obtained 1000 resampled correlation coefficients between the normalized variability and sensitivity across the rats.</s><s>All of the coefficients were positive (Figure <ref type="figure" target="#fig_6">6C</ref>), indicating that neural population dynamics also reflects the behavioral differences of the individual rats and the normalized variability probes the characteristics (presumably the susceptibility) of neural dynamics.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reaction time is uncorrelated with behavioral characteristics</head><p><s>RT is an important measure for the behavioral characteristics of individual animals.</s></p><p><s>Next, we analyzed whether the sensitivity of psychometric curves is correlated with the RT of individual rats and models.</s><s>The medians of RTs calculated for the eight rats were not significantly correlated with the selectivity (Figure <ref type="figure" target="#fig_3">3S</ref>).</s><s>These results show that the RT of rats does not strongly reflect the individual differences in choice behavior.</s><s>We asked similar questions in our models and found that the RTs were also uncorrelated with the sensitivity of choice behavior in all the three cases, as in the rats.</s><s>However, we also noticed an interesting difference between the models and experiment.</s><s>If we compare choice responses to familiar and unfamiliar cues in each model, RTs to unfamiliar cues were significantly longer than those to familiar cues (Figure <ref type="figure" target="#fig_3">S3D</ref>, p &lt; 0.001).</s><s>The result is consistent with our intuition.</s><s>Somewhat unexpectedly, however, this was the case only in four rats, and even in these rats, differences in the median RT were typically as short as 10 to 20 ms (Figure <ref type="figure" target="#fig_3">S3H</ref>, p=0.8).</s></p><p><s>The above discrepancy suggests that additional mechanisms not modeled here work in MFC during decision making in unfamiliar sensory conditions.</s><s>We will argue the possible mechanisms in the discussion.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Network structure only weakly reflects behavioral characteristics</head><p><s>Intuitively, network structure should be highly influential on neural dynamics and consequently on the individual behavioral differences.</s><s>Therefore, we asked if network structure explains the behavioral characteristics and, if so, what aspect of the structure is relevant to them.</s><s>Note that differences between the individual networks are considered to be small because they were obtained from similar initial networks (having the same weight distribution of recurrent connections) by training.</s><s>In our statistical analysis of synaptic connections, crucial differences in network structure for producing significant differences in choice responses were not easily detectable.</s></p><p><s>Actually, we tested various statistical indices to reveal a signature of such structural differences (Figure <ref type="figure" target="#fig_4">S4</ref>).</s><s>Most of our attempts failed to find significant correlations between the statistical properties of network structure and the sensitivity.</s><s>We, however, found an interesting exception when we analyzed a small portion of readout connections from such presynaptic reservoir neurons as exhibited the highest firing rates (Figure <ref type="figure" target="#fig_4">S4C</ref>).</s><s>Thus, our results suggest that differences in network structure responsible for different behavioral characteristics do exist but they are subtle.</s><s>Only a small fraction of connections that are actually used can be crucial for the observed behavioral differences.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>We have shown how neural population in MFC processes a sensory-guided alternative decision making when rats are exposed to unfamiliar sensory stimuli.</s><s>The choice responses to unfamiliar stimuli fluctuated over different rats and the psychometric curves of probabilistic choices largely varied between highly sensitive and poorly sensitive types across the individual rats.</s><s>By using multi-electrode recordings, we have recorded spike trains of multiple medial frontal neurons during the task.</s><s>We have built a recurrent network model and trained it through a reinforcement learning algorithm to successfully reproduce both temporal evolution of neural population activity and spectrum of observed choice behaviors.</s><s>By studying neural dynamics in this model, we have found that the susceptibility of internal neural dynamics predicts individual differences across different networks.</s><s>This modeling result predicts that highly sensitive rats should exhibit a large trial-by-trial variability in neural trajectories, which was also confirmed in the rats.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reward-guided neural trajectory learning</head><p><s>Neural activity sequences have been ubiquitously found in the mammalian brain executing behavioral tasks including decision making <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b26">27]</ref>.</s><s>In the rat MFC, neural responses to different auditory stimuli subsequently converged to choice-specific trajectories <ref type="bibr" target="#b8">[9]</ref>.</s><s>This study has further demonstrated the relevance of the dynamical characteristics of choice-specific neural trajectories in MFC to the diverge spectrum of animals' choice behaviors.</s></p><p><s>To explore the neural mechanisms of ambiguous decision making for unfamiliar stimuli, we have modeled a reservoir network <ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref> that undergoes reinforcement learning.</s><s>By employing a eligibility trace <ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref>, we trained the network model to find the formation of familiar trajectories in the reservoir which eventually converge to one of the two local areas corresponding to choice responses in the state space.</s><s>Neural trajectories driven by unfamiliar stimuli stochastically diverged into the vicinities of these decision areas organized for familiar stimuli with a stimulus-dependent probability, resulting in ambiguous choice responses.</s></p><p><s>Separation of neural trajectories occurs similarly in the rats and models.</s></p><p><s>However, the separation somewhat slows down in the rats about 100 ms after the cue onset during the cue presentation (Figure <ref type="figure" target="#fig_3">3E</ref>), whereas the separation continues in our model without slow down (Figure <ref type="figure" target="#fig_3">3F</ref>).</s><s>Indeed, around this timing a sharp increase in the gamma power of the local field potentials occurred in the MFC <ref type="bibr" target="#b8">[9]</ref>.</s><s>As suggested in the rodent <ref type="bibr" target="#b27">[28,</ref><ref type="bibr" target="#b28">29]</ref> and primate <ref type="bibr" target="#b29">[30]</ref>, the increased gamma oscillation may indicate the onset of cross-area communications in the MFC, presumably for the preparation of behavioral outputs.</s><s>This communication across areas, which is not implemented in our model, might suppress the separation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Correlations between neural characteristics and behavioral variability</head><p><s>The behavioral variability of individuals have been a focus of psychological and behavioral studies of humans <ref type="bibr" target="#b30">[31]</ref>.</s><s>Choice preferences of individuals under uncertain or risky conditions have been studied in the context of value evaluation by a large-scale brain network including cortical and subcortical structures <ref type="bibr" target="#b31">[32,</ref><ref type="bibr" target="#b32">33]</ref>.</s><s>Furthermore, recent studies using fMRI have revealed correlations between task performance and intercortical functional connectivity, indicating that macroscopic brain activity influences the behavioral variability of individual animals <ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref>.</s><s>However, relatively little has been known about the neural substrates for the individual differences <ref type="bibr" target="#b36">[37]</ref>.</s></p><p><s>Our results suggest that neural dynamics in a local cortical area (of MFC) is a determinant of individual differences in the rapid choice behavior that does not require strategic exploratory decisions.</s><s>We have shown evidence for a relationship between sensitivity in psychometric curves and the dynamical properties of neural trajectories (such as susceptibility) formed during sensory experience (Figure5D).</s></p><p><s>Recent studies have revealed that neural processing is not a simple passive filter, but an active dynamical process <ref type="bibr" target="#b25">[26,</ref><ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref><ref type="bibr" target="#b39">[40]</ref>.</s><s>From the dynamical system viewpoint, the flow structure of neural state space, such as line attractors <ref type="bibr" target="#b25">[26]</ref>, separatrix <ref type="bibr" target="#b26">[27]</ref> and "null space," i.e., the subspace of neural state space of motor cortex on which neural trajectories are uncorrelated with movements, but influence the choice of subsequent movement <ref type="bibr" target="#b39">[40]</ref>, has a significant influence on linking externally or internally driven information to behavioral output.</s></p><p><s>In addition to these structures, our model suggests crucial influences of covert properties of intrinsic neural dynamics, such as the susceptibility, on decision making in an unfamiliar sensory environment.</s><s>We demonstrated that the susceptibility of neural dynamics to perturbation in the absence of sensory stimuli predicts the sensitivity in individual psychometric curves (Figure <ref type="figure" target="#fig_5">5D</ref>).</s><s>If the susceptibility is high in a model, psychometric curve of the model tends to be sensitive to differences between unfamiliar stimuli.</s><s>Recent studies have revealed neural mechanisms of sensory information coding <ref type="bibr" target="#b40">[41]</ref>, short-term memory <ref type="bibr" target="#b41">[42]</ref>, and motor planning <ref type="bibr" target="#b42">[43]</ref> by applying perturbation to neural activity with opt-genetic techniques.</s><s>Our results suggest that response to perturbation reflects a part of individual difference.</s><s>Our model also gives a testable prediction that animals in which neural activities are strongly disturbed by optical stimuli to MFC have highly sensitive psychometric curves in response to unfamiliar stimuli.</s></p><p><s>Correlations between the susceptibility in neural dynamics and the sensitivity in behavior were not obvious when neural dynamics was driven by familiar stimuli (Figures <ref type="figure" target="#fig_5">5F</ref> and<ref type="figure" target="#fig_5">5G</ref>).</s><s>This implies that behaviorally relevant differences in intrinsic neural dynamics are not necessarily observed under the learned conditions.</s><s>This might be natural when all subjects are trained to perform the same task.</s><s>Previous computational models <ref type="bibr" target="#b43">[44]</ref><ref type="bibr" target="#b44">[45]</ref><ref type="bibr" target="#b45">[46]</ref> and experimental studies <ref type="bibr" target="#b35">[36]</ref> demonstrated the impacts of intrinsic neural dynamics on processing external stimuli or cognitive tasks.</s></p><p><s>Our results suggest that intrinsic neural dynamics can influence the characteristics of individual behavioral responses.</s></p><p><s>We found that the susceptibility predicts large trial-by-trial variations in neural activity in our model and that trial-by-trial variation is in turn correlated with the individual differences in both models and rats (Figure <ref type="figure" target="#fig_6">6</ref>).</s><s>In humans, larger trial-by-trial variability in movements predicted faster rates of motor learning, though whether high variability in movements implies high variability in neural activity remains unclear <ref type="bibr" target="#b46">[47,</ref><ref type="bibr" target="#b47">48]</ref>.</s><s>In the present task, large variability in neural responses may increase the flexibility in controlling neural trajectory evolution, thus enabling the rats to flexibly adjust their probabilistic behavioral responses according to cue tones.</s><s>This may explain the observed correlations between the trial-to-trial variability and psychometric curves.</s></p><p><s>However, the correlations were weak in the rats (Figure <ref type="figure" target="#fig_6">6</ref>), and this point requires further experimental clarifications.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Network structure weakly indicates the sensitivity in psychometric curves</head><p><s>We have investigated the relationships between several metrics of network structure and the sensitivity in psychometric curves of the networks to find no significant correlations in most of the cases.</s><s>We have only found that the Left-Right asymmetry in the weight sums of readout connections from the most active reservoir neurons indicate the sensitivity of different network models (Figure <ref type="figure" target="#fig_4">S4</ref>, p&lt;0.03).</s><s>However, neither readout connections from all reservoir neurons nor the sums of the strongest connections were significantly correlated with the individual differences.</s><s>All together, these results suggest that network structure alone cannot unambiguously distinguish the sensitivity.</s></p><p><s>Our learning procedure modifies only readout connections.</s><s>Though this assumption is unrealistic, our model could form the neural trajectories that successfully associate sensory inputs to correct behavioral responses.</s><s>Thus, our results suggest that learning a simple association like the present task can be completed through modifications of inter-cortical-area connections or cortico-subcortical connections.</s><s>However, learning a complex task may require modifications of intra-cortical-area connections for organizing an adequate neural network.</s></p><p><s>A log-normal distribution of synaptic connections, which is adopted in our model, has been found in local cortical circuits <ref type="bibr" target="#b21">[22,</ref><ref type="bibr" target="#b22">23]</ref>.</s><s>Some studies <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b22">23]</ref> have suggested that this class of connection is helpful to generate a rich variety of spike sequences in spontaneous activity.</s><s>Therefore, the log-normal connection in the reservoir likely contributes to generating neural trajectories specific to stimulus and choice (Figures <ref type="figure" target="#fig_3">3A</ref> and<ref type="figure" target="#fig_3">3B</ref>) and, consequently improves learning performance.</s><s>A role of the log-normal connection on learning is left for a future work.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Different RT profiles between rats and models</head><p><s>We may speculate that rats with highly sensitive psychometric curves carefully evaluate sensory information before making behavioral responses and hence tend to require a longer time for decision making.</s><s>However, this naive speculation was not supported by our experimental results <ref type="bibr" target="#b8">[9]</ref>.</s><s>Actually, we have found in both rats and models that RTs are uncorrelated with the sensitivity for both familiar and unfamiliar cues.</s><s>The present results for RTs are largely consistent between the rats and models, but we have found a few exceptions.</s><s>All of the rats made rapid decisions even for unfamiliar cues <ref type="bibr">(Handa et al., 2017)</ref>, yielding comparable RTs for familiar and unfamiliar cues (Figure <ref type="figure" target="#fig_3">S3C</ref>: the mean RTs differed by at most 20 to 30 ms between the two cue types), whereas in our model the mean RT for familiar stimuli was much shorter than that for unfamiliar ones although these differences were also uncorrelated with the sensitivity of the models (Figure <ref type="figure" target="#fig_3">S3G</ref>).</s><s>How this discrepancy arises remains unclear, and we only speculate the possible underlying mechanisms.</s><s>The discrepancy seems to indicate that the MFC recruits additional mechanisms of decision making, which was not incorporated into the present models, when the rats are exposed to unfamiliar cues.</s><s>A likely explanation is that threshold for decision making is increased to improve the accuracy of behavioral responses to familiar cues through the learning of sensory environment.</s><s>Yet another explanation is that unfamiliar bottom-up signals from primary sensory cortices to MFC is less effective in activating medial frontal neurons, as they have not learned the unfamiliar inputs.</s><s>Indeed, modeling studies suggest various plasticity mechanisms to gate the learned synaptic inputs effectively and robustly <ref type="bibr" target="#b48">[49,</ref><ref type="bibr" target="#b49">50]</ref>       the normalized variability and the sensitivity across twenty successful learners and seven rats in B1 and B2, respectively.</s><s>Data of one rat is excluded due to small number of available neurons (Methods).</s><s>C, Correlation coefficients between the normalized variability and the sensitivity in rats.</s><s>We resampled the experimental data and calculated 1000 the correlation coefficients for these data sets and plot them as a histogram.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimental procedure</head><p><s>All experiments were carried out according to the Animal Experiment Plan approved by the Animal Experiment Committee of RIKEN.</s><s>The details of experimental procedure are given in <ref type="bibr" target="#b8">[9]</ref>.</s><s>Briefly, head-restrained adult Long-Evans rats (male 210-240 g: SLC) were trained to associate licking of spouts with reward delivery.</s><s>We presented either of two pure tones (familiar cue tones: 13.0 and 10.0 kHz, for 0.2 s) in a pseudo-random order as a cue for licking a spout located at the left or right side of rat, respectively (Figure <ref type="figure" target="#fig_9">1A</ref>).</s><s>The rats were required to lick a correct spout within 5.0 s from the cue onset to obtain a reward (0.1% saccharin water).</s><s>If the licking response was incorrect, we did not deliver the reward and prolonged the duration of the immediately following post-response period (3.0 s) by 5.0 s as an aversive experience.</s><s>We continued the training until the correct rate finally reached a criterion (75%) without error correction.</s></p><p><s>Each rat underwent one or two days of subsequent recording sessions, in which we presented the two familiar cue tones (10.0 and 13.0 kHz) and five unfamiliar cue tones (10.5, 11.0, 11.5, 12.0 and 12.5 kHz) with the occurrence probability of 80% or 20% (4% for each unfamiliar tone), respectively.</s><s>The correct familiar cue trials were always rewarded, whereas the reward probability was linearly varied for unfamiliar cue trials along its cue tone frequency: (Left/Right) = 10.5-kHz</s><s>(0.17/0.83), 11.0-kHz (0.33/0.67), 11.5-kHz (0.5/0.5), 12.0-kHz (0.67/0.33), 12.5-kHz (0.83/0.17).</s><s>We trained 36 rats with familiar tones and only 21 reached the criteria for successful learning.</s><s>After surgery, 15 were available for multi-neuron recordings and eight of them finally yielded qualitatively and quantitatively satisfactory data for the succeeding analysis.</s></p><p><s>We recorded multiunit activity mainly from the deep layers (depth from pia matter: 1.0-2.0</s><s>mm) of the MFC (+2.7-+3.6 mm anterior, 0.6-2.0</s><s>mm lateral of Bregma) through a 32-channel silicon probe consisting of 4 shanks (Neuro Nexus Technologies, Inc., USA), each with 2 tetrode sites separated vertically by 0.5 mm.</s><s>We only analyzed the behavioral and neuronal data obtained on the first day of the recording sessions when the rats were still not habituated to unfamiliar cues.</s><s>Spikes were sorted with a custom-made semi-automatic spike sorting program, EToS <ref type="bibr" target="#b50">[51]</ref>, and the sorted spike clusters were further analyzed manually using Klusters and NeuroScope <ref type="bibr" target="#b51">[52,</ref><ref type="bibr">53]</ref>.</s><s>The number of isolated units (RS + FS) was n=37 in rat #941, n=68 in #897, n=22 in #902, n=12 in #807, n=44 in #880, n=40 in #879, n=50 in #940 and n=51 in #949.</s><s>Neuronal activity and behavioral performance were analyzed using MATLAB (The MathWorks, Inc.).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Neuron models</head><p><s>We constructed a network model composing three parts, an input layer, a reservoir network and a readout layer (Figure <ref type="figure" target="#fig_2">2A</ref>).</s><s>The input layer has 200 neurons, each of which responds to stimulus k at the following firing rate r i :</s></p><formula xml:id="formula_1">‫ݎ‬ ൌ ሺܴ ௫ /‫ܮ‬ሻexp ሺെ൫ሺ݅/ܰ ሻ െ 0.1ሺ݇ 1ሻ൯ ଶ /2ሺߪ‫ܮ‬ሻ ଶ ሻ,<label>( 4 )</label></formula><p><s>where R max , N in , and σ are the maximum firing rate, the number of input neurons, and the standard deviation, respectively.</s><s>The values of these parameters were set as</s></p><formula xml:id="formula_2">‫ܫ‬ ா ൌ െ݃ ெ ሺ‫ݑ‬ െ ܸ ா ሻ െ 0.1݃ ேெ ሺ‫ݑ‬ െ ܸ ா ሻ,<label>( 6 )</label></formula><formula xml:id="formula_3">‫ܫ‬ ூ ൌ െ݃ ீ ሺ‫ݑ‬ െ ܸ ூ ሻ,<label>( 7 )</label></formula><formula xml:id="formula_4">݀݃ ‫ݐ݀‬ ⁄ ൌ െ ݃ ߬ ⁄ ∑ ‫ܩ‬ ∑ ߜ൫‫ݐ‬ െ ‫ݐ‬ െ ݀ ൯ , X = AMPA, NMDA, GABA<label>(8)</label></formula><p><s>where G ij Y and d j are the weight and delay of synaptic connection from neuron j to neuron i, respectively, and t j k is the k-th spike time of neuron j.</s><s>The reversal potentials of synaptic inputs are V E = 0 [mV] and V I = -80 ‫‬ሺ‫ݔ‬ሻ ൌ expሺെሺlog‫ݔ‬ െ ߤሻ ଶ /ሺ2ߪ ଶ ሻሻ/ሺ√2ߨ ߪ‫ݔ‬ሻ,</s></p><p><s>where σ EE = 0.8 and μ EE = log(0.01)+(σ</s><s>EE ) 2 .</s><s>The weights of E-to-I, I-to-E and E-to-I connections are fixed at 0.01, 0.002 and 0.0025, respectively.</s></p><p><s>Each readout neuron is projected to by a subset of reservoir neurons not receiving sensory input through readout connections W i-&gt;L,R and feed their outputs back to another subset of reservoir neurons.</s><s>The former and latter subsets of neurons consist of randomly and independently chosen 30% and 50%, respectively, of such reservoir neurons as are connected to none of the input neurons.</s><s>An overlap can exist between the L-neuron-projecting and R-neuron-projecting subsets.</s><s>The weights of W i-&gt;L,R are randomly chosen between 0 and 60.</s><s>The weights of feedback connections G FB obey a lognormal distribution given in Equation <ref type="formula" target="#formula_5">12</ref>, with the variance and mean given as σ FB =1.2 and μ FB =log(0.012)+(σ</s><s>FB ) 2 .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Learning protocol</head><p><s>The present network model learns to correctly associate external stimuli with choice responses by modifying the readout connections W i-&gt;L,R through reinforcement learning.</s></p><p><s>The learning procedure is as follows: first, the network undergoes a pre-stimulus run for 100 [ms], which induces a baseline activity in the initial network state; subsequently, one of the familiar stimuli (FH or FL) is applied for 200 [ms]; after the termination of stimulus followed by a delay period of 50 [ms], the network is allowed to make a decision if the activity of a readout neuron exceeds that of the other readout neuron by a criterion difference θ (Figure <ref type="figure" target="#fig_3">3B</ref>).</s><s>If the network does not reach a decision criterion by 900 [ms] from the end of delay period, the trial is reset and a novel trial is initiated.</s><s>If the decision by the network is correct, the readout weights are modified with a positive reward, whereas the weights are punished with a negative reward if the decision is incorrect.</s><s>If the network fails to give a decision in a trail, the network is also punished.</s><s>If the network reaches a decision criterion before the end of delay period, we discard this trial and start a new trial.</s></p><p><s>Readout connections are modified in terms of eligibility trace e i-&gt;L,R according to Equations 1-3 <ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref>.</s><s>The eligibility trace is assigned to each readout connection and measures the extent to which a particular connection contributes to decision making.</s><s>The variables a i (t) and ‫ݎ‬ ,ோ ௦௪ in Equation 1 are computed in terms of presynaptic and postsynaptic activities as</s></p><formula xml:id="formula_6">ܽ ሺ‫ݐ‬ሻ ൌ ∑ 5exp ሺെ ௧ି௧ ೖ ఛ ೌ ሻ , (<label>1 3 )</label></formula><formula xml:id="formula_7">‫ݎ݀‬ ,ோ ௦௪ ‫ݐ݀‬ ⁄ ൌ ሺ‫ݎ‬ ,ோ ሺ‫ݐ‬ሻ െ ‫ݎ‬ ,ோ ௦௪ ሻ/߬ ௌ௪ , (<label>1 4 )</label></formula><p><s>where ߬ ൌ10 [ms] and ߬ ௦௪ ൌ 50 <ref type="bibr">[ms]</ref>.</s><s>The term ሺ‫ݎ‬ ,ோ ሺ‫ݐ‬ሻ െ ‫ݎ‬ ,ோ ௦௪ ሻ detects a rapid change in ‫ݎ‬ ,ோ ሺ‫ݐ‬ሻ faster than ߬ ௦௪ , so the eligibility trace is increased by coincidence between high presynaptic firing rate and a rapid increase in the readout activity.</s><s>In modifying readout connections in Equation 3, we use a normalized eligibility trace defined as ݁Ԣ ՜,ோ ൌ 5 ൏ ݁ ՜,ோ tanhሺ݁ ՜,ோ /5 ൏ ݁ ՜,ோ ሻ, <ref type="bibr">( 1 5 )</ref> where ൏ ‫ڮ‬ denotes averaging over presynaptic reservoir neurons.</s><s>We modify readout connections by reward expectancy U and the limited eligibility according to Equation 3. We manually bound the value of W i-&gt;L,R (T) below 60.</s><s>Reward expectancy and decision criterion are adaptively modified during learning as follows:</s></p><formula xml:id="formula_8">ܷሺܶ 1ሻ ൌ ൜ ܷ ௫ െ ܷሺܶሻ ௦௪ rewarded trial െܷ ௫ failure trial , (<label>1 6 )</label></formula><formula xml:id="formula_9">ߠሺܶ 1ሻ ൌ ൜ ሺ1 െ ߛ ఏ ሻߠሺܶሻ ߛ ఏ ߠ ௫ rewarded trial ሺ1 െ ߛ ఏ ሻߠሺܶሻ ߛ ఏ ߠ failure trial , (<label>1 7 )</label></formula><formula xml:id="formula_10">ܷ ௦௪ ሺܶ 1ሻ ൌ ቊ ሺ1 െ ߛ ሻܷ ௦௪ ሺܶሻ ߛ ܷ ௫ rewarded trial ሺ1 െ ߛ ሻܷ ௦௪ ሺܶሻ failure trial . (<label>18</label></formula><formula xml:id="formula_11">)</formula><p><s>At an arbitrary T, െܷ ௫ ܷሺܶሻ ܷ ௫ and ߠ ߠ ߠ ௫ .</s><s>Parameter values are ܷ ௫ ൌ 1, ߠ = 10[Hz], ߠ ௫ = 30[Hz], ߛ = 0.05 and ߛ ణ = 0.005.</s><s>The variable U slow (T) is rapidly decreased while the criterion θ(T) is increased when the network has been rewarded in successive trials.</s><s>Therefore, we may regard U slow (T) as reward expectancy at the learning step.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fitting psychometric curves</head><p><s>Psychometric curves were calculated from the probability of Left choices.</s><s>In the training of our model, the criterion of decision θ was initially kept low and then gradually increased until it was finally fixed at 50 <ref type="bibr">[Hz]</ref> after learning.</s><s>This manipulation made the separation of neural trajectories easier and clearer at the decision timing without changing the qualitative behavior of the model with constant θ.</s><s>The Left-choice probabilities for familiar and unfamiliar stimuli were calculated for each rat over a few hundred or a few tens of trials, respectively.</s><s>The probabilities for all stimuli were calculated for each network model over 50 trials except in Figures 5C in which we simulated 100 trials.</s><s>In a small fraction of trials (&lt; 1%), the network model did not reach the decision criterion within the time limit for simulations (&lt; 900 ms).</s><s>For such trials, we assigned a "relative distance" to the decision criterion θ at the time limit to the Left-choice probability: ܲ ൌ ሼሺ‫ݎ‬ െ ‫ݎ‬ ோ ሻ ߠሽ/2ߠ.</s></p><p><s>Unless otherwise stated, we fitted psychometric curves (the probability of Left choices) by a nonlinear function in the least square method: P L = ܿሺtanሺ݂ െ ܽሻ ܾሻ.</s><s>The variable f presents a normalized tone frequency {-1, -2/3, -1/3, 0, 1/3, 2/3, 1}, which corresponds to {10, <ref type="bibr">10.5,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr">11.5,</ref><ref type="bibr" target="#b11">12,</ref><ref type="bibr">12.5,</ref><ref type="bibr">13} [kHz]</ref> in the rats, respectively, and {FL, U5, U4, U3, U2.</s><s>U1, FH} in the models, respectively.</s><s>After fitting a psychometric curve, we normalized the parameter c to define the sensitivity S such that S = 1 refers to a linearly increasing psychometric curve P L (f) =(f+1)/2 and S = 0 to a highly biased psychometric curve, P L (-1)=P L (-2/3)= … =P L (+2/3)=0 and P L (1)=1.</s><s>The larger the value of S, the more sensitive a psychometric curve.</s><s>A conventional sigmoid function was not suitable to characterize sensitivity in psychometric curves.</s></p><p><s>We examined whether the evaluation of sensitivity remains stable for each rat and model if a different fitting scheme was used to characterize their psychometric curves.</s><s>In this scheme, we used ܲԢሺ݂ሻ ൌ ܾԢ tanሺܽ ᇱ ݂ሻ ሺ1 െ ܾ ᇱ tanሺܽ ᇱ ሻሻ as a new fitting function, and defined a parameter as s' = a'×b' (Figure <ref type="figure" target="#fig_9">S1B-E</ref>).</s><s>This definition is reasonable as a' and b' scale the x-axis and y-axis, respectively, to modify the slope of the fitting function.</s><s>Then, a new sensitivity S' was defined from s' by the normalization process mentioned previously.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Linear discriminant analysis</head><p><s>We examined the neural dynamics underlying decision making in the rats and models by Linear (Fisher) discriminant analysis (FDA).</s><s>We grouped neural states of familiar trajectories at the time of decision making (in the rats, the time of licking responses) into two groups: a group of neural states in Left-choice trials and a group of neural states in Right-choice trials.</s><s>FDA identifies such an (N-1)-dimensional hyperplane that maximizes the ratio of the mean distance between the two groups (inter-group distance) to the sum of standard deviation from this hyperplane in each group (intra-group distance).</s><s>Here, N is the dimension of neural state, i.e., the number of neurons in the population.</s><s>We defined a one-dimensional line, called Wopt, that is orthogonal to the identified (N-1)-dimensional hyperplane.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Linear regression analysis</head><p><s>In addition to FDA, we used a regression method to identify the two (choice and stimulus) axes explaining differences in trajectories between the Left and Right choice We emphasize that the susceptibility is assigned to each neural state rather than each trajectory.</s><s>Therefore, a neural trajectory could show a broad range of the susceptibility depending on the specific state at which a perturbative input was given.</s><s>In Figures <ref type="figure" target="#fig_5">5A,</ref><ref type="figure">B</ref>,and F, we plotted perturbed neural trajectories starting from various neural states with low to high χ u values.</s><s>In Figures <ref type="figure" target="#fig_5">5D</ref> and<ref type="figure">G</ref>, we defined the susceptibility of a model network by summing up the χ u values of 50 neural states.</s></p><p><s>Trial-by-trial variability in rats and models</s></p><p><s>We selected those neurons that exhibited average firing rates greater than 3Hz during the whole task period, and applied PCA to the activity of this neural ensemble during a pre-stimulus epoch (a 100 ms-long interval prior to stimulus onset) and a post-stimulus epoch (a 300 ms-long interval following stimulus onset).</s><s>We computed the logarithm of cumulated product of PC variances, ‫ݎܽݒ‬ ,௦௧ ൌ ݅ ∑ ‫ݎܽݒ‬ ,௦௧ ܰ ⁄ ே , where N is the number of selected neurons and var i pre, post is the variance of the i-th PC for pre-and post-stimulus ensemble.</s><s>We performed the analysis in seven rats and 20 successful learners.</s><s>One rat was excluded as it yielded only one neuron according to the aforementioned criterion.</s><s>Note that, in applying PCA, we randomly picked up 30 trials for each stimulus and each rat because the number of recording trails varies from rat to rat and from stimulus to stimulus.</s><s>We normalized the post-stimulus variance by dividing the pre-stimulus variance to define the normalized variability.</s><s>In Figure <ref type="figure" target="#fig_6">6C</ref>, we calculated the sensitivity S for the resampled trials, and then calculated correlation coefficients between the resampled variabilities and resampled sensitivities in the seven rats.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc><div><p><s>. The causes of the discrepancy are open to future studies.</s><s>measurements.</s><s>J Neurophysiol 2000, 84:473-478.</s><s>53.</s><s>Isomura Y, Harukuni R, Takekawa T, Aizawa H, Fukai T: Microcircuitry coordination of cortical motor information in self-initiation of voluntary movements.</s><s>Nat Neurosci 2009, 12:1586-93.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 :</head><label>1</label><figDesc><div><p><s>Figure 1: Individual differences in probabilistic choices across rats.</s><s>Psychometric curves and task-related population neural activity were studied in eight rats.</s><s>A, Schematic illustration of sensory-guided decision making task.</s><s>B, Normalized psychometric curves (gray) significantly varied across rats (N = 8).</s><s>In each rat, the probability of left licking was normalized such that P(10 kHz)=0 and P(13 kHz)=1.</s><s>Orange and purple curves are typical examples with high and low sensitivity to auditory cues, respectively.</s><s>Filled circles indicate the average Left choice probabilities over the eight rats.</s><s>C, The typical psychometric curves of low and high sensitive rats were fitted with tangent functions.</s><s>Error bars show standard deviations of resampled ensembles.D, Sensitivity S for all rats is plotted.</s><s>30 samples of psychometric curves were generated by resampling for each rat and the sensitivity values S of the resampled (gray) and original (purple for the insensitive rat and orange for the sensitive rat) curves were calculated.</s><s>The rats are sorted in the abscissa in an increasing order of their original sensitivity values.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 :</head><label>2</label><figDesc><div><p><s>Figure 2: Responses of network models reproduce individual difference.</s><s>A, Schematic illustrations of the presumable anatomical circuits engaged in the present task (left) and the model network structure (right) are shown.</s><s>B, Spike raster of the reservoir (dots) and the firing rates of L (r L , gold) and R (r R , green) neurons are shown for a single trial.</s><s>The figure shows randomly sampled 500 excitatory neurons (ENs) receiving the input projections, 1000 ENs receiving no input projections, and 500 inhibitory neurons.</s><s>C, Learning performance of the model.</s><s>The probability of correct choices was evaluated every 5 learning steps.</s><s>Black and gray lines indicate the average performance over 30 different realizations of the network model and the performance of five examples among them, respectively.</s><s>D, Psychometric curves of 20 successful</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 :</head><label>3</label><figDesc><div><p><s>Figure 3: Neural dynamics in MFC and in the reservoir.</s><s>A, Neural activities of 30 most active neurons in a rat out of 44 were averaged and normalized over success trials with FL (left) and FH (right) tones.</s><s>Neural activities were sorted in the temporal order of peak responses to FH (top panels) or FL (bottom panels).</s><s>B, Neural activities in a model are shown in a similar fashion to A. 200 most active excitatory neurons out of 5000 are used.</s><s>C and D, Neural trajectories in the MFC (in C) and the reservoir (in D)</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 :</head><label>4</label><figDesc><div><p><s>Figure 4: Predictions of choice behavior by MFC and reservoir dynamics.</s><s>A and B, Neural trajectories were optimally separated by FDA in rats and models with different sensitivity, respectively.</s><s>In both rats and models, projected trajectories are shown in Left-(solid) and Right-choice (dotted) trails for both familiar (top, FL and FH) and unfamiliar stimuli (bottom, U2).</s><s>C1 and C2, Distributions of projected population activity are shown at the times of Left choices for FH (dark gray) and Right choices for FL (light gray) in the sensitive rat and sensitive net model shown in C1 and C2, respectively.</s><s>Dotted lines show the midpoints between the mean values of the Left-choice and Right-choice distributions, and shaded area indicates the failure trials inferred from FDA. D and E, The probabilities that Left and Right choices are correctly inferred from the projected trajectories are shown in the rats and models, respectively.</s><s>Gray bars show the probabilities averaged over all rats and all models, while orange and purple circles indicate the probabilities for sensitive and insensitive rats (D) or such models (E).</s><s>F and G, Relationships between the probability of correct inference and sensitivity are shown for eight rats and twenty model networks, respectively.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 :</head><label>5</label><figDesc><div><p><s>Figure 5: Characterization of neural dynamics for different choice behaviors.</s><s>A1 and A2, Trajectories evoked by familiar and unfamiliar stimuli are shown in the two-dimensional PC spaces of sensitive or insensitive networks, respectively.</s><s>B1 and B2, Ten perturbed trajectories (gray) and an unperturbed trajectory (black) in the absence of external stimuli are shown in the same networks and the same PC spaces as in A1 and A2, respectively.</s><s>Gray circles refer to perturbed points and black crosses to</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 :</head><label>6</label><figDesc><div><p><s>Figure 6: A, The susceptibility and the normalized trial-by-trial variability are significantly correlated in the all successful learners (p&lt;0.04).</s><s>B, Correlations between</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>ܴ</head><label></label><figDesc><div><p><s>௫ ൌ 110, ܰ ൌ 200 and ߪ ൌ 0.15, and k (= 1, …, 7) specifies the preferred stimulus of the neuron, with k = 1 and 7 corresponding to familiar high (FH) and low (FL) stimuli, respectively, and k= 2, …, 6 to five unfamiliar inputs (U1-5), respectively.</s><s>The parameter L is the width of frequency tuning curves, and most results were calculated for L = 0.4 except in Figure 3G.</s><s>The reservoir network is essentially the same as the recurrent network model studied in Teramae et al. [21] except for the introduction of NMDA receptors and background noise as well as minor modifications of model parameters.</s><s>The reservoir network has 5000 excitatory and 1000 inhibitory leaky integrate-and-fire neurons obeying the V leak = -70 [mV], τ = 20 or 10 [ms] for excitatory and inhibitory neurons, respectively, and the refractory period is 1 [ms].</s><s>If u reaches threshold V th = -45 [mV], the neuron fires and u is reset at V r = -60 [mV].</s><s>Excitatory and inhibitory recurrent synaptic inputs, ‫ܫ‬ ா and ‫ܫ‬ ூ , are described by the following equations:</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head></head><label></label><figDesc><div><p><s>[mV], synaptic time constants are τ AMPA = 8 [ms], τ NMDA = 100 [ms] and τ GABA = 8 [ms], and δ is the Kronecker's delta function.</s><s>All synaptic conductances g are normalized by the membrane capacitance to have the dimension of [1/ms].</s><s>At excitatory-to-excitatory (E-to-E) connections, synaptic delays are chosen randomly from 1 to 3 [ms] and at other connections they are from 0.5 to 1.5 [ms].</s><s>Synaptic input from input neurons ‫ܫ‬ ூே , feedback input ‫ܫ‬ ி from readout neurons (see below), and background noise ‫ܫ‬ ே are all excitatory and defined as the synaptic weight from neuron j to neuron i and ‫ݐ‬ , is the k-th spike time of presynaptic neuron j of input type Y.</s><s>In the present study, G N = 0.1, and other weights obey lognormal distributions, as described later.</s><s>In Equation 10, spikes in I I N and I FB are generated by non-stationary Poisson processes with the instantaneous firing rates given by Equation 4 or those of the readout neurons, respectively.</s><s>The feedback spikes are generated independently for individual postsynaptic reservoir neurons to avoid strongly correlated activation of these neurons.</s><s>Background noise is given by a Poisson spike train of 20 [Hz].</s><s>The readout layer has two rate-based neurons, L-and, R-neuron, which integrate spike inputs from the reservoir and undergo mutual inhibition.</s><s>Their firing rates ‫ݎ‬ ,ோ obey ‫ݎ݀‬ ,ோ ‫ݐ݀‬ ⁄ ൌ െሺ‫ݎ‬ ,ோ െ ‫ݎ‬ ோ, ሻ/߬ ∑ ܹ ՜,ோ ∑ ߜ൫‫ݐ‬ െ 50 [ms].</s><s>The value of ‫ݎ‬ ,ோ is set to zero if it takes a negative value due to the mutual inhibition.</s><s>Network architecture Among 5000 excitatory neurons in the reservoir network, 2000 neurons receive excitatory external input from input neurons through sparse connections.</s><s>The connection probability p=0.01 and their weights are set at 0.02.</s><s>The wiring probabilities of excitatory-to-excitatory (E-to-E), excitatory-to-inhibitory (E-to-I), inhibitory-to-excitatory (I-to-E) and inhibitory-to-inhibitory (I-to-I) connections are p EE =p EI =0.1 and p IE =p II =0.5.</s><s>The weights of E-to-E connections are generated according to the following log-normal distribution:</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>(t 1 )</head><label>1</label><figDesc><div><p><s>, where k = 0 refers to the unperturbed trajectory for convenience.</s><s>If the network model reaches the decision criterion before time t 1 , ‫ݔ‬ ሺ‫ݐ‬ ଵ ሻ is calculated at this time.</s><s>We define χ u for the perturbed state u as ሻ ଵ/ଶ is the Euclidean distance between state a and state b on the five-dimensional PC subspace, ൏ ‫ݔ‬ ሺሻ is the average of the perturbed and unperturbed trajectories, and the distance from the average trajectory is averaged over the trajectories.</s><s>D(L, R) provides a normalization factor, and is the distance between Left-choice and Right-choice points on the PC subspace, where the choice points refer to the averaged neural states at which the network model reaches Left or Right choice.</s></p></div></figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank <rs type="person">Joshua Johansen</rs> for critical comments on the manuscript and <rs type="person">Masami Tatsuno</rs> for useful discussion about analysis of correlation.This work was partly supported by <rs type="funder">KAKENHI</rs> (nos.<rs type="grantNumber">16H01289</rs> and <rs type="grantNumber">17H06036</rs> to T.F.) from <rs type="funder">MEXT</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_657aWeC">
+					<idno type="grant-number">16H01289</idno>
+				</org>
+				<org type="funding" xml:id="_G9aHfYs">
+					<idno type="grant-number">17H06036</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>conditions in the rats and between FH and FL stimuli in the models.</s><s>Our method is the same as used in <ref type="bibr" target="#b25">[26,</ref><ref type="bibr" target="#b26">27]</ref>.</s><s>Briefly, we obtained the average firing rates of 100 most active neurons across trials under given stimulus and choice condition in the model and the average rate of 30 neurons which showed the largest differences in firing rate between pre-and post-stimulus onset in the rats.</s><s>We used neural activities recorded from 100 (100) ms before to 500 (300) ms after the stimulus onset in models (rats).</s></p><p><s>After gaussian-filtering, we calculated the z-scores of these activities, where the standard deviation of the filter was 10 ms for the models and 30 ms for the rats.</s><s>Then, we performed a linear regression analysis, ‫ݎ‬ , ሺ‫ݐ‬ሻ ൌ ߚ ,ଵ ሺ‫ݐ‬ሻ ൈ choiceሺ݇ሻ ߚ ,ଶ ሺ‫ݐ‬ሻ ൈ stimulusሺ݇ሻ ߚ ,ଷ ሺ‫ݐ‬ሻ, <ref type="bibr" target="#b18">(19)</ref> where r i,k (t) is the z-scored responses of neurons (i = 1 -100) at time t on trial k, and β i,1 (t), β i,2 (t), and β i,3 (t) represents the choice coefficient, stimulus coefficient and residual component, respectively.</s><s>Here, these coefficients are projected onto the subspace spanned by the ten largest PCs, and choice (k) and stimulus (k) are binary variables.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Susceptibility</head><p><s>Susceptibility χ u characterizes the dynamical trends of a neural network by measuring how it evolves in response to a perturbative input given to neural state u.</s><s>To measure χ u , we set the membrane potentials in all reservoir neurons at the initial value of -60</s></p><p><s>[mV] and simulated the time evolution of neural population up to time t 0 (=100 [ms]), at which we applied a perturbative input to the trajectory: u i (t 0 ) → u i (t 0 )+δu i (i=1,…, N).</s><s>Choosing a different direction of perturbation δu randomly in every trial, we obtained 30 different perturbed trajectories u (k) (k = 1,…,30 ) all of which were perturbed at the same state {u i }.</s><s>Each component of δu is chosen from a uniform probability distribution of [-0.1, 0.1] [mV].</s><s>To evaluate the effect of the perturbation on state evolution, we evaluated the average distance D between the perturbed trajectories and an unperturbed trajectory u (0) at time t 1 = 500 [ms] as follows.</s><s>Let</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ቄ‫ݔ‬</head><p><s>ሺሻ ቅ be the i-th PC of neural state at time t 1 along the k-th perturbed trajectory u (k)</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">The neural basis of decision making</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Gold</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="535" to="574" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Functional, but not anatomical, separation of &quot;what&quot; and &quot;when&quot; in prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Machens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="350" to="360" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Decision Making in Recurrent Neuronal Circuits</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="215" to="234" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Choice-specific sequences in parietal cortex during a virtual-navigation decision task</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Harvey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Coen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Tank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">484</biblScope>
+			<biblScope unit="page" from="62" to="68" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Behavior-dependent short-term assembly dynamics in the medial prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fujisawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Amarasingham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Harrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsáki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="823" to="833" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Transient Dynamics versus Fixed Points in Odor Representations by Locust Antennal Lobe Projection Neurons</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Mazor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Laurent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="661" to="673" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">A cortical substrate for memory-guided orienting in the rat</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Erlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bialek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="330" to="343" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Ridderinkhof</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Role of the Medial Frontal Cortex in Cognitive Control</title>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="443" to="447" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Medial Frontal Circuit Dynamics Represents Probabilistic Choices for Unfamiliar Sensory Experience</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Handa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Takekawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Harukuni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Isomura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fukai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb Cortex</title>
+		<imprint>
+			<biblScope unit="volume">2017</biblScope>
+			<biblScope unit="page" from="1" to="14" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Synaptic dynamics and decision making</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">T</forename><surname>Rolls</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page" from="7545" to="7549" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Real-Time Computing Without Stable States: A New Framework for Neural Computation Based on Perturbations</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Maass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Natschläger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Markram</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="2531" to="2560" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Harnessing Nonlinearity: Predicting Chaotic Systems and Saving Energy in Wireless Communication</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jaeger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Haas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="78" to="80" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Generating coherent patterns of activity from chaotic neural networks</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sussillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="544" to="557" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Robust timing and motor patterns by taming chaos in recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Laje</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Buonomano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="925" to="933" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Solving the distal reward problem through linkage of STDP and dopamine signaling</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Izhikevich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb Cortex</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="2443" to="2452" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Simple statistical gradient-following algorithms for connectionist reinforcement learning</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Williams</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mach Learn</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="229" to="256" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Learning in spiking neural networks by reinforcement of stochastic synaptic transmission</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="1063" to="1073" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Afferent connections of the medial frontal cortex of the rat. II. Cortical and subcortical afferents</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Condé</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maire-Lepoivre E</forename><surname>Audinat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Crépel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comp Neurol</title>
+		<imprint>
+			<biblScope unit="volume">352</biblScope>
+			<biblScope unit="page" from="567" to="593" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Anatomical analysis of afferent projections to the medial prefrontal cortex in the rat</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">B</forename><surname>Hoover</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Vertes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Struct Funct</title>
+		<imprint>
+			<biblScope unit="volume">212</biblScope>
+			<biblScope unit="page" from="149" to="179" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Efferent Connections of the Rostral Portion of Medial Agranular Cortex in Rats</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Reep</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Corwin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hashimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">T</forename><surname>Watson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Res Bull</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="203" to="221" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Optimal spike-based communication in excitable networks with strong-sparse and weak-dense links</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Teramae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tsubo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fukai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Rep</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">485</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Interpyramid spike transmission stabilizes the sparseness of recurrent network activity</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ikegaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sasaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Honma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Takahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Minamisawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ujita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Matsuki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb Cortex</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="293" to="304" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">The log-dynamic brain: how skewed distributions affect network operations</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsáki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mizuseki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="264" to="278" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Dynamics of Ongoing Activity: Explanation of the Large Variability in Evoked Cortical Responses</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arieli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sterkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grinvald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aertsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="1868" to="1871" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Churchland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Cunningham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Sugrue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hosseini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Scott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Bradley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Smith M A, Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Movshon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Armstrong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">H</forename><surname>Snyder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Lisberger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Priebe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Finn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Ryu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Santhanam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sahani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shenoy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Stimulus onset quenches neural variability: a widespread cortical phenomenon</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="369" to="378" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Context-dependent computation by recurrent dynamics in prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Mante</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sussillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shenoy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">503</biblScope>
+			<biblScope unit="page" from="78" to="84" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Dynamic Control of Response Criterion in Premotor Cortex during Perceptual Detection under Temporal Uncertainty</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Carnevale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>De Lafuente</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Barak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Parga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">2015</biblScope>
+			<biblScope unit="page" from="1067" to="1077" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Rhythms of the hippocampal network</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Colgin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="239" to="249" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Successful Execution of Working Memory Linked to Synchronized High-Frequency Gamma Oscillations</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yamamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Suh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Takeuchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tonegawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">157</biblScope>
+			<biblScope unit="page" from="845" to="857" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Neuronal Gamma-Band Synchronization as a Fundamental Process in Cortical Computation</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fries</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="209" to="224" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Understanding Risky Behavior: The Influence of Cognitive, Emotional and Hormonal Factors on Decision-Making under Risk</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kusev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Purser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Heilman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Cooke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Van Schaik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Baranova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ayton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Psychol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="1" to="10" />
+			<date type="published" when="2017-02">2017. February</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Rostrolateral prefrontal cortex and individual differences in uncertainty-driven exploration</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Badre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Long</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Frank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="595" to="607" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Prefrontal and striatal dopaminergic genes predict individual differences in exploration and exploitation</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Doll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Oas-Terpstra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Moreno</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1062" to="1068" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">The modulation of BOLD variability between cognitive states varies by age and processing speed</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Garrett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kovacevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Mcintosh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Grady</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb Cortex</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="684" to="693" />
+			<date type="published" when="2013-03">2013. March</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Inter-individual differences in resting-state functional connectivity predict task-induced BOLD activity</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mennes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X-N</forename><surname>Zuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Di</forename><surname>Martino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Biswal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Castellanos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">X</forename><surname>Milham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="1690" to="1701" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Task-free MRI predicts individual differences in brain activity during task performance</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tavor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">P</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Mars</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Behrens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jbabdi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="1773" to="1776" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">A neural trait approach to exploring individual differences in social preferences</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nash</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lrr</forename><surname>Gianotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Knoch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Behav Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">458</biblScope>
+			<date type="published" when="2014-01">2014. January</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">A dynamical systems view of motor preparation: implications for neural prosthetic system design</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">V</forename><surname>Shenoy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Kaufman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sahani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Churchland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Prog Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">192</biblScope>
+			<biblScope unit="page" from="33" to="58" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Toward an Interpretation of Dynamic Neural Activity in Terms of Chaotic Dynamical Systems</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tsuda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav Brain Sci</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="793" to="810" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Cortical activity in the null space@: permitting preparation without movement</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Kaufman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Churchland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Ryu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shenoy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="440" to="448" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Sensitivity to perturbations in vivo implies high noise and suggests rate coding in cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>London</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Roth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Beeren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Häusser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">466</biblScope>
+			<biblScope unit="page" from="123" to="127" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Cortical and Subcortical Contributions to Short-Term Memory for Orienting Movements Article Cortical and Subcortical Contributions to Short-Term Memory for Orienting Movements</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Kopec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Erlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Brunton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Kopec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Erlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Brunton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="367" to="377" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Robust neuronal dynamics in premotor cortex during motor planning</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Daie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Druckmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">532</biblScope>
+			<biblScope unit="page" from="459" to="464" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Stimulus-dependent suppression of chaos in recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev E</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="1" to="5" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">A Simple Model of Cortical Dynamics Explains Variability and State Dependence of Sensory Responses in Urethane-Anesthetized Auditory Cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Curto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sakata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Marguet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Itskov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="10600" to="10612" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Learning to memorize input -output mapping as bifurcation in neural dynamics@: relevance of multiple timescales</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kurikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kaneko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput Appl</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Temporal structure of motor variability is dynamically regulated and predicts motor learning ability</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">R</forename><surname>Miyamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gonzalez</forename><surname>Castro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Ölveczky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="312" to="321" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Exploration of joint redundancy but not task space variability facilitates supervised motor learning</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ghosal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Murthy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<date type="published" when="2016">2016. 201613383</date>
+			<pubPlace>U S A</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Excitatory and inhibitory STDP jointly tune feedforward neural circuits to selectively propagate correlated spiking activity</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">I</forename><surname>Kleberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fukai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gilson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">53</biblScope>
+			<date type="published" when="2014-05">2014. May</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Unsupervised Learning in an Ensemble of Spiking Neural Networks Mediated by ITDP</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Philippides</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Staras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Husbands</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1" to="41" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Spike sorting of heterogeneous neuron types by multimodality-weighted PCA and explicit robust variational Bayes</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Takekawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Isomura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fukai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Neuroinform</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1" to="13" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<title level="m" type="main">Accuracy of tetrode spike separation as determined by simultaneous intracellular and extracellular</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Henze</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Csicsvari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hirase</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsáki</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

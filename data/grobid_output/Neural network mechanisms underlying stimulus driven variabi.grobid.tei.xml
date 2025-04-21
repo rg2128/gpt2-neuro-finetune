@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Neural Network Mechanisms Underlying Stimulus Driven Variability Reduction</title>
+				<funder ref="#_xtUTgSe #_XZg2pKB #_4mcJTEA">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_HzPpaM9">
+					<orgName type="full">European Union Seventh Framework Programme</orgName>
+				</funder>
+				<funder ref="#_yw8rYsP">
+					<orgName type="full">Spanish Research</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Public Library of Science (PLoS)</publisher>
+				<availability status="unknown"><p>Copyright Public Library of Science (PLoS)</p>
+				</availability>
+				<date type="published" when="2012-03-29">March 29, 2012</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Gustavo</forename><surname>Deco</surname></persName>
+							<email>gustavo.deco@upf.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Center of Brain and Cognition</orgName>
+								<orgName type="laboratory">Theoretical and Computational Neuroscience Group</orgName>
+								<orgName type="institution">Universitat Pompeu Fabra</orgName>
+								<address>
+									<settlement>Barcelona</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Institucio ´Catalana de Recerca i Estudis Avanc ¸ats (ICREA)</orgName>
+								<orgName type="institution">Universitat Pompeu Fabra</orgName>
+								<address>
+									<settlement>Barcelona</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Etienne</forename><surname>Hugues</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center of Brain and Cognition</orgName>
+								<orgName type="laboratory">Theoretical and Computational Neuroscience Group</orgName>
+								<orgName type="institution">Universitat Pompeu Fabra</orgName>
+								<address>
+									<settlement>Barcelona</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Oxford</orgName>
+								<address>
+									<country key="GB">United Kingdom</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Neural Network Mechanisms Underlying Stimulus Driven Variability Reduction</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">PLoS Computational Biology</title>
+						<title level="j" type="abbrev">PLoS Comput Biol</title>
+						<idno type="eISSN">1553-7358</idno>
+						<imprint>
+							<publisher>Public Library of Science (PLoS)</publisher>
+							<biblScope unit="volume">8</biblScope>
+							<biblScope unit="issue">3</biblScope>
+							<biblScope unit="page">e1002395</biblScope>
+							<date type="published" when="2012-03-29">March 29, 2012</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F283BBAF83E0476A9A30F9DFE6CD6303</idno>
+					<idno type="DOI">10.1371/journal.pcbi.1002395</idno>
+					<note type="submission">Received August 6, 2011; Accepted January 5, 2012;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:08+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>It is well established that the variability of the neural activity across trials, as measured by the Fano factor, is elevated.</s><s>This fact poses limits on information encoding by the neural activity.</s><s>However, a series of recent neurophysiological experiments have changed this traditional view.</s><s>Single cell recordings across a variety of species, brain areas, brain states and stimulus conditions demonstrate a remarkable reduction of the neural variability when an external stimulation is applied and when attention is allocated towards a stimulus within a neuron's receptive field, suggesting an enhancement of information encoding.</s><s>Using an heterogeneously connected neural network model whose dynamics exhibits multiple attractors, we demonstrate here how this variability reduction can arise from a network effect.</s><s>In the spontaneous state, we show that the high degree of neural variability is mainly due to fluctuation-driven excursions from attractor to attractor.</s><s>This occurs when, in the parameter space, the network working point is around the bifurcation allowing multistable attractors.</s><s>The application of an external excitatory drive by stimulation or attention stabilizes one specific attractor, eliminating in this way the transitions between the different attractors and resulting in a net decrease in neural variability over trials.</s><s>Importantly, nonresponsive neurons also exhibit a reduction of variability.</s><s>Finally, this reduced variability is found to arise from an increased regularity of the neural spike trains.</s><s>In conclusion, these results suggest that the variability reduction under stimulation and attention is a property of neural circuits.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Traditionally, neuroscience aims to discover the neural mechanisms underlying perceptual, cognitive and motor functions by examining neural responses as subjects repeatedly perform a behavioral task.</s><s>Typically, neural responses are extracted by averaging over those trials and the obtained firing rates are often the only information retained.</s><s>This approach discards the high firing irregularity and the high variability across trials that individual neurons activity exhibit <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b1">2]</ref>, fluctuations that a priori limit information encoding.</s><s>At different scales, high fluctuations are also observed in the so-called ongoing activity, and have been shown to play a role on the task-induced activity <ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref>.</s><s>Therefore, the challenging question is: on a single-trial basis, how and in which conditions these a priori detrimental fluctuations allow an efficient information encoding?</s></p><p><s>Recent experimental studies have examined the neural variability across a variety of species, cortical areas, brain states and stimulus conditions <ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref>.</s><s>Measuring the neural variability with the Fano factor, the mean-normalized variance of the neural spike counts over trials, these studies have found that stimuli generally reduced neural variability <ref type="bibr" target="#b9">[10]</ref>, in line with previous results in the visual system <ref type="bibr" target="#b10">[11]</ref>.</s><s>Additionally, neural variability has been found to decrease in an attentional paradigm <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b8">9]</ref>.</s></p><p><s>Theoretically, using a rate model, a recent study <ref type="bibr" target="#b11">[12,</ref><ref type="bibr" target="#b12">13]</ref> has proposed that variability reduction arises from a stimulus induced suppression of an otherwise chaotic ongoing state.</s><s>Using a spiking network model, we demonstrate here that the variability reduction can arise from an alternative network effect presented in the framework of attractor networks.</s><s>The formalism of attractor dynamics offers a unifying principle for representation and processing of information <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref>. Co-activation of neurons induces stronger mutual synaptic connections, leading to assembly formation.</s><s>Reverberatory activity between assembly members can then lead to memory by the persistence of neural activation.</s><s>The concept of neural assemblies was later formalized in the framework of statistical physics <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref>, where these co-activated neurons lead to attractors in the phase space of the recurrent neural dynamics: patterns of co-activation can represent fixed points from which the dynamical system evolves.</s><s>In this framework, we show that during spontaneous activity, as measured by the mean-normalized variance of the spike count (the Fano factor), neural variability is high when the network exhibits noisedriven excursions between multiple attractors.</s><s>The application of an external stimulation stabilizes one specific attractor and suppresses the excursions between different attractors, leading to a reduction of neural variability.</s><s>After an exhaustive study of the Fano factor changes in the network, we conclude that variability reduction is associated with one fundamental condition, namely that in the spontaneous condition, the network working point is around the edge of the bifurcation above which multiple stable (multistable) activated attractors appear.</s><s>Moreover, we show that the reduced variability can be attributed to an increased regularity of the spike trains, as measured by the coefficient of variation (CV) of the interspike interval (ISI) distribution.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p><s>We study the reduction of neural variability using a spiking neural network model (see Materials and Methods).</s><s>Real biological networks have a priori an heterogeneous connectivity structure, particularly due to synaptic plasticity and learning: the present network model is an example of this.</s><s>We first investigate the neural activity and its variability when the network is in a spontaneous state.</s><s>Then, we consider the effect of the application of an external stimulation to one neural population and how variability is reduced relative to the spontaneous state.</s><s>Therefore, we study how attention reduces the variability, when the top-down attentional bias is modeled as an increase in the external stimulation.</s><s>We compare these results with experimental measurements <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b8">9]</ref>.</s><s>As a model prediction, we consider the case where two stimuli are presented to different network populationsmimicking the case of two simultaneously presented stimuli in a neuron's receptive field, and when attention is directed towards one of them.</s><s>We analyze under which conditions the variability is maximally reduced, i.e. when the network best encodes an external stimulation, and conclude that it occurs when the network working point in the spontaneous state is around the bifurcation where multiple stable attractor states emerge.</s><s>The application of an external excitatory drive (sensory or attentional input) stabilizes one specific attractor, eliminating in this way the transitions between different attractors, resulting in a net decrease in neural variability.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stimulation Effects on Variability</head><p><s>In the attractor network considered here (see Figure <ref type="figure" target="#fig_0">1A</ref> and Materials and Methods), each excitatory population is selective for a specific external stimulus.</s><s>In each of these populations, the recurrent weights are therefore assumed to have increased by Hebbian learning mechanisms to a value w z , called the cohesion level.</s><s>The inhibition level w Inh is regulated by the GABA synaptic connections provided by the inhibitory population.</s><s>The stationary and stable states (attractors) of this network can be studied using a standard mean-field approximation <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b18">19]</ref>, applied here to the case when input rate fluctuations are absent.</s><s>Figure <ref type="figure" target="#fig_0">1B</ref> plots the obtained bifurcation diagram in the spontaneous condition.</s><s>The diagram shows the firing rate difference between the possible stationary states as a function of the cohesion and inhibition levels.</s><s>Two regions can be distinguished.</s><s>First, a large region where there is a unique stationary stable state (large dark blue region): this state corresponds to a low activation state where excitatory and inhibitory neurons fire at a low mean rate (approximately 3 Hz and 9 Hz when w Inh ~1, respectively).</s><s>Second, above a bifurcation, in a region of intermediate inhibition level and sufficiently large cohesion level, the network exhibits multistability with the coexistence of 6 stable states, namely: 5 equivalent states where only one of the 5 specific populations is highly activated, and a low activation state as described above.</s><s>This last attractor remains stable just above the bifurcation, because of a so-called subcritical bifurcation.</s><s>Below the bifurcation, although the activated attractors are unstable, fluctuations can induce transient excursions of the network state towards them, the dynamics around these attractors being partially stable even if not globally.</s></p><p><s>First, we focus on spontaneous activity.</s><s>For a network working point around but below the bifurcation, for example for a cohesion level w z ~1:9 and an inhibition level w Inh ~1:05, Figure <ref type="figure" target="#fig_1">2A</ref> show the network spontaneous activity (for times less than 10 s).</s><s>The activity is irregular, not only from the timing of spikes but at the rate level, where abrupt changes occur from time to time.</s><s>Each neural population has different rate fluctuations.</s><s>The rate distribution for all selective populations (see Figure <ref type="figure" target="#fig_1">2B</ref>) is large (mean rate: 3.02 Hz; standard deviation: 4.53 Hz), with a unique peak at zero rate and with a long tail.</s><s>These rate fluctuations cannot be explained solely by the input rate fluctuations: they reveal the excursions of the activity between the different network attractors.</s><s>This type of network dynamics may be at the origin of the similar large firing rate fluctuations observed in the cortex of behaving monkeys (Reynolds and Mitchell, personal communication).</s><s>When an external stimulus is applied to a given population (I~200 Hz to population 1 at time t~10 s in Figure <ref type="figure" target="#fig_1">2A</ref>), not only the activity of this population increases but the neural activity fluctuations due to the wanderings between the different attractors is sharply reduced.</s><s>Actually, under stimulation, only the attractor corresponding to high activity in this population and low activity in all others is stable.</s></p><p><s>To study the changes in the neural variability in the network when a specific external stimulus is applied, we investigate the Fano factor reduction corresponding to the difference between the spontaneous condition and when one selective excitatory population is externally stimulated by a Poisson spike train with rate I.</s><s>The Fano factor was calculated from scatter plots of the neural spike count variance versus mean by linear regression fits constrained to pass through the origin.</s><s>The spike counts variance and mean were calculated for each neuron separated in windows of 100 ms and averaging over 1000 trials.</s><s>Applying the meanmatched procedure of Churchland et al. <ref type="bibr" target="#b9">[10]</ref>, neurons in the stimulated population define the non-matched case (as stimulation increases their rate), whereas neurons in the non-stimulated populations define the matched case (as stimulation changes only slightly their rates).</s><s>Figure <ref type="figure" target="#fig_2">3</ref> plots the Fano factor without external stimulation, with external stimulation (I~200 Hz) and their</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author Summary</head><p><s>To understand how neurons encode information, neuroscientists record their firing activity while the animal executes a given task for many trials.</s><s>Surprisingly, it has been found that the neural response is highly variable, which a priori limits the encoding of information by these neurons.</s><s>However, recent experiments have shown that this variability is reduced when the animal receives a stimulus or attends to a particular one, suggesting an enhancement of information encoding.</s><s>It is known that a cause of neural variability resides in the fact that individual neurons receive an input which fluctuates around their firing threshold.</s><s>We demonstrate here that all the experimental results can naturally arise from the dynamics of a neural network.</s><s>Using a realistic model, we show that the neural variability during spontaneous activity is particularly high because input noise induces large fluctuations between multiple -but unstable-network states.</s><s>With stimulation or attention, one particular network state is stabilized and fluctuations decrease, leading to a neural variability reduction.</s><s>In conclusion, our results suggest that the observed variability reduction is a property of the neural circuits of the brain.</s></p><p><s>difference as a function of the cohesion and inhibition levels.</s><s>Figure <ref type="figure" target="#fig_2">3A</ref> and 3B show the results for the matched condition and for the non-matched condition, respectively.</s><s>Both cases show that a reduction of the Fano factor consistent with the experimental findings occurs around the bifurcation line (black line).</s><s>More precisely, the matched rate case shows that multistability is required for the Fano factor to change.</s><s>The Fano factor is reduced on the right part of the bifurcation line, for w Inh w1, requiring then sufficient inhibition.</s><s>For the non-matched rate case, the Fano factor is well reduced around the whole multistability region.</s><s>Note that, due to the presence of noise, multiple attractors manifest themselves outside the region calculated with the mean-field approach (see Figure <ref type="figure" target="#fig_0">1B</ref>).</s><s>Furthermore, the Fano factor level for those regions is consistent with the observed experimental values, namely: around 1.4 for the non-stimulated case and 1 for the stimulated case.</s></p><p><s>Beyond the changes observed over trials, the spiking statistics, like the neural ISI distribution, is also likely to change under  together with the mean rate (red curves) for each population, obtained as the convolution of the spike trains with a unit Gaussian function with 50 ms width.</s><s>For the first 10 s, no stimulus is applied and the resulting ongoing activity is similar in all excitatory populations: in each of them, the firing rate fluctuates irregularly and abruptly as the result of input rate fluctuations and induced excursions between the different attractors of the network.</s><s>Besides an attractor corresponding to low activation in all populations, there are attractors corresponding to higher activation in one selective population and low activation in all the others.</s><s>From time t~10 s (green vertical line), a stimulus is presented to the selective excitatory population 1 (I~200 Hz), increasing its mean rate and decreasing the one of the other selective pools.</s><s>Moreover, all rates have now lower fluctuations: the attractor corresponding to a high activation of population 1 and a low activation of the others is stabilized.</s><s>(B) Probability distribution of the rate fluctuations for the specific excitatory populations during spontaneous activity.</s><s>The rate fluctuations are quite large (mean rate: 3:02 Hz; standard deviation: 4:53 Hz), with no peak except at zero rate and a long tail.</s><s>This behavior reveals the excursion regime between the different attractors.</s><s>doi:10.1371/journal.pcbi.1002395.g002</s><s>stimulation, although it has not been reported experimentally.</s><s>To compute the ISI distribution, we have simulated the network activity over long time intervals (100 s), and have characterized the ISI distribution by its coefficient of variation (CV ).</s><s>We have compared the CV and the Fano factor for two values of the cohesion level w z , a low value for which there is no multistability (w z ~1:7) and a high value for which there is (w z ~2:3).</s><s>As shown in Figure <ref type="figure" target="#fig_3">4</ref>, the CV and the Fano factor are always very similar, and vary similarly across all conditions.</s><s>Therefore, our model results suggest that the Fano factor change is due to an underlying change in the spiking statistics.</s></p><p><s>For a fixed cohesion level allowing multistable states, Figure <ref type="figure" target="#fig_4">5</ref> shows for the non-matched and matched conditions the Fano factor reduction as a function of the external stimulation and inhibition levels.</s><s>For the stimulated neurons, the neural variability reduction appears in regions where the spontaneous state is around the bifurcation and increases with the external stimulation.</s><s>For the non-stimulated neurons, the reduction of neural variability emerges also in the same region.</s><s>In the spontaneous state, neural variability is high because of the network state excursions between different attractors.</s><s>The application of an external stimulation stabilizes one specific attractor and suppresses the wanderings between different attractors (see Figure <ref type="figure" target="#fig_1">2A</ref>), leading to a neural variability reduction.</s></p><p><s>Figure <ref type="figure">6</ref> shows in more detail the evolution of the spike count mean, variance and Fano factor as a function of time for a network with a cohesion level w z ~1:9 and an inhibition level w Inh ~1:05, as in Figure <ref type="figure" target="#fig_1">2</ref>. The first 1000 ms were simulated in the spontaneous condition.</s><s>A specific external stimulation was applied from 1000 to 2000 ms to the selective neural population 1.</s><s>The top part of Figure <ref type="figure">6</ref> corresponds to the averaged results obtained from the 80 neurons of the stimulated population 1, whereas the bottom part corresponds to the averaged results from the 320 neurons in the other non-stimulated populations.</s><s>For the stimulated neurons, the spike count mean and variance increase when the stimulus is applied (at 1000 ms), but in such a way that the Fano factor is reduced.</s><s>For the non-stimulated neurons, the stimulation effect is to reduce both spike count mean and variance, in a way that reduces the Fano factor.</s><s>The Fano factor was calculated from the spike count variance versus mean scatter plots, where each point represents one neuron, the Fano factor being deduced using a linear regression fit (see Materials and methods).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Attentional Effects</head><p><s>Recent experiments have studied the effect of attention on the neural variability over trials <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b8">9]</ref>, Single V4 cells were recorded in awake behaving monkeys when one stimulus in the neuron's receptive field was behaviorally attended or not.</s><s>Both studies reported a relatively small but significant decrease of the Fano factor in the attended condition with respect to the non-attended one.</s><s>In our simulations, we modeled the attentional bias by increasing the level of exogenous input to the stimulus-specific population when this stimulus was attended, similar to an increase of the stimulus-related input.</s><s>In this sense, it can be regarded as a baseline shift mechanism, or an increase in contrast (However, it does not accommodate any attentional gain mechanism that would be better modeled through changes in postsynaptic sensitivity, possibly through NMDA receptor dynamics).</s><s>As the neural variability reduction increases with stimulus strength (see Figure <ref type="figure" target="#fig_4">5</ref>), the application of an attentional bias therefore decreases the Fano factor compared to the non-attended case.</s><s>The effect of attention on the Fano factor evolution in shown in Figure <ref type="figure">7</ref> by comparing with the non-attended case.</s><s>These results show that the model reproduces the range of Fano factor reductions observed experimentally <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b8">9]</ref>.</s></p><p><s>As a model prediction, we consider now the case where two stimuli are presented simultaneously in a neuron's receptive field and when attention is allocated to only one of them, a situation referred to lead to ''biased competition'' <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b20">21]</ref>.</s><s>In the network, selective populations 1 and 2 encode each one of the two simultaneously presented visual stimuli: the target which should be attended and the distractor which should be ignored.</s><s>After 500 ms of spontaneous activity, the two external visual stimuli are applied to these two populations for 1000 ms.</s><s>In the attended condition, the selective population corresponding to the target receives the attentional bias.</s><s>Figure <ref type="figure" target="#fig_6">8</ref> plots the neural variability reduction for the cohesion level w z ~1:9.</s><s>The variability reduction is obtained as the difference of the average Fano factor for the 80 neurons in the attended (Figure <ref type="figure" target="#fig_6">8A</ref>) versus in the non-attended stimulated populations (Figure <ref type="figure" target="#fig_6">8B</ref>).</s><s>For both populations, variability is reduced by attention around the region where the system is multistable without attention (around w Inh ~1).</s><s>The mechanism responsible for the reduction of neural variability is identical to the one described above.</s><s>In the condition without attention noisedriven excursions between attractors generates a high neural variability.</s><s>Allocation of attention stabilizes one of the attractors, namely the one corresponding to higher activation of the attended target population and lower activation of the ignored distractor population.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>In the spontaneous or undriven state, why do cortical circuits exhibit a relatively high degree of neural variability across trials?</s><s>Why does this variability decrease when a stimulus is presented or when attention is paid?</s><s>Here, we investigated what could underlie these phenomena in a realistic neural network.</s><s>Our results show that, under spontaneous conditions, the high degree of neural variability in a neural circuit could essentially be due to fluctuation-driven excursions between the different attractors of the circuit dynamics.</s><s>This is possible if, in the parameter space, the spontaneous state of the circuit resides around the edge of a bifurcation above which multistable attractors appear.</s><s>The application of an external excitatory drive, either mediated by a sensory stimulus or by attention, stabilizes one specific attractor and suppresses in this way the transitions between the different attractors.</s><s>This results in a net decrease in neural variability as measured as a by the Fano factor.</s><s>More precisely, the matched rate case shows that multistability is required for the Fano factor to change.</s><s>The Fano factor is reduced on the right part of the bifurcation line, requiring then sufficient inhibition (w Inh w1).</s><s>For the non-matched rate case, the Fano factor is well reduced around the whole multistability region.</s><s>In conclusion our results show that, in the model parameter space, there exists a region where the Fano factor is reduced, both in the non-matched and the matched rate case.</s><s>Because the spike count signal-to-noise ratio is increased, this reduction suggests an improved encoding of the external signal.</s></p><p><s>Beyond the variability over trials, we have also shown that the CV of the neural ISI distributions varies similarly to the Fano factor across all conditions, meaning that the variability reduction is due to a concomitant increase of the spike trains regularity.</s><s>It would be interesting to verify this model prediction experimentally.</s><s>However, due to relatively short recorded time intervals, this quantity may be difficult to measure and the CV 2 <ref type="bibr" target="#b21">[22]</ref>, which requires only the knowledge of two consecutive ISIs, could be employed instead.</s></p><p><s>The above conclusions have been obtained for the present heterogeneously connected network and rely on the existence of multiple attractors.</s><s>However, the present scenario does not depend on the specific network structure, provided the network exhibits multistability.</s><s>In this case, there is a region of the parameter space where there is strict multistability, meaning the co-existence of multiple stable states.</s><s>From dynamical systems For a low cohesion level (w z ~1:7, left column), the reduction is lower, and even non-existent in the matched rate case, than for a larger cohesion level (w z ~2:3, right column) for which the multistability region exists.</s><s>doi:10.1371/journal.pcbi.1002395.g004</s><s>theory, it is known that close to this region, the unstable attractors can still transiently attract the dynamics, a behavior which will be favored by fluctuations.</s><s>Note that, because multistability is needed here to reproduce the experimental observations, this excludes a priori single neuron mechanisms.</s></p><p><s>In a recent study <ref type="bibr" target="#b11">[12,</ref><ref type="bibr" target="#b12">13]</ref>, the authors have proposed that the ongoing spontaneous activity is chaotic, and that stimulation suppresses this chaos.</s><s>They use a phenomenological firing rate model which allows a theoretical understanding of the network behavior.</s><s>The realism of the present model allows a quantitative comparison with experimental results but prevents at the same time such a theoretical understanding.</s><s>Only could we predict the stationary states of the network using a mean-field approach.</s><s>Beyond the naı ¨ve analogy that stimulation suppresses ongoing fluctuations in the two models, a number of differences between the two models (in their case: rate model, no noise, temporal input, phase transition) indicate that the two scenarios are different.</s></p><p><s>Further experimental and theoretical evidence supports the present scenario.</s><s>At the microscopic level and using optical imaging, Arieli et al. <ref type="bibr" target="#b3">[4]</ref> (see also <ref type="bibr" target="#b4">[5]</ref>) first showed that spontaneous activity is highly coordinated across large neural assemblies in the primary visual cortex (V1) of an anesthetized cat.</s><s>Furthermore, the pattern of co-activation is feature-specific in the discharge of individual neurons and is temporally locked to the activation of other cells with similar orientation preferences whose spatial organization is described by orientation maps.</s><s>Finally, the variability of such ongoing activity can explain much of the variability in subsequent sensory-evoked responses, indicating a potential link with perception.</s><s>Blumenfeld et al. <ref type="bibr" target="#b22">[23]</ref> accounted for this type of cellular ongoing activity by assuming that this activity resulted from noise-driven transitions between multistable attractors of the intracortical network.</s><s>They suggested a rate model endowed with a simple local connectivity rule, and showed that it yields attractor states that are highly similar to the orientation maps alternatively activated in the absence of stimulation.</s><s>They also considered the case where the activity is evoked by a visual stimulus and showed how a structured afferent input can select the orientation map that matches the orientation of the stimulus.</s><s>Their model therefore suggests that orientation maps are encoded in the lateral connections, and that these connections can generate an orientation map both when the activity is spontaneous and when it is evoked by a visual stimulus.</s></p><p><s>In a recent work, where the same biophysical spiking neural network was used, it was shown that, using the Fisher information, the network neural activity best encoded a small external input, or modulatory input (like it is believed to be the case for attention), in the region of the parameter space where excitatory and inhibitory input currents almost balance each other, and which correspond to w Inh &amp;1 (Deco and Hugues, PLoS One, in press).</s><s>This regime of balanced input is supported by experimental evidence in vitro <ref type="bibr" target="#b23">[24]</ref> and in vivo <ref type="bibr" target="#b24">[25,</ref><ref type="bibr" target="#b25">26]</ref>.</s><s>Taken together with the present results, we can conclude that, in the region of the parameter space around the bifurcation and where input currents almost balance, our model agrees with all the experimental findings, which suggests that these observations may also correspond to a region of best stimulus encoding.</s></p><p><s>At the global level of large-scale neural systems, a broad body of experimental work, mainly using the BOLD fMRI hemodynamic response, has suggested that brain activity during resting state is not random but has a spatiotemporal structure (for a review see <ref type="bibr" target="#b26">[27]</ref>).</s><s>From these findings, ongoing neural activity may therefore be organized in a series of functional networks, so-called resting state networks.</s><s>Suggested by a modeling study, these networks may also emerge from noise-induced transitions between multiple oscillatory brain states <ref type="bibr" target="#b27">[28]</ref>.</s><s>In this sense, the model of Blumenfeld et al. <ref type="bibr" target="#b22">[23]</ref> at the microscopic cellular level, and the model of Deco et al. <ref type="bibr" target="#b27">[28]</ref> at the global neuroanatomical level, propose that spontaneous ongoing activity is built up with multiple attractors, each one related with different specific stimulations or tasks, and that this activity fluctuates during spontaneous activity (or rest) due to transitions between those attractor states, induced by noise and unstructured input.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and Methods</head><p><s>To study the variability changes due to stimulation or attention allocation, we consider a biophysically realistic neural network model, at the same time sufficiently simple to allow a theoretical investigation of its dynamical behavior <ref type="bibr" target="#b15">[16]</ref>.</s><s>We have chosen such a biophysical model to be able to reproduce quantitatively the experimental findings.</s><s>The model uses integrate-and-fire neurons with excitatory (AMPA and NMDA) and inhibitory (GABA-A) synaptic receptor types.</s><s>It is formulated and analyzed in the theoretical framework of attractor networks introduced in the seminal work of Amit <ref type="bibr" target="#b13">[14]</ref>.</s><s>An attractor network is a neural network whose dynamical state has the tendency to settle into a stable pattern of firing, which eventually destabilizes under the effect of noise.</s><s>Its behavior can be formally described by dynamical systems theory.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Neurons and Synapses</head><p><s>The spiking activity of neurons in the network is described by an integrate-and-fire model.</s><s>Integrate-and-fire (IF) neurons are point-like elements, whose dynamical state is described by their membrane potential V (t).</s><s>An IF neuron can be described by a basic circuit consisting of a cell membrane capacitance C m in parallel with a membrane resistance R m , driven by input currents  coming from connected neurons.</s><s>Hence, the subthreshold dynamics of the membrane potential of each neuron in the network is given by the following equation:</s></p><formula xml:id="formula_0">C m dV (t) dt ~{g m (V (t){V L ){ ½g AMPA,ext (V (t){V E ) X N ext j~1 s AMPA,ext j (t)z zg AMPA,rec (V (t){V E ) X N E j~1 w j s AMPA,rec j (t)z z g NMDA,rec (V (t){V E ) 1zce {bV (t) X N E j~1 w j s NMDA,rec j (t)z zg GABA (V (t){V I ) X N I j~1 w j s GABA j (t)<label>ð1Þ</label></formula><p><s>where g m ~1=R m is the membrane leak conductance, V L is the resting potential, and I syn is the synaptic current.</s><s>The membrane time constant is defined by t m ~Cm =g m .</s><s>When the voltage across the membrane reaches a given threshold V thr , the neuron generates a spike which is then transmitted to other neurons and the membrane potential is instantaneously reset to V reset and maintained there for a refractory time t ref during which the neuron is unable to produce further spikes.</s><s>The spikes arriving to a given neural synapse produce an input to the neuron which induce post-synaptic excitatory or inhibitory potentials (through a lowpass filter formed by the membrane and synaptic time constants).</s></p><p><s>In Equation <ref type="formula" target="#formula_0">1</ref>, g AMPA,ext , g AMPA,rec , g NMDA,rec , and g GABA are the synaptic conductances, and V E , V I the excitatory and inhibitory reversal potentials, respectively.</s><s>The dimensionless parameters w j of the connections are the synaptic weights.</s><s>The NMDA currents are voltage dependent and they are modulated by intracellular magnesium concentration.</s><s>The gating variables s i j (t) are the fractions of open channels of neurons and they are given by:</s></p><formula xml:id="formula_1">ds AMPA,ext j (t) dt ~{ s AMPA,ext j (t) t AMPA z X k d(t{t k j ),<label>ð2Þ</label></formula><formula xml:id="formula_2">ds AMPA,rec j (t) dt ~{ s AMPA,rec j (t) t AMPA z X k d(t{t k j ),<label>ð3Þ</label></formula><formula xml:id="formula_3">ds NMDA,rec j (t) dt ~{ s NMDA,rec j (t) t NMDA,decay zax j (t)(1{s NMDA,rec j (t)),<label>ð4Þ</label></formula><formula xml:id="formula_4">dx NMDA,rec j (t) dt ~{ x NMDA,rec j (t) t NMDA,rise z X k d(t{t k j ),<label>ð5Þ</label></formula><formula xml:id="formula_5">ds GABA j (t) dt ~{ s GABA j (t) t GABA z X k d(t{t k j ):<label>ð6Þ</label></formula><p><s>The sums over the index k represent all the spikes emitted by the presynaptic neuron j (at times t k j ).</s><s>In Equations 2-6, t NMDA,rise and t NMDA,decay are the rise and decays times for the NMDA synapses, and t AMPA and t GABA the decay times for AMPA and GABA synapses.</s><s>The rise times of both AMPA and GABA synaptic currents are neglected because they are short (,1 ms).</s><s>The values of the constant parameters and default values of the free parameters used in the simulations are displayed in Table <ref type="table" target="#tab_0">1</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Neural Network</head><p><s>We use the same network to study both situations, namely the effects of stimulation and attention on the neural variability over trials.</s><s>The network consists of N (N~1000 in our simulations) interacting neurons, where N E ~0:8N are excitatory (pyramidal) cells and N I ~0:2N are inhibitory cells (interneurons), consistent with the neurophysiologically observed proportions <ref type="bibr" target="#b28">[29]</ref>.</s><s>We use an attractor network where neurons are organized into a discrete set of populations (see Figure <ref type="figure" target="#fig_0">1A</ref>).</s><s>There are three different population types, namely: 1) the inhibitory population, 2) the excitatory non-selective population and 3) the excitatory selective population.</s><s>The inhibitory population I is made of the inhibitory neurons in the modeled brain area and mediates competition in the attractor network by distributing a global inhibitory signal.</s><s>The non-selective population E ns is composed of all excitatory neurons that are not receiving any specific external input and which therefore provides a background level of excitation.</s><s>The remaining excitatory neurons are clustered in different populations E k , 5 in the simulations reported here.</s><s>Each contains fN E neurons (f ~0:1 in our simulations) which are sensitive to a specific external stimulus.</s><s>The network is fully connected, meaning that each neuron in the network receives N E excitatory and N I inhibitory synaptic contacts.</s><s>The connection strengths between and within the populations are determined by dimensionless weights w j .</s><s>We assume that the connections are already formed, e.g. by earlier self-organization mechanisms, as if they were established by Hebbian learning, with the coupling between two neurons being strong if their activities are correlated and weak if they are anticorrelated.</s><s>The recurrent self-excitation within each selective population E k is given by the weight w z (w z w1), which is called the cohesion level, and the weaker connection between them by the weight w { (w { v1).</s><s>The synaptic efficacy w { depends on w z by the relation w { ~1{f (w z {1)=(1{f ).</s><s>This serves to ensure that the average excitatory synaptic efficacy will</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stimulation Effect</head><p><s>Without stimulation, all neurons only receive the background input.</s><s>In the stimulation case, the first selective population is stimulated, receiving an extra input whose rate is l 1 ~I.</s><s>Without external stimulation, the spontaneous activity of the network consists in a noise-driven wandering between different attractors (See Results for more detailed explanations), each corresponding to higher activation in one selective population and lower activation in all the others.</s><s>Stimulation onset stabilizes one attractor, corresponding to the high activation of the stimulated selective The spiking activity for one trial is simulated for 500 ms without stimulation, allowing the network activity to stabilize, and the stimulus is then presented during 100 ms.</s><s>Results during the stimulus period are averaged over 1000 trials initialized with different random seeds.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Attentional Effect</head><p><s>We analyze the effect of attention on the neural variability and study the encoding of an attended stimulus.</s><s>For this, we first address the recent experimental results when one stimulus is presented in a neuron's receptive field <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b8">9]</ref>.</s><s>In a second part, as a prediction, we analyze the case where two stimuli are presented in a neuron's receptive field, a case used to elicit ''biased competition'' <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b20">21]</ref>.</s><s>In the model, when attention is applied to a given stimulus, a biasing input corresponding to a rate l att is added to the input of the corresponding stimulus specific population <ref type="bibr" target="#b29">[30,</ref><ref type="bibr" target="#b30">31]</ref>.</s><s>In the case of one stimulus, the effect of attention is consequently assimilable to an increase of the stimulus strength or contrast, and is essentially a particular case of the stimulation case.</s><s>In the case of two stimuli, each simulation started with a period of 500 ms (for network activity stabilization).</s><s>Then, during a period of 1000 ms, an identical stimulus was presented to selective populations 1 and 2, represented by the corresponding extra rates l 1 ~l2 ~200 Hz, respectively.</s><s>Two cases were compared: with and without attention.</s><s>In the case with attention, an extra attentional bias l att was added to the population 1, corresponding to the attended spatial location (i.e.</s><s>l 1 ~200zl att Hz).</s><s>In the case without attention, no bias was applied.</s><s>The spiking activity was averaged over 2000 trials initialized with different random seeds.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fano Factor</head><p><s>In the spiking simulations, we characterized neural variability using the mean-normalized variance of the spike counts, i.e. the Fano factor.</s><s>It is defined as FF ~s2 =m, where s 2 is the variance and m is the mean of the spike counts of a neuron in a time window W. In all cases, we used a time window of 100 ms.</s><s>The Fano factor measures the noise-to-signal ratio and therefore characterizes the neural variability over trials.</s><s>For example, for a Poisson process, the variance equals the mean spike count (FF ~1) for any length of the time window.</s><s>We calculated the Fano factor by fitting a linear regression (constrained to pass through the origin) to scatter plots of the spike-count variance versus mean for each of the 80 neurons in the analyzed population.</s><s>The variance and mean of the spike counts were calculated for each individual neuron by averaging over 1000 trials.</s><s>In conditions for which the rate of some populations was not significantly affected, which is the case in practice for the non-stimulated neuronal populations, we used the mean-matching procedure for the Fano factor described in Churchland et al. <ref type="bibr" target="#b9">[10]</ref> whose aim is to have the same distribution of mean firing rates and therefore factor out the rate for the Fano factor changes.</s><s>In brief, the mean matching procedure consists of selecting neurons such that the distribution of the spike count for each condition (with or without stimulation) is the same.</s><s>We took the greatest common distribution of the computed spike count for each condition.</s><s>Individual points are then randomly removed until the actual distribution matched the common distribution.</s><s>The mean-matched Fano factor is based on the remaining points.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Network architecture and its dynamical behavior to analyze the stimulation and attention effects.</s><s>(A) Network architecture.</s><s>The network contains excitatory pyramidal cells (blue triangles) and inhibitory interneurons (red circles).</s><s>Neurons are fully connected and clustered into excitatory and inhibitory (I) populations (large circles).</s><s>There are two subtypes of excitatory populations, namely selective (E k ) and non-selective (E ns ), whereby selective populations encode specific stimuli.</s><s>Edges indicate recurrent connections between neurons in a population, and arrows indicate the connections strengths (see Materials and methods).</s><s>(B) Bifurcation diagram of the network obtained via the mean-field approximation.</s><s>The rate difference (in kHz) between attractors is plotted, revealing the multistability region (colors except dark blue) where two different types of stable attractors coexist (see Results).</s><s>doi:10.1371/journal.pcbi.1002395.g001</s></p></div></figDesc><graphic coords="3,58.05,60.78,462.05,212.43" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Network firing activity during spontaneous and stimulated conditions.</s><s>The network cohesion and inhibition levels are w z ~1:9 and w Inh ~1:05, respectively.</s><s>(A) Firing activity for network neurons (10 neurons in each population, as indicated on the right): raster plot (black)together with the mean rate (red curves) for each population, obtained as the convolution of the spike trains with a unit Gaussian function with 50 ms width.</s><s>For the first 10 s, no stimulus is applied and the resulting ongoing activity is similar in all excitatory populations: in each of them, the firing rate fluctuates irregularly and abruptly as the result of input rate fluctuations and induced excursions between the different attractors of the network.</s><s>Besides an attractor corresponding to low activation in all populations, there are attractors corresponding to higher activation in one selective population and low activation in all the others.</s><s>From time t~10 s (green vertical line), a stimulus is presented to the selective excitatory population 1 (I~200 Hz), increasing its mean rate and decreasing the one of the other selective pools.</s><s>Moreover, all rates have now lower fluctuations: the attractor corresponding to a high activation of population 1 and a low activation of the others is stabilized.</s><s>(B) Probability distribution of the rate fluctuations for the specific excitatory populations during spontaneous activity.</s><s>The rate fluctuations are quite large (mean rate: 3:02 Hz; standard deviation: 4:53 Hz), with no peak except at zero rate and a long tail.</s><s>This behavior reveals the excursion regime between the different attractors.</s><s>doi:10.1371/journal.pcbi.1002395.g002</s></p></div></figDesc><graphic coords="3,58.05,479.23,455.19,126.03" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Fano factor as a function of the cohesion and inhibition levels in the (A) non-matched rate and (B) matched rate conditions.</s><s>Fano factor (top) without and (middle) with external stimulation (I~200 Hz) and (bottom) their difference, i.e. the stimulus driven reduction of the Fano factor.</s><s>The difference in Fano factor between two consecutive contours is 0:2.</s><s>For the Fano factor reduction, the interval {0:1,0:1 ½ is indicated by the light blue color, and values less than {0:5 are indicated in white.</s><s>These results show that a reduction of the Fano factor consistent with the experiments occurs indeed around the bifurcation line, for sufficient inhibition (w Ihh w1).</s><s>doi:10.1371/journal.pcbi.1002395.g003</s></p></div></figDesc><graphic coords="4,58.05,60.78,459.51,277.29" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Comparison of the CV (black) and the Fano factor (red) in the (A) non-matched rate and the (B) matched rate conditions for two different cohesion levels.</s><s>CV and Fano factor (top) without and (middle) with external stimulation (I~200 Hz) and (bottom) their difference, i.e. their stimulus driven reduction.</s><s>The CV and Fano factor exhibit very similar values and behavior with respect to parameter changes.</s><s>For a low cohesion level (w z ~1:7, left column), the reduction is lower, and even non-existent in the matched rate case, than for a larger cohesion level (w z ~2:3, right column) for which the multistability region exists.</s><s>doi:10.1371/journal.pcbi.1002395.g004</s></p></div></figDesc><graphic coords="5,58.05,60.78,461.66,205.51" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Fano factor reduction for a fixed cohesion level (w z ~2:3 here) as a function of inhibition level and stimulation strength.</s><s>In the stimulated condition, one selective excitatory population is externally stimulated at a rate I (in kHz).</s><s>(A) The nonmatched condition corresponds to the 80 neurons of the stimulated population and (B) the matched-condition to the 320 neurons belonging to the other non-stimulated populations, using the meanmatched procedure of Churchland et al. (2010).</s><s>doi:10.1371/journal.pcbi.1002395.g005</s></p></div></figDesc><graphic coords="6,58.05,60.78,222.19,354.61" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .Figure 7 .</head><label>67</label><figDesc><div><p><s>Figure 6.</s><s>Changes in the spike count mean, variance and Fano factor due to the stimulation of one specific population.</s><s>The network cohesion and inhibition levels are w z ~1:9 and w Inh ~1:05, respectively.</s><s>After a first period of 1000 ms without stimulation, a specific external stimulation was applied during 1000 ms onto the neurons in the selective population 1. (A) Averaged results obtained with the 80 neurons of the stimulated population and (B) with the 320 neurons of the other non-stimulated populations.</s><s>doi:10.1371/journal.pcbi.1002395.g006</s></p></div></figDesc><graphic coords="7,58.05,60.78,327.35,264.30" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 8 .</head><label>8</label><figDesc><div><p><s>Figure 8. Fano factor reduction as a function of the inhibition level in the biased competition case for cohesion level w z ~1:9.</s><s>Two selective populations receive a stimulus, and attention is allocated to one of them.</s><s>The Fano factor is averaged over the 80 neurons in each stimulated population.</s><s>Fano factor reduction (A) for the attended stimulus corresponding population and (B) for the non-attended one.</s><s>doi:10.1371/journal.pcbi.1002395.g008</s></p></div></figDesc><graphic coords="7,315.10,452.81,218.56,206.48" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc><div><p><s>Neural and synaptic parameters.w</s><s>z is varied across conditions.Neurons in the inhibitory population are mutually connected with an intermediate weight w~1.These neurons are also connected with all excitatory neurons with the same intermediate weight, which for excitatory-to-inhibitory connections is w~1 and, for inhibitory-toexcitatory connections, is denoted w Inh and called the inhibition level.Neurons in each excitatory population E k are connected to neurons in the population E ns with a feedforward and feedback synaptic weights w~1 and w { , respectively.The remaining connections are all set to the baseline value, i.e. to 1.All neurons in the network always receive an external background input from N ext external neurons emitting uncorrelated Poisson spike trains at rate n ext,0 .</s><s>The resulting spike train is still a Poisson spike train, with rate n 0 ~Next n ext,0 .</s><s>More specifically, and for all neurons inside a given population p, the resulting spike train is assumed to have a time-varying rate n p ~30 ms, n 0 ~2:4 kHz, s n ~0:21 kHz is the standard deviation of n p ext (t) and n p (t) is a normalized Gaussian white noise.</s><s>Due to noise, negative values of n p ext (t) that could arise are rectified to zero.</s><s>These input rate fluctuations represent the noisy fluctuations that are typically observed in vivo.</s><s>Additionally, neurons in a specific selective population E k could receive other inputs when an external stimulus is applied or when attention is allocated to that population.</s><s>These inputs are specified by adding a corresponding rate to the rate of the background Poissonian input spike train.</s></p></div></figDesc><table><row><cell cols="2">Excitatory neurons</cell><cell cols="2">Inhibitory neurons</cell><cell>Synapses</cell><cell></cell></row><row><cell>N E</cell><cell cols="2">800 neurons N I</cell><cell cols="2">200 neurons V E</cell><cell>0 mV</cell></row><row><cell>C m</cell><cell>0.5 nF</cell><cell>C m</cell><cell>0.2 nF</cell><cell>V I</cell><cell>270 mV</cell></row><row><cell>g m</cell><cell>25 nS</cell><cell>g m</cell><cell>20 nS</cell><cell>t AMPA</cell><cell>2 ms</cell></row><row><cell>V L</cell><cell>270 mV</cell><cell>V L</cell><cell>270 mV</cell><cell>t NMDA,rise</cell><cell>2 ms</cell></row><row><cell>V thr</cell><cell>250 mV</cell><cell>V thr</cell><cell>250 mV</cell><cell cols="2">t NMDA,decay 100 ms</cell></row><row><cell>V reset</cell><cell>255 mV</cell><cell>V reset</cell><cell>255 mV</cell><cell>t GABA</cell><cell>10 ms</cell></row><row><cell>t ref</cell><cell>1 ms</cell><cell>t ref</cell><cell>1 ms</cell><cell>a</cell><cell>0.5 ms 21</cell></row><row><cell cols="2">g AMPA,ext 2.08 nS</cell><cell>g AMPA,ext</cell><cell>1.62 nS</cell><cell>b</cell><cell>0.062 mV 21</cell></row><row><cell cols="2">g AMPA,rec 0.104 nS</cell><cell>g AMPA,rec</cell><cell>0.081 nS</cell><cell>c</cell><cell>0.2801</cell></row><row><cell>g NMDA</cell><cell>0.327 nS</cell><cell>g NMDA</cell><cell>0.258 nS</cell><cell></cell><cell></cell></row><row><cell>g GABA</cell><cell>1.25 nS</cell><cell>g</cell><cell></cell><cell></cell><cell></cell></row></table><note><p><s>GABA 0.973 nS This table gives the values used in the numerical simulations for the parameters that enter in the definition of neuron and synaptic models (See Materials and Methods).</s><s>doi:10.1371/journal.pcbi.1002395.t001</s><s>remain constant as</s></p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>PLoS Computational Biology | www.ploscompbiol.org</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p><s>March 2012 | Volume 8 | Issue 3 | e1002395</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We thank <rs type="person">John Maunsell</rs>, <rs type="person">Marlene Cohen</rs> and <rs type="person">Jochen Braun</rs> for useful comments on the manuscript.We also thank <rs type="person">John Reynolds</rs> and <rs type="person">Jude Mitchell</rs> for very useful comments and discussions.</p></div>
+			</div>
+			<div type="funding">
+<div><p>The research leading to these results has received funding from the <rs type="funder">European Union Seventh Framework Programme</rs> (<rs type="grantNumber">FP7/2007-2013</rs>) under grant agreements <rs type="grantNumber">HEALTH F2 2008 200728</rs> (Brainsync) and no.<rs type="grantNumber">269921</rs> (BrainScaleS), from the <rs type="funder">Spanish Research</rs> Project <rs type="grantNumber">SAF2010-16085</rs> and from the <rs type="programName">CONSOLIDER-INGENIO 2010 Programme</rs> <rs type="grantNumber">CSD2007-00012</rs>.The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_HzPpaM9">
+					<idno type="grant-number">FP7/2007-2013</idno>
+				</org>
+				<org type="funding" xml:id="_xtUTgSe">
+					<idno type="grant-number">HEALTH F2 2008 200728</idno>
+				</org>
+				<org type="funding" xml:id="_yw8rYsP">
+					<idno type="grant-number">269921</idno>
+				</org>
+				<org type="funding" xml:id="_XZg2pKB">
+					<idno type="grant-number">SAF2010-16085</idno>
+					<orgName type="program" subtype="full">CONSOLIDER-INGENIO 2010 Programme</orgName>
+				</org>
+				<org type="funding" xml:id="_4mcJTEA">
+					<idno type="grant-number">CSD2007-00012</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author Contributions</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">The highly irregular firing of cortical cells is inconsistent with temporal integration of random EPSPs</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Softky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Koch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="334" to="350" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">The variable discharge of cortical neurons: implications for connectivity, computation, and information coding</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="3870" to="3896" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Coherent spatiotemporal patterns of ongoing activity revealed by real-time optical imaging coupled with single-unit recording in the cat visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arieli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Shoham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hildesheim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grinvald</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="2072" to="2093" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Dynamics of ongoing activity: explanation of the large variability in evoked cortical responses</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arieli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sterkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grinvald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aertsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">273</biblScope>
+			<biblScope unit="page" from="1868" to="1871" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Spontaneously emerging cortical representations of visual attributes</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kenet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bibitchkov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tsodyks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grinvald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arieli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">425</biblScope>
+			<biblScope unit="page" from="954" to="956" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Small modulation of ongoing cortical dynamics by sensory input during natural vision</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Weliky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">431</biblScope>
+			<biblScope unit="page" from="573" to="578" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Differential attention-dependent response modulation across cell classes in macaque visual area V4</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Sundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="131" to="141" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Spatial attention decorrelates intrinsic activity fluctuations in macaque visual area V4</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Sundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="879" to="888" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Attention improves performance primarily by reducing interneuronal correlations</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1594" to="1600" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Stimulus onset quenches neural variability: a widespread cortical phenomenon</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Churchland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Cunningham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Sugrue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neurosc</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="369" to="378" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Visual input evokes transient and strong shunting inhibition in visual cortical neurons</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Borg-Graham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Monier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fregnac</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">393</biblScope>
+			<biblScope unit="page" from="369" to="373" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Stimulus-dependent suppression of chaos in recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev E</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">11903</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Interactions Between Intrinsic and Stimulus-Dependent Activity in Recurrent Neural Networks</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinksy</surname></persName>
+		</author>
+		<editor>Ding M, Glanzman D</editor>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<publisher>Oxford UP</publisher>
+			<biblScope unit="page" from="65" to="82" />
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note>The Dynamic Brain: An Exploration of Neuronal Variability and Its Functional Significance</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">The Hebbian paradigm reintegrated: Local reverberations as internal representations</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Amit</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav Brain Sci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="617" to="626" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Model of global spontaneous activity and local structured activity during delay periods in the cerebral cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Amit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb Cortex</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="237" to="252" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Effects of neuromodulation in a cortical network model of object working memory dominated by recurrent inhibition</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="63" to="85" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Computational Neuroscience of Vision</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">T</forename><surname>Rolls</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<publisher>Oxford University Press</publisher>
+			<pubPlace>Oxford</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title level="m" type="main">The Noisy Brain</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">T</forename><surname>Rolls</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<publisher>Oxford University Press</publisher>
+			<pubPlace>Oxford</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The Dynamic Brain: From Spiking Neurons to Neural Masses and Cortical Fields</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">K</forename><surname>Jirsa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Breakspear</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Friston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">1000092</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Neural mechanisms of selective visual attention</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Duncan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="193" to="222" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Competitive mechanisms subserve attention in macaque areas V2 and V4</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chelazzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="1736" to="1753" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">A comparison of discharge variability in vitro and in vivo in cat visual cortex neurons</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Holt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Softky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Douglas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Koch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page" from="1806" to="1814" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Neural network model of the primary visual cortex: From functional architecture to lateral connectivity and back</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Blumenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bibitchkov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tsodyks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="219" to="241" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Turning on and off recurrent balance cortical activity</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hasenstaub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mccormick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">423</biblScope>
+			<biblScope unit="page" from="288" to="293" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Neocortical network activity in vivo is generated through a dynamic balance of excitation and inhibition</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Haider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Duque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hasenstaub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mccormick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="4535" to="4545" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Inhibition determines membrane potential dynamics and controls action potential generation in awake and sleeping cat cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rudolph</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Posposchil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Timofeev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Destexhe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="5280" to="5290" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Spontaneous fluctuations in brain activity observed with functional magnetic resonance imaging</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Fox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Raichle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="700" to="711" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">The key role of coupling, delay and noise in resting brain fluctuations</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jirsa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mcintosh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sporns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Koetter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Nat Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="10302" to="10307" />
+			<date type="published" when="2009">2009</date>
+			<pubPlace>U S A</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">Corticonics: Neural Circuits of the Cerebral Cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Abeles</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1991">1991</date>
+			<publisher>Cambridge University Press</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Neurodynamics of biased competition and cooperation for attention: a model with spiking neurons</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">T</forename><surname>Rolls</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page" from="295" to="313" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">A unified and quantitative network model for spatial attention in area V4</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hugues</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">´jv</forename><surname>Jose</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Physiol Paris</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="84" to="90" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

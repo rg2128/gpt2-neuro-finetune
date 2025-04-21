@@ -1,0 +1,2094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Model-based Pavlovian control of attention to threat</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Cold Spring Harbor Laboratory</publisher>
+				<availability status="unknown"><p>Copyright Cold Spring Harbor Laboratory</p>
+				</availability>
+				<date type="published" when="2018-03-23">2018-03-23</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Deborah</forename><surname>Talmi</surname></persName>
+							<email>deborah.talmi@manchester.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="department">Division of Neuroscience and experimental psychology</orgName>
+								<orgName type="institution">University of Manchester</orgName>
+								<address>
+									<addrLine>Oxford Road</addrLine>
+									<postCode>M13 9PL</postCode>
+									<settlement>Manchester</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">M</forename><surname>Slapkova</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Division of Neuroscience and experimental psychology</orgName>
+								<orgName type="institution">University of Manchester</orgName>
+								<address>
+									<addrLine>Oxford Road</addrLine>
+									<postCode>M13 9PL</postCode>
+									<settlement>Manchester</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Wieser</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Erasmus School of Social and Behavioural Sciences</orgName>
+								<orgName type="department" key="dep2">Department of Psychology, Education, and Child Studies</orgName>
+								<orgName type="institution">Erasmus University Rotterdam</orgName>
+								<address>
+									<addrLine>Burgemeester Oudlaan 50</addrLine>
+									<postCode>3062 PA</postCode>
+									<settlement>Rotterdam</settlement>
+									<country key="NL">Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">School of Biological Sciences</orgName>
+								<orgName type="laboratory">Division of neuroscience and experimental psychology</orgName>
+								<orgName type="institution">University of Manchester</orgName>
+								<address>
+									<postCode>M139PL</postCode>
+									<settlement>Manchester</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Model-based Pavlovian control of attention to threat</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<publisher>Cold Spring Harbor Laboratory</publisher>
+							<date type="published" when="2018-03-23" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">29FFE1837B02EA627314929BE8A32FFE</idno>
+					<idno type="DOI">10.1101/288027</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:08+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Acknowledgements.</s><s>We thank N. Chater and C. Frith for the discussions that inspired this paradigm, A. Wilkinson for help with data collection, J. Taylor and C. Charalambous for help with data analysis, and M. Bauer and L. Hunter for helpful comments.</s><s>DT acknowledges the support of ESRC First Grant ES/I010424/1.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Regulating established emotional responses upon receipt of novel information can be adaptive.</s><s>For example, it would be advantageous if, when a patient is told that their new bottle of medication has fewer side effects than the one they used for some years prior, they immediately down-regulated their feeling of anxiety about administering this medication, as well as concomitant cognitive, physiological and behavioural responses, such as increased attention to the bottle.</s><s>In this example the bottle of medication has become, through the years of being paired with unpleasant side effects, a signal for aversive outcomes.</s><s>Signals for reward or punishment are known to attract attention preferentially, a principle termed Value-Modulated Attention Capture (VMAC, Le <ref type="bibr" target="#b24">Pelley et al., 2016)</ref>.</s></p><p><s>The mechanisms that govern attention allocation can be productively described with a terminology more commonly applied to the control of overt behaviours -the distinction between instrumental/Pavlovian control, and model-free/model-based control <ref type="bibr" target="#b10">(Dayan &amp; Berridge, 2014)</ref>.</s><s>The distinction between instrumental and Pavlovian control has to do with the dependencies between behaviour and outcome <ref type="bibr" target="#b31">(Mackintosh, 1983)</ref>.</s><s>In an instrumental learning task outcomes depend on agents' behaviour, so agents act in order to increase utility -either increase the likelihood of reward, or decrease the likelihood of punishment.</s><s>An example for an instrumental control of VMAC is increased attention to stimuli when told that doing so will be remunerated.</s><s>By contrast, Pavlovian control refers to behaviour that is triggered by stimuli that predict reward or punishment, even when the outcomes are independent of the agent's behaviour, such as freezing in response to a tone that predicts a pain.</s><s>While Pavlovian control of VMAC was established in the case of rewarding stimuli, there are also demonstrations of the same effect with aversive stimuli <ref type="bibr" target="#b62">(Van Damme, Crombez, Hermans, Koster, &amp; Eccleston, 2006;</ref><ref type="bibr" target="#b66">L. Wang, Yu, &amp; Zhou, 2013;</ref><ref type="bibr" target="#b68">Wentura, Müller, &amp; Rothermund, 2014)</ref>.</s><s>One of the surest ways to be convinced that a particular behaviour is controlled by a .</s><s>CC-BY-NC-ND 4.0 International license a certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.</s><s>It is made available under</s></p><p><s>The copyright holder for this preprint (which was not this version posted August 7, 2018.</s><s>; https://doi.org/10.1101/288027</s><s>doi: bioRxiv preprint Pavlovian, rather than an instrumental, process is when it incurs a loss <ref type="bibr" target="#b11">(Dayan, Niv, Seymour, &amp; Daw, 2006)</ref>.</s><s>Pavlovian control of VMAC was elegantly demonstrated in an experiment that used an omission schedule, where attending distractors that signalled reward magnitude resulted in the omission of the reward (Le <ref type="bibr" target="#b25">Pelley, Pearson, Griffiths, &amp; Beesley, 2015)</ref>.</s><s>Because increased attention to distractors that predicted high (compared to low) reward decreased the likelihood of reward and was never itself rewarded, VMAC in that experiment could not be attributed to instrumental control.</s></p><p><s>Instead, the findings revealed a Pavlovian control of VMAC.</s><s>Subsequent work showed that these effects extended to separate tasks <ref type="bibr" target="#b4">(Bucker &amp; Theeuwes, 2017)</ref>.</s></p><p><s>The distinction between instrumental and Pavlovian control is orthogonal to the distinction between model-based and model-free control <ref type="bibr" target="#b9">(Daw, Niv, &amp; Dayan, 2005;</ref><ref type="bibr" target="#b10">Dayan &amp; Berridge, 2014)</ref>.</s><s>A model, according to Dayan and Berridge, is an internal representation of stimuli, situations and environmental circumstances, which supports prospective cognition.</s><s>Model-based responses are executed when we infer, based on our model of the environment, that responding in a particular way would maximise our expected utility.</s><s>Model-based control can be contrasted to model-free control, which depends on the accumulated average experience agents have with the outcomes associated with a particular environmental state.</s><s>Model-based control allows us to respond flexibly to a volatile, changing environment; model-free control gives us the wisdom of the average experience.</s><s>The example above for instrumental control, where participants attend stimuli when told they will be rewarded for doing so, is likely to be an example for model-based instrumental control.</s><s>This is because propositional information in instructions shape our model of the environment; we can take up a suggestion or follow an instruction regardless of previous experience in a task <ref type="bibr" target="#b45">(Olsson &amp; Phelps, 2004)</ref>.</s><s>Model-based instrumental responses, such as those informed by instructions, can become model-free if they are repeatedly executed and reinforced <ref type="bibr" target="#b71">(Yin &amp; Knowlton, 2006)</ref>.</s><s>For example, with .</s><s>CC-BY-NC-ND 4.0 International license a certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.</s><s>It is made available under</s></p><p><s>The copyright holder for this preprint (which was not this version posted August 7, 2018.</s><s>; https://doi.org/10.1101/288027</s><s>doi: bioRxiv preprint repeated pairing between attention to certain stimuli and reward attainment participants acquire a habit to attend to those stimuli.</s><s>The model-free nature of this behaviour is demonstrated when participants continue to pay preferential attention to these stimuli even when further reinforcement is unlikely <ref type="bibr" target="#b30">(Luque et al., 2017)</ref>.</s></p><p><s>Here we ask whether model-based Pavlovian control of VMAC is possible.</s><s>Previous experiments in animals have demonstrated model-based Pavlovian control of overt behaviour.</s><s>For example, placing animals in entirely new states, such as a salt-deprived state, instantly transforms the learned aversive value of a lever that predicts a salty taste <ref type="bibr" target="#b54">(Robinson &amp; Berridge, 2013)</ref>  <ref type="bibr" target="#b56">(Sevenster, Beckers, &amp; Kindt, 2012)</ref>.</s></p><p><s>It is not, at present, known whether model-based Pavlovian control of VMAC is possible.</s><s>Because Pavlovian control of VMAC was evident even when participants had plenty of opportunity to learn that the way they were allocating their attention was detrimental, and even when they were fully informed about the nature of the omission schedule <ref type="bibr" target="#b49">(Pearson, Donkin, Tran, Most, &amp; Le Pelley, 2015)</ref>, the Pavlovian control of VMAC may always be model-free <ref type="bibr" target="#b24">(Le Pelley et al., 2016)</ref>.</s><s>The same conclusion appears to be supported by findings that instructed extinction did not modulate the .</s><s>CC-BY-NC-ND 4.0 International license a certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.</s><s>It is made available under</s></p><p><s>The copyright holder for this preprint (which was not this version posted August 7, 2018.</s><s>; https://doi.org/10.1101/288027</s><s>doi: bioRxiv preprint 6 classically-conditioned potentiated startle responses <ref type="bibr" target="#b56">(Sevenster et al., 2012)</ref>.</s><s>Our aim was to test this contention by using an optimised task.</s><s>Evidence for model-based, Pavlovian control of VMAC will confirm, in the domain of internal resource allocation, the distinction between model-free and model-based Pavlovian control of incentive behaviour.</s></p><p><s>In the conditioning stage of the task participants passively viewed two Conditioned Stimuli (CSs), which fully predicted a painful electric shock (CS+) or the absence of shock (CS-).</s><s>We measured the Steady-State Visual Evoked Potential (SSVEP), a validated neural signal of visual attention (Matthias M. <ref type="bibr" target="#b42">Müller, Teder-Sälejärvi, &amp; Hillyard, 1998;</ref><ref type="bibr" target="#b44">Norcia, Appelbaum, Ales, Cottereau, &amp; Rossion, 2015)</ref>.</s></p><p><s>The SSVEP is known to be sensitive to VMAC, specifically value-modulated attentional engagement and disengagement processes that occur from 500ms after stimulus presentation <ref type="bibr" target="#b35">(Miskovic &amp; Keil, 2013;</ref><ref type="bibr" target="#b69">Wieser, Miskovic, &amp; Keil, 2016)</ref>, so we expected greater SSVEP amplitudes for the CS+ than the CS-.</s><s>The test stage included a single presentation of two ambiguous, novel CSs, which we refer to as "New_CSs" to contrast them to the "old_CSs" that participants experienced during the conditioning stage.</s><s>New_CSs were constructed such that their value could not be predicted by previous experience.</s><s>Before the test, participants received propositional information that, when combined with their learned internal representation of the CSs, allowed them to infer the prospective value of new_CSs.</s><s>We only measured attention to the very first presentation of the new_CSs, before they were ever reinforced (the entire task was repeated several times, but new stimuli were used in each repetition).</s></p><p><s>While not a formal test of the model-based or the Pavlovian nature of this form of control over VMAC, we argue that it would be difficult to account for differential attention to new_CSs in any other way, an issue we return to in the discussion section.</s><s>We hypothesised that participants would be able to utilise stored information jointly with propositional information to control attention .</s><s>CC-BY-NC-ND 4.0 International license a certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.</s><s>It is made available under</s></p><p><s>The copyright holder for this preprint (which was not this version posted August 7, 2018.</s><s>; https://doi.org/10.1101/288027</s><s>doi: bioRxiv preprint allocation, and therefore expected greater SSVEP amplitudes for the new_CS+ compared to the new_CS-.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Participants</head><p><s>Twenty seven undergraduate students from the University of Manchester participated in the study in exchange for course credits.</s><s>None of the participants reported personal or family history of photic epilepsy, none were taking centrally-acting medication, none had a history of psychiatric or neurological disorders, and all had normal or corrected-to-normal vision.</s><s>The experiment was approved by the University of Manchester ethics committee.</s><s>Three participants did not complete the study and one participant did not exhibit an SSVEP signal.</s><s>Three participants were excluded because they failed the contingency awareness criterion (see below).</s><s>This resulted in a total of 20 participants (6 males, mean age 19.5, SD=1.15).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Apparatus.</head><p><s>The amplitude of the electric skin stimulation which served as a US (see below) was controlled by a Digitimer DS5, an Isolated Bipolar Constant Current Stimulator (Digitimer DS5 2000, Digitimer Ltd., Welwyn Garden City, UK).</s><s>The DS5 produces an isolated constant current stimulus proportional to a voltage applied at its input.</s><s>For reasons of participant safety this stimulator is limited to delivering a maximum of 10V/10mA.</s><s>Participants received the stimulation through a ring electrode built in-house (Medical Physics, Salford Royal Hospital) attached to the DS5.</s><s>To ensure adequate conductance between the electrode and the skin, the back of each participant's hand was prepared with Nuprep Skin Preparation Gel and Ten20 Conductive Paste prior to attaching the electrode.</s><s>Transcutaneous electrical stimulation activates myelinated Aβ somatosensory fibres as well as Aδ nociceptive fibres <ref type="bibr" target="#b17">(Hird, Jones, Talmi, &amp; El-Deredy, 2018)</ref> and can therefore cause both a sensation of touch and a sensation of pain.</s></p><p><s>The experiment was implemented using the Psych toolbox on a Matlab (The Mathworks Inc., Natick, MA, USA) platform.</s><s>The voltage inputs to the DS5 were sent from Matlab through a data acquisition interface (National Instruments, Austin, TX, USA).</s><s>The behavioural ratings were taken on Microsoft Excel.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials</head><p><s>CSs. Stimuli resembled Navon figures <ref type="bibr" target="#b43">(Navon, 1977)</ref>, in that they were composed of global and local shapes where the outline of the large 'global' shape was created out of smaller 'local' shapes.</s><s>To create these stimuli we first created 48 unique shapes using Adobe Illustrator, each with a black outline and white filling.</s><s>These shapes were divided into 24 pairs so that the two shapes in each pair were visually dissimilar (e.g. an arrow and a star).</s><s>Each pair was used to create a subset of 4 Navon All figures were created and presented in grayscale to minimise differences in colours and luminance.</s></p><p><s>Four-figure subsets were randomly allocated to experimental block.</s><s>The two congruent figures were randomly allocated to the "old_CS+" and "old_CS-" conditions.</s><s>There were three types of task blocks, as described below, termed global, local, and control blocks.</s><s>The new_CS+ in 'Global' blocks used the global attribute of the old_CS+ and the local attribute of the old_CS-.</s><s>The new_CS+ in 'Local' blocks used the global attribute of the old_CS-and the local attribute of the old_CS+.</s><s>Two additional four-figure subsets were used for the 2 practice blocks.</s><s>The figures in practice blocks were created from 4 letters with one four-figure subset consisting of 'H' and 'O', and the other one 'Z' and 'I'.</s><s>US.</s><s>The majority of studies of VMAC use rewarding USs, but there is also evidence for VMAC with aversive outcomes, including pain (e.g.</s><s><ref type="bibr" target="#b66">Wang et al., 2013)</ref>.</s><s>Here the US was a painful electric stimulation delivered to the back of the right hand (see Apparatus, above).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Procedure</head><p><s>On arriving at the laboratory, participants were given an information sheet informing them of the justification for the study and of the use of electrical stimulation.</s><s>After they signed the consent form, participants were fitted with the electroencephalogram (EEG) cap, and sat in a dimly-lit and soundattenuated room, 90 cm in front of the monitor screen, where an electrode was attached to the dorsum of their right hand.</s><s>Once the electrode was attached the participants undertook a series of procedures, described below, in the following order: pre-experiment rating of materials, pain calibration, habituation, experimental task, and post-experiment rating of materials.</s></p><p><s>Pre-and post-experiment rating of likability and contingency.</s><s>Participants were presented with all of the figures and rated how much they liked each one using a 5-point Likert scale (likability rating task).</s><s>They then saw all figures again, and guessed, by entering a percentage, how likely each figure was to be followed by a painful stimulation (contingency rating task).</s><s>The order of the figures in each rating task was randomised for each participant.</s><s>The likability and contingency rating tasks were repeated at the end of the experiment.</s></p><p><s>Pain calibration.</s><s>This procedure ensured that participant could tolerate the stimulation, and that the stimulations were psychologically equivalent across participants.</s><s>During this procedure participants .</s><s>CC-BY-NC-ND 4.0 International license a certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.</s><s>It is made available under</s></p><p><s>The copyright holder for this preprint (which was not this version posted August 7, 2018.</s><s>; https://doi.org/10.1101/288027</s><s>doi: bioRxiv preprint 10 received a series of stimulations starting from 0.4mA, and incrementing by 0.4mA at each step.</s></p><p><s>Participants rated each stimulation on a scale from 0 -10 where a score of 0 reflected not being able to feel the stimulation, 3 reflected a stimulation level that was on the threshold of being painful, 7 related to a stimulation that was deemed painful, but still tolerable, and 10 related to 'unbearable pain'.</s><s>The scaling procedure was terminated once the participant reported the level of stimulation as being equivalent to '7' on the scale.</s><s>This calibration procedure was performed twice to allow for initial habituation/sensitisation to the stimulation.</s><s>The power levels that induced a rating of '7' on the second run of the calibration procedure were used as US.</s><s>The US was therefore a painful but tolerable sensation.</s></p><p><s>Habituation and method of CS presentation.</s><s>Participants passively viewed a randomised list of all of the CS figures.</s><s>CS figures were displayed at the centre of the screen, a 17'' monitor with a resolution of 1024x768 pixels and a refresh rate of 60Hz.</s><s>The duration of the presentation of each CS was 3,300ms.</s><s>That time included 66 on-off cycles in which CS figures were displayed on a uniform white background for 33.3ms ('on') and the screen turned black for 16.6ms ('off'), resulting in a 20Hz flickering display.</s><s>The inter-trial interval between CSs was 2,500ms, during which the screen was white.</s></p><p><s>Experimental task.</s><s>We designed a novel task to reveal model-based Pavlovian control of VMAC.</s><s>A schematic of the task is shown in Figure <ref type="figure">1</ref>.</s><s>The task progressed through two stages -a conditioning stage with 24 trials and a test stage with 4 trials, which are described in detail below.</s><s>Each trial included the presentation of a CS; when this was a CS+, the trial always terminated with US delivery.</s></p><p><s>Crucially, the logic of the task necessitated an extremely brief test stage that yielded only a single trial for the contrast of interest.</s><s>This was necessary in order to ensure that VMAC could not be controlled through a model-free process; once new_CSs were reinforced, that reinforcement could inform the value assigned to new_CSs in their second presentation.</s><s>Therefore, we needed to measure attention to new_CSs upon their first presentation, before they were reinforced, to prevent any possibility that threat value could be informed by the experience of reinforcement.</s><s>This requirement led us to measure attention using SSVEPs (Matthias M. <ref type="bibr" target="#b42">Müller et al., 1998)</ref>.</s><s>SSVEPs have excellent SNR compared to ERP and time-frequency analysis of EEG measurements <ref type="bibr" target="#b44">(Norcia et al., 2015;</ref><ref type="bibr" target="#b69">Wieser et al., 2016)</ref>, which can even allow a measure of effects at the single-trial level <ref type="bibr" target="#b22">(Keil et al., 2008)</ref>.</s><s>This is because the neurons that generate the SSVEP signal oscillate at the driving frequency, which is precise and known a-priori, such that it is less affected by background EEG noise.</s></p><p><s>Even within the narrow band, the time-locking of oscillation phase to the stimulus (here, the CS) decreases the impact of non-experimentally-driven oscillations.</s><s>In addition, a-priori knowledge of the frequency band and the electrodes sensitive to it prevents the need to correct for multiple comparisons.</s></p><p><s>The task was repeated once in each of 24 task blocks.</s><s>Each task block used novel stimuli, as described in the material section, preventing the transfer of learning across blocks.</s><s>Each task block lasted 2.5 minutes, with a 5-second break between blocks.</s><s>Participants practiced the experimental task before it commenced in two practice blocks, using the practice materials described above.</s></p><p><s>Before the experimental task began participants were given instructions for the experimental task.</s></p><p><s>They were asked to fixate on the fixation cross throughout each block, to observe the figures, and to pay attention to the relationships between the figures and the pain.</s><s>To encourage compliance, participants were told that their memory for these associations will be tested.</s><s>This instruction does not privilege memory for the CS+ compared to the CS-, and therefore cannot be responsible for observed threat responses.</s></p><p><s>Conditioning stage.</s><s>During the conditioning stage, participants learned that one figure (old_CS+) always predicted pain but another (old_CS-) was safe.</s><s>CSs were fully predictive of their respective outcomes to reduce any effects of stimulus predictability and of uncertainty, which are tightly intertwined with the effect of value on attention control (Le <ref type="bibr" target="#b24">Pelley et al., 2016)</ref>.</s><s>We used previous trial-by-trial dissection of threat effects on the SSVEP signal <ref type="bibr" target="#b70">(Wieser, Miskovic, Rausch, &amp; Keil, 2014)</ref> to decide how many conditioning trials were necessary in the conditioning stage.</s><s>They observed a significant modulation of the SSVEP by aversive reinforcement was observed after 5-10 conditioning trials.</s><s>Therefore, here we used 12 conditioning trials with each CS.</s><s>The old_CS+ figure and the old_CS-figure were presented 12 times each, at a random order.</s><s>The details of how each CS was presented was the same as during habituation, but here, when old_CS+ figures were presented, the US was delivered during the very last cycle, at the offset of the last 'on' screen.</s></p><p><s>Test stage.</s><s>After the conditioning stage was completed, participants viewed one of three possible instructions for 10s.</s><s>In the experimental condition the instruction was the word 'global' or the word 'local'.</s><s>These words indicated the terms under which the US was to be delivered in the test stage, namely, whether the global or local attribute of the old_CS+ would be reinforced.</s><s>In the control condition the instruction was a meaningless alphanumeric string, which gave participants no information as to which attribute of the old_CS+ would be reinforced.</s></p><p><s>Four trials were presented after the instructions.</s><s>The first two included the presentation of old_Css (their order was randomised), and the last two the presentation of new_CSs (their order was also randomised).</s><s>New_CSs were the "other" two figures from the same four-figure subset from which the old_CSs were drawn.</s><s>As can be appreciated from examining Figure <ref type="figure">1</ref>, each of the new_CSs consisted of one previously-reinforced attribute and one previously-safe attribute.</s><s>The old_CS+ and the new_CS+ were reinforced; the old_CS-and the new_CS-were not.</s></p><p><s>Participants did not see the new_CSs before, so without the instructions they could not predict which one would be reinforced.</s><s>The only way for participants to predict whether the US will follow the new_CS+ or the new_CS-was to infer this from the instructions by drawing on their memory of old_CSs.</s><s>For example, after the instruction 'local' participants who remembered the local attribute of the old_CS+ could infer that (1) the global attribute of new_CSs did not determine whether the US will be delivered or not <ref type="bibr" target="#b17">(2)</ref> the US will follow any new_CS with the same local attribute as the old_CS+.</s><s>Taken together, such participants would predict pain after the new_CS+ but not after the new_CS-.</s><s>New_CSs were reinforced in accordance with the instructions, confirming participants' expectations.</s><s>Old_Css were reinforced in accordance both with the contingencies established during the conditioning stage and the instructions.</s></p><p><s>While in previous research a newly-acquired conditioned response could be observed within 5-10 trials with each CS <ref type="bibr" target="#b70">(Wieser et al., 2014)</ref>, the test stage in each task block here only yielded just one trial in each condition.</s><s>To increase SNR the same structure described thus far -a conditioning stage followed by the test stage -was repeated in each task block.</s><s>16 task blocks were allocated to the experimental condition (8 with 'global' and 8 with 'local' instructions) and 8 were allocated to the control condition.</s></p><p><s>EEG recording and analysis EEG recording.</s><s>Continuous EEG recordings were obtained from a 64-channel cap with in-build electrodes (Biosemi Active Two) using the 10-20 configuration system.</s><s>Data were digitised at a rate of 2048Hz and filtered online between 0.1 and 100 Hz.</s><s>The recording was referenced online to the Common Mode Sense active electrode.</s><s>The Driven Right Leg passive electrode was used as ground.</s></p><p><s>The impedance was kept below 40kΩ.</s><s>Eye movement and blinks were recorded from horizontal and vertical electro-oculogram.</s></p><p><s>Preprocessing of EEG data.</s><s>Data were analysed using SPM12.</s><s>They were converted from their native format and then filtered with three 2 nd order Butterworth IIR zero-phase forward and reverse filters: a 1Hz highpass, a 80Hz lowpass, and a 49.50Hz-50.5Hz</s><s>notch filter to remove mainline noise.</s><s>Data were downsampled to 200Hz and re-referenced to the average of all electrodes.</s><s>Eye blinks and saccades were marked on the VEOG and HEOG channels (or Fp1 in two participants) using an automatic algorithm that was thresholded separately for each participant.</s></p><p><s>Further pre-processing was conducted for the purpose of complex demodulation (see below).</s><s>Data were segmented between -600ms before the onset of CSs to 3250ms after CS onset (Just before the offset of the CS/US onset, 3300ms after CS onset).</s><s>Segments where the following artefacts were present on occipital channels (Oz, POz, O1, O2, O3, O4) were rejected: jumps greater than 150 µV; peak-to-peak differences greater than 250 µV; flat segments.</s><s>Channels where more than 20% of the trials were rejected were excluded from analysis.</s><s>This left, on average, 282.62 learning trials and 7.83 test trials with each CS in each condition.</s><s>Artefacts associated with eye blinks and saccades were corrected using the singular value decomposition (SVD) technique implemented in SPM12 which captures eye artefacts and removes the associated component.</s></p><p><s>Complex demodulation.</s><s>Threat effects were operationalised as an increased response to the CS+ compared to CS-.</s><s>Previous work suggested that threat effect are more pronounced later in the presentation of the CS, because the threat response is greater when threat is imminent, and the perceptual processing of predictive sensory features of the CS is enhanced only when the US is imminent <ref type="bibr" target="#b34">(Miskovic &amp; Keil, 2012;</ref><ref type="bibr" target="#b48">Paterson &amp; Neufeld, 1987)</ref>.</s><s>Complex demodulation was therefore carried out to determine exactly when threat effects were present.</s><s>Complex demodulation was conducted using SPM12 on the entire segment, with the multitaper method, a hanning window, and a resolution of 1Hz.</s><s>Data in each condition were averaged using robust averaging, a method that down-weights outliers <ref type="bibr" target="#b29">(Litvak et al., 2011)</ref>.</s><s>The signal from electrodes Oz and POz was extracted around the driving frequency (19-21Hz).</s><s>These data were averaged across all 12 trials in each condition and the 24 blocks of the experimental task (288 trials for each CS).</s><s>In agreement with <ref type="bibr" target="#b34">Miskovic and Keil (2012)</ref>, threat effects were greatest during the second half of the presentation of the CS (Figure <ref type="figure" target="#fig_2">2</ref>).</s><s>An examination of the topographies associated with threat supported our selection of electrodes of analysis.</s><s>We used these results to constrain our spectral analysis.</s><s>Spectral analysis.</s><s>Based on the results of the complex demodulation step, spectral analysis was conducted using the spatiotemporal window of 1500-3000ms from CS onset, at Oz and POz.</s><s>We followed the method in <ref type="bibr" target="#b22">Keil (2008)</ref> to maximise sensitivity to differences of interest by minimising 20Hz signal that does not keep in phase with the stimulation.</s><s>Within the time and spatial windows defined above, 26 windows of 250ms (5 cycles of the SSVEP) were segmented for each trial.</s><s>The first window started at 1500ms from CS onset and each subsequent window started 50ms (1 SSVEP cycle) later; the last window started 2750ms from CS onset.</s><s>For each trial, these 26 windows were then averaged in time, resulting in averages that corresponded to single trials.</s><s>We then averaged across all of the single trial averages from the same condition <ref type="bibr">(Keil et al.</ref> did not perform this last step because they were interested in single-trial data).</s><s>These conditionwise averages were Fourier-transformed using the FFT function in Matlab.</s></p><p><s>Statistical analysis.</s><s>Across participants, some of the data significantly diverged from normality, according to the Shapiro-Wilk test, and all data were therefore log-transformed.</s><s>Data from the conditioning stage in each experimental block were binned (4 bins; 3 trials per bin), averaged across the 24 task blocks, and analysed with a 2 (threat: CS+, CS-) x 4 (bins in the conditioning stage).</s><s>The main hypothesis concerned the response to new_CSs during the test stage.</s><s>The response to new_CS+ was compared to the response to new_CS-across the 16 blocks in the experimental condition (collapsing across the 8 blocks in the 'global' and the 8 blocks in the 'local' conditions) using a onesample t-test.</s><s>These responses were also compared to the response to responses to the two ambiguous CSs that followed the 8 control blocks where no instructions were given using two Bonferroni-corrected two-sample t-tests (the averages that went into these comparisons comprised of 16 trials in each condition).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioural results</head><p><s>Sample selection.</s><s>Behavioural and EEG data were first checked to verify the presence of a conditioned threat response.</s><s>We excluded participants who may have disengaged from the task based on their 'learning score', computed as the increased contingency ratings given to old_CS+ stimuli after the experiment compared to the pre-experiment rating given to the same stimuli.</s></p><p><s>Increased ratings must be based on learning that occurred during the experiment, and therefore reflects at least a minimal level of engagement.</s><s>The learning score purposefully ignores the magnitude of the conditioned response, which could be computed as differential ratings of the old_CS+ and old_CS-, in order not to bias the selection of the sample.</s><s>To be included participants had to show a numerical (above 0) increase in ratings.</s><s>Based on this criterion, three participants were excluded from analysis, leaving a sample of N=20.</s></p><p><s>Manipulation check.</s><s>Contingency and liking ratings for the stimuli were entered into two separate 3way repeated-measures ANOVAs with the factors time (pre-experiment, post-experiment), threat (CS+, CS-), and status (old, new).</s><s>The results evidenced a conditioning effect (Figure <ref type="figure">3</ref>).</s><s>In both the analysis of contingency ratings and in the (separate) analysis of liking ratings the 3-way interaction between time (pre-experiment, post-experiment), threat (CS+, CS-), and status (old, new) was significant (contingency: F(1,19)=34.</s><s><ref type="bibr">95, P&lt;.001, partial eta=.65; liking F(1,19)=4.79, p=.04, partial eta=.20)</ref>.</s><s>We unpacked this interaction by examining the old and new CSs separately.</s><s>The 2-way interaction was significant for old_CSs (contingency: F(1,19)=59.</s><s><ref type="bibr">98, p&lt;.001, partial eta=.76; liking: F(1,19)=17.89, p&lt;.001, partial eta=.48)</ref> as well as for new_CSs (contingency: F(1,19)=4.</s><s><ref type="bibr">65, p=.04, partial eta =.20; liking: F(1,19)=9.16, p=.007, partial eta=.32)</ref>.</s><s>The results showed that participants expected the US more frequently following the CS+ and liked the CS+ less than the CS-, and that these effects were stronger for old_CSs than for new_CSs, probably because old_CSs were repeated multiple times, but new_CSs were only presented once.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>EEG results</head><p><s>Manipulation check.</s><s>Threat effects on the SSVEP during the conditioning stage were analysed with a 2 (threat) x 4 (trial bins) repeated-measures ANOVA.</s><s>The successful manipulation of threat in this experiment was evident in differential responses to the CS+ and CS-during the conditioning stage (Figure <ref type="figure">4</ref>), F(1,19)=5.50,</s><s>p=0.02, partial η 2 =0.22.</s><s>Although numerically the magnitude of threat effects was only observable after 3 trials, the interaction of threat and trial bins was not significant, F(3,57)&lt;1, suggesting that they remained consistent across each of the experimental blocks.</s><s>The main effect of binned trials, F(3,57)=6.98,</s><s>p&lt;.001, partial η 2 =0.27, was also significant, denoting an overall decrease in attention as the block progressed.</s><s>To verify that threat responses were also obtained in the test stage, responses to old_CSs in the control condition, where participants had no reason to make any model-based inferences, were analysed with a one-tailed paired t-test, contrasting old_CS+ and old_CS.</s><s>We observed differential responses to the old_CS+ and old_CS-, t(19)=2.36,</s><s>p=.015 (one-tailed), Cohen's d = 0.53.</s><s>Because only the data from the conditioning stage were pre-selected, the data from the test stage provide a useful confirmation.</s></p><p><s>Main hypothesis.</s><s>Our main hypothesis was that responses to the new_CS+ would be greater than responses to the new_CS-.</s><s>The hypothesis was evaluated with a one-tailed paired t-test comparing SSVEPs to the new_CS+ and new_CS-.</s><s>As predicted, SSVEP amplitudes were higher during the presentation of the new_CS+ compared to the new_CS-, t(19)=2.22,</s><s>p=.02, Cohen's d = 0.50.</s><s>Additional 2-tailed t-tests, controlled for multiple comparisons with a p-value of 0.025, compared each of these SSVEPS to the SSVEP elicited by ambiguous new_CSs in the control condition.</s><s>SSVEP amplitudes were equivalent during the presentation of the new_CS+ and the new_CSs in the control condition, t&lt;1, suggesting that participants experienced ambiguous figures as threatening when they could not use the instructions to disambiguate them.</s><s>This interpretation is supported by a significant difference between the new_CSs in the control condition and the new_CS-, t(19)=2.58,</s><s>p=0.018,</s><s>Cohen's d = 0.58, suggesting that VMAC was attenuated when participants knew that pain was unlikely.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>During the learning stage of our Pavlovian conditioning task, we observed an increase in the amplitude of the SSVEP signal towards stimuli with learned aversive value.</s><s>These results are not surprising, given much evidence that the valuation system can control attention allocation <ref type="bibr" target="#b24">(Le Pelley et al., 2016)</ref>, but important because they confirm relatively limited evidence for Pavlovian control of VMAC towards stimuli with aversive value <ref type="bibr" target="#b62">(Van Damme et al., 2006;</ref><ref type="bibr" target="#b66">L. Wang et al., 2013;</ref><ref type="bibr" target="#b68">Wentura et al., 2014;</ref><ref type="bibr" target="#b70">Wieser et al., 2014)</ref>, which is less established than Pavlovian control of VMAC towards reward, or the effect of value on instrumental control of VMAC.</s><s>Uniquely, these results also suggest a way to observe the neural evolution of VMAC across the learning process, and even in the first trial, something that has not been possible using other neuroimaging investigation <ref type="bibr" target="#b46">(Olsson &amp; Phelps, 2007;</ref><ref type="bibr" target="#b52">Phelps et al., 2001)</ref> or in animal models <ref type="bibr" target="#b2">(Balcarras, Ardid, Kaping, Everling, &amp; Womelsdorf, 2016)</ref>.</s></p><p><s>Our key result was that SSVEP amplitudes were larger when participants were presented with a new shape that they inferred predicted physical pain (the new_CS+), compared to a new shape that they inferred predicted safety (the new_CS-).</s><s>Because the amplitude of SSVEPs is higher for attended stimuli compared to unattended ones (Matthias M. <ref type="bibr" target="#b42">Müller et al., 1998;</ref><ref type="bibr" target="#b41">Muller et al., 1998)</ref>, our findings suggest that more attention was allocated to the new_CS+ compared to the new_CS-.</s><s>We argue that the differential attentional response to new_CS+ and new_CS-suggests a Pavlovian model-based control of VMAC, an argument that we dissect in the 'theoretical considerations' section, below.</s><s>It has to be noted that while the SSVEP is known to be sensitive to VMAC such as in aversive learning (Kastner-Dorn, Andreatta, Pauli, &amp; <ref type="bibr" target="#b19">Wieser, 2018;</ref><ref type="bibr" target="#b35">Miskovic &amp; Keil, 2013;</ref><ref type="bibr" target="#b69">Wieser et al., 2016)</ref> and to emotional stimuli in general <ref type="bibr" target="#b20">(Keil et al., 2003;</ref><ref type="bibr" target="#b21">Keil, Moratti, Sabatinelli, Bradley, &amp; Lang, 2005;</ref><ref type="bibr" target="#b32">McTeague, Shumen, Wieser, Lang, &amp; Keil, 2011;</ref><ref type="bibr" target="#b69">Wieser et al., 2016)</ref>, heightened ssVEP amplitudes are also found in response to increased working-memory load <ref type="bibr" target="#b58">(Silberstein, Nunez, Pipingas, Harris, &amp; Danieli, 2001)</ref>, and for attended relative to unattended stimuli <ref type="bibr" target="#b38">(Morgan, Hansen, &amp; Hillyard, 1996)</ref>  <ref type="bibr" target="#b16">(Hillyard et al., 1997)</ref>(M.</s><s>M. <ref type="bibr" target="#b40">Müller, Malinowski, Gruber, &amp; Hillyard, 2003;</ref><ref type="bibr">Matthias M. Müller et al., 1998)</ref>.</s><s>Thus, the enhanced SSVEP amplitudes for may reflect any of these respective processes.</s></p><p><s>By contrast to the experimental blocks, where the value of new_CSs could be inferred through a combination of the instructions and stored memories of the learning stage, in control blocks no instructions were given.</s><s>Therefore, the threat value of control new_CSs was ambiguous, and participants could not predict which one would be followed by pain.</s><s>These ambiguous new_CSs in the control condition attracted increased attention compared to the new_CS-.</s><s>This result, which suggests orienting towards ambiguous stimuli, accords with previous findings, where instructed, ambiguous, novel CSs gave rise to increased physiological arousal and increased activation in the amygdala and the insula <ref type="bibr" target="#b52">(Phelps et al., 2001)</ref>.</s></p><p><s>Our study confirms other demonstrations where instructions about Pavlovian contingencies encourage responses that mimic the effect of associative learning through experience (reviewed in <ref type="bibr" target="#b36">Mitchell, De Houwer, &amp; Lovibond, 2009)</ref>.</s><s>This is the first demonstration that propositional information -a form of instruction -influences Pavlovian control of attention allocation.</s><s>This demonstration is particularly important because a previous experiment suggested that in Pavlovian tasks attention allocation obeys associative learning principles, and is immune to propositional knowledge.</s><s>In Moratti and Keil's study <ref type="bibr" target="#b37">(Moratti &amp; Keil, 2009)</ref> the SSVEF during CS presentation (steady-state visual evoked field, measured with MEG) increased with increased number of sequentially reinforced CSs, not with increased US expectancy, which, in turn, only increased when previous CSs have consistently not been reinforced.</s><s>Indeed, other studies have also observed that similar 'gambler's fallacy'-like paradigms give rise to conditioned responses that are based on modelfree, not model-based value <ref type="bibr" target="#b7">(Clark, Manns, &amp; Squire, 2001;</ref><ref type="bibr" target="#b50">Perruchet, 1985)</ref>.</s><s>The results of Moratti and Keil, indicative of attention allocation, were particularly intriguing because they appeared to contradict evidence that expectancy influences visual attention <ref type="bibr" target="#b13">(Downing, 1988)</ref>.</s><s>Taken together, it appears that associative mechanisms dominate attention allocation in the gambler's fallacy paradigm, at least when using a delayed conditioning procedure <ref type="bibr" target="#b7">(Clark et al., 2001)</ref>, while in other paradigms -including those using delayed conditioning, as we did here -propositional information holds more sway.</s><s>It is possible that the balance between these mechanisms is affected by the certainty of each system in its threat evaluation <ref type="bibr" target="#b9">(Daw et al., 2005)</ref>.</s></p><p><s>While attentional responses were affected by propositional information here, it is possible that other classically-conditioned responses were not.</s><s>In particular, because attention allocation was affected in the first trial it bears stronger resemblance to US-expectancy ratings and to classically-conditioned skin conductance responses, which were immediately influenced by instructed extinction, than to potentiated startle, which was not <ref type="bibr" target="#b56">(Sevenster et al., 2012)</ref>.</s><s>Further research is required to examine this potential dissociation using our paradigm, and to verify whether instructed extinction, like instructed threat, also alters VMAC instantaneously.</s></p><p><s>By using neural measures to index control of VMAC we move a little closer to understanding how propositional information is implemented at the level of the neurobiological mechanism.</s><s>Increased SSVEPs during the presentation of threatening stimuli is thought to be driven by re-entrant connections from the amygdala, ACC and OFC, which amplify the processing of adaptive information <ref type="bibr" target="#b34">(Miskovic &amp; Keil, 2012)</ref>.</s><s>Repeated pairing between a stimulus and pain can change the neural representation of the pain-predicting stimulus.</s><s>For example, repeated pairing between a tone and a painful shock change the tuning frequency of neurons that encode these tones, and stimulation of the amygdala is sufficient to produce this effect <ref type="bibr" target="#b6">(Chavez, McGaugh, &amp; Weinberger, 2013)</ref>.</s><s>Here, however, such a process could not occur because attention modulation was manifested before the reinforcement itself.</s><s>A meta-analysis of studies of instructed fear found that the dorsomedial prefrontal cortex is uniquely associated with a conscious appraisal process <ref type="bibr" target="#b33">(Mechias, Etkin, &amp; Kalisch, 2010)</ref>.</s><s>Similarly, the same region has been shown to dynamically modulate model-free valuation in the OFC, striatum, and hippocampus <ref type="bibr" target="#b27">(Li, Delgado, &amp; Phelps, 2011)</ref>.</s><s>It is therefore likely that increased response to the new_CS+ was due to projections from the dorsomedial prefrontal cortex to the OFC and ACC, regions that are strongly connected to the amygdala and able to modulate its activity <ref type="bibr">(Lee,</ref> .</s><s>CC-BY-NC-ND 4.0 International license a certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.</s><s>It is made available under</s></p><p><s>The copyright holder for this preprint (which was not this version posted August 7, 2018.</s><s>; https://doi.org/10.1101/288027</s><s>doi: bioRxiv preprint 22 Heller, <ref type="bibr" target="#b26">van Reekum, Nelson, &amp; Davidson, 2012;</ref><ref type="bibr" target="#b55">Schiller &amp; Delgado, 2010)</ref>, with downstream reentrant effects in the visual cortex.</s></p><p><s>The constrained data yield of the paradigm should be acknowledged as a limitation of this study.</s></p><p><s>While the effect sizes in all of the statistical tests were all of a 'medium' size, according to Cohen's classification <ref type="bibr" target="#b8">(Cohen, 1988)</ref>, the study should be replicated in order to increase confidence in this novel result.</s><s>For the same reason, we could not explore the influence of 'dimension <ref type="bibr">' (global or local)</ref> in the results we obtained, because this would have halved the number of trials that we could analyse.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Theoretical considerations.</head><p><s>We argue that increased SSVEPs to new_CS+ compared to new_CS-in this experiment was likely due to a Pavlovian, not an instrumental process The paradigm was entirely passive; pain outcomes were independent of participants' behaviour or how they allocated their attention.</s><s>Participants could not benefit from allocating differential attention to specific CSs.</s><s>Indeed, participants were told explicitly, and also knew through experience across the 24 blocks of the task, that the stimulation levels were pre-determined and that they could therefore not influence it.</s><s>Participants had no reason to allocate more attention to the new_CS+ in order to increase success in the post-experiment rating task, because they have already completed it once before they started the experiment, and knew, therefore, that performance would benefit equally from attending all of the stimuli.</s></p><p><s>Although the control of VMAC here could not influence objective outcomes, it is possible, in principle, that it incurred some internal benefit.</s><s>Specifically, paying extra attention to threatening CSs here may have decreased subjective pain.</s><s>It is important to consider this possibility because expected and experienced pain are not true reflections of objective tissue damage.</s><s>Instead, pain experience is strongly modulated by pain expectations <ref type="bibr" target="#b1">(Atlas &amp; Wager, 2012;</ref><ref type="bibr" target="#b3">Berns et al., 2006;</ref><ref type="bibr" target="#b39">Morley, Vlaeyen, &amp; Schrooten, 2012;</ref><ref type="bibr" target="#b48">Paterson &amp; Neufeld, 1987;</ref><ref type="bibr" target="#b60">Tabor, Thacker, Moseley, &amp; Körding, 2017;</ref><ref type="bibr" target="#b63">Vlaev, Seymour, Dolan, &amp; Chater, 2009)</ref>, which modulate endogenous analgesic mechanisms <ref type="bibr" target="#b0">(Anchisi &amp; Zanon, 2015;</ref><ref type="bibr" target="#b61">Tracey, 2010;</ref><ref type="bibr" target="#b64">Wager et al., 2004)</ref>, and experimental pain expectations are themselves influenced by pre-existing individual biases <ref type="bibr">(Hoskin et al., n.d.)</ref>.</s></p><p><s>Yet closer scrutiny suggests that it is unlikely that attending the new_CS+ triggered endogenous analgesia.</s><s>While participants needed to attend experimental new_CSs to decipher exactly which one predicted pain and which one did not, this need not result in differential attention to the two new_CSs.</s><s>The US was completely predictable, always of the same intensity, and presented at the same time, so attending the new_CS+ is unlikely to have altered pain expectations meaningfully.</s><s>It is possible that attending the new_CS+ increased the precision of expectations <ref type="bibr" target="#b23">(Kok, Rahnev, Jehee, Lau, &amp; de Lange, 2012)</ref>.</s><s>However, expecting high pain with greater certainty would increase subjective pain, not decrease it <ref type="bibr" target="#b17">(Hird et al., 2018)</ref>.</s><s>In fact, much evidence suggests that distraction, not attention, is an effective pain-coping strategy <ref type="bibr" target="#b5">(Buhle, Stevens, Friedman, &amp; Wager, 2012;</ref><ref type="bibr" target="#b14">Eccleston, 1995;</ref><ref type="bibr" target="#b57">Sharar et al., 2016;</ref><ref type="bibr" target="#b67">Weiss, Dahlquist, &amp; Wohlheiter, 2011)</ref>.</s></p><p><s>To fully establish that a response is controlled by a Pavlovian process researchers have utilised omission schedules, where the response incurs a cost (Le <ref type="bibr" target="#b24">Pelley et al., 2016;</ref><ref type="bibr" target="#b31">Mackintosh, 1983)</ref>.</s><s>This method is achievable for model-free Pavlovian responses, but in the case of model-based Pavlovian control known eventual costs should, by definition, alter the world-model that inspired the responses in the first place.</s><s>It is therefore potentially tricky to utilise this method to test that control was Pavlovian and model-based.</s><s>In summary, although the feeling of pain is malleable, and we have not conclusively demonstrated that attention was controlled through a Pavlovian rather than an instrumental process, we can presently think of no a-priori reason that attending the new_CS+ in this experiment would be advantageous.</s><s>The intuitive sense that we would all want to look -that we might not be able to attend anything else -is perhaps simply the reflection of Pavlovian misbehaviour <ref type="bibr" target="#b11">(Dayan et al., 2006)</ref>.</s></p><p><s>During the test stage participants could combine the propositional information provided to them in the instructions (about the dimension that will be reinforced -global or local) with their stored representation of the reinforced attribute (the particular shape that predicted the US during the conditioning stage) to form a prediction of the value of new_CSs.</s><s>That they have, indeed, done so is evident in the differential attention they allocated to new_CSs in experimental blocks.</s><s>While we did not test the model-based nature of control of VMAC formally, e.g. by using a two-step task <ref type="bibr" target="#b47">(Otto, Skatova, Madlon-Kay, &amp; Daw, 2015)</ref>, increased attention to the new_CS+ compared to the new_CShere involved "prospective cognition, formulating and pursuing explicit possible future scenarios based on internal representations of stimuli, situations and environmental circumstances" -the hallmark of model-based Pavlovian control according to <ref type="bibr">Dayan and Berridge (2014, p. 5)</ref>.</s></p><p><s>While new_CSs were constructed such that previous experience would render them equally 'threatening' and 'safe', and render it difficult for a model-free algorithm to implement differential responses to these CSs, it is possible that the instructions created a model which then trained a model-free controller, as in schemes such as Dyna <ref type="bibr" target="#b59">(Sutton, Szepesvári, Geramifard, &amp; Bowling, 2008)</ref> or "biased" learning <ref type="bibr" target="#b12">(Doll, Jacobs, Sanfey, &amp; Frank, 2009)</ref>, or, alternatively, trigger an existing modelfree controller.</s><s>Regarding the first alternative, it is clear that the limits of model-free reinforcement learning are constantly expanding with the introduction of meta-reinforcement learning (J.</s><s>X. <ref type="bibr" target="#b65">Wang et al., 2016)</ref>.</s><s>Future computational work could explore whether indirect reinforcement learning can link stored knowledge and propositional information within a few seconds and a single trial to .</s><s>CC-BY-NC-ND 4.0 International license a certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.</s><s>It is made available under</s></p><p><s>The copyright holder for this preprint (which was not this version posted August 7, 2018.</s><s>; https://doi.org/10.1101/288027</s><s>doi: bioRxiv preprint 25 influence the value predicted in a novel state.</s><s>In the "biased" learning scheme, for example, the training of the model-free controller relied on a modulation of the value of reinforcers <ref type="bibr" target="#b12">(Doll et al., 2009)</ref>, so it may not be realistic to expect such training in measurements that take place prior to any reinforcement, as in the present paradigm.</s></p><p><s>The second alternative is that the instructions created a model that triggered model-free habits to control VMAC.</s><s>Organisms may habitually attend more highly valued (compared to neutral) stimuli preferentially because this incurs reward over the long-term, even though it does not do so in a particular scenario.</s><s>Attention to valued stimuli could improve the encoding of CSs, strengthen their memory traces, and thus facilitate optimal decisions when the opportunity arises to act on the same stimuli <ref type="bibr" target="#b28">(Lieder, Griffiths, &amp; Hsu, 2018)</ref>.</s><s>Additionally, prediction error minimisation -something that is considered globally adaptive <ref type="bibr" target="#b51">(Pezzulo, Rigoli, &amp; Friston, 2015)</ref> -may be facilitated if the excellent encoding of previously-valued stimuli increases the precision of the model we have of the world around us.</s><s>The model constructed by the instructions could therefore simply indicate to the system which stimuli are likely to have large absolute value, as well as which have value which is highly uncertain; but the actual attentional control may be carried out through the habitual mechanism.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc><div><p><s>. The opening example demonstrates what Model-based Pavlovian control of VMAC might looks like in humans: the information on the new medication revises the patient's model of the environment, yielding new inferences that instantaneously transform the value they assign to the bottle and, consequently, the attention she pays to it.</s><s>Not much is currently known about Model-based Pavlovian control in humans, although a recent study suggested that a model-based algorithm fitted conditioned threat response in the amygdala better than model-free algorithms (Prévost, McNamee, Jessup, Bossaerts, &amp; O'Doherty, 2013), and the distinction between model-based and model-free Pavlovian control resembles the one between cognitive and emotional control of Pavlovian responses in aversive conditioning tasks</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head></head><label></label><figDesc><div><p><s>figures, as shown in Figure 1.</s><s>Two were congruent (e.g. a global arrow made of local arrows, a global</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FinallyFIGURE 2 .</head><label>2</label><figDesc><div><p><s>FIGURE 1. EXPERIMENTAL TASK.</s><s>Left: timeline of a single block in the experimental task, including the conditioning, instructions, and test stages.</s><s>Right: CSs in this block were drawn from the 4-figure subset crossing the local and global dimensions of the star and arrow shapes.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="36,80.46,207.90,295.38,228.96" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="36,80.28,478.98,295.38,229.14" type="bitmap" /></figure>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Berridge (2014) discuss such recall and revaluation processes as mechanisms that allow model-based Pavlovian control.</s></p><p><s>At the experiential level, increased attention to the new_CS+ suggests that the information given to participants worked as an emotion regulation technique -it rendered ambiguous stimuli instantly threatening.</s><s>Drawing the connection between model-based and model-free control, on the one hand, and cognitive and emotional control, on the other <ref type="bibr" target="#b56">(Sevenster et al., 2012)</ref> can help the quest to ground emotion regulation and behaviour change techniques more tightly in computational theories <ref type="bibr" target="#b15">(Etkin, Büchel, &amp; Gross, 2016)</ref>.</s></p><p><s>. CC-BY-NC-ND 4.0 International license a certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.</s><s>It is made available under</s></p><p><s>The copyright holder for this preprint (which was not this version posted August 7, 2018.</s><s>; https://doi.org/10.1101/288027</s><s>doi: bioRxiv preprint</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">A Bayesian perspective on sensory and cognitive integration in pain perception and placebo analgesia</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Anchisi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zanon</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0117270</idno>
+		<ptr target="http://doi.org/10.1371/journal.pone.0117270" />
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">How expectations shape pain</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">Y</forename><surname>Atlas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Wager</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neulet.2012.03.039</idno>
+		<ptr target="http://doi.org/10.1016/j.neulet.2012.03.039" />
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience Letters</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Attentional Selection Can Be Predicted by Reinforcement Learning of Task-relevant Stimulus Features Weighted by Valueindependent Stickiness</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Balcarras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ardid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kaping</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Everling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Womelsdorf</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/jocn_a_00894</idno>
+		<ptr target="http://doi.org/10.1162/jocn_a_00894" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Cognitive Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="333" to="349" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Neurobiological substrates of dread</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Berns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chappelow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cekic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Zink</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pagnoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Martin-Skurski</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1123721</idno>
+		<ptr target="http://doi.org/10.1126/science.1123721" />
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="issue">5774</biblScope>
+			<biblScope unit="page" from="754" to="758" />
+			<date type="published" when="2006">2006</date>
+			<pubPlace>New York, N.Y.</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Pavlovian reward learning underlies value driven attentional capture</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Bucker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Theeuwes</surname></persName>
+		</author>
+		<idno type="DOI">10.3758/s13414-016-1241-1</idno>
+		<ptr target="http://doi.org/10.3758/s13414-016-1241-1" />
+	</analytic>
+	<monogr>
+		<title level="j">Perception, &amp; Psychophysics</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="415" to="428" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>Attention</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Buhle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Stevens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Friedman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Wager</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0956797611427919</idno>
+		<ptr target="http://doi.org/10.1177/0956797611427919" />
+	</analytic>
+	<monogr>
+		<title level="m">Distraction and Placebo</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="246" to="253" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Activation of the basolateral amygdala induces long-term enhancement of specific memory representations in the cerebral cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Chavez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Mcgaugh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Weinberger</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.nlm.2012.12.013</idno>
+		<ptr target="http://doi.org/10.1016/j.nlm.2012.12.013" />
+	</analytic>
+	<monogr>
+		<title level="j">Neurobiology of Learning and Memory</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="8" to="18" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Trace and delay eyeblink conditioning: contrasting phenomena of declarative and nondeclarative memory</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Manns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">R</forename><surname>Squire</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/1467-9280.00356</idno>
+		<ptr target="http://doi.org/10.1111/1467-9280.00356" />
+	</analytic>
+	<monogr>
+		<title level="j">A Journal of the American Psychological Society / APS</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="304" to="308" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>Psychological Science</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Statistical power analysis for the behavioral sciences</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cohen</surname></persName>
+		</author>
+		<idno type="DOI">10.1234/12345678</idno>
+		<ptr target="http://doi.org/10.1234/12345678" />
+	</analytic>
+	<monogr>
+		<title level="m">Statistical Power Analysis for the Behavioral Sciences</title>
+		<meeting><address><addrLine>Hillsdale, NJ</addrLine></address></meeting>
+		<imprint>
+			<publisher>Lawrence Erlbaum Associates</publisher>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+	<note>nd ed.</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Uncertainty-based competition between prefrontal and dorsolateral striatal systems for behavioral control</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Daw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Niv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dayan</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn1560</idno>
+		<ptr target="http://doi.org/10.1038/nn1560" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1704" to="1711" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Model-based and model-free Pavlovian reward learning: revaluation, revision, and revelation</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Berridge</surname></persName>
+		</author>
+		<idno type="DOI">10.3758/s13415-014-0277-8</idno>
+		<ptr target="http://doi.org/10.3758/s13415-014-0277-8" />
+	</analytic>
+	<monogr>
+		<title level="j">Cognitive, Affective &amp; Behavioral Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="473" to="492" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">The misbehavior of value and the discipline of the will</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Niv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Seymour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Daw</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neunet.2006.03.002</idno>
+		<ptr target="http://doi.org/10.1016/j.neunet.2006.03.002" />
+	</analytic>
+	<monogr>
+		<title level="j">Neural Networks</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1153" to="1160" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Instructional control of reinforcement learning: A behavioral and neurocomputational investigation</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Doll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Jacobs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Sanfey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frank</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.brainres.2009.07.007</idno>
+		<ptr target="http://doi.org/10.1016/j.brainres.2009.07.007" />
+	</analytic>
+	<monogr>
+		<title level="j">Brain Research</title>
+		<imprint>
+			<biblScope unit="volume">1299</biblScope>
+			<biblScope unit="page" from="74" to="94" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Expectancy and visual-spatial attention: Effects on perceptual quality</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Downing</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/0096-1523.14.2.188</idno>
+		<ptr target="http://doi.org/10.1037/0096-1523.14.2.188" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Experimental Psychology: Human Perception and Performance</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="188" to="202" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">The attentional control of pain: methodological and theoretical concerns</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Eccleston</surname></persName>
+		</author>
+		<ptr target="http://www.ncbi.nlm.nih.gov/pubmed/8577487" />
+	</analytic>
+	<monogr>
+		<title level="j">Pain</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="3" to="10" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Emotion regulation involves both model-based and modelfree processes</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Etkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Büchel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Gross</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nrn.2016.79</idno>
+		<ptr target="http://doi.org/10.1038/nrn.2016.79" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="532" to="532" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Combining steady-state visual evoked potentials and f MRI to localize brain activity during selective attention</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hillyard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hinrichs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Tempelmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Morgan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Scheich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Heinze</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/(SICI)1097-0193(1997)5:4&lt;287</idno>
+		<idno>AID-HBM14&gt;3.0.CO</idno>
+		<ptr target="http://doi.org/10.1002/(SICI)1097-0193(1997)5:4&lt;287" />
+	</analytic>
+	<monogr>
+		<title level="j">Human Brain Mapping</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="287" to="292" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">A comparison between the neural correlates of laser and electric pain stimulation and their modulation by expectation</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>-B Hird</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K P</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Talmi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>El-Deredy</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jneumeth.2017.09.011</idno>
+		<ptr target="http://doi.org/10.1016/j.jneumeth.2017.09.011" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience Methods</title>
+		<imprint>
+			<biblScope unit="volume">293</biblScope>
+			<biblScope unit="page" from="117" to="127" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hoskin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Berzuini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Acosta-Kane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>El-Deredy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Talmi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Sensitivity to Pain Expectations: A Bayesian Model of Individual Differences</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Hypervigilance during anxiety and selective attention during fear: Using steady-state visual evoked potentials (ssVEPs) to disentangle attention mechanisms during predictable and unpredictable threat</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Kastner-Dorn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Andreatta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Pauli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Wieser</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cortex.2018.05.008</idno>
+		<ptr target="http://doi.org/10.1016/j.cortex.2018.05.008" />
+	</analytic>
+	<monogr>
+		<title level="m">Online</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Early modulation of visual perception by emotional arousal: evidence from steady-state visual evoked brain potentials</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Keil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gruber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Moratti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stolarova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Bradley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Lang</surname></persName>
+		</author>
+		<idno type="DOI">10.3758/CABN.3.3.195</idno>
+		<ptr target="http://doi.org/10.3758/CABN.3.3.195" />
+	</analytic>
+	<monogr>
+		<title level="j">Cognitive, Affective &amp; Behavioral Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="195" to="206" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Additive effects of emotional content and spatial selective attention on electrocortical facilitation</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Keil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Moratti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sabatinelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Bradley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Lang</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cercor/bhi001</idno>
+		<ptr target="http://doi.org/10.1093/cercor/bhi001" />
+	</analytic>
+	<monogr>
+		<title level="j">Cerebral Cortex</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1187" to="1197" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Electrocortical and electrodermal responses covary as a function of emotional arousal: A singletrial analysis</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Keil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Wangelin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sabatinelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Bradley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Lang</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1469-8986.2008.00667.x</idno>
+		<ptr target="http://doi.org/10.1111/j.1469-8986.2008.00667.x" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychophysiology</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="516" to="523" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Attention Reverses the Effect of Prediction in Silencing Sensory Signals</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kok</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rahnev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F M</forename><surname>Jehee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Lau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">P</forename><surname>De Lange</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cercor/bhr310</idno>
+		<ptr target="http://doi.org/10.1093/cercor/bhr310" />
+	</analytic>
+	<monogr>
+		<title level="j">Cerebral Cortex</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="2197" to="2206" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Attention and associative learning in humans: An integrative review</title>
+		<author>
+			<persName><forename type="first">Le</forename><surname>Pelley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Beesley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Wills</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Le Pelley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+		<idno type="DOI">10.1037/bul0000064</idno>
+		<ptr target="http://doi.org/10.1037/bul0000064" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychological Bulletin</title>
+		<imprint>
+			<biblScope unit="volume">142</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1111" to="1140" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">When Goals Conflict With Values: Counterproductive Attentional and Oculomotor Capture by Reward-Related Stimuli Predictiveness-Driven Attentional Capture</title>
+		<author>
+			<persName><forename type="first">Le</forename><surname>Pelley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Pearson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Griffiths</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Beesley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename></persName>
+		</author>
+		<idno type="DOI">10.1037/xge0000037</idno>
+		<ptr target="http://doi.org/10.1037/xge0000037" />
+	</analytic>
+	<monogr>
+		<title level="j">Experimental Psychology</title>
+		<imprint>
+			<biblScope unit="volume">144</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="158" to="171" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Amygdala-prefrontal coupling underlies individual differences in emotion regulation</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Heller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Van Reekum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Nelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Davidson</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroimage.2012.05.044</idno>
+		<ptr target="http://doi.org/10.1016/j.neuroimage.2012.05.044" />
+	</analytic>
+	<monogr>
+		<title level="j">NeuroImage</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1575" to="1581" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">How instructed knowledge modulates the neural systems of reward learning</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Delgado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Phelps</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1014938108</idno>
+		<ptr target="http://doi.org/10.1073/pnas.1014938108" />
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="55" to="60" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Overrepresentation of extreme events in decision making reflects rational use of cognitive resources</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lieder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Griffiths</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hsu</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/rev0000074</idno>
+		<ptr target="http://doi.org/10.1037/rev0000074" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychological Review</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="32" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">EEG and MEG data analysis in SPM8</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Litvak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mattout</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kiebel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Phillips</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Henson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kilner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Friston</surname></persName>
+		</author>
+		<idno type="DOI">10.1155/2011/852961</idno>
+		<ptr target="http://doi.org/10.1155/2011/852961" />
+	</analytic>
+	<monogr>
+		<title level="j">Computational Intelligence and Neuroscience</title>
+		<imprint>
+			<biblScope unit="page">852961</biblScope>
+			<date type="published" when="2011">2011. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Goal-Directed and Habit-Like Modulations of Stimulus Processing during Reinforcement Learning</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Luque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Beesley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Morris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">N</forename><surname>Jack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Griffiths</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Whitford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Le Pelley</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.3205-16.2017</idno>
+		<ptr target="http://doi.org/10.1523/JNEUROSCI.3205-16.2017" />
+	</analytic>
+	<monogr>
+		<title level="j">The Official Journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="3009" to="3017" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>The Journal of Neuroscience</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">Conditioning and associative learning</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Mackintosh</surname></persName>
+		</author>
+		<ptr target="https://books.google.co.uk/books/about/Conditioning_and_Associative_Learning.html?id=a8x9AAAAMAAJ&amp;redir_esc=y&amp;hl=en" />
+		<imprint>
+			<date type="published" when="1983">1983</date>
+			<publisher>Clarendon Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Social vision: Sustained perceptual enhancement of affective facial cues in social anxiety</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Mcteague</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Shumen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Wieser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Lang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Keil</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroimage.2010.08.080</idno>
+		<ptr target="http://doi.org/10.1016/j.neuroimage.2010.08.080" />
+	</analytic>
+	<monogr>
+		<title level="j">NeuroImage</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1615" to="1624" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">A meta-analysis of instructed fear studies: Implications for conscious appraisal of threat</title>
+		<author>
+			<persName><forename type="first">M.-L</forename><surname>Mechias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Etkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kalisch</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/J.NEUROIMAGE.2009.09.040</idno>
+		<ptr target="http://doi.org/10.1016/J.NEUROIMAGE.2009.09.040" />
+	</analytic>
+	<monogr>
+		<title level="j">NeuroImage</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1760" to="1768" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Acquired fears reflected in cortical sensory processing: a review of electrophysiological studies of human classical conditioning</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Miskovic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Keil</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1469-8986.2012.01398.x</idno>
+		<ptr target="http://doi.org/10.1111/j.1469-8986.2012.01398.x" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychophysiology</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1230" to="1241" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Perceiving threat in the face of safety: excitation and inhibition of conditioned fear in human visual cortex</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Miskovic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Keil</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.3692-12.2013</idno>
+		<ptr target="http://doi.org/10.1523/JNEUROSCI.3692-12.2013" />
+	</analytic>
+	<monogr>
+		<title level="j">The Official Journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="72" to="78" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>The Journal of Neuroscience</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">The propositional nature of human associative learning</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>De Houwer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">F</forename><surname>Lovibond</surname></persName>
+		</author>
+		<idno type="DOI">10.1017/S0140525X09000855</idno>
+		<ptr target="http://doi.org/10.1017/S0140525X09000855" />
+	</analytic>
+	<monogr>
+		<title level="j">Behavioral and Brain Sciences</title>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Not What You Expect: Experience but not Expectancy Predicts Conditioned Responses in Human Visual and Supplementary Cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Moratti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Keil</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cercor/bhp052</idno>
+		<ptr target="http://doi.org/10.1093/cercor/bhp052" />
+	</analytic>
+	<monogr>
+		<title level="j">Cerebral Cortex December</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="2803" to="2809" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Selective attention to stimulus location modulates the steady-state visual evoked potential</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Morgan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Hillyard</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.93.10.4770</idno>
+		<ptr target="http://doi.org/10.1073/pnas.93.10.4770" />
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="4770" to="4774" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Psychological interventions for chronic pain: reviewed within the context of goal pursuit</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Morley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Vlaeyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G S</forename><surname>Schrooten</surname></persName>
+		</author>
+		<idno type="DOI">10.2217/pmt.12.2</idno>
+		<ptr target="http://doi.org/http://dx.doi.org/10.2217/pmt.12.2" />
+	</analytic>
+	<monogr>
+		<title level="j">Pain Management</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="1" to="10" />
+			<date type="published" when="2012-03">2012. March</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Sustained division of the attentional spotlight</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Malinowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gruber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Hillyard</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature01812</idno>
+		<ptr target="http://doi.org/10.1038/nature01812" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">424</biblScope>
+			<biblScope unit="issue">6946</biblScope>
+			<biblScope unit="page" from="309" to="312" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Effects of spatial selective attention on the steady-state visual evoked potential in the 20-28 Hz range</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Muller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Picton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Valdes-Sosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Riera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Teder-Salejarvi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Hillyard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cognitive Brain Research</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="249" to="261" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">The time course of cortical facilitation during cued shifts of spatial attention</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Teder-Sälejärvi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Hillyard</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/2865</idno>
+		<ptr target="http://doi.org/10.1038/2865" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="631" to="634" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Forest before trees: the precedence of global features in visual perception</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Navon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">COGNITIVE PSYCHOLOGY</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="353" to="383" />
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">The steady-state visual evoked potential in vision research: A review</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Norcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Appelbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Ales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Cottereau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Rossion</surname></persName>
+		</author>
+		<idno type="DOI">10.1167/15.6.4</idno>
+		<ptr target="http://doi.org/10.1167/15.6.4" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Vision</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">4</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Learned fear of &quot;unseen&quot; faces after pavlovian, observational, and instructed fear</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Olsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Phelps</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.0956-7976.2004.00762.x</idno>
+		<ptr target="http://doi.org/10.1111/j.0956-7976.2004.00762.x" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychological Science</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="822" to="828" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Social learning of fear</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Olsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Phelps</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn1968</idno>
+		<ptr target="http://doi.org/10.1038/nn1968" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1095" to="1102" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Cognitive Control Predicts Use of Modelbased Reinforcement Learning</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Otto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Skatova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Madlon-Kay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Daw</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/jocn_a_00709</idno>
+		<ptr target="http://doi.org/10.1162/jocn_a_00709" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Cognitive Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="319" to="333" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Clear Danger: Situational Determinants of the Appraisal of Threat</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Paterson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W J</forename><surname>Neufeld</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/0033-2909.101.3.404</idno>
+		<ptr target="http://doi.org/10.1037/0033-2909.101.3.404" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychological Bulletin</title>
+		<imprint>
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Cognitive control and counterproductive oculomotor capture by reward-related stimuli</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pearson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Donkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Most</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Le Pelley</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/13506285.2014.994252</idno>
+		<ptr target="http://doi.org/10.1080/13506285.2014.994252" />
+	</analytic>
+	<monogr>
+		<title level="j">Visual Cognition</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="26" />
+			<date type="published" when="2015-05">2015. May 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">A pitfall for the expectancy theory of human eyelid conditioning</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Perruchet</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF03003653</idno>
+		<ptr target="http://doi.org/10.1007/BF03003653" />
+	</analytic>
+	<monogr>
+		<title level="j">The Pavlovian Journal of Biological Science</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="163" to="170" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+	<note>Official Journal of the Pavlovian</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Active Inference, homeostatic regulation and adaptive behavioural control</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pezzulo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rigoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Friston</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/J.PNEUROBIO.2015.09.001</idno>
+		<ptr target="http://doi.org/10.1016/J.PNEUROBIO.2015.09.001" />
+	</analytic>
+	<monogr>
+		<title level="j">Progress in Neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">134</biblScope>
+			<biblScope unit="page" from="17" to="35" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Activation of the left amygdala to a cognitive representation of fear</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Phelps</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>O'connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Gatenby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Gore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Grillon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Davis</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/86110</idno>
+		<ptr target="http://doi.org/10.1038/86110" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="437" to="441" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Evidence for modelbased computations in the human amygdala during Pavlovian conditioning</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Prévost</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mcnamee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Jessup</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bossaerts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Doherty</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pcbi.1002918</idno>
+		<ptr target="http://doi.org/10.1371/journal.pcbi.1002918" />
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">1002918</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Instant transformation of learned repulsion into motivational &quot;wanting</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J F</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Berridge</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cub.2013.01.016</idno>
+		<ptr target="http://doi.org/10.1016/j.cub.2013.01.016" />
+	</analytic>
+	<monogr>
+		<title level="j">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="282" to="289" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Overlapping neural systems mediating extinction, reversal and regulation of fear</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Schiller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Delgado</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tics.2010.04.002</idno>
+		<ptr target="http://doi.org/10.1016/j.tics.2010.04.002" />
+	</analytic>
+	<monogr>
+		<title level="j">Trends in Cognitive Sciences</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Instructed extinction differentially affects the emotional and cognitive expression of associative fear memory</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sevenster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Beckers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kindt</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1469-8986.2012.01450.x</idno>
+		<ptr target="http://doi.org/10.1111/j.1469-8986.2012.01450.x" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychophysiology</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1426" to="1435" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Circumplex Model of Affect: A Measure of Pleasure and Arousal During Virtual Reality Distraction Analgesia</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Sharar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Alamdari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hoffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Hoffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Patterson</surname></persName>
+		</author>
+		<idno type="DOI">10.1089/g4h.2015.0046</idno>
+		<ptr target="http://doi.org/10.1089/g4h.2015.0046" />
+	</analytic>
+	<monogr>
+		<title level="j">Games for Health Journal</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="197" to="202" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Steady state visually evoked potential (SSVEP) topography in a graded working memory task</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Silberstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Nunez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pipingas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Danieli</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0167-8760(01)00167-2</idno>
+		<ptr target="http://doi.org/10.1016/S0167-8760(01)00167-2" />
+	</analytic>
+	<monogr>
+		<title level="m">International Journal of Psychophysiology</title>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="219" to="232" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Dyna-Style Planning with Linear Function Approximation and Prioritized Sweeping</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Sutton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Szepesvári</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Geramifard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bowling</surname></persName>
+		</author>
+		<ptr target="https://arxiv.org/ftp/arxiv/papers/1206/1206.3285.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-Fourth Conference on Uncertainty in Artificial Intelligence</title>
+		<meeting>the Twenty-Fourth Conference on Uncertainty in Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="528" to="536" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Pain: A Statistical Account</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tabor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Thacker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Moseley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Körding</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pcbi.1005142</idno>
+		<ptr target="http://doi.org/10.1371/journal.pcbi.1005142" />
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Getting the pain you expect: Mechanisms of placebo, nocebo and reappraisal effects in humans</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tracey</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nm.2229</idno>
+		<ptr target="http://doi.org/10.1038/nm.2229" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Medicine</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">The role of extinction and reinstatement in attentional bias to threat: A conditioning approach</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Van Damme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Crombez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hermans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H W</forename><surname>Koster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Eccleston</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.brat.2005.11.008</idno>
+		<ptr target="http://doi.org/10.1016/j.brat.2005.11.008" />
+	</analytic>
+	<monogr>
+		<title level="j">Behaviour Research and Therapy</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="1555" to="1563" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">The price of pain and the value of suffering</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Vlaev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Seymour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Dolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Chater</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1467-9280.2009.02304.x</idno>
+		<ptr target="http://doi.org/10.1111/j.1467-9280.2009.02304.x" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychological Science</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="309" to="317" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Placebo-induced changes in FMRI in the anticipation and experience of pain</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Wager</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Rilling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sokolik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Casey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Davidson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1093065</idno>
+		<ptr target="http://doi.org/10.1126/science.1093065" />
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="issue">5661</biblScope>
+			<biblScope unit="page" from="1162" to="1167" />
+			<date type="published" when="2004">2004</date>
+			<pubPlace>New York, N.Y.</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Kurth-Nelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tirumala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Soyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Leibo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Munos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Botvinick</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1611.05763</idno>
+		<ptr target="http://arxiv.org/abs/1611.05763" />
+		<title level="m">Learning to reinforcement learn</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="1" to="17" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Interaction between value and perceptual salience in value-driven attentional capture</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhou</surname></persName>
+		</author>
+		<idno type="DOI">10.1167/13.3.5.doi</idno>
+		<ptr target="http://doi.org/10.1167/13.3.5.doi" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Vision</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1" to="13" />
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">The Effects of Interactive and Passive Distraction on Cold Pressor Pain in Preschool-aged Children</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Weiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Dahlquist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wohlheiter</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/jpepsy/jsq125</idno>
+		<ptr target="http://doi.org/10.1093/jpepsy/jsq125" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Pediatric Psychology</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="816" to="826" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Attentional capture by evaluative stimuli: Gainand loss-connoting colors boost the additional-singleton effect</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wentura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rothermund</surname></persName>
+		</author>
+		<idno type="DOI">10.3758/s13423-013-0531-z</idno>
+		<ptr target="http://doi.org/10.3758/s13423-013-0531-z" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychonomic Bulletin and Review</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="701" to="707" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Steady-state visual evoked potentials as a research tool in social affective neuroscience</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Wieser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Miskovic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Keil</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/psyp.12768</idno>
+		<ptr target="http://doi.org/10.1111/psyp.12768" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychophysiology</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Different time course of visuocortical signal changes to fear-conditioned faces with direct or averted gaze: A ssVEP study with single-trial analysis</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Wieser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Miskovic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rausch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Keil</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuropsychologia.2014.07.009</idno>
+		<ptr target="http://doi.org/10.1016/j.neuropsychologia.2014.07.009" />
+	</analytic>
+	<monogr>
+		<title level="j">Neuropsychologia</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="101" to="110" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">The role of the basal ganglia in habit formation</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Knowlton</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nrn1919</idno>
+		<ptr target="http://doi.org/10.1038/nrn1919" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews. Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="464" to="476" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

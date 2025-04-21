@@ -1,0 +1,1331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Neural Networks for Efficient Bayesian Decoding of Natural Images from Retinal Neurons</title>
+				<funder ref="#_zYxNmPS #_URk5DpK">
+					<orgName type="full">DARPA</orgName>
+				</funder>
+				<funder ref="#_PtfqcNS">
+					<orgName type="full">Acknowledgments NSF</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">National Science Foundation</orgName>
+					<orgName type="abbreviated">NSF</orgName>
+				</funder>
+				<funder ref="#_KNWNg5P">
+					<orgName type="full">NIH Collaborative Research in Computational Neuroscience</orgName>
+				</funder>
+				<funder ref="#_cK3qN34">
+					<orgName type="full">Simons Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Cold Spring Harbor Laboratory</publisher>
+				<availability status="unknown"><p>Copyright Cold Spring Harbor Laboratory</p>
+				</availability>
+				<date type="published" when="2017-06-22">2017-06-22</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nikhil</forename><surname>Parthasarathy</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Eleanor</forename><surname>Batty</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">William</forename><surname>Falcon</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Thomas</forename><surname>Rutten</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mohit</forename><surname>Rajpal</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Chichilnisky</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Liam</forename><surname>Paninski</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Columbia University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Columbia University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Columbia University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Columbia University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Columbia University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="laboratory">31st Conference on Neural Information Processing Systems (NIPS 2017)</orgName>
+								<address>
+									<settlement>Long Beach</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Neural Networks for Efficient Bayesian Decoding of Natural Images from Retinal Neurons</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<publisher>Cold Spring Harbor Laboratory</publisher>
+							<date type="published" when="2017-06-22" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">23ED0F476D4C8D7D7FFCBD1905D550AC</idno>
+					<idno type="DOI">10.1101/153759</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:08+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Decoding sensory stimuli from neural signals can be used to reveal how we sense our physical environment, and is valuable for the design of brain-machine interfaces.</s><s>However, existing linear techniques for neural decoding may not fully reveal or exploit the fidelity of the neural signal.</s><s>Here we develop a new approximate Bayesian method for decoding natural images from the spiking activity of populations of retinal ganglion cells (RGCs).</s><s>We sidestep known computational challenges with Bayesian inference by exploiting artificial neural networks developed for computer vision, enabling fast nonlinear decoding that incorporates natural scene statistics implicitly.</s><s>We use a decoder architecture that first linearly reconstructs an image from RGC spikes, then applies a convolutional autoencoder to enhance the image.</s><s>The resulting decoder, trained on natural images and simulated neural responses, significantly outperforms linear decoding, as well as simple point-wise nonlinear decoding.</s><s>These results provide a tool for the assessment and optimization of retinal prosthesis technologies, and reveal that the retina may provide a more accurate representation of the visual scene than previously appreciated.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p><s>Neural coding in sensory systems is often studied by developing and testing encoding models that capture how sensory inputs are represented in neural signals.</s><s>For example, models of retinal function are designed to capture how retinal ganglion cells (RGCs) respond to diverse patterns of visual stimulation.</s><s>An alternative approach -decoding visual stimuli from RGC responses -provides a complementary method to assess the information contained in RGC spikes about the visual world <ref type="bibr" target="#b30">[31,</ref><ref type="bibr" target="#b36">37]</ref>.</s><s>Understanding decoding can also be useful for the design of retinal prostheses, by providing a measure of the visual restoration that is possible with a prosthesis <ref type="bibr" target="#b25">[26]</ref>.</s></p><p><s>The most common and well-understood decoding approach, linear regression, has been used in various sensory systems <ref type="bibr" target="#b28">[29,</ref><ref type="bibr" target="#b39">40]</ref>.</s><s>This method was shown to be successful at reconstructing white noise temporal signals from RGC activity <ref type="bibr" target="#b36">[37]</ref> and revealed that coarse structure of natural image patches could be recovered from ensemble responses in the early visual system <ref type="bibr" target="#b32">[33]</ref>.</s><s>Other linear methods  such as PCA and linear perceptrons have been used to decode low-level features such as color and edge orientation from cortical visual areas <ref type="bibr" target="#b13">[14,</ref><ref type="bibr" target="#b3">4]</ref>.</s><s>For more complex natural stimuli, computationally expensive approximations to Bayesian inference have been used to construct decoders that incorporate important prior information about signal structure <ref type="bibr" target="#b24">[25,</ref><ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b29">30]</ref>.</s><s>However, despite decades of effort, deriving an accurate prior on natural images poses both computational and theoretical challenges, as does computing the posterior distribution on images given an observed neural response, limiting the applicability of traditional Bayesian inference.</s></p><p><s>Here we develop and assess a new method for decoding natural images from the spiking activity of large populations of RGCs, to sidestep some of these difficulties 1 .</s><s>Our approach exploits inference tools that approximate optimal Bayesian inference, and emerge from the recent literature on deep neural network (DNN) architectures for computer vision tasks such as super-resolution, denoising, and inpainting <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b38">39]</ref>.</s><s>We propose a novel staged decoding methodology -linear decoding followed by a (nonlinear) DNN trained specifically to enhance the images output by the linear decoder -and use it to reconstruct natural images from realistic simulated retinal ganglion cell responses.</s><s>This approach leverages recent progress in deep learning to more fully incorporate natural image priors in the decoder.</s><s>We show that the approach substantially outperforms linear decoding.</s><s>These findings provide a potential tool to assess the fidelity of retinal prostheses for treating blindness, and provide a substantially higher bound on how accurately real visual signals may be represented in the brain.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Approach</head><p><s>To decode images from spikes, we use a linear decoder to produce a baseline reconstructed image, then enhance this image using a more complex nonlinear model, namely a static nonlinearity or a DNN (Figure <ref type="figure" target="#fig_1">1</ref>).</s><s>There are a few reasons for this staged approach.</s><s>First, it allows us to cast the decoding problem as a classic image enhancement problem that can directly utilize the computer vision literature on super-resolution, in-painting, and denoising.</s><s>This is especially important for the construction of DNNs, which remain nontrivial to tune for problems in non-standard domains (e.g., image reconstruction from neural spikes).</s><s>Second, by solving the problem partially with a simple linear model, we greatly reduce the space of transformations that a neural network needs to learn, constraining the problem significantly.</s></p><p><s>In order to leverage image enhancement tools from deep learning, we need large training data sets.</s></p><p><s>We use an encoder-decoder approach: first, develop a realistic encoding model that can simulate neural responses to arbitrary input images, constrained by real data.</s><s>We build this encoder to predict the average outputs of many RGCs, but this approach could also be applied to encoders fit on a cell-by-cell basis <ref type="bibr" target="#b2">[3]</ref>.</s><s>Once this encoder is in hand, we train arbitrarily complex decoders by sampling many natural scenes, passing them through the encoder model, and training the decoder so that the output of the full encoder-decoder pipeline matches the observed image as accurately as possible.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">Encoder model: simulation of retinal ganglion cell responses</head><p><s>For our encoding model, we create a static simulation of the four most numerous retinal ganglion cell types (ON and OFF parasol cells and ON and OFF midget cells) based on experimental data.</s><s>We fit linear-nonlinear-Poisson models to RGC responses to natural scene movies, recorded in an isolated macaque retina preparation <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b11">12]</ref>.</s><s>These fits produce imperfect but reasonable predictions of RGC responses (Figure <ref type="figure" target="#fig_2">2 A</ref>).</s><s>We averaged the parameters (spatial filter, temporal filter, and sigmoid parameters) of these fits across neurons, to create a single model for each of four cell types.</s><s>We chose this model as it is simple and a relatively good baseline encoder with which to test our decoding method.</s><s>(Recently, encoding models that leverage deep neural networks <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b23">24]</ref> have been shown to fit RGC responses better than the simple model we are using; substituting a more complex encoding model should improve the quality of our final decoder, and we intend to pursue this approach in future work.)</s><s>To deal with static images, we then reduced these models to static models, consisting of one spatial filter followed by a nonlinearity and Poisson spike generation.</s><s>The outputs of the static model are equal to summing the spikes produced by the full model over the image frames of a pulse movie: gray frames followed by one image displayed for multiple frames.</s><s>Spatial filters and the nonlinearity of the final encoding model are shown in Figure <ref type="figure" target="#fig_2">2 B</ref> and<ref type="figure">C</ref>.</s></p><p><s>We then tiled the image space (128 x 128 pixels) with these simulated neurons.</s><s>For each cell type, we fit a 2D Gaussian to the spatial filter of that cell type and then chose receptive field centers with a width equal to 2 times the standard deviation of the Gaussian fit rounded up to the nearest integer.</s><s>The centers are shifted on alternate rows to form a lattice (Figure <ref type="figure" target="#fig_2">2 D</ref>).</s><s>The resulting response of each neuron to an example image is displayed in Figure <ref type="figure" target="#fig_2">2</ref> E as a function of its location on the image.</s><s>The entire simulation consisted of 5398 RGCs.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Model architecture</head><p><s>Our decoding model starts with a classic linear regression decoder (LD) to generate linearly decoded images I LD <ref type="bibr" target="#b36">[37]</ref>.</s><s>The LD learns a reconstruction mapping θ between neural responses X and stimuli images I ST by modeling each pixel as a weighted sum of the neural responses: θ = (X T X) -1 X T I ST .</s><s>X is augmented with a bias term in the first column.</s><s>The model inputs are m images, p pixels and n neurons such that:</s></p><formula xml:id="formula_0">I ST ∈ R m×p , X ∈ R m×(n+1) , θ ∈ R (n+1)×p .</formula><p><s>To decode the set of neural responses X we compute the dot product between θ and X:</s></p><formula xml:id="formula_1">I LD = X θ.</formula><p><s>The next step of our decoding pipeline enhances I LD through the use of a deep convolutional autoencoder (CAE).</s><s>Our model consists of a 4-layer encoder and a 4-layer decoder.</s><s>This model architecture was inspired by similar models used in image denoising <ref type="bibr" target="#b10">[11]</ref> and inpainting <ref type="bibr" target="#b34">[35,</ref><ref type="bibr" target="#b21">22]</ref>.</s></p><p><s>In the encoder network E, each layer applies a convolution and downsampling operating to the output tensor of the previous layer.</s><s>The output of the encoder is a tensor of activation maps representing a low-dimensional embedding of I LD .</s><s>The decoder network D inverts the encoding process by applying a sequence of upsampling and convolutional layers to the output tensor of the previous layer.</s><s>This model outputs the reconstructed image I CAE .</s><s>We optimize the CAE end-to-end through backpropagation by minimizing the pixelwise MSE between the output image of the CAE:</s></p><formula xml:id="formula_2">I CAE = D(E(I LD ))</formula><p><s>and the original stimuli image I ST .</s></p><p><s>The filter sizes, number of layers, and number of filters were all tuned through an exhaustive gridsearch.</s><s>We searched over the following parameter space in our grid search: number of encoding / decoding layers: <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5]</ref>, number of filters in each layer: <ref type="bibr" target="#b31">[32,</ref><ref type="bibr">64,</ref><ref type="bibr">128,</ref><ref type="bibr">256]</ref>, filter sizes: [7x7, 5x5, 3x3], learning rates: [0.00005, 0.0001, 0.0002, 0.0004, 0.0008, 0.001, 0.002, 0.004].</s><s>Specific architecture details are provided in Figure <ref type="figure" target="#fig_1">1</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3">Training and Evaluation</head><p><s>To train the linear decoder, we iterate through the training data once to collect the sufficient statistics X T X and X T I ST .</s><s>We train the convolutional autoencoder to minimize the pixelwise MSE P M SE with the Adam optimizer <ref type="bibr" target="#b14">[15]</ref>.</s><s>To avoid overfitting, we monitor P M SE changes on a validation set three times per epoch and keep track of the current best loss P M SE,best .</s><s>We stop training if we have gone through 2 epochs worth of training data and the validation loss has not decreased by greater than 0.1%P M SE,best .</s></p><p><s>In our experiments we use two image datasets, ImageNet <ref type="bibr" target="#b7">[8]</ref> and the CelebA face dataset <ref type="bibr" target="#b20">[21]</ref>.</s><s>We apply preprocessing steps described previously in <ref type="bibr" target="#b16">[17]</ref> to each image: 1) Convert to gray scale, 2) rescale to 256x256, 3) crop the middle 128x128 region.</s><s>From Imagenet we use 930k random images for training, 50K for validation, and a 10k held-out set for testing.</s><s>We use ImageNet in all but one of our experiments -context-decoding.</s><s>For the latter, we use the CelebA face dataset <ref type="bibr" target="#b20">[21]</ref> with 160k images for training, 30k for validation, and a 10k held-out set for testing.</s></p><p><s>We evaluate all the models in our results using two separate metrics, pixelwise MSE and multiscale structural-similarity (SSIM) <ref type="bibr" target="#b35">[36]</ref>.</s><s>Although each metric alone has known shortcomings, in combination, they provide an objective evaluation of image reconstruction that is interpretable and well-understood.</s></p><p><s>3 Results</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">ImageNet decoding</head><p><s>As expected <ref type="bibr" target="#b32">[33]</ref>, the linear decoder reconstructed blurry, noisy versions of the original natural images from the neural responses, a result that is attributable to the noisy responses from the RGCs down-sampling the input images.</s><s>The two-staged model of the CAE trained on the output of the linear decoder (L-CAE) resulted in substantially improved reconstructions, perceptually and quantitatively (Figure <ref type="figure" target="#fig_3">3</ref>).</s><s>L-CAE decoding outperformed linear decoding both on average and for the vast majority of images, by both the M SE and 1 -SSIM measures.</s><s>Qualitatively, the improvements made by the CAE generally show increased sharpening of edges, adjustment of contrast, and smoothing within object boundaries that reduced overall noise.</s><s>Similar improvement in decoding could not be replicated by utilizing static nonlinearities to transform the linear decoded output to the original images.</s><s>We used a 6th degree polynomial fitted to approximate the relation between linearly decoded and original image pixel intensities, and then evaluated this nonlinear decoding on held out data.</s><s>This approach produced a small improvement in reconstruction: 3.25% reduction in MSE compared to 34.50% for the L-CAE.</s><s>This reveals that the improvement in performance from the CAE involves nonlinear image enhancement beyond simple remapping of pixel intensities.</s><s>Decoding noisier neural responses especially highlights the benefits of using the autoencoder: there are features identifiable in the L-CAE enhanced images that are not in the linear decoder images (Supplementary Figure <ref type="figure" target="#fig_6">6</ref>).</s></p><p><s>The results shown here utilize a large training dataset size for the decoder so it is natural to ask for a given fixed encoder model, how many training responses do we need to simulate to obtain a good decoder.</s><s>We tested this by fixing our encoder and then training the CAE stage of the decoder with varying amounts of training data.</s><s>(Supplementary Figure <ref type="figure" target="#fig_8">8</ref>).</s><s>We observed that even with a small training data set of 20k examples, we can improve significantly on the linear decoder and after around 500k examples, our performances begins to saturate.</s><s>An analogous question can be asked about the amount of training data required to fit a good encoder and we intend to explore this aspect in future work.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Phase Scrambled Training</head><p><s>A possible explanation for the improved performance of the L-CAE compared to the baseline linear decoder is that it more fully exploits phase structure that is characteristic of natural images <ref type="bibr" target="#b1">[2]</ref>, perhaps by incorporating priors on phase structure that are not captured by linear decoding.</s><s>To test this possibility, we trained both linear and L-CAE decoders on phase-scrambled natural images.</s></p><p><s>The CAE input was produced by the linear decoder trained on the same image type as the CAE.</s><s>Observed responses of RGCs to these stimuli followed approximately the same marginal distribution as responses to the original natural images.</s><s>We then compared the performance of these linear and L-CAE decoders to the performance of the original decoders, on the original natural images (Figure <ref type="figure" target="#fig_4">4</ref>).</s><s>The linear decoder exhibited similar decoding performance when trained on the original and phase-scrambled images, while the L-CAE exhibited substantially higher performance when trained on real images.</s><s>These findings are consistent with the idea that the CAE is able to capture prior information on image phase structure not captured by linear decoding.</s><s>However, direct comparisons of the L-CAE and LD trained and tested on phase scrambled images show that the L-CAE does still lead to some improvements which are most likely just due to the increased parameter complexity of the decoding model (Supplementary Figure <ref type="figure" target="#fig_7">7</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Context Dependent Training</head><p><s>The above results suggest that the CAE is capturing important natural image priors.</s><s>However, it remains unclear whether these priors are sufficient to decode specific classes of natural images as accurately as decoding models that are tuned to incorporate class-specific priors.</s><s>We explored this in Both linear and CAE stages were trained from scratch (random initialization) using only this dataset.</s></p><p><s>As with the phase scrambled comparisons, the CAE input is produced by the linear decoder trained on the same image type.</s><s>We then compare these different linear decoder and L-CAE models on a test set of CelebA faces.</s><s>For the linear decoders, we see a 17% improvement in average test MSE and a 14% improvement in 1-SSIM when training on CelebA as compared to training on ImageNet (Figure <ref type="figure" target="#fig_5">5</ref> A and C).</s><s>We find that the differences in MSE and 1-SSIM between the differently trained L-CAE models are smaller (5% improvement in MSE and a 4% improvement in 1-SSIM) (Figure <ref type="figure" target="#fig_5">5</ref> B and D).</s></p><p><s>The much smaller difference in MSE and 1-SSIM suggests that the L-CAE decoder does a better job at generalizing to unseen context-specific classes than the linear decoder.</s><s>However, the images show that there are still important face-specific features (such as nose and eye definition) that are much better decoded by the L-CAE trained only on faces (Figure <ref type="figure" target="#fig_5">5E</ref>).</s><s>This suggests that while the natural image statistics captured by the CAE do help improve its generalization to more structured classes, there are still significant benefits in training class-specific models.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Discussion</head><p><s>The work presented here develops a novel approximate Bayesian decoding technique that uses non-linear DNNs to decode images from simulated responses of retinal neurons.</s><s>The approach substantially outperforms linear reconstruction techniques that have usually been used to decode neural responses to high-dimensional stimuli.</s></p><p><s>Perhaps the most successful previous applications of Bayesian neural decoding are in cases where the variable to be decoded is low-dimensional.</s><s>The work of <ref type="bibr" target="#b4">[5]</ref> stimulated much progress in hippocampus and motor cortex using Bayesian state-space approaches applied to low-dimensional (typically two-or three-dimensional) position variables; see also <ref type="bibr" target="#b15">[16]</ref> and <ref type="bibr" target="#b27">[28]</ref> for further details.</s><s>The low dimensionality of the state variable and simple Markovian priors leads to fast Bayesian computation in these models.</s><s>At the same time, non-Bayesian approaches based on support vector regression <ref type="bibr" target="#b31">[32]</ref> or recurrent neural networks <ref type="bibr" target="#b33">[34]</ref> have also proven powerful in these applications.</s></p><p><s>Decoding information from the retina or early visual pathway requires efficient computations over objects of much larger dimensionality: images and movies.</s><s>Several threads are worth noting here.</s><s>First, some previous work has focused on decoding of flicker stimuli <ref type="bibr" target="#b36">[37]</ref> or motion statistics <ref type="bibr" target="#b17">[18,</ref><ref type="bibr" target="#b22">23]</ref>, both of which reduce to low-dimensional decoding problems.</s><s>Other work has applied straightforward linear decoding methods <ref type="bibr" target="#b32">[33,</ref><ref type="bibr" target="#b8">9]</ref>.</s><s>Finally, some work has tackled the challenging problem of decoding still images undergoing random perturbations due to eye movements <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b0">1]</ref>.</s><s>These studies developed approximate Bayesian decoders under simplified natural image priors, and it would be interesting in future work to examine potential extensions of our approach to those applications.</s></p><p><s>While our focus here has been on the decoding of spike counts from populations of neurons recorded with single-cell precision, the ideas developed here could also be applied in the context of decoding fMRI data.</s><s>Our approach shares some conceptual similarity to previous work <ref type="bibr" target="#b24">[25,</ref><ref type="bibr" target="#b26">27]</ref> which used elegant encoding models combined with brute-force computation over a large discrete sample space to compute posteriors, and to other work <ref type="bibr" target="#b37">[38]</ref> which used neural network methods similar to those developed in <ref type="bibr" target="#b40">[41]</ref> to decode image features.</s><s>Our approach, for example, could be extended to replace a brute-force discrete-sample decoder <ref type="bibr" target="#b24">[25,</ref><ref type="bibr" target="#b26">27]</ref> with a decoder that operates over the full high-dimensional continuous space of all images.</s></p><p><s>Many state-of-the-art models for in-painting and super-resolution image enhancement rely on generative adversarial networks (GANs).</s><s>However, these models currently require specific architecture tuning based on the exact problem structure.</s><s>Because our problem involves some complex and unknown combination of denoising, super-resolution, and inpainting, we required a more robust model that could be tested with little hand-tuning.</s><s>Furthermore, we have no parametric form for the noise in the linear decoded images, so standard pre-trained networks could not be applied directly.</s><s>Based on previous work in <ref type="bibr" target="#b38">[39]</ref>, it seems that autoencoder architectures can robustly achieve reasonable results for these types of tasks; therefore, we chose the CAE architecture as a useful starting point.</s></p><p><s>We have begun to explore GAN architectures, but these early results do not show any significant improvements over our CAE model.</s><s>We plan to explore these networks further in future work.</s></p><p><s>In Section 3.3 we saw that even though there were small differences in MSE and 1-SSIM between the outputs of the L-CAE decoders trained on ImageNet vs. CelebA datasets, visually there were still significant differences.</s><s>The most likely explanation for this discrepancy is that these loss functions are imperfect and do not adequately capture perceptually relevant differences between two images.</s><s>In recent years, more complex perceptual similarity metrics have gained traction in the deep learning community <ref type="bibr" target="#b41">[42,</ref><ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b12">13</ref>].</s><s>While we did not extensively explore this aspect, we have done some preliminary experiments that suggest that using just a standard VGG-based perceptual metric <ref type="bibr" target="#b12">[13]</ref> decreases some blurring seen using MSE, but does not significantly improve decoding in a robust way.</s><s>We plan to further explore these ideas by implementing perceptual loss functions that utilize more of our understanding of operations in the early human visual system <ref type="bibr" target="#b18">[19]</ref>.</s><s>Progress in this space is vital as any retinal prosthetics application of this work would require decoding of visual scenes that is accurate by perceptual metrics rather than MSE.</s></p><p><s>We have shown improved reconstruction based on simulated data; clearly, an important next step is to apply this approach to decode real experimental data.</s><s>In addition, we have shown better L-CAE reconstruction only based on one perfect mosaic of the simulated neurons.</s><s>In reality, these mosaics differ from retina to retina and there are gaps in the mosaic when we record from retinal neurons.</s><s>Therefore, it will be important to investigate whether the CAE can learn to generalize over different mosaic patterns.</s><s>We also plan to explore reconstruction of movies and color images.</s></p><p><s>The present results have two implications for visual neuroscience.</s><s>First, the results provide a framework for understanding how an altered neural code, such as the patterns of activity elicited in a retinal prosthesis, could influence perception of the visual image.</s><s>With our approach, this can be assessed in the image domain directly (instead of the domain of spikes) by examining the quality of "optimal" reconstruction from electrical activity induced by the prosthesis.</s><s>Second, the results provide a way to understand which aspects of natural scenes are effectively encoded in the natural output of the retina, again, as assessed in the image domain.</s><s>Previous efforts toward these two goals have relied on linear reconstruction.</s><s>The substantially higher performance of the L-CAE provides a more stringent assessment of prosthesis function, and suggests that the retina may convey visual images to the brain with higher fidelity than was previously appreciated.</s></p><p><s>6 Supplementary Materials</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 :</head><label>1</label><figDesc><div><p><s>Figure 1: Outline of approach.</s><s>A) The original image is fed through the simulated neural encoding models to produce RGC responses on which we fit a linear decoder.</s><s>A deep neural network is then used to further enhance the image.</s><s>B) We use a convolutional autoencoder with a 4 layer encoder and a 4 layer decoder to enhance the linear decoded image.</s></p></div></figDesc><graphic coords="2,111.23,197.14,59.45,59.45" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 :</head><label>2</label><figDesc><div><p><s>Figure 2: Encoding model.</s><s>A) Full spatiotemporal encoding model performance on experimental data.</s><s>Recorded responses (black) vs LNP predictions (red; using the averaged parameters over all cells of each type) for one example cell of each type.</s><s>The spiking responses to 57 trials of a natural scenes test movie were averaged over trials and then smoothed with a 10 ms SD Gaussian.</s><s>B) Spatial filters of the simulated neural encoding model are shown for each cell type.</s><s>C) The nonlinearity following the spatial filter-stimulus multiplication is shown for each cell type.</s><s>We draw from a Poisson distribution on the output of the nonlinearity to obtain the neural responses.</s><s>D) Demonstration of the mosaic structure for each cell type on a patch of the image space.</s><s>The receptive fields of each neuron are represented by the 1 SD contour of the Gaussian fit to the spatial filter of each cell type.</s><s>E) The response of each cell is plotted in the square around its receptive field center.</s><s>The visual stimulus is shown on the left.</s><s>The color maps of ON and OFF cells are reversed to associate high responses with their preferred stimulus polarity.</s></p></div></figDesc><graphic coords="4,145.32,474.82,57.07,57.07" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 :</head><label>3</label><figDesc><div><p><s>Figure 3: Comparison of linear and CAE decoding.</s><s>A) MSE on a log-log plot for the ImageNet 10k example test set comparing the L-CAE model trained on ImageNet (only 1k subsampled examples are plotted here for visualization purposes).</s><s>B) 1-SSIM version of the same figure.</s><s>C) Example images from the test set show the original, linear decoded, L-CAE enhanced versions.</s><s>The average (MSE, 1-SSIM) for the linear decoder over the full test set was (0.0077, 0.35) and the corresponding averages for the L-CAE were (0.0051, 0.25).</s></p></div></figDesc><graphic coords="6,319.92,397.95,58.14,58.14" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 :</head><label>4</label><figDesc><div><p><s>Figure 4: Comparison of phase scrambled and ImageNet trained models.</s><s>A) MSE on log-log plot comparing the performance of the linear decoder fit on natural images to the linear decoder fit on phase scrambled images.</s><s>The subscript of each model indicates the dataset on which it was trained.</s><s>The reported MSE values are based on performance on the natural image test set (1k subsampled examples shown).</s><s>B) Similar plot to A but comparing the L-CAE fit on natural images to the L-CAE fit on phase scrambled images.</s><s>C) 1-SSIM version of A. D) 1-SSIM version of B. E) One example test natural image (represented by blue dot in A-D) showing the reconstructions from all 4 models and the phase scrambled version.</s></p></div></figDesc><graphic coords="7,359.02,238.29,64.25,64.25" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 :</head><label>5</label><figDesc><div><p><s>Figure 5: Comparison of CelebA and ImageNet trained models.</s><s>A) MSE on log-log plot comparing the performance of the linear decoder fit on CelebA to the linear decoder fit on ImageNet.</s><s>The subscript of each model indicates the dataset on which it was trained.</s><s>The reported MSE values are based on performance on the natural image test set (1k subsampled examples shown).</s><s>B) Similar plot to A but comparing the L-CAE fit on CelebA to the L-CAE fit on ImageNet.</s><s>C) 1-SSIM version of A. D) 1-SSIM version of B. E) One example test natural image (represented by blue dot in A-D) showing the reconstructions from all 4 models.</s></p></div></figDesc><graphic coords="8,359.02,238.94,63.78,63.78" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 :</head><label>6</label><figDesc><div><p><s>Figure 6: Noisier Neural Responses.</s><s>We used the same spatial encoding model but divided the firing rate by a factor of 10 before generating Poisson spikes (reducing the input to the Poisson distribution reduces the signal to noise ratio).</s><s>Randomly chosen decoded images are shown for the original encoder (rows 2+3) and the noisier encoding model (rows 4+5).</s><s>The L-CAE pulls out features that are not obvious in the noisier linear decoded images.</s></p></div></figDesc><graphic coords="13,141.10,369.02,57.97,57.97" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 7 :</head><label>7</label><figDesc><div><p><s>Figure 7: L-CAE vs linear decoder comparisons for Phase Scrambled and ImageNet.</s><s>A) MSE comparisons of the L-CAE and linear models trained on ImageNet and tested on ImageNet.</s><s>B) MSE comparisons of the L-CAE and linear models trained on phase scrambled images and tested on phase scrambled images.</s><s>The average MSE for Linear P haseScrambled and L -CAE P haseScrambled over the full phase scrambled test set was (0.0102, 0.0075) respectively.</s></p></div></figDesc><graphic coords="14,199.33,137.36,100.16,125.55" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 8 :</head><label>8</label><figDesc><div><p><s>Figure 8: Test MSE for L-CAE decoder vs the total amount of training and validation data used.</s><s>Significant improvements can be achieved up to around 500k training examples -after this, only marginal improvements are gained by increasing training data.</s><s>We also see that even with a small training + validation dataset of 20k examples, we can still achieve a significant improvement in MSE (0.0059) over the linear decoder MSE (0.0077).</s></p></div></figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>5 <rs type="funder">Acknowledgments NSF</rs> <rs type="grantNumber">GRFP DGE-16-44869</rs> (EB), <rs type="funder">NSF</rs>/<rs type="funder">NIH Collaborative Research in Computational Neuroscience</rs> Grant <rs type="grantNumber">IIS-1430348/1430239</rs> (EJC &amp; LP), <rs type="funder">DARPA</rs> Contract <rs type="grantNumber">FA8650-16-1-7657</rs> (EJC), <rs type="funder">Simons Foundation</rs> <rs type="grantNumber">SF-SCGB-365002</rs> (LP); IARPA MICRONS D16PC00003 (LP); <rs type="funder">DARPA</rs> <rs type="grantNumber">N66001-17-C-4002</rs> (LP).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_PtfqcNS">
+					<idno type="grant-number">GRFP DGE-16-44869</idno>
+				</org>
+				<org type="funding" xml:id="_KNWNg5P">
+					<idno type="grant-number">IIS-1430348/1430239</idno>
+				</org>
+				<org type="funding" xml:id="_zYxNmPS">
+					<idno type="grant-number">FA8650-16-1-7657</idno>
+				</org>
+				<org type="funding" xml:id="_cK3qN34">
+					<idno type="grant-number">SF-SCGB-365002</idno>
+				</org>
+				<org type="funding" xml:id="_URk5DpK">
+					<idno type="grant-number">N66001-17-C-4002</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">A neural model of high-acuity vision in the presence of fixational eye movements</title>
+		<author>
+			<persName><forename type="first">Bruno</forename><forename type="middle">A</forename><surname>Alexander G Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kavitha</forename><surname>Olshausen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Austin</forename><surname>Ratnam</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Roorda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Signals, Systems and Computers, 2016 50th Asilomar Conference on</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="588" to="592" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Higher order texture statistics impair contrast boundary segmentation</title>
+		<author>
+			<persName><forename type="first">Elizabeth</forename><surname>Arsenault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ahmad</forename><surname>Yoonessi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Curtis</forename><surname>Baker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of vision</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="14" to="14" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Multilayer recurrent network models of primate retinal ganglion cell responses</title>
+		<author>
+			<persName><forename type="first">Eleanor</forename><surname>Batty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Josh</forename><surname>Merel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nora</forename><surname>Brackbill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Heitman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Sher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><surname>Litke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Chichilnisky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liam</forename><surname>Paninski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Decoding and reconstructing color from responses in human visual cortex</title>
+		<author>
+			<persName><forename type="first">Joost</forename><surname>Gijs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">J</forename><surname>Brouwer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience: the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">44</biblScope>
+			<biblScope unit="page" from="13992" to="14003" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">A statistical paradigm for neural spike train decoding applied to position prediction from ensemble firing patterns of rat hippocampal place cells</title>
+		<author>
+			<persName><forename type="first">Loren</forename><forename type="middle">M</forename><surname>Emery N Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dengda</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">C</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">A</forename><surname>Quirk</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wilson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">18</biblScope>
+			<biblScope unit="page" from="7411" to="7425" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Bayesian model of dynamic image stabilization in the visual system</title>
+		<author>
+			<persName><forename type="first">Yoram</forename><surname>Burak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Uri</forename><surname>Rokni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Markus</forename><surname>Meister</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haim</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the National Academy of Sciences</title>
+		<meeting>the National Academy of Sciences</meeting>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page" from="19525" to="19530" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">A simple white noise analysis of neuronal light responses</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Chichilnisky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Network: Computation in Neural Systems</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="199" to="213" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Imagenet: A large-scale hierarchical image database</title>
+		<author>
+			<persName><forename type="first">Jia</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li-Jia</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Fei-Fei</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Computer Vision and Pattern Recognition</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2009">2009. 2009</date>
+			<biblScope unit="page" from="248" to="255" />
+		</imprint>
+	</monogr>
+	<note>CVPR 2009. IEEE Conference on</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Towards the reconstruction of moving images by populations of retinal ganglion cells</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ariadna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Antonio</forename><surname>Diaz-Tahoces</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alejandro</forename><surname>Martinez-Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eduardo</forename><surname>Garcia-Moll</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fernandez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">6th International Work-Conference on the Interplay Between Natural and Artificial Computation</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">9107</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Fidelity of the ensemble code for visual motion in primate retina</title>
+		<author>
+			<persName><surname>Es Frechette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Sher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Grivich</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Petrusca</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Litke</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chichilnisky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="119" to="135" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Medical image denoising using convolutional denoising autoencoders</title>
+		<author>
+			<persName><forename type="first">Lovedeep</forename><surname>Gondara</surname></persName>
+		</author>
+		<idno>1608.04667</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv pre-print</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Testing pseudo-linear models of responses to natural scenes in primate retina</title>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Heitman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nora</forename><surname>Brackbill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><surname>Greschner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Sher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><forename type="middle">M</forename><surname>Litke</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chichilnisky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">bioRxiv</title>
+		<imprint>
+			<biblScope unit="page">45336</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Perceptual losses for real-time style transfer and super-resolution</title>
+		<author>
+			<persName><forename type="first">Justin</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandre</forename><surname>Alahi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Fei-Fei</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">European Conference on Computer Vision</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="694" to="711" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Decoding the visual and subjective ontents of the human brain</title>
+		<author>
+			<persName><forename type="first">Yukiyasu</forename><surname>Kamitani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frank</forename><surname>Tong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="679" to="685" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<author>
+			<persName><forename type="first">Diederik</forename><surname>Kingma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jimmy</forename><surname>Ba</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1412.6980</idno>
+		<title level="m">Adam: A method for stochastic optimization</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Approximate methods for state-space models</title>
+		<author>
+			<persName><forename type="first">Shinsuke</forename><surname>Koyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucia</forename><surname>Castellanos Pérez-Bolde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cosma</forename><surname>Rohilla Shalizi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><forename type="middle">E</forename><surname>Kass</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Statistical Association</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="issue">489</biblScope>
+			<biblScope unit="page" from="170" to="180" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Imagenet classification with deep convolutional neural networks</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">The relationship between optimal and biologically plausible decoding of stimulus velocity in the retina</title>
+		<author>
+			<persName><forename type="first">Yashar</forename><surname>Edmund C Lalor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liam</forename><surname>Ahmadian</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Paninski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">JOSA A</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="25" to="B42" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<author>
+			<persName><forename type="first">Valero</forename><surname>Laparra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Berardino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Johannes</forename><surname>Ballé</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eero</forename><forename type="middle">P</forename><surname>Simoncelli</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1701.06641</idno>
+		<title level="m">Perceptually optimized image rendering</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title level="m" type="main">Photorealistic single image super-resolution using a generative adversarial network</title>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Ledig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucas</forename><surname>Theis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ferenc</forename><surname>Huszár</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jose</forename><surname>Caballero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Cunningham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alejandro</forename><surname>Acosta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Aitken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alykhan</forename><surname>Tejani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Johannes</forename><surname>Totz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zehan</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1609.04802</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Deep learning face attributes in the wild</title>
+		<author>
+			<persName><forename type="first">Ziwei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ping</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaogang</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoou</forename><surname>Tang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of International Conference on Computer Vision (ICCV)</title>
+		<meeting>International Conference on Computer Vision (ICCV)</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Image restoration using convolutional autoencoders with symmetric skip connections</title>
+		<author>
+			<persName><forename type="first">Xiao-Jiao</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chunhua</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu-Bin</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">High accuracy decoding of dynamical motion from a large retinal population</title>
+		<author>
+			<persName><forename type="first">Olivier</forename><surname>Marre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vicente</forename><surname>Botella-Soler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristina</forename><forename type="middle">D</forename><surname>Simmons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thierry</forename><surname>Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gašper</forename><surname>Tkačik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">J</forename><surname>Berry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">I</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">1004304</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Baccus. Deep learning models of the retinal response to natural scenes</title>
+		<author>
+			<persName><forename type="first">Lane</forename><surname>Mcintosh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Niru</forename><surname>Maheswaranathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aran</forename><surname>Nayebi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Surya</forename><surname>Ganguli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephen</forename><forename type="middle">A</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Bayesian reconstruction of natural images from human brain activity</title>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Naselaris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><forename type="middle">J</forename><surname>Prenger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kendrick</forename><forename type="middle">N</forename><surname>Kay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Oliver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jack</forename><forename type="middle">L</forename><surname>Gallant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="902" to="915" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Retinal prosthetic strategy with the capacity to restore normal vision</title>
+		<author>
+			<persName><forename type="first">Sheila</forename><surname>Nirenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chetan</forename><surname>Pandarinath</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="issue">37</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Reconstructing visual experiences from brain activity evoked by natural movies</title>
+		<author>
+			<persName><forename type="first">Shinji</forename><surname>Nishimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">An</forename><forename type="middle">T</forename><surname>Vu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Naselaris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuval</forename><surname>Benjamini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bin</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jack</forename><forename type="middle">L</forename><surname>Gallant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">19</biblScope>
+			<biblScope unit="page" from="1641" to="1646" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">A new look at state-space models for neural data</title>
+		<author>
+			<persName><forename type="first">Liam</forename><surname>Paninski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yashar</forename><surname>Ahmadian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><forename type="middle">Gil</forename><surname>Ferreira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shinsuke</forename><surname>Koyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rahnama</forename><surname>Kamiar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Rad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joshua</forename><surname>Vidne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Vogelstein</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of computational neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">1-2</biblScope>
+			<biblScope unit="page" from="107" to="126" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Reconstructing speech from human auditory cortex</title>
+		<author>
+			<persName><forename type="first">Brian</forename><forename type="middle">N</forename><surname>Pasley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephen</forename><forename type="middle">V</forename><surname>David</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nima</forename><surname>Mesgarani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adeen</forename><surname>Flinker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Shibab</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nathan</forename><forename type="middle">E</forename><surname>Shamma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><forename type="middle">T</forename><surname>Crone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><forename type="middle">F</forename><surname>Knight</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS Biology</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Incorporating naturalistic correlation structure improves spectrogram reconstruction from neuronal activity in the songbird auditory midbrain</title>
+		<author>
+			<persName><forename type="first">Yashar</forename><surname>Alexandro D Ramirez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><surname>Ahmadian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Schumacher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sarah</forename><forename type="middle">M N</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liam</forename><surname>Woolley</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Paninski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="3828" to="3842" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Spikes: Exploring the Neural Code</title>
+		<author>
+			<persName><forename type="first">Fred</forename><surname>Rieke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Davd</forename><surname>Warland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rob</forename><surname>De Ruyter Van Steveninck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><surname>Bialek</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<publisher>MIT Press</publisher>
+			<pubPlace>Cambridge, MA, USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Kernel-arma for hand tracking and brainmachine interfacing during 3d motor control</title>
+		<author>
+			<persName><forename type="first">Lavi</forename><surname>Shpigelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hagai</forename><surname>Lalazar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eilon</forename><surname>Vaadia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="1489" to="1496" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Reconstruction of natural scenes from ensemble responses in the lateral geniculate nucleus</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Garrett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fei</forename><forename type="middle">F</forename><surname>Stanley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">18</biblScope>
+			<biblScope unit="page" from="8036" to="8042" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Making brain-machine interfaces robust to future neural variability</title>
+		<author>
+			<persName><forename type="first">David</forename><surname>Sussillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sergey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><forename type="middle">C</forename><surname>Stavisky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephen</forename><forename type="middle">I</forename><surname>Kao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krishna</forename><forename type="middle">V</forename><surname>Ryu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Shenoy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Communications</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Self-tuned deep super resolution</title>
+		<author>
+			<persName><forename type="first">Zhangyang</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yingzhen</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhaowen</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shiyu</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wen</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianchao</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">S</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops</title>
+		<meeting>the IEEE Conference on Computer Vision and Pattern Recognition Workshops</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Image quality assessment: from error visibility to structural similarity</title>
+		<author>
+			<persName><forename type="first">Zhou</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><forename type="middle">C</forename><surname>Bovik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hamid</forename><forename type="middle">R</forename><surname>Sheikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eero</forename><forename type="middle">P</forename><surname>Simoncelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE transactions on image processing</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="600" to="612" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Decoding visual information from a population of retinal ganglion cells</title>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">K</forename><surname>Warland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pamela</forename><surname>Reinagel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Markus</forename><surname>Meister</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="2336" to="2350" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title level="m" type="main">Neural encoding and decoding with deep learning for dynamic natural vision</title>
+		<author>
+			<persName><forename type="first">Haiguang</forename><surname>Wen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junxing</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yizhen</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kun-Han</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhongming</forename><surname>Liu</surname></persName>
+		</author>
+		<idno>arXiv pre-print 1608.03425</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Image denoising and inpainting with deep neural networks</title>
+		<author>
+			<persName><forename type="first">Junyuan</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Linli</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Enhong</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="341" to="349" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Comparisons between linear and nonlinear methods for decoding motor cortical activities of monkey</title>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yueming</forename><surname>Wnag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shaomin</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ting</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yiwen</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weidong</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoxiang</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMBC, Annual International Conference of the IEEE</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Performance-optimized hierarchical models predict neural responses in higher visual cortex</title>
+		<author>
+			<persName><forename type="first">Ha</forename><surname>Daniel Lk Yamins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Charles</forename><forename type="middle">F</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ethan</forename><forename type="middle">A</forename><surname>Cadieu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Darren</forename><surname>Solomon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">J</forename><surname>Seibert</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dicarlo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="issue">23</biblScope>
+			<biblScope unit="page" from="8619" to="8624" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title level="m" type="main">Loss functions for neural networks for image processing</title>
+		<author>
+			<persName><forename type="first">Hang</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Orazio</forename><surname>Gallo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Iuri</forename><surname>Frosio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Kautz</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1511.08861</idno>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

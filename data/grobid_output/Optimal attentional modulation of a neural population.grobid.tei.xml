@@ -1,0 +1,2713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Optimal attentional modulation of a neural population</title>
+				<funder ref="#_zagq2Gq">
+					<orgName type="full">US Army</orgName>
+				</funder>
+				<funder ref="#_B9XJ4ws #_5XDKGhU">
+					<orgName type="full">Army Research Office</orgName>
+				</funder>
+				<funder ref="#_N3Upm7v">
+					<orgName type="full">National Science Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Frontiers Media SA</publisher>
+				<availability status="unknown"><p>Copyright Frontiers Media SA</p>
+				</availability>
+				<date type="published" when="2014-03-26">26 March 2014</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Ali</forename><surname>Borji</surname></persName>
+							<email>borji@usc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">University of Southern California</orgName>
+								<address>
+									<settlement>Los Angeles</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Laurent</forename><surname>Itti</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">University of Southern California</orgName>
+								<address>
+									<settlement>Los Angeles</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Neuroscience Graduate Program</orgName>
+								<orgName type="institution">University of Southern California</orgName>
+								<address>
+									<settlement>Los Angeles</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Psychology</orgName>
+								<orgName type="institution">University of Southern California</orgName>
+								<address>
+									<settlement>Los Angeles</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Leuven</orgName>
+								<address>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Boston University</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Donders Center for Cognitive Neuroimaging</orgName>
+								<orgName type="institution">Janneke Jehee</orgName>
+								<address>
+									<country key="NL">Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">University of Southern</orgName>
+								<address>
+									<addrLine>California -Hedco Neuroscience Building -3641 Watt Way</addrLine>
+									<postCode>90089-2520</postCode>
+									<settlement>Los Angeles</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Optimal attentional modulation of a neural population</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Frontiers in Computational Neuroscience</title>
+						<title level="j" type="abbrev">Front. Comput. Neurosci.</title>
+						<idno type="eISSN">1662-5188</idno>
+						<imprint>
+							<publisher>Frontiers Media SA</publisher>
+							<biblScope unit="volume">8</biblScope>
+							<date type="published" when="2014-03-26">26 March 2014</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E2A1DEFC6F3F892452B01F7760D35FC5</idno>
+					<idno type="DOI">10.3389/fncom.2014.00034</idno>
+					<note type="submission">Received: 26 September 2013; accepted: 01 March 2014; published online: 26 March 2014. This article was submitted to the journal Frontiers in Computational Neuroscience.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>top-down attention</term>
+					<term>neural modulation</term>
+					<term>neural coding</term>
+					<term>gain</term>
+					<term>tuning width</term>
+					<term>feature selectivity</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Top-down attention has often been separately studied in the contexts of either optimal population coding or biasing of visual search.</s><s>Yet, both are intimately linked, as they entail optimally modulating sensory variables in neural populations according to top-down goals.</s><s>Designing experiments to probe top-down attentional modulation is difficult because non-linear population dynamics are hard to predict in the absence of a concise theoretical framework.</s><s>Here, we describe a unified framework that encompasses both contexts.</s><s>Our work sheds light onto the ongoing debate on whether attention modulates neural response gain, tuning width, and/or preferred feature.</s><s>We evaluate the framework by conducting simulations for two tasks: (1) classification (discrimination) of two stimuli s a and s b and (2) searching for a target T among distractors D. Results demonstrate that all of gain, tuning, and preferred feature modulation happen to different extents, depending on stimulus conditions and task demands.</s><s>The theoretical analysis shows that task difficulty (linked to difference between s a and s b , or T , and D) is a crucial factor in optimal modulation, with different effects in discrimination vs. search.</s><s>Further, our framework allows us to quantify the relative utility of neural parameters.</s><s>In easy tasks (when is large compared to the density of the neural population), modulating gains and preferred features is sufficient to yield nearly optimal performance; however, in difficult tasks (smaller ), modulating tuning width becomes necessary to improve performance.</s><s>This suggests that the conflicting reports from different experimental studies may be due to differences in tasks and in their difficulties.</s><s>We further propose future electrophysiology experiments to observe different types of attentional modulation in a same neuron.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">INTRODUCTION</head><p><s>Optimal neural coding, or efficient coding, suggests that sensory systems have evolved to optimize the representation of the world around us.</s><s>Two seemingly different fields of study, neural coding and visual search, have addressed neural modulation.</s><s>The former has mainly investigated the optimal tuning width for a population of neurons (often one value for all neurons) in stimulus reconstruction and discrimination tasks (e.g., <ref type="bibr" target="#b108">Zhang and Sejnowski, 1999;</ref><ref type="bibr" target="#b48">Jazayeri and Movshon, 2006;</ref><ref type="bibr" target="#b6">Berens et al., 2011;</ref><ref type="bibr" target="#b98">Wang et al., 2012)</ref>.</s><s>For example the question of whether sharpening or broadening a neuron's tuning might improve performance has attracted significant interest (e.g., <ref type="bibr" target="#b74">Pouget et al., 1999;</ref><ref type="bibr" target="#b108">Zhang and Sejnowski, 1999)</ref>.</s><s>Computational studies of top-down biasing of visual search, on the other hand, have primarily addressed optimal gain modulation (e.g., <ref type="bibr" target="#b69">Navalpakkam and Itti, 2007;</ref><ref type="bibr">Scolari and</ref><ref type="bibr">Serences, 2009, 2010;</ref><ref type="bibr" target="#b83">Scolari et al., 2012)</ref>.</s><s>Optimal neural modulation, in general, is a complex optimization problem since several variables such as statistics of stimuli, task variability, limitations of neural systems (e.g., number of neurons and parameters, metabolic cost, noise), and coupled nonlinear dynamics are involved.</s><s>Here, we present a reconciled and abstract account of optimal neural modulation by solving for the best set of gain, tuning width and preferred feature of individual neurons to maximize classification and visual search performance.</s></p><p><s>We use terms attention and optimal neural modulation interchangeably since the term "attention," as currently used in the literature, refers to a highly heterogeneous class of phenomena.</s><s>Characteristics of these phenomena vary significantly depending on the specific context in which the nervous system is operating (e.g., different time scales, tasks, environments, etc.).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.1.">OVERVIEW OF ATTENTIONAL MODULATION</head><p><s>Finding a friend amidst several hundred passengers at an airport can be a nightmare.</s><s>Yet, our brain handles the explosion of information efficiently by filtering out irrelevant or distracting stimuli, and by drawing our gaze to salient and relevant visual stimuli, through a process known as visual attention <ref type="bibr" target="#b92">(Treisman and Gelade, 1980;</ref><ref type="bibr" target="#b95">Tsotsos, 1992;</ref><ref type="bibr" target="#b31">Desimone and Duncan, 1995;</ref><ref type="bibr" target="#b47">James, 2011)</ref>.</s><s>Specifically, visual attention is believed to help in at least two ways: goal-driven top-down attention <ref type="bibr" target="#b106">(Yarbus, 1967;</ref><ref type="bibr" target="#b26">Corbetta and Shulman, 2002;</ref><ref type="bibr" target="#b11">Borji and Itti, 2014)</ref> might help in focusing on relevant image regions that resemble our friend's appearance, thereby accelerating our search, and stimulus-driven bottom-up attention <ref type="bibr" target="#b51">(Koch and Ullman, 1985)</ref> might alert us to salient image regions like moving cars, pedestrians or dollies in our way, thereby avoiding accidents <ref type="bibr" target="#b45">(Itti and Koch, 2001)</ref>.</s><s>Together, top-down and bottom-up attention help us select a few relevant and salient image regions for further processing, including recognition, representation, awareness and action <ref type="bibr" target="#b31">(Desimone and Duncan, 1995;</ref><ref type="bibr" target="#b29">Crick and Koch, 1998)</ref>.</s><s>Please see <ref type="bibr" target="#b45">Itti and Koch (2001)</ref>, <ref type="bibr" target="#b41">Hayhoe and Ballard (2005)</ref>, <ref type="bibr" target="#b58">Macknik et al. (2008)</ref>, <ref type="bibr" target="#b36">Eckstein et al. (2009)</ref>, <ref type="bibr" target="#b3">Baluch and Itti (2011)</ref>, <ref type="bibr" target="#b15">Carrasco (2011)</ref>, <ref type="bibr" target="#b35">Eckstein (2011)</ref>, <ref type="bibr" target="#b52">Kowler (2011)</ref>, <ref type="bibr" target="#b68">Nakayama and Martini (2011)</ref>, <ref type="bibr" target="#b82">Schütz et al. (2011)</ref>, <ref type="bibr" target="#b91">Tatler et al. (2011)</ref>, and <ref type="bibr" target="#b10">Borji and Itti (2013)</ref> for recent reviews of attentional mechanisms at behavioral, computational, and neural levels.</s></p><p><s>There exists at least three types of attention -spatial <ref type="bibr" target="#b73">(Posner et al., 1980;</ref><ref type="bibr" target="#b65">Moran and Desimone, 1985;</ref><ref type="bibr" target="#b50">Kastner et al., 1999;</ref><ref type="bibr" target="#b102">Womelsdorf et al., 2006;</ref><ref type="bibr" target="#b90">Talsma et al., 2007)</ref>, feature-based <ref type="bibr" target="#b94">(Treue and Trujillo, 1999;</ref><ref type="bibr" target="#b80">Saenz et al., 2003;</ref><ref type="bibr" target="#b88">Sohn et al., 2005;</ref><ref type="bibr" target="#b62">Maunsell and Treue, 2006;</ref><ref type="bibr" target="#b86">Serences and Boynton, 2007;</ref><ref type="bibr" target="#b46">Jehee et al., 2011)</ref> and object-based attention <ref type="bibr" target="#b32">(Duncan, 1984</ref><ref type="bibr" target="#b33">(Duncan, , 1996;;</ref><ref type="bibr" target="#b78">Roelfsema et al., 1998;</ref><ref type="bibr" target="#b49">Kanwisher and Wojciulik, 2000;</ref><ref type="bibr" target="#b75">Reynolds et al., 2003;</ref><ref type="bibr" target="#b20">Chen, 2012;</ref><ref type="bibr" target="#b21">Cohen and Tong, 2013)</ref>, depending on whether the basic unit of attentional deployment is a spatial location/region (e.g., the attentional "spotlight" <ref type="bibr" target="#b92">Treisman and Gelade, 1980;</ref><ref type="bibr" target="#b28">Crick, 1984;</ref><ref type="bibr" target="#b13">Brefczynski and DeYoe, 1999)</ref>, visual feature (e.g., color, orientation), or an object.</s></p><p><s>Attention offers several behavioral advantages.</s><s>It is known to:</s></p><p><s>• Improve processing of stimuli at the attended location <ref type="bibr" target="#b73">(Posner et al., 1980)</ref>, • Improve detection of faint stimuli and to lower contrast thresholds <ref type="bibr" target="#b17">(Carrasco et al., 2000;</ref><ref type="bibr" target="#b1">Baldassi and Verghese, 2005)</ref>, • Improve feature discrimination <ref type="bibr" target="#b53">(Lee et al., 1999)</ref>,</s></p><p><s>• Increase spatial resolution <ref type="bibr" target="#b42">(He et al., 1996;</ref><ref type="bibr" target="#b107">Yeshurun and Carrasco, 1998</ref>), • Reject unwanted stimulus noise <ref type="bibr" target="#b56">(Lu and Dosher, 1998;</ref><ref type="bibr" target="#b54">Ling et al., 2009)</ref>, • Increase the rate of visual processing <ref type="bibr" target="#b16">(Carrasco and McElree, 2001</ref>), • Affect appearance <ref type="bibr" target="#b55">(Liu et al., 2006)</ref>.</s></p><p><s>In effect, attention filters out irrelevant stimuli from the visual input and enables neural resources to be focused on the relevant locations, features and objects <ref type="bibr" target="#b109">(Zhang et al., 2011)</ref>.</s></p><p><s>Attentional modulation is widespread in the brain and has been observed in multiple areas along the cortical hierarchy including:</s></p><p><s>• V1 <ref type="bibr" target="#b66">(Motter, 1993;</ref><ref type="bibr" target="#b99">Watanabe et al., 1998;</ref><ref type="bibr" target="#b59">Martinez et al., 1999;</ref><ref type="bibr" target="#b43">Huk and Heeger, 2000;</ref><ref type="bibr" target="#b79">Saenz et al., 2002;</ref><ref type="bibr" target="#b97">Verghese et al., 2012)</ref>, • V2 <ref type="bibr" target="#b66">(Motter, 1993;</ref><ref type="bibr" target="#b57">Luck et al., 1997)</ref>,</s></p><p><s>• V4 <ref type="bibr" target="#b40">(Haenny and Schiller, 1988;</ref><ref type="bibr" target="#b89">Spitzer et al., 1988;</ref><ref type="bibr" target="#b66">Motter, 1993;</ref><ref type="bibr" target="#b24">Connor et al., 1997;</ref><ref type="bibr" target="#b57">Luck et al., 1997;</ref><ref type="bibr" target="#b63">McAdams and Maunsell, 1999;</ref><ref type="bibr" target="#b100">Williford and Maunsell, 2006;</ref><ref type="bibr" target="#b30">David et al., 2008;</ref><ref type="bibr" target="#b44">Ipata et al., 2012)</ref>, • MT <ref type="bibr" target="#b93">(Treue and Maunsell, 1996;</ref><ref type="bibr" target="#b72">O'Craven et al., 1997;</ref><ref type="bibr" target="#b94">Treue and Trujillo, 1999;</ref><ref type="bibr" target="#b79">Saenz et al., 2002;</ref><ref type="bibr" target="#b88">Sohn et al., 2005)</ref>, • Lateral Intra-Parietal cortex (LIP) <ref type="bibr" target="#b14">(Bushnell et al., 1981;</ref><ref type="bibr" target="#b22">Colby et al., 1996;</ref><ref type="bibr" target="#b39">Gottlieb et al., 1998;</ref><ref type="bibr" target="#b9">Bisley and Goldberg, 2003)</ref>, • Frontal Eye Fields (FEF) <ref type="bibr" target="#b8">(Bichot and Schall, 2002;</ref><ref type="bibr" target="#b64">Moore and Fallah, 2004;</ref><ref type="bibr" target="#b7">Bichot et al., 2005)</ref>,</s></p><p><s>• Subcortical structures like Lateral Geniculate Nucleus (LGN) (O <ref type="bibr">'Connor et al., 2002)</ref> and Superior Colliculus (SC) <ref type="bibr" target="#b67">(Munoz et al., 1991;</ref><ref type="bibr" target="#b37">Fecteau and Munoz, 2006)</ref>.</s></p><p><s>Attentional effects are task-dependent.</s><s>In separate studies, attention to color/shape has been shown to enhance BOLD activity in V4, while attention in a speed discrimination task increases activity in MT, and attention in a contrast discrimination task increases activity in V1 <ref type="bibr" target="#b25">(Corbetta et al., 1990;</ref><ref type="bibr" target="#b4">Beauchamp et al., 1997;</ref><ref type="bibr" target="#b72">O'Craven et al., 1997;</ref><ref type="bibr" target="#b43">Huk and Heeger, 2000;</ref><ref type="bibr" target="#b97">Verghese et al., 2012)</ref>.</s><s>In fact, simply instructing observers to pay attention to different aspects of a same stimulus on different blocks of trials triggers different observable attentional modulation effects, in distinct anatomical and functional cortical areas.</s><s>For example, <ref type="bibr" target="#b99">Watanabe et al. (1998)</ref> showed, using one stimulus with superimposed translating and expanding fields of dots, differential attentional modulation of BOLD activation, depending on whether the task was to attend to the translating or the expanding feature of the stimulus.</s></p><p><s>Although different neural mechanisms for attention have been reported, the physiology literature presently appears to be divided.</s><s>Attention to a neuron's preferred location or feature could:</s></p><p><s>• Cause a leftward shift in the neuron's contrast response function thus increasing the effective contrast of the stimulus <ref type="bibr" target="#b76">(Reynolds et al., 2000;</ref><ref type="bibr" target="#b60">Martinez-Trujillo and Treue, 2002)</ref>, • Increase the response gain of the neuron a.k.a multiplicative scaling <ref type="bibr" target="#b63">(McAdams and Maunsell, 1999;</ref><ref type="bibr" target="#b94">Treue and Trujillo, 1999;</ref><ref type="bibr" target="#b103">Womelsdorf et al., 2008;</ref><ref type="bibr" target="#b12">Boynton, 2009;</ref><ref type="bibr" target="#b77">Reynolds and Heeger, 2009;</ref><ref type="bibr" target="#b81">Saproo and Serences, 2010;</ref><ref type="bibr" target="#b85">Scolari and Serences, 2010;</ref><ref type="bibr" target="#b83">Scolari et al., 2012)</ref>, • Decrease the neuron's tuning width a.k.a bandwidth scaling <ref type="bibr" target="#b65">(Moran and Desimone, 1985;</ref><ref type="bibr" target="#b40">Haenny and Schiller, 1988;</ref><ref type="bibr" target="#b89">Spitzer et al., 1988)</ref>, • Increase neuron's baseline or spontaneous activity a.k.a additive scaling <ref type="bibr" target="#b57">(Luck et al., 1997;</ref><ref type="bibr" target="#b19">Chelazzi et al., 1998;</ref><ref type="bibr" target="#b18">Chawla et al., 1999;</ref><ref type="bibr" target="#b50">Kastner et al., 1999)</ref>, • Shift neurons tuned to nearby locations toward the attended location <ref type="bibr" target="#b23">(Connor et al., 1996;</ref><ref type="bibr" target="#b102">Womelsdorf et al., 2006;</ref><ref type="bibr" target="#b30">David et al., 2008;</ref><ref type="bibr" target="#b44">Ipata et al., 2012)</ref>, • Modulate neuronal interactions through neuronal synchronization <ref type="bibr" target="#b38">(Fries et al., 2001;</ref><ref type="bibr" target="#b104">Womelsdorf and Fries, 2007;</ref><ref type="bibr">Womelsdorf et al., 2007)</ref>.</s></p><p><s>Note that the underlying mechanisms responsible for these observed effects at the single-unit level may be more complex, for example involving biasing or winner-take-all (WTA) competitions among neurons in a local population <ref type="bibr" target="#b31">(Desimone and Duncan, 1995;</ref><ref type="bibr" target="#b53">Lee et al., 1999)</ref>, or through gain modulation of upstream neurons <ref type="bibr" target="#b63">(McAdams and Maunsell, 1999)</ref>.</s><s>Figure <ref type="figure" target="#fig_0">1</ref> illustrates four possible types of attentional modulation of a neural population.</s><s>Here, we discard the additive scaling since it has been argued that uniform translation of a tuning function does not affect the coding precision of that tuning function <ref type="bibr" target="#b27">(Cover and Thomas, 1991)</ref> (but see <ref type="bibr" target="#b81">Saproo and Serences, 2010)</ref>, Paragraph 4 in the Discussion section and hence information content of a Faint tuning curves correspond to the neural population before modulation, dotted black curve is the neuron under investigation, and the solid black curve is the modulated tuning curve.</s><s>Here, we discard case (B) to make our simulations easier and tractable.</s><s>Further, it has been argued that this case does not affect information decoding much.</s></p><p><s>neural population.</s><s>Further, this simplification makes our analysis easier and tractable.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.2.">OPTIMAL ATTENTIONAL MODULATION</head><p><s>To gain better insight into above-mentioned discrepancies, we propose a unified account for optimal modulation of neural activity over two tasks: (1) stimulus classification (which of two stimuli was presented on the basis of the neural response pattern) and</s></p><p><s>(2) visual search (i.e., enhancing the representation of the target stimulus, thus making search easier).</s><s>Target selection often comes up in the context of a real world task such as visual search where the observer may be looking for a particular target, or for an unknown target that is the odd-ball.</s><s>Our proposed framework can extend to additional tasks, including match-to-sample (as a neuron's response to the matching stimulus is enhanced while response to any non-matching stimulus is suppressed), discrimination, and stimulus reconstruction.</s></p><p><s>Let p(r|s a ) and p(r|s b ) be probability distributions of population activity r to two stimuli s a and s b .</s><s>The goal of optimal population modulation is to find the best set of parameters for each of n sensory neurons (i.e., θ i = [g i , σ i , μ i ] including gain, tuning width, and feature selectivity) such that:</s></p><formula xml:id="formula_0">φ * = arg max φ f (p(r(φ)|s a ), p(r(φ)|s b )), φ = [θ i = 1...n ] (1)</formula><p><s>where f denotes the task objective function.</s><s>For classification and discrimination tasks, f can be the mutual information between neural activity and behavioral response, or classification accuracy (e.g., linear discrimination error).</s><s>Here we choose to maximize the inverse of minimum discrimination error (MDE) as the optimality criterion for the classification task.</s><s>It has been shown that MDE has several advantages over other criteria such as Fisher Information <ref type="bibr" target="#b6">(Berens et al., 2011)</ref>.</s><s>For visual search tasks, we choose to maximize signal to noise ratio (SNR).</s><s>The concept of SNR has been suggested by psychophysicists as measured by the amount of overlap between target (="signal") and distractor (="noise") response distributions.</s><s>If the purpose is reconstruction (i.e., estimate the true value of the presented stimulus on the basis of the noisy neural response r: ŝ = arg max s p(s|r) ∝ arg max s p(r|s)p(s)), then f can be the inverse of the mean squared error (MSE) between estimated stimulus (by means of a decoding method such as maximum-likelihood or population vector) and the actual input stimulus.</s></p><p><s>Optimizing above objective functions is a complex and time consuming process.</s><s>For the brain this would be an optimization across many (usually thousands of) neurons, involving many different parameters which seems to be very daunting.</s><s>Note that this does not happen instantly, rather it is a slow process of an organism learning to perform a task.</s><s>Further, the stimulus distribution is also not available at once and demands the organism to interact with the environment and observe sensory data over time.</s><s>Indeed, previous work by <ref type="bibr" target="#b2">Baluch and Itti (2010)</ref> has shown that human observers become increasingly more efficient at biasing their visual system toward search targets in a triple conjunction search task.</s><s>This suggests that humans learn over time how to bias the setting of their neural parameters so as to maximize task performance.</s><s><ref type="bibr" target="#b69">Navalpakkam and Itti (2007)</ref> proposed a three-phase mechanism for learning top-down attentional modulation.</s><s>In the first phase, bottom-up and top-down cues (learned previously) are applied to render some visual items salient.</s><s>In the second phase, distributions of target and distractor features are learned through past trials, preview of picture cues, verbal instructions, etc. and in the third phase, optimal top-down gains (as well as other parameters) are computed (see Figure <ref type="figure" target="#fig_1">2</ref> in <ref type="bibr" target="#b69">Navalpakkam and Itti, 2007)</ref>.</s><s>These gains will be later recalled and applied during future search trials.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">THEORETICAL PERSPECTIVE</head><p><s>We formalize, in the Bayesian sense, how attention may modulate neural activity to optimize task performance.</s><s>In classification tasks, the goal is to distinguish between a stimulus from class C = 1 [defined by a distribution of features P(s|C = 1) in some dimension such as orientation] from a stimulus from class C = -1 [defined by a distribution of features P(s|C = -1)].</s><s>In visual search, class C = 1 is considered the target T that is to be found among distractors D (C = -1).</s></p><p><s>We assume that the incoming visual display is processed by a population of n neurons tuned to different features.</s><s>We further assume that all neurons have idealized and homogeneous tuning functions.</s><s>Let r(s) = [r 1 (s), r 2 (s), . . .</s><s>, r n (s)] denote the population vector of responses to input stimulus s. Assuming independent neurons, the probability distribution of response to a single stimulus s is:</s></p><formula xml:id="formula_1">L r (s) = p(r|s) = n j = 1 p(r j |s)</formula><p><s>(2)</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">CLASSIFICATION</head><p><s>In classification tasks, a Bayesian ideal observer needs to estimate Ĉ = arg max C P(C|r) = arg max C P(r|C)P(C)/P(r) where Ĉ represents the estimated class (out of m classes).</s><s>This equation means that the classifier chooses the class that was most likely to have caused the observed response pattern r on the basis of the stimulus conditional response distributions.</s><s>For a two-class problem, the optimal neural decision variable depends on distributions of neural response to classes P(r|C = 1) and P(r|C = -1), each defined as:</s></p><formula xml:id="formula_2">p(r|C) = p(r|s)p(s|C)ds = L r (s)p(s|C)ds (3)</formula><p><s>Thus, to maximize classification performance, the MDE objective function (the error of the ideal observer model) tries to minimize the overlap between neural response distributions to the two classes:</s></p><formula xml:id="formula_3">MDE(C = 1, C = -1) = 1 2 min p(r|C = 1), p(r|C = -1) dr</formula><p><s>(4) Discrimination is a special case of classification, with p(s|C = 1) = d(ss a ) and p(s|C = -1) = d(ss b ), where d denotes the Dirac delta function.</s><s>In <ref type="bibr" target="#b6">Berens et al. (2011)</ref>, authors have used MDE to solve for the optimal tuning width of a neural population in reconstruction and discrimination tasks.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">VISUAL SEARCH</head><p><s>Assuming that attention during visual search is guided to locations of high neural activity, search performance can be optimized by maximizing the strength of the signal (expected total neural response to the target C = 1) relative to the noise (expected total neural response to the distractors C = -1).</s><s>Thus, using the above formulas, SNR can be written as:</s></p><formula xml:id="formula_4">SNR(C = 1, C = -1) = i E(r i |C = 1) i E(r i |C = -1) = i r i p(r i |C = 1)dr i i r i p(r i |C = -1)dr i = i r i p(r i |s)p(s|C = 1)dsdr i i r i p(r i |s)p(s|C = -1)dsdr i (5)</formula><p><s>A closed-form solution for optimal gain modulation using SNR has been previously proposed in <ref type="bibr" target="#b69">Navalpakkam and Itti (2007)</ref>.</s></p><p><s>Please note that here we attempt to solve visual search in feature space, irrespective of spatial organization of items in the search array.</s><s>The SNR formulation has been shown to be capable of explaining a large number of psychophysics findings in the visual search literature <ref type="bibr" target="#b96">(Verghese, 2001;</ref><ref type="bibr" target="#b69">Navalpakkam and Itti, 2007;</ref><ref type="bibr">Scolari and</ref><ref type="bibr">Serences, 2009, 2010;</ref><ref type="bibr" target="#b46">Jehee et al., 2011;</ref><ref type="bibr" target="#b83">Scolari et al., 2012)</ref>.</s><s>In addition, it has been shown that feature-based attention occurs independently of spatial attention <ref type="bibr" target="#b30">(David et al., 2008)</ref>, and feature-based attention changes activity globally throughout the visual-field representation <ref type="bibr" target="#b63">(McAdams and Maunsell, 1999;</ref><ref type="bibr" target="#b94">Treue and Trujillo, 1999;</ref><ref type="bibr" target="#b79">Saenz et al., 2002;</ref><ref type="bibr" target="#b62">Maunsell and Treue, 2006;</ref><ref type="bibr" target="#b86">Serences and Boynton, 2007)</ref>.</s><s>In other words, attentding to a spatial location all features in that location are enhanced <ref type="bibr" target="#b63">(McAdams and Maunsell, 1999;</ref><ref type="bibr" target="#b12">Boynton, 2009;</ref><ref type="bibr" target="#b54">Ling et al., 2009;</ref><ref type="bibr" target="#b77">Reynolds and Heeger, 2009)</ref>.</s><s>Conversely, attention to a specific feature results in global biases to that feature across the entire visual field <ref type="bibr" target="#b93">(Treue and Maunsell, 1996;</ref><ref type="bibr" target="#b94">Treue and Trujillo, 1999;</ref><ref type="bibr" target="#b79">Saenz et al., 2002;</ref><ref type="bibr" target="#b86">Serences and Boynton, 2007)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">SIMULATION RESULTS</head><p><s>We run two numerical simulations to investigate the optimal coding quality of a population of neurons under a range of stimulus conditions.</s><s>The goal of this analysis is to reveal patterns or profiles of modulations depending on tasks and stimuli.</s></p><p><s>Understanding how different patterns arise in different conditions can help design future experiments to pinpoint the neural basis of attentional modulation.</s><s>In the first simulation, for simplicity and tractability, we choose a neural population of size 6 and we exhaustively search the parameter space for optimal solutions.</s><s>We then run a second, larger simulation with 60 neurons on the most interesting cases.</s><s>To illustrate our simulations, we consider the feature dimension of stimulus orientation, although our results apply interchangeably to other features such as color, spatial location, or direction of motion.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">SMALL-SCALE SIMULATION</head><p><s>We assume a conventional model of neural response, where the i-th neuron (i ∈ [1 n], in a population of n = 6 equi-spaced uncorrelated neurons in [0 180]) has a bell-shaped tuning function:</s></p><formula xml:id="formula_5">f i (s) = g i × λ 1 + λ 2 1 2 + 1 2 cos(s -μ i ) 20σ i ; p(r|s) = 1 2πυ 2 i e - (r -f i (s)) 2 2υ 2 i (<label>6</label></formula><formula xml:id="formula_6">)</formula><p><s>where s is the scalar stimulus feature (here orientation) and μ i is the preferred feature of neuron i.</s><s>The parameter g i is the multiplicative gain.</s><s>The parameter σ i controls the width of the tuning curve.</s><s>Large σ corresponds to steep tuning curves with small width.</s><s>The parameters λ 1 and λ 2 set the baseline rate to 5 Hz and the maximal rate (amplitude) to 50 Hz.</s><s>The firing activity of each neuron is assumed to follow a Gaussian distribution with Poisson-like noise, where variance is identical to mean spike count [i.e., υ 2 i = ri (s) = 10f i (s)].</s><s>We estimate MDE and SNR (Equations 4, 5) using Monte Carlo techniques, by iteratively sampling from p(s|C), and, for each s, many times from p(r|s) to finally estimate p(r|C) (similar approach as in <ref type="bibr" target="#b6">Berens et al., 2011)</ref>.</s></p><p><s>We consider two types of constraint regimens on neural parameters.</s><s>The first regimen constrains each free parameter to change only within a restricted window, to adhere to biophysical constraints.</s><s>Note that, otherwise, in visual search, a trivial solution to optimize SNR would be for every neuron to shift its preference to the target feature, change its tuning to infinitely narrow, and enhance its gain infinitely.</s><s>However, such unbounded changes would likely consume enormous energy (every spike is costly), would prevent neurons from adapting to dynamically changing environments, and are implausible given the electrophysiological observations described in the Introduction.</s><s>Thus, to prevent indiscriminate changes leading to this mathematical singularity, we constrain each free parameter to change only within a restricted window.</s><s>We set bounds for g i to [0.5 2], for σ i to [0.5 3], and for μ i to [-0.2 0.2] (in radian, ∼ 11.46 • ).</s><s>A default value of 1 for g i and σ i , and 0 for μ i means no change.</s></p><p><s>Constraint regimen one imposes constraints at the single cell level.</s><s>Another possibility is to consider constraints at the population level as suggested by <ref type="bibr" target="#b69">Navalpakkam and Itti (2007)</ref> where the sum of each parameter over the neural population is constrained (Our second regimen, g i = 2, σ i = 3, and μ i = 2).</s><s>This type of constraint needs more complex mechanisms to impose than constraint type one, for example by means of another neural network or a low-level molecular process.</s><s>Similar to regimen one, regimen two leads to efficient spending of resources and energy but has more selective pressure as several solutions in regimen one may have equal objective function but in regime two optimization favors most informative neurons.</s><s>Eventually, our treatment here is theoretical and further biological research is needed to discover which constraint is really implemented in the brain.</s></p><p><s>We also set the minimum value of g i and σ i to be 0.1 to preserve baseline activity.</s><s>We employ real-valued Genetic Algorithms to exhaustively search the parameter space, in each individual dimension (i.e., g alone), for g + σ , as well as all three 3 parameters, to maximize SNR and MDE -1 .</s><s>It is worth noting that the qualitative conclusions derived from our simulations do not depend on the exact values of bounds.</s></p><p><s>Figure <ref type="figure" target="#fig_1">2</ref> shows simulation results obtained by modulating g i , σ i , and μ i in the above manner for two arrangements of stimulus classes: (1) an easy task where two classes are far apart (C = 1 at 45 • and C = -1 at 135 • ), and (2) a difficult task where two classes are close to each other and thus more similar (C = 1 at 80 • and C = -1 at 100 • ).</s><s>We investigate two levels of uncertainty (low σ s = 5 • and high σ s = 20 • ) on stimulus distributions.</s><s>For some cases in which solutions are not unique, we also show other good answers in insets.</s><s>To further study the influence of stimulus distributions and initial parameterization, in Figure <ref type="figure" target="#fig_2">3</ref> we illustrate solutions to some additional cases: (1) when only knowledge about one class is known, (2) three classes of stimuli (two targets and one distractor; See Supplementary materials for heterogeneous search, i.e., one target among two distractors), and (3) narrow default tuning curves (σ i = 5).</s><s>In each test case, we first describe results for classification, then search.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.1.">Response gain</head><p><s>In classification, under constraint regimen one, all neurons attain the maximum allowed gain, in both easy and difficult tasks.</s><s>In regimen 2, all gains are concentrated around one of two classes, since both classes are equally important.</s><s>Interestingly, and possibly counter-intuitively, if we were to distribute the gains equally around both stimulus classes, or equally among all neurons, the MDE would rise (i.e., worse classification).</s><s>In visual search, SNR optimization shows that neurons tuned near the target feature undergo gain enhancement, while neurons tuned near the distractor feature undergo gain suppression (aligned with <ref type="bibr">Treue and</ref><ref type="bibr" target="#b94">Trujillo, 1999 and</ref><ref type="bibr" target="#b69">Navalpakkam and</ref><ref type="bibr" target="#b69">Itti, 2007)</ref>.</s><s>While in regimen 2, only neurons at the target feature show gain enhancement, in regimen 1 neurons around the target are also enhanced.</s><s>Interestingly in regimen 2, when target and distractor are very close and overlap is high (Figure <ref type="figure" target="#fig_1">2F</ref>, T = 80 • , D = 100 • , σ s = 20), in accordance with <ref type="bibr" target="#b69">Navalpakkam and Itti (2007)</ref> and <ref type="bibr" target="#b84">Scolari and Serences (2009)</ref>, we also observe higher gain for the exaggerated neuron (at 45 • ) than for the neuron best tuned to the target (at 75 • ).</s><s>However, unlike <ref type="bibr" target="#b69">Navalpakkam and Itti (2007)</ref>, baseline activity is sustained in our simulation, which agrees with electrophysiology findings <ref type="bibr" target="#b19">(Chelazzi et al., 1998;</ref><ref type="bibr" target="#b18">Chawla et al., 1999;</ref><ref type="bibr" target="#b50">Kastner et al., 1999;</ref><ref type="bibr" target="#b30">David et al., 2008)</ref>.</s><s>Supporting single-unit evidence comes from feature-based attention tasks <ref type="bibr" target="#b63">(McAdams and Maunsell, 1999;</ref><ref type="bibr" target="#b94">Treue and Trujillo, 1999;</ref><ref type="bibr" target="#b61">Martinez-Trujillo and Treue, 2004;</ref><ref type="bibr" target="#b30">David et al., 2008;</ref><ref type="bibr" target="#b46">Jehee et al., 2011)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.2.">Tuning width</head><p><s>Maximum classification accuracy, in the easy task and in regimen 1, is obtained when all neurons widen their tuning as much as possible.</s><s>In other cases (difficult task, regimen 1, and both tasks in regimen 2), optimization leads to sharpening near both stimuli and widening elsewhere (see also Figure <ref type="figure" target="#fig_2">3</ref>).</s><s>In visual search, our results suggest that attention causes both narrowing and widening of tuning width, and the choice depends on the difficulty of the task.</s><s>In regimen 1, in the easy task, neurons at and near the target feature are maximally widened while neurons near the distractor feature are maximally sharpened.</s><s>In regimen 2, in the easy task, we observe widening of neurons both at target and distractor, which was unexpected.</s><s>Since neurons tuned near the distractor feature already respond strongly to the distractor (due to our bounds), sharpening would indeed only boost the distractor and lower SNR; however, widening for these neurons represents a "better worst-case scenario," as it will make them respond to both distractor and target, resulting in slightly higher SNR compared to sharpening.</s><s>When we made the task even easier (Figure <ref type="figure" target="#fig_2">3</ref> * ), we then observed that neurons at distractor sharpened.</s><s>Over the difficult task in both regimens, we observe a sharpening at the target and widening near the distractor, which is the opposite of the easy task in regimen 1.</s><s>When p(s|T) and p(s|D) do not overlap much (i.e., low uncertainty), and/or tuning curves are narrow and far apart, neural tuning widens near the target and sharpens near the distractor.</s><s>The opposite happens when p(s|T) and p(s|D) highly overlap or the population is very dense.</s><s>Note that parameter setting is important in the optimal answers.</s><s>While exact values might differ for different parameter settings, we believe that patterns will stay the same (e.g., dependency of results to task difficulty).</s><s>For experimental works, when biophysical properties of a neural population are known, it is easy to run a simulation (with our shared code) and verify a hypothesis.</s><s>Supporting evidence for sharpening at the target comes from single-unit studies of orientation <ref type="bibr" target="#b89">(Spitzer et al., 1988)</ref> and spatial tuning <ref type="bibr" target="#b65">(Moran and Desimone, 1985)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.3.">Preferred feature</head><p><s>In classification, optimization moves neurons toward either of the two classes as much as possible, in both regimens over both tasks.</s><s>The optimal answer in visual search is to move neurons toward the target and away from the distractor.</s><s>Supporting evidence for tuning shifts comes from single-unit studies in feature-based <ref type="bibr" target="#b30">(David et al., 2008;</ref><ref type="bibr" target="#b44">Ipata et al., 2012)</ref> and spatial attention <ref type="bibr" target="#b23">(Connor et al., 1996;</ref><ref type="bibr" target="#b102">Womelsdorf et al., 2006)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.4.">All parameters</head><p><s>Comparing results obtained for the joint optimization of all parameters and the separate optimization of g, σ , and μ, we empirically find that the superposition of optimal answers to each individual parameter is always a good answer (although we do not have a theoretical guarantee on the optimality or uniqueness of such answer).</s><s>For example, optimizing gain and tuning width jointly in easy visual search, regimen 1 (See Figure <ref type="figure" target="#fig_1">2  *</ref> ), leads to maximal gain amplification and widening of neurons around the target, while minimizing gains of neurons selective to the distractor.</s><s>Note that tuning width modulation of neurons near the distractor is not important here since their gain has already been minimized.</s><s>When optimizing all three parameters, in addition to the joint answer of gain and tuning width, neurons are also shifted toward the target and away from the distractor (See Figure <ref type="figure" target="#fig_1">2</ref> * * ).</s><s>Our results also show that modulation of multiple parameters always yields better performance than optimizing only one or two parameters.</s><s>This suggests that biological top-down attention may also affect multiple parameters, although most previous reports have focused on one parameter at a time.</s></p><p><s>Optimal neural modulation in heterogeneous visual search (i.e., one target among two distractors and vice versa) and optimizing g, σ , and μ with 12 neurons shows the same patterns as in Figure <ref type="figure" target="#fig_1">2</ref>.</s><s>These results are shown in Supplementary materials.</s></p><p><s>Figure <ref type="figure" target="#fig_3">4</ref> shows the optimal MDE and SNR values (in regimen 1) as a function of target-distractor dissimilarity for g, σ , and g + σ (averaged over</s></p><formula xml:id="formula_7">T ∈ {30 • , 40 • , 50 • , 60 • } and D = T + {10 • , 20 • , 30 • , 40 • , 50 • , 60 • }).</formula><p><s>Increasing the distance between the two classes leads to decrease in MDE and a ramp up in SNR.</s><s>This qualitatively matches with human performance as a function of task difficulty <ref type="bibr" target="#b34">(Duncan and Humphreys, 1989)</ref>.</s><s>Over both MDE and SNR, modulating both g and σ wins over single parameters.</s><s>The tuning width is more effective than gain in classification, as seen by lower MDE values of σ than MDE values using g.</s><s>The opposite occurs in visual search using SNR.</s><s>One reason why SNR values for σ are small might be because neurons in this simulation are not allowed to sharpen beyond a certain limit.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.5.">Note on noise correlation</head><p><s>In our simulations so far, we considered optimal modulation of an uncorrelated neural population for the sake of simplicity (i.e., uncorrelated noise).</s><s>But, noise in the brain is correlated and this might influence the amount of information a neural population conveys <ref type="bibr" target="#b0">(Averbeck et al., 2006)</ref> (See also <ref type="bibr" target="#b87">Seriès et al., 2004 and</ref><ref type="bibr" target="#b5">Bejjanki et al., 2011)</ref>.</s><s>Here, we analyze the role of correlations (correlated noise) in optimal modulation of parameters for visual search (i.e., maximizing SNR) on our small scale neural population with 6 neurons.</s></p><p><s>Following <ref type="bibr" target="#b6">Berens et al. (2011)</ref>, we model the stimulusconditional response distribution as a multivariate Gaussian:</s></p><formula xml:id="formula_8">p(r|s) = N (r(s), (s))<label>(7)</label></formula><p><s>In above equation, r(s) = (r 1 (s), r2 (s), . . .</s><s>, r6 (s)) and (s) represent average spike counts and covariance matrix, respectively.</s><s>This allows us to inject Poisson-like noise correlations into our simulation (See <ref type="bibr" target="#b6">Berens et al., 2011</ref> and their supplement for more details on adding correlated noise).</s><s>Results are shown in supplementary materials for optimal answers of searching a target at 80 • and distractor at 100 • with σ s = 5 • (see Figure <ref type="figure" target="#fig_1">2</ref>).</s><s>We consider 10% noise correlation in our simulations.</s><s>As it can be seen patterns of results are similar to those shown in Figure <ref type="figure" target="#fig_1">2</ref> for both constraint regimens and all three neural parameters.</s><s>This could be because the effect of noise is vanished when averaging the neural activity, to targets and to distractors in SNR computation.</s><s>For future research we encourage a more detailed look at noise correlations (e.g., non-uniform correlations) and how they may affect optimal solutions on larger neural populations.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">LARGE-SCALE SIMULATION</head><p><s>The previous analysis revealed different patterns of modulation depending on task and stimulus conditions.</s><s>Importantly, it revealed that joint optimization of all parameters always yields better performance than optimizing only one parameter.</s><s>This prompts us to study the relative utility or contribution of modulating each parameter as part of a joint optimization.</s><s>To further investigate this, we focus on visual search in a larger-scale, more detailed simulation.</s><s>We simulated a population of n = 60 equi-spaced, broad, overlapping Gaussian neurons with preferred stimulus feature μ i , tuning width σ i , amplitude λ 2 , gain factor g i , and baseline firing rate λ 1 :</s></p><formula xml:id="formula_9">f i (s) = g i × λ 1 + λ 2 e -(s -μ i ) 2 /2σ i 2 , i = 1, . . . , n; p(r|s) = e -f i (s) f i (s) r r! (8)</formula><p><s>with default tuning width of 10 • , default gains at unity, spacing between preferred orientations of adjacent neurons 3 • spanning 0-180 • in orientation space (Figure <ref type="figure" target="#fig_4">5</ref>).</s><s>In addition, we consider the noise in neural response (to repeated presentations of a same stimulus) to have Poisson variability (used to numerically compute the expectations in the Equation <ref type="formula">5</ref>).</s><s>Here, we set λ 1 = 0, for simplicity.</s></p><p><s>We jointly maximized SNR wrt.</s><s>g i , μ i , and σ i using a multistart Nelder-Mead simplex algorithm <ref type="bibr" target="#b70">(Nelder and Mead, 1965)</ref> (genetic algorithm was too slow in this larger-scale test).</s><s>We used multiple initial conditions to avoid converging into local optima (20 different initial conditions, each with a random jitter in g i , μ i , and σ i of up to 50% from default values), and considered the solution with maximum SNR.</s><s>Here, attention can modulate g i by up to ±50% of its default unity value, and σ i and μ i by up to ±50% of the default tuning width (corresponding to regimen 1 and to avoid numerical instability).</s></p><p><s>Figure <ref type="figure" target="#fig_4">5</ref> shows how neural parameters may be optimally modulated in an easy search (with an orientation difference between target and distractors of 5σ 0 = 50 • ), and a difficult search task (smaller orientation difference of σ 0 = 10 • ).</s><s>After modulation, the expected neural response to the target is much higher than the distractor (Figure <ref type="figure" target="#fig_4">5C</ref>) compared to before modulation (Figure <ref type="figure" target="#fig_4">5B</ref>).</s><s>This effect is more clearly seen in the difficult task, where the initial population response to the target and distractor are similar (Figure <ref type="figure" target="#fig_4">5B</ref>, 2nd column, hence a low SNR), but different after modulation (Figure <ref type="figure" target="#fig_4">5C</ref>, 2nd column), leading to an improvement in SNR.</s><s>Optimization results here are aligned with our smaller-scale simulation (Figure <ref type="figure" target="#fig_1">2</ref>).</s><s>Interestingly, since here target and distractor are well separated in the easy task, neurons around the target widen while those tuned near the distractor sharpen.</s><s>In contrast, neurons sharpen near the target and widen near the distractor in the difficult task.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.1.">Analysis of tuning curve overlap</head><p><s>How much is SNR dependent on the degree of neural overlap?</s><s>Over our population of 60 neurons, we change σ from 6 • to 35 • and task difficulty from 10 • to 100 • and then find the optimal solutions for g, σ , and μ. Figure <ref type="figure" target="#fig_5">6</ref> shows that increasing the overlap between neurons reduces SNR for all parameters regardless of task difficulty.</s><s>This impairment is more profound in difficult tasks than in easy tasks.</s><s>In easy tasks, irrespective of the degree of overlap, SNR values using gain are higher than SNR due to σ and μ.</s><s>SNR using gain increases as the difference between target and distractor increases.</s><s>Interestingly, there is an interaction between overlap and task difficulty when optimizing for σ and μ (non-monotonic curve shapes in Figure <ref type="figure" target="#fig_5">6</ref>).</s></p><p><s>The analysis of SNR changes as a function of tuning overlap suggests explicit qualitative predictions that could be made when looking across cortical areas (given that orientation tuninherently broadens as one ascends the visuocortical hierarchy).</s><s>Moving along the hierarchy, neurons become broader (thus higher overlap among neurons) which eventually causes lower SNR.</s><s>Also note that the peak of the curves in Figure <ref type="figure" target="#fig_5">6</ref> shifts to the right suggesting that maximum separability happens for more dissimilar stimuli.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.2.">Behavioral utility of neural modulation</head><p><s>How useful is the modulation of each neural parameter?</s><s>To answer this question, we computed a utility statistic u(p) for a parameter p ∈ {g, σ, μ} as the ratio of benefit to SNR obtained by modulating p alone vs. modulating everything.</s><s>Higher utility values indicate that more performance is achieved by modulating p compared to other parameters, i.e., p is a high-yield parameter to modulate in the particular task and stimulus studied.</s><s>As seen in Figure <ref type="figure" target="#fig_6">7</ref>, u(g) and u(μ) both decrease with increasing task difficulty, but u(σ ) does not.</s><s>Thus, in easy tasks (where the target and distractor differ by ≥ 40 • ) modulating g or μ is more useful, but becomes less useful in difficult tasks.</s><s>On the other hand, while modulating σ is not very beneficial in easy tasks, it becomes necessary in difficult tasks ( ≤ 25 • ).</s><s>Furthermore, in easy tasks, simulation predicts that the combined modulation of μ and g is sufficient to yield close to best behavioral performance, but their combined utility decreases with increasing task difficulty.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">DISCUSSION AND CONCLUSION</head><p><s>Results of two consistent simulations reveal that:</s></p><p><s>1.</s><s>In classification, when two classes are well separated, all neurons should be widened and gains should be boosted, 2. In classification, when two classes are close in feature space, neurons selective to both should be sharpened and their gains should be increased, 3.</s><s>In easy search, the optimal solution is to widen and boost gain at the target, and sharpen and reduce gain around the distractor (the opposite is seen for tuning width in difficult search), 4.</s><s>Only in constraint regimen 2 and in difficult search, maximum gain is allocated to the exaggerated neuron as predicted by <ref type="bibr" target="#b69">Navalpakkam and Itti (2007)</ref>   response gains (g), or any combination of these parameters.</s><s>For easy tasks, we predict that modulating preferred features and gains are useful and sufficient (yielding 0.97 × the best performance).</s><s>But their combined utility decreases with decreasing orientation difference between the target and distractors (u = 0.49), rendering them less useful in difficult tasks.</s><s>On the other hand, modulating tuning width is more useful and necessary in difficult tasks.</s><s>A similar trend is observed in separately modulating gains or preferred feature vs. tuning width.</s></p><p><s>6. Optimizing multiple parameters is better than optimizing a single one and joint solutions seem to be combinations of constituent ones, 7. Increasing overlap among neurons worsens SNR, which is more harmful in difficult than in easy search, 8. Uniform noise correlation did not affect our conclusions but more detailed analysis of different noise conditions is encouraged, 9. Task difficulty is a key factor in determining the utility of a neural parameter.</s></p><p><s>Our theoretical investigation sheds new light on the ongoing controversy of attentional modulation, by indicating that the reported discrepancies in the literature may be due to differences in task difficulty (Figure <ref type="figure" target="#fig_6">7</ref>).</s><s>For instance, previous physiological studies that reported gain modulation <ref type="bibr" target="#b63">(McAdams and Maunsell, 1999;</ref><ref type="bibr" target="#b94">Treue and Trujillo, 1999)</ref> used easy tasks: McAdams and Maunsell used an angular difference of 45 • or 90 • between target and distractor, while Treue and Martinez-Trujillo used either no distractor or one 180 • from the target.</s><s>Previous studies that found preferred feature modulation also used easy tasks: <ref type="bibr" target="#b103">(Womelsdorf et al., 2008)</ref> used a spatial attention task where monkeys attended to a target location in the absence of distractors.</s><s>In such easy tasks, as predicted by our theoretical analysis, modulation of gains and preferred features (which is most useful) is observed, while tuning width modulation (not useful) is not observed.</s><s>One of the few previous studies <ref type="bibr" target="#b89">(Spitzer et al., 1988)</ref> that reported tuning width modulation, observed it in more difficult discrimination tasks (smaller angular difference of 22.5 • ).</s><s>Nevertheless, as tuning width modulation remains a controversial issue (e.g., <ref type="bibr" target="#b94">Treue and Trujillo, 1999)</ref>, our main goal here it to show how tuning width modulation is an optimal strategy when the task is difficult.</s></p><p><s>It is difficult to disentangle the effect of gain and tuning width modulation behaviorally (see <ref type="bibr" target="#b54">Ling et al., 2009)</ref>.</s><s>We suggest neurophysiology experiments for this purpose by systematically controlling for task difficulty.</s><s>An ideal task for testing tuning width modulation would be when the monkey attends to a target feature in the presence of flanking distractor (e.g., attend to a 45 • oriented moving random dot pattern (RDT) among 50 and 40 • oriented RDTs).</s><s>In such a task, modulating preferred features or gains will not suffice as neurons responding to the target will also respond to similar distractors.</s><s>Instead, sharpening the tuning curve will help the target-sensitive neurons by decreasing interference from distractors, hence better resolving the difference between target and distractor.</s><s>In contrast, when the target and flanking distractor are very different (e.g., more than 45 • apart), modulating tuning widths is not useful, and thus modulation of preferred features and gains should be observed.</s></p><p><s>Our model generalizes over previous gain-only models: guided search theory <ref type="bibr" target="#b101">(Wolfe et al., 1989)</ref>, feature-similarity gain principle <ref type="bibr" target="#b94">(Treue and Trujillo, 1999;</ref><ref type="bibr" target="#b61">Martinez-Trujillo and Treue, 2004)</ref>, and optimal gain theory <ref type="bibr" target="#b69">(Navalpakkam and Itti, 2007)</ref>.</s><s>The guided search theory revises the feature integration theory (FIT) and suggests that top-down attention acts as a linear weighted combination of multiple features which in effect makes an object of interest more salient among distractors and decreases the search time.</s><s>However, similar to FIT, this theory only attempts to explain the behavior of the organism.</s><s>In the the feature similarity gain model, gain modulation is a function of similarity between the neuron's preferred feature and the target feature.</s><s>This theory does not consider target-distractor similarity.</s><s>The optimal gain theory, combines information from both the target and distracting clutter to maximize the relative salience of the target.</s><s>Interestingly, this model predicts that it is sometimes optimal to enhance the non-target features (e.g., Figure <ref type="figure" target="#fig_1">2G</ref>).</s><s>Here, we considered three neural parameters and showed how distribution of target and distractors can be used to optimally tune all these parameters and make the target salient.</s></p><p><s>In addition to gain, our model offers testable predictions for tuning width modulation and shifts in selectivity (seen by <ref type="bibr" target="#b30">David et al., 2008 and</ref><ref type="bibr">Ipata et al., 2012 in area V4)</ref>.</s><s>Our model differs from the well-established normalization model of attention <ref type="bibr" target="#b77">(Reynolds and Heeger, 2009)</ref> in one main aspect: the normalization model commits to explain low-level attentional mechanisms, while our model offers a high-level theoretical account for optimal attention over a population of neurons, considering task difficulty, and stimulus statistics.</s><s>Obviously, our model has limited prediction power.</s><s>It may need to be further expanded to account for optimal spatial attention, when deployed jointly with feature-based attention in hybrid spatial/feature tasks.</s><s>We encourage future neurophysiology studies, with our theoretical framework in hand, to further explore such tasks, which will give new insights for developing models of spatial and feature-based attention.</s></p><p><s>In summary, we investigated three attentional mechanisms, namely attentional modulation of neural response gain, tuning width and preferred feature.</s><s>Reports from different laboratories differ on whether attention modulates tuning width or gain or preferred feature.</s><s>We have proposed a simple computational model that reconciles the above differences by predicting that task-difficulty (due to target-distractor similarity) plays a critical role in determining attentional modulation.</s><s>Our model predicts that gain and preferred feature modulation is useful in easy tasks, while tuning width modulation is useful in difficult tasks -a prediction that is in good qualitative agreement with reported data.</s><s>This unified model illuminates the similarities and differences in reported data from various laboratories, and provides guidelines for future experiments.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIGURE 1 |</head><label>1</label><figDesc><div><p><s>FIGURE 1 | This illustration depicts four possible attention-induced modulations of a neural population to a given visual task (here classification and visual search).</s><s>Attention theoretically can: (A) Increase the gain of some important neurons a.k.a multiplicative scaling.</s><s>This modulation selectivity increases the gain of the neurons that are more useful to find the target in visual search (or two classes in the classification and discrimination tasks).</s><s>(B) Enhance response amplitudes in a feature-nonspecific manner a.k.a additive scaling.</s><s>(C) Increase the selectivity of a neuron by modulating its tuning width (here sharpening) a.k.a bandwidth scaling, and (D) Shift tuning curves of neurons around to concentrate on important regions of the feature space (or shifting physical spatial receptive field of a neuron).Faint tuning curves correspond to the neural population before modulation, dotted black curve is the neuron under investigation, and the solid black curve is the modulated tuning curve.</s><s>Here, we discard case (B) to make our simulations easier and tractable.</s><s>Further, it has been argued that this case does not affect information decoding much.</s></p></div></figDesc><graphic coords="3,53.94,68.02,226.80,235.92" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIGURE 2 |</head><label>2</label><figDesc><div><p><s>FIGURE 2 | Optimal attentional modulation for classification (MDE; top row) and visual search tasks (SNR; bottom row).</s><s>The lower the MDE, the better (opposite is true for SNR).</s><s>Left and right columns correspond to two parameter regimens for 2 classes of stimuli: (1) coarse classification (or easy search) C = 1 (target; solid line) at 45 • and C = -1 (distractor; dashed line) at 135 • , 2) fine classification (or hard search) C = 1 at 80 • , and C = -1 at 100 • , each at two uncertainty levels (σ s = 5 • and σ s = 20 • ).</s><s>(A) MDE, g, regimen 1: gains should be maximized for all neurons in both tasks.</s><s>The red tuning curves represent the default tunings (σ = 1).</s><s>(B) MDE, g, regimen 2: All gain is allocated to one of the two classes.</s><s>(C) MDE, σ , regimen 1: all neurons in easy task should be widened.</s><s>In other cases, neurons at 2 classes should be sharpened while the rest should be widened.</s><s>(D) MDE, μ: neurons should be moved to locations of classes in all cases.</s><s>(E) MDE, g + σ and g + σ + μ has the superposition of individual effects.</s><s>(F) SNR, g, regimen 1: gains of neurons nearby target should be enhanced.</s><s>In regimen 2, gain at the target should be amplified in easy task.</s><s>(G) In difficult search (σ s = 20 • ), the gain of the exaggerated neuron should be amplified more than the neuron at the target.</s><s>(H) SNR, σ , easy task: neurons nearby target should be widened while neurons near distractor should be sharpened (see text).</s><s>In difficult search task, neurons near target should be sharpened while neurons near distractor should be widened.</s><s>(I) SNR, μ: neurons should be moved toward the target and away from the distractor.</s></p></div></figDesc><graphic coords="6,55.36,68.26,481.92,367.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIGURE 3 |</head><label>3</label><figDesc><div><p><s>FIGURE 3 | Optimal neural modulation of g, σ and μ for additional cases mentioned in the text (small-scale simulation).</s><s>Columns from left to right: unknown target (here modeled as a very wide distribution with σ s = 100 shown with the dotted blue curve) and known distractor at 135 • with σ s = 5 (solid red curve), known target at 45 • and unknown distractor, visual search for two targets at 30 • and 150 • and a single distractor at 90 • with σ s = 5, easy search for a target at 45 • with a narrow distribution (σ s = 1) and a distractor at 135 • .</s><s>In each column/setting, the left side shows the original neural population with 6 neurons and below that are the optimal parameters.</s><s>The right side in each column shows the neural population after modulation.</s><s>The top rows shows results for regimen 1 while the bottom one corresponds to regimen 2, for both classification (MDE) and visual search tasks (SNR).</s><s>The panel with * shows the optimal σ in an easy visual search task.</s></p></div></figDesc><graphic coords="7,55.42,68.34,481.92,333.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>FIGURE 4 |</head><label>4</label><figDesc><div><p><s>FIGURE 4 | Dependency of objective functions to dissimilarity between two classes for the small-scale simulation with 6 neurons for g, σ , and g + σ (averaged over T ∈ {30 • , 40 • , 50 • , 60 • } and D = T + {10 • , 20 • , 30 • , 40 • , 50 • , 60 • }).</s><s>Left: MDE for classification and Right: SNR for visual search.</s><s>MDE decreases as two classes become more separate from each other while SNR raises which means that in both cases task becomes progressively easier.</s></p></div></figDesc><graphic coords="8,53.88,67.98,226.80,108.96" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>FIGURE 5 |</head><label>5</label><figDesc><div><p><s>FIGURE 5 | Attentional modulation easy and difficult visual search.</s><s>(A) The input stimuli.</s><s>Rows (B,C) show the expected response of neurons (tuned to different features) before and after modulation.</s><s>The solid red line is the expected response to the target, while the dotted blue line represents the expected response to the distractor.</s><s>(D) The optimal shift in response gain is shown by the solid black line.</s><s>Neurons tuned near the target increase their gain, while others tuned near the distractor undergo suppression.</s><s>(E) The optimal shift in neuron's tuning width (σ ) is shown here in the solid black line.</s><s>In the difficult task, neurons tuned to the target feature decrease their tuning width, while nearby neurons widen their tuning width.</s><s>(F) The optimal shift in preferred features μ is shown by the solid black line.</s><s>A positive shift ( μ i &gt; 0) indicates neurons shifting to the right, and vice versa.</s><s>The blue star shows the neuron's preferred feature after the modulation.</s><s>Neurons shift toward the target feature and away from the distractor feature (as seen by the lack of blue stars near the distractor).</s><s>(G) The optimal tuning curves.</s></p></div></figDesc><graphic coords="9,55.42,67.86,481.92,532.08" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>FIGURE 6 |</head><label>6</label><figDesc><div><p><s>FIGURE 6 | Analysis of tuning curve overlap (σ from 6 to 35 • ; spacing between neurons is 3 • ).</s><s>The x axis shows task difficulty due to target-distractor dissimilarity (measured by increasing orientation difference between the target and distractor: for j = 1 : 10, T = 60 •j × 5,</s></p></div></figDesc><graphic coords="10,83.85,353.15,425.28,305.28" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>FIGURE 7 |</head><label>7</label><figDesc><div><p><s>FIGURE 7 | Utility of attentional modulation.</s><s>The x axis shows difficulty due to target distractor similarity.</s><s>The y axis shows simulation predictions of utility of modulating preferred features (μ), tuning width (σ ), response gains (g), or any combination of these parameters.</s><s>For easy tasks, we predict that modulating preferred features and gains are useful and sufficient (yielding 0.97 × the best performance).</s><s>But their combined utility decreases with decreasing orientation difference between the target and distractors (u = 0.49), rendering them less useful in difficult tasks.</s><s>On the other hand, modulating tuning width is more useful and necessary in difficult tasks.</s><s>A similar trend is observed in separately modulating gains or preferred feature vs. tuning width.</s></p></div></figDesc><graphic coords="11,53.94,67.99,226.80,168.96" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Frontiers in Computational Neuroscience www.frontiersin.org</s><s>March 2014 | Volume 8 | Article 34 | 7</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p><s>Frontiers in Computational Neuroscience www.frontiersin.org</s><s>March 2014 | Volume 8 | Article 34 | 9</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_2"><p><s>Frontiers in Computational Neuroscience www.frontiersin.org</s><s>March 2014 | Volume 8 | Article 34 | 11</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>This work was supported by the <rs type="funder">National Science Foundation</rs> (grant number <rs type="grantNumber">CMMI-1235539</rs>), the <rs type="funder">Army Research Office</rs> (<rs type="grantNumber">W911NF-11-1-0046</rs> and <rs type="grantNumber">W911NF-12-1-0433</rs>), and <rs type="funder">US Army</rs> (<rs type="grantNumber">W81XWH-10-2-0076</rs>).The authors affirm that the views expressed herein are solely their own, and do not represent the views of the United States government or any agency thereof.We thank <rs type="person">Vidhya Navalpakkam</rs> for very useful discussion and insights on this manuscript.Also thanks to reviewers for their valuable comments.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_N3Upm7v">
+					<idno type="grant-number">CMMI-1235539</idno>
+				</org>
+				<org type="funding" xml:id="_B9XJ4ws">
+					<idno type="grant-number">W911NF-11-1-0046</idno>
+				</org>
+				<org type="funding" xml:id="_5XDKGhU">
+					<idno type="grant-number">W911NF-12-1-0433</idno>
+				</org>
+				<org type="funding" xml:id="_zagq2Gq">
+					<idno type="grant-number">W81XWH-10-2-0076</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SUPPLEMENTARY MATERIAL</head><p><s>The Supplementary Material for this article can be found online at: http://journal.frontiersin.org/journal/10.3389/fncom.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>2014.00034/abstract</head><p><s>Conflict of Interest Statement: The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Neural correlations, population coding and computation</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Averbeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nrn1888</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="358" to="366" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Attention to locations and features: different top-down modulation of detector weights</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Baldassi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Verghese</surname></persName>
+		</author>
+		<idno type="DOI">10.1167/5.6.7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vis</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="556" to="570" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Training top-down attention improves performance on a triple-conjunction search task</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Baluch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Itti</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/jour-nal.pone.0009127</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">9127</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Mechanisms of top-down attention</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Baluch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Itti</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tins.2011.02.003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="210" to="224" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Graded effects of spatial and featural attention on human area MT and associated motion processing areas</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Beauchamp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Cox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Deyoe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="516" to="520" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Perceptual learning as improved probabilistic inference in early sensory areas</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">R</forename><surname>Bejjanki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Beck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z.-L</forename><forename type="middle">L</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.2796</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="642" to="648" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Reassessing optimal neural population codes with neurometric functions</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Ecker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gerwinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Tolias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bethge</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1015904108</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U.S.A</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="4423" to="4428" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Parallel and serial neural mechanisms for visual search in macaque area v4</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">P</forename><surname>Bichot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Rossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1109676</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">308</biblScope>
+			<biblScope unit="page" from="529" to="534" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Priming in macaque frontal cortex during popout visual search: feature-based facilitation and location-based inhibition of return</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">P</forename><surname>Bichot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Schall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="4675" to="4685" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">The role of the parietal cortex in the neural processing of saccadic eye movements</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Bisley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Goldberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Neurol</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="141" to="157" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">State-of-the-art in visual attention modeling</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Itti</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TPAMI.2012.89</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Patt. Anal. Mach. Intell. IEEE Trans</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="185" to="207" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Defending yarbus: eye movements reveal observers&apos; task</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Itti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vis</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1" to="22" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">A framework for describing the effects of attention on visual responses</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Boynton</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.visres.2008.11.001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="1129" to="1143" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">A physiological correlate of the &apos;spotlight&apos; of visual attention</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Brefczynski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Deyoe</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/7280</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="370" to="374" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Behavioral enhancement of visual responses in monkey cerebral cortex. i. modulation in posterior parietal cortex related to selective visual attention</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Bushnell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Goldberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Robinson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="755" to="772" />
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Visual attention: the past 25 years</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carrasco</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.visres.2011.04.012</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="1484" to="1525" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Covert attention accelerates the rate of visual information processing</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carrasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mcelree</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.081074098</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U.S.A</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="5363" to="5367" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Spatial covert attention increases contrast sensitivity across the csf: support for signal enhancement</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carrasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Penpeci-Talgar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Eckstein</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0042-6989(00)00024-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="1203" to="1215" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The physiological basis of attentional modulation in extrastriate visual areas</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chawla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rees</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Friston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="671" to="676" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Responses of neurons in inferior temporal cortex during memory-guided visual search</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chelazzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Duncan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="2918" to="2940" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Object-based attention: a tutorial review</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.3758/s13414-012-0322-z</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Attent. Percept. Psychophys</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="784" to="802" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Neural mechanisms of object-based attention</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tong</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cercor/bht303</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb. Cortex</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>Epub ahead of print</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Visual, presaccadic, and cognitive activation of single neurons in monkey lateral intraparietal area</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Colby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Duhamel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Goldberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="2841" to="2852" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Responses in area v4 depend on the spatial relationship between stimulus and attention</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Gallant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Preddie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C V</forename><surname>Essen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page" from="1306" to="1308" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Spatial attention effects in macaque area v4</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Preddie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Gallant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C V</forename><surname>Essen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="3201" to="3214" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Attentional modulation of neural processing of shape, color, and velocity in humans</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Corbetta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Miezin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dobmeyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Shulman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Petersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">248</biblScope>
+			<biblScope unit="page" from="1556" to="1559" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Control of goal-directed and stimulus-driven attention in the brain</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Corbetta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Shulman</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nrn755</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="201" to="215" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">Elements of Information Theory</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Cover</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Thomas</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/0471200611</idno>
+		<imprint>
+			<date type="published" when="1991">1991</date>
+			<publisher>Wiley-Interscience</publisher>
+			<pubPlace>New York, NY</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Function of the thalamic reticular complex: the searchlight hypothesis</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Crick</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.81.14.4586</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U.S.A</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page" from="4586" to="4590" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Constraints on cortical and thalamic projections: the no-strong-loops hypothesis</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Crick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Koch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">391</biblScope>
+			<biblScope unit="page" from="245" to="250" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Attention to stimulus features shifts spectral tuning of V4 neurons during natural vision</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>David</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hayden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mazer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gallant</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2008.07.001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="509" to="521" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Neural mechanisms of selective visual attention</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Duncan</surname></persName>
+		</author>
+		<idno type="DOI">10.1146/annurev.ne.18.030195.001205</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="193" to="222" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Selective attention and the organization of visual information</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Duncan</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/0096-3445.113.4.501</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Exp. Psychol. Gen</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="501" to="517" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title level="m" type="main">Cooperating Brain Systems in Selective Perception and Action</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Duncan</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+			<publisher>Attention and Performance XVI</publisher>
+			<pubPlace>Cambridge, MA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Visual search and stimulus similarity</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Duncan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Humphreys</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/0033-295X.96.3.433</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol. Rev</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page">433</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Visual search: a retrospective</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Eckstein</surname></persName>
+		</author>
+		<idno type="DOI">10.1167/11.5.14</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vis</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">14</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Statistical decision theory to relate neurons to behavior in the study of covert visual attention</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Eckstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Peterson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">T</forename><surname>Pham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Droll</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.visres.2008.12.008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vis. Res</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="1097" to="1128" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Salience, relevance, and firing: a priority map for target selection</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Fecteau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Munoz</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tics.2006.06.011</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Cogn. Sci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="382" to="390" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">of oscillatory neuronal synchronization by selective visual attention</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fries</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Rorie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1055465</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="page" from="1560" to="1563" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">The representation of visual salience in monkey parietal cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Gottlieb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kusunoki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Goldberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/35135</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">391</biblScope>
+			<biblScope unit="page" from="481" to="484" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">State dependent activity in monkey visual cortex. single cell activity in v1 and v4 on visual tasks</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Haenny</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Schiller</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF00247570</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Exp. Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page" from="245" to="259" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Eye movements in natural behavior</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hayhoe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ballard</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tics.2005.02.009</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Cogn. Sci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="188" to="194" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Attentional resolution and the locus of visual awareness</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Intriligator</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/383334a0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">383</biblScope>
+			<biblScope unit="page" from="334" to="337" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Task-related modulation of visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Huk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="3525" to="3536" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Feature attention evokes task-specific pattern selectivity in V4 neurons</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Ipata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Gee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Goldberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1215402109</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U.S.A</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="16778" to="16785" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Computational modeling of visual attention</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Itti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Koch</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/35058500</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="194" to="203" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Attention improves encoding of taskrelevant features in the human visual cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Jehee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Brady</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tong</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.6153-09.2011</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="8210" to="8219" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<monogr>
+		<title level="m" type="main">The Principles of Psychology</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>James</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<publisher>Digireads.com Publishing</publisher>
+			<pubPlace>New York, NY</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Optimal representation of sensory information by neural populations</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jazayeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Movshon</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn1691</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="690" to="696" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Visual attention: insights from brain imaging</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kanwisher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wojciulik</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/35039043</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="91" to="100" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Increased activity in human visual cortex during directed attention in the absence of visual stimulation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kastner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Pinsk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>De Weerd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Ungerleider</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0896-6273(00</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="80734" to="80735" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Shifts in selective visual attention: towards the underlying neural circuitry</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ullman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hum. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="219" to="227" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Eye movements: the past 25 years</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kowler</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.visres.2010.12.014</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="1457" to="1483" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Attention activates winner-take-all competition among visual filters</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Itti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Braun</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/7286</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="375" to="381" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">How spatial and feature-based attention affect the gain and tuning of population responses</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carrasco</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.visres.2008.05.025</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="1194" to="1204" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Attention alters the appearance of motion coherence</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fuller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carrasco</surname></persName>
+		</author>
+		<idno type="DOI">10.3758/BF03213931</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Psychon. Bull. Rev</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1091" to="1096" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">External noise distinguishes attention mechanisms</title>
+		<author>
+			<persName><forename type="first">Z.-L</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Dosher</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0042-6989(97)00273-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="1183" to="1198" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Neural mechanisms of spatial selective attention in areas v1, v2, and v4 of macaque visual cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Luck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chelazzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Hillyard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="24" to="42" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Attention and awareness in stage magic: turning tricks into research</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Macknik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Randi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Robbins</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Teller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Thompson</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nrn2473</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="871" to="879" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Involvement of striate and extrastriate visual cortical areas in spatial attention</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Martinez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Anllo-Vento</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Sereno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">R</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Buxton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Dubowitz</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/7274</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="364" to="369" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Attentional modulation strength in cortical area mt depends on stimulus contrast</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Martinez-Trujillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Treue</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0896-6273(02)00778-X</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="365" to="370" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Feature-based attention increases the selectivity of population responses in primate visual cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Martinez-Trujillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Treue</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cub.2004.04.028</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="744" to="751" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Feature-based attention in visual cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Maunsell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Treue</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tins.2006.04.001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="317" to="322" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Effects of attention on orientationtuning functions of single neurons in macaque cortical area v4</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Mcadams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="431" to="441" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Microstimulation of the frontal eye field and its effects on covert spatial attention</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fallah</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.00741.2002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="152" to="162" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Selective attention gates visual processing in the extrastriate cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Moran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.4023713</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">229</biblScope>
+			<biblScope unit="page" from="782" to="784" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Focal attention produces spatially selective processing in visual cortical areas v1, v2, and v4 in the presence of competing stimuli</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Motter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="909" to="919" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Movement of neural activity on the superior colliculus motor map during gaze shifts</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Munoz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pelisson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Guitton</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.2003221</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">251</biblScope>
+			<biblScope unit="page" from="1358" to="1360" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Situating visual search</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nakayama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Martini</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.visres.2010.09.003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="1526" to="1537" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Search goal tunes visual features optimally</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Navalpakkam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Itti</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2007.01.018</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="605" to="617" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">A simplex method for function minimization</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Nelder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mead</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comp. J</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="308" to="313" />
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Attention modulates responses in the human lateral geniculate nucleus</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>O'connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fukui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pinsk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kastner</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn957</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1203" to="1209" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Voluntary attention modulates fMRI activity in human MT-MST</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>O'craven</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Rosen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">K</forename><surname>Kwong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Treisman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Savoy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="591" to="598" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Attention and the detection of signals</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Posner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Snyder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Davidson</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/0096-3445.109.2.160</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Exp. Psychol</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="160" to="174" />
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Narrow versus wide tuning curves: what&apos;s best for a population code?</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Denève</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-C</forename><surname>Ducom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/089976699300016818</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="85" to="90" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Exogenously cued attention triggers competitive selection of surfaces</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Alborzian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Stoner</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0042-6989(02)00403-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="59" to="66" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Attention increases sensitivity of v4 neurons</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pasternak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0896-6273(00)81206-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="703" to="714" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">The normalization model of attention</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2009.01.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="168" to="185" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">Object-based attention in the primary visual cortex of the macaque monkey</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Roelfsema</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">A</forename><surname>Lamme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Spekreijse</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/26475</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">395</biblScope>
+			<biblScope unit="page" from="376" to="381" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">Global effects of featurebased attention in human visual cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Saenz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Buracas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Boynton</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn876</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="631" to="632" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Global feature-based attention for motion and color</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Saenz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Buracas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Boynton</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0042-6989(02)00595-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="629" to="637" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Spatial attention improves the quality of population codes in human visual cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Saproo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Serences</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.00369.2010</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="885" to="895" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Eye movements and perception: a selective review</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schütz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Braun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gegenfurtner</surname></persName>
+		</author>
+		<idno type="DOI">10.1167/11.5.9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vis</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="1" to="30" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title level="a" type="main">Optimal deployment of attentional gain during fine discriminations</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scolari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Byers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Serences</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.5558-11.2012</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="7723" to="7733" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title level="a" type="main">Adaptive allocation of attentional gain</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scolari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Serences</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.5642-08.2009</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="11933" to="11942" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<analytic>
+		<title level="a" type="main">Basing perceptual decisions on the most informative sensory neurons</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scolari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Serences</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.00273.2010</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="2266" to="2273" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<analytic>
+		<title level="a" type="main">Feature-based attentional modulations in the absence of direct visual stimulation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Serences</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Boynton</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2007.06.015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="301" to="312" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">Tuning curve sharpening for orientation selectivity: coding efficiency and the impact of correlations</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Seriès</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn1321</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1129" to="1135" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title level="a" type="main">Cross-feature spread of global attentional modulation in human area mt+</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Sohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Chong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">V</forename><surname>Papathomas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Vidnyánszky</surname></persName>
+		</author>
+		<idno type="DOI">10.1097/01.wnr.0000174059.57144.62</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroreport</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1389" to="1393" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<title level="a" type="main">Increased attention enhances both behavioral and neuronal performance</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Spitzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Moran</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/sci-ence.3353728</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">240</biblScope>
+			<biblScope unit="page" from="338" to="340" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">Selective attention and audiovisual integration: is attending to both modalities a prerequisite for early integration?</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Talsma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Doty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Woldorff</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cercor/bhk016</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb. Cortex</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="679" to="690" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<analytic>
+		<title level="a" type="main">Eye guidance in natural vision: reinterpreting salience</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Tatler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hayhoe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Land</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ballard</surname></persName>
+		</author>
+		<idno type="DOI">10.1167/11.5.5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vis</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="1" to="23" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<analytic>
+		<title level="a" type="main">A feature integration theory of attention</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Treisman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gelade</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0010-0285(80)90005-5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cogn. Psychol</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="97" to="136" />
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<analytic>
+		<title level="a" type="main">Attentional modulation of visual motion processing in cortical areas mt and mst</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Treue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/382539a0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">382</biblScope>
+			<biblScope unit="page" from="539" to="541" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<analytic>
+		<title level="a" type="main">Feature-based attention influences motion processing gain in macaque visual cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Treue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C M</forename><surname>Trujillo</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/21176</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">399</biblScope>
+			<biblScope unit="page" from="575" to="579" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<analytic>
+		<title level="a" type="main">On the relative complexity of active vs passive visual-search</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Tsotsos</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF00128132</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Comp. Vis</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="127" to="141" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<analytic>
+		<title level="a" type="main">Visual search and attention: a signal detection theory approach</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Verghese</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0896-6273(01)00392-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="523" to="535" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<analytic>
+		<title level="a" type="main">Attention selects informative neural populations in human v1</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Verghese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Wade</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.1174-12.2012</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="16379" to="16390" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<analytic>
+		<title level="a" type="main">Optimal neural tuning curves for arbitrary stimulus distributions: discrimax, infomax and minimum L p Loss</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Stocker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Lee</surname></persName>
+		</author>
+		<ptr target="http://books.nips.cc/papers/files/nips25/NIPS2012_1077.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="2177" to="2185" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b99">
+	<analytic>
+		<title level="a" type="main">Attention-regulated activity in human primary visual cortex</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Watanabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sasaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Miyauchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Putz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Fujimaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nielsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="2218" to="2221" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b100">
+	<analytic>
+		<title level="a" type="main">Effects of spatial attention on contrast response functions in macaque area V4</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Williford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Maunsell</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.01207.2005</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="40" to="54" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b101">
+	<analytic>
+		<title level="a" type="main">Guided search: an alternative to the feature integration model of visual search</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Wolfe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Cave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Franzel</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/0096-1523.15.3.419</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Exp. Psychol. Hum. Percept. Perform</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="4" to="433" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b102">
+	<analytic>
+		<title level="a" type="main">Dynamic shifts of visual receptive fields in cortical area MT by spatial attention</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Womelsdorf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Anton-Erxleben</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pieper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Treue</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn1748</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1156" to="1160" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b103">
+	<analytic>
+		<title level="a" type="main">Receptive field shift and shrinkage in macaque middle temporal area through attentional gain modulation</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Womelsdorf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Anton-Erxleben</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Treue</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.4030-07.2008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="8934" to="8944" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b104">
+	<analytic>
+		<title level="a" type="main">The role of neuronal synchronization in selective attention</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Womelsdorf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fries</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.conb.2007.02.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="154" to="160" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b105">
+	<analytic>
+		<title level="a" type="main">Modulation of neuronal interactions through neuronal synchronization</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Womelsdorf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-M</forename><surname>Schoffelen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Oostenveld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Singer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1139597</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">316</biblScope>
+			<biblScope unit="page" from="1609" to="1612" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b106">
+	<monogr>
+		<title level="m" type="main">Eye Movements and Vision</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yarbus</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-1-4899-5379-7</idno>
+		<imprint>
+			<date type="published" when="1967">1967</date>
+			<publisher>Plenum Press</publisher>
+			<pubPlace>New York, NY</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b107">
+	<analytic>
+		<title level="a" type="main">Attention improves or impairs visual performance by enhancing spatial resolution</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yeshurun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carrasco</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/23936</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">396</biblScope>
+			<biblScope unit="page" from="72" to="75" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b108">
+	<analytic>
+		<title level="a" type="main">Neuronal tuning: to sharpen or broaden?</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Sejnowski</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/089976699300016809</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="75" to="84" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b109">
+	<analytic>
+		<title level="a" type="main">Object decoding with attention in inferior temporal cortex</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Meyers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">P</forename><surname>Bichot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Serre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Poggio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1100999108</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U.S.A</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="8850" to="8855" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,2406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The form and function of channelrhodopsin</title>
+				<funder>
+					<orgName type="full">Deutsche Forschungsgemeinschaft, European Research Council</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Hertie Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">NOMIS Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">DARPA</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">National Institutes of Health</orgName>
+					<orgName type="abbreviated">NIH</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Else Kroner Fresenius Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">National Science Foundation</orgName>
+					<orgName type="abbreviated">NSF</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Karl</forename><surname>Deisseroth</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Bioengineering</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Psychiatry and Behavioral Sciences</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Peter</forename><surname>Hegemann</surname></persName>
+							<email>hegemann@rz.hu-berlin.de</email>
+							<affiliation key="aff3">
+								<orgName type="department">Institute for Biology</orgName>
+								<orgName type="institution">Humboldt Universität zu Berlin</orgName>
+								<address>
+									<postCode>D-10115</postCode>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Experimental Biophysics</orgName>
+								<orgName type="institution">Humboldt Universität zu Berlin</orgName>
+								<address>
+									<postCode>D-10115</postCode>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The form and function of channelrhodopsin</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">013951B6EC9C456512D3074E71C191EF</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Channelrhodopsins are light-gated ion channels that, via regulation of flagellar function, enable single-celled motile algae to seek ambient light conditions suitable for photosynthesis and survival.</s><s>These plant behavioral responses were initially investigated more than 150 years ago.</s><s>Recently, major principles of function for light-gated ion channels have been elucidated by creating channelrhodopsins with kinetics that are accelerated or slowed over orders of magnitude, by discovering and designing channelrhodopsins with altered spectral properties, by solving the high-resolution channelrhodopsin crystal structure, and by structural model-guided redesign of channelrhodopsins for altered ion selectivity.</s><s>Each of these discoveries not only revealed basic principles governing the operation of light-gated ion channels, but also enabled the creation of new proteins for illuminating, via optogenetics, the fundamentals of brain function.</s></p><p><s>A light-gated ion pore * Corresponding</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>(Top) Left: Inner workings of channelrhodopsin.</s><s>Right: New photon-spike transduction modes arising from structure-guided redesign.</s><s>(Bottom) Discovering the causal underpinnings of depression-related symptomatology.</s><s>Brain region-specific activity dynamics of the mammalian dopamine neuron-driven reward state (left) are suppressed by the prefrontal cortex (right) as shown, using the second and third photon-spike transduction modes.</s></p><p><s>The study of neural circuitry underlying adaptive and maladaptive animal behavior has become intertwined with the investigation of algae-derived light-gated ion channels <ref type="bibr" target="#b0">(1,</ref><ref type="bibr" target="#b1">2)</ref>.</s><s>Each of these two fields has unexpectedly, profoundly advanced the other, culminating in mutually illuminating discoveries <ref type="bibr" target="#b2">(3)</ref>.</s><s>Curiosity regarding the nature and operation of these unique channels, combined with a long-standing impetus to bring precise cellular-resolution causality to basic and clinical neuroscience, together have resulted in the elucidation both of diverse fundamental processes in neuroscience [reviewed in <ref type="bibr" target="#b2">(3)</ref>] and of underlying structural and functional mechanisms within the algae proteins themselves (explored here).</s></p><p><s>The natural role of channelrhodopsins (ChRs) in motile algae involves coupling irradiance information from ambient light to flagellar motion, allowing the organism to seek light optimal for photosynthesis and survival.</s><s>ChR signaling must be fast enough to implement meaningful coupling to the flagella during helical swimming of the alga with its typical 2-Hz rotation, which continuously alters eye position relative to direction of incident light <ref type="bibr" target="#b3">(4)</ref>.</s><s>Here, we explore how studies over the past 10 years have elucidated the atomic-scale protein structural underpinnings of this single polypeptide-mediated fast transduction of visiblewavelength photons into selective transmembrane ion flow.</s><s>We describe how, within these compact proteins, even single amino acids play multiple roles in light-gated ion channel function, including key processes such as activation/deactivation gating, light adaptation, color specificity, and ion selectivity (Fig. <ref type="figure" target="#fig_0">1</ref>).</s><s>In doing so, we bring together structural and functional insights, consider general principles of selective ion channel design and evolution (subject to biophysical constraints that the light-activated ion-conducting pore satisfies), and highlight how the basic discovery process of designing and creating new classes of lightgated ion channels not only provided fundamental insight into channelrhodopsin pore function, but also enabled the discovery of principles underlying nervous system function and neuropsychiatric disease.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Deep roots in botany</head><p><s>The channelrhodopsin story begins at the Neva River in Russia nearly 150 years ago, where the famed 19th-century botanist Andrei Sergeyevich Faminzin studied motile microalgae (Fig. <ref type="figure" target="#fig_1">2, A</ref> and<ref type="figure">B</ref>).</s><s>Faminzin provided the first comprehensive descriptions of single-celled motile algae moving toward or away from light <ref type="bibr" target="#b4">(5)</ref>.</s><s>Despite intensive study over the next century of behavioral ecology among algal species, and of subcellular light detection structures that algae use to modulate flagellar beating (Fig. <ref type="figure" target="#fig_1">2C</ref>, Chlamydomonas reinhardtii), the photoreceptor and molecular phototransduction mechanisms remained mysterious.</s><s>Not until the late 20th century were light-evoked rhodopsin-type currents in Chlamydomonas-type chlorophyceae <ref type="bibr" target="#b5">(6,</ref><ref type="bibr" target="#b6">7)</ref>, and the broader family of microbial rhodopsintype ion conductance regulators, detected <ref type="bibr" target="#b0">(1,</ref><ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b8">9)</ref>.</s></p><p><s>In 1971, evidence for microbial retinal-binding membrane proteins was obtained, initially the proton pumping-type bacteriorhodopsin within its native archaeal system (Halobacterium salinarum) <ref type="bibr" target="#b7">(8)</ref>.</s><s>Purified bacteriorhodopsin-mediated light-activated transmembrane pump currents were later demonstrated in artificial black lipid membrane preparations <ref type="bibr" target="#b8">(9)</ref>.</s><s>More than 40 years of study revealed that rhodopsins produced by microbial organisms include several subclasses of single gene-single protein ion transporters.</s><s>All are seven-transmembrane (7TM) retinal-binding proteins encoded by single opsin genes <ref type="bibr" target="#b0">(1,</ref><ref type="bibr" target="#b1">2)</ref>.</s><s>Unlike rhodopsins of the vertebrate retina, these microbial proteins bind all-trans retinal (ATR, rather than cis isomers) in the dark/inactive state (Fig. <ref type="figure" target="#fig_2">3</ref>).</s><s>Rather than triggering an effector cascade to elicit ion flux (like vertebrate rhodopsins), light sensation and ion flow regulation are implemented by a single polypeptide chain <ref type="bibr" target="#b0">(1,</ref><ref type="bibr" target="#b1">2)</ref>.</s></p><p><s>The photocurrents of motile Chlorophyceae are mediated by the ChR subtype of this family; the prototype ChRs are ChR1 and ChR2 of Chlamydomonas.</s><s>These algal rhodopsins were discovered via action spectroscopy of phototaxis/photoelectric responses and via restoration of photobehavior in blind mutant algae by supplementation with retinoids <ref type="bibr" target="#b6">(7,</ref><ref type="bibr" target="#b9">10)</ref>.</s><s>Characterization of algal photocurrents led to the suggestion that light-sensing and ionconducting units derived from a single protein (11) conducting 10 to 100 charges per photocycle [initial 300-fS estimation assuming 10,000 channels in the algal eyespot <ref type="bibr" target="#b6">(7)</ref> was quite consistent with 100-fS unitary conductances inferred by noise analysis years later for heterologously expressed ChR2].</s><s>After photoreceptor-like sequences were discovered in the Kazusa cDNA database, heterologous expression demonstrated passive transmembrane currents down electrochemical gradients (revealing channel-like behavior) <ref type="bibr" target="#b11">(12,</ref><ref type="bibr" target="#b12">13)</ref>.</s></p><p><s>ChRs are larger than any previously identified rhodopsin, but only the N-terminal 40% [including all transmembrane domains with both light sensor and ion channel functionality <ref type="bibr" target="#b11">(12)</ref>] is needed for optogenetics <ref type="bibr" target="#b13">(14)</ref>.</s><s>As confirmed by crystal structure determination <ref type="bibr" target="#b14">(15)</ref>, the ATR chromophore appears to have inherited positioning within the retinal binding pocket (RBP) and covalent binding to the protein backbone (via lysine; Fig. <ref type="figure" target="#fig_0">1</ref>) of its presumed rhodopsin-pump evolutionary forebears <ref type="bibr" target="#b0">(1,</ref><ref type="bibr" target="#b1">2)</ref>.</s></p><p><s>Studies of motile photosynthetic microbes have continued along several directions.</s><s>Not all such organisms use ChRs; light-activated nucleotide cyclases with flavin-based light sensors have been found in phototactic Euglenophyceae <ref type="bibr" target="#b15">(16)</ref>.</s><s>In Chlamydomonas, structural and behavioral work is ongoing; ChRs have been localized to the eyespot (photosensitive organelle) overlaying part of the plasma membrane <ref type="bibr" target="#b16">(17)</ref><ref type="bibr" target="#b17">(18)</ref><ref type="bibr" target="#b18">(19)</ref> (Fig. <ref type="figure" target="#fig_1">2C</ref>), and light modulation of flagellar beating has recently been recorded with unprecedented precision <ref type="bibr" target="#b19">(20)</ref> as it occurs via flagellar action potentials (upon large and abrupt changes in light intensity) or by gradual modulation of membrane voltage.</s><s>As detailed next, studies of these behaving plants have also profoundly advanced the understanding of behaving animals <ref type="bibr" target="#b2">(3,</ref><ref type="bibr" target="#b13">14)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Impetus from neuroscience and basic principles of optogenetics</head><p><s>Francis Crick was the first to suggest that light might be a useful cell type-targeted neural control modality for the investigation of nervous system function, but did not see how to achieve this, terming the possibility "far-fetched" <ref type="bibr" target="#b20">(21)</ref>.</s><s>Over the decade beginning in 2005, light-activated proton or Cl -pumps (bacteriorhodopsins or halorhodopsins) and lightactivated cation or Cl -channels (ChRs) were all discovered to serve as high-speed optically activated regulators of action potential firing when genetically targeted to neurons of metazoa <ref type="bibr" target="#b13">(14)</ref>.</s><s>Together with several additional (and necessary) technological innovations, this enabled precisely what Crick had sought <ref type="bibr" target="#b2">(3,</ref><ref type="bibr" target="#b13">14)</ref>.</s></p><p><s>Targeted optical control of single neurons had been achieved earlier with spatially guided lasers but not broadly applied <ref type="bibr" target="#b21">(22,</ref><ref type="bibr" target="#b22">23)</ref>.</s><s>Early genetically guided efforts were elegant but limited as well, in part because their multicomponent design required multiple genes, or both exogenous chemicals and effector genes, to couple the chromophore to neuronal activity <ref type="bibr" target="#b23">(24)</ref><ref type="bibr" target="#b24">(25)</ref><ref type="bibr" target="#b25">(26)</ref>.</s><s>Reports of the feasibility of a single-component microbial opsin approach to optical control of spiking were initially published only in transparent or spatially superficial systems (e.g., cultured neurons, isolated retina preparations, nervous system slices, and small invertebrates) <ref type="bibr" target="#b26">(27)</ref><ref type="bibr" target="#b27">(28)</ref><ref type="bibr" target="#b28">(29)</ref><ref type="bibr" target="#b29">(30)</ref><ref type="bibr" target="#b30">(31)</ref>. Justified skepticism remained for many years regarding the potential for general utility across intact neural systems.</s></p><p><s>These microbial opsin genes constitute only one feature of what became the optogenetic approach.</s><s>Two other key developments-the fiberoptic neural interface and versatile targeting methodology (32-37)-would ultimately enable generalizable millisecondprecision genetically targeted neuronal control with light throughout the brain during behavior <ref type="bibr" target="#b2">(3,</ref><ref type="bibr" target="#b13">14)</ref>.</s><s>By 2007, optogenetic control of defined spiking patterns in specified neurons deep in the hypothalamus of freely moving adult mice had been achieved, along with resulting behavioral state transitions <ref type="bibr" target="#b32">(33)</ref>.</s><s>Optogenetics had attained an early form of the fundamental methodology that neuroscientists use today: expression of microbial opsins with cell type (and even projection type) specificity and behavioral control potency by means of high-titer viral gene-targeting vectors and light targeting through implanted fiber optics <ref type="bibr" target="#b33">(34)</ref>.</s><s>By 2009, generalizable gene-targeting strategies had been developed and shown to be suitable for mammalian behavioral control <ref type="bibr" target="#b34">(35)</ref>.</s><s>From across the global scientific community, many thousands of discoveries have resulted, revealing the otherwise inaccessible cell-specific neural activity building blocks of behavior <ref type="bibr" target="#b2">(3,</ref><ref type="bibr" target="#b13">14)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Structural models and pore-gating kinetics</head><p><s>The light-activated membrane pore of ChRs is unique.</s><s>Within the ChR family, however, many variants exist.</s><s>ChR is a highly flexible protein heavily modified in action spectrum, photocycle kinetics, and ion selectivity by scientists over the past dozen years, but much more so by nature on the billion-year time scale.</s></p><p><s>There was initial confusion regarding the structure of the light-activated pore.</s><s>Early characterization of ChRs had elucidated properties such as nonspecific cation selectivity (permeability to H + ≫ Na + &gt; K + ≫ Ca 2+ with inward rectification) <ref type="bibr" target="#b11">(12,</ref><ref type="bibr" target="#b12">13)</ref>.</s><s>But it was unclear where the pore would be localized, except for perhaps a contribution from helix 2, with its prominent intramembranous glutamate residues.</s><s>In the quest to find the light-gated pore, comparisons with microbial light-driven pump structures were of little help-for example, helices 1 and 2 show very low homology with presumptive pump counterpartsor even misleading [low-resolution cryo-electron microscopy (cryo-EM) had led to predictions that the pore would reside at the interface of two ChR monomers <ref type="bibr" target="#b35">(36)</ref>-which turned out to not be the case <ref type="bibr" target="#b14">(15)</ref>].</s><s>This level of uncertainty stalled pore engineering for design and creation of novel ion-selective ChRs.</s><s>Many other functions, including the key kinetic properties of activation and inactivation (Fig. <ref type="figure" target="#fig_2">3</ref>), nonetheless yielded to construction of structural models and detailed molecular design before the three-dimensional structure was solved.</s></p><p><s>Gradual inactivation of ChR photocurrents in strong light (Fig. <ref type="figure" target="#fig_2">3</ref>) appears useful for algae in coping with high light intensities but poses challenges for neuroscience.</s><s>This inactivation manifests as a probabilistic alternative photoisomerization around the ATR C15=NH bond <ref type="bibr" target="#b36">(37)</ref>, corresponding to transition from a syn-cycle to an anti-cycle (Fig. <ref type="figure" target="#fig_2">3</ref>) as in animal rhodopsins during transitions from Meta-I to Meta-III <ref type="bibr" target="#b37">(38)</ref> or in bacteriorhodopsin during dark adaptation <ref type="bibr" target="#b38">(39)</ref>.</s><s>The syn-cycle open state is less permeable to protons and cations (versus the anti-cycle), contributing to photocurrent decline under prolonged illumination (Fig. <ref type="figure" target="#fig_2">3</ref>) <ref type="bibr" target="#b39">(40)</ref>.</s><s>Under dark adaptation, the ATR exists as all-trans/15-anti, but shortly after illumination a mixture of two similar but distinguishable states appears (all-trans/15-anti and 13-cis/15-syn), leading to conducting states in 13-cis/15-anti (O1) and 13-trans/15-syn (O2) configurations, respectively <ref type="bibr" target="#b36">(37,</ref><ref type="bibr" target="#b40">41)</ref>.</s><s>The O1/O2 ratio also depends on membrane voltage and pH gradient, and differs substantially among ChR variants, contributing to diversity of photocurrent properties <ref type="bibr" target="#b0">(1,</ref><ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b41">42)</ref>.</s></p><p><s>The fast time constant for actuation of pump rhodopsins known from earlier work was concordant with later-observed ChR activation in oocyte membrane patches (τ on &lt; 250 μs) <ref type="bibr" target="#b12">(13)</ref>, and elucidation of molecular principles governing pore kinetics became a major goal, not only to obtain insight into the mechanics of pore operation but also to achieve optogenetic control over both short and long time scales of behavior and physiology.</s><s>Retinal isomerization appears to cause rapid rearrangement of central gate residues and gate opening on the nanosecond time scale; helix hydration via water influx proceeds within 10 to 100 μs, which (in conjunction with helix 2 movement) opens an inner gate, allowing formation of the cation-conducting pore (43, 44) (Fig. <ref type="figure" target="#fig_0">1</ref>).</s><s>Under typical conditions, the submillisecond opening time constant (τ on ) of the ChR pore is fast enough not to influence or limit neuroscience applications.</s><s>In contrast, photocurrent decay after light-off (τ off ) is of great functional consequence in neuroscience and is broadly tunable.</s><s>Pumps and channels will cease to enter the photocycle upon cessation of light, whereas observed photocurrents can outlast light because already activated proteins are completing their photocycle.</s><s>The τ off for wildtype ChR2 (~10 ms) is impressively fast for a plant, but is slow for fast-spiking mammalian neurons and contributes to impaired fidelity in optogenetics <ref type="bibr" target="#b44">(45)</ref>.</s><s>This parameter [which in many ChRs further slows upon membrane depolarization <ref type="bibr" target="#b41">(42,</ref><ref type="bibr" target="#b45">46)</ref>] elicits prolonged post-spike depolarization lasting tens of milliseconds, counteracting typical millisecond-scale repolarizations that terminate natural spikes; artifactual doublets rather than precise single spikes can result <ref type="bibr" target="#b41">(42,</ref><ref type="bibr" target="#b44">45)</ref>, and spiking can even fail within higherfrequency spike trains (because repolarization de-inactivates native voltage-dependent channels required for subsequent spiking) <ref type="bibr" target="#b41">(42,</ref><ref type="bibr" target="#b44">45)</ref>.</s><s>These fidelity issues derived from long ChR τ off values (45) thus were addressable with redesigned shorter τ off once key molecular principles had been determined.</s></p><p><s>Mutations at Glu 123 of ChR2, one of the negatively charged "counterion" residues stabilizing the obligate intramembranous positive charge of the protonated retinal Schiff base (RSBH + ; Fig. <ref type="figure" target="#fig_0">1</ref> and Fig. <ref type="figure" target="#fig_3">4, A</ref> and<ref type="figure">B</ref>), reduce τ off to 4 ms at -100 mV and also reduce voltage-dependent slowing, thus accelerating pore closure during spiking <ref type="bibr" target="#b44">(45)</ref>.</s><s>These "ChETA" variants (45) exhibited the drawback of moderately reduced light sensitivity due to reduced photoisomerization efficiency and charge transfer per photon <ref type="bibr" target="#b44">(45)</ref>.</s><s>However, accelerated deactivation addressed the key parameter limiting neuroscience application to fast-spiking cells and enabled firing at 200 Hz or more, along with reduced numbers of extra or missed spikes (42, 45) (Fig. <ref type="figure" target="#fig_3">4B</ref>).</s><s>These high-speed variants are often used when precise control and temporal stationarity is desired, particularly in fast-spiking cells [involved in sleep, fear, and feeding <ref type="bibr" target="#b45">(46)</ref><ref type="bibr" target="#b46">(47)</ref><ref type="bibr" target="#b47">(48)</ref><ref type="bibr" target="#b48">(49)</ref>].</s><s>Further engineered or naturally occurring ChRs were later identified that also exhibited fast deactivation and/or improved temporal stationarity [e.g., ChIEF, Chronos, and other variants; reviewed here <ref type="bibr" target="#b13">(14,</ref><ref type="bibr" target="#b40">41,</ref><ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b49">50,</ref><ref type="bibr" target="#b50">51)</ref>], and the fast-ChR toolkit grew further as ChETA and ChIEF modifications proved portable to other ChRs, including designer variants with larger photocurrents <ref type="bibr" target="#b50">(51)</ref> and redshifted spectra (discussed below).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Bistable modes of pore operation</head><p><s>What about extending rather than shortening photocycles?</s><s>In a surprising discovery, slowing τ off was even more useful than accelerating τ off in achieving kinetic pore bistability <ref type="bibr" target="#b51">(52)</ref>.</s><s>These modified ChRs did not require continuous light for continuous function, but instead were bistable as a result of precisely reversible photocycle arrest (Fig. <ref type="figure" target="#fig_3">4F</ref>) <ref type="bibr" target="#b51">(52)</ref>.</s><s>Similarly arresting pump photocycles would mean termination of photocurrent, but for channels, precision kinetic locking into an open-pore state enables stable current for tens of minutes after light-off <ref type="bibr" target="#b51">(52)</ref>.</s><s>Modification of helix 3-helix 4 interaction at the DC pair (Cys 128 -Asp 156 in ChR2; Fig. <ref type="figure" target="#fig_3">4, E</ref> and<ref type="figure">F</ref>) extends open-state lifetimes by up to 6 log units and reduces inactivation <ref type="bibr" target="#b51">(52)</ref><ref type="bibr" target="#b52">(53)</ref><ref type="bibr" target="#b53">(54)</ref>.</s><s>Interestingly, redshifted light excitation of the resulting stable conducting state reconverts ATR back to the dark-state conformation, causing channel closure <ref type="bibr" target="#b51">(52)</ref>.</s><s>Thus, high temporal precision for both onset and offset is preserved, with intervening step-like performance stable enough to make continuous light unnecessary (Fig. <ref type="figure" target="#fig_3">4F</ref>); these variants were thus termed step-function opsins (SFOs) <ref type="bibr" target="#b51">(52)</ref>.</s></p><p><s>Several advantages accrue from application of SFOs to optogenetics: (i) Light need not be provided continuously.</s><s>The many-orders-of-magnitude reduction <ref type="bibr" target="#b41">(42,</ref><ref type="bibr" target="#b51">52)</ref> in energy delivered can eliminate any intense-light toxicity from long-term experiments.</s><s>(ii) If complex behaviors (e.g., large group social interactions) or experimental settings [e.g., naturalistic environments or magnetic resonance imaging (MRI) scanners] are incompatible with certain devices, cells can be stably modulated with a light pulse, followed by characterization of physiology or behavior over prolonged periods without light delivery hardware <ref type="bibr" target="#b53">(54)</ref>.</s><s>(iii) Continuous mild depolarization can simply favor excitability of targeted cells [rather than provide precise user-defined spikes <ref type="bibr" target="#b51">(52,</ref><ref type="bibr" target="#b53">54)</ref>], an approach often leveraged to maintain or enhance native rhythm/timing relationships <ref type="bibr" target="#b53">(54)</ref><ref type="bibr" target="#b54">(55)</ref><ref type="bibr" target="#b55">(56)</ref><ref type="bibr" target="#b56">(57)</ref><ref type="bibr" target="#b57">(58)</ref><ref type="bibr" target="#b58">(59)</ref><ref type="bibr" target="#b59">(60)</ref><ref type="bibr" target="#b60">(61)</ref>.</s><s>(iv) Cells expressing these bistable ChRs exhibit vastly greater light sensitivity <ref type="bibr" target="#b41">(42,</ref><ref type="bibr" target="#b51">(52)</ref><ref type="bibr" target="#b52">(53)</ref><ref type="bibr" target="#b53">(54)</ref> due to photon integration; physiologically relevant excitatory photocurrents of &gt;100 pA can be elicited with wild-type ChRs at safe expression levels using ~1 mW/mm 2 irradiance at the expressing neurons, but cells expressing the SFO ChR2-C128A/S variants (τ off up to three orders of magnitude longer) are 300 times as light-sensitive (52) for stationary photocurrents.</s><s>Because bistable channels are slow to close, photocurrent accumulates even with orders-of-magnitude weaker light.</s><s>Even further reduced energy delivery (over time and instantaneously), as well as greater tissue volumes recruited at a given light intensity in large-brained subjects, can result from the use of DC double mutations [the most stable SSFO (stabilized SFO) variant <ref type="bibr" target="#b53">(54)</ref> with τ off ≥ 30 min; Fig. <ref type="figure" target="#fig_4">5A</ref>].</s><s>This phenomenon has been leveraged to minimize heating (and heating artifacts) during optogenetic functional MRI (fMRI) (Fig. <ref type="figure" target="#fig_4">5B</ref>) <ref type="bibr" target="#b55">(56)</ref>.</s></p><p><s>Numerous applications leverage these SFO capabilities <ref type="bibr" target="#b53">(54)</ref><ref type="bibr" target="#b54">(55)</ref><ref type="bibr" target="#b55">(56)</ref><ref type="bibr" target="#b56">(57)</ref><ref type="bibr" target="#b57">(58)</ref><ref type="bibr" target="#b58">(59)</ref><ref type="bibr" target="#b59">(60)</ref><ref type="bibr" target="#b60">(61)</ref>.</s><s>Indeed, SFO mutations, like the ChETA/CHIEF mutations described above, are portable to certain other ChR backbones for new functionality.</s><s>For example, combined with His 134 → Arg (13), a mutation that increases photocurrents [as do Thr 159 → Cys (51), Thr 59 → Ser <ref type="bibr" target="#b61">(62)</ref>, and Thr 246 → Asn (62)], the SFO strategy creates two-photon illumination-recruited bistable ChRs (2PSFOs) <ref type="bibr" target="#b62">(63)</ref>.</s><s>Furthermore, when combined with Cl --conducting ChRs as discussed below, bistable inhibition results (Fig. <ref type="figure" target="#fig_3">4G</ref>) <ref type="bibr" target="#b61">(62,</ref><ref type="bibr" target="#b63">64)</ref>, with versatile utility [e.g., in studying pain circuitry <ref type="bibr" target="#b59">(60)</ref>].</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Spectral properties</head><p><s>Fast, efficient structural changes require tight protein-chromophore contact and thus RBP structural rigidity; such fast changes are important not only for kinetics, but also for spectral properties of ChR pore gating.</s><s>Absorption peaks for known ChRs span 440 to 590 nm <ref type="bibr" target="#b0">(1,</ref><ref type="bibr" target="#b40">41,</ref><ref type="bibr" target="#b49">50,</ref><ref type="bibr" target="#b64">65)</ref>, and 630-to 644-nm peaks are seen in certain other retinal-binding proteins <ref type="bibr" target="#b65">(66,</ref><ref type="bibr" target="#b66">67)</ref>.</s><s>Absorption spectra are determined by factors including RBP polarity, ATR planarity [in particular, coplanarity of the β-ionone ring C6=C7 bond with the polyene chain in the 6-s conformation <ref type="bibr" target="#b67">(68)</ref>], and connection of negatively charged RSBH counterions with longrange hydrogen-bonding networks (68-70) (Figs. <ref type="figure" target="#fig_0">1</ref> and<ref type="figure" target="#fig_3">4</ref>).</s></p><p><s>ChR spectra continue to drive basic and applied investigation.</s><s>Certain bands of lower-energy (red) light can penetrate somewhat more deeply and safely into biological tissue than blue light.</s><s>Combinatorial control is also enabled using two-color strategies <ref type="bibr" target="#b53">(54)</ref>; moreover, alloptical activity-guided/closed-loop experiments become more straightforward when redshifted control tools can be integrated with robust blue light-activated optical readouts <ref type="bibr" target="#b2">(3,</ref><ref type="bibr" target="#b49">50,</ref><ref type="bibr" target="#b70">71)</ref>.</s><s>But the extent to which RBP-level understanding from other redshifted rhodopsins (69) could drive insights into ChR itself, or into development of color-shifted optogenetic tools, was initially unclear.</s><s>Despite the recent emergence of additional RBP structural information from a color-shifted ChR <ref type="bibr" target="#b67">(68)</ref>, attempts over years in many laboratories to build and leverage structural models to engineer or evolve usefully redshifted (by ~100 nm) ChRs were unsuccessful, perhaps because of the predominance of multifactorial and long-range contributions to spectral properties evolved over hundreds of millions of years.</s></p><p><s>The first discovery (70) of a substantially redshifted ChR, VChR1, finally came in the alga Volvox carteri (via searching for opsins in U.S. Joint Genome Institute databases).</s><s>Initial characterization in culture <ref type="bibr" target="#b69">(70)</ref> revealed that a previously inaccessible window was now available, &gt;560 nm, where Chlamydomonas ChRs (peaking at ~470 to 490 nm) exhibit almost zero photocurrent.</s><s>Universally, ChRs (including VChR1 and all other ChRs identified or engineered since) retain robust responsivity in a short-wavelength/blue shoulder of the action spectrum (50) (~470 nm).</s><s>Persistent blue actuation appears to be an intrinsic property of the retinal polyene system [relating to activation of higher electronic state transitions beyond the lowest-energy transition available <ref type="bibr" target="#b70">(71)</ref>].</s><s>Although VChR1 photocurrents were small (&lt;100 pA) <ref type="bibr" target="#b69">(70)</ref>, several modifications in combination (Fig. <ref type="figure" target="#fig_0">1</ref>)including provision of membrane-trafficking/endoplasmic reticulum export motifs identified earlier for enabling halorhodopsin optogenetics <ref type="bibr" target="#b71">(72,</ref><ref type="bibr" target="#b72">73)</ref>, chimerization with ChR1 elements <ref type="bibr" target="#b73">(74)</ref>, and in some cases mutations reducing the blue shoulder and/or ChETA mutation <ref type="bibr" target="#b44">(45)</ref> -resulted in diverse members of the new C1V1 ChR family <ref type="bibr" target="#b53">(54)</ref>.</s><s>In 2011, C1V1 enabled the first red light-driven spiking (Fig. <ref type="figure" target="#fig_3">4D</ref>) <ref type="bibr" target="#b53">(54)</ref> as well as in vivo combinatorial optogenetics [two populations separably controlled with red and blue light <ref type="bibr" target="#b53">(54)</ref>], which allowed the longsought demonstration in mouse experiments a causal role for excitation-inhibition balance in governing gamma oscillations and social behavior <ref type="bibr" target="#b53">(54)</ref>.</s><s>Another application emerged with (i) the discovery of high responsivity of red light-driven opsins to two-photon illumination, enabling single-cell resolution optogenetics in brain tissue <ref type="bibr" target="#b62">(63)</ref>, and (ii) integration of red light-excited control with blue light-excited readout (via genetically encoded activity sensors such as GCaMP Ca 2+ reporters).</s><s>Enabling these in vivo all-optical play-in/read-out experiments <ref type="bibr" target="#b49">(50,</ref><ref type="bibr" target="#b74">(75)</ref><ref type="bibr" target="#b75">(76)</ref><ref type="bibr" target="#b76">(77)</ref><ref type="bibr" target="#b77">(78)</ref> has opened the door to tuning optogenetic control in order to match timing and amplitude of naturally occurring activity in the same circuit elements <ref type="bibr" target="#b2">(3,</ref><ref type="bibr" target="#b75">76)</ref>, and more broadly to keeping stimulation attuned to native dynamics and events in real time through closed-loop and activity-guided strategies <ref type="bibr" target="#b49">(50,</ref><ref type="bibr" target="#b73">(74)</ref><ref type="bibr" target="#b74">(75)</ref><ref type="bibr" target="#b75">(76)</ref><ref type="bibr" target="#b76">(77)</ref><ref type="bibr" target="#b77">(78)</ref>.</s><s>Many opsins are now available for redshifted excitation, including not just VChR1 and C1V1 but also the VChR1based ReaChR (79) as well as MChR1 (80), Chrimson <ref type="bibr" target="#b64">(65)</ref>, and bReaCHES (77) (with ChETA modifications for speed).</s><s>As with earlier insights into kinetics, the initial VChR backbones and C1V1 modifications provided not only insight into ChR structure-function relationships (Fig. <ref type="figure" target="#fig_3">4</ref>), but also new neuroscience functionality [for example, enabling discovery of the causal role of the medial prefrontal cortex (mPFC) in regulating midbrainnucleus accumbens interactions and reward-related behavior (56) (Fig. <ref type="figure" target="#fig_4">5</ref>)].</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>High-resolution crystal structure</head><p><s>Although the above innovations were enabled by ChR modeling without complete structural knowledge, major domains of discovery and design remained difficult to address without high-resolution information.</s><s>After many years and the creation of numerous constructs for expression and crystallization, in 2012 the 2.3 Å crystal structure was obtained for a truncated functional chimera between Chlamydomonas ChR1 and ChR2 (C1C2) <ref type="bibr" target="#b14">(15)</ref>.</s><s>This structure revealed many of the deepest mysteries of the channel, including its long-sought internal light-activated pore (Fig. <ref type="figure" target="#fig_0">1</ref>); as anticipated, questions were also raised and new ideas emerged.</s></p><p><s>Although the structure revealed a covalently linked dimer of 7TM proteins (associated by N termini and helices 3 and 4) <ref type="bibr" target="#b14">(15)</ref>, no pore was present at the interface <ref type="bibr" target="#b14">(15)</ref>, contrary to prior prediction <ref type="bibr" target="#b35">(36)</ref>.</s><s>Rather, monomers displayed internal pores formed from four of the seven transmembrane helices (TMs 1, 2, 3, and 7; Fig. <ref type="figure" target="#fig_0">1</ref>), with two tilted to create space for a partially water-filled polar channel with two closed-state pore gates requiring repositioning for creation of ion-conducting states.</s><s>Close to the intracellular membrane, the inner gate is formed by two highly conserved glutamates (E1 and E2; Fig. <ref type="figure" target="#fig_0">1</ref>), which interact with His 134 and His 265 , closing the channel to both water and ions in the dark.</s><s>Interestingly, this site is also a key determinant of cation/proton selectivity (severely impaired by E1/E2 or His 134 mutation).</s><s>The central gate [structurally separated from the inner by a water-deprived vestibule, as also supported by QM/MM (quantum mechanics/molecular mechanics) calculations (81) (Fig. <ref type="figure" target="#fig_0">1</ref>)] consists of Ser 63 , Asn 258 , and E3 of Fig. <ref type="figure" target="#fig_0">1</ref>, locking the protein from the extracellular bulk phase with respect to water/proton/cation flux and serving as a second selectivity filter even though separated from the surface (15) by 8 Å.</s></p><p><s>Other key insights included revelation of the RBP and exact side chain positioning defining the chromophore electrostatic environment <ref type="bibr" target="#b14">(15)</ref>.</s><s>RBP structure has numerous implications for understanding the channel, including gating regulation between conducting and nonconducting states, ion selectivity, and spectral properties.</s><s>ChR photocurrents exhibit a transient peak (I p ) decaying to stationary (I s ) under continuous illumination (Fig. <ref type="figure" target="#fig_2">3</ref>); for conducting states (O1, O2), most channels reside in O1 during I p , but under prolonged stimulation, low-conduction O2 accumulates and photocurrent decreases.</s><s>These transitions likely involve protonations and partial charge-localization shifts among chromophoreproximal residues, overlapping with potential targets for shifting spectral properties.</s></p><p><s>In natural and artificial ChRs with bathochromic (red-shifted) absorption, the RBP is made more polar near the RSBH β-ionone ring primarily by Gly 181 → Ser replacement (as in VChR1, ReaChR, and Chrimson), and/or Thr 159 → Cys (or Met), Leu 162 → Cys, and Phe 178 → Tyr replacements (ChR2 numbering, Fig. <ref type="figure" target="#fig_0">1</ref>), and/or by polarity reduction near the RSBH as in C1V1 TT (Fig. <ref type="figure" target="#fig_0">1</ref> and Fig. <ref type="figure" target="#fig_3">4, A</ref> and<ref type="figure">B</ref>).</s><s>In the C1C2 crystal structure "frozen" snapshot, counterions Glu 123 and Asp 253 are directly connected to the RSBH+ proton without a water bridge, but molecular dynamics (MD) calculations reveal an active site with highly dynamic sampling of hydrogen-bonding patterns, with and without water bridges, separated only by tiny energetic differences <ref type="bibr" target="#b80">(81)</ref>.</s><s>Red (lower-energy) photons suffice to induce deprotonation/isomerization in RBPs with high polarity near the β-ionone and low polarity at the RSBH [as positive charge shifts toward the ring <ref type="bibr" target="#b68">(69,</ref><ref type="bibr" target="#b69">70)</ref>; Figs. <ref type="figure" target="#fig_3">4</ref> and<ref type="figure" target="#fig_4">5</ref>].</s><s>Although this principle has now been demonstrated, color tuning is still challenging, because high polarity near the β-ionone may reduce retinal-binding affinity, whereas low polarity near the RSBH lowers Schiff-base pK a (favoring deprotonation), both of which could impair function.</s><s>The ChR pore complex engages in long-range coupling interactions from the RBP to distant residues (Fig. <ref type="figure" target="#fig_4">5</ref>); among other examples, substantial pH-dependent bathochromic color shifts were found to be associated with the presence of Glu 48 (using ChR2 numbering) at the N-terminus of TM1 in redshifted ChR1, PsChR1, VChR1, DChR1, and relatives (Fig. <ref type="figure" target="#fig_0">1</ref>).</s><s>Precise mechanisms, although not known, could involve long-range coupling or tilting of the flexible TM1; causality is supported by observations that Glu 48 → Gln inhibited pH dependence of red shift, whereas Glu 48 → Ala (corresponding to blue-responsive ChR2; Fig. <ref type="figure" target="#fig_0">1</ref>) instead stabilized the blue-absorbing form <ref type="bibr" target="#b81">(82,</ref><ref type="bibr" target="#b82">83)</ref>. Future advances in long-range molecular modeling methodology will build on these observations alongside current and emerging high-resolution structural and MD work.</s></p><p><s>The precise dynamical sequence of pore side chain repositioning will continue to serve as a subject of intense investigation and modeling.</s><s>RBP amino acid replacements are expected to change energy profiles of both the electronic ground and excited states, with consequences for dynamics (influencing, besides spectrum and photocycle kinetics, the efficiency of retinal isomerization as with Glu 123 and Cys 128 ).</s><s>Several new structures, including additional red-shifted ChRs, are likely to emerge that will add finer-grained details to this intriguing landscape.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Selectivity variants</head><p><s>ChR ion selectivity is important in understanding the behavioral ecology of motile algae <ref type="bibr" target="#b9">(10)</ref> and in achieving bidirectional impact on neuronal activity.</s><s>Nonselective cation flux elicits excitation in neural systems via membrane depolarization, whereas anion or K + selectivity typically provides inhibition by clamping membrane potentials below the spike-firing threshold and reducing membrane resistance.</s><s>Chlamydomonas ChRs naturally conduct cations, with modest inward rectification and cation species preference: Li + &gt;Na + &gt; K + &gt; Cs + ≫ Ca 2+ &gt;Mg 2+ <ref type="bibr" target="#b12">(13,</ref><ref type="bibr" target="#b39">40,</ref><ref type="bibr" target="#b82">83)</ref>.</s><s>Most ChRs are highly selective for protons, with P H +/P Na +~ 2 × 10 6 to 6 × 10 6 for ChR2 <ref type="bibr" target="#b12">(13,</ref><ref type="bibr" target="#b50">51)</ref>, comparable to that of highly selective mammalian proton channels (e.g., H + H v 1; P H +/P Na + ≥ 10 6 ) (84).</s><s>For proton selectivity in algal ChRs, this level of preference suffices <ref type="bibr" target="#b84">(85)</ref> because Na + becomes essentially irrelevant for freshwater algae in low-Na + environments.</s><s>However, in mammalian brains with ~130mMNa + at pH7.5, Na + becomes a dominant component, modulated by voltage-dependent competition among protons/Na + /K + and by weak Mg 2+ block of proton permeation <ref type="bibr" target="#b39">(40)</ref>.</s></p><p><s>The C1C2 structure (15) alone was necessary but not sufficient for achieving insight into selective permeation, which required not only a crystal structure but also subsequent detailed structure-guided mechanistic studies.</s><s>The magnitude of the mystery appeared even greater upon structure determination because few water molecules and no internally bound ions or high-affinity ion-binding sites were seen <ref type="bibr" target="#b14">(15)</ref>; moreover, the pore was large and disordered (relative to highly structured pores of Shaker and other K + channels) in the crystal (despite high-resolution refinement of the rigid RBP) <ref type="bibr" target="#b14">(15)</ref>, raising questions about the mechanism of cation conductance/selectivity.</s><s>Because proton conductances can involve proton transfer reactions along residues forming a biological "proton wire," candidate protonatable poreflanking residues were tested by replacement, with attention to five glutamates of helix 2 (E1 to E5, Fig. <ref type="figure" target="#fig_0">1</ref>).</s><s>Replacement of E3 [hydrogen-bonded to Ser 63 and Asn 258 forming the central gate <ref type="bibr" target="#b85">(86,</ref><ref type="bibr" target="#b86">87)</ref>; ChR2 residue numbering] had the largest impact.</s><s>Replacement of inner-gate His 134 /E2 or access-channel E4/E5 also reduced H conductance <ref type="bibr" target="#b61">(62,</ref><ref type="bibr" target="#b63">64,</ref><ref type="bibr" target="#b87">88,</ref><ref type="bibr" target="#b88">89)</ref>.</s><s>Further support for this proton-wire hypothesis is derived from cryptophyte anion-conducting ChRs <ref type="bibr" target="#b89">(90)</ref>, which show reduced H + conductance with fewer helix-2 glutamates (90); interestingly, these glutamates have little influence on kinetics, and only mutation of E1 decelerates closing <ref type="bibr" target="#b87">(88,</ref><ref type="bibr" target="#b90">91)</ref>.</s></p><p><s>ChR Ca 2+ flux is presumed to be important for flagellar regulation, whereas Na + /K + permeance could be incidental to more functionally relevant Ca 2+ /H + flux in cationconducting ChRs.</s><s>Indeed, some ChRs (e.g., Dunaliella salina) are virtually H + -selective <ref type="bibr" target="#b0">(1)</ref>.</s></p><p><s>Incidental Na + flux might bring little energetic cost in freshwater algae (for pumping to restore small Na + gradients) and may arise as channels evolve within nonchannel gene families such as the pump-type microbial rhodopsins (perhaps after gene transfer in niches wherein archaea and algae are intimately linked, as with Halobacteria salinarum and Dunaliella salina in high-salt environments).</s><s>The versatile ChR pore without high-affinity ion-binding sites (15) contrasts with naturally occurring K + -or Ca 2+ -channel selectivity mechanisms, which use tetrameric and symmetric structures to achieve coordinated ionbinding sites that mimic hydration shells or direct symmetric chelation of ions, respectively.</s><s>How, then, do ChRs achieve cation selectivity?</s><s>The C1C2 crystal structure (15) revealed a preponderance of intracellular vestibule basic residues <ref type="bibr" target="#b63">(64,</ref><ref type="bibr" target="#b91">92)</ref>, but attempts to modify conduction pathway access here and elsewhere (although successful in quantitatively shifting ion permeation ratios) did not alter cation selectivity <ref type="bibr" target="#b12">(13)</ref>.</s><s>However, the predicted electronegative environment of the entire conduction pathway in cation selective C1C2 <ref type="bibr" target="#b63">(64,</ref><ref type="bibr" target="#b91">92)</ref> suggested a pore-lining surface electrostatic model and new possibilities for testing mechanisms of selective permeation.</s><s>In 2014, a direct test (remodeling the C1C2 pore for surface electropositivity) confirmed this new model <ref type="bibr" target="#b61">(62)</ref>, resulting in a Cl --selective ChR (iC1C2) that was inhibitory in neural systems <ref type="bibr" target="#b61">(62)</ref>.</s><s>At the same time, different mutations (including negative-to-positive replacement of the central gate Glu 90 with Lys + or Arg + ) were used to create a Cl --selective ChR2 <ref type="bibr" target="#b92">(93)</ref>, with the unifying theme of similar-direction effects on predicted internal pore electrostatics <ref type="bibr" target="#b92">(93)</ref>.</s><s>Further mutagenesis of both variants [guided by the new model, in which complete elimination of proton conductance also required mutation of one or two putative proton wire pore glutamates <ref type="bibr" target="#b63">(64,</ref><ref type="bibr" target="#b93">94)</ref>] resulted in highly Cl --selective ChRs [iChloC and iC++; Fig. 4G <ref type="bibr" target="#b63">(64,</ref><ref type="bibr" target="#b93">94)</ref>] now widely used for studies of animal behavior (conferring optogenetic inhibition in typical situations wherein internal Cl -concentration is low) <ref type="bibr" target="#b63">(64,</ref><ref type="bibr" target="#b94">95,</ref><ref type="bibr" target="#b95">96)</ref>.</s></p><p><s>Naturally occurring Cl --selective ChRs (GtACR1 and GtACR2) were described from cryptophyte algae the year after the first designed Cl --selective ChR was reported; these were termed anion channelrhodopsins (ACRs) <ref type="bibr" target="#b89">(90)</ref>.</s><s>Even though ACRs are evolutionarily remote from cation-conducting ChRs with more amino acid replacements than the designed Cl --conducting ChRs, these new ChRs independently fit the earlier pore model as well, with the unifying principle across all Cl --selective ChRs corresponding to a net effect on porelining electrostatics <ref type="bibr" target="#b91">(92)</ref>.</s><s>The universality of the selectivity mechanism is underscored by the fact that no single charge seems crucial for Cl -selectivity, as long as net pore electrostatics are preserved <ref type="bibr" target="#b91">(92)</ref>.</s><s>ChR Glu 90 is invariant in all naturally occurring ChRs (Glu 64 in GtACR2 numbering), but this negative charge is compensated in anion-conducting GtACR2 via numerous charge-altering replacements of other pore-facing glutamate residues found in cation-conducting ChRs (changed in GtACR2 to non-charged residues: Ser 57 , Thr 67 , Ala 71 , Asn 75 , and Ser 93 ) <ref type="bibr" target="#b91">(92)</ref>.</s><s>Moreover, Glu 90 is not essential for Cl -flux; both families of engineered Cl --selective ChRs (iC1C2, ChloC) lack glutamate at this position <ref type="bibr" target="#b61">(62,</ref><ref type="bibr" target="#b92">93)</ref>.</s><s>Finally, even altering this glutamate in naturally occurring GtACR1 (Glu 68 → Gln) has no detectable effect on photocurrent magnitude or kinetics under physiological conditions <ref type="bibr" target="#b90">(91)</ref>.</s><s>Although the ACR primary sequence suggests rearrangement at both gates, an E3 at the central gate is retained (Fig. <ref type="figure" target="#fig_0">1</ref>).</s><s>The comparative value of natural variants is substantial, but structural and spectroscopic data remain to be acquired.</s></p><p><s>The intense interest that led to resolving this fundamental question of selectivity had the additional benefit of driving the creation of new optogenetic tools, enabling the first round of studies using Cl --selective ChRs for inhibitory optogenetics in animal behavior <ref type="bibr" target="#b63">(64,</ref><ref type="bibr" target="#b94">95,</ref><ref type="bibr" target="#b95">96)</ref>.</s><s>Moreover, integration of diverse structural insights has begun; the SFO kinetic principle was discovered to be portable to inhibitory ChRs, creating bistable and extremely light-sensitive inhibitory ChRs (SwiChR and SwiChR++) <ref type="bibr" target="#b61">(62,</ref><ref type="bibr" target="#b63">64)</ref> that have found utility in studies of mouse behavior <ref type="bibr" target="#b59">(60)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Outlook</head><p><s>The ChR light-gated pore is unique among biological structures.</s><s>The investigation, modeling, and redesign of atomic-scale structure-function relationships governing this lightto-current converter led not only to advances in neuroscience but also to sophisticated understanding of the underlying chemical processes.</s><s>These light-gated channels will continue to fascinate (and occupy a privileged position within ion-channel research) because only light-gated systems allow structure-function analyses over time scales of femtoseconds (10 -15 s) to seconds or more <ref type="bibr" target="#b96">(97)</ref>.</s></p><p><s>The role of ChR in neuroscience may continue to be special as well, building on precision redesign for new roles (Fig. <ref type="figure" target="#fig_3">4</ref>).</s><s>Diverse modes of photon-spike logic are now accessible (four examples in Fig. <ref type="figure" target="#fig_3">4</ref>, each alongside key pore-modeling and pore-redesign features required to create the new logic).</s><s>Even psychiatry has yielded some of its deepest mysteries to ChR pore structural insights (Fig. <ref type="figure" target="#fig_4">5</ref>), as exemplified by studies of circuit dynamics underlying the core depression symptom of anhedonia <ref type="bibr" target="#b58">(59)</ref> in which natural reward responses central to the behavior of all animals are lost.</s><s>The presence of anhedonia allows a diagnosis of major depressive disorder even without depressed mood, but causal circuit dynamics-level understanding had remained elusive.</s></p><p><s>The experiments summarized in Fig. <ref type="figure" target="#fig_4">5</ref> used a combination of designed opsins arising from structure-function ChR discoveries <ref type="bibr" target="#b55">(56)</ref>.</s><s>The blue light-activated SSFO (DC pair-modified for bistable behavior on a 30-min time scale) allowed causal analysis of brainwide dynamics in awake rats during fMRI scanning <ref type="bibr" target="#b55">(56)</ref>.</s><s>SSFO modulation in mPFC was combined with modulation of neural elements across the brain using C1V1 TT [containing no ChR2 sequence but with chimeric elements of VChR1/ChR1, RBP point mutations for redshifted compatibility <ref type="bibr" target="#b53">(54)</ref> with SSFO, and the ChETA (45) mutation] (56).</s><s>Figure <ref type="figure" target="#fig_4">5A</ref> shows elements of the pore redesign that enabled this approach; Fig. <ref type="figure" target="#fig_4">5B</ref> shows the strategy for brain-spanning interrogation of reward circuitry.</s><s>Elevated mPFC activity (to mimic a pattern seen in depression with anhedonia) altered the ability of midbrain dopamine neurons to recruit striatal reward circuitry (Fig. <ref type="figure" target="#fig_4">5C</ref>)-a higher-order brainwide form of modulation by which the evolutionarily advanced frontal neocortex is capable of modifying interactions between two distant subcortical structures-thereby controlling reward-mediating physiology and behavior <ref type="bibr" target="#b55">(56)</ref>.</s></p><p><s>In addition to these and other insights into adaptive and maladaptive behavior, basic insights into ion channel biophysics and evolution have emerged.</s><s>Since the resolution of the crystal structure of ChR and the demonstration of the pore surface electrostatic mechanism for Cl - selectivity, two recent cryo-EM structures subsequently emerged for unrelated Cl -channels that (like ChR) have arisen within larger nonchannel protein families <ref type="bibr" target="#b97">(98,</ref><ref type="bibr" target="#b98">99)</ref>.</s><s>The cystic fibrosis transmembrane conductance regulator (CFTR) is a Cl -channel within the nonchannel ABC transporter family.</s><s>Cryo-EM (98) revealed a putative Cl -conduction pathway with striking parallels to the unrelated 7TM Cl --conducting ChRs with its wide pore, lack of high-affinity identified Cl -binding sites (as detectable in lower-resolution cryo-EM), and largely continuous positive surface electrostatics along the conduction pathway.</s><s>Similarly, CLC-K is a Cl -channel within a broad family of 12TM CLC proteins that includes nonchannel Cl -/H + exchangers.</s><s>CLC-K, like CFTR, is distinct from ChRs in topology (12-TM protein dimer).</s><s>Cryo-EM (99) for CLC-K revealed a pattern of positively charged arginines in the conduction pathway (with no high-affinity binding sites detectable in cryo-EM).</s><s>Together with the earlier ChR discoveries, a model emerges by which Cl -conducting channels can evolve using low-affinity surface electrostatic pathways, within nonchannel families that may not otherwise be well suited (by symmetry or other properties) to give rise to highly selective channels.</s></p><p><s>Much more remains to be uncovered regarding the operation of these unparalleled biological machines, including mechanisms of long-range molecular tuning of color, kinetics, and selectivity.</s><s>Understanding will continue to be refined with new structural information and ongoing advances in modeling of molecular dynamics, which will also likely continue to drive neuroscience.</s><s>For light-activated ChR pores, studying the interplay of form and function has illuminated not only the governing principles of the channel, but also the basic behavioral ecology of algae, the evolution of ion channels, and the fundamental circuit underpinnings of animal behavior in health and disease-remarkable achievements for a light-activated molecule from a single-celled plant.</s><s>The crystal structure of C1C2 is shown as a 3UG9 13 -derived pore snapshot calculated via molecular dynamics (MD).</s><s>Protonated retinal Schiff base (RSBH+, orange) and key pore (brown) or RBP (green) residues showing protonation states of polar residues (81) are shown in stick form (red, oxygen; blue, nitrogen; white, polar protons).</s><s>ChR2 residue numbering is used.</s><s>Displayed waters invaded from both membranes during calculations <ref type="bibr" target="#b80">(81)</ref>.</s><s>Two Na + ions (orange circles) are shown at positions of preferred occupation within the access channel and near inner gate calculated by MD <ref type="bibr" target="#b80">(81)</ref>.</s><s>Blue arrows denote the presumptive permeation pathway.</s><s>The two-headed orange arrow shows the predicted (43) tilting dynamic of helix 2. Conserved glutamates in helix 2 are designated E1 to E5.    <ref type="bibr" target="#b51">(52,</ref><ref type="bibr" target="#b53">54)</ref> transition] and modified TM3-TM4 interaction (100), resulting in extension of openstate lifetime (52-54) and many-orders-of-magnitude-increased light sensitivity of expressing cells <ref type="bibr" target="#b41">(42,</ref><ref type="bibr" target="#b51">52,</ref><ref type="bibr" target="#b53">54)</ref>.</s><s>(F) Photon-spike transduction mode arising from C128T (SFO) mutation is bistable, ultra-light-sensitive, two-color switchable, and excitatory [note blue light actuation and green light termination <ref type="bibr" target="#b51">(52,</ref><ref type="bibr" target="#b53">54)</ref>].</s><s>(G) Photon-spike transduction mode</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc><div><p><s>Fig. 1.</s><s>The light-gated pore</s></p></div></figDesc><graphic coords="19,190.95,62.00,290.11,370.80" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc><div><p><s>Fig. 2. Deep roots in botany (A) Faminzin, pioneer of algal behavior (4).</s><s>(B) Faminzin's landmark observation (5): At low light intensities (bottom), Chlamydomonas exhibits phototaxis toward light, whereas at higher light intensities (top) the algal cells accumulate at optimal irradiance.</s><s>(C) Adapted cartoons showing subcellular Chlamydomonas structure: flagellar beating pattern (20) and eye structure reconstructed from high-resolution tomography (17).</s><s>Eyespot overlaying part of plasma membrane (arrow) corresponds to ChR location.</s><s>Layers of carotenoid-containing vesicles (colored spheres) held by chloroplast membranes (green) serve as an optical device (interference reflector) (4, 19).</s></p></div></figDesc><graphic coords="20,119.76,62.00,432.48,124.56" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc><div><p><s>Fig. 3. Chromophore states and channel currentsChromophore configurations in RSB: all-trans, 15-anti (trans, anti) of dark-adapted state; 13-cis, 15-syn (cis, syn) of second dark state (increasingly occupied after blue illumination during photocurrent inactivation from initial I 0 to stationary I S ; inset)<ref type="bibr" target="#b0">(1,</ref><ref type="bibr" target="#b36">37)</ref>.</s><s>In corresponding open states occupied after 13 C= 14 C photoisomerization, RSB is in the 13-cis, 15-anti (cis, syn) configuration in the open conducting state O1 and 13-trans, 15-syn (trans, syn) in O2<ref type="bibr" target="#b0">(1,</ref><ref type="bibr" target="#b36">37)</ref>.</s><s>Cis-trans isomerization is indicated by red arrows, anti-syn isomerization by blue arrows, photochemical conversions by green arrows, and thermal conversions by black arrows.</s></p></div></figDesc><graphic coords="21,186.48,62.00,299.04,149.76" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4 .</head><label>4</label><figDesc><div><p><s>Fig. 4. Diverse modes of photon-spike transduction logic with underlying structural design (A) Snapshot of ChR active site (MD calculation from C1C2 structure 3UG9, with predicted repositioning of side chains resulting from Glu 123 → Thr (E123T) mutation in red lettering; E123Tcauses inward flipping of Glu 90 to compensate for the lost Glu 123 counterion (43) of the RSBH + , additionally preventing inactivation.</s><s>(B) Photon-spike transduction mode arising from ChETA mutation [ChR2-E123Tvariant (45)]: single blue flash-single spike coupling with high speed and high fidelity.</s><s>Pore redesign implements faster closure after light-off, permitting rapid firing [e.g., 200-Hz trains in interneurons (45)].</s><s>(C) Pore residues (from C1C2 structure 3UG9) altered in spectral and selectivity variants.</s><s>Modification of inner gate in red-activated C1V1-E83Tvariant (magenta letter-designated mutation; ChR2 numbering) (54).</s><s>Selectivity variants are shown as original cation-conducting C1C2 pore residues and modifications to create the Cl --selective iC++ [new pink side chains overlaid on original C1C2 green side chain positioning; blue letters denote iC++ mutations (62, 64)] or iChloC [orange letter-denoted mutations (93, 94)].</s><s>(D) Photon-spike transduction mode arising in Volvox-derived C1V1-E83T: single red flash-single spike coupling (54) with moderately high speed/fidelity; later Volvox derivative bReaChES exhibits faster responses with ChETA modification for accelerated channel closure (77) (not shown).</s><s>(E) Snapshot of most likely structure of the DC-pair region in C1C2 (blue lettering) and the C128T (Cys 128 → Thr) variant (red lettering) based on MD calculation (100) of restructured hydrogenbonding network [yellow → blue dashed-line transition represents this SFO-mutation<ref type="bibr" target="#b51">(52,</ref><ref type="bibr" target="#b53">54)</ref> transition] and modified TM3-TM4 interaction (100), resulting in extension of openstate lifetime (52-54) and many-orders-of-magnitude-increased light sensitivity of expressing cells<ref type="bibr" target="#b41">(42,</ref><ref type="bibr" target="#b51">52,</ref><ref type="bibr" target="#b53">54)</ref>.</s><s>(F) Photon-spike transduction mode arising from C128T (SFO) mutation is bistable, ultra-light-sensitive, two-color switchable, and excitatory [note blue light actuation and green light termination<ref type="bibr" target="#b51">(52,</ref><ref type="bibr" target="#b53">54)</ref>].</s><s>(G) Photon-spike transduction mode</s></p></div></figDesc><graphic coords="22,116.76,62.00,438.48,270.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 5 .</head><label>5</label><figDesc><div><p><s>Fig. 5. Causal underpinnings of depression-related symptomatology identified via algal channel structure discovery and redesign (A) Design of major opsin classes used together to identify brainwide dynamics of anhedonia (C1V1 TT /SSFO) (56): Model of red-shifted C1V1 RBP (red RSBH+; C1V1specific side chains in cyan, based on 3UG9 structure) overlying modeled blue-responsive RBP (yellow RSBH+; green side chains, energy-optimized/calculated structure).</s><s>Nearby DC-pair (SSFO) double mutant (D156A/C128S; new side chains in dark blue) shown (to illustrate relative positioning) that in the blue-responsive RBP confers stable activity shifts and blood oxygen level-dependent (BOLD) signal acquisition in MRI without heating or other artifacts.</s><s>Expected further rearrangements and water influx are not shown.</s><s>(B) Left: Tracks in rat brain for opsin injection and fiber-optic light access to mPFC (left arrow) and midbrain dopamine neurons (right arrow).</s><s>Right: Testing causal influence of elevated mPFC activity (with blue-on/yellow-off SSFO) over communication within reward circuitry (from midbrain dopamine neurons controlled with C1V1).</s><s>(C) Probing second-order brainwide dynamics.</s><s>Natural prominent BOLD signal in dorsal and ventral striatum (left) recruited by dopamine neurons is potently suppressed (right) by mPFC excitability shift (56).</s></p></div></figDesc><graphic coords="24,119.28,62.00,433.44,256.80" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Science.</s><s>Author manuscript; available in PMC 2017 December 10.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We thank our co-workers for contributions to the analysis of ChR structure and function over the years, and for the interdisciplinary exchange of knowledge among the communities of algal biology, membrane biophysics, structural biology, neuroscience, and medicine.We also thank <rs type="person">E. A. Lysenko</rs> (<rs type="affiliation">Institute of Plant Physiology, RAS Moscow</rs>) for the photograph of Faminzin; <rs type="person">F. Beyle</rs> for the ChR2 structure homology file; <rs type="person">A. Berndt</rs>, <rs type="person">E. Ferenczi</rs>, <rs type="person">H. Kato</rs>, <rs type="person">Y. Kim</rs>, <rs type="person">F. Schneider</rs>, <rs type="person">J. Wietek</rs>, and <rs type="person">O. Yizhar</rs> for comments; and <rs type="person">S. Kelterborn</rs> for Fig. 2B.Supported by the <rs type="funder">Deutsche Forschungsgemeinschaft, European Research Council</rs>, and <rs type="funder">Hertie Foundation</rs> (P.H.) and by <rs type="funder">NIH</rs>, <rs type="funder">NSF</rs>, <rs type="funder">DARPA</rs>, the <rs type="funder">NOMIS Foundation</rs>, and the <rs type="funder">Else Kroner Fresenius Foundation</rs> (K.D.).</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">The microbial opsin family of optogenetic tools</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cell.2011.12.004</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">147</biblScope>
+			<biblScope unit="page" from="1446" to="1457" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22196724</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Microbial and animal rhodopsins: Structures, functions, and molecular mechanisms</title>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">P</forename><surname>Ernst</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr4003769</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem Rev</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="126" to="163" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24364740</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Integration of optogenetics with complementary methodologies in systems neuroscience</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Adhikari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nrn.2017.15</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="222" to="235" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28303019</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Light antennas in phototactic algae</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Smyth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Microbiol Rev</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="572" to="630" />
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7010112</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Die Wirkung des Lichtes auf die Bewegung der Chlamidomonas pulvisculus Ehr., Euglena viridis Ehr. und Oscillatoria insignis Tw</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Faminzin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Melanges Biologiques tires du Bulletin de l&apos;Ácademie Imperial des Sciences De St-Petersbourg</title>
+		<imprint>
+			<biblScope unit="volume">1866</biblScope>
+			<biblScope unit="page" from="73" to="93" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Photoreceptor electric potential in the phototaxis of the alga Haematococcus pluvialis</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Litvin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Sineshchekov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">A</forename><surname>Sineshchekov</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/271476a0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">271</biblScope>
+			<biblScope unit="page" from="476" to="478" />
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 628427</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Rhodopsin-regulated calcium currents in Chlamydomonas</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Harz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hegemann</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/351489a0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">351</biblScope>
+			<biblScope unit="page" from="489" to="491" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Rhodopsin-like protein from the purple membrane of Halobacterium halobium</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Oesterhelt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Stoeckenius</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/newbio233149a0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat New Biol</title>
+		<imprint>
+			<biblScope unit="volume">233</biblScope>
+			<biblScope unit="page" from="149" to="152" />
+			<date type="published" when="1971">1971</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 4940442</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">A measurement of the proton pump current generated by bacteriorhodopsin in black lipid membranes</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Herrmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Rayfield</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0005-2736(76)90482-X[PubMed:963073</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biochim Biophys Acta</title>
+		<imprint>
+			<biblScope unit="volume">443</biblScope>
+			<biblScope unit="page" from="623" to="628" />
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">A rhodopsin is the functional photoreceptor for phototaxis in the unicellular eukaryote Chlamydomonas</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Foster</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/311756a0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">311</biblScope>
+			<biblScope unit="page" from="756" to="759" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 6493336</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Direct measurement of cytosolic calcium and pH in living Chlamydomonas reinhardtii cells</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Braun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hegemann</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0171-9335</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Eur J Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="80099" to="80104" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10219570</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Channelrhodopsin-1: A light-gated proton channel in green algae</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nagel</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1072068</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">296</biblScope>
+			<biblScope unit="page" from="2395" to="2398" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12089443</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Channelrhodopsin-2, a directly light-gated cation-selective membrane channel</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nagel</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1936192100</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="13940" to="13945" />
+			<date type="published" when="2003">2003</date>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14615590</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Optogenetics: 10 years of microbial opsins in neuroscience</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.4091</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1213" to="1225" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26308982</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Crystal structure of the channelrhodopsin light-gated cation channel</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Kato</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature10870</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">482</biblScope>
+			<biblScope unit="page" from="369" to="374" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22266941</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">A blue-light-activated adenylyl cyclase mediates photoavoidance in Euglena gracilis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Iseki</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/4151047a[PubMed:11875575</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">415</biblScope>
+			<biblScope unit="page" from="1047" to="1051" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Native architecture of the Chlamydomonas chloroplast revealed by in situ cryoelectron tomography</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Engel</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.04889</idno>
+	</analytic>
+	<monogr>
+		<title level="j">eLife</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">4889</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25584625</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Channelrhodopsin-1 initiates phototaxis and photophobic responses in Chlamydomonas by immediate light-induced depolarization</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berthold</surname></persName>
+		</author>
+		<idno type="DOI">10.1105/tpc.108.057919</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Plant Cell</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1665" to="1677" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18552201</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Asymmetric properties of the Chlamydomonas reinhardtii cytoskeleton direct rhodopsin photoreceptor localization</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Mittelmeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Boyd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Lamb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Dieckmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1083/jcb.201009131</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">193</biblScope>
+			<biblScope unit="page" from="741" to="753" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21555459</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Lag, lock, sync, slip: The many &apos;phases&apos; of coupled flagella</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">Y</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Leptos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Goldstein</surname></persName>
+		</author>
+		<idno type="DOI">10.1098/rsif.2013.1160</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J R Soc Interface</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">20131160</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24573332</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">The impact of molecular biology on neuroscience</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Crick</surname></persName>
+		</author>
+		<idno type="DOI">10.1098/rstb.1999.0541</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Philos Trans R Soc B</title>
+		<imprint>
+			<biblScope unit="volume">354</biblScope>
+			<biblScope unit="page" from="2021" to="2025" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Identification of presynaptic neurons by laser photostimulation</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">C</forename><surname>Farber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grinvald</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.6648515</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">222</biblScope>
+			<biblScope unit="page" from="1025" to="1027" />
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 6648515</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Laser stimulation of nerve cells in Aplysia</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Fork</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.171.3974.907[PubMed:5541653</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">171</biblScope>
+			<biblScope unit="page" from="907" to="908" />
+			<date type="published" when="1971">1971</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Selective photostimulation of genetically chARGed neurons</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">V</forename><surname>Zemelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Miesenböck</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0896-6273(01)00574-8</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="15" to="22" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11779476</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Light-activated ion channels for remote control of neuronal firing</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Banghart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Borges</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Isacoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Trauner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Kramer</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn1356</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1381" to="1386" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15558062</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Remote control of behavior through genetically targeted photostimulation of neurons</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Q</forename><surname>Lima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Miesenböck</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cell.2005.02.004</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="141" to="152" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15820685</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Millisecond-timescale, genetically targeted optical control of neural activity</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Boyden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bamberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nagel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn1525</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="1263" to="1268" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16116447</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Fast noninvasive activation and inhibition of neural and network activity by vertebrate rhodopsin and green algae channelrhodopsin</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.0509030102</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci USA</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page" from="17816" to="17821" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16306259</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Kinetic evaluation of photosensitivity in genetically engineered neurons expressing green algae light-gated channels</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ishizuka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kakuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Araki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yawo</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neures.2005.10.009</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neurosci Res</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="85" to="94" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16298005</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Light activation of channelrhodopsin-2 in excitable cells of Caenorhabditis elegans triggers rapid behavioral responses</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nagel</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cub.2005.11.032[PubMed:16360690</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Biol</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="2279" to="2284" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Ectopic expression of a microbial-type rhodopsin restores visual responses in mice with photoreceptor degeneration</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2006.02.026[PubMed:16600853</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="23" to="33" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">An optical neural interface: In vivo control of rodent motor cortex with integrated fiberoptic and optogenetic technology</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Aravanis</surname></persName>
+			<affiliation>
+				<orgName type="collaboration">S143-S156</orgName>
+			</affiliation>
+		</author>
+		<idno type="DOI">10.1088/1741-2560/4/3/S02</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neural Eng</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17873414</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Neural substrates of awakening probed with optogenetic control of hypocretin neurons</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Adamantidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Aravanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>De Lecea</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature06310</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">450</biblScope>
+			<biblScope unit="page" from="420" to="424" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17943086</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Optical deconstruction of parkinsonian neural circuitry</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Gradinaru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mogri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Thompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Henderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1167093</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="page" from="354" to="359" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19299587</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Phasic firing in dopaminergic neurons is sufficient for behavioral conditioning</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Tsai</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1168878</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="page" from="1080" to="1084" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19389999</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Projection structure of channelrhodopsin-2 at 6 Å resolution by electron crystallography</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bamann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bamberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kühlbrandt</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jmb.2011.09.049</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Mol Biol</title>
+		<imprint>
+			<biblScope unit="volume">414</biblScope>
+			<biblScope unit="page" from="86" to="95" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22001017</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Light-dark adaptation of channelrhodopsin involves photoconversion between the all-trans and 13-cis retinal isomers</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bruun</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.biochem.5b00597</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biochemistry</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="5389" to="5400" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26237332</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Deactivation of rhodopsin in the transition from the signaling state meta II to meta III involves a thermal isomerization of the retinal chromophore C=D</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Vogel</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/bi034684+[PubMed:12924935</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biochemistry</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="9863" to="9874" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Dark-adapted bacteriorhodopsin contains 13-cis, 15-syn and all-trans, 15-anti retinal Schiff bases</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Harbison</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.81.6.1706</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci USA</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page" from="1706" to="1709" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 6584904</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Ion selectivity and competition in channelrhodopsins</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gradmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hegemann</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bpj.2013.05.042</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biophys J</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="91" to="100" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23823227</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Biophysics of channelrhodopsin</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Grimm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hegemann</surname></persName>
+		</author>
+		<idno type="DOI">10.1146/annurev-biophys-060414-034014</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Biophys</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="167" to="186" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26098512</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Principles for applying optogenetic tools derived from direct comparative analysis of microbial opsins</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mattis</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.1808</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="159" to="172" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22179551</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Early formation of the ion-conducting pore in channelrhodopsin-2</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kuhne</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/anie.201410180</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Angew Chem Int Ed</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="4953" to="4957" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Temporal evolution of helix hydration in a light-gated ion channel correlates with ion conductance</title>
+		<author>
+			<persName><forename type="first">Lórenz-Fonfría</forename><surname>Va</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1511462112</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci USA</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>E5796-E5804. PubMed: 26460012</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Ultrafast optogenetic control</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Gunaydin</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.2495</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="387" to="392" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20081849</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">The antiepileptic and ictogenic effects of optogenetic neurostimulation of PVexpressing interneurons</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Assaf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Schiller</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.00744.2015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="page" from="1694" to="1704" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27486107</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Optogenetic identification of a rapid eye movement sleep modulatory circuit in the hypothalamus</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jego</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.3522</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1637" to="1643" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24056699</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Manipulating fear associations via optogenetic modulation of amygdala inputs to prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Klavir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Prigge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sarel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Paz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yizhar</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.4523</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="836" to="844" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28288126</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Gamma oscillations organize top-down signalling to hypothalamus and enable food seeking</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carus-Cadavieco</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature21066</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">542</biblScope>
+			<biblScope unit="page" from="232" to="236" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28146472</note>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Closed-loop and activity-guided optogenetic control</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Grosenick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Marshel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2015.03.034</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="106" to="139" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25856490</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">High-efficiency channelrhodopsins for fast neuronal stimulation at low light levels</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Berndt</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1017210108</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="7595" to="7600" />
+			<date type="published" when="2011">2011</date>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21504945</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Bi-stable neural state switches</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Berndt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yizhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Gunaydin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hegemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.2247</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="229" to="234" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19079251</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Structural guidance of the photocycle of channelrhodopsin-2 by an interhelical hydrogen bond</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bamann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gueta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kleinlogel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nagel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bamberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/bi901634p[PubMed:20000562</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biochemistry</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="267" to="278" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Neocortical excitation/inhibition balance in information processing and social dysfunction</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yizhar</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature10360</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">477</biblScope>
+			<biblScope unit="page" from="171" to="178" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21796121</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Thalamic amplification of cortical connectivity sustains attentional control</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">I</forename><surname>Schmitt</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature22073</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">545</biblScope>
+			<biblScope unit="page" from="219" to="223" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28467827</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Prefrontal cortical regulation of brainwide circuit dynamics and reward-related behavior</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Ferenczi</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aac9698</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">351</biblScope>
+			<biblScope unit="page">9698</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26722001</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Warm-sensitive neurons that control body temperature</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Tan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cell.2016.08.028</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">167</biblScope>
+			<biblScope unit="page" from="47" to="59" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27616062</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Bidirectional control of generalized epilepsy networks via rapid real-time switching of firing mode</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Sorokin</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2016.11.026</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="194" to="210" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27989462</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Learning enhances the relative impact of top-down processing in the visual cortex</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Makino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Komiyama</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.4061</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1116" to="1122" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26167904</note>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Optogenetic and chemogenetic strategies for sustained inhibition of pain</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Iyer</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep30570</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Rep</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">30570</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27484850</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Optogenetic control of fly optomotor responses</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Haikala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Joesch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Mauss</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.0340-13.2013</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="13927" to="13934" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23966712</note>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Structure-guided transformation of channelrhodopsin into a light-activated chloride channel</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Berndt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ramakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1252367</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">344</biblScope>
+			<biblScope unit="page" from="420" to="424" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24763591</note>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Two-photon optogenetic toolbox for fast inhibition, excitation and bistable modulation</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Prakash</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.2215</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1171" to="1179" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23169303</note>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Structural foundations of optogenetics: Determinants of channelrhodopsin ion selectivity</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Berndt</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1523341113</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="822" to="829" />
+			<date type="published" when="2016">2016</date>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26699459</note>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Independent optical excitation of distinct neural populations</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Klapoetke</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.2836</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="338" to="346" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24509633</note>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Stomatopod eye structure and function: A review</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marshall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Cronin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kleinlogel</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.asd.2007.01.006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Arthropod Struct Dev</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="420" to="448" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18089120</note>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Tuning the electronic absorption of protein-embedded all-trans-retinal</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1226135[PubMed:23224553</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">338</biblScope>
+			<biblScope unit="page" from="1340" to="1343" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Atomistic design of microbial opsin-based blue-shifted optogenetics tools</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Kato</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/ncomms8177</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">7177</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25975962</note>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Electrostatic potential at the retinal of three archaeal rhodopsins: Implications for their different absorption spectra</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kloppmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Becker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Ullmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/prot.20744</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proteins</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="953" to="965" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16247786</note>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Red-shifted optogenetic excitation: A tool for fast neural control derived from Volvox carteri</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.2120</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="631" to="633" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18432196</note>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Inherent chirality of the retinal chromophore in rhodopsin-A nonempirical theoretical analysis of chiroptical data</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Buss</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/1520-636X(2001)13:1&lt;13::AID-CHIR4&gt;3.0.CO;2-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chirality</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="13" to="23" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11135409</note>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Molecular and cellular approaches for diversifying and extending optogenetics</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Gradinaru</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cell.2010.02.037</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page" from="154" to="165" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20303157</note>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Molecular determinants differentiating photocurrent properties of two channelrhodopsins from chlamydomonas</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.M807632200</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">284</biblScope>
+			<biblScope unit="page" from="5685" to="5696" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19103605</note>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Characterization of engineered channelrhodopsin variants with improved properties and kinetics</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Z</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Steinbach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Y</forename><surname>Tsien</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bpj.2008.11.034</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biophys J</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="1803" to="1814" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19254539</note>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Simultaneous cellular-resolution optical perturbation and imaging of place cell firing fields</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Rickgauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Tank</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.3866</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1816" to="1824" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25402854</note>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Simultaneous fast measurement of circuit dynamics at multiple sites across the mammalian brain</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.3770</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="325" to="328" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26878381</note>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Projections from neocortex mediate top-down control of memory retrieval</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Rajasethupathy</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature15389</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">526</biblScope>
+			<biblScope unit="page" from="653" to="659" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26436451</note>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Imprinting and recalling cortical ensembles</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Carrillo-Reid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bando</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Peterka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yuste</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aaf7560</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">353</biblScope>
+			<biblScope unit="page" from="691" to="694" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27516599</note>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">ReaChR: A red-shifted variant of channelrhodopsin enables deep transcranial optogenetic excitation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Knutsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Muller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kleinfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Y</forename><surname>Tsien</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.3502</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1499" to="1508" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23995068</note>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">New channelrhodopsin with a red-shifted spectrum and rapid kinetics from Mesostigma viride</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Govorunova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">N</forename><surname>Spudich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Lane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Sineshchekov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Spudich</surname></persName>
+		</author>
+		<idno type="DOI">10.1128/mBio.00115-11</idno>
+	</analytic>
+	<monogr>
+		<title level="j">MBio</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="115" to="e126" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21693637</note>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Active site structure and absorption spectrum of channelrhodopsin-2 wild-type and C128T mutant</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Guo</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C6SC00468G</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem Sci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="3879" to="3891" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Glu 87 of channelrhodopsin-1 causes pH-dependent color tuning and fast photocurrent inactivation</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Tsunoda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hegemann</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1751-1097.2008.00519.x[PubMed:19192197</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Photochem Photobiol</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="564" to="569" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Characterization of a highly efficient blue-shifted channelrhodopsin from the marine alga Platymonas subcordiformis</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Govorunova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Sineshchekov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Janz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Spudich</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.M113.505495</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">288</biblScope>
+			<biblScope unit="page" from="29911" to="29922" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23995841</note>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title level="a" type="main">Proton currents in human granulocytes: Regulation by membrane potential and intracellular pH</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Demaurex</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Physiol</title>
+		<imprint>
+			<biblScope unit="volume">466</biblScope>
+			<biblScope unit="page" from="329" to="344" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7692041</note>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title level="a" type="main">Evidence for a light-induced H + conductance in the eye of the green alga Chlamydomonas reinhardtii</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ehlenbeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gradmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F-J</forename><surname>Braun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hegemann</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0006-3495(02)75436-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biophys J</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="740" to="751" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11806916</note>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<analytic>
+		<title level="a" type="main">In channelrhodopsin-2 Glu-90 is crucial for ion selectivity and is deprotonated during the photocycle</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Eisenhauer</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.M111.327700</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">287</biblScope>
+			<biblScope unit="page" from="6904" to="6911" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22219197</note>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<analytic>
+		<title level="a" type="main">Glutamate residue 90 in the predicted transmembrane domain 2 is crucial for cation flux through channelrhodopsin 2</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ruffert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochem Biophys Res Commun</title>
+		<imprint>
+			<biblScope unit="volume">410</biblScope>
+			<biblScope unit="page" from="737" to="743" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21683688</note>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">Bioinformatic and mutational analysis of channelrhodopsin-2 protein cationconducting pathway</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Plazzo</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.M111.326207</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">287</biblScope>
+			<biblScope unit="page" from="4818" to="4825" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22139833</note>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title level="a" type="main">Identification of a natural green light absorbing chloride conducting channelrhodopsin from Proteomonas sulcata</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wietek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Broser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">S</forename><surname>Krause</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hegemann</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.M115.699637</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="page" from="4121" to="4127" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26740624</note>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<title level="a" type="main">Natural light-gated anion channels: A family of microbial rhodopsins for advanced optogenetics</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Govorunova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Sineshchekov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Janz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Spudich</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aaa7484</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">349</biblScope>
+			<biblScope unit="page" from="647" to="650" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26113638</note>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">Anion channelrhodopsins for inhibitory cardiac optogenetics</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Govorunova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Cunha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Sineshchekov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Spudich</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep33530</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Rep</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">33530</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27628215</note>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<analytic>
+		<title level="a" type="main">Expanding the optogenetics toolkit</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Berndt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aac7889</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">349</biblScope>
+			<biblScope unit="page" from="590" to="591" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26250674</note>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<analytic>
+		<title level="a" type="main">Conversion of channelrhodopsin into a light-gated chloride channel</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wietek</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1249375</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">344</biblScope>
+			<biblScope unit="page" from="409" to="412" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24674867</note>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<analytic>
+		<title level="a" type="main">An improved chloride-conducting channelrhodopsin for light-induced inhibition of neuronal activity in vivo</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wietek</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep14807</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Rep</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">14807</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26443033</note>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<analytic>
+		<title level="a" type="main">Prefrontal parvalbumin neurons in control of attention</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ährlund-Richter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carlén</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cell.2015.11.038</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">164</biblScope>
+			<biblScope unit="page" from="208" to="218" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26771492</note>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<analytic>
+		<title level="a" type="main">Active cortical dendrites modulate perception</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Takahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">G</forename><surname>Oertner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hegemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Larkum</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aah6066</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">354</biblScope>
+			<biblScope unit="page" from="1587" to="1590" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28008068</note>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<analytic>
+		<title level="a" type="main">A three-dimensional movie of structural changes in bacteriorhodopsin</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Nango</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aah3497</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">354</biblScope>
+			<biblScope unit="page" from="1552" to="1557" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28008064</note>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<analytic>
+		<title level="a" type="main">Molecular structure of the human CFTR ion channel</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Csanády</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Gadsby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cell.2017.02.024[PubMed:28340353</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">169</biblScope>
+			<biblScope unit="page" from="85" to="95" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<analytic>
+		<title level="a" type="main">Structure of a CLC chloride ion channel by cryo-electron microscopy</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">B</forename><surname>Campbell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mackinnon</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature20812</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">541</biblScope>
+			<biblScope unit="page" from="500" to="505" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28002411</note>
+</biblStruct>
+
+<biblStruct xml:id="b99">
+	<analytic>
+		<title level="a" type="main">PubMed: 23376098] arising from adding the Cys 128 SFO mutation (E) to Cl --selective iC++ mutations (C) to create (64) SwiChR++ provides ultra-light sensitivity and is bistable</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Watanabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Welke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Sindhikara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hegemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Elstner</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jmb.2013.01.033</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Mol Biol</title>
+		<imprint>
+			<biblScope unit="volume">425</biblScope>
+			<biblScope unit="page" from="1795" to="1814" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>Towards an understanding of channelrhodopsin function: Simulations lead to novel insights of the channel mechanism. two-color switchable, and inhibitory under typical conditions (62, 64</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

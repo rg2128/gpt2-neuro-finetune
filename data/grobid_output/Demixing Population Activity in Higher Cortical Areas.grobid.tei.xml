@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Demixing Population Activity in Higher Cortical Areas</title>
+				<funder>
+					<orgName type="full">Deutsche Forschungsgemeinschaft</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Agence Nationale de la Recherche</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Frontiers Media SA</publisher>
+				<availability status="unknown"><p>Copyright Frontiers Media SA</p>
+				</availability>
+				<date type="published" when="2010-10-06">06 October 2010</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><roleName>Département</roleName><forename type="first">Christian</forename><forename type="middle">K</forename><surname>Machens</surname></persName>
+							<email>christian.machens@ens.fr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University College London</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Satish Iyengar</orgName>
+								<orgName type="institution">University of Pittsburgh</orgName>
+								<address>
+									<country>USA, USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">&apos;Etudes Cognitives</orgName>
+								<orgName type="institution">École Normale Supérieure</orgName>
+								<address>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Demixing Population Activity in Higher Cortical Areas</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Frontiers in Computational Neuroscience</title>
+						<title level="j" type="abbrev">Front. Comput. Neurosci.</title>
+						<idno type="eISSN">1662-5188</idno>
+						<imprint>
+							<publisher>Frontiers Media SA</publisher>
+							<biblScope unit="volume">4</biblScope>
+							<date type="published" when="2010-10-06">06 October 2010</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D64A014F2BE2B6D32F44F52AB5F9BCF3</idno>
+					<idno type="DOI">10.3389/fncom.2010.00126</idno>
+					<note type="submission">Received: 15 November 2009; paper pending published: 19 November 2009; accepted: 27 July 2010; published online: 06 October 2010.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:05+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>prefrontal cortex</term>
+					<term>population code</term>
+					<term>principal component analysis</term>
+					<term>multi-electrode recordings</term>
+					<term>blind source separation</term>
+				</keywords>
+			</textClass>
+			<abstract/>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>the approach rarely succeeds in giving a complete account of the recorded activity on the population level.</s><s>For instance, many interesting features of the population response may go unnoticed if they have not been explicitly looked for.</s><s>Furthermore, the strongly distributional nature of the population response, in which individual neurons can be responsive to several task parameters at once, is often left in the shadows.</s></p><p><s>Principal component analysis (PCA) and other dimensionality reduction techniques seek to alleviate these problems by providing methods that summarize neural activity at the population level <ref type="bibr" target="#b22">(Nicolelis et al., 1995;</ref><ref type="bibr" target="#b9">Friedrich and Laurent, 2001;</ref><ref type="bibr" target="#b34">Zacksenhouse and Nemets, 2008;</ref><ref type="bibr" target="#b33">Yu et al., 2009;</ref><ref type="bibr" target="#b16">Machens et al., 2010)</ref>.</s><s>However, such "unsupervised" techniques will usually neglect information about the relevant task variables.</s><s>While the methods do provide a succinct and complete description of the population response, the description may yield only limited insights into how different task parameters are represented in the population of neurons.</s></p><p><s>In this paper, we propose an exploratory data analysis method that seeks to maintain the major benefits of PCA while also extracting the relevant task variables from the data.</s><s>The primary goal of our method is to improve on dimensionality reduction techniques by explicitly taking knowledge about task parameters into account.</s><s>The method has previously been applied to data from the prefrontal cortex to separate stimulus-from time-related activities <ref type="bibr" target="#b16">(Machens et al., 2010)</ref>.</s><s>Here, we describe the method in greater detail, derive it from first principles, investigate its performance under noise, and generalize it to more than two task parameters.</s><s>Our hope is that this method provides a better visualization of a given data set, thereby</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IntroductIon</head><p><s>Higher-order cortical areas such as the prefrontal cortex receive and integrate information from many other areas of the brain.</s><s>The activity of neurons in these areas often reflects this mix of influences.</s><s>Typical neural responses are shaped both by the internal dynamics of these systems as well as by various external events such as the perception of a stimulus or a reward <ref type="bibr" target="#b24">(Rao et al., 1997;</ref><ref type="bibr" target="#b25">Romo et al., 1999;</ref><ref type="bibr" target="#b4">Brody et al., 2003;</ref><ref type="bibr" target="#b0">Averbeck et al., 2006;</ref><ref type="bibr" target="#b8">Feierstein et al., 2006;</ref><ref type="bibr" target="#b10">Gold and Shadlen, 2007;</ref><ref type="bibr" target="#b28">Seo et al., 2009)</ref>.</s><s>As a result, neural responses are extremely complex and heterogeneous, even in animals that are performing relatively facile tasks such as simple stimulus-response associations <ref type="bibr" target="#b10">(Gold and Shadlen, 2007)</ref>.</s></p><p><s>To make sense of these data, researchers typically seek to relate the firing rate of a neuron to one of various experimentally controlled task parameters, such as a sensory stimulus, a reward, or a decision that an animal takes.</s><s>To this end, a number of statistical tools are exploited such as regression <ref type="bibr" target="#b26">(Romo et al., 2002;</ref><ref type="bibr" target="#b4">Brody et al., 2003;</ref><ref type="bibr" target="#b31">Sugrue et al., 2004;</ref><ref type="bibr" target="#b15">Kiani and Shadlen, 2009;</ref><ref type="bibr" target="#b28">Seo et al., 2009)</ref>, signal detection theory <ref type="bibr" target="#b8">(Feierstein et al., 2006;</ref><ref type="bibr" target="#b14">Kepecs et al., 2008)</ref>, or discriminant analysis <ref type="bibr" target="#b24">(Rao et al., 1997)</ref>.</s><s>The population response is then characterized by quantifying how each neuron in the population responds to a particular task parameter.</s><s>Subsequently, neurons can be attributed to different (possibly overlapping) response categories, and population responses can be constructed by averaging the time-varying firing rates within such a category.</s></p><p><s>This classical, single-cell based approach to electrophysiological population data has been quite successful in clarifying what information neurons in higher-order cortical areas represent.</s><s>However, Demixing population activity in higher cortical areas</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Christian K. Machens*</head><p><s>Group for Neural Theory, <ref type="bibr">INSERM Unité 960,</ref><ref type="bibr">Département d'Etudes Cognitives,</ref><ref type="bibr">École Normale Supérieure,</ref><ref type="bibr">Paris,</ref><ref type="bibr">France</ref> Neural responses in higher cortical areas often display a baffling complexity.</s><s>In animals performing behavioral tasks, single neurons will typically encode several parameters simultaneously, such as stimuli, rewards, decisions, etc.</s><s>When dealing with this large heterogeneity of responses, cells are conventionally classified into separate response categories using various statistical tools.</s><s>However, this classical approach usually fails to account for the distributed nature of representations in higher cortical areas.</s><s>Alternatively, principal component analysis (PCA) or related techniques can be employed to reduce the complexity of a data set while retaining the distributional aspect of the population activity.</s><s>These methods, however, fail to explicitly extract the task parameters from the neural responses.</s><s>Here we suggest a coordinate transformation that seeks to ameliorate these problems by combining the advantages of both methods.</s><s>Our basic insight is that variance in neural firing rates can have different origins (such as changes in a stimulus, a reward, or the passage of time), and that, instead of lumping them together, as PCA does, we need to treat these sources separately.</s><s>We present a method that seeks an orthogonal coordinate transformation such that the variance captured from different sources falls into orthogonal subspaces and is maximized within these subspaces.</s><s>Using simulated examples, we show how this approach can be used to demix heterogeneous neural responses.</s><s>Our method may help to lift the fog of response heterogeneity in higher cortical areas.</s></p><p><s>limited, the response heterogeneity increases strongly when more components are allowed (see Figures 3A,B for an example with three components).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>PrIncIPal comPonent analysIs faIls to demIx the resPonses</head><p><s>The standard approach to deal with such data sets is to sort cells into categories.</s><s>In our example, this approach may yield two overlapping categories of cells, one for cells that respond to the stimulus and one for cells that respond to the decision.</s><s>While this approach tracks down which variables are represented in the population, it will fail to quantify the exact nature of the population activity, such as the precise co-evolution of the neural population activity over time.</s></p><p><s>A common approach to address these types of problems are dimensionality reduction methods such as PCA <ref type="bibr" target="#b22">(Nicolelis et al., 1995;</ref><ref type="bibr" target="#b9">Friedrich and Laurent, 2001;</ref><ref type="bibr" target="#b11">Hastie et al., 2001;</ref><ref type="bibr" target="#b34">Zacksenhouse and Nemets, 2008;</ref><ref type="bibr" target="#b16">Machens et al., 2010)</ref>.</s><s>The main aim of PCA is to find a new coordinate system in which the data can be represented in a more succinct and compact fashion.</s><s>In our toy example, even though we may have many neurons with different responses (N = 50 in Figure <ref type="figure" target="#fig_0">1</ref>, with five examples shown in Figure <ref type="figure" target="#fig_0">1B</ref>), the activity of each neuron can be represented by a linear combination of only two components.</s><s>In the N-dimensional space of neural activities, the two components, z 1 (t,s) and z 2 (t,d), can be viewed as two coordinates of a coordinate system whose axes are given by the vectors of mixing coefficients, a 1 and a 2 .</s><s>Since the first two coordinates capture all the relevant information, the components live in a two-dimensional subspace.</s><s>Using PCA, we can retrieve the two-dimensional subspace from the data.</s><s>While the method allows us to reduce the dimensionality and complexity of the data dramatically, PCA will in general only retrieve the two-dimensional subspace, but not the original coordinates, z 1 (t,s) and z 2 (t,d).</s></p><p><s>To see this, we will briefly review PCA and show what it does to the data from our toy model.</s><s>PCA commences by computing the covariances of the firing rates between all pairwise combination of neurons.</s><s>Let us define the mean firing rate of neuron i as the average number of spikes that this neuron emits, so that</s></p><formula xml:id="formula_0">r M M M r t s d i t s d i d M s M t M d s t = = = = ∑ ∑ ∑ 1 1 1 1 ( , , )<label>(4)</label></formula><p><s>=: ( , , ) .</s></p><p><s>, ,</s></p><formula xml:id="formula_1">r t s d i t s d</formula><p><s>(5)</s></p><p><s>We will use the angular brackets in the second line as a shorthand for averaging.</s><s>The variables to be averaged over are indicated as subscript on the right bracket.</s><s>Here, the average runs over all time points t, all stimuli s, and all decisions d.</s><s>For the vector of mean firing rates we write r = (r 1 ,…,r N ) T .</s></p><p><s>The covariance matrix of the data summarizes the second-order statistics of the data set,</s></p><formula xml:id="formula_2">C t s d t s d T t s d = - ( ) - ( ) r r r r ( , , ) ( , , ) , , ,<label>(6)</label></formula><p><s>and has size N × N where N is the number of neurons in the data set.</s><s>Given the covariance matrix, we can compute the firing rate variance that falls along arbitrary directions in state space.</s><s>For instance, the variance captured by a coordinate axis given by a normalized vector u is simply L = u T Cu.</s><s>We can then look for the axis yielding new insights into the function of higher-order areas.</s><s>We will first explain the main ideas in the context of a simple example, then show how these ideas can be generalized, and finally discuss some caveats and limitations of our approach.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>results</head><p><s>resPonse heterogeneIty through lInear mIxIng</s></p><p><s>Recordings from higher-order areas in awake behaving animals often yield a large variety of neural responses (see e.g., <ref type="bibr" target="#b18">Miller, 1999;</ref><ref type="bibr" target="#b5">Churchland and Shenoy, 2007;</ref><ref type="bibr" target="#b13">Jun et al., 2010;</ref><ref type="bibr" target="#b16">Machens et al., 2010)</ref>.</s></p><p><s>These observations at the level of individual cells could imply a complicated and intricate response at the population level for which a simplified description does not exist.</s><s>Alternatively, the large heterogeneity of responses may be the result of a simple mixing procedure.</s></p><p><s>For instance, response variety can come about if the responses of individual neurons are random, linear mixtures of a few generic response components (see e.g., <ref type="bibr" target="#b7">Eliasmith and Anderson, 2003)</ref>.</s></p><p><s>To illustrate this insight, we will construct a simple toy model.</s><s>Imagine an animal which performs a two-alternative-forced choice task <ref type="bibr" target="#b21">(Newsome et al., 1989;</ref><ref type="bibr" target="#b32">Uchida and Mainen, 2003)</ref>.</s><s>In each trial of such a task, the animal receives a sensory stimulus, s, and then makes a binary decision, d, based on whether s falls into one of two response categories.</s><s>If the animal decides correctly, it receives a reward.</s><s>We will assume that the activity of the neurons in our toy model depends only on the stimulus s and the decision d.</s></p><p><s>To obtain response heterogeneity, we construct the response of each neuron as a random, linear mixture of two underlying response components, one that represents the stimulus, z 1 (t,s), and one that represents the decision, z 2 (t,d), see Figure <ref type="figure" target="#fig_0">1A</ref>.</s><s>The timevarying firing rate of neuron i is then given by r t s d a z t s a z t d c t</s></p><formula xml:id="formula_3">i i i i i ( , , ) ( , )<label>(, ) ( ).</label></formula><formula xml:id="formula_4">= + + + 1 1 2 2 η (1)</formula><p><s>Here, the parameters a i1 and a i2 are the mixing coefficients of the neuron, the bias parameter c i describes a constant offset, and the term η i (t) denotes additive, white noise.</s><s>We assume that the noise of different neurons can be correlated so that</s></p><formula xml:id="formula_5">〈 + 〉 = η η τ δ τ i j t i j t t H ( ) ( ) ( ) ,<label>(2)</label></formula><p><s>where the angular brackets denote averaging over time, and H ij is the noise covariance between neuron i and j.</s><s>We will assume that there are N neurons and, for notational compactness, we will assemble their activities into one large vector, r(t,s,d) = (r 1 (t,s,d),…,r N (t,s,d)) T .</s><s>After doing the same for the mixing coefficients, the constant offset, and the noise, we can write equivalently,</s></p><formula xml:id="formula_6">r a a c n ( , , ) ( , ) (, ) ( ). t s d z t s z t d t = + + + 1 1 2 2</formula><p><s>(3)</s></p><p><s>Without loss of generality, we can furthermore assume that the mixing coefficients are normalized so that a a i T i = 1 for i ∈{1,2}.</s><s>Since we assume that the mixing coefficients are drawn at random, and independently of each other, the first and second coefficient will be uncorrelated, so that on average, a a 1 2 0 T = , implying that a 1 and a 2 are approximately orthogonal.</s></p><p><s>With this formulation, individual neural responses mix information about the stimulus s and the decision d, leading to a variety of responses, as shown in Figure <ref type="figure" target="#fig_0">1B</ref>.</s><s>While with only two underlying components, the overall heterogeneity of responses remains where the trace-operation, tr(•), sums over all the diagonal entries of a matrix, and I n denotes the n × n identity matrix.</s></p><p><s>Mathematically, the principal axes u i correspond to the eigenvectors of the covariance matrix, C, which can nowadays be computed quite easily using numerical methods.</s><s>Subsequently, the data can be plotted in the new coordinate system.</s><s>The new coordinates of the data are given by</s></p><formula xml:id="formula_7">y r r ( , , ) ( , , ) . t s d U t s d T = - ( )<label>(8)</label></formula><p><s>that captures most of the variance of the data by maximizing the function L with respect to u subject to the normalization constraint u T u = 1.</s><s>The solution corresponds to the first axis of the coordinate system that PCA constructs.</s><s>If we are looking for several mutually orthogonal axes, these can be conveniently summarized into an</s></p><formula xml:id="formula_8">N × n orthogonal matrix, U = [u 1 ,…,u n ].</formula><p><s>To find the maximum amount of variance that falls into the subspace spanned by these axes, we need to maximize Single cell responses are random combinations of these two components.</s><s>We assume that N = 50 neurons have been recorded, five of which are shown here.</s><s>The noisy variability of the responses was obtained by transforming the deterministic, linear mixture of each neuron into 10 inhomogeneous Poisson spike trains, and then re-estimating the firing rates by low-pass filtering and averaging the spike trains.</s><s>This type of noise may be considered more realistic, even if it deviates from the assumptions in the main text.</s><s>In our numerical example, this did not prove to be a problem.</s><s>To systematically address such problems, however, one may apply a variance-stabilizing transformation to the data, such as taking the square-root of the firing rates before computing the covariance matrix (see e.g., <ref type="bibr" target="#b6">Efron, 1982)</ref>.</s><s>(C) PCA uncovers the underlying two-dimensionality of the data, but the resulting coordinates do not demix the separate sources of firing rate variance.</s><s>To solve these problems, we need to separate the different causes of firing rate variability.</s><s>In the context of our example, we can attribute changes in the firing rates to two separate sources, both of which contribute to the covariance in Eq. 6.</s><s>First, firing rates may change due to the externally applied stimulus s. Second, firing rates may change due to the internally generated decision d.</s></p><formula xml:id="formula_9">L C U CU UU I i T i T T n i n = = = = ∑ u u tr subject to ( ) , 1<label>(7)</label></formula><p><s>To account for these separate sources of variance in the population response, we suggest to estimate one covariance matrix for every source of interest.</s><s>Such a covariance matrix needs to be specifically targeted toward extracting the relevant source of firing rate variance without contamination by other sources.</s><s>Naturally, this step is somewhat problem-specific.</s><s>For our example, we will first focus on the problem of estimating firing rate variance caused by the stimulus separately from firing rate variance caused by the decision.</s><s>When averaging over all stimuli, we obtain the marginalized firing rates r(t,d) = 〈r(t,s,d)〉 s .</s><s>The covariance caused by the stimulus is then given by the N × N matrix</s></p><formula xml:id="formula_10">C t s d t d t s d t d s T t s d = - ( ) - ( ) r r r r ( , , ) ( , ) ( , , ) ( , ) . , ,<label>(13)</label></formula><p><s>We will refer to C s as the marginalized covariance matrix for the stimulus.</s><s>We can repeat the procedure for the decision-part of the task.</s><s>Marginalizing over decisions, we obtain r(t,s) = 〈r(t,s,d)〉 d and</s></p><formula xml:id="formula_11">C t s d t s t s d t s d T t s d = - ( ) - ( ) r r r r ( , , ) ( , ) ( , , ) ( , ) . , ,<label>(14)</label></formula><p><s>Having two different covariance matrices, one may now perform two separate PCAs, one for each covariance matrix.</s><s>In turn, one obtains two separate coordinate systems, one in which the principal axes point into the directions of state space along which firing rates vary if the stimulus is changed, the other in which they point into the directions along which firing rates vary if the decision changes.</s></p><p><s>For the toy model, it is readily seen that the marginalized covariance matrices are given by C</s></p><formula xml:id="formula_12">M H s T s = + a a 1 1 11 , and C M H d T d = + a a 2 2 22 , with M s,11 = 〈(z 1 (t,s) -z 1 (t)) 2 〉 and M d,22 = 〈(z 2 (t,d) -z 2 (t)) 2 〉.</formula><p><s>Consequently, the principal eigenvectors of C s and C d will be equivalent to the mixing coefficients a 1 and a 2 , at least as long as the variances M s,11 and M d,22 are much larger than the size of the noise, which is given by tr(H).</s></p><p><s>If the noise term is not negligible, it will force the eigenvectors away from the actual mixing coefficients.</s><s>This problem can be alleviated by using the orthogonality condition, a a 1 2 0 T = , which implies that there are separate sources of variance for the stimulus-and decision-components.</s><s>To this end, we can seek to divide the full space into two subspaces, one that captures as much as possible about the stimulus-dependent covariance C s , and another, that captures as much as possible about the decision-dependent covariance C d .</s><s>Our goal will then be to maximize the function</s></p><formula xml:id="formula_13">L U C U U C U T s T d = ( ) + ( ) tr tr 1 1 2 2 (15)</formula><p><s>with respect to the two orthogonal matrices U 1 and U 2 whose columns contain the basis vectors of the respective subspaces.</s><s>The first term in Eq. 15 captures the total variance falling into</s></p><p><s>These new coordinates are called the principal components.</s><s>Note that the new coordinate system has a different origin from the old one, since we subtracted the vector of mean firing rates, r.</s><s>Consequently, the principal components can take both negative and positive values.</s><s>Note also that the principal components are only defined up to a minus sign since every coordinate axis can be reflected along the origin.</s><s>For our artificial data set, only two eigenvalues are non-zero, so that two principal components suffice to capture the complete variance of the data.</s><s>The data in these two new coordinates, y 1 (t,s,d) and y 2 (t,s,d), are shown in Figure <ref type="figure" target="#fig_0">1C</ref>.</s></p><p><s>Our toy model shows how PCA can succeed in summarizing the population response, yet it also illustrates the key problem of PCA: just as the individual neurons, the components mix information about the different task parameters (Figure <ref type="figure" target="#fig_0">1C</ref>), even though the original components do not (Figure <ref type="figure" target="#fig_0">1A</ref>).</s><s>The underlying problem is that PCA ignores the causes of firing rate variability.</s><s>Whether firing rates have changed due to the external stimulus s, due to the internally generated decision d, or due to some other cause, they will enter equally into the computation of the covariance matrix and therefore not influence the choice of the coordinate system constructed by PCA.</s></p><p><s>To make these notions more precise, we compute the covariance matrix of the simulated data.</s><s>Inserting Eq. 3 into Eq.</s><s>6, we obtain</s></p><formula xml:id="formula_14">C M M M H T T T T = + + +     + a a a a a a a a 1 1 11 2 2 22 1 2 2 1 12 ,<label>(9)</label></formula><p><s>where</s></p><formula xml:id="formula_15">M</formula><formula xml:id="formula_16">M z t d z t d 22 2 2 2 = - ( ( , ) ) , ,<label>(10)</label></formula><formula xml:id="formula_17">M z t z z t z t 12 1 1 2 2 = - - ( ( ) )( ( ) ) . (<label>(11)</label></formula><formula xml:id="formula_18">)<label>12</label></formula><p><s>Principal component analysis will only be able to segregate the stimulus-and decision-dependent variance if the mixture term M 12 vanishes and if the variances of the individual components, M 11 and M 22 , are sufficiently different from each other.</s><s>However, if the two underlying components z 1 (t,s) and z 2 (t,d) are temporally correlated, then the mixture term M 12 will be non-zero.</s><s>Its presence will then force the eigenvectors of C away from a 1 and a 2 .</s><s>Moreover, even if the mixture term vanishes, PCA may still not be able to retrieve the original mixture coefficients, if the variances of the individual components, M 11 and M 22 are too close to each other when compared to the magnitude of the noise: in this case the eigenvalue problem becomes degenerate.</s><s>In general, the covariance matrix therefore mixes different origins of firing rate variance rather than separating them.</s><s>While PCA allows us to reduce the dimensionality of the data, the coordinate system found may therefore provide only limited insight into how the different task parameters are represented in the neural activities.</s></p><p><s>forth between the single cell and population level description of the neural activities.</s><s>Just as in PCA, we can project the original firing rates of the neurons onto the new coordinates,</s></p><formula xml:id="formula_19">y r r ( , , ) ( , , ) , t s d U t s d T = - ( )<label>(18)</label></formula><p><s>and the two leading coordinates for the toy model are shown in Figure <ref type="figure" target="#fig_0">1D</ref>.</s><s>These components correspond approximately to the original components, z 1 (t,s) and z 2 (t,d).</s><s>In turn, we can reconstruct the activity of each neuron by inverting the coordinate transform,</s></p><formula xml:id="formula_20">r y r ( , , ) ( , , ) . t s d U t s d = +<label>(19)</label></formula><p><s>For every neuron this yields a set of N reconstruction coefficients which correspond to the rows of U.</s></p><p><s>Since two coordinates were sufficient to capture most of the variance in the toy example, the firing rate of every neuron can be reconstructed by a linear combination of these two components, y 1 (t,s,d) and y 2 (t,s,d).</s><s>For each neuron, we thereby obtain two reconstruction coefficients, u i1 and u i2 .</s><s>The set of all reconstruction coefficients constitutes a cloud of points in a two-dimensional space.</s><s>The distribution of this cloud, together with the activities of several example neurons are shown in Figure <ref type="figure" target="#fig_2">2</ref>.</s><s>This plot allows us to link the single cell with the population level by visualizing how the activity of each neuron is composed out of the two underlying components.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>generalIzatIons to more than two Parameters</head><p><s>In our toy example, we have assumed that each task parameter is represented by a single component.</s><s>We note that this is a feature of our specific example.</s><s>In more realistic scenarios, a single the subspace spanned by the columns of U 1 , and the second term the total variance falling into the subspace given by U 2 .</s><s>Writing U = [U 1 ,U 2 ], we obtain an orthogonal matrix for the full space, and the orthogonality conditions are neatly summarized by UU T = I.</s><s>As shown in the Appendix, the maximization of Eq. 15 under these orthogonality constraints can be solved by computing the eigenvectors and eigenvalues of the difference of covariance matrices,</s></p><formula xml:id="formula_21">D C C s d = -.<label>(16)</label></formula><p><s>In this case, the eigenvectors belonging to the positive eigenvalues of D form the columns of U 1 and the eigenvectors belonging to the negative eigenvalues of D form the columns of U 2 .</s><s>As with PCA, the positive or negative eigenvalues can be sorted according to the amount of variance they capture about C s and C d .</s></p><p><s>For the simulated example, we obtain</s></p><formula xml:id="formula_22">D M M T s T d = - a a a a 1 1 11 2 2 22 , , ,<label>(17)</label></formula><p><s>where the noise term H has now dropped out.</s><s>Diagonalization of D results in two clearly separated eigenvalues, M s,11 and -M d,11 , and in two eigenvectors, a 1 and a 2 , that correspond to the original mixing coefficients.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>lInkIng the PoPulatIon level and the sIngle cell level</head><p><s>As a result of the above method, we obtain a new coordinate system, whose basis vectors are given by the columns of the matrix U.</s></p><p><s>This coordinate system provides simply a different, and hopefully useful, way of representing the population response.</s><s>One major advantage of orthogonality is that one can easily move back and Eq.</s><s>24 with standard gradient ascent methods.</s><s>In any case, it may often be a good idea to use PCA on the full covariance matrix of the data, Eq. 6, to reduce the dimensionality of the data set prior to the demixing procedure.</s><s>Indeed, this preprocessing step was applied in <ref type="bibr" target="#b16">Machens et al. (2010)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>further generalIzatIons and lImItatIons of the method</head><p><s>The above formulation of the problem may be further generalized by allowing individual components to mix parameters in nontrivial ways.</s><s>To study this scenario in a simple example, imagine that in the above two-alternative-forced choice task, in addition to the stimulus-and decision-dependent component, there were a purely time-dependent component, z 3 (t), locked to the time structure of the task, so that</s></p><formula xml:id="formula_23">r a a a c n ( , , ) ( , ) (, ) ( ) ( ). t s d z t s z t d z t t = + + + + 1 1 2 2 3 3 (<label>25</label></formula><formula xml:id="formula_24">)</formula><p><s>This scenario is illustrated in Figures <ref type="figure" target="#fig_3">3A,</ref><ref type="figure">B</ref>.</s><s>As before, we can compute marginalized covariance matrices, that capture the covariance due to the stimuli s, the decisions d, or the time points t.</s><s>While the marginalized covariance matrices for the stimuli and decisions, C s and C d , have one significant eigenvalue each, and thereby capture the relevant component (Figure <ref type="figure" target="#fig_3">3C</ref>), the marginalized covariance matrix for time, C t , now has three significant eigenvalues, and therefore does not allow us to retrieve the purely time-dependent component z 3 (t).</s><s>The reason for this failure is that all three components in Eq. 25 have a time-dependence that cannot be averaged out.</s><s>By design, the stimulus-averaged first component, z 1 (t) = 〈z 1 (t,s)〉 s , and the decision-averaged second component, z 2 (t) = 〈z 2 (t,d)〉 d do not vanish.</s><s>In other words, the stimulus-and decision-components have intrinsic time-dependent variance that cannot be separated from the stimulus-or decision-induced variance.</s></p><p><s>Consequently, the subspace spanned by the first three eigenvectors of C t overlaps with the respective subspaces spanned by the first eigenvectors of C s and C d .</s><s>One way to visualize this overlap is to take the five relevant eigenvectors (three for C t , one for C s , and one for C d ) and compute how much of the variance of each marginalized covariance matrix they capture.</s><s>To do so, we compute the "confusion matrix"</s></p><formula xml:id="formula_25">S C C ij i T j i j = u u tr( ) . (<label>26</label></formula><formula xml:id="formula_26">)</formula><p><s>This confusion matrix measures what percentage of the variance attributed to the j-th cause is captured by the i-th coordinate.</s><s>For the above example, it is illustrated in Figure <ref type="figure" target="#fig_3">3D</ref>.</s><s>If in one row of this matrix, more than one entry is significantly above 0, then more than one covariance matrix has significant variance along that direction of state space.</s><s>Whereas the eigenvectors of the C s and C d matrix do not interfere with each other, i.e., they are approximately orthogonal, the eigenvectors of the C t matrix interfere with both the C s and C d eigenvectors, i.e., the respective subspaces overlap.</s><s>The method introduced above will still yield a result in this case, however, the new coordinate system will generally not retrieve the original components.</s></p><p><s>An ad hoc solution to this problem may be to section the threedimensional eigenvector subspace of C t , and identify a direction that is orthogonal to the first eigenvectors of C s and C d , which will task parameter could potentially be represented by more than one component.</s><s>For instance, if one set of neurons fires transiently with respect to a stimulus s, but another set of neurons fires tonically, then the firing rate dynamics of the stimulus representation are already two-dimensional, even without taking the decision into account.</s><s>In such a case, we can still use the method described above to retrieve the two subspaces in which the respective components lie.</s></p><p><s>However, the number of task parameters will often be larger than two.</s><s>In the two-alternative-forced choice task, there are at least four parameters that could lead to changes in firing rates: the timing of the task, t, potentially related to anticipation or rhythmic aspects of a task, the stimulus, s, the decision, d, and the reward, r.</s><s>Even more task parameters could be of interest, such as those extracted from previous trials etc.</s></p><p><s>These observations raise the question of how the method can be generalized if there are more than two task parameters to account for.</s><s>To do so, we write the relevant parameters into one long vector  = (θ 1 ,θ 2 ,…,θ M ), and assume that the firing rates of the neurons are linear mixtures of the form</s></p><formula xml:id="formula_27">r a a ( , ) (, ) ( , ) t z t z t  = + + 11 11 1 1 2 12 1 θ θ  (20) + + + a a 21 21 2 2 2 22 2 z t z t ( , ) (, ) θ θ  (21) + + a M M M z t 1 1 ( , ) , θ <label>(22)</label></formula><p><s>where each task parameter is now represented by more than one component.</s><s>For each parameter, θ i , we can compute the marginalized covariance matrix,</s></p><formula xml:id="formula_28">C t t t t i T t i i = - ( ) - ( ) r r r r ( , ) ( , ) ( , ) ( , ) , ,      θ θ (23)</formula><p><s>which measures the covariance in the firing rates due to changes in the parameter θ i .</s><s>Diagonalizing each of these covariance matrices will retrieve the various subspaces corresponding to the different mixture coefficients.</s><s>For instance, when diagonalizing C 1 , we obtain the subspace for the components that depend on the parameter θ 1 .</s><s>The relevant eigenvectors of C 1 will therefore span the same subspace as the mixture coefficients a 11 , a 12 , etc., in Eq. 22.</s></p><p><s>As before, the method's performance under additive noise can be enhanced by maximizing a single function (see Appendix)</s></p><formula xml:id="formula_29">L U C U i T i i i M = ( ) = ∑ tr 1 (<label>24</label></formula><formula xml:id="formula_30">)</formula><p><s>subject to the orthogonality constraint</s></p><formula xml:id="formula_31">U T U = I for U = [U 1 ,U 2 ,…,U M ].</formula><p><s>Maximization of this function will force the firing rate variance due to different parameters θ i into orthogonal subspaces (as required by the model).</s><s>If M = 1, then maximization results in a standard PCA.</s></p><p><s>In the case M = 2, maximization requires the diagonalization of the difference of covariance matrices C 1 -C 2 , as in Eq. 16.</s><s>In the case M &gt; 2, various algorithms can be constructed to find local maxima of L (see e.g., <ref type="bibr" target="#b3">Bolla et al., 1998)</ref>.</s><s>To our knowledge, a full understanding of the global solution structure of the maximization problem does not exist for M &gt; 2. In the Appendix, we show how to maximize  <ref type="figure" target="#fig_3">3E,</ref><ref type="figure">F,</ref><ref type="figure">G</ref>).</s><s>While feasible in our toy scenario, these ad hoc procedures are not guaranteed to work for real data, when more dimensions are involved, and then correspond to the purely time-dependent component z 3 (t).</s><s>Alternatively, we could restrict the estimation of C t to the time before stimulus onset, so that the covariance matrix is no longer contaminated by time-dependent variance from the stimulus-or individual neural responses is often not sufficient, hence the quest for methods that provide a useful and interpretable summary of the population response.</s></p><p><s>To provide such a summary, we made one crucial assumption.</s><s>We assumed that the heterogeneity of neural responses is caused by a simple mixing procedure in which the firing rates of individual neurons are random, linear combinations of a few fundamental components.</s><s>We believe that such a scenario is likely to be responsible for at least part of the observed response diversity.</s><s>Higher-level areas of the brain are known to integrate and process information from many other areas in the brain.</s><s>The presumed fundamental components could be given by the inputs and outputs of these areas.</s><s>If such components are mixed at random at the level of single cells, then upstream or downstream areas can access the relevant information with simple linear and orthogonal read-outs.</s><s>Such linear population read-outs have long been known to work quite well in various neural systems <ref type="bibr" target="#b29">(Seung and Sompolinsky, 1993;</ref><ref type="bibr" target="#b27">Salinas and Abbott, 1994)</ref>.</s></p><p><s>To retrieve the components from recorded neural activity, and thereby at least partly reduce the response heterogeneity, we suggest to estimate the covariances in the firing rates that can be attributed to the experimentally controlled, external task parameters.</s><s>Using these marginalized covariance matrices, we showed how to construct an orthogonal coordinate system such that individual coordinates capture the main aspects of the taskrelated neural activities and the coordinate system as a whole captures all aspects of the neural activities.</s><s>In the new coordinate system, firing rate variance due to different task parameters is projected onto orthogonal coordinates, making visualization and interpretation of the data particularly easy.</s><s>We note, though, that the existence of a useful, orthogonal coordinate system is not guaranteed by the method, but can only be a feature of the data.</s><s>Our method will generally not return useful results if mixing is linear, but not orthogonal, or if mixing is non-linear.</s><s>Nonetheless, the case of non-orthogonal, linear mixing, may still be investigated through separate PCAs on the different marginalized covariance matrices.</s></p><p><s>Other methods exist that address similar goals.</s><s>Most prominently, application of canonical correlation analysis (CCA) to the type of data discussed here would also construct a coordinate system whose choice is influenced by knowledge about the task structure.</s><s>In our context, CCA would seek a coordinate axis in the state space of neural responses and a coordinate axis in the space of task parameters, such that the correlation between the two is maximized.</s><s>Whether this method would yield a useful, i.e., interpretable, coordinate system for real data sets remains open to investigation.</s><s>CCA has recently been proposed as a method to construct population responses in sensory systems <ref type="bibr" target="#b17">(Macke et al., 2008)</ref> and as a way to correlate electrophysiological with fMRI data <ref type="bibr" target="#b2">(Biessmann et al., 2009)</ref>.</s></p><p><s>Further extensions and generalizations of PCA exist, some of which are specifically targeted to the type of data we have discussed here.</s><s>The work of <ref type="bibr" target="#b33">Yu et al. (2009)</ref>, for instance, explicitly addresses the problems that are incurred by estimating firing rates more complex confusion matrices may result.</s><s>However, the latter solution demonstrates that by a judicious choice of marginalized covariance matrices, one may sometimes be able to avoid such problems of non-separability.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>connectIon to blInd source seParatIon methods</head><p><s>In all of these scenarios, we assumed that the firing rates r are linear mixtures of a set of underlying sources z, each with mean 0, so that</s></p><formula xml:id="formula_32">r z c. = + A (27)</formula><p><s>The problem that we have been describing then consists in estimating the unknown sources, z, the unknown mixture coefficients, A, and the unknown bias parameters c from the observed data, r.</s><s>Without loss of generality, we can assume that the sources are centered so that 〈z〉 = 0. Ours is therefore a specific version of the much-studied blind source separation problem (see e.g., <ref type="bibr" target="#b19">Molgedey and Schuster, 1994;</ref><ref type="bibr" target="#b1">Bell and Sejnowski, 1995)</ref>.</s><s>In many standard formulations of this problem, one assumes that the sources are uncorrelated, or even statistically independent, which implies that the covariance matrix of the sources, M = 〈zz T 〉 t , is diagonal.</s></p><p><s>In our case, we do not want to make this assumption, which rules out the use of many blind source separation methods, such as independent component analysis <ref type="bibr" target="#b12">(Hyvärinen et al., 2001)</ref>.</s><s>On the upside, we do have additional information, in the form of n task parameters, that provide indirect clues toward the underlying sources.</s><s>More specifically, we assume that the sources are of the form z k (t,θ k ) where θ k denotes a single task parameter, or a specific combination of task parameters.</s><s>For each task parameter, we can estimate the marginalized covariance matrix C i , which in turn is given by C</s></p><formula xml:id="formula_33">i = AM i A T with M t t t t i T t i i = -〈 〉 ( ) -〈 〉 ( ) z z z z ( , )<label>( , )</label></formula><p><s>As long as different task parameters are distributed over different components, the matrix M i will be block-diagonal.</s><s>In the most general case, however, as discussed above, this will not be true.</s><s>If one parameter is shared among several components, then the respective marginalized covariance matrix will capture variance from all of these components, and maximization of Eq. 24 will not necessarily retrieve the original components.</s><s>Future work may show how this general, semi-blind source separation problem can be solved by using knowledge about the structure of the marginalized M-matrices.</s><s>For now, we suggest that in many practical scenarios, a judicious choice of covariance measurements, for instance, by focusing on particular time intervals of a task etc., may help to partly reduce the problem to those that are completely separable, as in Eq. 22.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>dIscussIon</head><p><s>In this article, we addressed the problem of analyzing neural recordings with strong response heterogeneity.</s><s>A key problem for these data sets is first and foremost the difficulty of visualizing the neural activities at the population level.</s><s>Simply parsing through prior to the dimensionality reduction.</s><s>They show how to combine these two separate steps into a single one using the theory of Gaussian processes.</s><s>Their work is therefore complementary to ours, and could potentially be incorporated into the methodology introduced here.</s></p><p><s>Methods to summarize population activity have been employed in many different neurophysiological settings <ref type="bibr" target="#b9">(Friedrich and Laurent, 2001;</ref><ref type="bibr" target="#b30">Stopfer et al., 2003;</ref><ref type="bibr" target="#b23">Paz et al., 2005;</ref><ref type="bibr" target="#b20">Narayanan and Laubach, 2009;</ref><ref type="bibr" target="#b33">Yu et al., 2009)</ref>.</s><s>Our main aim here was to modify these methods such that experimentally controlled parameters are taken into account and influence the construction of a new coordinate system.</s><s>A first application of this method to neural responses from the prefrontal cortex revealed new aspects of a Assume that our goal is to separate the state space into two mutually orthogonal subspaces, such that most of the variance measured by C 1 falls into one subspace, and most of the variance measured by C 2 into the orthogonal subspace.</s><s>To do so, we define a matrix U 1 whose columns contain a set of vectors u i with i = 1,…,M, and a matrix U 2 whose columns contain a set of vectors u i with i = M + 1,…,N.</s><s>All vectors are mutually orthonormal, so that u u i T j i j = δ .</s><s>Our goal will then be to maximize</s></p><formula xml:id="formula_34">L U C U U C U T T = ( ) + ( ) tr tr 1 1 1 2 2 2 . (<label>29</label></formula><formula xml:id="formula_35">)</formula><p><s>The orthogonality constraint is given by the condition</s></p><formula xml:id="formula_36">U U U U I T T 1 1 2 2 + = .</formula><p><s>By the rules of traces, and using this constraint, we obtain The last line is maximized if the matrix U 1 contains all the eigenvectors that correspond to the positive eigenvalues of C 1 -C 2 .</s><s>Consequently, the matrix U 2 will contain all the eigenvectors corresponding to the negative eigenvalues of C 1 -C 2 .</s><s>The extremal eigenvalues of the difference matrix, i.e., the largest and the smallest, correspond to the two eigenvectors that capture most of the variance in C 1 and C 2 under the given trade-off.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>addItIve noIse does not affect the maxImum</head><p><s>To study the maximization problem under condition of additive noise, we assume n covariance measurements so that</s></p><formula xml:id="formula_37">C S H i i = + , (<label>30</label></formula><formula xml:id="formula_38">)</formula><p><s>where S i is the signal-part and H the noise part of the covariance matrix.</s><s>Since the noise acts additively on the firing rates, every covariance measurement is polluted with the same amount of noise, H, compare Eq. 23.</s><s>When maximizing Eq. 24 with respect to an orthogonal transform, U = [U 1 ,…,U n ], we will then target only the signal part of the covariance matrices, but not the noise part.</s><s>To see that, we note that is a quadratic optimization problem under quadratic constraints which can be solved numerically by any of a standard set of methods.</s><s>A specific method to solve a related problem has been proposed in <ref type="bibr" target="#b3">Bolla et al. (1998)</ref>.</s><s>Here, we present an algorithm based on a simple gradient ascent.</s><s>First, we need an initial guess for the U i .</s><s>We suggest to use the first principal axes (eigenvector with largest eigenvalue) of the marginalized covariance matrix C i .</s><s>This procedure, however, will generally yield a set of matrices U i which are not mutually orthogonal.</s><s>To orthogonalize these vectors, one can use the method of symmetric orthogonalization.</s><s>Given the initial guess for the matrix, U = [U 1 ,…,U n ], the transform</s></p><formula xml:id="formula_39">U U U U T → - ( ) /</formula><p><s>1 2 (37)</s></p><p><s>will yield a matrix with mutually orthogonal columns so that U T U = I.</s><s>We will use this matrix U as our initial guess for the gradient ascent.</s></p><p><s>Next, let us define the matrix Q i as an n × n matrix of zeros in which only the entry in the i-th column and i-th row is 1.</s><s>The maximization over the captured variances, Eq. 36, can then be rewritten as (39)</s></p><p><s>Hence, to maximize L on the manifold of orthogonal matrices, U, we need to iterate the equations,</s></p><formula xml:id="formula_40">U U L U → + ∂ ∂ α (40) U U U U T → - ( ) , / 1 2 (41)</formula><p><s>where the first equation performs a step toward the maximum, whose length is determined by the learning rate α, and the second step projects U back onto the manifold of orthogonal matrices.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 |</head><label>1</label><figDesc><div><p><s>Figure 1 | Mixing and demixing of neural responses in a simulated two-alternative forced choice task.</s><s>(A) We assume that neural responses are linear mixtures of two underlying components, one of which encodes the stimulus (left, colors representing different stimuli), and one of which encodes the binary decision (right) of a two-alternative-forced choice task.</s><s>For concreteness, we assume that the task comprised M s = 8 stimuli and M d = 2 decisions.</s><s>(B) Single cell responses are random combinations of these two components.</s><s>We assume that N = 50 neurons have been recorded, five of which are shown here.</s><s>The noisy variability of the responses was obtained by transforming the deterministic, linear mixture of each neuron into 10 inhomogeneous Poisson spike</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head></head><label></label><figDesc><div><p><s>By explicitly contrasting these separate sources, we can retrieve the original components up to a sign.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 |</head><label>2</label><figDesc><div><p><s>Figure 2 | Linking the single cell and population level.</s><s>Using the coordinate system retrieved by separating variances, we can illuminate the contributions of each component to the individual neural responses.</s><s>The center shows the contribution of the stimulus-and decision-related components to each individual neuron.</s><s>The surrounding plots show the activity of eight example neurons, corresponding to the respective dots in the center.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 |</head><label>3</label><figDesc><div><p><s>Figure 3 | Heterogeneous responses as a result of linear mixture of three components.</s><s>(A) We now assume that neural responses are constructed from three underlying components, one of which encodes only the task rhythm (left), while the two others encode stimuli and responses, as in Figure 1.</s><s>(B) Single cell responses are random combinations of these three components.</s><s>We again assume that N = 50 neurons have been recorded, five of which are shown here, and response noise was generated as in Figure 1.</s><s>(C) Whereas the marginalized covariance matrices for stimulus and decision, C s and C d , have only one significant eigenvalue, the one for time, C t , features three eigenvalues above the noise floor.</s><s>(D) The confusion matrix displays the percentage of variancecaptured by the different components (y-axis) with respect to the different marginalized covariance matrices (x-axis).</s><s>The C s row shows, for instance, that the first eigenvector of C s captures a significant amount of variance from the C s matrix (which is good), but it also captures a significant amount of variance from the C t matrix (which is bad).</s><s>(e) By estimating the time-dependent covariance over a time window limited to t ∈[0,2], we can reduce the number of significant eigenvalues to one.</s><s>(F) In turn, every row of the confusion matrix has only one entry, showing that every component captures the variance of one marginalized covariance matrix only.</s><s>(g) The firing rates projected onto the components from (F).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head></head><label></label><figDesc><div><p><s>project the variance into the relevant subspaces, target the difference of covariance matrices, C i -C n , so that the noise drops out, since C i -C n = S i -S n .</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head></head><label></label><figDesc><div><p><s>11and M 22 denote firing rate variance due to the first and second component, respectively, M 12 denotes firing rate variance due to a mix of the two components, and H is the covariance matrix of the noise.</s><s>Using the short-hand notations z</s></p></div></figDesc><table><row><cell>M</cell><cell>11</cell><cell>=</cell><cell>z t s z 1 -( ( , )</cell><cell>1</cell><cell>2 )</cell><cell>t s ,</cell><cell>,</cell></row></table><note><p><s>1 (t) = 〈z 1 (t,s)〉 s , z 2 (t) = 〈z 2 (t,d)〉 d , and z i = 〈z i (t)〉 t for i ∈[1,2], the different variances are given by</s></p></note></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>I thank <rs type="person">Claudia Feierstein</rs>, <rs type="person">Naoshige Uchida</rs>, and <rs type="person">Ranulfo Romo</rs> for access to their multi-electrode data which have been the main source of inspiration for the present work.I furthermore thank <rs type="person">Carlos Brody</rs>, <rs type="person">Matthias Bethge</rs>, <rs type="person">Claudia Feierstein</rs>, and <rs type="person">Thomas Schatz</rs> for helpful discussions along various stages of the project.My work is supported by an <rs type="person">Emmy-Noether</rs> grant from the <rs type="funder">Deutsche Forschungsgemeinschaft</rs> and a Chair d'excellence grant from the <rs type="funder">Agence Nationale de la Recherche</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflict of Interest Statement:</head><p><s>The author declares that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Activity in prefrontal cortex during dynamic selection of action sequences</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Averbeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-W</forename><surname>Sohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="276" to="282" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">An information-maximization approach to blind separation and blind deconvolution</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Bell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Sejnowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1129" to="1159" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Temporal kernel canonical correlation analysis and its application in multimodal neuronal data analysis</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Biessmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Meinecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gretton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rauch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rainer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Logothetis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Müller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mach. Learn</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="5" to="27" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Extrema of sums of heterogeneous quadratic forms</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bolla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Michaletzky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Tusnády</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ziermann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Linear Algebra Appl</title>
+		<imprint>
+			<biblScope unit="volume">269</biblScope>
+			<biblScope unit="page" from="331" to="365" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Timing and neural encoding of somatosensory parametric working memory in macaque prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hernandez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zainos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb. Cortex</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1196" to="1207" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Temporal complexity and heterogeneity of single-neuron activity in premotor and motor cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Churchland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">V</forename><surname>Shenoy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="4235" to="4257" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Transformation theory: how normal is a family of distributions?</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Efron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann. Stat</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="328" to="339" />
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Neural Engineering: Computation, Representation, and Dynamics in Neurobiological Systems</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Eliasmith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Anderson</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+			<publisher>MIT Press</publisher>
+			<pubPlace>Cambridge, MA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Representation of spatial goals in rat orbitofrontal cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Feierstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Quirk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Sosulski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="495" to="507" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Dynamic optimization of odor representations by slow temporal patterning of mitral cell activity</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Laurent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="page" from="889" to="894" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The neural basis of decision making</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Gold</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="535" to="574" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hastie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tibshirani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Friedman</surname></persName>
+		</author>
+		<title level="m">The Elements of Statistical Learning Theory</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Independent Component Analy sis</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hyvärinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Karhunen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Oja</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+			<publisher>Wi l e y InterScience</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Heterogeneous population coding of a short-term memory and decision-task</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Jun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zainos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lemus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="916" to="929" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Neural correlates, computation and behavioural impact of decision confidence</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kepecs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Zariwala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">455</biblScope>
+			<biblScope unit="page" from="227" to="231" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Representation of confidence associated with a decision by neurons in the parietal cortex</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kiani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="page" from="759" to="764" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Functional, but not anatomical, separation of &quot;what&quot; and &quot;when&quot; in prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Machens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="350" to="360" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Receptive fields without spike-triggering</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Macke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bethge</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<editor>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Platt</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Koller</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Y</forename><surname>Singer</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">S</forename><surname>Roweis</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Red Hook, NY</addrLine></address></meeting>
+		<imprint>
+			<publisher>Curran</publisher>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="969" to="976" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The prefrontal cortex: complex neural properties for complex behavior</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="15" to="17" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Separation of a mixture of independent signals using time delayed correlations</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Molgedey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Schuster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="3634" to="3637" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Delay activity in rodent frontal cortex during a simple reaction time task</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">S</forename><surname>Narayanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Laubach</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="2859" to="2871" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Neuronal correlates of a perceptual decision</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Britten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Movshon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">341</biblScope>
+			<biblScope unit="page" from="52" to="54" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Sensorimotor encoding by synchronous neural ensemble activity at multiple levels of the somatosensory system</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A L</forename><surname>Nicolelis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Baccala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C S</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Chapin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">268</biblScope>
+			<biblScope unit="page" from="1353" to="1358" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Emerging patterns of neuronal responses in supplementary and primary motor areas during sensorimotor adaptation</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Paz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Natan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Boraud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Berman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Vaadia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="10941" to="10951" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Integration of what and where in the primate prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rainer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">276</biblScope>
+			<biblScope unit="page" from="821" to="824" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Neuronal correlates of parametric working memory in the prefrontal cortex</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hernandez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lemus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">399</biblScope>
+			<biblScope unit="page" from="470" to="473" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Neuronal correlates of decisionmaking in secondary somatosensory cortex</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zainos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lemus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1217" to="1225" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Vector reconstruction from firing rates</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Salinas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="89" to="107" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Lateral intraparietal cortex and reinforcement learning during a mixed-strategy game</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Seo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Barraclough</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="7278" to="7289" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Simple models for reading neuronal population codes</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Seung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U.S.A</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="10749" to="10753" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Intensity versus identity coding in an olfactory system</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stopfer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Laurent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="991" to="1004" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Matching behavior and the representation of value in the parietal cortex</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Sugrue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">304</biblScope>
+			<biblScope unit="page" from="1782" to="1787" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Speed and accuracy of olfactory discrimination in the rat</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1224" to="1229" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Gaussian-process factor analysis for low-dimensional singletrial analysis of neural population activity</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Cunningham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Santhanam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Ryu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">V</forename><surname>Shenoy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sahani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page" from="614" to="635" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Strategies for neural ensemble data analysis for brain-machine interface (BMI) applications</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zacksenhouse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nemets</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Methods for Neural Ensemble Recordings</title>
+		<editor>
+			<persName><forename type="first">M</forename><forename type="middle">A L</forename><surname>Nicolelis</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Boca Raton, FL</addrLine></address></meeting>
+		<imprint>
+			<publisher>CRC Press</publisher>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="57" to="82" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

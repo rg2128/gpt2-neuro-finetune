@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Active control of arousal by a locus coeruleus GABAergic circuit</title>
+				<funder ref="#_tD9EcwV #_rry2Zpw #_8c45T9j">
+					<orgName type="full">National Institutes of Health</orgName>
+					<orgName type="abbreviated">NIH</orgName>
+				</funder>
+				<funder ref="#_J5mGEBT #_jGvrJmw">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2019-07-14">2019 July 14.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Vincent</forename><surname>Breton-Provencher</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Mriganka</forename><surname>Sur</surname></persName>
+							<email>msur@mit.edu</email>
+							<idno type="ORCID">0000-0003-2442-5671</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Brain and Cognitive Sciences</orgName>
+								<orgName type="institution">Picower Institute for Learning and Memory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Active control of arousal by a locus coeruleus GABAergic circuit</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Neuroscience</title>
+						<title level="j" type="abbrev">Nat Neurosci</title>
+						<idno type="ISSN">1097-6256</idno>
+						<idno type="eISSN">1546-1726</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">22</biblScope>
+							<biblScope unit="issue">2</biblScope>
+							<biblScope unit="page" from="218" to="228"/>
+							<date type="published" when="2019-07-14">2019 July 14.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7BA8CF89367DCC62789C544E1DB5A06C</idno>
+					<idno type="DOI">10.1038/s41593-018-0305-z</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Arousal responses linked to locus coeruleus noradrenergic (LC-NA) activity affect cognition.</s><s>However, the mechanisms that control modes of LC-NA activity remain unknown.</s><s>Here, we reveal a local population of GABAergic neurons (LC-GABA) capable of modulating LC-NA activity and arousal.</s><s>Retrograde tracing shows that inputs to LC-GABA and LC-NA neurons arise from similar regions, though a few regions provide differential inputs to one subtype over the other.</s><s>Recordings in the LC demonstrate two modes of LC-GABA responses whereby spiking is either correlated or broadly anti-correlated with LC-NA responses, reflecting anatomically similar and functionally coincident inputs, or differential and non-coincident inputs, to LC-NA and LC-GABA neurons.</s><s>Coincident inputs control the gain of LC-NA mediated arousal responses, while non-coincident inputs, such as from the prefrontal cortex to LC, alter global arousal levels.</s><s>These findings demonstrate distinct modes by which an inhibitory LC circuit regulates arousal in the brain.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Noradrenergic (NA) neurons located in the locus coeruleus (LC) send broad projections to a wide variety of brain regions, and their activity correlates with levels of arousal and cognitive performance <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref> .</s><s>During wakefulness, fluctuations in LC-NA arousal modify plasticity <ref type="bibr" target="#b6">7</ref> , shift attention <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b7">8</ref> , induce anxiety <ref type="bibr" target="#b8">9</ref> , or affect discrimination and general sensory perception <ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref> .</s><s>Even though the effect of NA-mediated arousal on brain processing has become clearer in recent years, we still have a poor understanding of the mechanisms that regulate NA activity.</s></p><p><s>showed an average of 87±1% and 86±2% of cells co-expressing either GABA or GAD67 respectively (Supplementary Fig. <ref type="figure" target="#fig_0">1a,</ref><ref type="figure">b,</ref><ref type="figure">e</ref>).</s><s>In contrast, the expression of Gad2-Cre in tyrosine hydroxylase (TH) positive somas was 0.4±0.2% and in neuropeptide S expressing neurons, which have been shown to be expressed in a subset of LC neurons <ref type="bibr" target="#b27">28</ref> , 0.8±0.8%</s><s>(Supplementary Fig. <ref type="figure" target="#fig_0">1c,</ref><ref type="figure">d,</ref><ref type="figure">e</ref>).</s><s>GABAergic processes entering the LC-NA region were apposed to TH expressing somas, and staining against the vesicular GABAergic transporter (VGAT) revealed the existence of GABAergic contacts (Supplementary Fig. <ref type="figure" target="#fig_0">1f,</ref><ref type="figure">g</ref>).</s></p><p><s>To directly assess inhibitory synapses between LC-GABA and LC-NA neurons, we performed acute slice electrophysiological recordings in the LC of Gad2-Cre mice injected with Flox-ChR2 virus (Fig. <ref type="figure" target="#fig_0">1f</ref>).</s><s>Patched neurons were filled with biocytin during whole-cell recording and identified as LC-NA neurons by post-hoc immunohistochemistry against tyrosine hydroxylase (TH) (Fig. <ref type="figure" target="#fig_0">1g</ref>).</s><s>Current-clamp recordings from Gad2-mCherry-ChR2 expressing neurons showed that a 5 ms pulse of blue light was sufficient to elicit a single action potential at short latency (5/5 Gad2-ChR2 neurons recorded) (Fig. <ref type="figure" target="#fig_0">1h,</ref><ref type="figure">i</ref>).</s><s>Activation of Gad2-ChR2 neurons significantly decreased the spontaneous firing activity of THexpressing LC-NA neurons, recorded in cell-attached mode (Fig. <ref type="figure" target="#fig_0">1j-l</ref>).</s><s>To assess the synaptic basis of this inhibition, we monitored blue-light evoked inhibitory post-synaptic currents (IPSCs) in TH neurons by performing whole-cell voltage-clamp recordings in these cells.</s><s>Baseline recording with bath application of AP5 and CNQX, to block fast glutamatergic synaptic transmission, showed an average IPSC amplitude of -50.5±15.8</s><s>pA (Fig. <ref type="figure" target="#fig_0">1m,</ref><ref type="figure">n</ref>).</s><s>Blocking glycinergic transmission with strychnine had no effect on the IPSC, but applying bicuculline, a GABAa receptor antagonist, abolished the current (Fig. <ref type="figure" target="#fig_0">1m,</ref><ref type="figure">n</ref>).</s><s>These results thus show that a dense population of GABAergic neurons located in the LC region forms functional synaptic contacts with and inhibits LC-NA neurons.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>LC-GABA neurons reduce LC-NA-mediated arousal</head><p><s>To test if LC-GABA neurons affect LC-mediated arousal, we first established the relationship between LC-NA activity and pupil size of awake head-restrained mice (Fig. <ref type="figure" target="#fig_1">2a,</ref><ref type="figure">b</ref>).</s><s>We examined whether pupil size correlates with NA activity using two-photon imaging of axons filled with the genetically encoded calcium indicator GCaMP6s in the visual and prefrontal cortex of Dbh-Cre and TH-Cre mice (Supplementary Fig. <ref type="figure" target="#fig_1">2 a,</ref><ref type="figure">b</ref>).</s><s>We found that NA activity correlated positively with pupil size and increased before pupil dilation events (Supplementary Fig. <ref type="figure" target="#fig_1">2 c-f</ref>).</s><s>We also confirmed these data with photo-identification of singleunits recording in the LC of Dbh-Cre animals expressing Flox-ChR2 (Supplementary Fig. <ref type="figure" target="#fig_1">2  g,</ref><ref type="figure">h</ref>).</s><s>As an additional indicator of arousal, we examined body movement along with pupil size and found a tight correlation between the two measures (Supplementary Fig. <ref type="figure" target="#fig_2">3</ref>).</s><s>This finding is consistent with previous studies which have shown that pupil size reflects LC neuronal activity <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b5">6</ref> .</s><s>It also confirms the relationship between LC NA activity, pupil size and global increase in arousal as previously measured with EEG and cortical LFP recordings <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref> and locomotion <ref type="bibr" target="#b3">4</ref> .</s><s>We thus consider pupil size as a useful measure of NAmediated arousal.</s></p><p><s>To demonstrate causality between NA activity and pupil size, we injected a Flox-ChR2-mCherry virus bilaterally in the LC of Dbh-Cre mice (Fig. <ref type="figure" target="#fig_1">2c</ref>), implanted optic fibers connected to a solid-state laser light source in the LC of both hemispheres (Fig. <ref type="figure" target="#fig_1">2c,</ref><ref type="figure">d</ref>), and applied pulsed blue light to mimic the observed increase in LC-NA activity preceding pupil dilation, as recorded in photo-tagged LC-NA units (Supplementary Fig. <ref type="figure" target="#fig_1">2g,</ref><ref type="figure">h</ref>).</s><s>As hypothesized from NA axonal imaging, we observed a robust increase in pupil size after light activation of ChR2-expressing NA neurons (Fig. <ref type="figure" target="#fig_1">2e,</ref><ref type="figure">h</ref>).</s><s>Pupil dilation was dependent on baseline pupil size, since activating LC-NA neurons in periods of already increased arousal produced smaller increases in pupil size, thus explaining the observed trial to trial variability (Supplementary Fig. <ref type="figure" target="#fig_3">4a,</ref><ref type="figure">b</ref>).</s><s>Even moderate activation of LC-NA neurons (pulse duration of 0.1 s at a frequency of 5 Hz) was sufficient to dilate the pupil, and this dilation increased with higher intensities of light activation (Supplementary Fig. <ref type="figure" target="#fig_3">4c,</ref><ref type="figure">d</ref>).</s><s>We did not observe pupil dilation in control experiments using similar patterns of light activation in Dbh-Cre mice expressing only a fluorescent marker (Flex-tdTomato) (Fig. <ref type="figure" target="#fig_1">2h</ref>).</s></p><p><s>Subsequently, we optically silenced LC-NA neurons to examine if their activity was necessary for pupil dilation.</s><s>After injection of Flex-ArchT-mCherry virus in Dbh-Cre mice and implantation of optic fibers, we silenced spontaneous LC-NA activity with green light, and observed pupil constriction (Fig. <ref type="figure" target="#fig_1">2f,</ref><ref type="figure">i</ref>).</s><s>While all Dbh-ArchT mice showed pupil constriction with light, this constriction was not observed in mice expressing the fluorophore alone (Fig. <ref type="figure" target="#fig_1">2i</ref>).</s><s>These results demonstrate that LC-NA activity is sufficient to alter pupil dilation and that a change in NA activity is reliably reflected in pupil size.</s></p><p><s>Our anatomical and slice electrophysiological results suggested that local LC-GABA neurons are positioned to inhibit LC-NA neurons.</s><s>We tested this hypothesis by implanting an optic fiber over the LC in Gad2-Cre mice locally injected with Flox-ChR2 or VGAT-YFP-ChR2, where all inhibitory neurons express ChR2 <ref type="bibr" target="#b28">29</ref> .</s><s>Light activation produced a decrease in pupil size following focal stimulation, which was not observed in control animals (Fig <ref type="figure" target="#fig_1">2g,</ref><ref type="figure">j</ref>).</s><s>Overall, these results demonstrate that local GABA neurons in the LC control the activity of NA neurons, and arousal level as reflected in pupil size.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Inputs to LC-GABA and LC-NA neurons</head><p><s>To further understand the function of LC-GABA neurons with respect to LC-NA neurons, we targeted a modified rabies virus (RV) separately to each subpopulation to examine the anatomical sources of their presynaptic inputs <ref type="bibr" target="#b29">30</ref> .</s><s>We injected two Cre dependent (AAV) "helper" viruses to express the avian-specific retroviral receptor (TVA) and the rabies glycoprotein in Gad2-Cre or Dbh-Cre mice.</s><s>Three weeks after the first injection, we injected the modified RV (rabies-deleted-glycoprotein-mCherry + EnvA) that only infected cells expressing TVA and spread only from cells expressing the glycoprotein (Fig. <ref type="figure" target="#fig_2">3a</ref>).</s><s>We waited an additional week and examined coronal sections of the entire brain.</s><s>Both experiments showed neurons positive for mCherry in a wide range of locations (Fig. <ref type="figure" target="#fig_2">3b,</ref><ref type="figure">c</ref>; and Supplementary Table <ref type="table">1</ref>).</s><s>We counted input neurons and assigned them to different brain regions.</s><s>To visualize the projection patterns to LC-GABA and LC-NA neurons, we created a map of the relative contribution of each brain region to the two subpopulations (Fig. <ref type="figure" target="#fig_2">3d,</ref><ref type="figure">e:</ref> showing regions with &gt; 0.5% total inputs).</s><s>Brain regions contacting LC-NA neurons directly were similar to those reported previously, consisting of diverse structures related to sensory, cognitive, autonomic and motor functions <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b31">32</ref> (Fig. <ref type="figure" target="#fig_2">3d</ref>).</s><s>Nearly all of the approximately 50 regions providing input to LC-NA neurons also projected to LC-GABA neurons (Supplementary Table <ref type="table">1</ref>; Fig. <ref type="figure" target="#fig_2">3e</ref>).</s><s>However, there were variations in the extent of projections; mapping the differential contribution of input regions to the two LC neuron subtypes showed 7 core regions projecting preferentially to LC-GABA versus 2 regions to LC-NA neurons (Fig. <ref type="figure" target="#fig_2">3f</ref>).</s><s>Thus, these findings demonstrate that the two neuronal subtypes in the LC receive largely similar inputs whereas a few regions provide preferential input to one neuronal subtype or another.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Two types of arousal-related neuronal activity in the LC</head><p><s>To understand how LC-NA and LC-GABA neurons integrate their inputs to influence arousal levels in the brain, we recorded from Dbh and Gad2 expressing neurons identified with optogenetics (photo-tagging).</s><s>Dbh-Cre or Gad2-Cre mice were injected with a Flox-ChR2 virus, and light activated neurons were recorded with a 16-channel silicon probe equipped with an optic fiber connected to a laser source (Fig. <ref type="figure" target="#fig_3">4a</ref>).</s><s>The probe was coated with DiI crystals to verify the recording location, together with immunohistochemistry against TH to identify the LC, after each successful session (Fig. <ref type="figure" target="#fig_3">4b</ref>).</s><s>Using this multichannel probe and the use of automated spike sorting, we isolated single units from our extracellular recordings (Fig. <ref type="figure" target="#fig_3">4c</ref>).</s><s>Brief laser pulses (&lt; 5 ms) were applied and units responding to laser pulses with a short delay (&lt; 10 ms) were identified as Dbh-ChR2 or Gad2-ChR2 expressing (Fig. <ref type="figure" target="#fig_3">4d,</ref><ref type="figure">e</ref>).</s><s>Of 433 units recorded in 21 sessions from 13 mice, 19 Dbh-ChR2 and 18 Gad2-ChR2 units were photo-tagged using this method (Fig. <ref type="figure" target="#fig_3">4f-j</ref>).</s><s>The delay and jitter of light-elicited spikes were similar for the Dbh-and Gad2-ChR2 conditions (Fig. <ref type="figure" target="#fig_3">4f-g</ref>).</s><s>The Gad2 units showed higher levels of spontaneous activity and had shorter spike durations than Dbh units (Fig. <ref type="figure" target="#fig_3">4h-j</ref>).</s></p><p><s>We next examined the relationship of Dbh-and Gad2-ChR2 photo-tagged units to pupil size (Fig. <ref type="figure" target="#fig_4">5a</ref>).</s><s>As expected from the axonal calcium imaging data from LC-NA neurons (Supplementary Fig. <ref type="figure" target="#fig_1">2a-f</ref>) and from responses of photo-tagged LC-NA units (Supplementary Fig. <ref type="figure" target="#fig_1">2g,</ref><ref type="figure">h</ref>), pupil dilation was associated with an increase in activity of photo-tagged Dbh-ChR2 units.</s><s>In contrast, the activity of Gad2-ChR2 units was more heterogeneous, with individual units showing negative or positive correlation with pupil size (Fig. <ref type="figure" target="#fig_4">5a</ref>).</s><s>The Pearson correlation coefficient between firing rates of LC units and pupil size (Fig. <ref type="figure" target="#fig_4">5b</ref>) showed that all Dbh units correlated positively with pupil size (Fig. <ref type="figure" target="#fig_4">5b,</ref><ref type="figure">c</ref>).</s><s>This matched the correlation recorded with two-photon calcium imaging of LC-NA axons in the cortex (Supplementary Fig. <ref type="figure" target="#fig_1">2c</ref>) On the other hand, Gad2 units correlated both positively (Gad2+) and negatively (Gad2-) with pupil size (61% and 33% of Gad2 units respectively; Fig. <ref type="figure" target="#fig_4">5c</ref>).</s><s>The activity of Gad2-neurons globally increased during periods of low pupil constriction while Gad2+ and Dbh neurons increased their activity during pupil dilation (Fig. <ref type="figure" target="#fig_4">5d</ref>).</s></p><p><s>We also examined the relationship of 396 units, which were recorded in the same mice but were not photo-tagged, to pupil dilation (Fig. <ref type="figure" target="#fig_4">5b</ref>).</s><s>We classified these units as fast-spiking (FS) or regular-spiking (RS) based on their spike shape, and extracted two clusters by fitting a gaussian mixture model to the data (Supplementary Fig. <ref type="figure" target="#fig_4">5a</ref>).</s><s>The FS and RS clusters overlapped the spikes recorded in Gad2 and Dbh mice (11/18 and 17/19 overlap between Gad2 and FS, and Dbh and RS neurons respectively).</s><s>Spike shapes of some Gad2 neurons were not well separated from Dbh neurons, demonstrating the difficulty of cell-type identification based on spike shape alone <ref type="bibr" target="#b32">33</ref> .</s><s>Still, as for photo-tagged Dbh and Gad2 units, RS units were positively correlated with pupil size whereas FS units were both positively (FS+) and negatively (FS-) correlated in similar proportion to Gad2+ and Gad2-neurons (Supplementary Fig. <ref type="figure" target="#fig_4">5b-e</ref>), indicating a robust classification of these neuron types based on their pupillary effects.</s></p><p><s>We examined more closely the effect of the different types of units on pupil dilation by calculating the cross correlation between spike rate and pupil size (Fig. <ref type="figure" target="#fig_4">5e</ref>).</s><s>The peak in cross-correlation for Dbh and Gad2+ units overlapped, whereas the Gad2-units showed a broad trough in cross-correlation (Fig. <ref type="figure" target="#fig_4">5e,</ref><ref type="figure">f</ref>; see also Supplementary Fig5 f,g).</s><s>To get a better understanding of the timing of different LC units, we aligned their activity to dilation events (Supplementary Fig. <ref type="figure" target="#fig_5">6a</ref>).</s><s>Dbh and Gad2+ units showed a significant increase in their activity preceding dilation, whereas Gad2-units showed no significant modulation in activity during dilation (Supplementary Fig. <ref type="figure" target="#fig_5">6b,</ref><ref type="figure">c</ref>).</s><s>As a net effect, Gad2+ and Dbh activity correlated tightly during dilation and arousal, whereas Gad2-activity was broadly anticorrelated to the rest of LC activity.</s><s>These two types of Gad2 units did not differ in their spontaneous firing rate, their waveform duration or their light evoked response (Supplementary Fig. <ref type="figure" target="#fig_6">7</ref>).</s><s>Thus, Gad2+ and Gad2-units do not necessarily represent separate subpopulations of interneurons based on their firing properties, but rather subpopulations that differ in the inputs they receive.</s><s>Hence, brain regions targeting similarly LC-GABA and LC-NA neurons (e.g.</s><s>LH, CeA, DpMe, PnO or Gi) would be the inputs to Gad2+ (Fig. <ref type="figure" target="#fig_2">3</ref> d,e), whereas Gad2-neurons are wired more toward regions that differentially target LC-GABA neurons (e.g.</s><s>PFC, LHb, SPF, SN, deep layers of SC or some regions of the medulla) (Fig. <ref type="figure" target="#fig_2">3f</ref>).</s></p><p><s>Overall, the two types of activity recorded from photo-tagged Gad2-ChR2 neurons are consistent with the findings of tracing experiments demonstrating similar as well as preferential inputs to LC-NA and LC-GABA neurons (Fig. <ref type="figure" target="#fig_2">3</ref>), and they lead to specific hypotheses about their role.</s><s>In one case, regions providing similar inputs may drive both LC-GABA and LC-NA neurons leading to correlated activity in these neurons, and inhibition could act as a feedforward gain control mechanism for arousal (similar to that seen in the cortex with thalamic inputs <ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b34">35</ref> ).</s><s>In the other case, LC-GABA neurons that are broadly anti-correlated to arousal may be driven by a different input source than LC-NA neurons, allowing for independent positive and negative control of arousal.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Coincident inputs to LC-GABA neurons provide gain control of LC-NA neurons</head><p><s>Our anatomical and electrophysiological results imply that a subset of LC-GABA neurons receives coincident inputs with LC-NA neurons.</s><s>This suggests that feedforward inhibition is present at the level of LC and that local GABA neurons provide gain control to LC-NA neurons.</s><s>We assessed this hypothesis by presenting auditory tone pips that varied randomly in frequency and amplitude.</s><s>Tone pips activate LC neurons <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b18">19</ref> , potentially by direct inputs from the inferior colliculus, the reticular formation of the pons, and the gigantocellular nucleus of the medulla; all these regions provide similar magnitude of input to LC-NA and LC-GABA neurons, as revealed by our anatomical tracer experiments (Fig. <ref type="figure" target="#fig_2">3d-f</ref>).</s><s>Recordings from GCaMP6s-expressing NA axons in the cortex confirmed that LC-NA neurons respond to tone pips (Supplementary Fig. <ref type="figure">8a,</ref><ref type="figure">b</ref>).</s><s>Unit recordings of Dbh-and Gad2-ChR2 neurons (Fig. <ref type="figure" target="#fig_5">6a,</ref><ref type="figure">b</ref>) showed that both responded to tone pips (Fig. <ref type="figure" target="#fig_5">6c</ref>).</s><s>The delay of peak response from the onset of tone pip was 80 ± 14 ms and 51 ± 14 ms for the recorded population of Dbh and Gad2 units respectively (n = 14 and 7 tone responsive units, p = 0.2, two-tailed unpaired t-test, t 19 = 1.3272).</s><s>These data suggest that auditory stimuli activate principally coincident inputs to LC-GABA and LC-NA neurons.</s></p><p><s>Since tone pips evoked responses in both type of LC neurons, we used these stimuli to assess the possible modulation of LC-NA responses by LC-GABA neurons.</s><s>We presented a random and sparse sequence of auditory stimuli of different frequencies and intensities to a group of mice, while recording pupil diameter (Fig. <ref type="figure" target="#fig_5">6d</ref>).</s><s>Simultaneous recording of pupil diameter and LC-NA activity showed that increase in pupil size followed the increase in LC-NA activity to auditory stimuli (Supplementary Fig. <ref type="figure">8b</ref>).</s><s>Silencing NA neurons prevented this pupil dilation response (Supplementary Fig. <ref type="figure">8c-d</ref>), demonstrating that pupil size can be used to track NA activation with these stimuli.</s><s>The pupil dilation response to auditory stimuli increased with the intensity of auditory tone independent of tone frequency (Fig. <ref type="figure" target="#fig_5">6e</ref>, f and Supplementary Fig. <ref type="figure">9a-c</ref>).</s><s>Then, we used Gad2-Cre mice injected in the LC with flox-ChR2, with implanted optic fiber, to examine the role of LC-GABA activity on LC-NA responses involving coincident inputs.</s><s>The trial averaged traces with or without laser activation demonstrated that activating LC-GABA neurons produced a constricting effect on pupil size, while mild pupil dilation was still detectable after the tone presentation (Fig. <ref type="figure" target="#fig_5">6g</ref>).</s><s>Similar to activating LC-GABA neurons during spontaneous fluctuations of arousal (Fig. <ref type="figure" target="#fig_1">2g</ref>,j), we observed a uniform sustained (spanning several secs) reduction of pupil size across all sound intensities (Fig. <ref type="figure" target="#fig_5">6g-j</ref>).</s><s>To examine the effect of activating LC-GABA neurons on the transient response of LC-NA neurons to sensory stimuli, we removed the tonic effect of LC-GABA activation.</s><s>We normalized the response for each tone to a 0.5 sec baseline period preceding the tone onset when the laser was already on, and averaged the pupil response for 1.5 sec after tone pips (Fig. <ref type="figure" target="#fig_5">6k</ref>; Supplementary Fig. <ref type="figure">9a</ref>).</s><s>Doing so, we observed that increasing the activity of LC-GABA neurons had a divisive effect on the tone intensity-pupil dilation relationship, as seen by a reduction of slope (or gain) of the pupil size change vs stimulus intensity line (Fig. <ref type="figure" target="#fig_5">6l</ref>).</s><s>This led to enhanced normalized suppression during presentation of tones of higher intensities independent of tone frequency (Fig. <ref type="figure" target="#fig_5">6m,</ref><ref type="figure">n</ref>; Supplementary Fig. <ref type="figure">9d</ref>), similar to other examples of coincident feedforward inhibition <ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b34">35</ref> .</s><s>We also tested the effect of activating LC-GABA neurons on the pupil gain response in VGAT-ChR2 transgenic mice and obtained similar results (Supplementary Fig. <ref type="figure" target="#fig_0">10</ref>).</s><s>Altogether, these results demonstrate that activating LC-GABA neurons alone sets the baseline tone of pupil size, and that coincident activation regulates the gain of LC-NA mediated arousal.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Non-coincident inputs to LC-GABA neurons non-specifically suppress LC-NA neurons</head><p><s>The results from our retrograde labelling experiments suggested that along with similar, coincident, activation of LC-NA and LC-GABA neurons, some input regions also provide preferential, potentially non-coincident, drive to LC-GABA neurons.</s><s>Moreover, our electrophysiological data showed that LC-GABA neurons displayed two types of activity, where the activity of Gad2+ (and FS+) neurons was correlated with LC-NA neurons while the activity of Gad2-(and FS-) neurons was broadly anti-correlated with LC-NA activity.</s><s>We thus wished to examine if activation of non-coincident inputs to LC-GABA neurons would non-specifically suppress LC-NA activity, and hence regulate arousal tone.</s></p><p><s>We chose to target inputs from the prefrontal cortex (PFC), as our anatomical data supported the existence of a preferential drive to LC-GABA neurons originating from this region (Fig. <ref type="figure" target="#fig_2">3d</ref>-f and Supplementary Fig. <ref type="figure" target="#fig_0">11a</ref>).</s><s>We injected a virus expressing ChR2-mCherry, under the CaMKII promoter to target excitatory neurons, in the orbitofrontal part of the prefrontal cortex and implanted an optic fiber above the LC to activate PFC axons (Fig. <ref type="figure" target="#fig_6">7a</ref> and Supplementary Fig. <ref type="figure" target="#fig_0">11b</ref>).</s><s>Coronal sections of the LC demonstrated the existence of PFC axons in the LC, confirming our results with monosynaptic retrograde labelling (Fig. <ref type="figure" target="#fig_6">7b,</ref><ref type="figure">c</ref>).</s><s>Most of the PFC axons projected to the anterior and medial part of the LC, where the density of GABA neurons peaks (Fig. <ref type="figure" target="#fig_0">1e</ref>; Fig. <ref type="figure" target="#fig_6">7c</ref>).</s><s>We activated PFC axons to the LC and indeed recorded significant sustained pupil constriction (lasting several secs) following laser activation (Fig. <ref type="figure" target="#fig_6">7d</ref>).</s><s>This constriction of pupil size was independent of tone intensity (Fig. <ref type="figure" target="#fig_6">7e-g</ref>).</s><s>Along with activating non-coincident inputs by PFC axonal activation, we activated coincident inputs to LC-NA and LC-GABA neurons with randomly varying auditory tone pips and recorded a transient increase in pupil dilation (Fig. <ref type="figure" target="#fig_6">7h</ref>).</s><s>However, analyzing the tone-induced pupil dilation with and without laser activation revealed no effect of PFC activation on the gain of the transient pupil response (Fig. <ref type="figure" target="#fig_6">7i-k</ref>).</s><s>In contrast to the divisive effect of LC-GABA activation on pupil responses (Fig. <ref type="figure" target="#fig_5">6m</ref>), the major effect of PFC activation was a non-specific reduction in pupil size (Fig. <ref type="figure" target="#fig_6">7g</ref>), and hence a net decrease in arousal.</s><s>Overall, these results demonstrate that non-coincident inputs such as from the PFC control the level or tone of LC-NA mediated arousal but not the gain, via their preferential targeting of LC-GABA neurons.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>We demonstrate anatomically and functionally the existence of a local population of GABA neurons in the LC, which inhibits NA activity and thus controls arousal level in the brain, as reflected in pupil size.</s><s>The pattern of LC afferents is mostly coincident to LC-NA and LC-GABA neurons (Fig. <ref type="figure" target="#fig_6">7l</ref>), as shown by tracing experiments and correlated neuronal activity among the two subpopulations.</s><s>This input pattern supports a role for local LC inhibition in controlling the gain of LC responses.</s><s>On the other hand, some functionally distinct input regions exert stronger influence on one LC subpopulation over the other, suggesting that the general NA tone and accompanying arousal level can be set by these inputs (Fig. <ref type="figure" target="#fig_6">7l</ref>).</s><s>An example of this second projection type is the PFC that projects preferentially to the LC-GABA sub-region and alters the tone of NA activity without altering its response gain.</s></p><p><s>Coincident and non-coincident inputs to LC-GABA neurons impact LC-NA modes of activity on many levels.</s><s>By regulating the response gain of NA activity to novel stimuli, coincident inputs enable phasic LC activity to be maintained within a certain range, potentially restricting NA activity to an optimal level required for cognitive processing <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b22">23</ref> .</s><s>By preferentially targeting LC-GABA neurons, non-coincident inputs set thresholds for NA activation and enable modulation of tonic LC activity during different contexts.</s><s>For example, PFC inputs involved in utility assessment can gate incoming sensory signals to convey the presence or absence of novelty via LC responses <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b35">36</ref> .</s><s>Non-coincident drive to LC-GABA neurons can also impact attentional shifts by interfering with the ability of LC-NA neurons to respond to novel sensory stimuli.</s><s>Indeed, recordings in the LC of behaving mice have shown adaptation of LC responses to novelty <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b36">37</ref> and a switch of their response to different components of fear conditioning behavior <ref type="bibr" target="#b16">17</ref> .</s><s>Alterations in inhibition provided by the regions preferentially driving LC-GABA neurons can explain fluctuations in tonic LC activity observed within sessions in animals performing a visual discrimination task <ref type="bibr" target="#b21">22</ref> , or during the sleep-wake cycle <ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b37">38</ref> .</s></p><p><s>Our results show that LC-GABA neurons are an important source of inhibition for LC-NA neurons.</s><s>However, we do not exclude other types of inhibitory mechanisms controlling LC activity.</s><s>First, inhibition in the LC can originate from distal sources.</s><s>Electrical stimulation of pontine and medulla nucleus such as the prepositus nucleus, pontine reticular nucleus and gigantocellular reticular nucleus yield significant reduction in the firing rate of LC neurons <ref type="bibr" target="#b38">39,</ref><ref type="bibr" target="#b39">40</ref> .</s><s>However, these studies never confirmed if inhibition arose from direct inhibitory projection from these nuclei, or from disynaptic pathways such as from the preferential activation of local GABA neurons.</s><s>In addition, retrograde labeling studies have shown that a significant GABAergic neuronal population from the posterior lateral hypothalamic area and the central amygdala projects directly to the LC region, but we do not know the function of these projections in vivo <ref type="bibr" target="#b40">41</ref> .</s><s>Second, inhibition in the LC can arise from NA mediated inhibition.</s><s>A brief period of inhibition following the phasic response of LC neurons to sensory stimuli <ref type="bibr" target="#b14">15</ref> has been attributed, in part, to NA-mediated collateral inhibition, since blocking alpha-2 noradrenergic receptors moderately suppresses it <ref type="bibr" target="#b38">39,</ref><ref type="bibr" target="#b41">42</ref> .</s><s>However, other mechanisms such as feedforward and feedback inhibition from neighboring LC-GABA neurons could also explained this post-activation inhibition.</s><s>Finally, inhibition in the LC can originate from presynaptic release modulation.</s><s>An example of this is κ-opiate receptors that colocalize with glutamate-and corticotropin releasing factor-positive axons in the LC <ref type="bibr" target="#b42">43</ref> ; activation of these receptors reduces the response of LC neurons to sensory stimuli <ref type="bibr" target="#b42">43</ref> .</s></p><p><s>The effect of PFC activation on LC activity has remained controversial.</s><s>Pharmacologically silencing the prefrontal cortex in rats increases LC activity <ref type="bibr" target="#b43">44</ref> , while direct activation of the prefrontal cortex tends to also increase LC activity <ref type="bibr" target="#b43">44,</ref><ref type="bibr" target="#b44">45</ref> .</s><s>It has been an open question whether the PFC sends direct descending excitatory or inhibitory projections to LC, and whether an inhibitory influence arises from an indirect pathway.</s><s>Our monosynaptic tracing results (Fig <ref type="figure" target="#fig_2">3</ref>) reconcile these studies, since both LC-NA and LC-GABA subpopulations receive direct inputs from the PFC, albeit with a significant preference for LC-GABA neurons.</s><s>In line with the tracing experiments, we find in some animals a brief period of pupil dilation at the onset of laser activation, reflecting direct inputs to LC-NA neurons (Supplementary Fig. <ref type="figure" target="#fig_1">12</ref>).</s><s>However, an extended period of activation of PFC axons in the LC shows a net pupil constriction effect, consistent with a greater influence on LC-GABA than LC-NA neurons.</s></p><p><s>Early reports using cholera-toxin B retrograde tracing found a limited number of regions that target the LC region <ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b31">32</ref> , which were mostly concentrated in the region adjacent to LC (e.g.</s><s>parabrachial nuclei and Gi), mesencephalic areas (PAG and DpMe), and some nuclei of the hypothalamus (e.g.</s><s>PO, LH).</s><s>Notably, these studies found almost no retrogradely labeled neurons in the cortex, CeA, BNST, superior colliculus, and cerebellum, as reported by us here and another recent report using similar techniques to trace afferent projections to LC (which used Dbh-Cre mice and Cre-dependent monosynaptic modified rabies virus) <ref type="bibr" target="#b13">14</ref> .</s><s>It should be noted that larger injections of cholera-toxin B in the LC yielded similar results as ours <ref type="bibr" target="#b31">32</ref> , showing inputs from CeA, BNST, and from cortical areas.</s><s>We and others <ref type="bibr" target="#b13">14</ref> show that inputs also exist from the cerebellum and superior colliculus.</s><s>These findings are consistent with the observation that rabies-mediated trans-synaptic tracing reveals direct synaptic connections <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b45">46</ref> , and provides a more sensitive assay of inputs to LC-NA and LC-GABA circuits than what was reported in the literature with earlier tracers.</s></p><p><s>Our results highlight the causal relationship between LC-NA activity and pupil dilation.</s><s>The link between neuronal activity in the LC and pupil size had been previously established in different species <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b5">6</ref> ; however previous studies had not shown that specifically activating or silencing LC-NA neurons increases or decreases pupil size respectively.</s><s>LC-NA neurons could control pupil dilation by direct inputs to parasympathetic and sympathetic preganglionic neurons <ref type="bibr" target="#b46">47,</ref><ref type="bibr" target="#b47">48</ref> .</s><s>Importantly, our results demonstrate that LC-GABA neurons play an essential role in regulating LC-NA activity.</s><s>In addition to maintaining the dynamic range of LC-NA responses via coincident feedforward inhibition, non-coincident inhibition driven by pathways such as from PFC to LC regulates the global tone of LC activity, and can potentially switch the mode of LC activity in a manner that is dependent on the internal state of the brain.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Animals</head><p><s>All procedures were approved by the Massachusetts Institute of Technology's Animal Care and Use Committee and conformed to NIH guidelines.</s><s>Adult mice (&gt; 2 month old) from a C57BL/6J background were in this study.</s><s>Male or female mice were randomly selected for each experiment.</s><s>We used the following mouse lines for the specific expression of various viruses in noradrenergic, GABAergic, and cholinergic neurons: TH-Cre (B6.Cg-Tg(Thcre)1Tmd/J, Jackson Laboratory), Dbh-Cre (B6.FVB(Cg)-Tg(Dbh-cre)KH212Gsat/Mmucd, MMRRC), Gad2-IRES-Cre (Gad2tm2(cre)Zjh/J, Jackson Laboratory).</s><s>Optogenetic activation of LC GABAergic neurons (LC-GABA) was also done on VGAT-YFP-ChR2 mice (B6.Cg-Tg(Slc32a1-COP4*H134R/EYFP)8Gfng/J, Jackson Laboratory).</s><s>Some experiments were carried out on C57Bl/6 wild-type (WT) mice.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stereotactic surgeries</head><p><s>The preparation of animals was similar for all surgical procedures.</s><s>They were performed under isoflurane anesthesia while maintaining body temperature at 37.5°C using an animal temperature controller (ATC2000, World Precision Instruments).</s><s>After deep anesthesia was confirmed, mice were placed in a stereotaxic frame (51725D, Stoelting), scalp hairs were removed with hair-remover cream, the underlying skin was cleaned with 70% alcohol and betadine, and an incision was made in the scalp.</s><s>The conjunctive tissue was removed by rubbing hydrogen peroxide on the skull.</s><s>The skull was positioned such that the lambda and bregma marks were aligned on the anteroposterior and dorsoventral axes.</s><s>For all surgeries, analgesic was given once before and for 3 days following surgery.</s></p><p><s>For viral injections, a small hole was drilled through the skull at the location of interest.</s><s>We used the following coordinates (according to bregma -in mm): LC: -5 to -5.2 anteroposterior, ± 0.9 mediolateral, and 2.9 to 3 dorsoventral; orbitofrontal cortex (PFC): 2.6 anteroposterior, ±1.3 mediolateral, and 2.0 dorsoventral.</s><s>Viruses were delivered with a thin glass pipette at a rate of 100-200 nL per min by an infuser system (QSI 53311, Stoelting).</s><s>The following viruses (titer: ~10 -12 virus molecules/mL) were injected for imaging and optogenetic experiments: Flex-GCaMP6s (AAV1.Syn.Flex.GCaMP6s.WPRE.SV40, U. Penn.</s><s>Vector Core), Flox-ChR2-mCherry (AAV1.EF1.dflox.hChR2-(H134R).mCherry.WPRE.Hgh, U. Penn.</s><s>Vector Core); Flex-ArchT-tdTomato (AAV2-CAG-Flex-ArchT-tdTomato, UNC Vector Core); Flex-tdTomato (AAV1-Flex-tdTomato, UNC Vector Core); and (AAV5/CamKIIalpha-hChR2-(H134R)-mCherry-WPRE-pA, UNC Vector Core).</s><s>We delivered a volume of 400 to 500 nL per injection site in the LC of Dbh-Cre, and in the PFC of WT mice.</s><s>For experiments using TH-Cre and Gad2-Cre mice, 200 nL injections were done in the LC to avoid infection of other areas.</s><s>We confirmed that the virus infection was limited to the LC region for TH-Cre animals injected with Flex-GCamP6s, and did not spread to the VTA.</s><s>After injection, the skin was sutured and we let mice recovered for 4-6 weeks after injection of virus for optimal opsin or calcium-indicator expression.</s><s>For rabies monosynaptic tracing experiments, we injected rAAV1/SynP-DIO-sTpEpB helper virus in the LC of Dbh-Cre, Gad2-Cre or WT mice. 3 weeks after the first virus injection, we injected the EnVA-RΔG.mCherry</s><s>(400-500 nL) in the same location.</s><s>200 μm diameter optic fibers were implanted with the following procedures.</s><s>After anesthesia and animal preparation, the scalp was removed, the skulled was cleared of conjunctive tissue and the neck muscles were retracted from the interparietal and occipital plates.</s><s>After careful alignment of the skull, the optic fiber cannula was held by a stereotaxic manipulator and inserted at different locations (see virus injections for coordinates) slightly on top of (~200 μm dorsoventral) the targeted region.</s><s>Two-ferrule cannulas (TFC_200/245-0.37_4mm_TS2.0_FLT,</s><s>Doric Lenses) were used for LC implantation.</s><s>A single fiber optic cannula (CFM12L05, Thorlabs) was implanted in LC for activation of LC PFC axons.</s><s>For LC PFC axon activation, the cannula was implanted using the following coordinates to target the anterior and medial part of LC: -4.5 to -4.8 anteroposterior, ± 0.5 mediolateral, and 2.5 dorsoventral.</s><s>The cannulas was attached to the skull with dental cement (Teets Denture Material, or C&amp;B Metabond, Parkell).</s><s>To avoid light reflection and absorption, dental cement was mixed with black ink pigment (Black Iron Oxide #18727, Schmincke).</s><s>A custom-designed head plate <ref type="bibr" target="#b49">49</ref> was also implanted at the end of the surgery for head fixation.</s></p><p><s>To perform LC single unit recording in awake head-fixed mice, we implanted a head plate 1-2 weeks before recording.</s><s>We used a custom design stereotactic arm to align the head plate parallel to the median and dorsal line of the skull during implantation.</s><s>The head plate was attached to the skull using dental cement.</s><s>The exposed skull was protected using rapid curing silicone elastomer (Kwik-Cast, WPI) topped with a fine layer of dental cement.</s><s>Two-photon calcium imaging was done through a cranial window.</s><s>Following virus injection of GCaMP6s in the LC of TH-Cre or Dbh-Cre mice, we drilled a 3 mm circular window centered over the anterior part of V1 (~ 3.5 mm posterior and ~ 2 mm lateral to bregma) or the medial prefrontal cortex (~2 mm anterior to bregma and centered on the midline).</s><s>A 3 mm centered on a 5 mm coverslip (CS-5R and CS-3R, Warner Instruments), and glued together with UV adhesive (NOA 61 UV adhesive, Norland Products) was positioned over the craniotomy and attached to the skull using dental cement (C&amp;B Metabond, Parkell).</s><s>A head plate was also attached to the skull for head fixation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Pupil and body movement monitoring</head><p><s>After fixing the mouse head using a previously implanted head plate, a high resolution CMOS Camera (DCC1545M, Thorlabs) camera equipped with a 1.0X telecentric lens (58-430, Edmund Optics) was pointed at either the left or right eye depending on the experimental set up. 780 nm infrared illumination was provided by a LED array light source (LIU780A, Thorlabs).</s><s>Illumination was done at an angle of ~60° for the corneal reflection spot to be cleared of pupil visualization.</s><s>Video acquisition of eye images (240 × 184 pixels) was performed at 20 Hz by a custom-made MATLAB script.</s><s>The ambient illumination was controlled by a 7" monitor (700YV, Xenarc Direct) placed 8 cm in front of the mouse and displayed a full field gray stimulus at an illuminance of ~57 Lx (#403125, Extech Instruments).</s><s>This level of ambient illumination was sufficient to keep pupil constricted within the space between the two eyelids.</s><s>In all experiments, a master computer, controlling the visual and auditory stimuli, triggered pupil camera acquisition, as well as 2-photon imaging, optogenetic manipulations, or extracellular electrophysiology recordings via various data aquisition cards depending on the experiment (PCI-DIO24, Measurement Computing, NI USB-6259 or BNC-2110, National Instruments).</s><s>Time-stamps of every pupil frame were saved for further alignment with imaging, electrophysiology or optogenetic experiments.</s></p><p><s>We segmented the images of a black pupil on a gray iris background by a sequence of image processing manipulations done with a custom-made MATLAB script.</s><s>We adjusted the min and max pixel intensity of pupil images.</s><s>We then normalized pixel values by the convolution of pupil frames by a 5*5 pixel kernel matrix of equal values.</s><s>The images were binarized by a threshold value manually decided for each experiment.</s><s>The binary images were filtered to extract the largest components located in the center of the image.</s><s>The isolated binarized pupil image was then fitted with a least square fit of ellipse.</s><s>From this fit we estimated the diameter of the pupil for each frame.</s><s>The pupil segmentation was either done online, during the experiments, or offline on saved images of the pupil.</s><s>Using this pipeline for pupil segmentation, very few frames had to be dropped due to poor fitting of the pupil.</s><s>Most of the dropped frames were due to eye blinking or excessive micro-saccades and the diameter for these frames were estimated by interpolation.</s></p><p><s>To monitor body movement we used a 720p HD camera pointed at the mouse (LifeCam Cinema, Microsoft).</s><s>The sampling rate used was 10 Hz.</s><s>Movement data was synced with other experiments by displaying an indicator on the monitor.</s><s>The movement metric was calculated by extracting the pixel data in time for regions around the nose, the neck, the paws and the ears of the animal.</s><s>The mean difference in pixel value between each frame was calculated for each region and we normalized this value over a region of the image where no movements were expected.</s><s>Periods of activity or quietness were isolated using a threshold value of 0.5 standard-deviation on the movement trace.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Optogenetic modulation of LC</head><p><s>We used solid state laser illumination at 473 and 532 nm for activating ChR2 and ArchT respectively (MBL-III-473/1~200 mW or MGL-III-532/1~300 mW, Opto Engine LLC).</s><s>A 200 μm / 0.39 NA patch cable (M72L02, Thorlabs) was connected to the laser output and to an intensity division cube (DMC_1×2i_VIS_FC, Doric Lenses) for bilateral LC modulation.</s><s>The patch cable (200 μm / 0.39 NA; M83L01 or M81L01, Thorlabs) was attached to the animal ferrule implant using corresponding ceramic mating sleeves.</s><s>To block any light emitting from the interface between the patch cable and the implanted ferrule, a piece of black electrical tape was wrapped around the connection.</s><s>The laser pulse duration, frequency and shape was controlled by a data acquisition system (Digidata 1440A, Molecular Devices) connected directly to the analog port of the laser power supply.</s><s>For ChR2 activation of NA+, 10 ms pulses at a frequency of 3, 5, 10 or 30 Hz for 0.1, 0.5, 1, and 2 s were applied depending on the experiment.</s><s>The peak power of every pulse was 4 to 5 mW at the laser output.</s><s>For ChR2 activation of LC-GABA neurons, a sine wave at 25 Hz was used for various durations.</s><s>A small ramp up (duration 0.5 sec) and ramp down (duration ~ 5 sec) in power was applied on top of the sine wave.</s><s>Low power light stimulation (peak power &lt; 3 mW) was used for VGAT-ChR2-YFP mice to keep the spread of optical activation in the vicinity of the optic fiber end, thus increasing neuronal activity only in GABA neurons surrounding LC.</s><s>For direct inactivation of LC-NA+ neurons with ArchT, 15 to 17 mW of power was applied for 4 seconds.</s><s>The rebound effect of inactivation was prevented by ramping down the laser power at the end of each laser pulse for 1 sec.</s><s>For activation of PFC axons in the LC, 10 ms pulses at a frequency of 20 Hz applied for 10 sec.</s><s>The peak power for those experiments ranged from 12 to 18 mW.</s><s>At the end of each experiments, the location of the optic fibers was verified with respect to neurons expressing the opsin in the brain.</s><s>For Gad2-Cre, VGAT-ChR2-YFP and LC-PFC experiments, location was also verified with respect to LC-NA by immunohistochemistry for TH.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Slice electrophysiology</head><p><s>4 to 6 weeks after virus injection of Flox-ChR2 in the LC of Gad2-Cre mice, deeply anesthetized animals (Isoflurane) were transcardially perfused with modified ice cold ACSF containing (in mM): 210.3 sucrose, 2.5 KCl, 1 NaH 2 PO 4 , 26 NaHCO 3 , 7 MgSO 4 , 0.5 CaCl 2 , and 11 D-glucose.</s><s>The posterior brain was then quickly removed, placed in a microtome (Leica VT1200 S) and sliced in the coronal plane at a thickness of 0.3 mm.</s><s>Slice recovery was performed at 37°C for 30 minutes in normal ACSF containing (in mM): 128 NaCl, 2.5 KCl, 1 NaH 2 PO 4 , 26 NaHCO 3 , 1.3 MgSO 4 , 2 CaCl 2 , and 10 D-glucose.</s><s>After recovery, slices were maintained at room temperature for the remaining of the experiment in normal ACSF.</s><s>ACSF was bubbled with a mixture of 95% O 2 and 5% CO 2 throughout the entire experiment.</s></p><p><s>For recording, slices were placed in a chamber perfused with oxygenated ACSF at a rate of 2mL/min.</s><s>To block glutamatergic transmission 10 μM CNQX (1045, Tocris) and 10 μM D-AP5 (0106, Tocris) was added to the bath solution for all recordings.</s><s>We used a cesium chloride based intracellular solution for voltage clamp recordings of inhibitory currents (in mM): 135 CsCl, 10 HEPES, 1 EGTA, 4 Mg*ATP, 1 Na 2 *GTP, 8 Na 2 -phosphocreatine, 3 biocytin; and a K-gluconate base solution for current clamp recordings (in mM): 135 Kgluconate, 6 KCl, 10 HEPES, 4 Mg*ATP, 0.3 Na2*GTP, 0.1 EGTA, Na 2 -phosphocreatine.</s><s>Osmolality was set to 290-295 (mOsm) and pH to 7.2.</s><s>Electrode resistance ranged from 3 to 5 MΩ.</s><s>To block glycinergic receptors we bath applied 1 μM of strychnine (ab120416, Abcam) and to block GABA A receptors we applied 20 μM of bicuculline (0131, Tocris).</s><s>Light activation was performed by pulsing for 5 ms at 10-15 mW every 2 s a solid-state blue laser (MBL-F-473-300mW, Opto Engine LLC) connected to the light path of our microscope (BX61WI, Olympus; CBH-1.0,</s><s>Siskiyou).</s><s>Neurons were visualized through DIC or fluorescence using a CCD camera (ORCA-R 2 C10600, Hamamatsu).</s><s>Gad-ChR2 positive neurons were targeted by their expression of mCherry fluorophores.</s><s>LC-NA neurons were identified by fixing the slice overnight with PFA 4% and immunohistochemistry against TH (see histology section).</s><s>Recordings were performed with a Multiclamp 700b (Molecular Devices) amplifier, digitized at 10 kHz and low-pass filtered at 1 kHz with a Digidata 1440 and pClamp10 software (Molecular Devices).</s><s>We recorded the spontaneous spiking activity of TH+ neurons by performing cell-attached recordings for 2 min before opening the cell membrane to achieve whole-cell configuration.</s><s>Neurons were voltage-clamped at a membrane potential of -70mV to record light-evoked currents.</s><s>The V Cl reversal potential was = 0.10 mV for the CsCl based solution.</s><s>To measure the effect of Gad-ChR2 activation on the spike rate of TH positive neurons, we compared the average spike rate of 50 ms periods taken before light activation and right after the onset of the 5 ms pulse.</s><s>The amplitude of evoked IPSCs were measured as the peak current after light activation for each condition.</s><s>Access resistance ranged from 10 to 15 MΩ and recordings with variations greater than 15% of the baseline resistance value were excluded.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Single unit recordings of photo-identified LC units in awake mice</head><p><s>One or two days before the experiments, mice were head-fixed for 1 hr to habituate to head fixation.</s><s>On the day of the experiments, the mice were anesthetized with isoflurane and the dental cement and silicone elastomer on the skull were removed.</s><s>The mouse was placed on the stereotaxic frame and a 500 μm diameter craniotomy was performed on top of the inferior colliculus (from bregma: -4.9 to -5.4 mm anteroposterior and 0.6 to 1.1 mm mediolateral).</s><s>The dura was removed and the craniotomy was protected with saline and a piece of gelfoam (Pfizer pharmaceutical).</s><s>The skull was covered again with silicone and the animal was allowed to recover for at least 2 to 3 hours for the anesthesia effect to washout completely.</s><s>The awake animal was then headfixed and the silicone and gelfoam removed gently.</s><s>0.9% NaCl solution was used to keep the surface of the brain wet for the duration of the recordings.</s></p><p><s>After placing the animal in the recording set up, we submerged a reference silver wire in the NaCl solution on the skull surface.</s><s>The position of the 16-channel silicone probe was referenced on bregma and the surface of the brain and lowered slowly (1 min per mm) to 2.0 mm in the ventral axis using a motorized micromanipulator (MP -285; Sutter Instrument Company).</s><s>The extracellular signal was amplified using a 1× gain headstage (model E2a; Plexon) connected to a 50× preamp (PBX-247; Plexon) and digitized at 50 kHz.</s><s>The signal was highpass filtered at 300Hz.</s></p><p><s>For optical identification (photo-tagging) of LC-NA and LC-GABA units, we used a solidstate blue laser (MBL-III-473/1~200 mW, Opto Engine LLC) connected via a 105 μm / 0.22 NA patch cable (M61L01, Thorlabs) to an optic fiber glued to 16 channel recording probes (A1×16-Poly2-5mm-50s-177-OA16LP, NeuroNexus). 2 to 5 ms-long light pulses at various light intensities (0.1 to 15 mW) were then repeatedly delivered in the tissue (frequency: 1 or 2 Hz), and each channel was screened for light-evoked events.</s><s>Spikes were considered as light responsive if they responded within 10 ms after light stimulus onset.</s><s>We also kept only units responding to at least 75% of laser pulses, and whose light evoked waveforms closely matched the spontaneous ones.</s><s>During our recordings we minimized the power of light excitation in order to minimize the light-induced artifact.</s><s>Recording sessions without lightresponsive units were excluded from analysis.</s></p><p><s>For verifying the probe location after recordings, the silicone probe was gently retracted and the recording tract was marked by re-entering the DiI coated probe (2 mg/mL -D3911, ThermoFisher Scientific) at the same location.</s><s>The brain was harvested post-experiment and immunohistochemistry for confirming the probe location was performed.</s><s>Spikes were monitored online with amplitude threshold using Plexon Recorder software, but re-sorted offline using a fully automated spike sorting algorithm <ref type="bibr" target="#b50">50</ref> .</s><s>Spike curation was done manually to remove artifacts picked by the algorithms (ill-shaped spikes) and spikes with low amplitudes or low spontaneous spike rate (&lt; 0.1 spikes/sec).</s><s>We verified spike times with cross-correlograms to eliminate duplicates.</s><s>We excluded parts of the recordings with obvious drift (units jumping from one channel to another).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Two-Photon imaging of LC-NA axons</head><p><s>4 weeks after virus injection, GCaMP6s+ noradrenergic axons were imaged in the cortex using a Prairie Ultima IV 2-photon microscopy system.</s><s>Mice were head fixed and a lightshield was attached to their head plate, and the 25X/1.05</s><s>NA objective (XLPlan N, Olympus) was lowered on top of their cranial window.</s><s>The 920 nm excitation of GCaMP6s was provided by a Ti:Sapphire tunable laser (Mai-Tai eHP, Spectra-Physics).</s><s>Power at the objective ranged from 10 to 30 mW depending on GCaMP6s expression levels.</s><s>After locating axons at 4X optical zoom, their activity was acquired at 5 frames per second for 10 minute blocks while simultaneously imaging the pupil using 8X optical zoom.</s><s>Axons with significant signal to noise ratio were selected for analysis.</s><s>We imaged 3 to 8 axons per mouse.</s><s>The majority of our imaging field of view contained only one axon.</s><s>After recording one field of view, we moved at least 1 mm away to find new axons.</s><s>Care were taken to select axons from different branches, even though we cannot exclude the possibility that axons we considered as arising from different neurons were actually branches arising outside our imaging window.</s><s>Using these criteria 31 axons were recorded from 6 mice.</s></p><p><s>After acquisition, time-lapse imaging sequences were corrected for x and y movement using template matching ImageJ plugins <ref type="bibr" target="#b51">51</ref> .</s><s>Multiple circular region of interests (3 to 7) were taken along each axon to extract the fluorescence intensity.</s><s>The intensity in time for each region was then averaged together to minimize the noise in our signal.</s><s>The dF/F signal was then calculated from this average by taking the mode of the signal as the reference value.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Sound stimuli</head><p><s>Tone pips were delivered using a single speaker (HK195, Harman/Kardon) located at a distance of 30 cm from the mouse.</s><s>Sound stimuli were created and delivered using Psychtoolbox in MATLAB.</s><s>Tone sequence was randomized in intensity and frequency to avoid habituation of the response.</s><s>The inter-stimulus interval was set at 30 seconds.</s><s>Tone intensities was set to 75 dB and 15 seconds inter-stimulus interval for electrophysiological recordings.</s><s>The duration of each stimulus was fixed at 0.5 s.</s><s>The speaker frequency range was calibrated using a USB calibrated measurement microphone (UMIK-1, Mini DSP) and the Room EQ Wizard software.</s><s>The ambient noise in the room was estimated around 50 dB and the sound stimulus intensities were recorded by a sound level meter.</s><s>To obtain the pupil response to different tone intensities and frequencies, an average of 63 ± 5 trials per tone intensity were recorded.</s><s>To avoid long sessions and habituation, we limited each mouse to one 1-hour session per day.</s><s>5 ± 1 sessions were recorded per animal.</s><s>For trials with laser activation of LC-GABA neurons in Gad2-ChR2, VGAT-ChR2 and PFC-LC implanted mice, the laser was turned on 5 s before the auditory tone onset and kept on for a total duration of 10 second (5 s baseline and 5 s after auditory stimulus).</s><s>Laser activation were applied on 50% of trials distributed randomly during the session.</s><s>To calculate the effect of laser activation on NA tone, we used a 7-second long averaging window aligned to sound onset and compared the z-scored laser and non-laser trials.</s><s>For measuring the modulation of pupil response created by laser activation, a baseline period of 0.5 second before tone onset was used to calculate the increase in pupil size to different tone intensities and the response over a 1.5-second-long averaging window aligned to sound onset was evaluated.</s><s>Trials with high (2 times standard deviation) or low (1 time standard deviation) were excluded from the analysis.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Histology</head><p><s>Under very deep anesthesia, mice were perfused transcardially with 0.9% NaCl followed by 4% PFA.</s><s>The brains were harvested and post-fixed in 4% PFA at 4 °C overnight.</s><s>In some experiments, brains were extracted without transcardial perfusion and only immersed in PFA overnight.</s><s>Coronal sections (50 or 100-μm-thick) were cut using a vibratome (VT1200S, Leica) and were incubated overnight at 4 °C in PBS-T (0.1% Triton) + 3% bovine serum albumin and the following primary antibodies were used: 1:1000 chicken anti-tyrosine hydroxylase (TYH, Aves Labs lot no.</s><s>TYH8727985), 1:1000 rabbit anti-VGAT (131002, Synaptic Systems lot no.</s><s>131002/34), 1:1000 rabbit anti-GABA (A2052, Sigma lot no.</s><s>126M4791V), 1:500 rabbit anti-neuropeptide S (ab18252 Abcam), and 1:200 streptavidin-488 conjugated antibodies (S32354 ThermoFisher Scientific).</s><s>We used the following secondary antibodies at a dilution of 1:500: goat anti-chicken 647 nm (A21449, ThermoFisher Scientific), goat anti-chicken 488 nm (A11039, ThermoFisher Scientific), goat anti-rabbit 488 nm (A11034, ThermoFisher Scientific), and goat anti-mouse 488 nm (A21121, ThermoFisher Scientific).</s><s>For acute slices from whole-cell electrophysiological recordings, after fixing overnight in 4% PFA, slices were washed 3×10min in PBS and permeabilized with (1% Triton) + 3% bovine serum albumin before incubation with primary antibodies.</s><s>For GAD67 staining, slices were permeabilized for 1h in 3% BSA and 10% normal goat serum, and then incubated for 48h at room temperature in 3% BSA, 10% normal goat serum and 1:200 mouse anti-GAD67 (MAB5406 EMD Millipore lot no.</s><s>2923238).</s><s>(Note that no detergent was used at any steps for the staining).</s><s>Slices were mounted in Vectashield hard set mounting medium with DAPI (H-1500, Vector labs).</s><s>The resulting immunofluorescence was imaged with a confocal system (TCS SP8, Leica) with 10X / 0.40 NA, 20X / 0.75 NA, or 63X / 1.40 NA objectives (Leica).</s></p><p><s>For quantification of Gad2-Cre neurons coexpressing GABA, GAD67, TH and neuropeptide S, 20X z-stack images were acquired for 2-3 fields of view surrounding the LC of each slice.</s><s>The percentage of Gad2-Cre cells, as identified by their expression of Flox-mCherry, overlapping with the different markers was calculated for each field of view.</s><s>For the reconstruction of LC structures and surrounding areas, we collected the brain from Flex-tdTomato virus injected Dbh-Cre mice.</s><s>We performed staining of GABA by immunohistochemistry on the slices covering a region of 1 to 1.5 mm on the anteroposterior axis that covered the full extent of the LC.</s><s>The GABA+ and Dbh+ neurons of the LC were imaged by performing tiling reconstruction with a 20X objective zoomed 2X.</s><s>We also took low magnification (10X) images of each slice for later registration across the different slices.</s><s>The location of GABA neurons located within 200 μm of Dbh+ somas was then marked using ImageJ, and the whole LC was 3D reconstructed by exporting those values in a custom-made MATLAB program.</s><s>Due to the different penetration properties of antibodies, quantification was performed within 10 μm of the surface of the slice.</s><s>All slices were aligned with respect to the center of mass of LC-Dbh neuron.</s><s>To obtain the neuronal density of each LC-NA and LC-GABA neurons, we counted the number of somas in each bin (bin size: 50 or 100 μm) and normalized to the total number of somas counted.</s></p><p><s>For analysis of inputs to LC-NA versus LC-GABA populations, we collected the brain 1 week after injection of EnVA-RΔG.mCherry.</s><s>100 μm-thick coronal sections were produced, and one section every 200 μm was serially mounted on microscope slides.</s><s>We analyzed sections from the middle of the olfactory bulb (+4.5 mm from bregma) to the end of the brain stem (-8mm posterior to bregma).</s><s>Somata positive for mCherry were counted from all selected slices except for regions surrounding LC.</s><s>The Paxinos and Franklin 52 mouse atlas was used as a reference for identifying brain regions.</s><s>We also verified our data against the Allen Mouse Brain Atlas <ref type="bibr" target="#b53">53</ref> and found similar results.</s><s>Regions adjacent to LC were not considered for analysis due to non-specific expression of virus at the site of injection.</s><s>The fraction of total inputs for each animal was obtained by dividing the number of mCherry+ soma for each brain region by the total number of somas counted.</s><s>Animals with too few presynaptic neurons were not considered for analysis.</s><s>The injection of the same combination of Cre-dependent helper virus and deleted glycoprotein in the LC of 2 WT mice showed a small number of neurons positive for mCherry at the injection site, but almost no neurons retrogradely labelled (n = 9 and 14 compared to 240 ±99 and 1767 ±733 neurons in the Dbhand Gad2-Cre conditions) confirming that retrogradely labelled neurons were targeted to Cre-expressing starter cells.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data processing</head><p><s>All data analysis, unless noted, was performed using custom-made MATLAB scripts.</s><s>In single unit recordings, we extracted two classes of unit (RS and FS) based on their waveform shape.</s><s>For each unit, we calculated the full width at half maximum of the valley portions of the average spike and the spike duration defined by the time from peak to valley.</s><s>A Gaussian mixture distribution model with 3 components was fitted to the data.</s><s>The 3 clusters were then classified as FS for short spike duration or RS for long spike duration and the third cluster for non-classified units.</s><s>Valley FWHM and spike duration were used due to the best possible dissociation between FS and RS units.</s><s>Spike delay to laser activation for photo-tagged Gad2 and Dbh units was calculated as the average timing for the first peak after the light onset.</s><s>The jitter was defined as the standard deviation of this peak onset distribution.</s><s>We calculated the spontaneous firing rate by averaging the number of spikes during a 10-minute period, where no sensory stimulus was presented.</s><s>Instantaneous spiking rate (r(t)) were obtained by using a kernel density estimation <ref type="bibr" target="#b54">54</ref> using the following equations:</s></p><formula xml:id="formula_0">r(t) = ∑ i = 1 N f Δ t -t i</formula><p><s>where t i is the time if the ith spike and N is the total number of spikes.</s><s>fΔ represent the following exponential kernel:</s></p><formula xml:id="formula_1">f Δ (t) = 1 2Δ exp -2 t Δ</formula><p><s>Different methods were employed to evaluate how neuronal or behavioral activity correlates with arousal.</s><s>For measuring the general association between LC single unit activity and pupil size, we first obtained an estimation of the instantaneous spike rate sampled at 5 Hz.</s></p><p><s>We then computed Pearson's linear correlation coefficient between the pupil size and activity of LC.</s><s>The value of Pearson's correlation was done at a lag between pupil and neuronal activity corresponding to the peak in cross correlation.</s><s>P-values for Pearson's correlation were calculated using a Student's t-distribution for a transformation of the correlation.</s><s>A LC unit correlated significantly with pupil size if p &lt; 0.05.</s><s>The activity of different class of units during global pupil constriction or dilation was measured by averaging the spike rate during pupil values lower than the 25 th percentile (for constriction) or higher than the 75 th percentile (for dilation).</s><s>To measure the timing of correlation with pupil, we computed the normalized cross-correlation.</s><s>Pupil traces and neuronal or behavioral activity metrics were re-sampled (for extracellular LC recordings: 200 Hz, LC-NA Ca 2+ axonal imaging: 5 Hz, and for facial movements video analyses: 10 Hz) and both normalized using z-score before computing cross-correlation.</s><s>The delay between arousal and NA activity or movement was derived from the average lag value at maximum crosscorrelation.</s><s>To evaluate the increase in activity preceding pupil dilation or constriction, we band-pass filtered the pupil trace between 0.1 and 2 Hz using a second-order Butterworth filter.</s><s>We then isolated pupil events by locating either the time point of minimas (dilation event) or maximas (constriction event) and extracted the pupil and spike rate traces for a window of -1 to 4 s around those time points.</s><s>The amplitude of spike rate was evaluated from 0 to 0.5 after the onset of dilation or constriction.</s><s>Alternatively, we also aligned NA activity (spike rate and calcium imaging) to maximas or minimas of the derivative of pupil size (variation of pupil diameter in time).</s></p><p><s>The effect of activating diverse populations of the LC on arousal was assessed by measuring the alteration in pupil size following light-activation or inactivation of neurons expressing ChR2 or ArchT.</s><s>For each trial, we subtracted the baseline pupil diameter, evaluated for each trial on a period of 2 seconds before light onset.</s><s>We then calculated the change in pupil size by averaging for a period of 1.5 to 8 s following the onset of the stimulus (Dbh-ChR2: 1.5 to 2 s depending on stimulus duration; Dbh-ArchT: 4 s and VGAT-ChR2: 8 s).</s><s>Since there is a delay between increase or decrease in LC-NA activity and pupil dilation, we averaged the response of optical activation 0.7 sec after switching on the laser.</s><s>The average variation in pupil size was then calculated for each animal.</s><s>We used trials without laser as control to compensate for spontaneous changes in pupil size.</s></p><p><s>To evaluate how LC-NA and LC-GABA neurons respond to salient sensory stimuli, we recorded the response of units to tone pips.</s><s>A unit was considered as auditory responsive if there was a significant increase (p &lt; 0.05 using one-tailed paired t-test). of activity between a baseline period of 500 ms and the amplitude calculated over a 500-ms-period following the onset of tone pip.</s><s>To evaluate the delay between neuronal response and stimulus onset, we calculated the average time for the response to reach a value above half the standard deviation.</s><s>For two-photon imaging of LC-NA GCaMP6s+ axon, we compared the response with a 2-second baseline period preceding the auditory stimulus onset.</s></p><p><s>The effect of LC-GABA neurons on LC-NA mediated increase in arousal was assessed by recording the pupil diameter while animals were presented auditory stimuli of different intensities.</s><s>LC-GABA neurons were optically activated by a 25Hz sine wave (max power ~3 mW) on half the trials and the order of trials were randomized.</s><s>Pupil response was calculated by subtracting a baseline pupil size value for each trial before the auditory stimulus (calculated over 0.5 s before tone onset).</s><s>Since the effect of auditory stimulus on pupil dilation is usually delayed by a few ms, we calculated the average amplitude of pupil for a 1.5-second-window 0.5 second after the tone onset.</s><s>This response was then averaged for each trial type to obtain the tone intensity -pupil size increase relationship.</s><s>The suppression by LC-GABA neuron activation was defined as the difference between the response for trials with and without light activation.</s><s>This difference was then normalized to the maximum value of suppression for each animal.</s><s>The same procedure was used for the optical inactivation of LC-NA neurons with ArchT during sound stim.</s><s>Optical silencing was performed for a total of 4 s (1s baseline and 3 sec post-stimulus) baseline and amplitude of pupil size was calculated for 1.4 and 1.6 s respectively surrounding the stimulus.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistics</head><p><s>Throughout the paper we used paired and unpaired Student's two-sided t-test for evaluating P values of experiments with two conditions.</s><s>P values for experiments with multiple conditions were computed using ANOVA with Tukey post-hoc test.</s><s>Significance level were marked as *: p &lt; 0.05; **: p &lt; 0.01; and ***: p &lt; 0.001.</s><s>P-value for Pearson's correlation were calculated using a Student's t-distribution for a transformation of the correlation.</s><s>LC unit correlated significantly with pupil size if p &lt; 0.05.</s><s>Proportions of cells positively or negatively correlated with pupil for Dbh and Gad2 units were tested for significance using a χ 2 test.</s><s>For all experiments, sample sizes were pre-determined using a power analysis to provide at least 80% power to detect an effect.</s><s>Data distribution was assumed to be normal but this was not formally tested.</s><s>Data collection and analysis were not performed blind to the conditions of the experiments.</s><s>Comparison of laser to no laser trials for all trials regardless of tone intensity or frequency (***p = 0.00004 using two-tailed unpaired t-test, t 577 = 4.14).</s><s>h.</s><s>Average traces for the same mouse and condition as in (d), showing the phasic post-tone onset response.</s><s>The dashed box delineates the averaging window used in (i-k).</s><s>i. Pupil size at different tone intensities, with and without laser activation.</s><s>j.</s><s>Normalized suppression of phasic pupil response to tone intensity due to activation of LC-GABA neurons (p = 0.9493 using one-way ANOVA, F 4,10 = 0.17).</s><s>k.</s><s>Comparison of laser to no laser trials for all trials regardless of tone intensity or frequency (p = 0.9315 using two-tailed unpaired t-test, t 577 = 0.086).</s><s>l -Proposed model of interaction between LC inputs and LC-GABA/LC-NA neurons.</s><s>Excitatory coincident inputs from region A activate both LC-GABA and LC-NA neurons simultaneously.</s><s>LC-GABA inhibition scales LC-NA activity divisively, thus controlling the gain of response.</s><s>Noncoincident inputs from region B target LC-GABA neurons but not LC-NA neurons (as illustrated here), thus regulating overall NA tone without affecting the response gain.</s><s>For panels (g) and (k) box plots indicate the median (center line), first quartiles (box edges), minimum/maximum values (whiskers) and outliers (+), n = 249 and 280 laser off and laser on trials respectively.</s><s>For all other panels, data are displayed as mean ± s.e.m.</s><s>N = 3 mice in (f), (g), (j) and (k).</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>GABAergic neurons surround and contact LC noradrenergic neurons.</s><s>a. Dbh-Cre mice were injected with AAV-Flex-tdTomato virus in the LC and coronal sections were collected.</s><s>Boxed area (at +100 um location) is shown magnified in (b).</s><s>M: medial, D: dorsal, L: lateral; V: ventral.</s><s>b.</s><s>Location of GABA expressing somata were revealed by immunohistochemistry. c.</s><s>LC-NA and LC-GABA soma locations derived from (a) and (b).</s><s>d.</s><s>Map of LC-GABA and LC-NA neuronal density in a radius of 200 μm around the LC region.</s><s>The map is projected onto an antero-posterior axis.</s><s>Bar: Barrington's nucleus; MVe: medial vestibular nucleus; CGPn: central gray of the pons.</s><s>e. Distribution of</s></p></div></figDesc><graphic coords="23,94.56,62.00,482.88,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 :</head><label>2</label><figDesc><div><p><s>Figure 2: Activating LC-GABA neurons reduces LC-NA mediated pupil size.</s><s>a. Methods to measure pupil size in awake head-fixed mice using a CMOS camera and infrared illumination.</s><s>Right: pupil diameter for an example 20-minute session.</s><s>Boxed area is expanded in (b).</s><s>b.</s><s>Example images of pupil tracking for constricted (1) and dilated epochs (2).</s><s>Scale bar: 1 mm.</s><s>c.</s><s>Methods for optogenetics manipulation of LC-NA and LC-GABA neurons using Cre-dependent viruses, Dbh-and Gad2-Cre mice and fiber optic implantation.</s><s>d.</s><s>Coronal section of the LC showing ChR2-mCherry expression and optic fiber tracks in a Dbh-Cre mice.</s><s>Scale bar: 1 mm.</s><s>e -g.</s><s>Effect of activating (Dbh-ChR2) or silencing (Dbh-ArchT) LC-NA neurons as well as activating LC-GABA neurons (Gad2-ChR2) on pupil size in example mice.</s><s>Top panels -Temporal raster plots of pupil size aligned to optical activation onset (vertical red line).</s><s>Bottom panels -session averages for trials with and without laser.</s><s>Data are presented as mean ± s.e.m. h -j -Effect of activating or silencing LC-NA neurons as well as activating LC-GABA neurons on pupil size.</s><s>Gray lines represent animals where only tdTomato was expressed, but similar optical activation patterns and intensities were used.</s><s>N = 6, 5, 4 and 5 mice for Dbh-ChR2, ArchT, Gad2-ChR2 and VGAT-ChR2 conditions respectively.</s><s>N = 5 mice for tdTomato controls.</s><s>Paired two-tailed t-test with p = 0.822 (t 4 = 0.240) and ***p = 0.00001 (t 5 =14.553) for tdTomato and ChR2 conditions in (h); p = 0.249 (t 3 = 1.426) and **p = 0.0045 (t 4 = -5.768)</s><s>for tdTomato and ArchT conditions in (i); p = 0.4747 (t 4 = 0.788), **p = 0.0054 (t 4 = -5.494)</s><s>and *p = 0.0153 (t 3 = -5.010)</s><s>for tdTomato, VGAT-ChR2 and Gad2-ChR2 conditions in (j).</s></p></div></figDesc><graphic coords="25,84.19,62.00,503.63,323.28" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 :</head><label>3</label><figDesc><div><p><s>Figure 3: LC-NA and LC-GABA neurons receive inputs from similar as well as different sources.</s><s>a. Schematic for targeting pseudo-rabies virus to LC-NA and LC-GABA subpopulation.</s><s>b,c.</s><s>Transynaptically labelled neurons in different brain regions following injection of targeted pseudo-rabies virus in LC of Dbh-Cre or Gad2-Cre mice.</s><s>Repeated in N = 8 and 4 mice for LC-NA and GABA respectively.</s><s>Scale bars: 200 μm.</s><s>d,e.</s><s>Map of brain regions providing the largest fraction of inputs to LC-NA and LC-GABA neurons.</s><s>Regions providing less than 0.5% of total inputs are not displayed.</s><s>N = 8 and 4 mice for LC-NA and LC-GABA respectively.</s><s>f.</s><s>Map of the difference in inputs to LC-NA and LC-GABA neurons.</s><s>Only regions showing significant difference are displayed (p &lt; 0.05 using paired t-test; see Supplementary Table1).</s><s>BNST: bed nucleus of the stria terminalis; Cb: cerebellum; CbN : cerebellar nuclei; CeA: central amygdala; CnF: cuneiform nucleus; DB: diagonal band; DpMe: deep mesencephalic nucleus; Gi: gigantocellular nucleus; IC: inferior colliculus; IPL: interpeduncular nucleus; LH: lateral hypothalamus; LHb: lateral habenular nucleus; MC: motor cortex; PAG: periaqueductal gray; PaV: paraventricular nucleus; PFC: prefrontal cortex; PH: posterior hypothalamus; PnO: pontine nucleus; PO: preoptic nucleus; Pr: prepositus nucleus; PSTh: parasubthalamic nucleus; Rt: reticular nucleus; SC: superior colliculus; SN: substantia nigra; Sp5: spinal trigeminal tract; SPF subparafascicular thalamic nucleus; SuM: supramammillary nucleus; ZI: zona incerta.</s></p></div></figDesc><graphic coords="26,84.00,62.00,504.00,242.40" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 :</head><label>4</label><figDesc><div><p><s>Figure 4: Extracellular spike recordings in LC of identified NA and GABA units.</s><s>a. Methods for photo-tagging Dbh-or Gad2-ChR2 units using a 16-channel silicone probe equipped with a 100 μm optic fiber.</s><s>b.</s><s>Probe track (DiI coating) verified with immunohistochemistry staining for TH to identify LC.</s><s>Scale bar: 1 mm.</s><s>c.</s><s>Examples of isolated units and their respective probe location during two sessions (Top -Dbh-ChR2; Bottom -Gad2-ChR2).</s><s>d, e. Top -Spike rasters from two units responding to 5 ms laser pulses recorded in Dbh-ChR2 (d) or Gad2-ChR2 (e) expressing mice.</s><s>Bottom -Distribution of delay from laser onset.</s><s>Inset -Comparison of spontaneous versus laser-evoked spike waveforms.</s><s>f, g.</s><s>Average spike delay and jitter following light activation of Dbh-ChR2 and Gad2-ChR2 neurons.</s><s>p = 0.763 (t 35 = -0.304)</s><s>for (f), and p = 0.379 (t 35 = -0.8909)</s><s>for (g) using two-tailed unpaired t-test.</s><s>h.</s><s>Comparison of spontaneous spike rate for all three types of units (one-way ANOVA, F 2,430 = 15.88,</s><s>p = 10 -7 using Tukey post-hoc test).</s><s>i. Scatter plot of spike duration and valley full width at half maximum values (see inset for definition) for non-identified, Dbh-and Gad2-ChR2 units.</s><s>j.</s><s>Comparison of spike duration for all three types of units (one-way ANOVA, F 2,430 = 19.57,</s><s>p = 10 -9 using Tukey post-hoc test).</s><s>n = 19, 18 and 396 Dbh-ChR2, Gad2-ChR2 and non-identified units from 13 mice.</s><s>Box plots indicate the median (center line), first quartiles (box edges), minimum/maximum values (whiskers) and outliers (+).</s></p></div></figDesc><graphic coords="27,84.00,62.00,504.00,244.80" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 :</head><label>5</label><figDesc><div><p><s>Figure 5: Identified LC-GABA units display two types of activity with respect to pupil size.</s><s>a. Examples of simultaneous recordings of pupil size and photo-tagged Dbh-(upper panel) or Gad2-ChR2 (middle and lower panels) LC units.</s><s>Note the Gad2 unit in the middle panel is positively correlated (Gad2+) while that in the lower panel is negatively correlated with pupil size (Gad2-).</s><s>b.</s><s>Cumulative probability distribution of the Pearson correlation coefficient of LC unit spike rate with pupil size for all units.</s><s>The gray area marks nonsignificant correlations, p &lt; 0.05.</s><s>n = 19, 18 and 396 Dbh-ChR2, Gad2-ChR2 and nonidentified units from 13 mice.</s><s>c.</s><s>Percentage of Dbh-and Gad2-ChR2 units that are</s></p></div></figDesc><graphic coords="28,225.60,62.00,220.80,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 :</head><label>6</label><figDesc><div><p><s>Figure 6: LC-GABA neurons control the gain of LC-NA mediated pupil responses.</s><s>a. Tone-pips presented during the recording of LC photo-tagged units in Dbh-(left) and Gad2-ChR2 (right) expressing units.</s><s>Top panels -Spike raster plot aligned to tone onset.</s><s>Bottom panels -Session spike rate average.</s><s>b.</s><s>Raster plots of average responses to tone pips sorted between Dbh and Gad2 units.</s><s>n = 15 and 11 Dbh and Gad2 units respectively.</s><s>Scale bar: 1 s.</s><s>c.</s><s>Percentage of responsive neurons for the two types of units.</s><s>Proportions were not significantly different for the two groups (14/15 versus 7/11 in the Dbh and Gad2 groups; χ 2 : 3.60; p = 0.058).</s><s>d.</s><s>Top -Example of an auditory stimulus pattern used to test the effect</s></p></div></figDesc><graphic coords="30,121.20,62.00,429.60,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 7 :</head><label>7</label><figDesc><div><p><s>Figure 7: Projections from PFC to LC-GABA neurons control LC-NA mediated pupil tone.</s><s>a. Methodology used to target PFC projections to LC. b.</s><s>Coronal sections from posterior to anterior LC showing PFC axons in LC and TH staining.</s><s>M: medial, D: dorsal, L: lateral, and V: ventral directions.</s><s>Scale bar: 200 μm.</s><s>c.</s><s>Confocal images of the region highlighted in (b).</s><s>Asterisks indicate GABA+ somata.</s><s>Scale bar: 50 μm.</s><s>Experiments in (b,c) were repeated in 3 mice with similar results.</s><s>d.</s><s>Pupil size in response to tone pips with or without PFC axon activation.</s><s>Average of all trials for one mouse.</s><s>The dashed box delineates the averaging window use in (e-g).</s><s>e. Pupil size at different tone intensities, with and without laser activation, for the example mouse in (d).</s><s>f.</s><s>Normalized suppression of pupil response due to activation of PFC axons in LC (p = 0.3921 using one-way ANOVA, F 4,10 = 1.14).</s><s>g.</s></p></div></figDesc><graphic coords="32,84.00,62.00,504.00,471.36" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nat Neurosci.</s><s>Author manuscript; available in PMC 2019 July 14.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank <rs type="person">I. Wickersham</rs> (<rs type="affiliation">Massachusetts Institute of Technology</rs>) for his gift of the AAV helpers and dG-Rabies virus used for monosynaptic tracing.We thank <rs type="person">V. Pham</rs> and <rs type="person">L. Gunter</rs> for technical assistance on histology experiments.We thank <rs type="person">S. Flavell</rs>, <rs type="person">A. Bari</rs>, <rs type="person">R. Huda</rs>, <rs type="person">G. Sipe</rs> and other members of the <rs type="institution">Sur lab</rs> for helpful comments.This work was supported by <rs type="funder">NIH</rs> grant <rs type="grantNumber">EY007023</rs> (M.S.), <rs type="grantNumber">EY028219</rs> (M.S.), and <rs type="grantNumber">NS090473</rs> (M.S.), and postdoctoral fellowships from <rs type="grantNumber">FRQS 31677</rs> and <rs type="grantNumber">NSERC PDF-48724-2016</rs> (V.B.-P.).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_tD9EcwV">
+					<idno type="grant-number">EY007023</idno>
+				</org>
+				<org type="funding" xml:id="_rry2Zpw">
+					<idno type="grant-number">EY028219</idno>
+				</org>
+				<org type="funding" xml:id="_8c45T9j">
+					<idno type="grant-number">NS090473</idno>
+				</org>
+				<org type="funding" xml:id="_J5mGEBT">
+					<idno type="grant-number">FRQS 31677</idno>
+				</org>
+				<org type="funding" xml:id="_jGvrJmw">
+					<idno type="grant-number">NSERC PDF-48724-2016</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>The data and code used for analyses that support the findings of this study are available from the corresponding author upon request.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">An integrative theory of locus coeruleus-norepinephrine function: adaptive gain and optimal performance</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annual review of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="403" to="450" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Sara SJ The locus coeruleus and noradrenergic modulation of cognition</title>
+	</analytic>
+	<monogr>
+		<title level="j">Nature reviews. Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="211" to="223" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19190638</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Orienting and reorienting: the locus coeruleus mediates cognition through arousal</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Sara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bouret</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="130" to="141" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23040811</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Tuning arousal with optogenetic modulation of locus coeruleus neurons</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Carter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1526" to="1533" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21037585</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Gold JI Relationships between Pupil Diameter and Neuronal Activity in the Locus Coeruleus, Colliculi, and Cingulate Cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Joshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Kalwani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="221" to="234" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26711118</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Reimer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature communications</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">13289</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Locus coeruleus and dopaminergic consolidation of everyday memory</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Takeuchi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">537</biblScope>
+			<biblScope unit="page" from="357" to="362" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27602521</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Behavioral variability through stochastic choice and its gating by anterior cingulate cortex</title>
+		<author>
+			<persName><forename type="first">Dgr</forename><surname>Tervo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">159</biblScope>
+			<biblScope unit="page" from="21" to="32" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25259917</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">CRH Engagement of the Locus Coeruleus Noradrenergic System Mediates Stress-Induced Anxiety</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Mccall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="605" to="620" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26212712</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Pupil fluctuations track fast switching of cortical states during quiet wakefulness</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Reimer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page" from="355" to="362" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25374359</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Arousal and locomotion make distinct contributions to cortical activity patterns and visual encoding</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vinck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Batista-Brito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Knoblich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Cardin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="740" to="754" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25892300</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Membrane Potential Signature of Optimal States for Sensory Signal Detection</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Mcginley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>David</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cortical</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="179" to="192" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26074005</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Cellular mechanisms of brain state-dependent gain modulation in visual cortex</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Polack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Friedman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Golshani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1331" to="1339" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23872595</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Viral-genetic tracing of the input-output organization of a central noradrenaline circuit</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Schwarz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">524</biblScope>
+			<biblScope unit="page" from="88" to="92" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26131933</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">containing locus coeruleus neurons in behaving rats exhibit pronounced responses to non-noxious environmental stimuli</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">E</forename><surname>Bloom</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Norepinephrine</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="887" to="900" />
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7346593</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Froemke RC Coordinated forms of noradrenergic plasticity in the locus coeruleus and primary auditory cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Martins</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1483" to="1492" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26301326</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Modular organization of the brainstem noradrenaline system coordinates opposing learning states</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Uematsu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Rapid habituation of auditory responses of locus coeruleus cells in anaesthetized and awake rats</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Herve-Minvielle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Sara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroreport</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1363" to="1368" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7488725</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Responses of primate locus coeruleus neurons to simple and complex sensory stimuli</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Grant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Redmond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jr</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain research bulletin</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="401" to="410" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 3145784</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Response to novelty and its rapid habituation in locus coeruleus neurons of the freely exploring rat</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vankov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Herve-Minvielle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Sara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The European journal of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1180" to="1187" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7582091</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Activity of norepinephrine-containing locus coeruleus neurons in behaving rats anticipates fluctuations in the sleep-waking cycle</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">E</forename><surname>Bloom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="876" to="886" />
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7346592</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">The role of locus coeruleus in the regulation of cognitive performance</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Usher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Servan-Schreiber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rajkowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">283</biblScope>
+			<biblScope unit="page" from="549" to="554" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9915705</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Yerkes RM &amp; Dodson JD The relation of strength of stimulus to rapidity of habit-formation</title>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Comparative Neurology and Psychology</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="459" to="482" />
+			<date type="published" when="1908">1908</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">GABAergic afferents to locus ceruleus in the pericerulear dendritic zone: possible interneuronal pool</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Card</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="2313" to="2321" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14999082</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Identification of a Group of GABAergic Neurons in the Dorsomedial Area of the Locus Coeruleus</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Jin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PloS one</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">146470</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26785258</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Discharge profiles across the sleepwaking cycle of identified cholinergic, GABAergic, and glutamatergic neurons in the pontomesencephalic tegmentum of the rat</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Boucetta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cisse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mainville</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Morales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Jones</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="4708" to="4727" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24672016</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Calcium imaging of sleep-wake related neuronal activity in the dorsal pons</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pinto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature communications</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">10763</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Neuropeptide S: a neuropeptide promoting arousal and anxiolytic-like effects</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">L</forename><surname>Xu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="487" to="497" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15312648</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Cell type-specific channelrhodopsin-2 transgenic mice for optogenetic dissection of neural circuitry function</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature methods</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="745" to="752" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21985008</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Seung HS Production of glycoprotein-deleted rabies viruses for monosynaptic tracing and high-level gene expression in neurons</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">R</forename><surname>Wickersham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Sullivan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature protocols</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="595" to="606" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20203674</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+		<title level="m">-Afferent regulation of locus coeruleus neurons: anatomy, physiology and pharmacology in Progress in Brain Research</title>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="1991">1991</date>
+			<biblScope unit="page" from="47" to="75" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Afferent projections to the rat locus coeruleus demonstrated by retrograde and anterograde tracing with cholera-toxin B subunit and Phaseolus vulgaris leucoagglutinin</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H</forename><surname>Luppi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Akaoka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chouvet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jouvet</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="119" to="160" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7753394</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Logothetis NK &amp; Eschenko O The Locus Coeruleus Is a Complex and Differentiated Neuromodulatory System</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Totah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Neves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Panzeri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page">1056</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 30122373</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Wang FL &amp; Sur M Division and subtraction by distinct cortical inhibitory networks in vivo</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Runyan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">488</biblScope>
+			<biblScope unit="page" from="343" to="348" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22878717</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">expressing interneurons linearly transform cortical responses to visual stimuli</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">V</forename><surname>Atallah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bruns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scanziani</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Parvalbumin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="159" to="170" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22243754</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Cooch NK &amp; Schoenbaum G What the orbitofrontal cortex does not do</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Stalnaker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="620" to="627" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25919962</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Reward expectation, orientation of attention and locus coeruleus-medial frontal cortex interplay during learning</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bouret</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Sara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The European journal of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="791" to="802" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15255989</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">JM GABA release in the locus coeruleus as a function of sleep/wake state</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Nitz</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Siegel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="795" to="801" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9153658</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Evidence for self-and neighbor-mediated postactivation inhibition of locus coeruleus neurons</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ennis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain research</title>
+		<imprint>
+			<biblScope unit="volume">374</biblScope>
+			<biblScope unit="page" from="299" to="305" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 3719339</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Siegel JM Activation of pontine and medullary motor inhibitory regions reduces discharge in neurons located in the locus coeruleus and the anatomical equivalent of the midbrain locomotor region</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Mileykovskiy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">I</forename><surname>Kiyashchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kodama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Y</forename><surname>Lai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="8551" to="8558" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">&amp; Usdin TB Forebrain GABAergic projections to locus coeruleus in mouse</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Dimitrov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yanagawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Comparative Neurology</title>
+		<imprint>
+			<biblScope unit="volume">521</biblScope>
+			<biblScope unit="page" from="2373" to="2397" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23296594</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Cedarbaum JM &amp; Wang RY Evidence for norepinephrine-mediated collateral inhibition of locus coeruleus neurons</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Aghajanian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain research</title>
+		<imprint>
+			<biblScope unit="volume">136</biblScope>
+			<biblScope unit="page" from="570" to="577" />
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 922502</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Presynaptic inhibition of diverse afferents to the locus ceruleus by kappa-opiate receptors: a novel mechanism for regulating the central norepinephrine system</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kreibich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="6516" to="6525" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18562623</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Inhibitory influence of frontal cortex on locus coeruleus neurons</title>
+		<author>
+			<persName><forename type="first">Sj &amp;</forename><surname>Sara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Herve-Minvielle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences of the United States of America</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="6032" to="6036" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7597075</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Potent excitatory influence of prefrontal cortex activity on noradrenergic locus coeruleus neurons</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Jodo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="63" to="79" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9466399</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Circuit Tracing with Glycoprotein-Deleted Rabies Viruses</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Callaway</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Monosynaptic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">8979</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26085623</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Szabadi E Modulation of physiological reflexes by pain: role of the locus coeruleus</title>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in integrative neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">94</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23087627</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Functional neuroanatomy of the noradrenergic locus coeruleus: its roles in the regulation of arousal and autonomic function part I: principles of functional organisation</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Samuels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Szabadi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current neuropharmacology</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="235" to="253" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19506723</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">Methods-only References</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<title level="m" type="main">Distinct roles of visual, parietal, and frontal motor cortices in memory-guided sensorimotor decisions</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Goard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Pho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Woodson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sur</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">13764</biblScope>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27490481</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">A Fully Automated Approach to Spike Sorting</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Chung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page">1386</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28910621</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Image to ImageJ: 25 years of image analysis</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Rasband</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Eliceiri</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Nih</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature methods</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="671" to="675" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22930834</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Paxinos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kbj</forename><surname>Franklin</surname></persName>
+		</author>
+		<title level="m">The Mouse Brain in Stereotaxic Coordinates</title>
+		<meeting><address><addrLine>San Diego, California</addrLine></address></meeting>
+		<imprint>
+			<publisher>Academic Press</publisher>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Genome-wide atlas of gene expression in the adult mouse brain</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Lein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">445</biblScope>
+			<biblScope unit="page" from="168" to="176" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17151600</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grün</surname></persName>
+		</author>
+		<title level="m">Rotter S Analysis of Parallel Spike Trains: Chapter 2 Estimating the Firing Rate</title>
+		<imprint>
+			<publisher>Springer US</publisher>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

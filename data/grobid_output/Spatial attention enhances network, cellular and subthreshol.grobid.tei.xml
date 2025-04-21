@@ -1,0 +1,1776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Spatial attention enhances network, cellular and subthreshold responses in mouse visual cortex</title>
+				<funder ref="#_Yktjr6P">
+					<orgName type="full">GT Neural Engineering Center, NIH NINDS</orgName>
+				</funder>
+				<funder ref="#_8533BHg">
+					<orgName type="full">NIH BRAIN Initiative</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Whitehall Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Sloan Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Goizueta Foundation and Sloan Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2020-01-24">2020-01-24</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Anderson</forename><surname>Speed</surname></persName>
+							<idno type="ORCID">0000-0001-9238-1696</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">Georgia Institute of Technology &amp; Emory University</orgName>
+								<address>
+									<settlement>Atlanta</settlement>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joseph</forename><surname>Del Rosario</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Navid</forename><surname>Mikail</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Georgia Institute of Technology &amp; Emory University</orgName>
+								<address>
+									<settlement>Atlanta</settlement>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Bilal</forename><surname>Haider</surname></persName>
+							<email>bilal.haider@bme.gatech.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Georgia Institute of Technology &amp; Emory University</orgName>
+								<address>
+									<settlement>Atlanta</settlement>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Spatial attention enhances network, cellular and subthreshold responses in mouse visual cortex</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Communications</title>
+						<title level="j" type="abbrev">Nat Commun</title>
+						<idno type="eISSN">2041-1723</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">11</biblScope>
+							<biblScope unit="issue">1</biblScope>
+							<date type="published" when="2020-01-24" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">0FFA317D7A07CDFECBBAF614B4781870</idno>
+					<idno type="DOI">10.1038/s41467-020-14355-4</idno>
+					<note type="submission">Received: 31 May 2019; Accepted: 2 January 2020;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Internal brain states strongly modulate sensory processing during behaviour.</s><s>Studies of visual processing in primates show that attention to space selectively improves behavioural and neural responses to stimuli at the attended locations.</s><s>Here we develop a visual spatial task for mice that elicits behavioural improvements consistent with the effects of spatial attention, and simultaneously measure network, cellular, and subthreshold activity in primary visual cortex.</s><s>During trial-by-trial behavioural improvements, local field potential (LFP) responses to stimuli detected inside the receptive field (RF) strengthen.</s><s>Moreover, detection inside the RF selectively enhances excitatory and inhibitory neuron responses to task-irrelevant stimuli and suppresses noise correlations and low frequency LFP fluctuations.</s><s>Whole-cell patch-clamp recordings reveal that detection inside the RF increases synaptic activity that depolarizes membrane potential responses at the behaviorally relevant location.</s><s>Our study establishes that mice display fundamental signatures of visual spatial attention spanning behavioral, network, cellular, and synaptic levels, providing new insight into rapid cognitive enhancement of sensory signals in visual cortex.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>M</head><p><s>ice have become an important tool for understanding behavioral modulation of sensory processing in mammalian cortical circuits.</s><s>Studies in awake mice have revealed that locomotion <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref> , shifts of arousal <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref> , motor activity <ref type="bibr" target="#b6">7</ref> , and behavioral tasks <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref> modulate sensory responses.</s><s>These and other studies in transgenic mice have further uncovered the role of cortical neuronal subtypes <ref type="bibr" target="#b12">13,</ref><ref type="bibr" target="#b13">14</ref> during sensory response modulation.</s><s>However, it remains unknown whether cortical circuits in mice selectively enhance sensory responses to stimuli in discrete regions of space, as classically observed in primates during selective attention tasks.</s></p><p><s>Fundamental studies in primates outline several ways spatial attention modulates behavior and visual processing.</s><s>These include selective increases in spiking to stimuli at a behaviorally relevant location <ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref> , reduction of correlated neural variability <ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b20">21</ref> , selective modulation of low-and high-frequency synchronization <ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref> , and activity modulation in specific cortical layers <ref type="bibr" target="#b24">25</ref> .</s><s>These observations have inspired theories of biophysical mechanisms underlying attentional modulation <ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref> , but these have not yet been tested across behavioral, network, cellular, and synaptic levels, largely owing to the challenge of performing all of these combined measurements in primates.</s></p><p><s>Establishing selective attention tasks in mice provides opportunity for detailed study of neural circuits underlying cognitive modulation of sensory processing.</s><s>Mice can indeed use cues to selectively attend to one sensory modality versus another <ref type="bibr" target="#b28">29</ref> .</s><s>Moreover, a recent study showed that visual spatial cueing improves ensuing detectability of stimuli at the cued location <ref type="bibr" target="#b29">30</ref> , consistent with effects of spatial orienting and attention <ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b31">32</ref> ; crucially, this study did not examine the cortical basis for this behavior, did not record neural activity in visual cortical areas, or directly assess if cortical dynamics in mice resemble those in the primate visual system during spatial attention tasks.</s></p><p><s>Here, we show that a visual detection task with spatial context elicits behavioral improvements in mice consistent with the effects of spatial attention.</s><s>We simultaneously performed highdensity silicon probe recordings in the primary visual cortex (V1), and found that behavioral improvements were accompanied by stronger neural responses across network and cellular levels, particularly in layer 4 (L4).</s><s>These observations were not explainable by several non-sensory or nonspatial factors.</s><s>Larger neural responses were accompanied by reductions in both pairwise noise correlations and low-frequency network activity.</s><s>Moreover, whole-cell patch-clamp recordings revealed enhanced subthreshold responsiveness at the behaviorally relevant spatial location.</s><s>This work establishes that fundamental neural correlates of visual spatial attention observed in primates also operate in mice during selective improvements of visual spatial behavior.</s><s>Our findings provide new insight into the cellular, network, and synaptic basis for rapid modulation of early sensory processing during spatial behaviors.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Spatial context improves trial-by-trial detection performance.</head><p><s>To investigate the cellular and network mechanisms underlying spatial contextual modulation, we developed a visual task where mice reported detection of spatially localized stimuli (Gabor gratings, σ = 10°) by licking for water reward.</s><s>Stimuli appeared only after a mandatory period of no licking (0.5-6 s, randomized per trial), and rewards were only available upon first lick during the stimulus (1-1.5 s duration).</s><s>Stimuli appeared with unpredictable timing, but always at one of two discrete locations of visual space (either in the binocular or monocular visual fields; Fig. <ref type="figure" target="#fig_0">1a</ref>).</s><s>Stimuli appeared at a range of contrasts (Fig. <ref type="figure" target="#fig_0">1b</ref>; Supplementary Fig. <ref type="figure" target="#fig_0">1</ref>) at one of these spatial locations for the duration of a block of ~25 repeated trials; then, without warning, stimuli switched to the other spatial location for a new block of trials (Fig. <ref type="figure" target="#fig_0">1d</ref>).</s><s>Thus, stimulus location remained spatially fixed within a block of trials, yet alternated locations across blocks of trials.</s><s>This spatial context allowed us to investigate if sequential trials at a fixed location elicited behavioral effects consistent with spatial attention.</s></p><p><s>Indeed, detection was slowest and least accurate on the first trial within the block, when stimulus location was not predictable from the previous trial; thereafter, detection speed and accuracy significantly improved on consecutive trials at the same location (Fig. <ref type="figure" target="#fig_0">1e</ref>, f; time constant of improvement ~5 trials).</s><s>This increase in performance across trials was associated with a progressive increase in hit rates, and an overall decrease in false alarm rates.</s><s>Consequently, detection sensitivity (d') improved significantly within five trials (Fig. <ref type="figure" target="#fig_0">1f</ref>; from 1.1 ± 0.1 to 1.6 ± 0.1; mean ± s.e.m.; p &lt; 0.001, Wilcoxon rank-sum test).</s><s>Criterion also decreased significantly from first (0.37 ± 0.04) to fifth trials (0.22 ± 0.03; p &lt; 0.001, rank-sum test), reflecting that mice tended to respond more frequently with hits on trials later in the block as detection sensitivity improved.</s><s>Critically, behavioral performance required spatially localized activity in V1: optogenetically inactivating monocular primary visual cortex (V1) selectively abolished monocular detection (Fig. <ref type="figure" target="#fig_0">1c</ref>; Supplementary Fig. <ref type="figure" target="#fig_0">1</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Neural response amplitude increases with improved detection.</head><p><s>During these behavioral improvements, neural responses in V1 strengthened.</s><s>We recorded laminar local field potentials (LFP; Supplementary Fig. <ref type="figure">2</ref>) in monocular V1 (Supplementary Fig. <ref type="figure" target="#fig_2">4</ref>), and observed a significant amplification of Layer 4 (L4) LFP responses to monocular stimuli, with the same time constant as the simultaneous behavioral improvements (Fig. <ref type="figure" target="#fig_0">1</ref> g-j; 72% increase in LFP response from Trial 1 to 5 for correct detection trials).</s><s>This occurred on the earliest portion of the sensory response across all cortical layers, but most prominently in L4 (Supplementary Fig. <ref type="figure">2</ref>).</s><s>These V1 responses strengthened in the exact same mice and on the exact same trials in which behavior improved (Fig. <ref type="figure" target="#fig_0">1e,</ref><ref type="figure">f</ref>).</s></p><p><s>Behavioral improvement is not due to arousal or motivation.</s><s>Changes in arousal, eye position, or motivation did not explain behavioral improvements.</s><s>We measured pupil area as a proxy for global changes of arousal.</s><s>Pupil area prior to stimulus onset remained remarkably constant from first to fifth correct detection trials (Fig. <ref type="figure">2a</ref>, &lt;0.1% change from mean).</s><s>These changes were tenfold smaller than those preceding correct versus incorrect trials (4 ± 13%, see Speed et al. <ref type="bibr" target="#b11">12</ref> ).</s><s>Pupil position also remained stable, deviating &lt;2°from first to fifth trials within the block (Fig. <ref type="figure">2c</ref>); these deviations were tenfold smaller than the extent of the visual stimuli (Fig. <ref type="figure">2d</ref>).</s><s>Next, we reasoned that changes in motivation across trials would manifest as measureable changes in licking.</s><s>If motivation for reward increased from first to fifth trials, this should drive impulsivity <ref type="bibr" target="#b32">33</ref> and increase premature stray licks preceding stimulus onset; likewise, consummatory licks should increase across sequential rewards, if motivation grew.</s><s>However, neither of these scenarios were evident: there was no increase in stray "anticipatory" licking preceding stimulus onset, and no increase in consummatory lick vigor on rewards from first to fifth trials (Supplementary Fig. <ref type="figure">3</ref>).</s><s>Taken together, these results suggest that increased arousal or motivation were not apparent from simultaneous measures of pupil and licking, and neither co-varied with the time course of behavioral improvements.</s><s>Instead, spatial context progressively improved stimulus detection speed and accuracy, while the simultaneously measured neural responses strengthened.</s></p><p><s>These observations in mice are consistent with well-established effects of selective visual spatial attention <ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b29">30,</ref><ref type="bibr" target="#b30">31</ref> .</s></p><p><s>Neural response enhancements are spatially specific.</s><s>We hypothesized that if response enhancement was due to spatial context, then it should also selectively enhance responses to taskirrelevant stimuli at the same behaviorally relevant locations <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b15">16</ref> .</s><s>We therefore presented task-irrelevant probe stimuli (vertical bars 10°wide, ± 5% contrast from gray screen) during the intertrial intervals separating successive presentations of the grating stimuli detected for rewards (Fig. <ref type="figure">3a</ref>).</s><s>Brief probes (0.1 s duration, 0.3 s interval) appeared one at a time in a randomly selected location anywhere in the binocular or monocular visual fields (see the Methods section).</s><s>Since the receptive fields (RF) of our recordings were in monocular V1 (Supplementary Fig. <ref type="figure" target="#fig_2">4</ref>), stimulus detection occurred inside the RF on monocular blocks and, conversely, outside the RF during blocks at the binocular location.</s><s>This design allowed us to compare neural responses to the very same taskirrelevant probe stimuli appearing inside the RF in two different spatial contexts in interleaved alternating blocks (Fig. <ref type="figure">3a</ref>, left versus right).</s><s>Since probe stimuli were faint, brief, and task-irrelevant, they did not elicit any behavioral response: following probe onset inside the RF there was no increase in licking, and stimulus detection accuracy was unaffected (Supplementary Fig. <ref type="figure">5</ref>).</s><s>Probe stimuli inside the RF were thus free from confounds of motor planning or reward association <ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref> , enabling isolated measurement of the impact of spatial context on sensory processing inside the RF.</s><s>Detection trials inside the RF significantly and selectively enhanced LFP responses to probe stimuli in L4 (Fig. <ref type="figure">3b</ref>); responses to these same probes did not change across trials during detection outside of the RF.</s><s>Enhancement of the LFP response developed gradually over the course of each block, and with the same time constant as behavioral and neural response enhancement to detected stimuli (cf.</s><s>Fig. <ref type="figure" target="#fig_0">1</ref>).</s><s>Probe responses tended to be strongest at sites where neuronal RFs were well-aligned with the detected stimulus location (85% greater modulation when RF location was &lt;10°away from center of detected grating stimulus, versus &gt;10°a way, p = 0.07, rank-sum test).</s></p><p><s>Enhanced neural responses to probes are not due to arousal.</s><s>Arousal did not explain enhanced neural responses inside the RF (Fig. <ref type="figure" target="#fig_2">4</ref>).</s><s>We again used pupil area to segregate trials by arousal level, and found that during detection inside the RF, probes evoked similar amplitude LFP responses in low or high arousal trials; in both cases, LFP responses sorted by arousal level were much smaller than the enhanced LFP responses on the fifth trial of detection inside the RF.</s><s>This spatially selective enhancement of responses to task-irrelevant stimuli mirrors effects of spatial attention in the primate visual system <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b36">37</ref> .</s><s>). c Same sessions as b, for spikes from fast spiking (FS) putative inhibitory neurons (n = 67, all layers).</s><s>Detection inside the RF increased FS probe responses by 1.1 ± 0.4 spikes per s per trial (p &lt; 0.001, rank-sum test).</s><s>Mean ± s.e.m. d Same as c, for spikes from regular spiking (RS) putative excitatory neurons (n = 225, all layers).</s><s>Detection inside the RF increased RS probe responses by 0.2 ± 0.1 spikes per s per trial (p &lt; 0.001, rank-sum test).</s><s>Mean ± s.e.m. e FS neurons show enhanced probe responses for both early (&lt;0.15 s; out: 3.3 ± 0.2 vs in: 4.4 ± 0.2 spikes per second, p &lt; 0.001 rank-sum test) and late sensory activity (0.15-0.3 s; out: 3.1 ± 0.2 vs in: 4.8 ± 0.2 spikes per second, p &lt; 0.001, rank-sum test) following stimulus onset.</s><s>Late activity significantly greater than early on detect inside RF trials (p &lt; 0.05, rank-sum test).</s><s>f Same as e, for RS neurons early (out: 1.8 ± 0.06 vs in: 2.08 ± 0.05 spikes per second, p &lt; 0.001, ranksum test), late (out: 1.8 ± 0.04 vs in: 2.13 ± 0.07 spikes per second, p &lt; 0.001, rank-sum test).</s><s>Late activity significantly greater than early on detect inside RF trials (p &lt; 0.05, rank-sum test).</s><s>***p &lt; 0.001.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Enhancement of excitatory and inhibitory neuron responses.</head><p><s>Detection inside the RF increased excitatory and inhibitory neuron spiking to probes.</s><s>We classified neurons across layers as either regular spiking (RS) putative excitatory neurons or fast spiking (FS) putative parvalbumin (PV) inhibitory neurons <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b37">38</ref> (Supplementary Fig. <ref type="figure" target="#fig_3">6</ref>).</s><s>Detection inside the RF significantly enhanced RS and FS spiking responses to probes inside the RF from the first to fifth trials (Fig. <ref type="figure">3c,</ref><ref type="figure">d</ref>); again, there was no change in responses to these same probes across trials with detection outside the RF.</s><s>FS neurons showed greater enhancement (32 ± 0.01%) than RS neurons (13 ± 0.0004%).</s><s>Like the LFP, sensory response enhancements were prominent at short latency (&lt;0.15 s) and slightly but significantly larger at longer latencies (0.15-0.3 s), perhaps owing to delayed and prolonged responses to low stimulus contrast <ref type="bibr" target="#b38">39</ref> , or to spatially specific but sustained increases in neural excitability resulting from improved behavioral performance across trials.</s><s>By comparing this spatial contextual modulation of probe responses to contrast response functions (Supplementary Fig. <ref type="figure">9</ref>), we found that RS and FS response enhancement was more consistent with contrast gain <ref type="bibr" target="#b39">40</ref> than response gain <ref type="bibr" target="#b40">41</ref> (Supplementary Fig. <ref type="figure" target="#fig_0">10</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stimulus expectation alone does not explain RS or FS spiking.</head><p><s>Increased spiking during detection inside the RF was not due to stimulus expectation.</s><s>We used zero contrast trials (blanks) to identify if non-sensory factors related to stimulus expectation increased firing rates.</s><s>Blank trials were randomly interleaved throughout the behavioral sessions (20% of total trials), and occurred with the same intertrial interval statistics as the grating stimuli detected for rewards (see the Methods section).</s><s>This allowed us to isolate firing rates both preceding and immediately following the "expected" appearance of a visual stimulus across trials, but in the absence of any sensory-evoked activity.</s><s>Indeed, there was no increase in RS or FS firing rates preceding or following the onset of a blank stimulus on first or fifth trials within the block (Supplementary Fig 7).</s><s>We further separated blank trials into those where mice licked (false alarms), and compared with trials with no licks (correct rejects).</s><s>Again, there was no evidence for increased firing rates in FS or RS cells on blank trials with ensuing licks, as could be expected with motor readiness for reward.</s><s>Similarly, we found no evidence for firing rate increases on blank trials sorted for detection inside versus outside the RF (Supplementary Fig. <ref type="figure">8</ref>, FS detect outside RF: 4.32 ± 1.2; detect inside RF: 2.6 ± 0.7 spikes per second, p = 0.6; RS detect outside RF: 1.9 ± 0.2; detect inside RF: 1.9 ± 0.2 spikes per second, p = 0.7, signed-rank test).</s><s>These results argue against the possibility that non-sensory stimulus expectation increased firing rates, and instead provide support for the specific interaction between spatial context and the enhancement of sensory-driven activity inside the RF.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Spatial context reduces noise correlations inside the RF.</head><p><s>Detection inside the RF selectively reduced pairwise noise correlations during probe responses <ref type="bibr" target="#b19">20</ref> (detect outside RF: 0.021 ± 0.001; detect inside RF: 0.017 ± 0.001; n = 1500 pairs, aggregated across cell types and layers; p &lt; 0.01, rank-sum test).</s><s>Although detection inside the RF decreased noise correlations between pairs of RS neurons or pairs of FS neurons, this was most evident in pairwise interactions between FS and RS neurons <ref type="bibr" target="#b20">21</ref> (Fig. <ref type="figure">5</ref>).</s><s>This aspect of spatial contextual modulation in mouse V1 is broadly consistent with primate studies of selective visual attention <ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b42">43</ref> .</s></p><p><s>Spatial context reduces low-frequency activity inside the RF.</s><s>At these same recording sites, detection inside the RF reduced lowfrequency LFP power across trials (Fig. <ref type="figure" target="#fig_3">6</ref>).</s><s>We calculated LFP power spectral density during the detected stimulus on single trials, and found that LFP power in low-frequency bands (&lt;10 Hz) significantly decreased from first to fifth trials of detection inside the RF, in both L4 (Fig. <ref type="figure" target="#fig_3">6</ref>; modulation index (MI): -0.07 ± 0.06, p &lt; 0.05, Wilcoxon signed-rank test), and also in L5/6 (MI = -0.12</s><s>± 0.05, p &lt; 0.05, signed-rank test), with no significant modulation in L2/3 (MI = -0.09</s><s>± 0.09, p = 0.70, signed-rank test).</s><s>We also examined stimulus-driven modulation of gamma frequencies, but this was not significantly different across successive trials of detection inside the RF.</s><s>This was not because the stimulus did not evoke high-frequency activity: LFP gamma power was significantly larger for stimuli appearing inside versus outside the RF (24.6 ± 4.0 dB inside RF vs 24.0 ± 5.1 dB outside RF, p &lt; 0.05, signed-rank test).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Spatial context elicits membrane potential depolarization.</head><p><s>Since LFP in awake mouse V1 directly reflects subthreshold excitatory and inhibitory synaptic activity <ref type="bibr" target="#b43">44</ref> , we hypothesized that detection inside the RF operates directly on subthreshold membrane potential (V m ).</s><s>Based on our previous simultaneous recordings of LFP and V m in awake V1 <ref type="bibr" target="#b43">44</ref> , we predicted directly from the LFP responses (Supplementary Fig. <ref type="figure" target="#fig_0">11</ref>) that detection inside the RF should depolarize membrane potential responses to probes by ~1 mV (Fig. <ref type="figure">7a</ref>).</s></p><p><s>We then directly measured subthreshold V m modulation during shifts of spatial context.</s><s>We performed whole-cell patch-clamp recordings <ref type="bibr" target="#b44">45,</ref><ref type="bibr" target="#b45">46</ref> during task performance (Fig. <ref type="figure">7b</ref>), and analyzed V m responses to probes appearing inside the RF (Supplementary Fig. <ref type="figure" target="#fig_0">11</ref>), while spatial context alternated outside or inside the RF across blocks.</s><s>Strikingly, detection inside the RF evoked depolarization with two components: a tonic depolarization of 4.9 ± 0.4 mV, and a transient probe-evoked depolarization of 2.2 ± 0.3 mV (Fig. <ref type="figure">7c</ref>; p &lt; 0.001 for both, signed-rank test).</s><s>Consistent with depolarization resulting from increased synaptic activity, spontaneous membrane potential fluctuations (V m SD) slightly but significantly increased during blocks of detection inside versus outside the RF (Fig. <ref type="figure">7d</ref>; 2.5 ± 0.1 vs 2.1 ± 0.1 mV; p = 0.01, signed-rank test).</s><s>Based upon the measured power law relationship between V m and spike rate in excitatory neurons, 1-2 mV of synaptic depolarization produced small but measurable increases in spike rate (Supplementary Fig. <ref type="figure" target="#fig_0">11</ref>), as we recorded in RS neurons (Fig. <ref type="figure">7d</ref>).</s><s>These data reveal that spatial context selectively and directly increases subthreshold synaptic activity and membrane depolarization in V1 during behavioral improvements, and in parallel with local increases in excitation and inhibition.</s><s>These measurements in mice provide verification of long-theorized mechanisms <ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b46">47,</ref><ref type="bibr" target="#b26">27</ref> of response modulation proposed to underlie attentional enhancements.</s><s>Taken together, we found that spatial context enhanced behavior and sensory signals across network, cellular, and subthreshold synaptic levels in mouse V1 (Fig. <ref type="figure">8</ref>).</s><s>In contrast to recordings in primate visual cortex <ref type="bibr" target="#b47">48</ref> , contextual modulation in mouse V1 was larger in LFP than in RS or FS firing, even though all were recorded from the same sites during the same behavioral trials (Fig. <ref type="figure">3e-j</ref>; 79% for LFP, 32% for FS neurons, 13% for RS neurons; p &lt; 0.05; nonparametric ANOVA).</s><s>Consistent with this large LFP modulation, subthreshold V m was enhanced to an even greater extent, with transient probe-evoked depolarization increasing by 108% during detection trials inside the RF.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>Our study reveals that mice display several fundamental signatures of visual spatial attention, as classically observed in primates.</s><s>These signatures span behavioral, network, cellular, and synaptic levels, and together provide new insight into local mechanisms underlying rapid cognitive modulation of sensory signals in V1.</s><s>Establishing spatial attentional effects across behavioral and neural levels represents a key step forward for studies of mouse vision and cognition.</s><s>Our findings complement and extend others <ref type="bibr" target="#b29">30</ref> in countering the long-standing view that mice are poorly suited for study of neural substrates of selective visual attention, due to lack of high-resolution foveal vision, absence of visually guided saccades, lack of orientation columns, and limited cognitive capacity that may preclude training in attention-demanding tasks <ref type="bibr" target="#b48">49</ref> .</s><s>Our study establishes a paradigm wherein mice selectively improve behavior using spatial context, and this simultaneously enhances sensory responsiveness specifically at the behaviorally relevant spatial location.</s><s>The consistency of our framework with prior studies in primates aids and anchors interpretability of our findings, discussed in turn below.</s></p><p><s>Our study used a visual detection task with a block design, where the detected stimulus itself provided spatial context across successive trials.</s><s>Behavioral improvements were gradual, with a time constant of five trials.</s><s>These improvements in reaction time and accuracy are consistent with a recent study in mice that explicitly conveyed spatial salience with a Posner cue <ref type="bibr" target="#b29">30</ref> .</s><s>One advantage of our design is the lack of a cueing stimulus inside the RF immediately preceding the detected stimulus; multiple stimuli drive complex neural responses <ref type="bibr" target="#b49">50</ref> that pose greater challenges for interpretation as compared with our single-stimulus design.</s><s>A second advantageous feature of our design that mice were not running, minimizing complicated interactions between visual responses, locomotion, and arousal.</s><s>A third advantage of our task is that the interleaved trials of monocular detection are more difficult than binocular detection <ref type="bibr" target="#b11">12</ref> , perhaps accentuating the magnitude and visibility of behavioral and neural effects of spatial context <ref type="bibr" target="#b50">51</ref> .</s><s>Our results bear some similarities with neural correlates of visual selection in mice <ref type="bibr" target="#b51">52</ref> .</s><s>Direct comparison of our task with other head-fixed visual spatial tasks for mice will be an important avenue for investigation.</s></p><p><s>At the network level, detection inside the RF amplified LFP responses across all layers of V1, but particularly in L4.</s><s>Spatial attention also modulates LFP response amplitude in V4 of primates, but to a lesser degree than observed here, and with suppression and enhancement of early and late LFP phases <ref type="bibr" target="#b47">48</ref> .</s><s>In our study, we also observed a reduction of low-frequency LFP power at the same sites showing LFP amplitude increases, in both L4 and L5/6.</s><s>Several primate studies have shown reduction of low-frequency fluctuations with spatial attention, both in the LFP <ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b52">53,</ref><ref type="bibr" target="#b53">54</ref> and also with single and multiunit spike coherence with LFP <ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b24">25</ref> .</s><s>Reductions in low-frequency activity are particularly beneficial for stimulus encoding <ref type="bibr" target="#b54">55</ref> , and causally related to attentional improvements <ref type="bibr" target="#b55">56</ref> .</s><s>An unexpected difference between primate studies and our findings was lack of modulation of gamma oscillations during subsequent trials of detection inside - the RF.</s><s>However, we could only assess spatial contextual modulation of neural responses inside versus outside the RF using probes, and these were brief and low contrast, sub-optimal conditions to evoke robust gamma activity <ref type="bibr" target="#b56">57</ref> .</s><s>Modifications to the basic task design and stimuli used here could drive gamma activity more strongly and allow deeper examination of spatial contextual effects on spectral coherence, and between spikes and the LFP; indeed, we previously showed that the narrowband gamma oscillation in V1 driven by LGN <ref type="bibr" target="#b57">58</ref> provided substantial predictive power for correct versus incorrect trials <ref type="bibr" target="#b11">12</ref> , deserving further investigation.</s><s>At the cellular level, detection inside the RF enhanced probeevoked responses of putative excitatory and inhibitory neurons, while simultaneously decreasing their shared correlated variability.</s><s>These findings are consistent with several studies of spatial attentional effects in both V1 and higher visual cortex of primates <ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b24">25</ref> , and were not explained by several nonspatial or non-sensory factors.</s><s>We found that spatial context most critically reduced correlated noise between RS and FS neurons.</s><s>In mice, &gt;90% of RS units are excitatory pyramidal cells, and nearly all FS units correspond to PV-positive inhibitory cells <ref type="bibr" target="#b58">59</ref> , providing greater confidence in identifying a cell-type-specific interaction.</s><s>Decorrelation in FS and RS units is likely related to the reduction in low-frequency LFP power, since our previous study showed that low-frequency LFP activity directly relates to the amplitude of excitatory and inhibitory synaptic currents <ref type="bibr" target="#b43">44</ref> .</s><s>Unlike primate V4, we did not observe decreased variability of single-neuron spike statistics (e.g., Fano factor), but our results are consistent with a recent study of primate V1 that also did not observe Fano factor reduction with spatial attention <ref type="bibr" target="#b31">32</ref> .</s><s>In addition, we observed significant enhancement of both early and late components of probe-evoked spiking, whereas primate recordings typically observe attentional modulation of spiking and its variability at long latencies during stimulus presentation.</s><s>In our study, spatial attentional modulation of probe responses inside the RF was most prominent in FS neurons, at long latencies (nearly 0.5 spikes per second greater late vs early).</s><s>This long-latency enhancement, although triggered by a task-irrelevant stimulus, reveals that a component of attentional modulation in mouse V1 is a temporally long-lasting increase in excitability of FS interneurons; this may be driven directly by neuromodulation of inhibitory neurons specifically with RFs at the spatial location where stimulus detectability improves across trials.</s><s>Longlatency increases in excitability of both inhibitory and excitatory neurons following brief sensory responses have been observed in mice performing both visual and somatosensory tasks <ref type="bibr" target="#b59">60,</ref><ref type="bibr" target="#b60">61</ref> .</s><s>In our study, stimulation inside the RF was necessary to reveal these effects, since there was no long-latency increase in spiking following onset of blank stimuli; likewise, pupil measurements indicate that brain-wide arousal was not a major source for these effects, but it remains plausible that neuromodulation increases excitability specifically of V1 neurons only with RFs at the behaviorally relevant location, likely an important component of behavioral improvements with attention <ref type="bibr" target="#b61">62</ref> .</s><s>Our findings in mice enable techniques such as imaging of neuromodulatory axon terminals in the cortex to resolve this possibility <ref type="bibr" target="#b62">63</ref> .</s><s>These longlatency attentional effects appear different from observations in primates, which are primarily stimulus-driven (although there is evidence for attentional increases in spontaneous activity <ref type="bibr" target="#b39">40</ref> ).</s><s>Moreover, attentional modulation of neural responses in primates occurs mainly during the sustained portion of the sensory response, not the initial sensory transient, as we have observed here across all levels of recording.</s><s>The early component of feedforward sensory processing in primate sensory cortex may be relatively resistant to contextual modulation, whereas many studies in mice show that the earliest sensory signals in primary sensory cortex show clear modulation by motor, behavioral, and cognitive factors</s></p><p><s>At the subthreshold level, we revealed that spatial context directly depolarizes cortical neurons with an accompanying increase in membrane potential variance.</s><s>These first findings at subthreshold level, coupled with our observations at the cellular level, bolster long-standing theoretical predictions <ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b27">28</ref> that spatial attention operates through concerted increases of cortical excitation and inhibition that depolarize neurons via synaptic bombardment inside the receptive field.</s><s>Rapid and transient depolarization to probes coupled with a small increase in spontaneous membrane potential variance during detection inside the RF supports models of gain modulation via increased synaptic activity <ref type="bibr" target="#b46">47,</ref><ref type="bibr" target="#b63">64</ref> , rather than models requiring decreased conductance and decreased membrane potential variance with no net depolarization <ref type="bibr" target="#b25">26</ref> .</s><s>Although measured in a small number of neurons, we observed both tonic and transient stimulus-evoked depolarization that was consistent with predictions calculated from the LFP responses, and also consistent with the level of probe-evoked spiking in RS neurons.</s><s>Furthermore, our observation that subthreshold modulation is not solely restricted to the stimulusevoked transient appears consistent with our observations of long-latency enhancement of RS and FS firing, the latter of which may be preferentially recruited to maintain stimulus selectivity <ref type="bibr" target="#b44">45</ref> in the face of gain modulation via depolarization <ref type="bibr" target="#b46">47</ref> ; potential sources of sustained subthreshold depolarization may again arise from neuromodulatory inputs that increase neural excitability across trials as detection performance accelerates and improves.</s><s>Identifying these and other subthreshold excitatory and inhibitory components of gain modulation <ref type="bibr" target="#b64">65</ref> underlying spatial attentional effects now appears to be an approachable topic for future studies.</s></p><p><s>Our task used stimulus blocks and task-irrelevant probes to enable several key insights, but this also carries several inherent limitations.</s><s>First, neither task-relevant gratings nor task-irrelevant probe stimuli were specifically tailored to drive optimal neural responses (e.g., best orientation and size), nor were probes presented at a full range of test contrasts.</s><s>Thus, the neuronal effects we measured are likely underestimated by combining across optimal and nonoptimal stimulus configurations; future studies could address this by embedding multiple-stimulus dimensions in the detected gratings and presenting probes at multiple contrasts.</s><s>Second, several key predictions of theories of attention require cueing the locus of attention, and examining both detectability and feature selectivity, often with multiple competing stimuli <ref type="bibr" target="#b30">31</ref> ; based on our results, tasks with richer stimulus sets may now be feasible in mice, allowing testing of spatial attentional effects across large regions of the visual field, including those that exhibit unique spectral sensitivity <ref type="bibr" target="#b65">66</ref> .</s><s>Third, our current task design cannot systematically address the role of reward expectation and motivation across blocks, even if concurrent measures of pupil and licking suggest that arousal and motivation were not major factors that covaried with behavioral and neural improvements.</s><s>Future studies could parameterize reward probabilities and dissociate them from spatial context, then measure the specific contributions of each on behavior and on neural responses.</s><s>Finally, our study established that several neural correlates of spatial contextual modulation appear in V1, but the sources require further investigation.</s><s>Although these effects were most prominent in L4, they appeared across layers, suggesting sources could involve both subcortical <ref type="bibr" target="#b66">67,</ref><ref type="bibr" target="#b67">68</ref> and higher cortical areas <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b68">69</ref> , where attentional effects may be even more pronounced <ref type="bibr" target="#b69">[70]</ref><ref type="bibr" target="#b70">[71]</ref><ref type="bibr" target="#b71">[72]</ref> .</s><s>Nonetheless, our results establish that mechanisms underlying improvements of behavior consistent with spatial attentional modulation may launch their effects from cells and synapses located at the very first stage of cortical sensory processing.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head><p><s>Mice, behavior, recordings.</s><s>Male C57BL6J (4-6 weeks old; reverse light cycle; all main Results) or PV-cre x Ai-32-ChR mice (Fig. <ref type="figure" target="#fig_0">1c</ref>; Supplementary Fig. <ref type="figure" target="#fig_0">1</ref>) learned to perform active visual detection of Gabor patches (horizontal orientation, 0.05-0.1 cycles per degree, phase randomized per trial) by licking for water rewards.</s><s>Stimuli appeared only after mice withheld licking during a randomized interval on every trial (0.5 to 6 s, exponential distribution).</s><s>Rewards were delivered upon first lick only during the stimulus window (typically 1-1.5 s).</s><s>After 2-3 weeks, mice exhibited high-performance detection (d' &gt;0.5) of small (σ = 10°) stimuli at multiple contrasts in both binocular and monocular visual space (10-25 consecutive trials per block per location), whereupon task-irrelevant probe stimuli were introduced during the intertrial interval (vertical bar 10°wide, ± 5% contrast, 0.1 s duration, 0.3 s interval, randomized location).</s><s>We performed acute neural recordings with 32 site silicon probes or whole-cell patch-clamp recordings <ref type="bibr" target="#b44">45</ref> from monocular V1 along with eye tracking (30 Hz) during behavior.</s><s>Mice typically performed 4-8 consecutive blocks of interleaved monocular and binocular detection during recordings.</s><s>All trained mice learned the task (no dropouts), and mice required V1 activity for behavioral performance (Supplementary Fig. <ref type="figure" target="#fig_0">1</ref>).</s><s>All procedures were approved by the Institutional Animal Care and Use Committee at the Georgia Institute of Technology and were in agreement with guidelines established by the National Institutes of Health and the Animals (Scientific Procedures) Act 1986 (UK).</s></p><p><s>Surgery.</s><s>Male C57BL6J mice (4-6 weeks old; reverse light cycle housing; bred in house; IMSR_JAX:000664) or offspring of PV-cre (IMSR_JAX:017320) crossed with Ai-32-ChR (IMSR_JAX:024109) mice were surgically implanted with a stainless steel headplate (with 3-4 mm diameter recording chamber) affixed to the skull over primary visual cortex (V1) using a thin layer of veterinary adhesive (VetBond) and biocompatible polymer (Metabond).</s><s>Following implantation and recovery (3 days), animals were handled and acclimatized for 3-4 days to the head fixation apparatus and placed under a restricted water schedule.</s><s>Mice received a fixed daily amount of water scaled for body weight (40 ml per kg per day; 1 ml per day for a typical 25 g mouse), according to established methods <ref type="bibr" target="#b11">12</ref> .</s></p><p><s>Behavioral training.</s><s>Mice first learned the contingency between stimulus and water reward through instrumental conditioning.</s><s>In these sessions, reward was automatically delivered after a fixed delay (0.6-0.7 s) relative to stimulus onset.</s><s>We monitored the first lick latency for precession from reward delivery to visual stimulus onset (anticipatory licking).</s><s>We then transitioned to active visual detection, where reward delivery occurred only if the mouse licked during the stimulus window (typically 1.5-2 s early in training).</s><s>The stimulus disappeared and reward was delivered upon first lick during the response window.</s><s>Detection performance was quantified with signal-detection theory metrics (d-prime, d').</s><s>Hit rates were calculated from correct detection trials (licks during stimulus window), while false alarm rates were calculated from trials with blank stimuli (0% contrast; 20% of trials).</s><s>Trials with stimulus presentation but no licks or late licks were classified as Miss trials.</s><s>When d' was above chance levels for 2 consecutive days, stimulus contrast range and/or size was decreased to maintain difficulty.</s><s>Once animals exhibited performance above chance for both binocular and monocular stimuli of high and low contrast, we introduced task-irrelevant probe stimuli, described below.</s><s>In well-trained mice, these faint and brief bars did not affect behavioral performance and caused no change in licking frequency above baseline (Supplementary Fig. <ref type="figure">5</ref>).</s></p><p><s>Stimulus properties.</s><s>Mice detected static horizontal Gabor gratings, presented in either the binocular (central ±25°from vertical meridian) or monocular (60°-90°f rom vertical meridian) visual field on linearized LCD monitors (60 or 80 Hz refresh rate) with isoluminant 50% gray background.</s><s>Grating phase was randomized per trial, while spatial frequency (range 0.05-0.1 cycles per deg) and stimulus size (σ range 10°-20°) remained fixed across blocks of trials.</s><s>Binocular contrasts ranged from 2% to 75%, monocular contrasts ranged from 7% to 90%.</s><s>Responses at all contrasts within spatial location were combined for main figures.</s><s>Probe stimuli (10°-wide vertical bars, black or white) were briefly presented (0.1 s duration, 0.3 s interval) at low contrast (±5% from grey background) one at a time in unique and randomly selected spatial locations (1-D white noise).</s><s>These locations tiled the entire visual field (16 discrete locations, spanning 145°of the visual hemifield, Supplementary Fig. <ref type="figure" target="#fig_2">4</ref>).</s><s>Thus, only a small fraction of probes were presented inside the receptive field (RF), and these were much lower contrast than the grating stimuli.</s><s>We aggregated responses of the three central most probe positions inside the RF for analysis (central ± 1; Supplementary Fig. <ref type="figure" target="#fig_2">4</ref>).</s><s>Note that RFs in mouse V1 are ~30°in diameter <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b44">45</ref> (Supplementary Fig. <ref type="figure" target="#fig_2">4</ref>; Supplementary Fig. <ref type="figure" target="#fig_0">11</ref>), so these three adjacent probes are within the centre of the RF.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cortical inactivation.</head><p><s>Optogenetic inactivation experiments with PV-cre x Ai-32 (ChR2) mice (Fig. <ref type="figure" target="#fig_0">1</ref>; Supplementary Fig. <ref type="figure" target="#fig_0">1</ref>) were carried out as in our prior study <ref type="bibr" target="#b11">12</ref> .</s><s>The skull was thinned over monocular V1 and a fiber-coupled LED delivered pulses of blue light (473 nm; 4.1-6.5 mW at the cranium) over monocular V1 (subsequently confirmed with neural recordings) on 25% of detection trials (1 s during visual stimulus, ramping from 0.1 s before stimulus).</s><s>Similar deficits of task performance were also observed with pharmacological inactivation of V1 <ref type="bibr" target="#b11">12</ref> .</s></p><p><s>Recordings.</s><s>On the day of recording, a small (~100-500 μm) craniotomy was made over monocular V1 (0.5 mm anterior to lambda, 2-2.5 mm lateral to central suture) under isoflurane anesthesia.</s><s>Mice recovered &gt;3 h before recording sessions.</s><s>We used multisite silicon probes (NeuroNexus) consisting of either a single 32-channel shank, or two 16-channel shanks.</s><s>Electrodes were advanced ~1000 μm below the cortical surface.</s><s>Raw electrical signals were amplified and digitized (Blackrock Microsystems) then exported for post processing.</s><s>At the end of behavior, we performed receptive field mapping of the recording site (100% contrast vertical flashed bars, 10°width, duration 0.1 s, interstimulus interval 0.3 s, placed in random locations tiling 144°of the visual field).</s><s>The craniotomy was covered with elastomer in between consecutive recording days (typically 2-4 from the same site).</s><s>Whole-cell patch-clamp recordings were performed in L2/3 as in our prior studies <ref type="bibr" target="#b43">44,</ref><ref type="bibr" target="#b44">45</ref> .</s><s>In a subset of mice, we simultaneously recorded pupil with a high speed camera and infrared illumination <ref type="bibr" target="#b11">12</ref> .</s></p><p><s>Spike sorting and LFP analysis.</s><s>Extracellular spikes were isolated using the KlustaViewa Suite <ref type="bibr" target="#b72">73</ref> , as detailed in our prior study <ref type="bibr" target="#b11">12</ref> .</s><s>Briefly, automated clustering was followed by manual curation involving (1) removal of obvious noise clusters, (2) classification of poorly isolated waveforms as multiunit activity, and (3) PCA space curation in parallel with unit auto-and cross-correlation histogram analysis for single unit identification.</s><s>Histograms of peak-to-trough spike widths were bimodal (Supplementary Fig. <ref type="figure" target="#fig_3">6</ref>); FS neurons had width &lt;0.57</s><s>ms, with broader units classified as RS.</s><s>This classification agrees with several studies of mouse V1 <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b37">38</ref> , where FS neurons consist nearly exclusively of parvalbumin (PV)-positive inhibitory neurons <ref type="bibr" target="#b58">59</ref> .</s><s>In our experiments, narrow spike widths and high firing rates of FS neurons correspond closely with spikes optogenetically activated in PV interneurons <ref type="bibr" target="#b11">12</ref> .</s><s>Peri-stimulus histograms (PSTHs) for each cell type were constructed by binning the population responses from each recording in 25-ms bins.</s><s>Population PSTHs were smoothed ± three bins for visualization.</s></p><p><s>LFP was isolated by bandpass filtering raw neural signals from 0.3 to 200 Hz.</s><s>Laminar profiles were calculated by using current source density analysis <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b37">38</ref> , with laminar boundaries consistent with prior studies <ref type="bibr" target="#b73">74</ref> .</s><s>For all stimulus-evoked analyses, the mean LFP preceding stimulus presentation was subtracted from each individual LFP response.</s><s>These were then averaged across all stimulus presentations per condition (e.g., probe responses inside the RF on detect inside RF trials), and then averaged across recording sessions and mice.</s></p><p><s>LFP power spectra were computed using Welch's power spectral density estimate (MATLAB "pwelch" function).</s><s>Modulation indices (MI) were computed by comparing the integrated power from 0 to 10 Hz on trial 1 vs trial 5:</s></p><formula xml:id="formula_1">MI ¼ Trial 5 À Trial 1 Trial 5 þ Trial 1<label>ð1Þ</label></formula><p><s>Data analysis and statistics.</s><s>Neural data analysis was carried out only on correct detection trials (21 sessions, 15 mice), or in non-task conditions (7 sessions, 4 mice; Supplementary Fig. <ref type="figure">9</ref>).</s><s>Broadband signals were separated into LFP (0.3-200 Hz) and spikes <ref type="bibr" target="#b72">73</ref> of FS (n = 106) putative inhibitory and regular spiking (RS, n = 306) putative excitatory units (Supplementary Fig. <ref type="figure" target="#fig_3">6</ref>).</s><s>Receptive fields were mapped for all recordings, responses to probes in the center ± 1 locations inside the RF were combined (Supplementary Fig. <ref type="figure" target="#fig_2">4</ref>).</s><s>Noise correlations were computed as in our prior study <ref type="bibr" target="#b11">12</ref> .</s><s>All data analysis utilized MATLAB, and statistical comparisons used nonparametric Wilcoxon rank-sum tests (unpaired data), or signed-rank tests (paired data) unless otherwise noted, with p-values indicated in figure legends or text where appropriate.</s><s>The data structures and code that support the findings of this study are available from the corresponding author upon reasonable request.</s></p><p><s>Correlations.</s><s>Noise correlations were calculated between smoothed spike trains (20-ms Gaussian filter) by subtracting the mean probe response for each neuron and then computing cross correlations at all lags (MATLAB "xcorr" function with "coeff" normalization).</s><s>Probe response spike trains consisted of the 0.1 s preceding the probe onset until the onset of the next probe stimulus.</s><s>Only probes within 10°o f the receptive field center were considered.</s><s>Statistical comparisons examined peak correlation values.</s></p><p><s>Pupil analysis.</s><s>Pupil analysis was performed as in prior studies <ref type="bibr" target="#b11">12</ref> .</s><s>Briefly, area changes were calculated per trial as the percent deviation from the mean area across the entire session, and position was analyzed for changes in the azimuth (since stimulus position across binocular and monocular blocks varied in azimuth).</s></p><p><s>Gain modulation analysis.</s><s>Probes of multiple contrast were presented in awake mice outside of the behavioral task.</s><s>Responses were used to construct contrast response functions (CRFs, Supplementary Fig. <ref type="figure" target="#fig_0">10</ref>).</s><s>Colored circles show two response types measured during the task (1) the circle at 5% contrast shows the mean population response to probes during detection trials inside the RF, (2) two circles at high contrasts show the mean population response to gratings at these contrasts.</s><s>These in task responses (colored circles) were not used for contrast response curve fits for either model.</s><s>Rather, the control CRF constructed from probes outside of the task was either (a) shifted left (contrast gain) to capture enhancements of the 5% contrast probes during detection trials inside the RF or (b) multiplied (response gain) to capture the same enhancements to the same 5% probes during detection trials inside the RF.</s><s>The shifted or multiplied curves were then used to predict the amplitude of the high contrast grating responses.</s><s>Errors were calculated by measuring the % difference as defined below at each trial for each contrast:</s></p><formula xml:id="formula_2">%Difference ¼ predicted À measured predicted 100<label>ð2Þ</label></formula><p><s>Errors were then averaged across trials and across recordings.</s></p><p><s>Reporting summary.</s><s>Further information on research design is available in the Nature Research Reporting Summary linked to this article.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1</head><label>1</label><figDesc><div><p><s>Fig. 1 Spatial context improves behavior and strengthens LFP responses.</s><s>a Visual spatial detection task.</s><s>Mice were head-fixed and stationary in a semienclosed plastic tube.</s><s>Mice faced two computer monitors and performed the task during simultaneous measurements of licking, pupil, and neural activity.</s><s>Stimuli appeared in either binocular or monocular visual space.</s><s>b Monocular detection sensitivity (d') increases as a function of contrast (n = 3 mice, 58 behavioral sessions, &gt;18,000 trials).</s><s>These mice were trained extensively at the exact same contrast ranges, and are part of the population analyzed throughout the study.</s><s>Dark curve shows psychometric fit.</s><s>c Optogenetic inhibition of monocular V1 (interleaved on 25% of trials) significantly impaired monocular detection sensitivity (d', 1.13 ± 0.19 to -0.36 ± 0.18; mean ± SD; p &lt; 0.01; Wilcoxon signed-rank test; n = 10 days and 1575 trials).</s><s>During inactivation, d' was not significantly different from chance level (p &lt; 0.01, sign test).</s><s>Data from two PV-cre x A1-32-ChR2 mice.</s><s>See also see Supplementary Fig. 1. d Example session of visual spatial detection during neural recordings.</s><s>Stimuli (gratings) appear in binocular (blue) or monocular (black) visual fields, in blocks of consecutive trials at each location.</s><s>Blocks alternate repeatedly within session (after 25 trials in this example).</s><s>Rewards delivered upon first lick (circles, correct detection) during stimulus window.</s><s>Reaction times: binocular, 0.49 ± 0.08 s; monocular, 0.68 ± 0.1 s.</s><s>Mean ± s.e.m. e Reaction time improves significantly across consecutive trials within block (15 mice; 143 blocks; p &lt; 0.05, Wilcoxon rank-sum test, throughout figure).</s><s>Mean ± s.e.m., monocular trials.</s><s>Time constant (τ) of improvement = 4.5 trials (exponential fit).</s><s>f Detection accuracy and sensitivity improve significantly across same trials as in e. Left, hit rate increases 27% (p &lt; 0.001, rank-sum test), miss rate decreases 50% (p &lt; 0.001), false alarm rate decreases 16% (p = 0.4) from Trials (1-3) to Trials (4-6) .</s><s>Right, psychometric sensitivity (d') increases significantly across same trials (Trial (1-3) :1.1 ± 0.1; Trials (4-6) : 1.6 ± 0.1; mean ± s.e.m.; p &lt; 0.001, rank-sum test).</s><s>g-j Local field potential (LFP) responses in Layer 4 of primary visual cortex (V1) during same behavioral sessions as e and f.</s><s>LFP response increases significantly from trials 1 to 3 (g, gray) to trials 4 to 6 (j, black; 72% increase; [Trials (4-6) Trial (1-3) ]/Trial (1-3) ; p &lt; 0.01, sign test).</s><s>Mean ± s.e.m. across correct trials.</s><s>Dashed line at 0 mV.</s><s>Fifteen mice, 21 recording sessions in monocular V1 (see Supplementary Fig. 4).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 Fig. 3</head><label>23</label><figDesc><div><p><s>Fig. 2 Pupil dynamics do not explain behavioral improvements.</s><s>a, b Average pupil area before stimulus onset does not change from first to fifth trial (0.03 ± 0.17% versus 0.04 ± 0.07%, p = 0.10).</s><s>In total, 426 correct monocular detection blocks in 22 sessions.</s><s>c In the same trials, pupil position before stimulus onset changes &lt;2°(Trial 1, 1.6 ± 3.6°versus 0.14 ± 2.4°, relative to mean position across entire session; p = 0.02, Wilcoxon signed-rank test).</s><s>d Changes of pupil position (&lt;2°) are an order of magnitude smaller than spatial extent of detected stimuli (grating, 2σ = 20°).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 4</head><label>4</label><figDesc><div><p><s>Fig. 4 Effect of arousal is not comparable to that of spatial context.</s><s>a Prestimulus pupil area preceding each trial of correct detection split into quartiles.</s><s>Larger pupil area indicates greater arousal.</s><s>b LFP responses to probes presented inside the receptive field (RF), on detect inside RF trials.</s><s>Gray indicates population LFP responses on trials in 1st quartile of pupil area (low arousal), black indicates responses on trials in 4th quartile of pupil area (high arousal).</s><s>Mean ± s.e.m. c LFP probe responses during same trials as in b, separated by Trials (1-3) (gray) versus Trials (4-6) (black) in block (replotted from Fig. 3b).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 6</head><label>6</label><figDesc><div><p><s>Fig. 6 Reduced 0-10 Hz LFP power on trials with behavioral improvements.</s><s>a Average stimulus-evoked local field potential (LFP) responses filtered from 0 to 10 Hz, during same behavioral and recording sessions as Fig. 1 g-j.</s><s>Trial 1 (gray) vs trial 5 (red), 15 mice, 21 recording sessions.</s><s>b L4 and L5/6 exhibited significant suppression of 0-10 Hz LFP power across successive detection trials inside the RF (L4: MI = -0.07</s><s>± 0.06, p &lt; 0.05, L5/6: MI = -0.12</s><s>± 0.05, p &lt; 0.05, signed-rank test).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 8 Fig. 7</head><label>87</label><figDesc><div><p><s>Fig. 8 Summary of observed effects consistent with spatial attention.</s><s>At the behavioral level, detection speed and sensitivity improved.</s><s>At the network level, LFP responses increased and &lt;10 Hz power decreased.</s><s>At the cellular level, RS and FS responses increased while noise correlations decreased.</s><s>At the synaptic level, V m depolarized and V m fluctuations increased.</s></p></div></figDesc></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>NATURE COMMUNICATIONS | (2020) 11:505 | https://doi.org/10.1038/s41467-020-14355-4</s><s>| www.nature.com/naturecommunications</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank <rs type="person">Alexander Zorn</rs> and <rs type="person">Hayley Arrowood</rs> for technical assistance, <rs type="person">Aman Saleem</rs> and <rs type="person">Chris Burgess</rs> for advice on behavior, <rs type="person">James Mazer</rs> and <rs type="person">Dobromir Rahnev</rs> for comments on the paper, and <rs type="person">Matteo Carandini</rs> for support in the initial phase of the study.J.D.R. was funded by <rs type="funder">Goizueta Foundation and Sloan Foundation</rs>, B.H. was funded by the <rs type="funder">Whitehall Foundation</rs>, <rs type="funder">Sloan Foundation</rs>, <rs type="funder">GT Neural Engineering Center, NIH NINDS</rs> (<rs type="grantNumber">1R01NS107968</rs>), and <rs type="funder">NIH BRAIN Initiative</rs> (<rs type="grantNumber">1R01NS109978</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_Yktjr6P">
+					<idno type="grant-number">1R01NS107968</idno>
+				</org>
+				<org type="funding" xml:id="_8533BHg">
+					<idno type="grant-number">1R01NS109978</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p><s>The data structures and code that support the main findings of this study are available from the corresponding author upon reasonable request.</s><s>Data will also be made available from the corresponding author's institutional website (https://haider.gatech.edu/).</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author contributions</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing interests</head><p><s>The authors declare no competing interests.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Modulation of visual responses by behavioral state in mouse visual cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Niell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Stryker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="472" to="479" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Integration of visual motion and locomotion in mouse visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Saleem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ayaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Jeffery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1864" to="1869" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Scaling down of balanced excitation and inhibition by active behavioral states in auditory cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="841" to="850" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Cortical membrane potential signature of optimal states for sensory signal detection</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Mcginley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>David</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="179" to="192" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Pupil fluctuations track fast switching of cortical states during quiet wakefulness</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Reimer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page" from="355" to="362" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Arousal and locomotion make distinct contributions to cortical activity patterns and visual encoding</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vinck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Batista-Brito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Knoblich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Cardin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="740" to="754" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Correlating whisker behavior with membrane potential in barrel cortex of awake mice</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Crochet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Petersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="608" to="610" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Coherent encoding of subjective spatial position in visual cortex and hippocampus</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Saleem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Diamanti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fournier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">562</biblScope>
+			<biblScope unit="page" from="124" to="127" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">First spikes in visual cortex enable perceptual discrimination</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Resulaj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ruediger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Olsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scanziani</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">34044</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Learning enhances sensory and multiple non-sensory representations in primary visual cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Poort</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="1478" to="1490" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Membrane potential correlates of sensory perception in mouse barrel cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sachidhanandam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sreenivasan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kyriakatos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kremer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Petersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1671" to="1677" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Cortical state fluctuations across layers of V1 during visual spatial perception</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Speed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Del Rosario</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Haider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell Rep</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<date type="published" when="2019">2868-2874 e2863. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Vision and locomotion shape the interactions between neuron types in mouse visual cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dipoppa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page">608</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">A cortical circuit for gain control by behavioral state</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">156</biblScope>
+			<biblScope unit="page" from="1139" to="1152" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Spatial attention effects in macaque area V4</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Preddie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Gallant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Van Essen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="3201" to="3214" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Attention modulates the responses of simple cells in monkey primary visual cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Mcadams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Reid</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="11023" to="11033" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Selective attention gates visual processing in the extrastriate cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Moran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">229</biblScope>
+			<biblScope unit="page" from="782" to="784" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Attentional modulation of visual processing</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chelazzi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="611" to="647" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Enhancement of visual responses in monkey striate cortex and frontal eye fields</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Wurtz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Mohler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="766" to="772" />
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Attention improves performance primarily by reducing interneuronal correlations</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1594" to="1600" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Spatial attention decorrelates intrinsic activity fluctuations in macaque area V4</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Sundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="879" to="888" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">From behavior to neural dynamics: an integrated theory of attention</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Buschman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kastner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="127" to="144" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Attention reduces stimulus-driven gamma frequency oscillations and spike field coherence in V1</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chalk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="114" to="125" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Modulation of oscillatory neuronal synchronization by selective visual attention</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fries</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Rorie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="page" from="1560" to="1563" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Laminar organization of attentional modulation in macaque visual area V4</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Nandy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Nassi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="235" to="246" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Gain modulation from background synaptic input</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">S</forename><surname>Chance</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Reyes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="773" to="782" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">The normalization model of attention</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="168" to="185" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">Attentional modulation of neuronal variability in circuit models of cortex</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kanashiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Ocker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">23978</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Thalamic control of sensory selection in divided attention</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Wimmer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">526</biblScope>
+			<biblScope unit="page" from="705" to="709" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Visual selective attention in mice</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Krauzlis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="676" to="685" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Neural mechanisms of selective visual attention</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Duncan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="193" to="222" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Attentional modulation of neuronal activity depends on neuronal feature selectivity</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Hembrook-Short</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">L</forename><surname>Mock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Briggs</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="1878" to="1887" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Activation of dorsal raphe serotonergic neurons promotes waiting but is not reinforcing</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Fonseca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Murakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="306" to="315" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Neuronal representations of cognitive state: reward or attention?</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Cogn. Sci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="261" to="265" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">A unified selection signal for attention and reward in primary visual cortex</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Stanisor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Van Der Togt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Pennartz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Roelfsema</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="9136" to="9141" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Visual responses in FEF, unlike V1, primarily reflect when the visual context renders a receptive field salient</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Joiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cavanaugh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Wurtz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Cumming</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="9871" to="9879" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Spatial attention modulates center-surround interactions in macaque visual area v4</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Sundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="952" to="963" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Layer-specific physiological features and interlaminar interactions in the primary visual cortex of the mouse</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Senzai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fernandez-Ruiz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsaki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="500" to="513" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Stimulus contrast modulates functional connectivity in visual cortex</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nauhaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Busse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Ringach</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="70" to="76" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Attention increases sensitivity of V4 neurons</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pasternak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="703" to="714" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Effects of spatial attention on contrast response functions in macaque area V4</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Williford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="40" to="54" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Differential attentiondependent response modulation across cell classes in macaque visual area V4</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Sundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="131" to="141" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Dynamics of excitatory and inhibitory networks are differentially altered by selective attention</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Snyder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Morais</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="page" from="1807" to="1820" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Millisecond coupling of local field potentials to synaptic currents in the awake visual cortex</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Haider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hausser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="35" to="42" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Inhibition dominates sensory responses in the awake cortex</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Haider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hausser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">493</biblScope>
+			<biblScope unit="page">97</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Sensory stimulation shifts visual cortex from synchronous to asynchronous states</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Scholl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Seidemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Priebe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">509</biblScope>
+			<biblScope unit="page" from="226" to="229" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Multiplicative gain changes are induced by excitation or inhibition alone</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">K</forename><surname>Murphy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="10040" to="10051" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Attention influences single unit and local field potential response latencies in visual cortical area V4</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Sundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Gawne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="16040" to="16050" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Visual attention: mice can use spatial cues too</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Glickfeld</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="230" to="R231" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Neocortical rebound depolarization enhances visual perception</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Funayama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Biol</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">1002231</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Task difficulty modulates the activity of specific neuronal populations in primary visual cortex</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="974" to="982" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Local and global influences of visual spatial selection and locomotion in mouse primary visual cortex</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Mcbride</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Callaway</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<date type="published" when="1592">1592-1605 e1595. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Stimulus repetition modulates gamma-band synchronization in primate visual cortex</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Brunet</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page" from="3626" to="3631" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Frequency-dependent attentional modulation of local field potential signals in macaque area MT</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Khayat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Niebergall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Martinez-Trujillo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="7037" to="7048" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Sensory coding accuracy and perceptual performance are improved during the desynchronized cortical state</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Beaman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Eagleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dragoi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">1308</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<title level="m" type="main">Optogenetically induced lowfrequency correlations impair perception</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nandy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Nassi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Jadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Reynolds</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">35123</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Strength of gamma rhythm depends on normalization</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Ni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Biol</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">1001477</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Subcortical source and modulation of the narrowband gamma oscillation in mouse visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Saleem</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="315" to="322" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Inhibition of inhibition in visual cortex: the logic of connections between molecularly distinct interneurons</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Pfeffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scanziani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1068" to="1076" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Visually cued action timing in the primary visual cortex</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Namboodiri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Huertas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Monk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">Z</forename><surname>Shouval</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Hussain Shuler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="319" to="330" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Parvalbuminexpressing GABAergic neurons in mouse barrel cortex contribute to gating a goal-directed sensorimotor transformation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sachidhanandam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">S</forename><surname>Sermet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C H</forename><surname>Petersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell Rep</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="700" to="706" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Neuromodulation of attention</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thiele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Bellgrove</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="769" to="785" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Reimer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">13289</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Barrages of synaptic activity control the gain and sensitivity of cortical neurons</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hasenstaub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Badoual</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="10388" to="10401" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Gain modulation of neuronal responses by subtractive and divisive mechanisms of inhibition</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ayaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">S</forename><surname>Chance</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="958" to="968" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<monogr>
+		<title level="m" type="main">Mouse color and wavelength-specific luminance contrast sensitivity are non-uniform across visual space</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Denman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">31209</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Superior colliculus and visual spatial attention</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Krauzlis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Lovejoy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zenon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="165" to="182" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Gain modulation by nicotine in macaque v1</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Disney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Aoki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Hawken</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="701" to="713" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Selective attention. Long-range and local circuits for top-down modulation of visual cortex processing</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">345</biblScope>
+			<biblScope unit="page" from="660" to="665" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Neural mechanisms of spatial selective attention in areas V1, V2, and V4 of macaque visual cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Luck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chelazzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Hillyard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="24" to="42" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">A mouse model of higher visual cortical function</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Glickfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Reid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Andermann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="28" to="33" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">A backward progression of attentional effects in the ventral stream</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Buffalo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fries</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Landman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page" from="361" to="365" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Spike sorting for large, dense electrode arrays</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rossant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="634" to="641" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">A direct translaminar inhibitory circuit tunes cortical output</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pluta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1631" to="1640" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

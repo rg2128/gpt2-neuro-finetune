@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Selective Modulation of Cortical State During Spatial Attention</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Tatiana</forename><forename type="middle">A</forename><surname>Engel</surname></persName>
+							<email>tatiana.engel@stanford.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Bioengineering</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Howard Hughes Medical Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nicholas</forename><forename type="middle">A</forename><surname>Steinmetz</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Neurobiology</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Marc</forename><forename type="middle">A</forename><surname>Gieselmann</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Institute of Neuroscience</orgName>
+								<orgName type="institution" key="instit1">Newcastle University</orgName>
+								<orgName type="institution" key="instit2">Newcastle upon Tyne</orgName>
+								<address>
+									<postCode>NE1 7RU</postCode>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexander</forename><surname>Thiele</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Institute of Neuroscience</orgName>
+								<orgName type="institution" key="instit1">Newcastle University</orgName>
+								<orgName type="institution" key="instit2">Newcastle upon Tyne</orgName>
+								<address>
+									<postCode>NE1 7RU</postCode>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tirin</forename><surname>Moore</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Howard Hughes Medical Institute</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Neurobiology</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kwabena</forename><surname>Boahen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Bioengineering</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Selective Modulation of Cortical State During Spatial Attention</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">54289FA866DA25892AF07C6B8458201C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:05+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Neocortical activity is permeated with endogenously generated fluctuations, but how these dynamics impact goal-directed behavior remains a mystery.</s><s>We demonstrate that ensemble neural activity in primate visual cortex spontaneously transitions between phases of vigorous (On) and faint (Off) spiking synchronously across cortical layers.</s><s>We show that these On-Off dynamics, reflecting global changes in cortical state, are also modulated at a local scale during selective attention.</s><s>Moreover, we find that the momentary phase of local ensemble activity predicts behavioral performance.</s><s>Our results show that cortical state is controlled locally within a cortical map according to cognitive demands and reveal the impact of these local changes in cortical state on goal-directed behavior.</s></p><p><s>Endogenous fluctuations in neocortical spiking activity vary on a continuum between synchronized and desynchronized states, and the level of synchrony has been associated with the overall level of arousal (1, 2).</s><s>During slow-wave sleep and anesthesia, ensemble neural activity exhibits slow synchronous transitions between periods of high activity and quiescence.</s><s>In individual neurons, these transitions manifest as alternating Down (hyperpolarized) and Up</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>(depolarized) phases of the membrane potential, due to, respectively, an ebb and flow of synaptic activity <ref type="bibr" target="#b3">(3)</ref><ref type="bibr" target="#b4">(4)</ref><ref type="bibr" target="#b5">(5)</ref><ref type="bibr" target="#b6">(6)</ref><ref type="bibr" target="#b7">(7)</ref>.</s><s>In awake animals, these slow synchronous transitions are less frequent and thus ensemble neural activity appears less synchronized than during anesthesia or slow-wave sleep <ref type="bibr" target="#b8">(8)</ref><ref type="bibr" target="#b9">(9)</ref><ref type="bibr" target="#b10">(10)</ref><ref type="bibr" target="#b11">(11)</ref><ref type="bibr" target="#b12">(12)</ref>.</s><s>This relationship between arousal and cortical synchrony suggests that mechanisms controlling cortical state are brain-wide and unrelated to neural circuits involving the selective recruitment of local populations during goal-directed behavior.</s><s>In particular, changes in cortical state should be orthogonal to the modulations of spiking activity observed locally within cortical maps during selective attention.</s></p><p><s>We discovered that spontaneous transitions between episodes of vigorous (On) and faint (Off) spiking occur synchronously across cortical layers in the visual cortex of behaving monkeys.</s><s>We recorded ensemble spiking activity in area V4 of two rhesus macaques (G and B) with 16-channel linear array microelectrodes (Fig. <ref type="figure" target="#fig_0">1C</ref>, left panel) arranged such that receptive fields (RFs) on all channels largely overlapped (Fig. <ref type="figure" target="#fig_0">1A</ref> and fig.</s><s><ref type="figure" target="#fig_0">S1</ref>, supplementary methods 1).</s><s>The On-Off transitions occurred synchronously throughout the cortical depth during fixation and in the absence of visual stimulation (Fig. <ref type="figure" target="#fig_0">1B,</ref><ref type="figure">C</ref>).</s><s>The On and Off episodes resembled the Up and Down phases commonly observed during anesthesia and slow-wave sleep (1-3), and were consistent with the the large fluctuations in cortical membrane potentials recorded intracellularly in behaving monkeys <ref type="bibr" target="#b13">(13)</ref>.</s></p><p><s>To examine whether these On-Off fluctuations also occur during more demanding cognitive behaviors, we trained monkeys to perform a selective attention task.</s><s>In this task, monkeys were rewarded for detecting changes in a visual stimulus and indicating those changes with an antisaccade response (Fig. <ref type="figure" target="#fig_0">1D</ref>).</s><s>During each trial, a small central cue indicated the stimulus that was most likely to change orientation.</s><s>The cued stimulus was thus the target of covert attention, whereas due to anticipation of antisaccadic response, the stimulus opposite to the cue was the target of overt attention <ref type="bibr" target="#b14">(14)</ref>.</s><s>In spite of the difficulty of the task, monkeys performed well above chance, with 69% and 67% correct responses for monkeys G and B, respectively.</s><s>While monkeys performed this task, we recorded from area V4 in 46 sessions (25 in monkey G and 21 in monkey B).</s><s>As in the fixation task, we observed prominent On-Off transitions occurring synchronously across the cortical depth in both spontaneous and stimulus-driven activity, before and after the attention cue was presented, and evident in both single-and multi-unit activity (Fig. <ref type="figure" target="#fig_0">1E</ref>, fig.</s><s><ref type="figure" target="#fig_1">S2</ref>, supplementary information 3.1).</s><s>On-episodes reliably followed stimulus onset on majority of trials.</s><s>However, subsequent On-Off transitions occurred irregularly within and across trials during the sustained response to the stable RF stimulus.</s><s>Transitions were also irregular with respect to the attention-cue's onset.</s></p><p><s>To characterize the On-Off dynamics, we counted spikes in 10 ms time bins and used a Hidden Markov Model (HMM) as a statistically principled way to segment spike-count data into On and Off episodes (15, 16) (Fig. <ref type="figure" target="#fig_1">2A</ref>, supplementary methods 2).</s><s>HMM was fitted to 16-channel multi-unit activity, but all analyses based on fitted HMM were performed on both single-and multi-unit activities yielding highly consistent results.</s><s>The HMM has a one-dimensional, latent variable representing an unobserved population state that switches between two phases, On and Off.</s><s>Spikes on 16 recorded channels are assumed to be generated by inhomogeneous Poisson processes with different mean rates during the On and Off phases.</s><s>When an HMM is fitted to the spiking data, 34 parameters are estimated: firing rates in the On and Off phases for each of 16 channels and transition probabilities p on and p off for the entire ensemble (Fig. <ref type="figure" target="#fig_1">2B</ref>).</s><s>Using these parameters, we can then infer the most likely sequence of On and Off episodes that underlie the observed spike trains on a trial-by-trial basis (Fig. <ref type="figure" target="#fig_1">2C</ref>).</s><s>By visual inspection, On and Off episodes inferred by the HMM were closely aligned to the periods of vigorous and faint spiking.</s><s>These On-Off transitions in spike-rates were also phase-locked to low-frequency fluctuations in the local field potential (LFP) (fig.</s><s><ref type="figure" target="#fig_2">S3</ref>, supplementary information 3.2).</s><s>On average, the HMM captured about half of the maximal explainable variance in the data (fig.</s><s><ref type="figure" target="#fig_3">S4</ref>, supplementary information 3.3).</s><s>For most recording sessions (31 total, 67%), the two-phase HMM was the most parsimonious model among HMMs with 1 or up to 8 possible phases (fig.</s><s><ref type="figure">S5</ref>).</s><s>These 31 recordings were therefore used in subsequent analyses of On and Off episode durations.</s><s>For the remaining 15 (33%) recordings, a one-phase HMM was the most parsimonious model.</s><s>Consistent with HMM assumptions, the durations of On and Off episodes were distributed exponentially with the decay time-constants τ on and τ off given by the average On and Off episode durations (Fig. <ref type="figure" target="#fig_1">2D</ref>).</s><s>The averages across sessions of these average On and Off episode durations were, respectively, τ on = 149 ± 77 ms and τ off = 102 ± 33 ms for stimulus-driven activity and τ on = 97 ± 36 ms and τ off = 118 ± 47 ms for spontaneous activity (mean ± std across 31 sessions) (fig.</s><s><ref type="figure">S6</ref>).</s><s>In addition, we analyzed laminar recordings from area V4 performed with a different type of linear electrode array, in two different behaving monkeys, and in a different laboratory.</s><s>In this additional dataset, On-Off transitions also occurred synchronously across cortical layers during spontaneous and stimulus-driven activity and were equally well described by the two-phase HMM (Fig. <ref type="figure" target="#fig_1">2E-G</ref>, fig.</s><s>S7, supplementary information 3.4).</s></p><p><s>To investigate the extent to which On-Off dynamics reflect arousal or selective attention, we analyzed data from the two monkeys performing the attention task.</s><s>In rodents, cortical state dynamics closely covary with global arousal, as measured by pupil size, with dilation characterized by desynchronization of neural activity and constriction by an increase in low-frequency fluctuations <ref type="bibr" target="#b17">(17,</ref><ref type="bibr" target="#b18">18)</ref>.</s><s>Similarly, we found that the pupil size was positively correlated with the average duration of On episodes on a trial-by-trial basis, during fixation and attention (fig.</s><s><ref type="figure">S8</ref>).</s><s>Thus, the On-Off dynamics indeed reflected global changes of cortical state associated with arousal.</s><s>Spatial attention, on the other hand, involves the selective recruitment of local neuronal populations encoding behaviorally relevant stimuli at one retinotopic location and the simultaneous suppression of populations encoding irrelevant stimuli in other retinotopic loca-tions <ref type="bibr" target="#b19">(19)</ref><ref type="bibr" target="#b20">(20)</ref><ref type="bibr" target="#b21">(21)</ref>.</s><s>In our attention task, we used three behavioral conditions to measure the local effects of both covert and overt attention on neuronal activity.</s><s>In the covert attention condition, the cue directed animal's attention to the RF stimulus.</s><s>In the overt attention condition, the cue directed attention to the stimulus opposite the RF and indicated that a saccade to the RF stimulus was likely to be required.</s><s>In the control condition, the cue directed covert and overt attention to stimuli in directions orthogonal to the RF direction.</s><s>The overall mean firing rate of V4 neurons was greater in covert and overt attention conditions relative to the control condition (Fig. <ref type="figure" target="#fig_2">3A</ref>, fig.</s><s><ref type="figure">S9B</ref>), as has been previously reported <ref type="bibr" target="#b14">(14)</ref>.</s><s>If these local effects of selective attention are indeed orthogonal to global state changes, then we should not expect On-Off dynamics to be modulated by attention.</s></p><p><s>We considered three ways in which an attention-induced increase in mean firing rate could co-occur with the On-Off dynamics (Fig. <ref type="figure" target="#fig_2">3B</ref>).</s><s>First, mean firing rate could be enhanced during On phase, Off phase, or both, without any difference in the transition dynamics across attention conditions.</s><s>This outcome would suggest that the On-Off dynamics are not selective for local neuronal populations, but reflect a global state.</s><s>Second, the enhancement in the mean firing rate could arise entirely from an increase in the duration of On episodes, or decrease in the duration of Off episodes, or both, but without any change in the firing rates during On or Off phases.</s><s>Third, a combination of the first two scenarios is also possible: the firing rates and durations of the On and Off episodes could both be modulated.</s><s>The last two outcomes would both indicate that On-Off dynamics are locally and selectively modulated within confined retinotopic regions and do not solely reflect a global arousal state.</s></p><p><s>We found that the On-Off dynamics were modulated by attention consistent with the third scenario.</s><s>Firing rates during the On and Off phases were slightly, but significantly, enhanced during both types of attention (Fig. <ref type="figure" target="#fig_2">3C</ref>, Wilcoxon signed rank test, covert: On phase median modulation index (MI) MI = 0.008, p = 0.002, Off phase median MI = 0.005, p = 0.046; overt: On phase median MI = 0.014, p &lt; 10 -5 , Off phase median MI = 0.029, p &lt; 10 -10 ) (supplementary methods 2.2).</s><s>The average duration of Off episodes was significantly longer in the covert, but not the overt, attention condition compared to control conditions (Fig. <ref type="figure" target="#fig_2">3D</ref>, Wilcoxon signed rank test, covert: median change in duration 4 ms, p = 0.004; overt: median change in duration -2 ms, p = 0.652).</s><s>However, the average duration of On episodes was significantly longer during both covert and overt attention compared to controls (Fig. <ref type="figure" target="#fig_2">3D</ref>, Wilcoxon signed rank test, covert: median change in duration 7 ms, p &lt; 10 -3 ; overt: median change in duration 13 ms, p &lt; 10 -4 ).</s><s>Correspondingly, the On-Off transition frequency was significantly lower during covert and overt attention compared to control conditions (fig.</s><s><ref type="figure">S9A</ref>, Wilcoxon signed rank test, covert: median reduction in frequency 0.2 Hz, p = 0.001; overt: median reduction in frequency 0.2 Hz, p &lt; 10 -3 ).</s><s>In separate control analyses, we confirmed that the changes in On-Off dynamics were not an artifact of the attention-related increase in firing rates, or of the HMM's assumption of discrete On-Off phases (figs.</s><s>S9,S10, supplementary information 3.5,3.6).</s><s>We also considered the influence of microsaccades.</s><s>Unlike stimulus onset, which was reliably followed by On-episodes, only a small fraction of transitions were preceded by a microsaccade (fig.</s><s><ref type="figure" target="#fig_0">S11A-D</ref>).</s><s>Nonetheless, changes in frequency or direction of miscrosaccades could not account for observed increases in On-episode durations (fig.</s><s><ref type="figure" target="#fig_0">S11E-G</ref>).</s><s>Moreover, increases in On-episode durations were also observed on trials without microsaccades (fig.</s><s><ref type="figure" target="#fig_0">S11H</ref>, supplementary information 3.7).</s></p><p><s>Finally, we asked whether On-Off dynamics, in addition to being modulated by attention, predicted behavioral performance.</s><s>In our task, the probability of detecting a change was greater at the cued location compared to uncued locations <ref type="bibr" target="#b14">(14)</ref>.</s><s>We investigated how the increase in detection probability at the cued location was related to On-Off dynamics (supplementary methods 2.2).</s><s>We found that when the cued orientation change occurred in the RFs of recorded neurons, the probability of detecting that change was significantly greater when it occurred during an On phase than during an Off phase (Fig. <ref type="figure" target="#fig_3">4A</ref>, median detection probability 64.8% during Off phase, 78.3% during On phase, difference 13.5%, p &lt; 10 -3 , Wilcoxon signed rank test).</s><s>This difference in detection probability was evident beginning ∼ 150 ms before the stimulus change (Fig. <ref type="figure" target="#fig_3">4B</ref>), consistent with the average duration of On-episodes.</s><s>This effect was spatially selective: we found no difference in detection probability between On-and Off-phases when the cued change occurred outside the RFs of recorded neurons (Fig. <ref type="figure" target="#fig_3">4A</ref>, median detection probability difference 0.4%, p = 0.943, Wilcoxon signed rank test).</s></p><p><s>We have shown that spontaneous On-Off transitions, occurring synchronously throughout the cortical depth, are modulated locally within a cortical map during selective attention and predict behavioral performance.</s><s>These On-Off dynamics represent a substantial source of correlated variability classically observed in cortical responses <ref type="bibr" target="#b22">(22)</ref>, and many features of this correlated variability, such as spike-count correlations <ref type="bibr" target="#b23">(23)</ref>, can be understood as arising from the On-Off dynamics (fig.</s><s><ref type="figure" target="#fig_1">S12</ref>, supplementary information 3.8).</s><s>The correlated variability can be affected by cognitive factors <ref type="bibr" target="#b24">(24)</ref><ref type="bibr" target="#b25">(25)</ref><ref type="bibr" target="#b26">(26)</ref>, in particular spike-count correlations can increase or decrease during selective attention <ref type="bibr" target="#b27">(27)</ref><ref type="bibr" target="#b28">(28)</ref><ref type="bibr" target="#b29">(29)</ref><ref type="bibr" target="#b30">(30)</ref>, and changes in the On-Off dynamics account for changes in spike-count correlations during attention in our data (fig.</s><s><ref type="figure" target="#fig_2">S13</ref>, supplementary information 3.8.4).</s><s>Recent models parsimoniously attribute changes in mean firing rates and spike-count correlations during attention to fluctuations in shared modulatory signals <ref type="bibr" target="#b31">(31)</ref>, with smaller spike-count correlations accounted for by reduced fluctuations in these modulatory signals <ref type="bibr" target="#b32">(32)</ref>.</s><s>The On-Off dynamics observed here provide a basis for positing the apparent trial-to-trial fluctuations in shared modulatory signals <ref type="bibr" target="#b32">(32,</ref><ref type="bibr" target="#b33">33)</ref>, but can account for within-trial fluctuations as well (fig.</s><s><ref type="figure" target="#fig_1">S12</ref>, supplementary information 3.8.2).</s></p><p><s>What mechanisms underlie the spatially and temporally precise control of cortical state during selective attention?</s><s>Our results suggest that global mechanisms governing cortical states may themselves also operate on a local scale or, alternatively, may interact with separate attentional control mechanisms operating locally.</s><s>Indeed, recent evidence suggest that neuromodulators known to act on a brain-wide scale <ref type="bibr" target="#b1">(1,</ref><ref type="bibr" target="#b34">34,</ref><ref type="bibr" target="#b35">35)</ref>, also mediate the effects of selective attention <ref type="bibr" target="#b36">(36)</ref> and influence circuits controlling selective attention <ref type="bibr" target="#b37">(37)</ref>.</s><s>On the other hand, cortico-cortical inputs appear to influence state changes in a spatially targeted manner <ref type="bibr" target="#b38">(38,</ref><ref type="bibr" target="#b39">39)</ref>.</s><s>Since diffuse neuromodulatory signals are interspersed with topographically precise projections throughout cortex, local modulation of cortical state is likely to be widespread, extending to modalities beyond vision and serving many cognitive functions.</s><s>Monkeys initiated a trial by fixating a central dot (Fixation).</s><s>After a brief delay (333 ms and 170 ms in monkeys G and B, respectively), four peripheral oriented-grating stimuli appeared, one in each of the screen's quadrants (Stimulus).</s><s>After a variable delay (200 -2, 700 ms), stimuli briefly disappeared (Blank, &lt; 270 ms) then reappeared either with or without one of them changing orientation.</s><s>Monkeys reported an orientation change by executing a saccade to the stimulus diametrically opposite to the change location (Antisaccade, arrow indicates saccade direction).</s><s>If no change happened, monkeys had to maintain fixation (No saccade).</s><s>A small, central cue (white line, illustrated larger than actual size) appeared shortly (200 -500 ms) after stimulus onset (Cue), pointing toward the stimulus which was most likely to change.</s><s>(E) On and Off transitions in multi-unit spiking activity on 16 simultaneously recorded channels (each horizontal band) for twenty example trials.</s><s>Activity is aligned to the stimulus' (left panel, blue triangles) and attention cue's onset times (right panel, red triangles).</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig 1 .</head><label>1</label><figDesc><div><p><s>Fig 1. Spontaneous On and Off transitions in spiking activity during fixation and attention tasks.</s><s>(A) Overlap of V4 receptive fields measured simultaneously across the cortical depth on 16 channels (lines -RF contours, dots -RF centers) for 3 example recordings (dva -degrees of visual angle).</s><s>(B) Fixation task: monkeys fixated a central dot (FP) on a blank screen for 3 seconds on each trial ; dashed circle outlines approximate V4 receptive field locations (V4 RF).</s><s>(C) An example trial showing spontaneous transitions between episodes of vigorous (On) and faint (Off) spiking in multi-unit activity simultaneously recorded with 16-channel electrodes (left panel).</s><s>Spikes are marked by vertical ticks.</s><s>(D) Attention task: monkeys reported orientation changes with an antisaccade.</s><s>A cue indicated which stimulus was likely to change.Monkeys initiated a trial by fixating a central dot (Fixation).</s><s>After a brief delay (333 ms and 170 ms in monkeys G and B, respectively), four peripheral oriented-grating stimuli appeared, one in each of the screen's quadrants (Stimulus).</s><s>After a variable delay (200 -2, 700 ms), stimuli briefly disappeared (Blank, &lt; 270 ms) then reappeared either with or without one of them changing orientation.</s><s>Monkeys reported an orientation change by executing a saccade to the stimulus diametrically opposite to the change location (Antisaccade, arrow indicates saccade direction).</s><s>If no change happened, monkeys had to maintain fixation (No saccade).</s><s>A small, central cue (white line, illustrated larger than actual size) appeared shortly (200 -500 ms) after stimulus onset (Cue), pointing toward the stimulus which was most likely to change.</s><s>(E) On and Off transitions in multi-unit spiking activity on 16 simultaneously recorded channels (each horizontal band) for twenty example trials.</s><s>Activity is aligned to the stimulus' (left panel, blue triangles) and attention cue's onset times (right panel, red triangles).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig 2 .</head><label>2</label><figDesc><div><p><s>Fig 2. Hidden Markov Model (HMM) of On-Off dynamics.</s><s>(A) HMM schematic: in each time bin (t 1 , t 2 , t 3 , . . .</s><s>), spike counts x 1 , . . .</s><s>x 16 on 16 channels are generated by inhomogeneous Poisson processes with mean rates r 1 , . . .</s><s>r 16 that are different between the On and Off phase.</s><s>Transitions between unobserved On and Off phases are governed by probabilities p on and p off .</s><s>(B) Example HMM fit: firing rates of 16 channels in the On and Off phase and transition probabilities (numbers above the curved arrows) estimated by the model.</s><s>Error bars are 5% and 95% percentiles over 10 bootstrap samples.</s><s>HMM was fitted to multi-unit activity within the window starting 400 ms after the attention cue onset and until start of the blank period (see Fig. 1D).</s><s>(C) Example epoch of spiking activity segmented into On (green) and Off (pink) episodes by the HMM.</s><s>(D) Distributions (black lines) of On (right panel) and Off (left panel) episode durations overlaid by exponential distributions (green and pink lines) with the decay time-constants set by HMM transition probabilities.</s><s>(E-G) Same as B-D, but for the additional laminar dataset.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig 3 .</head><label>3</label><figDesc><div><p><s>Fig 3. Effects of covert and overt attention on dynamics of On-Off transitions.</s><s>(A) Average firing rates of an example single-unit for covert (blue), overt (orange) and control trials (grey).</s><s>Shaded area represents ±sem.</s><s>(B) Three hypothetical ways On-Off dynamics can interact with attention-related increase in average firing rate (blue line -attention, black dashed line -control).</s><s>(C) Distribution of attention modulation index of single-unit firing rates in the On (right panel) and Off (left panel) phases during covert (blue) and overt attention (orange).</s><s>(D) Distribution across recordings of the difference in average durations of On (right panel) and Off (left panel) episodes between covert attention and control (blue), and overt attention and control (orange) conditions.</s><s>In panels C,D, triangles indicate medians of the distributions; p-values are for Wilcoxon signed rank test.</s><s>(E) Cartoon of two sites in area V4 corresponding to attended (blue ellipse) and unattended (black ellipse) retinotopic locations (upper panel) with corresponding On-Off dynamics (lower panel).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig 4 .</head><label>4</label><figDesc><div><p><s>Fig 4.  On-Off population state predicts behavioral performance.</s><s>(A) Probability to detect an orientation change that occurred during the Off-phase (x-axis) versus a change that occurred during the On-phase (y-axis).</s><s>Each point represents one recording session (blue -covert attention, grey -control condition).</s><s>Inset: average difference between the On and Off detection probability.</s><s>Error bars represent std across recordings, asterisks indicate p &lt; 10 -3 for Wilcoxon signed rank test.</s><s>(B) Time course of the detection probability.</s><s>At each time bin, the detection probability was calculated separately for trials on which the instantaneous population state was in the On-phase (green line) and on which it was in the Off-phase (pink line) at the corresponding time bin.</s><s>Grey shading indicates significant difference in detection probability (two-sided paired t-test, p &lt; 0.05 corrected for multiple comparisons across all time bins).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure- 1 . 1 Figure- 2 .</head><label>112</label><figDesc><div><p><s>Figure-1.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head></head><label></label><figDesc><div><p><s>Figure-3.</s></p></div></figDesc></figure>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AKNOWLEDGMENTS</head><p><s>This work was supported by NIH EY014924, Stanford NeuroVentures grant, MRC MR/K013785/1, and Wellcome Trust 093104.</s><s>We thank E.I. Knudsen, K. Harris, S. Ganguli, R.N.S. Sachdev and M. Zirnsak for their comments on the manuscript.</s><s>We thank D.S. Aldrich for technical assistance.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AUTHOR CONTRIBUTIONS</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">References and Notes</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thiele</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">509</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S.-H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page">209</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Steriade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Sejnowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">262</biblScope>
+			<biblScope unit="page">679</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Steriade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Timofeev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Grenier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophys</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page">1969</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Haider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Duque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Hasenstaub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophys</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">4186</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hasenstaub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N S</forename><surname>Sachdev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophys</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page">9607</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Renart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">327</biblScope>
+			<biblScope unit="page">587</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Crochet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C H</forename><surname>Petersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">608</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F A</forename><surname>Poulet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C H</forename><surname>Petersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">454</biblScope>
+			<biblScope unit="page">881</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Niell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Stryker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page">472</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Okun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Naim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Lampl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">4440</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Luczak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bartho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">1684</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y Y</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Scholl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Seidemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Priebe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">509</biblScope>
+			<biblScope unit="page">226</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Steinmetz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Moore</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page">496</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Seidemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Meilijson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Abeles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bergman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Vaadia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">752</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rainer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurocomputing</title>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vinck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Batista-Brito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Knoblich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Cardin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="16" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Reimer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page">355</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Moran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">229</biblScope>
+			<biblScope unit="page">782</biblScope>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Treue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">382</biblScope>
+			<biblScope unit="page">539</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fries</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Rorie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="page">1560</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Renart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Machens</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page">211</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">811</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">162</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page">750</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Ecker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">235</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Sundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">879</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H R</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">1594</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Ruff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">1591</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Ruff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">7523</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L T</forename><surname>Goris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Movshon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Simoncelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">858</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Rabinowitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Goris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Simoncelli</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page">eLife</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H R</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">15241</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">403</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Robbins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F T</forename><surname>Arnsten</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">267</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Herrero</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">454</biblScope>
+			<biblScope unit="page">1110</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Noudoost</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Moore</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">474</biblScope>
+			<biblScope unit="page">372</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zagha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Casale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N S</forename><surname>Sachdev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Mcginley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page">567</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Gregoriou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Gotts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="page">1207</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

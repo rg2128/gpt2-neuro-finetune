@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Hydrodynamics of viscous inhalant flows</title>
+				<funder ref="#_U87tBkZ">
+					<orgName type="full">National Science Foundation</orgName>
+					<orgName type="abbreviated">NSF</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>American Physical Society (APS)</publisher>
+				<availability status="unknown"><p>Copyright American Physical Society (APS)</p>
+				</availability>
+				<date type="published" when="2017-04-26">April 26, 2017</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Aaron</forename><forename type="middle">C</forename><surname>True</surname></persName>
+							<email>aaron.true@colorado.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Civil</orgName>
+								<orgName type="department" key="dep2">Environmental and Architectural Engineering</orgName>
+								<orgName type="institution">University of Colorado</orgName>
+								<address>
+									<postCode>80309-0428</postCode>
+									<settlement>Boulder</settlement>
+									<region>Colorado</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">John</forename><forename type="middle">P</forename><surname>Crimaldi</surname></persName>
+							<email>john.crimaldi@colorado.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Civil</orgName>
+								<orgName type="department" key="dep2">Environmental and Architectural Engineering</orgName>
+								<orgName type="institution">University of Colorado</orgName>
+								<address>
+									<postCode>80309-0428</postCode>
+									<settlement>Boulder</settlement>
+									<region>Colorado</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Hydrodynamics of viscous inhalant flows</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Physical Review E</title>
+						<title level="j" type="abbrev">Phys. Rev. E</title>
+						<idno type="ISSN">2470-0045</idno>
+						<idno type="eISSN">2470-0053</idno>
+						<imprint>
+							<publisher>American Physical Society (APS)</publisher>
+							<biblScope unit="volume">95</biblScope>
+							<biblScope unit="issue">5</biblScope>
+							<date type="published" when="2017-04-26">April 26, 2017</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">87EE2BBB89450404AD834DE5A6E0C15A</idno>
+					<idno type="DOI">10.1103/physreve.95.053107</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Inhalant flows draw fluid into an orifice from a reservoir and are ubiquitous in engineering and biology.</s><s>Surprisingly, there is a lack of quantitative information on viscous inhalant flows.</s><s>We consider here laminar flows (Reynolds number Re ≤ 100) developing after impulsive inhalation begins.</s><s>We implement finite element simulations of flows with varying Re and extraction height h (orifice height above a bottom bed).</s><s>Numerical results are experimentally validated using particle image velocimetry (PIV) measurements in a physical model for a representative flow case in the middle of the Re-h parameter space.</s><s>We use two metrics to characterize the flow in space and time: regions of influence (RoIs) which describe the spatial extent of the flow field, and inhalation volumes which describe the initial distribution of inhaled fluid.</s><s>The transient response for all Re features an inviscid, sink-like, component at early times followed by a viscous diffusive component.</s><s>At lower Re, diffusion entrains an increasing volume of fluid over time, enlarging the RoI indefinitely.</s><s>In some geometries, these flows spatially bifurcate, with some fluid being inhaled through the orifice and some bypassing into recirculation.</s><s>At higher Re, inward advection dominates outward viscous diffusion, and the flow remains trapped in a sink-like state.</s><s>Both RoIs and inhalation volumes are strongly dependent on Re and extraction height, suggesting that organisms or engineers could tune these parameters to achieve specific inhalation criteria.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p><s>In this study, we investigate the hydrodynamics of a class of flows that we refer to as "inhalant flows."</s><s>In the most general sense, inhalant flows feature fluid drawn from an effectively infinite reservoir through an inlet orifice and into an inhalant tube (Fig. <ref type="figure" target="#fig_0">1</ref>).</s><s>These flows are ubiquitous in engineered and biological systems, and yet while constituent aspects of this flow have been studied extensively in the literature in a variety of disparate contexts, there remains a surprising lack of quantitative information about the fundamental hydrodynamics, particularly for viscous flow approaching the inlet orifice.</s><s>Here, we consider laminar, inhalant flows that develop following the impulsive start of constant volumetric inhalation.</s></p><p><s>Inhalant flows are common to many fields and they are referred to and intuitively understood through disciplinespecific lenses.</s><s>Engineers think of siphons as a means of conveying liquids into tubes, and siphons are prototypical flows in the study of engineering hydraulics <ref type="bibr" target="#b0">[1]</ref>.</s><s>Biological oceanographers think of siphon and suction flows in the context of organismal feeding, predation, and respiration <ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref>.</s><s>In the biomedical world, researchers refer to inspiratory flows in the context of respiration <ref type="bibr" target="#b4">[5,</ref><ref type="bibr" target="#b5">6]</ref>.</s><s>Scientists across disciplines use the term "pipette" <ref type="bibr" target="#b6">[7]</ref> in reference to drawing a sample volume of fluid into a tube from a larger reservoir <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b8">9]</ref>.</s></p><p><s>Conceptually, inhalant flows can be divided into three regions: the "exterior flow" upstream of the inlet orifice, the developing "entrance flow" just downstream of the inlet orifice, and the "fully-developed flow" that follows.</s><s>We refer to the latter two regions collectively as "interior flow".</s><s>The coupled interior and exterior flows upstream and downstream of the inlet orifice affect and inform the hydrodynamics of the holistic system.</s><s>For example, terrestrial vertebrate respiration features inhalation of air through an inlet orifice (e.g., a nostril).</s><s>Although some researchers have focused on the interior flow in the internal airways <ref type="bibr" target="#b4">[5]</ref>, and others have focused on aspects of the exterior flow <ref type="bibr" target="#b9">[10]</ref>, fundamental hydrodynamics of the coupled inhalant flow system have not been characterized, though they are certainly acknowledged <ref type="bibr" target="#b10">[11]</ref>.</s><s>While both interior flow regions have been investigated extensively in the literature, viscous exterior flow approaching an inlet orifice is relatively unstudied.</s></p><p><s>Exterior flows approaching an inlet orifice have been investigated in a variety of contexts; however, most studies feature simplifications and/or complexities which render a mechanistic understanding of viscous inhalant flow hydrodynamics impossible.</s><s>For example, aerosol and water samplers both feature fluid drawn from an effectively infinite reservoir, and considerable effort has gone into understanding optimal sampling procedures to eliminate biases associated with various inhalation regimes.</s><s>These studies are predominantly conducted in the context of sampling particle-laden flows <ref type="bibr" target="#b11">[12,</ref><ref type="bibr" target="#b12">13]</ref>, however, and have not characterized the fundamental hydrodynamics, particularly for viscous flows in the exterior.</s><s>Synthetic jets (net-zero mass flux) that produce periodic suction (inhalation) and ejection (exhalation) of fluid through an orifice are used in a variety of applications, including aerodynamic flow control <ref type="bibr" target="#b13">[14]</ref> and turbulence generation <ref type="bibr" target="#b14">[15]</ref>, in which the interior flow is of little consequence.</s><s>Biologically, various aspects of the exterior flow have been investigated in the context of organismal predation, feeding, and respiration <ref type="bibr" target="#b3">[4]</ref>.</s><s>Ambushfeeding fishes use impulsive suction to capture prey in a hydrodynamically-inconspicuous manner <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b16">17]</ref>; while these studies do shed insight into some aspects of the exterior flow, they are often highly inertial and feature additional complexities such as dynamic inlet orifice geometries (mouth gape).</s><s>Other aquatic organisms such as benthic bivalves (clams, oysters) draw prey-and oxygenrich water through an inhalant siphon and expel the filtrate as an excurrent jet <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b18">19]</ref>; although these phenomena are well documented morphologically and physiologically, characteristics of exterior flows generated by inhalant siphons are not well known.</s></p><p><s>Analytical treatment of exterior flow almost universally utilizes potential flow theory to produce an inviscid sink flow approximation, regardless of Reynolds number.</s><s>For an inviscid point sink of strength Q [L 3 /T ], the corresponding radial flow field u r (a) at radial distance a (spherical polar coordinate system) from the sink is</s></p><formula xml:id="formula_0">u r (a) = - Q απa 2 ,<label>(1)</label></formula><p><s>where α = constant.</s><s>For the limiting case of large extraction height (h/D 1), influence of the bottom bed is negligible and the exterior flow is typically approximated as a sink flow in an infinite domain with α = 4.</s><s>For the other limiting case when the inlet orifice is flush with the bottom bed (h/D = 0), the exterior flow approximation is a sink flow in a semi-infinite domain with α = 2.</s><s>These potential flow characterizations are inviscid and steady, lacking dependence on viscosity or time, and thus they are inherently incapable of describing time-evolving, viscous, inhalant flows <ref type="bibr" target="#b3">[4]</ref>; these flows are fundamentally diffusive in nature, featuring fluid momentum diffusing radially outward from the inlet orifice.</s><s>Although potential flows can satisfy impermeability boundary conditions, they are incapable of satisfying the viscous no-slip condition and therefore cannot resolve realistic boundary conditions.</s></p><p><s>Analytical solutions do exist for the idealized problem of axisymmetric flow generated by a point sink in the center of an infinite plate <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b20">21]</ref>, or more generally at the vertex of a cone <ref type="bibr" target="#b21">[22]</ref>.</s><s>These solutions are of the matching type, however, featuring an inner laminar boundary layer flow matched to a potential outer flow; they are only valid in close proximity to the solid surface in the high-Re limit.</s><s>As in all sink flows, these solutions are singular at the origin and break down in the neighborhood of the inlet orifice.</s><s>They are ultimately incapable of describing inhalant flow hydrodynamics that feature viscous fluid flow in an effectively infinite domain forced by a directional and spatially distributed flow boundary condition at the inlet orifice.</s></p><p><s>Downstream of the inlet orifice, many facets of the problem of laminar interior flow have been studied extensively numerically, experimentally, and analytically.</s><s>In the hydrodynamic entrance-length problem <ref type="bibr" target="#b22">[23]</ref>, the entrance (or development) length for inhalant flows is defined as the region of the interior flow over which the boundary layer grows from zero thickness at the inlet orifice to a thickness equal to the internal radius of the inhalant tube.</s><s>In this region, flow develops from an initial velocity profile prescribed as a boundary condition at the inlet orifice to a fully developed profile invariant in the streamwise direction <ref type="bibr" target="#b23">[24,</ref><ref type="bibr" target="#b24">25]</ref>.</s><s>Typically the boundary condition prescribed at the inlet orifice is a uniform profile across the inlet, although some investigators have prescribed various other profiles (e.g., parabolic); the choice of boundary condition at the inlet determines the subsequent entrance length and associated pressure drop <ref type="bibr" target="#b25">[26]</ref>.</s><s>Even though the entrance-length problem has been extensively studied, there remains notable discrepancies between theory and experiment (reviewed by Durst et al. <ref type="bibr" target="#b22">[23]</ref>).</s></p><p><s>Downstream of the developing flow in the entrance region, the Hagen-Poiseuille law governing steady laminar flow in an axisymmetric tube has been well known for close to 175 yr (see history of Poiseuille's Law by Sutera and Skalak <ref type="bibr" target="#b26">[27]</ref>).</s><s>Flow is driven through an axisymmetric tube of constant cross-section under the influence of an axial pressure gradient ∆P .</s><s>The velocity profile w(r) in a tube of inner radius R is parabolic in the radial (r) direction and invariant in the axial (z or streamwise) direction (cylindrical polar coordinate system) as</s></p><formula xml:id="formula_1">w(r) = - ∆P 4µ (R 2 -r 2 ) ,<label>(2)</label></formula><p><s>where µ is the fluid dynamic viscosity.</s><s>The volumetric</s></p><formula xml:id="formula_2">flowrate Q is Q = - ∆P πr 4 8µ<label>(3)</label></formula><p><s>with average cross-sectional velocity w o = Q/A over cross-sectional tube area A = πR 2 .</s><s>Finally, the flow Reynolds number Re based on the inhalant tube inner diameter D for a fluid with kinematic viscosity ν is</s></p><formula xml:id="formula_3">Re = w o D ν .<label>(4)</label></formula><p><s>As detailed above, while various aspects of the exterior and interior flows have been investigated separately in a variety of contexts, the detailed hydrodynamics of the holistic problem, particularly for time-developing, viscous flow approaching the inlet orifice, are not well known.</s></p><p><s>Historical treatment of the exterior inhalant flow as an inviscid sink flow, regardless of Re, is not unreasonable considering that analytical solutions to the Navier-Stokes equations are generally possible only in two limiting cases: in the low-Re ( 1) limit where the nonlinear advective terms vanish and in the high-Re limit <ref type="bibr" target="#b0">( 1)</ref> where viscous effects are negligible everywhere except in thin layers near solid surfaces (the viscous boundary layer).</s><s>For intermediate Re where both viscosity and inertia are dynamically important throughout the domain as in the present study, finding analytical solutions is impractical, and we are forced to rely on experimental observation or numerical solutions applicable to specific geometries <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b27">28]</ref>.</s></p><p><s>In this study, we characterize the hydrodynamics of time-evolving, viscous, inhalant flows approaching an inlet orifice from an effectively infinite reservoir.</s><s>We use numerical simulations to solve the viscous Navier-Stokes equations with realistic boundary conditions.</s><s>We use the impulsive application of a constant volumetric inhalation rate Q to drive the time-evolving interior and exterior flows.</s><s>We explore effects of Reynolds number and extraction height on the development of the exterior flow field and the spatial extent of fluid inhalation volumes.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. METHODOLOGY A. Flow description</head><p><s>We model laminar inhalant flows with fluid of density ρ and kinematic viscosity ν being drawn from an infinite reservoir into a round inhalant tube with inner diameter D and an inlet orifice at extraction height h above a solid bottom bed (Fig. <ref type="figure" target="#fig_0">1</ref>).</s><s>The flow develops in time and space following an impulsive start of constant volumetric flowrate Q within the inhalant tube.</s><s>Viscous fluid is drawn from the reservoir into the inhalant tube under the action of suction, and a laminar velocity profile develops downstream of the inlet orifice.</s><s>We consider three Reynolds numbers (Re = 1, 10, and 100) and three extraction heights (h = 0, 2D, and 40D).</s><s>The inhalant tube wall thickness is 0.1D.</s><s>The model is axisymmetric in a cylindrical polar coordinate system with origin at the center of the inlet orifice; z is axial distance from the inlet orifice and r is radial distance from the inhalant tube axis.</s><s>The parameter space was chosen to investigate effects of viscosity and solid-bed interactions on the flow.</s><s>The Re values range from a more viscous case (Re = 1) to one that approaches the inviscid limit while remaining well within the laminar regime (Re = 100).</s><s>The extraction heights range from the limiting case of a bed-flush inlet orifice (h = 0) to the large-height limiting case (h = 40D) beyond which the effect of the solid bottom bed vanishes.</s><s>Model results were insensitive to h for h ≥ 40D.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Governing equations and scaling</head><p><s>The nondimensional flow field u * = [u * , w * ] with radial (r * ) and axial (z * ) velocity components u * and w * is governed by the nondimensional, incompressible, Navier-Stokes and continuity equations</s></p><formula xml:id="formula_4">∂u * ∂t * + u * • ∇ * u * = -∇ * p * + Re -1 ∇ * 2 u * + g *<label>(5)</label></formula><p><s>and</s></p><formula xml:id="formula_5">∇ * • u * = 0 ,<label>(6)</label></formula><p><s>where length, time, velocity, and pressure have been nondimensionalized by D, D/w o , w o , and ρw 2 o , respectively, and where g * = Dg/w 2 o .</s><s>Note that the flow field governed by Eqs. 5 and 6 is controlled by the single nondimensional parameter Re (Eq.</s><s>4).</s><s>Here and elsewhere we denote vector quantities in bold face, scalar quantities in plain face, and non-dimensional quantities with an asterisk.</s></p><p><s>The initial conditions were zero velocity and pressure everywhere.</s><s>The flow was started impulsively by a boundary condition of laminar outflow from the downstream end of the inhalant tube with constant volumetric flowrate Q = w o A at time t * ≥ 0. The inhalant tube walls and the bottom bed were impermeable, no slip boundaries.</s><s>The top and lateral boundary conditions were open boundaries through which fluid could enter and leave the domain without normal stress.</s><s>The implementation of the equations governing the initial and boundary conditions are described in detail in the numerical methods subsection below.</s></p><p><s>When nondimensionalizing the Navier-Stokes equations, the time scale for unsteadiness is T = D/w o .</s><s>This time scale has several useful, context-specific interpretations.</s><s>For example, rewriting the time scale as T = D/w o = (D 2 /ν)/Re (where D 2 /ν is the diffusive time scale) demonstrates that the transient time scale decreases with increasing Re.</s><s>Alternatively, the time scale can be algebraically manipulated as T = D/w o = (πD 3 )/(4Q), indicating that it is also the time required to pump a characteristic volume (π/4)D 3 (a cylinder with length and diameter D) through the inhalant tube at volumetric flowrate Q.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Numerical methods</head><p><s>Numerical simulations were performed via finite element discretization of the Navier-Stokes and continuity equations (Eqs.</s><s>5 and 6).</s><s>Because the flow is driven entirely by a boundary condition of constant volumetric flowrate at the tube outlet, gravity plays no dynamical role and acts only to superimpose a hydrostatic pressure gradient.</s><s>For this reason, we do not include gravity in the the finite element model formulation.</s><s>The COM-SOL Multiphysics package was used to generate the mesh and to solve the system of equations resulting from the weak (integral) form discretization of the governing equations.</s><s>The mesh contained triangular and quadrilateral elements with local refinement around solid surfaces (inhalant tube walls and impermeable bottom bed).</s><s>A mesh refinement study was performed to test for solution convergence throughout the domain.</s><s>We iterated to finer meshes (increasing model degrees of freedom) until the total relative error estimate summed over all elements and degrees of freedom was of order 1e-11, and there was no discernible change in the solution with further grid refinement.</s><s>The final mesh implemented had typical maximum and minimum element sizes (spatial resolution) of approximately 0.075D and 0.01D, respectively.</s><s>In addition to the mesh refinement study, we also validated the model experimentally as discussed in detail below.</s></p><p><s>Lagrangian (polynomial) shape functions (basis functions) were implemented for weak form discretization of the fluid velocity (second order) and pressure (first order) fields; the second-order velocity shape functions are appropriate for the low flow velocities in the exterior laminar flow approaching the inlet orifice <ref type="bibr" target="#b28">[29]</ref>.</s><s>The order of the numerical integration scheme was matched to the order of the element (shape function) for each dependent variable.</s><s>The time discretization scheme was an implicit backward differentiation formula (BDF) method with maximum second order schemes, balancing numerical stability and damping tendencies for our gradually varying flows with smooth gradients.</s><s>BDF methods use variable-order, variable step-size backward differentiation and are known for their stability <ref type="bibr" target="#b29">[30,</ref><ref type="bibr" target="#b30">31]</ref>.</s><s>Time stepping was thus adaptive and the variable step size taken by the solver was informed by a prescribed absolute tolerance for the nonlinear solver and an implicit formulation of the mesh Courant-Friedrichs-Lewy (CFL) number.</s><s>The nonlinear systems of equations were solved using the direct PARDISO solver <ref type="bibr" target="#b31">[32,</ref><ref type="bibr" target="#b32">33]</ref>, a solver optimized for par-allelized solution of sparse systems of equations.</s></p><p><s>Initial conditions were zero velocity and pressure everywhere, u * = 0 and p * = 0.</s><s>The inhalant tube walls and the bottom bed were impermeable, no slip conditions, u * = 0. Flow was initiated by a boundary condition of constant volumetric flowrate Q from the downstream outlet of the inhalant tube for time t * ≥ 0. This was enforced by prescribing an outlet boundary condition of laminar outflow perpendicular to the flat boundary of the tube cross-section with average outlet velocity w o = Q/A.</s><s>Laminar outflow is then prescribed via a coupled ODE which computes p * exit such that the desired outlet velocity is achieved under laminar flow conditions:</s></p><formula xml:id="formula_6">L exit ∇ * t • [-p * I + µ(∇ * t u * + (∇ * t u * ) T )] = -p *</formula><p><s>exit n where I is the identity matrix, ∇ * t is the tangential gradient, and n is the unit vector normal to the outlet boundary.</s><s>This laminar outflow boundary condition is effectively a normal stress condition, together with a no tangential stress condition, a typical formulation for an outlet boundary condition <ref type="bibr" target="#b33">[34]</ref>.</s><s>The downstream outlet of the inhalant tube is located a distance L exit downstream of the inlet orifice.</s><s>To eliminate influence of outlet boundary conditions on exterior and interior flows of interest, L exit is set as 10 times the empirical estimate of the low-Re, laminar, entry-flow development length <ref type="bibr" target="#b22">[23]</ref>.</s></p><p><s>In order to obtain a numerically well-posed problem and avoid convergence problems when specifying the desired velocity condition at the outlet, the inlet boundary conditions (top and lateral boundaries) were prescribed as pressure conditions <ref type="bibr" target="#b33">[34]</ref>.</s><s>Thus, the top and lateral domain boundaries were open boundaries through which fluid could enter and leave the domain without normal stress, prescribed as [-p * I + µ(∇ * u * + (∇ * u * ) T )]n = 0. Specifying zero normal force enforces that the pressure is balanced by the viscous shear force on the inlet boundaries which is true when the normal gradient of the normal velocity at the boundary is small.</s></p><p><s>Fluid inhalation volumes were computed numerically by seeding passive particles across the inlet orifice and advecting them backwards in time (Improved Euler Method) within flow fields solved for previously via numerical simulations of the Navier-Stokes equations.</s><s>Refinement studies on spatial and temporal resolution of velocity data used to compute inhalant volumes ensured convergence.</s><s>The shape and total volume of fluid captured is a function of start time and inhalation period.</s><s>Inhalation volumes were computed with start time t * = 100, well beyond the time scale of rapid transient development (t * = 1), and proceeded for a total inhalation period of ∆t * = 100.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Model validation</head><p><s>To validate the model, particle image velocimetry (PIV) data were collected in an acrylic tank in the r -z plane (Fig. <ref type="figure" target="#fig_1">2</ref>).</s><s>There was a round inhalant tube protruding above the bottom bed in the center of the tank, and the flow was drawn into the orifice, through the tube, and to an elevated receiving reservoir by a digital gear pump with volumetric flowrate Q.</s><s>The tank was roughly a cube with length, width, and depth equal to 170 diameters, minimizing the influence of the sidewalls and free surface.</s><s>The working fluid (mineral oil) and inhalant tube (borosilicate glass) were index of refraction-matched enabling simultaneous characterization of both the exterior and interior flow fields.</s><s>The tank was seeded with neutrally buoyant, low Stokes number particles (20 µm, 1.03 g/cc microspheres) with 8 -10 particles in the resulting interrogation subwindows <ref type="bibr" target="#b34">[35]</ref>.</s><s>A double-pulsed Nd:YAG laser (532 nm) beam was spread into a thin sheet (∼500 µm) using a cylindrical diverging lens.</s><s>An sCMOS camera imaged particles in the laser sheet at pulse separation times that optimized particle displacements at one-quarter the width of a subwindow <ref type="bibr" target="#b34">[35]</ref>.</s><s>The image set was postprocessed using DaVis software (8.2.3, LaVision GmbH) to compute planar fluid velocity fields via fast-fourier transform (FFT) based cross-correlation analyses of particle displacement within subwindows between image pairs.</s><s>Due to the complexity of performing the experiments relative to running numerical simulations, PIV data were collected for a single flow case in the middle of the Re-h * parameter space (Re = 10 and h * = 2), and for a single nondimensional time (t * = 10).</s><s>These results were used to validate the numerical model for a single representative case, permitting further numerical exploration of the local Re-h * parameter space.</s><s>Velocity data obtained experimentally and numerically are compared directly in Fig. <ref type="figure" target="#fig_2">3</ref>.</s><s>The profiles demonstrate close agreement in both velocity components (u * ,w * ) throughout the domain, including in regions of high deformation rates and velocity gradients near the inlet orifice.</s><s><ref type="figure"></ref>and<ref type="figure">b</ref>) radial profiles of radial (u * , left panel) and axial (v * , right panel) velocity components at z * = 0.5 (blue, dark gray), 1.0 (red, gray), and 2.0 (green, light gray).</s><s>Note that the spatial scales are identical in a.) and b.) while the velocity scales are considerably different.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS</head><p><s>Principal aims of this study are to characterize the exterior flow field of inhalant flows, to understand transient development of these flows, and to quantify the initial spatial distribution of subsequently inhaled fluid.</s><s>First, the long-time behavior beyond the time scale of rapid transient development is presented in order to identify basic features of the flow field.</s><s>Next, the transient response is investigated by tracking the time evolution of a region of influence (RoI) of the flow.</s><s>We define RoIs at any instant in time as the volume of fluid bounded by a particular velocity magnitude contour.</s><s>Lastly, fluid inhalation volumes are quantified as a function of inhalation period.</s><s>Results are presented for Re = 1, 10, and 100, and at extraction heights h * = 0 ("bed-flush"), h * = 2 ("near-bed"), and h * = 40 ("unbounded").</s><s>In the bed-flush geometry (h * = 0, Fig. <ref type="figure">4</ref>), flow consists of radial inflow towards the inlet orifice for all Re.</s><s>Inflow magnitude decays rapidly with distance from the inlet orifice in a manner reminiscent of a sink flow.</s><s>At different Re, subtle flow differences are evidenced in the size and shape of the RoIs.</s><s>The no-slip condition along the bottom bed gives rise to a thicker boundary layer at lower Re, flattening the 1% RoI near the bed.</s><s>At low Re, this bottom boundary layer retards lateral inflow, causing preferential vertical inflow along the z-axis.</s><s>At high Re, thinning of the bottom boundary layer permits more omnidirectional inflow.</s><s>Directional flow bias at lower Re alters the aspect ratio of the RoIs.</s><s>For Re = 1, the RoIs show elongation along the z-axis.</s><s>This effect is somewhat mitigated at Re = 10 (middle panel) and at Re = 100 (right panel) the RoIs are very nearly hemispherical.</s><s>As the most inviscid flow modeled, the Re = 100 case most closely resembles a sink flow in which the velocity contours would conform to hemispherical potential lines.</s></p><p><s>Increasing extraction height to h * = 2 (near-bed case, Fig. <ref type="figure">5</ref>) results in structural changes to the flow field, particularly at low Re.</s><s>At high Reynolds number (Re = 100, right panel), there is once again radial inflow to the orifice, that now includes fluid from below.</s><s>At Re = 1 and 10 (left and middle panels), however, the flow bifurcates and some entrained fluid now bypasses the orifice and continues downward along the exterior, inhalant tube wall and radially outwards along the bottom bed.</s><s>Demarcation between inhaled and bypassed fluid is a stagnation streamline that terminates on the rim of the inlet orifice, as shown in the figure (here and elsewhere we denote stagnation streamlines as dashed gray lines).</s><s>Flow velocities associated with fluid that bypasses the orifice manifest as a lobe of the 1% RoI extending below the orifice.</s><s>Impact of viscous entrainment is largest at the lowest Reynolds number (Re = 1, left panel), increasing the amount of bypassed fluid with a corresponding increase in size of the 1% RoI lobe.</s><s>Enhanced effects of viscous diffusion at low Re are also evident in the overall increase in spatial extent of the 1% RoI.</s><s>Conversely, in the most inviscid flow case (Re = 100, right panel), inward advection of momentum dominates outward viscous diffusion, and the flow reverts once again to a state suggestive of an inviscid sink flow with radial inflow and nearly spherical RoIs.</s></p><p><s>For the unbounded geometry (h * = 40, Fig. <ref type="figure" target="#fig_5">6</ref>), the influence of the bottom bed is effectively eliminated.</s><s>As in the h * = 2 geometry, the Re = 1 and 10 flows (left and middle panels) bifurcate and some entrained fluid bypasses the orifice and is recirculated outwards.</s><s>As before, the stagnation streamline (dashed line) separates inhaled and bypassed fluid.</s><s>For Re = 1, viscous diffusion causes the extent of the flow field to be greatly expanded.</s><s>In fact, as we show later, the transient development for this viscous case continues indefinitely.</s><s>These amplified diffusive effects are evidenced by substantial enlargement of the RoIs relative to the previous two geometries.</s><s>Increased viscous entrainment of fluid also increases the size of the 1% RoI lobe of bypassed fluid.</s><s>In the absence of the nearby bottom bed, the deflection of the lobe laterally away from the inhalant tube is reduced.</s><s>The Re = 10 unbounded case (middle panel) is surprisingly similar to the corresponding near-bed case.</s><s>Finally, in the most inviscid case (Re = 100, right panel), inward advection dominates outward diffusion and the flow field is once again trapped in a state reminiscent of an unbounded sink flow with nearly spherical RoIs.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Transient response</head><p><s>To characterize the transient response of the flow, we present 1% RoI contours at the impulsive start of inhalation (t * = 0), through rapid transient development (t * = 1), and into the long-time behavior (t * = 100).</s><s>Model results are shown for h * = 0, 2, and 40 in Figs.</s><s><ref type="figure">7,</ref><ref type="figure">8</ref>, and 9, respectively, for Re = 1 (left panels), Re = 10 (middle panels), and Re = 100 (right panels).</s><s>The t * = 100 RoI contours here correspond to long-time results in the previous section.</s></p><p><s>Conceptually, the transient response of the exterior flow can be decomposed into the sum of two separate components.</s><s>First, an inviscid, elliptic baseline component that sets up instantaneously and is reminiscent of the steady, sink flow, but must satisfy the no-slip boundary conditions along solid surfaces and must match the distributed and directional flow at the orifice.</s><s>Second, a viscous component diffuses radially outward over time.</s><s>The relative strength and interplay of these two components depends on nondimensional time, Re, and h * .</s></p><p><s>At t * = 0, flow consists entirely of the inviscid elliptic response that is insensitive to Re for any particular geometry and associated boundary conditions.</s><s>Figures <ref type="figure">7,</ref><ref type="figure">8</ref> damental feature of the flow: the competition between advection of momentum towards the orifice and viscous diffusion away from the orifice.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Inhalation volumes</head><p><s>Here, we investigate the initial spatial distribution of fluid that is subsequently ingested into the inhalant tube.</s><s>We represent these inhalation volumes by their bounding envelopes (Fig. <ref type="figure" target="#fig_8">10</ref>).</s><s>These volumes were computed with inhalation beginning at t * = 100 (corresponding to the long-time behavior of the flow) and proceeding for inhalation durations ∆t * = 1, 10, and 100.</s><s>An inhalation duration ∆t * = 1 corresponds to the time required to inhale a characteristic volume ((πD 3 )/(4Q)) -this is equivalent to a cylinder with diameter and length equal to D. Sizes of inhalant volumes for a given nondimensional inhalation duration ∆t * are therefore identical (regardless of Re or h * ).</s><s>That is, all blue (dark gray) envelopes in Fig. <ref type="figure" target="#fig_8">10</ref>  gible over the inhalation durations used.</s><s>For cases that have a stagnation streamline (four lower-left panels, see also Figs. <ref type="figure">5,</ref><ref type="figure" target="#fig_5">6</ref>), a portion of the inhalation volume envelope along the bottom coincides with this streamline (shown with a dashed line).</s><s>Fluid below this streamline is recirculated outwards and can never enter the orifice.</s><s>In contrast, for the h * = 0 (top row) and for Re = 100 (right column) cases, all flow is radially inward, and as ∆t * → ∞ the envelopes expand to fill the entire domain.</s></p><p><s>Inhalant volumes show strong directional bias as a function of not only Re (columns) but also extraction height h * (rows) and depart significantly from what would be predicted by potential flow theory (Fig. <ref type="figure" target="#fig_8">10</ref>).</s><s>For the most viscous case (Re = 1, left column), increasing h * shifts inhalant volumes up towards the axis of the inhalant tube, producing directional inhalation.</s><s>Conversely, for the most inviscid case (Re = 100, right column), we see the exact opposite: increasing h * now enables a more omnidirectional inhalation.</s><s>For the in-termediate case (Re = 10, middle column), the shape of the inhalation volume is relatively insensitive to h * .</s><s>The most striking departure from potential flow theory occurs at Re = 1 and h * = 40 (lower-left panel).</s><s>For this viscous case, downward momentum from the directional flow in the inhalant tube diffuses readily throughout the exterior domain.</s><s>In the absence of a nearby bed, this diffusion activates a systemic downward flow (see left panel in Fig. <ref type="figure" target="#fig_5">6</ref>), much of which must bypass the orifice (as evidenced by the upward deflection of the stagnation streamline).</s><s>This produces a conical inhalation volume that samples preferentially from above.</s><s>Overall, the choice of Re and h * is seen to have profound impact on the spatial distribution of inhaled fluid.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. SUMMARY</head><p><s>Potential flow theory has been historically used to approximate flows approaching an orifice as inviscid sink flows.</s><s>However, many inhalant flows are not welldescribed by potential flow theory because they are subject to boundary conditions that are both directional and spatially distributed, and their development is influ-enced by viscous diffusion of momentum.</s><s>In this study we characterized transient hydrodynamics of impulsivelystarted, laminar inhalant flows approaching an orifice for a range of Reynolds numbers (to vary the influence of viscous effects) and extraction heights (to vary the influence of the solid bed).</s><s>The increasing importance of viscosity at lower Re is evidenced in our results by significant departures from potential flow theory.</s><s>For all Re, the flow at t * 1 is sink-like, representing the inviscid, elliptic response.</s><s>For high Re, the flow remains relatively similar to the sink flow for all times.</s><s>At lower Re, increased viscous effects entrain an evergrowing volume of fluid, and the flow continues to develop indefinitely.</s><s>In some cases, flows at lower Re spatially bifurcate causing some fluid to be inhaled and other fluid to bypass the orifice.</s><s>The demarcation line between inhaled and bypassed fluid is a stagnation streamline that terminates on the rim of the orifice.</s><s>The viscous, diffusive effects seen at lower Re are further enhanced with increasing extraction height, whereas the higher Re flows remain trapped in a sink-like state regardless of h * .</s></p><p><s>The structural changes in the fluid inhalation volumes as a function of Re and h * are analogous to those in the RoIs.</s><s>For lower Re, increasing h * shifts inhalant volumes towards the axis of the inhalant tube, producing more directional inhalation.</s><s>In contrast, at higher Re, increasing h * has the opposite effect and produces a more omnidirectional inhalation.</s><s>Strong directional bias in inhalation as a function of Re and h * could be exploited by organisms and engineers alike to achieve specific inhalation criteria.</s><s>For example, a bottom-dwelling, siphon-feeding organism might decrease its pumping Re and increase its tube height to sample more directionally from above and inhale food-and oxygen-rich fluid volumes farther removed from the bottom bed.</s><s>However, this pumping regime will also produce the greatest spatial extent of the region of influence of the flow, perhaps making the organism more detectable to nearby predators.</s><s>Similarly, engineers and scientists may require fluid samplers capable of both isotropic and anisotropic sampling regimes depending on environmental conditions or design criteria; this could be achieved by adjusting Reynolds number and extraction height to suit sampling needs of a specific application.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIG. 1 .</head><label>1</label><figDesc><div><p><s>FIG. 1. Conceptual model of a generic inhalant flow.</s><s>An inhalant tube of diameter D protrudes a distance h (the extraction height) above a flat plate into an infinite reservoir.</s><s>Viscous fluid is drawn from the reservoir into the inhalant tube under the action of suction.</s><s>A laminar velocity profile develops downstream of the inlet orifice.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIG. 2 .</head><label>2</label><figDesc><div><p><s>FIG.2.</s><s>Schematic of the apparatus used for experimental PIV validation of the numerical model.</s><s>A camera images particles in the indicated field of view (FOV); illumination is provided by a pulsed laser sheet.</s><s>A digital gear pump located far downstream of the orifice draws a constant volumetric flowrate through the inhalant tube.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIG. 3 .</head><label>3</label><figDesc><div><p><s>FIG.3.</s><s>Comparison of velocity profiles obtained with particle image velocimetry (symbols) and numerical simulations (lines) for Re = 10, h * = 2, t * = 10.</s><s>a) axial profiles of radial (u * , left panel) and axial (w * , right panel) velocity components at r * = 1.0 (blue, dark gray), 1.5 (red, gray), and 2.5 (green, light gray), and b) radial profiles of radial (u * , left panel) and axial (v * , right panel) velocity components at z * = 0.5 (blue, dark gray), 1.0 (red, gray), and 2.0 (green, light gray).</s><s>Note that the spatial scales are identical in a.) and b.) while the velocity scales are considerably different.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>A</head><label></label><figDesc><div><p><s>. Long-time behavior To characterize basic features of the flow, we present flow fields at times large compared to the time scale of rapid transient development ((D 2 /ν)/Re); we consider flows at t * = 100 as being representative of long-time behavior.</s><s>Although exterior flows continue to slowly develop after t * = 100, particularly for the Re = 1 case, structure of the flows becomes essentially constant.</s><s>Model results at t * = 100 are shown for h * = 0, 2, and 40 in Figs. 4, 5, and 6, respectively.</s><s>Within each figure, the Reynolds number varies from 1 (left panel) to 10 (middle panel) to 100 (right panel).</s><s>Because the flow is axisymmetric about the z-axis, flow fields are displayed in the r-z half-plane.</s><s>To best visualize the large dynamic range in u * , velocity magnitudes are displayed on a logarithmic scale.</s><s>Velocity magnitude attenuates rapidly with radial distance from the inlet orifice and decays to |u * | = 0.01 within a few inhalant tube diameters, corresponding to 1% w o .</s><s>While the velocity vectors as presented are visible down to approximately |u * | = 0.002 (0.2% w o ), these smallest velocities are likely too small to be relevant or measurable in most practical applications.</s><s>To indicate the region of the flow where velocities are meaningful, we define an effective RoI at any instant in time as the volume of fluid bounded by a specific contour of |u * |.</s><s>We present RoIs for |u * | = 0.05 and |u * | = 0.01 indicating where velocities have decayed to 5% and 1% of w o (the average velocity in the inhalant tube), respectively.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>FIG. 4 .FIG. 5 .</head><label>45</label><figDesc><div><p><s>FIG.4.</s><s>Long-time behavior of the bed-flush case (h * = 0) at t * = 100 for Re = 1 (left panel), 10 (middle panel), and 100 (right panel).</s><s>The z-axis is the line of axisymmetry, the thick black line at r * = 0.5 is a section of the inhalant tube sidewall, and the crosshatch at z * = 0 is the solid bottom bed.</s><s>Thin, black lines are the 1% and 5% RoIs, and gray lines are streamlines.</s><s>Velocity direction and magnitude are denoted by arrow orientation and coloration, respectively.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>FIG. 6 .</head><label>6</label><figDesc><div><p><s>FIG.6.</s><s>Long-time behavior of the unbounded case (h * = 40) at t * = 100 for Re = 1 (left panel), 10 (middle panel), and 100 (right panel).</s><s>Inhalant tube, bottom bed, velocity magnitude contours, streamlines, and velocity vectors are represented as in Figs.<ref type="bibr" target="#b3">4</ref>.</s><s>Note the break in the vertical axis indicating large separation between the inlet orifice and bottom bed.</s><s>Re = 1 and 10 flow fields include stagnation streamlines (dashed lines).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>FIG. 7 .FIG. 8 .</head><label>78</label><figDesc><div><p><s>FIG. 7. Transient development of the flow field as represented by 1% RoI contours for the bed-flush geometry (h * = 0) at Re = 1 (left panel), 10 (middle panel), and 100 (right panel).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>FIG. 9 .</head><label>9</label><figDesc><div><p><s>FIG. 9. Transient development of the flow field as represented by 1% RoI contours for the unbounded geometry (h * = 40) at Re = 1 (left panel), 10 (middle panel), and 100 (right panel).</s><s>Note the break in the vertical axis indicating large separation between the inlet orifice and bottom bed.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>FIG. 10 .</head><label>10</label><figDesc><div><p><s>FIG.10.</s><s>Inhalation volume envelopes for durations of ∆t * = 1, 10, and 100.</s><s>Reynolds number Re increases from 1 (left column), to 10 (middle column), to 100 (right column) and h * increases from 0 (top row), to 2 (middle row), to 40 (bottom row).</s><s>Streamlines are shown in gray.</s><s>For the four lower-left panels, the bottom boundary of the inhalation volume coincides with a stagnation streamline (dashed line) as discussed in the text.</s></p></div></figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>This work was supported by the <rs type="funder">National Science Foundation (NSF)</rs> under grant <rs type="grantNumber">OCE 1260232</rs> to JPC.We acknowledge and thank <rs type="person">Pete Jumars</rs> for motivation to investigate these flows and for fruitful interactions and discussions.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_U87tBkZ">
+					<idno type="grant-number">OCE 1260232</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Potter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H</forename><surname>Barnes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Educ</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">5</biblScope>
+			<date type="published" when="1971">1971</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">V</forename><surname>Singarajah</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Exp.l Mar. Biol. Ecol</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Monismith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Koseff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Thompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>O'riordan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Nepf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Limnol. Oceanogr</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">3</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Jumars</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Limnol. Oceanogr.: Fluids Environ</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Schroter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Sudlow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Respir. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">3</biblScope>
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cole</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Rhinol</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">4</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Gay-Lussac</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ve</forename><surname>Thuau</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1830">1830</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Shohl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<date type="published" when="1928">1928</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Köhn</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1928">1928</date>
+			<pubPlace>Eberswalde (Forstliche Hochschule</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Ph.D. thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Mullan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N</forename><surname>Cox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Clark</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Lancet</title>
+		<imprint>
+			<biblScope unit="volume">293</biblScope>
+			<biblScope unit="page">7609</biblScope>
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Settles</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Fluids Eng</title>
+		<imprint>
+			<biblScope unit="volume">127</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Zaripov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Zigangareeva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">M</forename><surname>Kiselev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fluid</forename><surname>Dyn</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<biblScope unit="volume">35</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Dunnett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Aerosol Sci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">12</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Swift</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp. Fluids</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">4</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Variano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bodenschatz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Cowen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp. Fluids</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page">4</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Van Wassenbergh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Aerts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. R. Soc., Interface</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">31</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yaniv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Elad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Holzman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Exp. Biol</title>
+		<imprint>
+			<biblScope unit="volume">217</biblScope>
+			<biblScope unit="page">20</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Jorgensen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mar. Ecol. Prog. Ser</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">U</forename><surname>Riisgard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Larsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biol. Rev. Cambridge Philos. Soc</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<author>
+			<persName><forename type="first">L</forename><surname>Rosenhead</surname></persName>
+		</author>
+		<idno>pg. 428</idno>
+		<title level="m">Laminar Boundary Layers: An Account of the Development, Structure, and Stability of Laminar Boundary Layers in Incompressible Fluids, Together with a Description of the Associated Experimental Techniques</title>
+		<editor>
+			<persName><forename type="first">L</forename><surname>Rosenhead</surname></persName>
+		</editor>
+		<imprint>
+			<publisher>Clarendon Press Gloucestershire</publisher>
+			<date type="published" when="1963">1963</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Kundu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Hu</surname></persName>
+		</author>
+		<title level="m">Fluid Mechanics</title>
+		<meeting><address><addrLine>San Diego</addrLine></address></meeting>
+		<imprint>
+			<publisher>Elsevier Academic Press</publisher>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="page">280</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Whitehead</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Canetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">The</forename><surname>London</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Dublin Philosophical Magazine and Journal of Science</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page">321</biblScope>
+			<date type="published" when="1950">1950</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Durst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ünsal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Bayoumi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Fluids Eng</title>
+		<imprint>
+			<biblScope unit="volume">127</biblScope>
+			<biblScope unit="page">6</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Atkinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Brocklebank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C H</forename><surname>Card</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AIChE J</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">4</biblScope>
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Y</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Fluids Eng</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="1973">1973</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Shah</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Fluids Eng</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Sutera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Skalak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Fluid Mech</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>White</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Corfield</surname></persName>
+		</author>
+		<title level="m">Viscous Fluid Flow</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>McGraw-Hill</publisher>
+			<date type="published" when="2006">2006</date>
+			<biblScope unit="volume">3</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Gresho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Sani</surname></persName>
+		</author>
+		<title level="m">Incompressible Flow and the Finite Element Method: Isothermal Laminar Flow</title>
+		<meeting><address><addrLine>Hoboken</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="1998">1998</date>
+			<biblScope unit="volume">2</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Brayton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">G</forename><surname>Gustavson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Hachtel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. IEEE</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="1972">1972</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Hindmarsh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">N</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Grant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Serban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Shumaker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Woodward</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Transactions on Mathematical Software</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">3</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">O</forename><surname>Schenk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gärtner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Fichtner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Stricker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Future Generation Computer Systems</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">O</forename><surname>Schenk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gärtner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Future Generation Computer Systems</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page">3</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Panton</surname></persName>
+		</author>
+		<title level="m">Incompressible Flow</title>
+		<meeting><address><addrLine>Hoboken</addrLine></address></meeting>
+		<imprint>
+			<publisher>John Wiley and Sons</publisher>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Raffel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Willert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wereley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kompenhans</surname></persName>
+		</author>
+		<title level="m">Particle Image Velocimetry: A Practical Guide</title>
+		<meeting><address><addrLine>Berlin</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

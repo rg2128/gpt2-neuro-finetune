@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Hierarchical neural architecture underlying thirst regulation</title>
+				<funder ref="#_TGjt854">
+					<orgName type="full">National Institutes of Health</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Biology and Biological Engineering Division of California Institute of Technology</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Okawa Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Mallinckrodt Foundation</orgName>
+				</funder>
+				<funder ref="#_Fx6KY9c">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Klingenstein-Simons Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Searle Scholars Program</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Startup</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">President and Provost of California Institute of Technology</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">McKnight Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2018-08-10">2018 August 10.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Vineet</forename><surname>Augustine</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Computation and Neural Systems</orgName>
+								<orgName type="institution">California Institute of Technology</orgName>
+								<address>
+									<settlement>Pasadena</settlement>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Division of Biology and Biological Engineering</orgName>
+								<orgName type="institution">California Institute of Technology</orgName>
+								<address>
+									<settlement>Pasadena</settlement>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sertan</forename><forename type="middle">Kutal</forename><surname>Gokce</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sangjun</forename><surname>Lee</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Division of Biology and Biological Engineering</orgName>
+								<orgName type="institution">California Institute of Technology</orgName>
+								<address>
+									<settlement>Pasadena</settlement>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Division of Biology and Biological Engineering</orgName>
+								<orgName type="institution">California Institute of Technology</orgName>
+								<address>
+									<settlement>Pasadena</settlement>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Thomas</forename><forename type="middle">J</forename><surname>Davidson</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Physiology and Kavli Institute for Fundamental Neuroscience</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>San Francisco</settlement>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Frank</forename><surname>Reimann</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Clinical Biochemistry</orgName>
+								<orgName type="institution">University of Cambridge</orgName>
+								<address>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fiona</forename><surname>Gribble</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Clinical Biochemistry</orgName>
+								<orgName type="institution">University of Cambridge</orgName>
+								<address>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Karl</forename><surname>Deisseroth</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Department of Bioengineering</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<settlement>Stanford</settlement>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Carlos</forename><surname>Lois</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Division of Biology and Biological Engineering</orgName>
+								<orgName type="institution">California Institute of Technology</orgName>
+								<address>
+									<settlement>Pasadena</settlement>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Yuki</forename><surname>Oka</surname></persName>
+							<email>yoka@caltech.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Computation and Neural Systems</orgName>
+								<orgName type="institution">California Institute of Technology</orgName>
+								<address>
+									<settlement>Pasadena</settlement>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Division of Biology and Biological Engineering</orgName>
+								<orgName type="institution">California Institute of Technology</orgName>
+								<address>
+									<settlement>Pasadena</settlement>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Hierarchical neural architecture underlying thirst regulation</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature</title>
+						<title level="j" type="abbrev">Nature</title>
+						<idno type="ISSN">0028-0836</idno>
+						<idno type="eISSN">1476-4687</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">555</biblScope>
+							<biblScope unit="issue">7695</biblScope>
+							<biblScope unit="page" from="204" to="209"/>
+							<date type="published" when="2018-08-10">2018 August 10.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">90CE9033CBB420DA86FC2F87897D91ED</idno>
+					<idno type="DOI">10.1038/nature25488</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Neural circuits for appetites are regulated by both homeostatic perturbations and ingestive behaviour.</s><s>However, the circuit organization that integrates these internal and external stimuli is unclear.</s><s>Here we show in mice that excitatory neural populations in the lamina terminalis form a hierarchical circuit architecture to regulate thirst.</s><s>Among them, nitric oxide synthase-expressing neurons in the median preoptic nucleus (MnPO) are essential for the integration of signals from the thirst-driving neurons of the subfornical organ (SFO).</s><s>Conversely, a distinct inhibitory circuit, involving MnPO GABAergic neurons that express glucagon-like peptide 1 receptor (GLP1R), is activated immediately upon drinking and monosynaptically inhibits SFO thirst neurons.</s><s>These responses are induced by the ingestion of fluids but not solids, and are time-locked to the onset and offset of drinking.</s><s>Furthermore, loss-of-function manipulations of GLP1R-expressing MnPO neurons lead to a polydipsic, overdrinking phenotype.</s><s>These neurons therefore facilitate rapid</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>satiety of thirst by monitoring real-time fluid ingestion.</s><s>Our study reveals dynamic thirst circuits that integrate the homeostatic-instinctive requirement for fluids and the consequent drinking behaviour to maintain internal water balance.</s></p><p><s>The precise regulation of water intake is critical to the maintenance of fluid homeostasis in the body.</s><s>The initiation of drinking in animals is triggered by internal fluid imbalance, such as water depletion <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref> .</s><s>By contrast, drinking is terminated rapidly when animals have ingested a sufficient amount of water, which generally precedes the absorption of the ingested fluid <ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref> .</s><s>To achieve such accurate fluid regulation, the brain needs to monitor both internal water balance and fluid ingestion on a real-time basis <ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b11">12</ref> .</s><s>How the brain integrates homeostatic and behavioural inputs to coordinate drinking behaviour is an unsolved question.</s><s>As such, uncovering the neural circuits that process these regulatory signals is a critical step in understanding the neural logic of thirst regulation <ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref> .</s></p><p><s>The lamina terminalis is the principal brain structure responsible for sensing and regulating internal water balance <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b16">17</ref> .</s><s>It contains three main nuclei: the SFO, the organum vasculosum lamina terminalis (OVLT) and the MnPO, all of which are anatomically interconnected <ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref> .</s><s>The SFO and the OVLT in particular are two major osmosensory sites in the brain because they lack the normal blood-brain barrier.</s><s>Recent studies have shown that specific neural populations in the lamina terminalis have a causal role in the regulation of drinking behaviour.</s><s>For instance, optogenetic and chemogenetic activation of excitatory SFO neurons co-expressing a transcription factor, ETV1, and nitric oxide synthase (SFO nNOS neurons) drives immediate and robust drinking behaviour <ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b22">23</ref> .</s><s>Conversely, stimulation of inhibitory populations of lamina terminalis nuclei suppresses water intake <ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b23">24</ref> .</s><s>Although these studies pinpointed the neural substrates that regulate thirst, the circuit organization that mediates drinking behaviour remains poorly understood, owing to anatomical complexity and the lack of genetic handles.</s></p><p><s>Here we focused on the neural architecture of the lamina terminalis, and investigated genetically defined thirst circuits using neural manipulation, tracing and in vivo optical recording approaches.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Hierarchical circuit for thirst</head><p><s>SFO nNOS neurons project their axons to other nuclei of the lamina terminalis (OVLT and MnPO) <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b24">25</ref> , as well as to the paraventricular and supraoptic nuclei, which contain vasopressin-expressing neurons <ref type="bibr" target="#b18">19</ref> .</s><s>These axonal projections and the downstream neurons define a framework of circuit elements that control thirst-related behaviours and hormonal outputs <ref type="bibr" target="#b25">26</ref> .</s><s>To identify genetically defined SFO nNOS downstream populations that regulate drinking, we used optogenetics along with monosynaptic rabies tracing.</s><s>Water restriction induces robust c-Fos expression in the SFO and putative downstream regions (Extended Data Fig. <ref type="figure" target="#fig_4">1a</ref>).</s><s>In the MnPO and OVLT, essentially all of the c-Fos signals were found in nNOS-expressing excitatory neurons (MnPO nNOS and OVLT nNOS ; Extended Data Fig. <ref type="figure" target="#fig_4">1a,</ref><ref type="figure">top,</ref><ref type="figure">b</ref>).</s><s>Similar results were obtained when we photostimulated SFO nNOS neurons by expressing channelrhodopsin (ChR2) <ref type="bibr" target="#b26">27</ref> using adeno-associated virus (AAV-DIO-ChR2) in nNOS-cre (also known as Nos1-cre) mice (Extended Data Fig. <ref type="figure" target="#fig_4">1a</ref>, bottom).</s><s>These data suggest that MnPO nNOS and OVLT nNOS neurons are putative downstream populations of SFO nNOS neurons.</s><s>Retrograde monosynaptic rabies tracing <ref type="bibr" target="#b27">28</ref> from MnPO nNOS and OVLT nNOS neurons confirmed direct connections with the SFO nNOS population (Fig. <ref type="figure" target="#fig_4">1a,</ref><ref type="figure">b</ref> and Extended Data Fig. <ref type="figure" target="#fig_4">1c</ref>).</s><s>Moreover, photostimulation of ChR2-expressing MnPO nNOS or OVLT nNOS neurons selectively induced water drinking in satiated mice (Extended Data Fig. <ref type="figure" target="#fig_4">1d</ref>).</s><s>These studies demonstrated that SFO nNOS neurons send monosynaptic excitatory inputs to the MnPO nNOS and OVLT nNOS populations, each of which is sufficient to trigger water drinking.</s></p><p><s>To further investigate the circuit architecture that processes the internal need for water, we performed neural epistasis analysis for the circuits of the lamina terminalis by loss-offunction manipulation (Fig. <ref type="figure" target="#fig_4">1c</ref>).</s><s>We reasoned that if SFO nNOS and its downstream populations redundantly encode thirst in parallel, the ablation of one population should have only minor effects on drinking.</s><s>Alternatively, if the circuit is organized in a hierarchical fashion in which a specific population has a critical role, the elimination of such a downstream population should abolish SFO nNOS -stimulated drinking.</s><s>To test these ideas, we expressed caspase (AAV-flex-Casp3) <ref type="bibr" target="#b28">29</ref> in the MnPO, OVLT or SFO of nNOS-cre mice (Fig. <ref type="figure" target="#fig_4">1c</ref>).</s><s>The expression of Casp3 resulted in the specific and near-complete elimination of nNOS-expressing neurons of a given nucleus (Fig. <ref type="figure" target="#fig_4">1d</ref> and Extended Data Fig. <ref type="figure" target="#fig_5">2a</ref>).</s><s>In OVLT nNOS -ablated and control mice, photostimulation of SFO nNOS neurons triggered robust drinking (Fig. <ref type="figure" target="#fig_4">1e</ref> and Extended Data Fig. <ref type="figure" target="#fig_5">2b</ref>).</s><s>By sharp contrast, the ablation of MnPO nNOS neurons markedly suppressed SFO nNOS-stimulated water intake (Fig. <ref type="figure" target="#fig_4">1e</ref> and Extended Data Fig. <ref type="figure" target="#fig_5">2b</ref>, MnPOx).</s><s>We also found that MnPO nNOS neurons have an important role in the drinking behaviour evoked by OVLT nNOS neurons.</s><s>Water intake induced by photostimulation of OVLT nNOS neurons was significantly attenuated after ablating MnPO nNOS , but not SFO nNOS neurons (Extended Data Fig. <ref type="figure" target="#fig_5">2c</ref>).</s><s>These results suggest that MnPO nNOS neurons are essential neural substrates of the lamina terminalis for the behavioural output.</s><s>If this model is correct, stimulating the MnPO nNOS population without the inputs from their upstream SFO nNOS , or both SFO nNOS and OVLT nNOS , neurons should still trigger robust drinking (Fig. <ref type="figure" target="#fig_4">1c</ref>).</s><s>As hypothesized, the elimination of these populations had no impact on drinking when MnPO nNOS neurons were directly photostimulated (Fig. <ref type="figure" target="#fig_4">1e</ref> and Extended Data Fig. <ref type="figure" target="#fig_5">2b</ref>, SFOx, SFOx and OVLTx).</s><s>Similar results were obtained by chemogenetic acute silencing using hM4Di (ref.</s><s>30) (Fig. <ref type="figure" target="#fig_4">1f</ref>).</s><s>In awake mice, acute inhibition of MnPO nNOS neurons by clozapine N-oxide (CNO) severely suppressed water consumption in both water-restricted and SFO nNOS -stimulated mice (Fig. <ref type="figure" target="#fig_4">1g</ref> and Extended Data Fig. <ref type="figure" target="#fig_5">2d,</ref><ref type="figure">e</ref>).</s><s>However, the same manipulation did not decrease sugar consumption in food-restricted mice (Fig. <ref type="figure" target="#fig_4">1g</ref> and Extended Data Fig. <ref type="figure" target="#fig_5">2d,</ref><ref type="figure">e</ref>).</s></p><p><s>Importantly, the silencing of MnPO nNOS neurons did not compromise the osmosensory function of the SFO nNOS population.</s><s>We used fibre photometry <ref type="bibr" target="#b30">31</ref> in awake-behaving mice that expressed the calcium indicator GCaMP6s in the SFO nNOS , and the neuronal silencer hM4Di in MnPO nNOS neurons (Fig. <ref type="figure" target="#fig_4">1h</ref>).</s><s>We showed that the activation of SFO nNOS neurons by osmotic stress was unaffected in the absence of functioning MnPO nNOS neurons (Fig. <ref type="figure" target="#fig_4">1i</ref> and Extended Data Fig. <ref type="figure" target="#fig_5">2f</ref>).</s><s>These results were supported by our electrophysiological recordings: only a minor fraction of SFO neurons received monosynaptic input from MnPO nNOS neurons (Extended Data Fig. <ref type="figure" target="#fig_6">3</ref>), demonstrating the unidirectional connection from SFO nNOS to MnPO nNOS neurons.</s><s>Taken together, our results demonstrate that thirst neurons in the lamina terminalis form a hierarchical circuit organization, and that the MnPO nNOS population is required to process signals from SFO nNOS neurons to coordinate drinking.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MnPO GLP1R → SFO nNOS inhibitory input</head><p><s>The thirst neurons of the lamina terminalis also receive negative feedback regulation upon drinking itself <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b9">10</ref> .</s><s>It has been shown that water intake rapidly suppresses the activity of thirst neurons in the lamina terminalis <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b17">18</ref> (Extended Data Fig. <ref type="figure" target="#fig_7">4</ref>).</s><s>It is suggested that this quick regulation of thirst circuits optimizes fluid ingestion <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b8">9</ref> .</s><s>To examine the neural basis of drinking-induced thirst inhibition, we functionally mapped the upstream inhibitory circuits of SFO nNOS neurons using two neural tracing approaches.</s><s>First, we retrogradely labelled inhibitory neurons that project to the SFO by injecting herpes simplex virus conjugated with mCherry (HSV-mCherry) into the SFO of Vgat-cre mice (Fig. <ref type="figure" target="#fig_5">2a</ref>, left).</s><s>Among the putative upstream structures (Extended Data Fig. <ref type="figure" target="#fig_8">5a</ref>), the MnPO contained the strongest HSV signals (Fig. <ref type="figure" target="#fig_5">2a</ref>, right).</s><s>Next, we performed monosynaptic rabies tracing from SFO nNOS neurons (Extended Data Fig. <ref type="figure" target="#fig_8">5b</ref>).</s><s>Consistent with the results of the HSV tracing, the MnPO contained the greatest number of rabies-virus-positive neurons that minimally overlapped with excitatory neurons (Extended Data Fig. <ref type="figure" target="#fig_8">5b</ref>).</s><s>These complementary tracing results suggest that GABAergic neurons in the MnPO are a major source of inhibitory input to the SFO <ref type="bibr" target="#b23">24</ref> .</s></p><p><s>To gain a more specific genetic handle on these neurons, we performed RNA sequencing analysis of the inhibitory population of the dorsal lamina terminalis (containing the MnPO and SFO) and the cortex.</s><s>We found that GLP1R transcripts were highly enriched in the inhibitory neurons from the lamina terminalis, by a factor of 100 compared to the cortex (Fig. <ref type="figure" target="#fig_5">2b</ref>).</s><s>In situ hybridization and immunohistochemical studies in Glp1r-cre mice <ref type="bibr" target="#b31">32</ref> confirmed that GABAergic MnPO neurons expressed GLP1R (Fig. <ref type="figure" target="#fig_5">2c</ref> and Extended Data Fig. <ref type="figure">6a,</ref><ref type="figure">b</ref>).</s><s>As predicted from our tracing results, ChR2-assisted circuit mapping <ref type="bibr" target="#b32">33</ref> revealed that all recorded SFO nNOS neurons (16 out of 16 cells) received robust monosynaptic inhibitory input from GLP1R-expressing MnPO (MnPO GLP1R ) neurons, with an inhibitory postsynaptic current latency of 8.4 ms (Fig. <ref type="figure" target="#fig_5">2d</ref>).</s><s>However, SFO non-nNOS neurons received such input rarely (4 out of 15 cells with small inhibitory postsynaptic currents, Fig. <ref type="figure" target="#fig_5">2d</ref>), showing that inhibitory input from MnPO GLP1R neurons is specific to excitatory neurons in the SFO.</s><s>Furthermore, photostimulation of MnPO GLP1R neurons selectively suppressed water intake in thirsty mice (Fig. <ref type="figure" target="#fig_5">2e</ref> and Extended Data Fig. <ref type="figure">6c</ref>), although this acute inhibition was not observed upon the application of a GLP1R agonist <ref type="bibr" target="#b33">34</ref> (Extended Data Fig. <ref type="figure">6d-f</ref>).</s><s>Collectively, our findings suggest that the MnPO GLP1R population has a key modulatory role in thirst.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MnPO GLP1R neurons monitor liquid intake</head><p><s>Next, we measured the in vivo calcium dynamics of MnPO GLP1R neurons expressing GCaMP6s in Glp1r-cre mice (Fig. <ref type="figure" target="#fig_6">3a</ref>).</s><s>In freely moving mice, MnPO GLP1R neurons were acutely activated during water drinking, and their activity returned to the basal level when they stopped drinking (Fig. <ref type="figure" target="#fig_6">3a</ref>, red trace).</s><s>These neurons responded equally when thirsty mice licked either water or isotonic saline, but not when they licked an empty spout (Fig. <ref type="figure" target="#fig_6">3b</ref> and Extended Data Fig. <ref type="figure">7c-e</ref>).</s><s>Notably, the neuronal responses were also observed when the mice licked non-aqueous silicone oil, which showed that the activation of MnPO GLP1R neurons is independent of fluid composition.</s><s>Under food-restricted conditions, we found that MnPO GLP1R neurons still responded upon licking sucrose solution (300 mM, Fig. <ref type="figure" target="#fig_6">3c</ref> and Extended Data Fig. <ref type="figure">7c,</ref><ref type="figure">d</ref>).</s><s>However, solid peanut butter evoked no response despite its high palatability (Fig. <ref type="figure" target="#fig_6">3c</ref>).</s><s>These optical recording studies indicate that MnPO GLP1R neurons are activated purely by fluid consumption and not by reward-seeking behaviour or licking action per se.</s><s>Consistent with the connection from MnPO GLP1R to SFO nNOS neurons, the activity of the SFO nNOS population mirrored precisely the calcium dynamics of MnPO GLP1R neurons, except that water intake evoked an additional persistent inhibition (Extended Data Fig. <ref type="figure">7a,</ref><ref type="figure">b</ref>).</s><s>This water-specific inhibition of SFO nNOS neurons is probably due to osmolality sensing or water absorption in the gastrointestinal tract as proposed previously <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b8">9</ref> .</s><s>These results demonstrate two important properties of thirst circuits.</s><s>First, MnPO GLP1R neurons are activated upon fluid ingestion; this activation is independent of fluid composition and the internal state of the animal.</s><s>Second, this neural population transmits inhibitory signals to SFO nNOS neurons, in a manner that is time-locked to drinking.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Effect of eating and drinking</head><p><s>We investigated the mechanisms by which MnPO GLP1R neurons exclusively represent fluid intake.</s><s>To this end, we provided water-restricted mice with water in two different formsliquid and gel (HydroGel: 98% water + hydrocolloids)-while recording MnPO GLP1R activity (Fig. <ref type="figure" target="#fig_7">4a</ref>).</s><s>In either form, the mice ingested a similar amount of water within the 30min session (Fig. <ref type="figure" target="#fig_7">4b</ref>).</s><s>Notably, compared to the robust activation of MnPO GLP1R neurons upon drinking water, gel-eating behaviour did not elicit any response (Fig. <ref type="figure" target="#fig_7">4a,</ref><ref type="figure">c</ref>).</s><s>Similarly, eating normal chow did not stimulate this neural population (Fig. <ref type="figure" target="#fig_7">4d</ref>).</s><s>Therefore, MnPO GLP1R neurons are able to distinguish between drinking and eating behaviour even if an animal consumes essentially the same substance.</s><s>These results suggest that the MnPO GLP1R population facilitates satiety, which is induced by drinking behavior and not specifically by water.</s></p><p><s>Because the rate of ingestion differed considerably between the drinking of water and the eating of HydroGel (Fig. <ref type="figure" target="#fig_7">4b</ref>), we speculated that MnPO GLP1R neurons may monitor the pattern of ingestion in order to distinguish the mode of consumption.</s><s>To examine this possibility, mice were given access to water for 30 s in total at two different rates: 2 s × 15 times and 30 s × 1 time (Fig. <ref type="figure" target="#fig_7">4e</ref>).</s><s>As hypothesized, concentrated periods of drinking evoked significantly greater responses in the MnPO GLP1R neurons than did sparse periods of drinking, regardless of the total amount of water consumed (Fig. <ref type="figure" target="#fig_7">4e</ref>).</s><s>We note that the temperature of the fluid did not affect the response (Fig. <ref type="figure" target="#fig_7">4f</ref>).</s><s>Because animals can ingest fluids much faster than they can ingest solid substances, these data strongly support the idea that the MnPO GLP1R population distinguishes between drinking and eating on the basis of ingestion speed.</s><s>Consequently, concentrated (that is, rapid) fluid intake recruits MnPO GLP1R -mediated inhibition signals, which in turn suppress the activity of SFO nNOS neurons.</s><s>These findings provide key mechanistic insight into rapid thirst alleviation as a result of drinking behaviour.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MnPO GLP1R neurons help thirst satiety</head><p><s>In view of the function of the MnPO GLP1R population in the monitoring of fluid intake, we next considered its physiological importance in the regulation of drinking using chemogenetic loss-of-function manipulation (Fig. <ref type="figure" target="#fig_8">5a</ref>).</s><s>Whereas any fluid elicits transient MnPO GLP1R → SFO nNOS inhibition, water evokes an additional inhibitory effect that persists after drinking episodes (Extended Data Fig. <ref type="figure">7a</ref>).</s><s>Owing to this water-specific signal, inhibition of MnPO GLP1R neurons by CNO had only a minor effect on the total water intake of water-restricted mice during a 30-minute period (Extended Data Fig. <ref type="figure" target="#fig_3">8a,</ref><ref type="figure">b,</ref><ref type="figure">d</ref>).</s><s>By contrast, marked effects were observed for isotonic saline, in which MnPO GLP1Rindependent inhibitory signals are absent (Fig. <ref type="figure" target="#fig_8">5b</ref>).</s><s>Compared to the vehicle control, inhibition of MnPO GLP1R neurons robustly increased both the total amount and the duration of saline intake (Fig. <ref type="figure" target="#fig_8">5c</ref> and Extended Data Fig. <ref type="figure" target="#fig_3">8c</ref>).</s><s>However, under satiated conditions, the same manipulation did not increase water or saline intake, which excludes the possibility that inhibiting MnPO GLP1R neurons stimulates appetite directly (Fig. <ref type="figure" target="#fig_8">5c</ref>).</s><s>We observed the same overdrinking phenotype in mice in which MnPO GLP1R neurons were ablated by Casp3 (Extended Data Fig. <ref type="figure" target="#fig_3">8e,</ref><ref type="figure">f</ref>).</s><s>Our functional manipulation studies demonstrate that MnPO GLP1R neurons promote satiety of thirst by monitoring real-time fluid intake, and that the malfunction of this neuronal regulation leads to polydipsic overdrinking, especially in the case of non-hypoosmotic fluids such as saline.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>In this study, we identified genetically defined thirst circuits in the lamina terminalis that integrate the instinctive need for water with the consequent drinking behaviour to maintain internal water balance (Fig. <ref type="figure" target="#fig_8">5d</ref>).</s><s>We showed that multiple downstream populations of SFO nNOS neurons are individually sufficient to induce water intake.</s><s>These data are reminiscent of the circuit organization for hunger, in which eating behaviour is redundantly encoded by multiple output projections of AgRP neurons in the arcuate nucleus <ref type="bibr" target="#b34">35</ref> .</s><s>However, we showed that individual thirst-related neuronal populations of the lamina terminalis are hierarchically organized, and that MnPO nNOS neurons are the behavioural output neurons.</s><s>Previous lesion studies in rats and sheep have proposed a model in which the MnPO serves as a critical site that integrates inputs from osmosensory neurons of the SFO and the OVLT <ref type="bibr">36 -38</ref> .</s><s>Our findings well explain and further advance the concept of this model with cell-type-specific precision.</s><s>Whereas the necessity of the SFO may vary among species <ref type="bibr" target="#b9">10</ref> , the MnPO appears to consistently function as the key centre for drinking across species <ref type="bibr" target="#b37">38</ref> .</s><s>In our analysis, MnPO nNOS neurons project to various areas including the hypothalamus and the midbrain (Extended Data Fig. <ref type="figure">9a</ref>; see also ref. 18).</s><s>These results reveal a neural logic to thirst processing in the lamina terminalis circuit, and provide a platform for investigation into how the appetite for water is integrated at downstream sites of MnPO nNOS neurons.</s></p><p><s>Notably, MnPO GLP1R neurons responded selectively to the ingestion of fluids but not solids.</s><s>These inhibitory neurons provide rapid monosynaptic inhibition to thirst-driving SFO nNOS neurons.</s><s>Our results indicate strongly that the MnPO GLP1R population facilitates thirst satiation upon drinking rather than upon water absorption.</s><s>At a psychophysical level, these findings provide an explanation for the long-standing observation that thirst is quickly alleviated at the onset of drinking <ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b8">9</ref> .</s><s>At a physiological level, these results reveal a neural interface that adjusts the activity of thirst neurons on the basis of real-time drinking behaviour.</s><s>Although systemic recovery of fluid balance relies on water absorption into the blood, thirst is modulated by multiple preabsorptive factors including oral, oropharyngeal and gastrointestinal signals <ref type="bibr" target="#b0">1</ref> .</s><s>It is unlikely that the MnPO GLP1R → SFO nNOS circuit mediates oral sensory information such as taste <ref type="bibr" target="#b38">[39]</ref><ref type="bibr" target="#b39">[40]</ref><ref type="bibr" target="#b40">[41]</ref> because it responds to any fluid, including silicone oil.</s><s>Instead, MnPO GLP1R neurons may function as a flow-meter by sensing gulping actions in the oropharyngeal area, and provide rapid, liquid-specific inhibition to thirst circuits.</s><s>This idea is consistent with previous findings that drinking hyperosmotic saline <ref type="bibr" target="#b6">7</ref> , but not eating food <ref type="bibr" target="#b41">42</ref> , transiently suppressed vasopressin secretion.</s><s>In this model, MnPO <ref type="bibr">GLP1R</ref> neurons serve as a central detector that discriminates fluid ingestion from solid ingestion, which promotes acute satiation of thirst through the SFO and other downstream targets (Extended Data Fig. <ref type="figure">9b</ref>).</s><s>Subsequently, gastrointestinal mechanisms may selectively detect water over other fluids that induce persistent inhibitory effects on SFO nNOS neurons (Extended Data Fig. <ref type="figure">7a</ref>).</s><s>Although fluid-sensing mechanisms at each peripheral area are poorly understood, further molecular and cellular studies should help to reveal complex regulatory signals that maintain body-fluid homeostasis.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>METHODS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Animals.</head><p><s>All animal procedures were performed in accordance with the US NIH guidance for the care and use of laboratory animals and were approved by the Institutional Animal Care and Use Committee (protocol no: 1694-14, California Institute of Technology).</s><s>Mice used for data collection were both males and females, at least eight weeks of age.</s><s>The following mice were purchased from the Jackson Laboratory: C57BL/6J, stock number 000664; Slc32a1-cre (also known as Vgat-cre), stock number 016962; Ai9, stock number 007909; Ai3, stock number 007903; Slc17a6-cre (also known as Vglut2-cre), stock number 016963 and Nos1cre, stock number 017526.</s><s>Glp1r-cre and Ai110 lines were provided by F. Gribble (Cambridge) and D. Anderson (Caltech), respectively.</s><s>Mice were housed in temperatureand humidity-controlled rooms with a 13 h:11 h light:dark cycle with ad libitum access to chow and water.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Viral constructs.</head><p><s>The following AAVs were purchased from the UNC Vector Core: AAV1-CA-FLEX-RG, 4×10 12 copies per ml; AAV1-EF1a-FLEX-TVA-mCherry, 6 × 10 12 copies per ml; AAV2-EF1a-DIO-hChR2-eYFP, 5.6 × 10 12 copies per ml; AAV2-hSyn-DIO-hM4D(Gi)-mCherry, 3.7 × 10 12 copies per ml; AAV2-EF1a-DIO-mCherry, 5.7 × 10 12 copies per ml; AAV5-CamKIIa-hM4D(Gi)-mCherry, 4.3 × 10 12 copies per ml; AAV5-CamKIIa-hM3D(Gq)-mCherry, 1.7 × 10 12 copies per ml; AAV5-FLEX-taCasp3-TEVp, 5.3 × 10 12 copies per ml.</s><s>The following AAVs were purchased from the UPenn Vector Core: AAV1-Syn-FLEX-GCaMP6s-WPRE-SV40, 2.9 × 10 13 genome copies per ml; AAV1-Syn-GCaMP6s-WPRE-SV40, 2.28 × 10 13 genome copies per ml; AAV1-CamKII-eYFP-WPRE-hGH, 1.86 × 10 13 genome copies per ml; AAV2-EF1a-DIO-eYFP-WPRE-hGH, 3.05 × 10 12 genome copies per ml.</s><s>EnvA G-deleted Rabies-eGFP (1.6 × 10 8 transduction units per ml) was purchased from the Salk Institute.</s><s>Herpes simplex virus (hEF1a-LS1L-mCherry HT) was purchased from the Vector Core Facility at the Massachusetts Institute of Technology.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Surgery.</head><p><s>All procedures were adopted from a previous report <ref type="bibr" target="#b18">19</ref> .</s><s>Mice were anaesthetized with a mixture of ketamine (1 mg ml -1 ) and xylazine (10 mg ml -1 ) in isotonic saline, injected intraperitoneally (i.p.) at 10 μl g -1 bodyweight.</s><s>The mice were then placed in a stereotaxic apparatus (Narishige Apparatus) on a heating pad.</s><s>An incision was made to expose the skull.</s><s>The three-dimensional magnetic resonance imaging coordinate system was used to align the skull reference.</s><s>A small craniotomy, less than 1 mm, was made using a hand drill at the regions of interest.</s><s>Viral constructs were injected using a pressure injection system (Nanoliter 2000) using a pulled glass capillary at 100 nl min -1 .</s><s>The coordinates were: anteroposterior -4,030, mediolateral 0, dorsoventral -2,550 (200-nl injection) for the SFO; anteroposterior -3,100, mediolateral 0, dorsoventral -4,080 (100-nl injection) and -3,800 (50-100-nl injection) for the MnPO; and anteroposterior -2,700, mediolateral 0, dorsoventral -4,900 (75-nl injection) for the OVLT.</s><s>For optogenetic implants, a 200-μm fibre bundle (FT200EMT, Thorlabs) glued to a ceramic ferrule (Thorlabs) with epoxy was used.</s><s>For photometry implants, a 400-μm fibre bundle (BFH48-400, Thorlabs) glued to a ceramic ferrule with low autofluorescence epoxy (EPO-TEK301) or a custom-made implant (Doric Lenses) was used.</s><s>A fibre was implanted 200-300 μm (for photostimulation) or 0-50 μm (for photometry) above the virus injection site.</s><s>After the application of a local anaesthetic to the sides of the skin incision, the implants were permanently fixed to the skull using dental cement.</s><s>Cannulated mice were placed in a clean cage on a heating pad to recover from anaesthesia.</s><s>Mice were kept in their home cage for at least ten days before any behavioural tests.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Photostimulation.</head><p><s>For optogenetic experiments, photostimulation was performed using 473-nm laser pulses: 20 ms, 5 Hz (for OVLT) or 20 Hz (for SFO and MnPO) delivered via a custom-made optic cable using a pulse generator (World Precision Instruments).</s><s>The laser intensity was maintained at 5 mW (for OVLT) or 10 mW (for SFO and MnPO) at the tip of the fibre.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioural assays.</head><p><s>For water-restriction experiments, mice were provided with 1 ml of water daily.</s><s>For foodrestriction experiments, mice were provided with 0.5 pellets per 20 grams of body weight daily.</s><s>All assays were performed in a modified lickometer as described previously <ref type="bibr" target="#b38">39</ref> or a Biodaq monitoring system (Research Diets Inc.).</s><s>For all photometry assays, mice were acclimatized for 10-15 min in the lickometer cage before stimuli were given.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Long-term access assays.</head><p><s>For optogenetic testing (Fig. <ref type="figure" target="#fig_4">1g</ref> and Extended Data Fig. <ref type="figure" target="#fig_5">2c,</ref><ref type="figure">e</ref>), satiated mice were given ad libitum access to water with photostimulation.</s><s>Photostimulation was delivered for 1 s at 3-s intervals throughout the behavioural sessions.</s><s>For Fig. <ref type="figure" target="#fig_5">2e</ref> and Extended Data Fig. <ref type="figure">6c</ref>, mice were given access to water for 20 min after 24-h water restriction, and photostimulation was delivered for the first 10 min.</s><s>For feeding assays (Fig. <ref type="figure" target="#fig_5">2e</ref>), mice were single-housed in Biodaq cages after 24-h food restriction, and chow intake was measured for 20 min with or without light stimulation.</s><s>For acute inhibition experiments, mice were given access to 150 mM NaCl (Fig. <ref type="figure" target="#fig_8">5b</ref> and Extended Data Fig. <ref type="figure" target="#fig_3">8c</ref>) or water (Fig. <ref type="figure" target="#fig_4">1g</ref> and<ref type="figure" target="#fig_5">2e</ref>, Extended Data Figs <ref type="figure" target="#fig_3">8a,</ref><ref type="figure">b,</ref><ref type="figure">d</ref>) for 20-30 min after 24 h water restriction, or 300 mM sucrose (Fig. <ref type="figure" target="#fig_4">1g</ref> and Extended Data Fig. <ref type="figure" target="#fig_5">2e</ref>) after food restriction.</s><s>For all acute inhibition experiments, CNO was injected at 10 mg kg -1 body weight, 30 min before the start of the behaviour session.</s><s>For acute activation experiments, CNO was injected at 1 mg kg -1 body weight (Extended Data Fig. <ref type="figure">7e</ref>), 30 min before the start of the behaviour session.</s><s>For Fig. <ref type="figure" target="#fig_6">3a</ref> and Extended Data Figs <ref type="figure" target="#fig_7">4a</ref> and<ref type="figure" target="#fig_3">8f</ref>, access to water or saline was provided for 30 min after 24 h of water restriction.</s><s>For Fig. <ref type="figure" target="#fig_7">4a</ref>, water or HydroGel (ClearH 2 O) in a cup was provided for 30 min after 24 and 36 h of water restriction, respectively.</s><s>The weight of the cup was measured before and after the behaviour session.</s><s>For Fig. <ref type="figure" target="#fig_7">4d</ref>, 0.5 pellets of chow was provided for 30 min after 24 h of food restriction.</s><s>The entire session was recorded using a camera at 30 frames per second, and ingestion episodes were manually annotated.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Salt-or mannitol-loading experiments.</head><p><s>150 μl or 300 μl of 2 M NaCl, or 300 μL of 2 M mannitol, was injected intraperitoneally at the end of the acclimatization period.</s><s>For Fig. <ref type="figure" target="#fig_4">1i</ref> and Extended Data Fig. <ref type="figure" target="#fig_5">2f</ref>, CNO or vehicle (water) was injected 10 min before the injection of NaCl or mannitol.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Brief access assays.</head><p><s>For optogenetic experiments, behavioural assays were performed essentially as previously described <ref type="bibr" target="#b18">19</ref> .</s><s>Satiated mice were tested in a gustometer for 10-15 trials (Fig. <ref type="figure" target="#fig_4">1e</ref> and Extended Data Fig. <ref type="figure" target="#fig_4">1d</ref>).</s><s>The laser pulses were delivered for 20 s of the 40-s trial.</s><s>After the first lick, mice were given access to a water spout for 5 s.</s><s>For photometry recording (Fig. <ref type="figure" target="#fig_6">3b</ref> and Extended Data Fig. <ref type="figure">7a</ref>), water-restricted mice were presented with one of the following four stimuli for 30 s: water, isotonic saline, silicone oil or empty bottle (control).</s><s>Under food-restricted conditions (Fig. <ref type="figure" target="#fig_6">3c</ref> and Extended Data Fig. <ref type="figure">7b</ref>), a bottle containing 300 mM sucrose, peanut butter coated on a spout, or an empty bottle was presented for 30 s.</s><s>To avoid the effect of internal state changes, we used the data from the first stimulus presentation in each session.</s><s>To test the effect of temperature (Fig. <ref type="figure" target="#fig_7">4f</ref>), three bottles of water at 4 °C, room temperature (25 °C) or 37 °C were placed at the start of the acclimatization period (10 min).</s><s>Each trial was 30 s long with an inter-trial interval of 2 min.</s><s>For Fig. <ref type="figure" target="#fig_7">4e</ref>, water-restricted mice had access to water for 2 s repeated 15 times or for one 30-s period.</s><s>Each presentation was followed by a 30-s interval.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fibre photometry.</head><p><s>We measured bulk fluorescence signals using fibre photometry as previously described <ref type="bibr" target="#b30">31</ref> .</s><s>In brief, 490 nm and 405 nm light-emitting diodes (Thorlabs, M490F1 and M405F1) were collimated and delivered to the brain.</s><s>The light intensity was maintained at less than 100 μW during all recordings.</s><s>The fluorescence signal was then focused onto a femtowatt photoreceiver (Newport, Model 2151).</s><s>The modulation and demodulation were performed with an RP2.1 real time processor (Tucker-Davis Technologies) running custom software.</s><s>The licks from the lickometer were simultaneously recorded as real-time transistor-transistor logic signals to the RP2.1.</s><s>Fluorescence changes were analysed using custom MATLAB (MathWorks) code as described previously <ref type="bibr" target="#b30">31</ref> .</s><s>Data were extracted and subjected to a lowpass filter at 1.8 Hz.</s><s>A linear function was used to scale up the 405-nm channel signal to the 490-nm channel signal to obtain the fitted 405-nm signal.</s><s>The resultant ΔF/F was calculated as (raw 490 nm signal -fitted 405 nm signal)/(fitted 405 nm signal).</s><s>For brief access tests, the area under the curve (ΣΔF during ) was quantified by integrating the fluorescence signals during the bout.</s><s>For all bouts, the mean fluorescence for 30 s before the first lick was calculated and subtracted from the entire session.</s><s>ΔF changes (ΔF post -ΔF pre ) were calculated by subtracting the mean fluorescence signal during the 2-s period before the first lick from the mean signal during the 2-s period at 1 min after the bout.</s><s>To display traces, the fluorescence data was time-binned by a factor of 2.5 × the sampling frequency and downsampled to 1 Hz.</s><s>For long-term tests, the area under the curve was calculated for 2.5 min after the start of the bout.</s><s>Changes in ΔF were calculated by subtracting the mean signal during the 2-s period before the first lick or NaCl injection from the mean signal during the 2-s period at 5 or 10 min after the bout (Extended Data Fig. <ref type="figure" target="#fig_7">4</ref>).</s><s>For peristimulus time histograms (Fig. <ref type="figure" target="#fig_7">4c,</ref><ref type="figure">d</ref>), the first bout at the start of the session and the last bout within 10 min of access were used.</s><s>The areas under the curve for the peristimulus time histograms were calculated during the first or the last 15 s.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Viral tracing.</head><p><s>Monosynaptic rabies tracing.</s><s>150 nl of a mixture of AAV1-CA-FLEX-RG and AAV1-EF1a-FLEX-TVA-mCherry (4:1 ratio) was injected to the target area.</s><s>Two weeks later, 200 nl of EnvA G-deleted Rabies-eGFP was injected into the same area.</s><s>The mice were euthanized a week later and their brains collected.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>HSV tracing.</head><p><s>200 nl of a mixture of AAV1-Syn-GCaMP6s-WPRE-SV40 and hEF1-LS1L-mCherry HT (2:5 ratio) was injected to the SFO of Vgat-cre mice.</s><s>The GCaMP virus was used to mark the injection site.</s><s>The mice were euthanized three weeks later and their brains collected.</s></p><p><s>The sections were imaged using a confocal microscope (TCS SP8, Leica) or a slide scanner (VS120, BX61VS, Olympus) at 20 ×.</s><s>The slide scanner images were used to count cells using ImageJ.</s><s>Representative images in Figs 1a, 2a and Extended Data Fig. <ref type="figure" target="#fig_8">5</ref> are from the confocal microscope.</s><s>Regions with an average greater than 10 rabies-virus-positive cells were included in the analysis.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Histology.</head><p><s>Mice were deeply anaesthetized with carbon dioxide and then transcardially perfused with PBS followed by 4% paraformaldehyde in PBS (pH 7.4) at 4 °C.</s><s>The brains were extracted and fixed in 4% paraformaldehyde at 4 °C overnight.</s><s>100 μm coronal sections were prepared using a vibratome (Leica, VT-1000 s) for antibody staining.</s><s>The primary antibodies (1:500 dilution) used were: goat anti-c-Fos (Santa Cruz, SC-52G), rabbit anti-NOS1 (Santa Cruz, sc-648), rabbit anti-GAD65 + GAD67 (Abcam, ab183999), chicken anti-GFP (Abcam, ab13970) and rat anti-mCherry (Thermo Fisher, M11217).</s><s>After washing three times with PBS, the sections were incubated with secondary antibodies (1:500 dilution) in blocking buffer for 4 h.</s><s>The GAD65/67 primary/secondary antibody incubation solution was prepared without detergent.</s><s>Fluorescence in situ hybridization was carried out using the RNAscope fluorescent multiplex kit (Advanced Cell Diagnostics) in accordance with the manufacturer's instructions.</s><s>Glp1r-cre/Ai9 mice were used with probes targeted to tdTomato and GLP1R.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RNA sequencing analysis.</head><p><s>The dorsal lamina terminalis in Vgat-cre/Ai9 mice were dissected under a fluorescence microscope.</s><s>To minimize contamination from other tissues, the lamina terminalis tissue containing the SFO and dorsal MnPO were peeled off.</s><s>For non-lamina-terminalis control, we dissected small tissues of the cortex from the same mice.</s><s>These samples were dissociated into single cells using the Papain Dissociation System (Worthington), labelled with 4′,6diamidino-2-phenylindole (DAPI) and the tdTomato-positive neurons were sorted using a flow cytometer (MoFlo Astrios, Beckman Coulter).</s><s>RNA was extracted using a PicoPure RNA isolation kit (Applied Biosystems) and complementary DNA was prepared using an Ovation RNA-seq V2 kit (Nugen).</s><s>Relative gene expression (Fig. <ref type="figure" target="#fig_5">2b</ref>) was calculated as a ratio of fragments per kilobase million of the dorsal lamina terminalis to that of the cortex.</s><s>The genes with fragments per kilobase million &lt; 0.1 in the cortex were omitted from the plot.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Slice electrophysiology.</head><p><s>Procedures for the preparation of acute brain slices and recordings with optogenetic stimulations were similar to those described previously <ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b42">43</ref> .</s><s>After decapitation, the brain was removed and immersed in ice-cold solution.</s><s>Coronal slices (300 mm) were cut using a vibratome (VT-1200 s, Leica) and moved into HEPES holding solution (in mM: NaCl 92, KCl 2.5, NaH 2 PO 4 1.2, NaHCO 3 30, HEPES 20, glucose 25, Na-ascorbate 5, thiourea 2, Na-pyruvate 3, MgSO 4 2, CaCl 2 2, at pH 7.35).</s><s>The slices were allowed to recover at 33 °C for 30 min and then held at room temperature (around 25 °C) until use.</s></p><p><s>While recording, slices were perfused continuously (around 2 ml min -1 ) with artificial cerebrospinal fluid (in mM: NaCl 124, KCl 2.5, NaH 2 PO 4 1.2, NaHCO 3 24, glucose 25, MgSO 4 1, CaCl 2 2) at 25 °C.</s><s>Neurons were visualized and targeted using an upright infrared differential interference contrast microscope (BX51WI, Olympus).</s><s>Whole-cell recordings were achieved using glass pipettes with an impedance of 4-6 MΩ when filled with intracellular solution (for voltage clamp, in mM: CsCl 145, NaCl 2, HEPES 10, EGTA 0.2, QX-314 Chloride 5, Mg-ATP 4, Na-GTP 0.3, at pH 7.25; for current clamp, in mM: K-gluconate 145, NaCl 2, KCl 4, HEPES 10, EGTA 0.2, Mg-ATP 4, Na-GTP 0.3, at pH 7.25).</s><s>Electrical signals were sampled at 20 kHz and filtered at 2.9 kHz using an EPC 10 system (HEKA Elektronik).</s><s>To evaluate postsynaptic currents evoked by light pulses, the membrane potential of SFO nNOS (transduced with CamKII-mCherry/eYFP) or SFO non-nNOS neurons was held at -60 mV.</s><s>Light pulses were generated by a mercury lamp, filtered by an optical filter (Chroma) and controlled by an electronic shutter driver (VCM-D1, UNIBLITZ).</s><s>2-ms light pulses were delivered at 1 Hz four times, followed by a 4-s interval.</s><s>We repeated this stimulus cycle 20 times.</s><s>To confirm that the postsynaptic currents recorded were GABAergic, picrotoxin (150 μM) was applied through the bath for part of the experiments.</s><s>To confirm glutamatergic postsynaptic currents, 6-cyano-7-nitroquinoxaline-2,3-dione (CNQX, 10 μM) and 2-amino-5-phosphonovaleric acid (DL-APV, 25 μM) were applied through the bath.</s><s>Monosynaptic connection was defined by synaptic inhibitory or excitatory postsynaptic currents with latencies less than 16.4 ms.</s><s>For hM4Di experiments, currentclamp recordings were performed by applying a constant supra-threshold current injection to produce tonic action potentials.</s><s>CNO (around 6 μM) was applied using a puff (30 s) from another glass pipette placed approximately 50 μm from the recorded cell.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Plasma Na + and osmolality measurements.</head><p><s>After the injection of 150 μl of 2 M NaCl or 300 μl of 2 M mannitol, trunk blood was collected from wild-type mice.</s><s>Plasma was then extracted after centrifugation at 1500g for 20 min.</s><s>Plasma osmolality was measured using a vapour pressure osmometer (Vapro 5520).</s><s>Plasma Na + concentration was measured using Dionex (Thermo) ICS 2000.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Intra-cranial drug delivery.</head><p><s>100 ng of exendin-4 (Sigma Aldrich) dissolved in 1 μl of artificial cerebrospinal fluid was delivered using a custom-made cannula and tubing (PlasticsOne) connected to a Hamilton syringe driven by a pump (NewEra PumpSystems) at 100 nl min -1 into the MnPO of waterdeprived mice under head-fixed conditions.</s><s>Two minutes after infusion, freely moving mice were given access to water for the next 45 min.</s><s>The cannula position was verified by infusing exendin-4-FAM (Anaspec) conjugate before euthanasia.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Enzyme-linked immunosorbent assay.</head><p><s>Total plasma GLP1 was measured using EZGLP1T-36k kit (Millipore) as described previously <ref type="bibr" target="#b43">44</ref> .</s><s>In brief, after blood was collected in EDTA-coated tubes, plasma was isolated by centrifugation at 1500g for 20 min.</s><s>Samples were then kept at -80 °C until measurement.</s><s>For food-repleted (FD + F) and water-repleted (WD + W) conditions, mice were given access to Ensure for 30 min or water for 5 min, respectively.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistics.</head><p><s>All statistical analyses were carried out using Prism (GraphPad).</s><s>We used a two-tailed Mann-Whitney U test, a paired t-test or a Kruskal-Wallis one-way ANOVA, depending on the experimental paradigm.</s><s>*P &lt; 0.05, **P &lt; 0.01, ***P &lt; 0.001.</s><s>Details of the tests used are outlined in Supplementary Table <ref type="table">1</ref>.</s><s>No statistics to determine sample size, blinding or randomization methods were used.</s><s>Viral expression and implant placement was verified by histology before mice were included in the analysis.</s><s>These criteria were pre-established.</s><s>a, Casp3-TEVp efficiently eliminates SFO nNOS neurons (right) without affecting MnPO nNOS neurons (left).</s><s>c-Fos expression pattern is shown after water-restriction (red).</s><s>b, Rastor plots representing licking events during the 5-s session with photostimulation.</s><s>c, Ablation of MnPO nNOS (MnPOx) but not SFO nNOS (SFOx) neurons attenuated the drinking response to OVLT nNos photostimulation (left, 10 min, blue box).</s><s>Quantification of the number of licks during the 10-min light-on period (right, n = 9 mice for controls and MnPOx and n = 7 mice for SFOx).</s><s>d, 5-s brief-access assays to examine the necessity of MnPO nNOS neurons.</s><s>Acute inhibition of MnPO nNOS neurons by CNO injection severely reduced SFO nNOS -stimulated (left, n = 5 mice for CNO, n = 3 mice for vehicle, and n = 6 mice for no i.p.) and dehydration-induced water intake (middle, n = 7 mice for CNO, n = 5 mice for vehicle, and n = 3 mice for no i.p.).</s><s>However, the same treatment did not suppress sucrose consumption (300 mM, right, n = 6 mice for CNO, n = 5 mice for vehicle, and n = 3 mice for no i.p.).</s><s>Control mice transduced by AAV-DIO-mCherry in the MnPO showed no reduction after water or food-restriction (n = 3 mice).</s><s>e, mCherry control for Fig. <ref type="figure" target="#fig_4">1g</ref>.</s><s>Cumulative water intake in nNOS-cre mice transduced with AAV-DIO-mCherry in the MnPO, AAV-DIO-ChR2-eYFP in the SFO under photostimulated (left, n = 5 mice) or waterrestricted conditions (middle, n = 6 mice), and sucrose (300 mM) intake under foodrestricted conditions (right, n = 5 mice).</s><s>a, nNOS antibody staining (green) of the MnPO from a Glp1r-cre/Ai9 transgenic mouse expressing tdTomato in MnPO GLP1R neurons (red).</s><s>No substantial overlap was observed between these populations (4.3 ± 0.9% of GLP1R-expressing neurons, n = 3 mice).</s><s>b, Fluorescence in situ hybridization (FISH) shows that a majority of Ai9 expression (red, 91.9 ± 2.4%, n = 3 mice) closely overlaps with endogenous GLP1R expression (green).</s><s>c, Left, a diagram showing optogenetic stimulation of MnPO GLP1R neurons transduced with AAV-DIO-ChR2-eYFP or AAV-DIO-eYFP.</s><s>Right, stimulation of ChR2-expressing MnPO GLP1R neurons inhibited drinking after water restriction as compared to eYFP controls (n = 7 mice for ChR2, n = 6 mice for controls, blue box indicates the Light-ON period).</s><s>For statistical analysis, we used the same dataset as for 0-10 min from Fig. <ref type="figure" target="#fig_5">2e</ref>.</s><s>d, GLP1 has minor effects on acute drinking behaviour.</s><s>A diagram of whole-cell recording from MnPO GLP1R neurons is shown on the left.</s><s>A GLP1 agonist, exendin-4 (Ex-4), had no effect on the firing frequency of MnPO GLP1R neurons in brain slice preparation (middle, n = 6 neurons).</s><s>However, there was a small decrease in the resting membrane potential (right, n = 6 neurons).</s><s>e, Enzyme-linked immunosorbent assay analysis of plasma GLP1 levels.</s><s>Feeding behaviour induced robust plasma GLP1 secretion whereas water intake did not (n = 5 mice for WD + W and FD, n = 6 mice for control and WD, and n = 7 mice for FD + F). f, Left, intra-cranial injection of Ex-4 (red trace, n = 7 mice) into the MnPO had no effect on water (blue traces) to an empty bottle, peanut butter, and 300 mM sucrose solution under foodrestricted conditions (n = 7 mice for empty and peanut butter, n = 5 mice for sucrose, n = 5 mice for all eYFP recordings).</s><s>c, Activity change per lick was quantified for MnPO GLP1R neurons (GCaMP6s, red bars; eYFP, grey bars) under water-restricted conditions (left, n = 6 mice for saline and silicone oil, n = 7 mice for empty and water, n = 6 mice for all eYFP controls) and food-restricted conditions (right, n = 6 mice for empty and peanut butter, n = 7 mice for sucrose, n = 6 mice for all eYFP controls).</s><s>All data were reanalysed from Fig. <ref type="figure" target="#fig_6">3b,</ref><ref type="figure">c</ref>.</s><s>d, Normalized fluorescence change of SFO nNOS (top) and MnPO GLP1R (bottom) neurons from individual mice during licking an empty bottle and water under water-restricted, or sucrose under food-restricted conditions.</s><s>e, MnPO GLP1R activation is independent of instinctive need.</s><s>Left, fibre photometry recording of MnPO GLP1R neurons while activating the SFO nNOS neurons.</s><s>GCaMP6s was virally expressed in MnPO GLP1R neurons for recording calcium dynamics while activating SFO nNOS neurons by hM3Dq-mCherry under the CamKII promoter.</s><s>Middle, intraperitoneal CNO injection and water deprivation induce water drinking, which robustly activates MnPO GLP1R neurons (red and blue traces respectively).</s><s>Right, activity change (area under the curve) and licks were quantified for natural thirst and CNO activation (n = 5 mice).</s><s>*P &lt; 0.05, **P &lt; 0.01, ***P &lt; 0.001, paired two-tailed t-test or Kruskal-Wallis one-way ANOVA test with Dunn's correction for multiple comparisons.</s><s>All error bars show mean ± s.e.m.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Extended</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Data Figure 1 |</head><label>1</label><figDesc><div><p><s>. Optogenetic activation MnPO nNOS and OVLT nNOS neurons induces robust water intake in satiated mice.</s><s>a, Water restriction (top) and SFO nNOS photostimulation (bottom) induces robust c-Fos expression in the SFO, MnPO and OVLT, compared to control conditions.</s><s>A majority of c-Fos signals in these areas overlapped with nNOS-expressing neurons.</s><s>The graph shows the quantification of the overlap between nNOS and c-Fos signals (n = 3 mice).</s><s>c-Fos signals in the paraventricular nucleus (PVN) and supraoptic nucleus (SON) overlapped with vasopressin (AVP)-expressing neurons.</s><s>b, MnPO (top) and OVLT (bottom) excitatory neurons visualized in VGlut2/Ai110 transgenic mice co-stained with nNOS (red, antibody staining).</s><s>MnPO nNOS and OVLT nNOS neurons co-express a glutamatergic marker.</s><s>92.2 ± 4.9% of nNOS-expressing neurons were excitatory, and 80.9 ± 2.6% of excitatory neurons are nNOS-expressing in the MnPO (n = 3 mice).</s><s>Magnified images are shown on the right.</s><s>c, Left, scheme of the control experiments for monosynaptic rabies tracing.</s><s>Right, a representative image of the MnPO of an nNOS-cre mouse transduced with AAV-EF1a-FLEX-TVA-mCherry (red) followed by EnvA G-deleted Rabies-eGFP (bottom).</s><s>No eGFP + cells were present in the SFO (top, one of two mice) d, Photostimulation of ChR2expressing MnPO nNOS and OVLT nNOS neurons (red bars, n = 8 and 4 mice for MnPO and OVLT respectively) triggered intense drinking; control mice infected with AAV-DIO-eYFP showed no such response (grey bars, n = 5 mice).</s><s>Photostimulated mice showed a strong preference for water over a highly concentrated NaCl solution (500 mM, right panel).</s><s>*P &lt; 0.05, **P &lt; 0.01; by two-tailed Mann-Whitney U test.</s><s>All error bars show mean ± s.e.m.</s><s>Scale bars, 50 μm.</s><s>Extended Data Figure 2 |.</s><s>MnPO nNOS neurons are necessary for the induction of drinking by SFO nNOS photostimulation.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head></head><label></label><figDesc><div><p><s>f, Intraperitoneal injection of mannitol robustly activated SFO nNOS neurons with (red trace) or without (black trace) CNO injection (left).</s><s>CNO injection drastically suppressed drinking behaviour without changing the activity of SFO nNOS neurons (middle, n = 4 mice).</s><s>Plasma osmolality was increased by the injection of mannitol (right, n = 5 mice).</s><s>*P &lt; 0.05, **P &lt; 0.01, by paired two-tailed t-test or Kruskal-Wallis one-way ANOVA test with Dunn's correction for multiple comparisons.</s><s>All error bars and shaded areas show mean ± s.e.m.</s><s>Scale bar, 50 μm.</s><s>Extended Data Figure 3 |.</s><s>The SFO receives sparse monosynaptic input from MnPO nNOS neurons.</s><s>a, Left, schematic for the assessment of the MnPO nNOS → SFO monosynaptic connection (left).</s><s>Right, whole-cell patch-clamp recording from SFO neurons was performed with optogenetic stimulation of MnPO nNOS → SFO projections.</s><s>Excitatory synaptic currents were measured in the presence (red trace) or absence (black trace) of CNQX (10 μM) + DL-APV (25 μM) after photostimulation (2 ms, blue arrowheads).</s><s>Most SFO nNOS neurons (12 out of 16 cells, labelled with mCherry, middle panel) or SFO non-nNOS neurons (14 out of 16 cells, right panel) did not receive monosynaptic input from MnPO nNOS neurons.</s><s>b, Representative image (one out of three mice) of robust c-Fos expression (red) in the MnPO (top) but not in the SFO (bottom) by photostimulation of ChR2 expressing MnPO nNOS neurons.</s><s>Scale bar, 50 μm.</s><s>Extended Data Figure 4 |.</s><s>Neural dynamics of SFO nNOS and MnPO nNOS neurons.</s><s>a, Left, Schematic of fibre photometry experiments from SFO nNOS (top) and MnPO nNOS (bottom) neurons.</s><s>nNOS-cre mice were injected with AAV-FLEX-GCaMP6s or eYFP into the SFO and MnPO.</s><s>Right, representative traces showing the real-time activity of the SFO nNOS (blue trace) and MnPO nNOS (green trace) populations with water intake in waterrestricted mice.</s><s>Grey traces show the activity of eYFP control mice.</s><s>Corresponding lick patterns are also shown (lower traces).</s><s>SFO nNOS and MnPO nNOS neurons are rapidly and persistently inhibited by water drinking.</s><s>b, SFO nNOS and MnPO nNOS neurons are sensitive to thirst-inducing stimuli.</s><s>Intraperitoneal injection of NaCl (2 M, 300 μl) in a water-satiated animal robustly activated SFO nNOS (blue) and MnPO nNOS (green) neurons.</s><s>c, Quantification of the neuronal responses.</s><s>During liquid intake (black bars, n = 4 mice for SFO, n = 6 mice for MnPO) and sodium loading (grey bars, n = 5 mice), both SFO nNOS and MnPO nNOS neurons showed opposite activity changes.</s><s>All error bars show mean ± s.e.m.</s><s>Extended Data Figure 5 |.</s><s>Mapping of inhibitory inputs to the SFO.</s><s>a, Left, a schematic for retrograde tracing of inhibitory inputs to the SFO by HSV-mCherry.</s><s>Shown are the major inhibitory inputs to the SFO.</s><s>Right, quantification of HSV-positive neurons (n = 4 mice).</s><s>LS, lateral septum; MS, medial septum; BNST, bed nucleus of the stria terminalis; MPA, medial preoptic area.</s><s>b, Monosynaptic retrograde rabies tracing of SFO nNOS neurons.</s><s>Left, a representative image of the SFO of an nNOS-cre mouse transduced with AAV-CA-FLEX-RG and AAV-EF1a-FLEX-TVA-mCherry followed by EnvA G-deleted Rabies-eGFP.</s><s>Right, almost no eGFP-positive neurons in the MnPO (green, 5.4 ± 1.3%, n = 4 mice) overlapped with excitatory nNOS-expressing neurons (blue).</s><s>Maximum inputs to the SFO nNOS neurons are from the MnPO, followed by the MS, LS, MPA and OVLT (n = 4 mice).</s><s>All error bars show mean ± s.e.m.</s><s>Scale bars, 50 μm.</s><s>The mouse brain in this figure has been reproduced from the mouse brain atlas 45 .</s><s>Extended Data Figure 6 |.</s><s>The MnPO GLP1R population does not overlap with nNOS-expressing neurons.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head></head><label></label><figDesc><div><p><s>intake after water deprivation as compared to vehicle injection (artificial cerebrospinal fluid, black trace, n = 7 mice).</s><s>Right, a representative injection pattern visualized with fluorescent Ex-4 FAM.</s><s>*P &lt; 0.05, **P &lt; 0.01, two-tailed Mann-Whitney U test or paired t-test or Kruskal-Wallis one-way ANOVA test with Dunn's correction for multiple comparisons.</s><s>All error bars and shaded areas show mean ± s.e.m.</s><s>Scale bars, 50 μm.</s><s>Extended Data Figure 7 |.</s><s>In vivo activation patterns of MnPO GLP1R and SFO nNOS neurons upon ingestion.</s><s>a, SFO nNOS neurons are negatively and chronically regulated by water drinking.</s><s>Representative responses of SFO nNOS (blue traces) to different types of liquids under waterrestricted conditions: a control empty bottle, isotonic saline, silicone oil and water.</s><s>Each stimulus was presented for 30 s (shaded box).</s><s>Quantification of the responses is shown in the bottom panel.</s><s>Activity change (left, area under curve) and baseline activity shift (right, ΔF change) were quantified for SFO nNOS neurons (GCaMP6s, dark blue bars; control, light blue bars).</s><s>A significant shift in the baseline activity (ΔF change) was observed only in response to water ingestion (n = 6 mice for saline, n = 7 mice for empty, silicone oil and water, n = 5 mice for eYFP).</s><s>b, Shown are representative responses of SFO nNOS neurons</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Extended Data Figure 8 |</head><label>8</label><figDesc><div><p><s>. Acute inhibition or chronic ablation of MnPO GLP1R neurons causes overdrinking.</s><s>a, b, Acute inhibition of hM4Di-expressing MnPO GLP1R neurons by CNO modestly increases water consumption at the onset of drinking.</s><s>Drinking behaviour was monitored for 30 min after the injection of CNO (a); magnified data (0-1 min) is shown in b(n = 8 mice).</s><s>c, d, mCherry controls for acute inhibition of MnPO GLP1R neurons.</s><s>Drinking behaviour was monitored for 30 min after the injection of CNO or vehicle under water-deprived conditions with free access to saline (c) or water (d).</s><s>No significant difference was found between mice injected with CNO and vehicle (n = 6 mice).</s><s>e, Schematic for the genetic ablation of MnPO GLP1R neurons with AAV-flex-Casp3-TEVp (left) in Glp1r-cre/Ai9 mice.</s><s>Compared to a control animal (right), a Casp3-injected animal displayed almost no GLP1R-expressing neurons in the MnPO (middle, representative image from one out of four mice).</s><s>In both cases, GLP1R-expressing neurons were labelled using Glp1r-cre/Ai9 transgenic mice.</s><s>f, Genetic ablation of MnPO GLP1R neurons (red trace, n = 4 mice) recapitulates the overdrinking phenotype similar to the acute inhibition by hM4Di (Fig. 5b), compared to control eYFP group (black trace, n = 6 mice).</s><s>**P &lt; 0.01, by two-tailed Mann-Whitney U test.</s><s>All error bars and shaded areas show mean ± s.e.m.</s><s>Scale bar, 50 μm.</s><s>The mouse brain in this figure has been reproduced from the mouse brain atlas 45 .</s><s>Extended Data Figure 9 |.</s><s>Neural projections from nNOS + and GLP1R + MnPO neurons.</s><s>a, b, Left, schematics for mapping downstream targets of MnPO neurons using AAV-DIO-mCherry (a) or AAV-DIO-eYFP (b).</s><s>Right, the major outputs from MnPO neurons.</s><s>nNOScre (a) and Glp1r-cre (b) mice were injected with AAV-DIO-mCherry and AAV-DIO-eYFP in the MnPO respectively, and the axon projections were examined using reporter expression.</s><s>Shown are the injection sites and main representative downstream targets (one out of three mice).</s><s>Arc, Arcuate Nucleus; DMH, dorsomedial hypothalamic nucleus; DRN, dorsal raphe nucleus; LH, lateral hypothalamus; MRN, median raphe nucleus; PAG, periaqueductal gray; PVH, paraventricular hypothalamic nucleus; PVT, paraventricular thalamic nucleus; SON, supraoptic nucleus.</s><s>Scale bars, 50 μm.</s><s>The mouse brain in this figure has been reproduced from the mouse brain atlas 45 .</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 1 |</head><label>1</label><figDesc><div><p><s>Figure 1 |.</s><s>Thirst-driving neurons are organized hierarchically in the lamina terminalis.</s><s>a, Schematic of monosynaptic rabies tracing (left).</s><s>Representative images of the MnPO (top right, one of seven mice) and OVLT (bottom right, one of five mice) of an nNOS-cre mouse transduced with AAV-CA-flex-RG and AAV-EF1a-flex-TVA-mCherry (red) followed by RV-SAD-ΔG-eGFP (green).</s><s>3V, third ventricle.</s><s>b, Quantification of eGFP + neurons in the SFO (n = 7 and 5 mice for MnPO and OVLT, respectively).</s><s>c, Neural epistasis analysis of the circuits of the lamina terminalis by loss-of-function manipulation.</s><s>Caspase expression is induced in the MnPO, OVLT (left) or SFO (right) of nNOS-cre mice.</s><s>d, Casp3-TEVp efficiently eliminates nNOS-expressing neurons (green) in the MnPO (93.2 ± 2.5%, n = 4 mice) and OVLT (90.6 ± 1.4%, n = 6 mice).</s><s>c-Fos expression (red) upon the stimulation of SFO nNOS neurons is shown.</s><s>e, Number of licks during the 5-s session (n = 9 mice for controls and OVLTx, n = 7 mice for MnPOx, n = 6 mice for SFOx and SFOx/OVLTx).</s><s>f, Chemogenetic inhibition of MnPO nNOS neurons by CNO (left, six out of six neurons), and a diagram of photostimulation of SFO nNOS and chemogenetic inhibition of MnPO nNOS neurons (right).</s><s>g, Cumulative water intake in SFO nNOS -stimulated mice (left, n = 5 mice) or water-restricted mice (middle, n = 10 mice for CNO and n = 9 mice for vehicle), and sucrose (300 mM) intake in food-restricted mice (right, n = 10 mice for CNO and n = 9 mice for</s></p></div></figDesc><graphic coords="28,162.48,62.00,347.04,380.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 2 |</head><label>2</label><figDesc><div><p><s>Figure 2 |.</s><s>GLP1R-expressing GABAergic neurons in the MnPO are a major source of inhibitory input to the SFO.a,</s><s>GABAergic input to the SFO.</s><s>Representative image of the SFO and MnPO after coinjection of AAV-Syn-GCaMP6s (green) and HSV-mCherry (red) in the SFO (one out of four mice).</s><s>b, GLP1R expression is enriched in inhibitory neurons from the lamina terminalis (LT) relative to the cortex.</s><s>c, MnPO GLP1R neurons are GABAergic (84.7 ± 3.4% of GAD + neurons are tdTomato + , n = 3 mice, representative images are from one out of three mice).</s><s>These neurons did not overlap with glutamatergic neurons (4.3 ± 0.9% overlap, n = 3 mice, Extended Data Fig.6a).</s><s>d, The MnPO GLP1R → SFO monosynaptic connection.MnPO GLP1R neurons send monosynaptic inhibitory input to SFO nNOS neurons.</s><s>e, Optogenetic stimulation of MnPO GLP1R neurons selectively suppresses water intake (n = 7 mice for ChR2 and n = 6 mice for control).</s><s>***P &lt; 0.001, ****P &lt; 0.0001, by paired twotailed t-test.</s><s>All error bars show mean ± s.e.m.</s><s>Scale bars, 50 μm.</s></p></div></figDesc><graphic coords="30,164.76,62.00,342.48,181.44" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 3 |</head><label>3</label><figDesc><div><p><s>Figure 3 |.</s><s>Rapid and transient activation of MnPO GLP1R neurons during drinking behaviour.</s><s>a, Fibre photometry recording from MnPO GLP1R neurons (left).</s><s>MnPO GLP1R neurons are activated upon drinking behaviour (right).</s><s>Representative traces are from GCaMP6s and enhanced yellow fluorescent protein (eYFP) (one out of six mice).</s><s>b, Responses of MnPO GLP1R neurons under water-restricted conditions towards different types of liquid.</s><s>Transient activation (bottom left, ΣΔF during ) and baseline activity shift (bottom right, ΔF post -ΔF pre were quantified (n = 6 mice for saline and silicone oil (SO), n = 7 mice for empty and water, n = 6 mice for all eYFP controls).</s><s>c, Representative responses of MnPO GLP1R neurons under food-restricted conditions.</s><s>Transient activation (bottom left, ΣΔF during ) and baseline activity shift (bottom right, ΔF post -ΔF pre were quantified (n = 6 mice for empty and peanut butter (PB), n = 7 mice for sucrose, n = 6 mice for all eYFP controls).</s><s>*P &lt; 0.05, **P &lt; 0.01, by two-tailed Mann-Whitney U test or Kruskal-Wallis one-way ANOVA test.</s><s>All error bars show mean ± s.e.m.</s></p></div></figDesc><graphic coords="31,165.00,62.00,342.00,261.36" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 4 |</head><label>4</label><figDesc><div><p><s>Figure 4 |.</s><s>MnPO GLP1R neurons distinguish between drinking and eating behaviour based on ingestive speed.</s><s>a, MnPO GLP1R neurons respond to the intake of liquid water (red) but not HydroGel (black).</s><s>b, Quantification of neural activity and drinking behaviour for the ingestion of HydroGel or water (n = 5 mice).</s><s>c, Peristimulus time histogram around the start (left) and the end (middle) of water and gel intake (n = 5 mice); quantified data are shown on the right, d, Eating solid chow does not stimulate MnPO GLP1R neurons (n = 5 mice).</s><s>e, MnPO GLP1R neurons are stimulated to a greater extent during periods of concentrated drinking compared with sparse drinking (n = 6 mice).</s><s>f, The temperature of the ingested fluid has no effect on MnPO GLP1R activity.</s><s>Total responses (middle) and the number of licks (right) were quantified (n = 4 mice).</s><s>*P &lt; 0.05, **P &lt; 0.01, ***P &lt; 0.001, by two-tailed Mann-Whitney U test or paired two-tailed t-test.</s><s>All error bars and shaded areas show mean ± s.e.m.</s></p></div></figDesc><graphic coords="32,165.26,62.00,341.48,288.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 5 |</head><label>5</label><figDesc><div><p><s>Figure 5 |.</s><s>Inhibition of MnPO GLP1R neurons leads to overdrinking.</s><s>a, Treatment with CNO inhibits firing in hM4Di-expressing MnPO GLP1R neurons (right, 6 out of 7 neurons).</s><s>b, Acute inhibition of MnPO GLP1R neurons by CNO results in the overdrinking of isotonic saline in water-restricted mice (n = 8 mice).</s><s>Representative lick patterns from four out of eight mice are shown (right).</s><s>c, The total amount of saline intake and the time spent drinking (n = 8 mice).</s><s>d, A schematic summarizing thirst genesis, detection of fluid intake and drinking-induced feedback inhibition in the lamina terminalis circuit.</s><s>*P &lt; 0.05, **P &lt; 0.01, by paired two-tailed t-test.</s><s>All error bars and shaded areas show mean ± s.e.m.</s><s>Scale bar, 50 μm.</s></p></div></figDesc><graphic coords="33,188.52,62.00,294.96,300.24" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="17,95.88,172.19,480.24,250.45" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="18,143.40,62.00,385.20,383.28" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="24,175.08,62.00,321.84,480.00" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nature.</s><s>Author manuscript; available in PMC 2018 August 10.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank <rs type="person">B. Ho</rs>, <rs type="person">A. Qin</rs> and <rs type="person">M. Liu</rs> for technical assistance, <rs type="person">D. J. Anderson</rs> for sharing Ai110 mice, members of the <rs type="institution">Oka laboratory</rs>, and <rs type="person">J. R. Cho</rs> for comments.We also thank <rs type="person">N. Shah</rs> for Casp3 viruses, <rs type="person">N. F. Dalleska</rs>, and the <rs type="institution">Beckman Institute at Caltech</rs> for technical assistance.This work was supported by <rs type="funder">Startup</rs> funds from the <rs type="funder">President and Provost of California Institute of Technology</rs> and the <rs type="funder">Biology and Biological Engineering Division of California Institute of Technology</rs>.Y.O. is also supported by the <rs type="funder">Searle Scholars Program</rs>, the <rs type="funder">Mallinckrodt Foundation</rs>, the <rs type="funder">Okawa Foundation</rs>, the <rs type="funder">McKnight Foundation</rs> and the <rs type="funder">Klingenstein-Simons Foundation</rs>, and <rs type="funder">National Institutes of Health</rs> <rs type="grantNumber">U01</rs> (<rs type="grantNumber">U01 NS099717</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_TGjt854">
+					<idno type="grant-number">U01</idno>
+				</org>
+				<org type="funding" xml:id="_Fx6KY9c">
+					<idno type="grant-number">U01 NS099717</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code availability.</head><p><s>Custom MATLAB code used in this study is available from the corresponding author upon reasonable request.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability.</head><p><s>Data are available from the corresponding author upon reasonable request.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Extended Data</head><p><s>Augustine et al.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Thirst: Physiological and Psychological Aspects</title>
+	</analytic>
+	<monogr>
+		<title level="j">Ch</title>
+		<editor>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Ramsay</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Booth</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="9" to="12" />
+			<date type="published" when="1991">1991</date>
+			<publisher>Springer</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Central mechanisms of osmosensation and systemic osmoregulation</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Bourque</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">18509340</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Fitzsimons JT Angiotensin, thirst, and sodium appetite</title>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol. Rev</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page">9674690</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The physiological regulation of thirst and fluid intake</title>
+		<author>
+			<persName><forename type="first">Mj &amp;</forename><surname>Mckinley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Johnson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">News Physiol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page">14739394</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Sensory circumventricular organs and brain homeostatic pathways</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Gross</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">FASEB J</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">8500693</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Regional brain responses associated with drinking water during thirst and after its satiation</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Saker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page">24706817</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Lightman SL Oral hypertonic saline causes transient fall of vasopressin in humans</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Seckl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Williams</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">251</biblScope>
+			<biblScope unit="page">3740301</biblScope>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Presystemic signals in the control of thirst, salt appetite, and vasopressin secretion</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Stricker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Hoffmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol. Behav</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page">17482653</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Keil LC &amp; Ramsay DJ Satiety and inhibition of vasopressin secretion after drinking in dehydrated dogs</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Thrasher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nistal-</forename><surname>Herrera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">240</biblScope>
+			<biblScope unit="page">7013497</biblScope>
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+	<note>E394-E401</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Thirst neurons anticipate the homeostatic consequences of eating and drinking</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Zimmerman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">537</biblScope>
+			<biblScope unit="page">27487211</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Cortical activation and lamina terminalis functional connectivity during thirst and drinking in humans</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Farrell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Physiol. Regul. Integr. Comp. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">301</biblScope>
+			<biblScope unit="page">21677275</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">CW The neural basis of homeostatic and anticipatory thirst</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gizowski</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bourque</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Nephrol</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">29129925</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Andermann ML &amp; Lowell BB Toward a wiring diagram understanding of appetite control</title>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page">28817798</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Hypothalamic survival circuits: blueprints for purposive behaviors</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Sternson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page">23473313</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Leib DE &amp; Knight ZA Neural circuits underlying thirst and fluid homeostasis</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Zimmerman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page">28638120</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Weisinger RS Hypothalamic integration of body fluid regulation</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Denton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Mckinley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page">8693005</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Mckinley</surname></persName>
+		</author>
+		<title level="m">The Sensory Circumventricular Organs of the Mammalian Brain</title>
+		<editor>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Mckinley</surname></persName>
+		</editor>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2003">2003</date>
+			<biblScope unit="volume">172</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Thirst-associated preoptic neurons encode an aversive motivational drive</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Allen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">357</biblScope>
+			<biblScope unit="page">28912243</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Zuker CS Thirst driving and suppressing signals encoded by distinct neural populations in the brain</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Oka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ye</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">520</biblScope>
+			<biblScope unit="page">25624099</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Routtenberg A Subfornical organ: site of drinking elicitation by angiotensin II</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Simpson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">181</biblScope>
+			<biblScope unit="page">4353653</biblScope>
+			<date type="published" when="1973">1973</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Beninger RJ &amp; Ferguson AV Subfornical organ stimulation elicits drinking</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Res. Bull</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">7496814</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Neurons for hunger and thirst transmit a negative-valence teaching signal</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Betley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">521</biblScope>
+			<biblScope unit="page">25915020</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Browning KN &amp; Stocker SD DREADD-induced activation of subfornical organ neurons stimulates thirst and salt appetite</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">L</forename><surname>Nation</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nicoleau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Kinsman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page">27030736</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Geerling JC &amp; Saper CB Reciprocal control of drinking behavior by median preoptic neurons in mice</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">L</forename><surname>Machado</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">27488641</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Distinct neural mechanisms for the control of thirst and salt appetite in the subfornical organ</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Matsuda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page">27991901</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Hand PJ Subfornical organ efferents to neural systems for control of body water</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Miselis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Shapiro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">205</biblScope>
+			<biblScope unit="page">472723</biblScope>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">genetically targeted optical control of neural activity</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Boyden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bamberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nagel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Millisecondtimescale</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">16116447</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Monosynaptic restriction of transsynaptic tracing from single, genetically targeted neurons</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">R</forename><surname>Wickersham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page">17329205</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Sexually dimorphic neurons in the ventromedial hypothalamus govern mating in both sexes and aggression in males</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">153</biblScope>
+			<biblScope unit="page">23663785</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Roth BL DREADDs for neuroscientists</title>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page">26889809</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Intact-brain analyses reveal distinct information carried by SNc dopamine subcircuits</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Lerner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">162</biblScope>
+			<biblScope unit="page">26232229</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Identification and characterization of GLP-1 receptor-expressing cells using a new transgenic mouse model</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Richards</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Diabetes</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">24296712</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">-assisted circuit mapping of long-range callosal projections</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Petreanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sobczyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Channelrhodopsin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">17435752</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Galante DL &amp; Daniels D Endogenous glucagon-like peptide-1 reduces drinking behavior and is differentially engaged by water and food intakes in rats</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Mckay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">25471579</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Ritola KD &amp; Sternson SM Parallel, redundant circuit organization for homeostatic control of feeding behavior</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Betley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Cao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">155</biblScope>
+			<biblScope unit="page">24315102</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Johnson RF &amp; Johnson AK The effects of ibotenate lesions of the median preoptic nucleus on experimentally-induced and circadian drinking behavior in rats</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Cunningham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Beltz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">580</biblScope>
+			<biblScope unit="page">1504809</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Effect of individual or combined ablation of the nuclear groups of the lamina terminalis on water drinking in sheep</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Mckinley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Mathai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pennington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rundgren</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vivas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Physiol. Regul. Integr. Comp. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">276</biblScope>
+			<biblScope unit="page" from="673" to="R683" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">The median preoptic nucleus: front and centre for the regulation of body fluid, sodium, temperature, sleep and cardiovascular homeostasis</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Mckinley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Physiol. (Oxf.)</title>
+		<imprint>
+			<biblScope unit="volume">214</biblScope>
+			<biblScope unit="page">25753944</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Zuker CS High salt recruits aversive taste pathways</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Oka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Butnaru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Von</forename><surname>Buchholtz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ryba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">494</biblScope>
+			<biblScope unit="page">23407495</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Zuker CS &amp; Ryba NJ Common sense about taste: from mammals to insects</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Yarmolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">139</biblScope>
+			<biblScope unit="page" from="234" to="244" />
+			<date type="published" when="2009">2009. 19837029</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">The cellular mechanism for water detection in the mammalian taste system</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zocchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Wennemuth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Oka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page">28553944</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">oropharyngeal signals, and inhibition of vasopressin secretion in dogs</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Thrasher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C</forename><surname>Keil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Ramsay</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Drinking</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Physiol. Regul. Integr. Comp. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">253</biblScope>
+			<biblScope unit="page" from="509" to="R515" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">An excitatory paraventricular nucleus to AgRP neuron circuit that drives hunger</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Krashes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">507</biblScope>
+			<biblScope unit="page">24487620</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">GLP-1 secretion is increased by inflammatory stimuli in an IL-6-dependent manner, leading to hyperinsulinemia and blood glucose lowering</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Kahles</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Diabetes</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">24947356</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Paxinos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kbj</forename><surname>Franklin</surname></persName>
+		</author>
+		<title level="m">Stereotaxic Coordinates 2nd edn</title>
+		<imprint>
+			<publisher>Academic</publisher>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

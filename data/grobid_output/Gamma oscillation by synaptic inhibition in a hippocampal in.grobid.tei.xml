@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Gamma Oscillation by Synaptic Inhibition in a Hippocampal Interneuronal Network Model</title>
+				<funder>
+					<orgName type="full">Sloan Foundation</orgName>
+				</funder>
+				<funder ref="#_nF7GNka">
+					<orgName type="full">Office of Naval Research</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">HFSP</orgName>
+				</funder>
+				<funder ref="#_KB4DhkM">
+					<orgName type="full">National Institute of Neurological Disease and Stroke</orgName>
+				</funder>
+				<funder ref="#_vW6DNMM">
+					<orgName type="full">National Institute of Mental Health</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiao-Jing</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Physics Department and Center for Complex Systems</orgName>
+								<orgName type="institution">Brandeis University</orgName>
+								<address>
+									<postCode>02254</postCode>
+									<settlement>Waltham</settlement>
+									<region>Massachusetts</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gyo</forename><surname>¨rgy Buzsa ´ki</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Center for Molecular and Behavioral Neuroscience</orgName>
+								<orgName type="institution">Rutgers University</orgName>
+								<address>
+									<postCode>07102</postCode>
+									<settlement>Newark</settlement>
+									<country>New Jersey</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Center for Complex Systems</orgName>
+								<orgName type="institution">Brandeis University</orgName>
+								<address>
+									<postCode>02254</postCode>
+									<settlement>Waltham</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Gamma Oscillation by Synaptic Inhibition in a Hippocampal Interneuronal Network Model</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CA2D5B0383AB27E429B3BC82D27CBCA5</idno>
+					<note type="submission">Received May 5, 1996; revised June 25, 1996; accepted July 31, 1996.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract/>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Fast neuronal oscillations (gamma, 20 -80 Hz) have been observed in the neocortex and hippocampus during behavioral arousal.</s><s>Using computer simulations, we investigated the hypothesis that such rhythmic activity can emerge in a random network of interconnected GABAergic fast-spiking interneurons.</s><s>Specific conditions for the population synchronization, on properties of single cells and the circuit, were identified.</s><s>These include the following: (1) that the amplitude of spike afterhyperpolarization be above the GABA A synaptic reversal potential; (2) that the ratio between the synaptic decay time constant and the oscillation period be sufficiently large; (3) that the effects of heterogeneities be modest because of a steep frequency-current relationship of fastspiking neurons.</s><s>Furthermore, using a population coherence measure, based on coincident firings of neural pairs, it is demonstrated that large-scale network synchronization re-quires a critical (minimal) average number of synaptic contacts per cell, which is not sensitive to the network size.</s></p><p><s>By changing the GABA A synaptic maximal conductance, synaptic decay time constant, or the mean external excitatory drive to the network, the neuronal firing frequencies were gradually and monotonically varied.</s><s>By contrast, the network synchronization was found to be high only within a frequency band coinciding with the gamma (20 -80 Hz) range.</s><s>We conclude that the GABA A synaptic transmission provides a suitable mechanism for synchronized gamma oscillations in a sparsely connected network of fast-spiking interneurons.</s><s>In turn, the interneuronal network can presumably maintain subthreshold oscillations in principal cell populations and serve to synchronize discharges of spatially distributed neurons.</s></p><p><s>Key words: gamma rhythm; hippocampus; interneurons; GABA A ; synchronization; computer model Although fast gamma cortical oscillation has been the subject of active investigation in recent years (cf.</s><s><ref type="bibr" target="#b35">Singer and Gray, 1995)</ref>, its underlying neuronal mechanisms remain elusive.</s><s>Two major issues are the cellular origin of rhythmicity <ref type="bibr" target="#b24">(Llina ´s et al., 1991;</ref><ref type="bibr" target="#b27">McCormick et al., 1993;</ref><ref type="bibr" target="#b41">Wang, 1993)</ref> and the mechanism(s) of large-scale population synchronicity <ref type="bibr" target="#b12">(Freeman, 1975;</ref><ref type="bibr" target="#b4">Bush and Douglas 1991;</ref><ref type="bibr" target="#b9">Engel et al., 1991;</ref><ref type="bibr" target="#b16">Hansel and Sompolinsky, 1996)</ref>.</s><s>Traditionally, recurrent excitation between principal (pyramidal) neurons is viewed as a major source of rhythmogenesis as well as neuronal synchronization.</s><s>However, in model studies in which quantitative data about the synaptic time course were incorporated, it was found that glutamatergic synaptic excitation of the AMPA type usually desynchronizes rather than synchronizes repetitive spike firings of mutually coupled neurons <ref type="bibr" target="#b17">(Hansel et al., 1995;</ref><ref type="bibr" target="#b40">van Vreeswijk et al., 1995)</ref>.</s><s>Therefore, recurrent connections between pyramidal cells alone do not seem to account for the network coherence during cortical gamma oscillations.</s><s>It was suggested that pyramidal cell populations may be entrained by synchronous rhythmic inhibition originating from fast-spiking interneurons <ref type="bibr" target="#b6">(Buzsa ´ki et al., 1983;</ref><ref type="bibr" target="#b25">Lytton and Sejnowski, 1991)</ref>.</s><s>During field gamma oscillations, intracellular recordings from pyramidal cells revealed both EPSPs and IPSPs phase-locked to the field oscillation frequencies <ref type="bibr" target="#b20">(Jagadeesh et al., 1992;</ref><ref type="bibr" target="#b8">Chen and Fetz, 1993;</ref><ref type="bibr">Solte ´sz and Desche ˆnes, 1993)</ref>.</s></p><p><s>In this paper, we address the question whether, in the hippocampus, an interneuronal network can generate a coherent oscillatory output to the pyramidal neurons, thereby providing a substrate for the synaptic organization of coherent gamma population oscillations.</s><s>In the behaving rat, physiologically identified interneurons were shown to fire spikes in the gamma frequency range and phase-locked to the local field waves <ref type="bibr" target="#b2">(Bragin et al., 1995)</ref>.</s><s>Intracellular studies and immunochemical staining demonstrated that these interneurons are interconnected via GABAergic synapses <ref type="bibr" target="#b23">(Lacaille et al., 1987;</ref><ref type="bibr" target="#b34">Sik et al., 1995;</ref><ref type="bibr" target="#b15">Gulya ´s et al., 1996)</ref>.</s><s>Theoretical studies suggest that these GABAergic interconnections may synchronize an interneuronal network when appropriate conditions on the time course of synaptic transmission are satisfied <ref type="bibr" target="#b41">(Wang and</ref><ref type="bibr">Rinzel, 1992, 1993;</ref><ref type="bibr" target="#b40">van Vreeswijk et al., 1995)</ref>.</s><s>Moreover, in a recent in vitro experiment <ref type="bibr" target="#b46">(Whittington et al., 1995;</ref><ref type="bibr" target="#b39">Traub et al., 1996)</ref>, the excitatory glutamate AMPA and NMDA synaptic transmissions were blocked in the hippocampal slice.</s><s>When metabotropic glutamate receptors were activated, transient oscillatory IPSPs in the 40 Hz frequency range were observed in pyramidal cells.</s><s>These IPSPs were assumed to originate from the firing activities of fast-spiking interneurons synchronized by their interconnections.</s><s>Computer simulations <ref type="bibr" target="#b46">(Whittington et al., 1995;</ref><ref type="bibr" target="#b39">Traub et al., 1996)</ref> lend further support to this hypothesis.</s></p><p><s>To assess whether an interneuronal network can subserve an adequate basis for the gamma frequency population rhythm in the hippocampus, it is necessary to identify its specific requirements on the cellular properties and network connectivities, as well as to determine whether these conditions are satisfied by particular interneuronal subtypes.</s><s>The present study is devoted to investigate such requirements using computer simulations.</s><s>We found that synaptic transmission via GABA A receptors in a sparsely connected network of model interneurons can provide a mechanism for gamma frequency oscillations, and we compared the modeling results with the anatomical and electrophysiological data from hippocampal fast spiking interneurons.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MATERIALS AND METHODS</head><p><s>Model neuron.</s><s>Each interneuron is described by a single compartment and obeys the current balance equation:</s></p><formula xml:id="formula_0">C m dV dt ϭ ϪI Na Ϫ I K Ϫ I L Ϫ I syn ϩ I app , (2.1)</formula><p><s>where C m ϭ 1 F/cm 2 and I app is the injected current (in A/cm 2 ).</s><s>The leak current I L ϭ g L (V Ϫ E L ) has a conductance g L ϭ 0.1 mS/cm 2 , so that the passive time constant 0 ϭ C m /g L ϭ 10 msec; E L ϭ Ϫ65 mV.</s></p><p><s>The spike-generating Na ϩ and K ϩ voltage-dependent ion currents (I Na and I K ) are of the Hodgkin-Huxley type <ref type="bibr" target="#b18">(Hodgkin and Huxley, 1952)</ref>.</s><s>The transient sodium current</s></p><formula xml:id="formula_1">I Na ϭ g Na m ϱ 3 h(V Ϫ E Na )</formula><p><s>, where the activation variable m is assumed fast and substituted by its steady-state function</s></p><formula xml:id="formula_2">m ϱ ϭ ␣ m /(␣ m ϩ ␤ m ); ␣ m (V ) ϭ Ϫ0.1(V ϩ 35)/(exp(Ϫ0.1(V ϩ 35)) Ϫ 1), ␤ m (V ) ϭ 4exp(Ϫ(V ϩ 60)/18</formula><p><s>).</s><s>The inactivation variable h obeys a first-order kinetics:</s></p><formula xml:id="formula_3">dh dt ϭ ͑␣ h ͑1 Ϫ h͒ Ϫ ␤ h h͒ (2.2)</formula><p><s>where ␣ h (V ) ϭ 0.07 exp(Ϫ(V ϩ 58)/20) and ␤ h (V ) ϭ 1/(exp(Ϫ0.1(V</s><s>ϩ 28)) ϩ 1).</s><s>g Na ϭ 35 mS/cm 2 ; E Na ϭ 55 mV, ϭ 5.</s><s>The delayed rectifier I K ϭ g K n 4 (V Ϫ E K ), where the activation variable n obeys the following equation:</s></p><formula xml:id="formula_4">dn dt ϭ ͑␣ n ͑1 Ϫ n͒ Ϫ ␤ n n͒ (2.3)</formula><p><s>with ␣ n (V ) ϭ Ϫ0.01(V ϩ 34)/(exp(Ϫ0.1(V</s><s>ϩ 34)) Ϫ 1) and ␤ n (V ) ϭ 0.125 exp(Ϫ(V ϩ 44)/80); g K ϭ 9 mS/cm 2 , and E K ϭ Ϫ90 mV.</s><s>These kinetics and maximal conductances are modified from <ref type="bibr" target="#b18">Hodgkin and Huxley (1952)</ref>, so that our neuron model displays two salient properties of hippocampal and neocortical fast-spiking interneurons.</s><s>First, the action potential in these cells is followed by a brief afterhyperpolarization (AHP) of about Ϫ15 mV measured from the spike threshold of approximately Ϫ55 mV <ref type="bibr" target="#b26">(McCormick et al., 1985;</ref><ref type="bibr" target="#b22">Lacaille and Williams, 1990;</ref><ref type="bibr">Morin et al., 1995;</ref><ref type="bibr" target="#b47">Zhang and McBain, 1995)</ref>.</s><s>Thus, during the spike repolarization the membrane potential reaches a minimum of about Ϫ70 mV, rather than being close to the reversal potential of the K ϩ current, E K ϭ Ϫ90 mV.</s><s>This is accomplished in the model by relatively small maximal conductance g K and fast gating process of I K so that it deactivates quickly during spike repolarization.</s></p><p><s>Second, these interneurons have the ability to fire repetitive spikes at high frequencies (with the frequency-current slope up to 200 -400 Hz/ nA) <ref type="bibr" target="#b26">(McCormick et al., 1985;</ref><ref type="bibr" target="#b22">Lacaille and Williams, 1990;</ref><ref type="bibr" target="#b47">Zhang and McBain, 1995)</ref>.</s><s>With fast kinetics of the inactivation (h) of I Na , the activation (n) of I K , and the relatively high threshold of I K , the model interneuron displays a large range of repetitive spiking frequencies in response to a constant injected current I app (Fig. <ref type="figure" target="#fig_0">1 A</ref> <ref type="bibr">, left)</ref>.</s><s>It has a small current threshold (the rheobase I app Ӎ 0.2 A/cm 2 ), and the firing rate is as high as 400 Hz for I app Ӎ 20 mA/cm 2 .</s><s>Similar to cortical interneurons <ref type="bibr" target="#b26">(McCormick et al., 1985;</ref><ref type="bibr" target="#b22">Lacaille and Williams, 1990)</ref>, the whole frequency-current curve is not linear, and the frequency-current slope is larger at smaller I app values (lower frequencies) (Fig. <ref type="figure" target="#fig_0">1</ref> A, right).</s><s>As a consequence, the neural population is more sensitive to input heterogeneities at smaller I app values.</s><s>This is demonstrated in Figure <ref type="figure" target="#fig_0">1</ref> B, where a Gaussian distribution of I app is applied to a population of uncoupled neurons (N ϭ 100), with a mean I and standard deviation I .</s><s>Given a fixed and small I ϭ 0.03, the mean drive I is varied systematically, and the resulting dispersion in the neuronal firing frequencies, f /f (standard deviation of the firing rate/mean firing rate) is shown as function of I (Fig. <ref type="figure" target="#fig_0">1 B</ref> <ref type="bibr">, top)</ref>.</s><s>When plotted versus f , it is evident that with the same amount of dispersion in applied current (I ) the dispersion in firing rates f /f is dramatically increased for f Ͻ 20 Hz (Fig. <ref type="figure" target="#fig_0">1 B</ref> <ref type="bibr">, bottom)</ref>.</s><s>This feature has important implications for the frequency-dependent network behaviors (see Results).</s></p><p><s>Model synapse.</s><s>The synaptic current I syn ϭ g syn s(V Ϫ E syn ), where g syn is the maximal synaptic conductance and E syn is the reversal potential.</s><s>Typically, we set g syn ϭ 0.1 mS/cm 2 and E syn ϭ Ϫ75 mV <ref type="bibr" target="#b3">(Buhl et al., 1995)</ref>.</s><s>The gating variable s represents the fraction of open synaptic ion channels.</s><s>We assume that s obeys a first-order kinetics <ref type="bibr" target="#b32">(Perkel et al., 1981;</ref><ref type="bibr" target="#b43">Wang and Rinzel 1993)</ref>:</s></p><formula xml:id="formula_5">ds dt ϭ ␣F͑V pre ͒͑1 Ϫ s͒ Ϫ ␤s, (2.4)</formula><p><s>where the normalized concentration of the postsynaptic transmitterreceptor complex, F(V pre ), is assumed to be an instantaneous and sigmoid function of the presynaptic membrane potential, F(V pre ) ϭ 1/(1 ϩ exp(Ϫ(V pre Ϫ syn )/2)), where syn (set to 0 mV) is high enough so that the transmitter release occurs only when the presynaptic cell emits a spike.</s><s>Gaussian distribution for input currents, with standard deviation I ϭ 0.03, is applied to a population of uncoupled neurons.</s><s>The dispersion in firing rates was computed as the ratio between the standard deviation and the mean of firing rates ( f /f ).</s><s>This ratio is much larger for smaller mean current amplitude I (top).</s><s>Plotting f /f versus f shows that the dispersion in firing rates is dramatically increased for f Ͻ 20 Hz (bottom).</s><s>C, A brief current pulse applied to a presynaptic cell generates a single action potential, which elicits an inhibitory postsynaptic current (I syn ) and membrane potential change in a postsynaptic cell ( g syn ϭ 0.1 mS/cm 2 ).</s></p><p><s>The channel opening rate ␣ ϭ 12 msec Ϫ1 assures a fast rise of the I syn , and the channel closing rate ␤ is the inverse of the decay time constant of the I syn ; typically, we set ␤ ϭ 0.1 msec Ϫ1 ( syn ϭ 10 msec).</s><s>An example of I syn and IPSP elicited by a single presynaptic spike is illustrated in Figure <ref type="figure" target="#fig_0">1C</ref>.</s><s>Random network connectivity.</s><s>The network model consists of N cells.</s><s>The coupling between neurons is randomly assigned, with a fixed average number of synaptic inputs per neuron, M syn .</s><s>The probability that a pair of neurons are connected in either direction is p ϭ M syn /N.</s><s>For comparison, we also used fully coupled (all-to-all) connectivity (M syn ϭ N ).</s><s>In the model, the maximal synaptic conductance g syn is divided by M syn , so that when the number of synapses M syn is varied, the total synaptic drive per cell in average remains the same.</s></p><p><s>M syn is the convergence/divergence factor of the neural coupling in the network.</s><s>Experimentally, an estimate of this important quantity has been obtained for an interneuronal network of the CA1 hippocampus <ref type="bibr" target="#b34">(Sik et al., 1995)</ref>.</s><s>A parvalbumin-positive (PV ϩ ) basket interneuron was stained intracellularly by biocytin in vivo.</s><s>Its axonal arborization was largely confined in the striatum pyramidale (Fig. <ref type="figure" target="#fig_2">2 A</ref>).</s><s>Other PV ϩ interneurons were stained immunochemically, and the contacts made by the biocytinfilled cell with other PV ϩ cells were counted <ref type="bibr" target="#b34">(Sik et al., 1995)</ref>.</s><s>It was concluded that a single PV ϩ basket cell makes synaptic contacts with at least 60 other PV ϩ cells (a majority of which are basket cells) within a spatial region of the volume up to 0.1-0.2</s><s>mm 3 <ref type="bibr" target="#b34">(Sik et al., 1995)</ref> (Fig. <ref type="figure" target="#fig_2">2 B</ref>).</s><s>This tissue volume contains as many as 500 -1000 other PV ϩ cells, because the PV ϩ neurons in the pyramidal layer have a cell density of 5.4 ϫ 10 3 cells/mm 3 <ref type="bibr" target="#b0">(Aika et al., 1994)</ref>.</s><s>Hence, for the CA1 network of basket cells, the experimentally estimated M syn is ϳ60.</s><s>The probability of postsynaptic contacts, however, decreases with the distance between the cell pair (Fig. <ref type="figure" target="#fig_2">2C</ref>).</s></p><p><s>Heterogeneous input.</s><s>In the model, single neurons are not identical.</s><s>Each receives a depolarizing current I app of different intensity and, hence, has a different firing rate.</s><s>The bias current I app has a Gaussian distribution with a mean I and a standard deviation I .</s><s>The parameter I determines the mean excitation by the external drive; I measures the degree of the heterogeneity in the cell population.</s></p><p><s>A measure of network coherence.</s><s>To quantify the synchronization of neuronal firings in the network, we introduce a coherence measure based on the normalized cross-correlations of neuronal pairs in the network <ref type="bibr" target="#b13">(Gerstein and Kiang, 1960;</ref><ref type="bibr" target="#b45">Welsh et al., 1995)</ref>.</s><s>The coherence between two neurons i and j is measured by their cross-correlation of spike trains at zero time lag within a time bin of ⌬t ϭ .</s><s>More specifically, suppose that a long time interval T is divided into small bins of and that two spike trains are given by X(l) ϭ 0 or 1, Y(l) ϭ 0 or 1, l ϭ 1, 2, . . .</s><s>, K (T/K ϭ ).</s><s>Thus, we define a coherence measure for the pair as: (2.5)</s></p><p><s>We have also used a slightly different definition where the mean firing rates are substracted from X(l ) and Y(l ); the substraction did not significantly change our results reported below.</s></p><p><s>The population coherence measure () is defined by the average of ij () over many pairs of neurons in the network.</s><s>This coherence measure presents a number of useful properties.</s><s>First, it is naturally based on cross-correlations and, although we use it here to describe synchronization of oscillations, it can be applied to quantify the synchrony of nonoscillatory neuronal firings.</s><s>It is calculated from spike trains, requires relatively small sample sizes, and can be used for data analysis of experimental extracellular multiunit recordings.</s><s>Second, () is between 0 and 1 for all .</s><s>For very small , () is close to 1 (resp.</s><s>0) in the case of maximal synchrony (resp.</s><s>asynchrony).</s><s>Third, the degree of synchrony of the network dynamics can be quantified by how () behaves as function of .</s><s>In the case of full synchrony, () is 1 for all nonzero values; whereas in the case of total asynchrony, () is a linearly increasing function of (see below).</s><s>Finally, the distribution of ij () over neural pairs provides detailed information about the interneuronal interactions and synchronization.</s></p><p><s>In Results, the population coherence measure () is calculated by averaging over all neural pairs in the network of size N. Typically N ϭ 100.</s></p><p><s>Numerical methods.</s><s>The network model was integrated using the fourth-order Runge-Kutta method, with a time step of 0.05 msec.</s><s>For random network connectivity and heterogeneity, each set of simulations was run with three to five random realizations of the network connections and applied current distribution.</s><s>As initial conditions, the membrane potential is uniformly distributed between Ϫ70 and Ϫ50 mV and the other channel-gating variables are set at their corresponding steady-state values.</s><s>Coherence was calculated after 1000 msec transients.</s><s>Simulations were performed on a SUN Sparc Station or a Y-MP Cray Supercomputer.</s><s>Overall, 99 boutons in contact with 64 parvalbumin-positive cells were counted (adapted from <ref type="bibr" target="#b34">Sik et al., 1995)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Spike afterhyperpolarization, inhibition, and synchronization</head><p><s>We start by considering a simple case in which all individual cells are identical (i.e., without heterogeneity) and are coupled in an all-to-all fashion (i.e., without randomness in connectivity).</s><s>As shown in Figure <ref type="figure" target="#fig_3">3A</ref> (left), cells starting at random and asynchronous initial conditions quickly become synchronized and within 5-6 oscillatory cycles their spiking times are perfectly in-phase.</s><s>The spike AHP amplitude is 15 mV measured from the spike threshold (Ϫ52 mV), so the maximal AHP, V AHP ϭ Ϫ67 mV, stays above the reversal potential of the synaptic current (E syn ϭ Ϫ75 mV).</s><s>The inequality V AHP Ͼ E syn means that during the time course of an action potential and its repolarization, the synaptic action is always hyperpolarizing.</s><s>This relationship between intrinsic and synaptic properties was found to be an important condition under which the global network synchronization can be achieved (Fig. <ref type="figure" target="#fig_3">3B,</ref><ref type="figure">C</ref>).</s><s>In the example (Fig. <ref type="figure" target="#fig_3">3B</ref>), the speed of the I Na inactivation and the I K activation is slowed down ( ϭ 3.33 instead of 5), so that repolarization becomes larger (V AHP Ӎ Ϫ73 mV, close to E syn ).</s><s>In this case, the network synchronization takes much longer time to realize.</s><s>With ϭ 2 (Fig. <ref type="figure" target="#fig_3">3C</ref>), V AHP is Ϫ78 mV, which is below E syn , and global network synchrony is lost.</s><s>Instead, the network is dynamically broken into two clusters: within each cluster the cells fire spikes simultaneously, and the two clusters alternate in time.</s><s>Such clustering dynamics is a commonly observed behavior of interneuronal networks <ref type="bibr" target="#b14">(Golomb et al., 1994)</ref>.</s><s>Hence, synaptic inhibition of the GABA A -type provides a mechanism by which a macroscopic coherence of the network (global synchrony or clustering) can be realized.</s></p><p><s>To investigate further the dependence of the network synchronization on the inhibitory nature of synaptic interactions, the intrinsic cell properties were kept unchanged, while the reversal potential E syn was gradually varied (Fig. <ref type="figure" target="#fig_4">4</ref>).</s><s>In Figure <ref type="figure" target="#fig_4">4</ref> A the global coherence index (compare Eq. 2.5), plotted versus E syn , remains at 1 (perfect synchrony) for E syn Ͻ V AHP .</s><s>It displays an abrupt drop for E syn Ͼ V AHP and is close to 0 for E syn Ͼ Ϫ60 mV.</s><s>The oscillation frequency dramatically increases as the synaptic effect becomes depolarizing (not shown).</s><s>Unlike the two cluster dynamics of Figure <ref type="figure" target="#fig_3">3C</ref> with the coherence index ϭ 0.5, in the regime characterized by ϳ 0 the relative timing of neuronal firings is essentially arbitrary.</s><s>This happens in our network model when the synaptic interactions are excitatory.</s><s>In the example given in Figure <ref type="figure" target="#fig_4">4</ref>, B and C, E syn ϭ 0 mV and syn ϭ 2 msec, so that the synaptic current mimic that of the glutamate AMPA type.</s><s>Because recurrent excitation considerably enhances the neural discharge rates, weaker external drive (I ϭ 0.1 instead of 1) was used so as to obtain a similar (ϳ40 Hz) firing frequency with excitatory rather than inhibitory interactions.</s><s>In this case, although all neurons have very similar rhythmic frequencies, their relative firing phases are almost uniformly distributed between zero and the common oscillation period T (Fig. <ref type="figure" target="#fig_4">4 B</ref>).</s><s>Hence, the probability of coincident firing within a time bin between two cells increases proportionally with , and the network coherence function () grows linearly from zero at ϭ 0 to its maximal value of 1 at ϭ T msec (Fig. <ref type="figure" target="#fig_4">4C</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Heterogeneity and asynchrony</head><p><s>It is intuitively expected that network synchrony cannot be globally maintained if individual neurons display very different intrinsic oscillation frequencies.</s><s>We studied the effects of heterogeneity, using a Gaussian distribution of the applied current intensity I app with standard deviation I .</s><s>As illustrated in Figure <ref type="figure" target="#fig_5">5A</ref>, the network coherence deteriorates quite rapidly with increasing I .</s><s>This sensitivity is related to the large frequency-current slope of fast-spiking interneurons (Fig. <ref type="figure" target="#fig_0">1 A,</ref><ref type="figure">B</ref>), so that in a population of uncoupled cells a small current dispersion may imply a wide distribution of firing frequencies.</s><s>When neurons are synaptically coupled, the distribution of firing frequencies is a product of their interactions.</s><s>As shown in Figure <ref type="figure" target="#fig_5">5B</ref>, for small dispersion in I app (I Ͻ 0.02), minor differences in intrinsic firing rates are overcome by the coupling, and the standard deviation of firing rates f ϭ 0. As the network coherence erodes with larger I values, f grows linearly with I (Fig. <ref type="figure" target="#fig_5">5B</ref>).</s><s>This linear frequencycurrent relationship in standard deviation is a network property of coupled cells.</s><s>By contrast, the mean firing rate f changes only slightly, illustrating the relative independence of the neural firing rates and synchronicity.</s><s>The moderate decrease in f , however, is related to the decreased degree of network coherence, because asynchronized cell firings result in an averaged tonic hyperpolarization that slows down the firing rate (see below).</s></p><p><s>Figure <ref type="figure" target="#fig_5">5</ref>, C and D, illustrates a partially coherent state.</s><s>In the rastergram (Fig. <ref type="figure" target="#fig_5">5C</ref>), neurons are labeled in the increasing order of their I app values.</s><s>The cells with the smallest injected currents are not in synchrony with those firing at higher rates.</s><s>The population coherence measure () increases sharply with and reaches the value of 1 at Ӎ 1/f (Fig. <ref type="figure" target="#fig_5">5D</ref>).</s><s>Considered as a function of , () may be viewed as a distribution function of the neural pairs whose relative firing phase is , between 0 and the mean oscillation period (estimated as T ϭ 1/f ).</s><s>The derivative d/d, therefore, is the corresponding distribution density.</s><s>Network synchronization is manifested by a peak at zero phase of d/d (Fig. <ref type="figure" target="#fig_5">5E</ref>), reflecting the sharp increase of near ϭ 0. Note that a second peak is expected near ϭ T (Fig. <ref type="figure" target="#fig_5">5E</ref>) because the spiking event is periodic.</s></p><p><s>The network dynamics with I ϭ 0.1 is illustrated in Fig. <ref type="figure" target="#fig_5">5</ref>, F-H.</s><s>By contrast to Figure <ref type="figure" target="#fig_5">5C-E</ref>, here the rastergram is quite irregular (Fig. <ref type="figure" target="#fig_5">5F</ref>).</s><s>The linear form of the function () (Fig. <ref type="figure" target="#fig_5">5G</ref>) and its flat derivative (Fig. <ref type="figure" target="#fig_5">5H</ref>) are consistent with a totally desynchronized behavior, where the relative firing phase of neural pairs is uniformly distributed between 0 and T .</s></p><p><s>Without the aid of the coherence function (), it would be difficult to conclude from the rastergram (F) that the network is completely disordered.</s><s>Indeed, if one looks at the summated synaptic drive, s(t) ϭ (1/N) ͚ iϭ1 N s i (t), oscillatory fluctuations are significant in this "population field" (Fig. <ref type="figure" target="#fig_6">6 B,</ref><ref type="figure">top</ref>).</s><s>This is because,  if every cell oscillates, the summation of a relatively small number (e.g., N ϭ 100) of oscillatory signals would still show some oscillations, even if cells are completely asynchronous.</s><s>To assess the macroscopic coherence of the network, one can compute the temporal variance 2 of s(t) for different network sizes and assess whether the fluctuations in s(t) persist in large networks.</s><s>The network is asynchronous if 2 of s(t) decreases inversely with the network size, 2 (N) ϳ 1/N <ref type="bibr" target="#b16">(Hansel and Sompolinsky, 1996)</ref>.</s><s>This is shown to be the case in Figure <ref type="figure" target="#fig_6">6</ref> A. As N increases, s(t) becomes flatter (Fig. <ref type="figure" target="#fig_6">6 B</ref>) and the peak in the power spectrum gets smaller (Fig. <ref type="figure" target="#fig_6">6C</ref>).</s><s>This example shows that global network synchrony cannot be assessed correctly by oscillatory fluctuations in the population field by the presence of a peak in the power spectrum if the network size is not sufficiently large.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Sparse network and minimal connectedness</head><p><s>Random connections among interneurons can be introduced into the model by assuming that a cell makes synaptic contact to a second cell with a probability p.</s><s>Then, if N is the total number of cells, there are M syn ϭ pN presynaptic cells that converge to a postsynaptic cell, on average.</s><s>As shown above, the network can be synchronized with all-to-all connectivity (M syn ϭ N, p ϭ 1).</s><s>Because synchronization is impossible without synaptic connections (M syn ϭ 0), we examined the dependence of the population synchrony on M syn .</s><s>To evaluate the effect of sparse connectivity separately, M syn was gradually varied for a network of 100 identical neurons (i.e., without heterogeneity).</s><s>As shown in Figure <ref type="figure" target="#fig_7">7A</ref>, the population coherence (as measured by ) is essentially zero for M syn below a critical value Ӎ40; above which it starts to become significant, increases rapidly with M syn , and reaches the maximum of 1 in the all-to-all limit (M syn ϭ N).</s><s>Thus, the dependence of the network synchrony on M syn is highly nonlinear.</s><s>There is a minimal value of M syn and neural interconnections have to be sufficiently dense to generate global population synchronization.</s><s>This critical M syn value is not simply a required minimum for the total synaptic drive per cell, because it does not change noticeably when the maximal synaptic conductance is reduced by a factor of 2 (Fig. <ref type="figure" target="#fig_7">7A</ref>).</s><s>Also, in the presence of heterogeneity (e.g., with I ϭ 0.03), the critical M syn value remains the same, but the quantitative degree of network coherence for M syn larger than the critical value was reduced (data not shown).</s><s>On the other hand, this minimal connectedness depends on the probability rules in the network design and on the network dynamical state under consideration.</s><s>For instance, it is much smaller if the number of synapses per cell is exactly the same number M syn , but the actual set of presynaptic cells is chosen randomly (Fig. <ref type="figure" target="#fig_7">7A</ref>).</s><s>Or, when the oscillation frequency is increased from ϳ35 Hz to ϳ100 Hz with I ϭ 3 instead of 1, the network is synchronized only with M syn Ͼ 75 (Fig. <ref type="figure" target="#fig_7">7A</ref>).</s></p><p><s>We next examined whether the required minimal connectedness increases in proportion with the network size.</s><s>Simulations were performed with N ϭ 100, 200, 500, and 1000, and it was found that the onset of network coherence corresponded to a small value of M syn , close to M syn ϭ 60 for large network sizes (Fig. <ref type="figure" target="#fig_7">7B</ref>).</s><s>Therefore, the minimal number of synapses per cell that is required for the network synchronization is not a fraction of the total number N of cells.</s><s>It either remains finite for large N or it could conceivably depend weakly on N.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Partial synchronization in a sparse and heterogeneous network</head><p><s>As stated above, the minimal connectedness for a network coherence remains the same when a moderate amount of heterogeneity is added.</s><s>Figure <ref type="figure" target="#fig_8">8</ref> illustrates a partially synchronized network, with both sparse connections (M syn ϭ 60) and a dispersion in the external drive (I ϭ 0.03).</s><s>In that case, a major fraction of neurons (group I) displays similar firing rates (close to 39 Hz), although their intrinsic firing rates are different.</s><s>The remaining neurons (group II) have lower firing rates (below 34 Hz) that are scattered in the diagram.</s><s>The membrane potential trace of a representive cell is shown in Figure <ref type="figure" target="#fig_8">8</ref> B, together with its synaptic drive s syn (sum of the synaptic gating variables to that cell) and the population synaptic field, both displaying fairly regular oscillations at the same frequency.</s><s>Cross-correlations of membrane potentials between the representative cell (a in Fig. <ref type="figure" target="#fig_8">8C</ref>) and three other cells (b, c, and d in Fig. <ref type="figure" target="#fig_8">8C</ref>) show that some pairs (ac and ad) are synchronized with near-zero phase shift, but a significant phase difference may be present for other pairs (e.g., ab; Fig. <ref type="figure" target="#fig_8">8 D</ref>).</s></p><p><s>The normalized cross-correlation of spike trains at zero phase lag, defined as our coherence index ij for the pair (i, j), was calculated for all neural pairs in the network and plotted against the difference in the firing rates of the pair ͉ f i Ϫ f j ͉ (Fig. <ref type="figure" target="#fig_8">8 E</ref>).</s><s>Those pairs with both firing rates above 34 Hz (group I) are plotted in the top panel, and the other pairs are plotted in the bottom panel.</s><s>Comparison of the two panels reveals that high zero-phase synchronization (large ij ) occurs only in pairs of group I neurons, and with similar firing frequencies (small ͉ f i Ϫ f j ͉).</s><s>For those pairs in the bottom panel, ij is small even for pairs with almost identical firing frequencies.</s><s>Therefore, the network is subdivided into two groups of neurons, and only group I neurons are synchronized with near zero-phase shift.</s><s>It is not immediately clear why all neurons in the asynchronous group have lower, but not higher, firing frequencies than the synchronous group.</s></p><p><s>On the other hand, the neural pairs can be classified into three categories, according to whether they are monosynaptically uncoupled, coupled in one direction, or coupled in both directions.</s><s>Histograms of ij , however, do not show conspicious difference between such categories (Fig. <ref type="figure" target="#fig_8">8 F</ref>), indicating that the degree of synchronization between a pair is not primarily determined by their direct monosynaptic contacts.</s><s>We conclude, therefore, that interneuronal coherence emerges as a network phenomenon.</s><s>The global character of network synchrony is quantified by , the average of ij over all pairs.</s><s>The population coherence function () increases rapidly with the time bin and reaches the value of 1 for Ӎ T , where again T is the average oscillation period (Fig. <ref type="figure" target="#fig_8">8G</ref>).</s><s>Its derivative shows a clear peak at ϭ 0 (Fig. <ref type="figure" target="#fig_8">8 H</ref>).</s></p><p><s>The partially synchronous dynamics cannot be maintained if the interneuronal connections are too sparse (Fig. <ref type="figure" target="#fig_7">7</ref>).</s><s>Indeed, when M syn is decreased from 60 to 30, with all of the other parameters remaining the same, the network becomes asynchronous (Fig. <ref type="figure" target="#fig_9">9</ref>).</s><s>In this case, neurons are not locked to a same firing frequency (Fig. <ref type="figure" target="#fig_9">9A</ref>), the rastergram looks irregular (Fig. <ref type="figure" target="#fig_9">9C</ref>), the population synaptic field is almost constant in time (although the synaptic drive to a single cell still shows residual oscillatory fluctuations) (Fig. <ref type="figure" target="#fig_9">9B</ref>), and the cross-correlations between cell pairs are flat (Fig. <ref type="figure" target="#fig_9">9D</ref>).</s><s>Corroboratively, the zero-phase synchronization is very low for all neural pairs (Fig. <ref type="figure" target="#fig_9">9E,</ref><ref type="figure">F</ref>), in contrast with Figure <ref type="figure" target="#fig_8">8</ref>, E and F. The global coherence function () is linear in (Fig. <ref type="figure" target="#fig_9">9G</ref>), and its derivative is flat (Fig. <ref type="figure" target="#fig_9">9H</ref>), as expected for a fully asynchronous neural network.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Dependence on the synaptic time constant</head><p><s>It was shown that the 40 Hz oscillations in hippocampal interneurons are sensitive to the decay time constant syn of the GABA A synapse <ref type="bibr" target="#b46">(Whittington et al., 1995;</ref><ref type="bibr" target="#b39">Traub et al., 1996)</ref>.</s><s>We have confirmed their result that an increased syn induces a decrease in the oscillation frequency (Fig. <ref type="figure" target="#fig_10">10 A</ref> <ref type="bibr">, left)</ref>.</s><s>This frequency reduction occurs largely because the slowly decaying synaptic inhibition accumulates in time, resulting in a tonic level of hyperpolarization that counteracts the external depolarization.</s><s>This is shown in Figure <ref type="figure" target="#fig_10">10</ref> B, in which the synaptic drive to a representative cell is displayed for three different values of syn .</s><s>The time average is indicated by a horizontal line, which is higher (0.5, 0.64, 0.7) for larger syn values <ref type="bibr">(10, 20, and 40 msec, respectively)</ref>.</s></p><p><s>We also considered how the network synchronization depends on syn .</s><s>Within a fixed time window, a pair of cells has a higher chance to fire simultaneously if their firing frequencies are higher.</s><s>Hence, to make a meaningful comparison, the coherence measure should be calculated with different time bin when syn is varied.</s><s>In Figure <ref type="figure" target="#fig_10">10</ref> A (right), we chose to use equal to one-tenth the mean oscillation period.</s><s>It was found that the coherence index displays a peaked region around syn ϭ 7 msec; the network synchronization is lost for both smaller and larger syn values.</s></p><p><s>The decrease in the coherence index with larger syn is a consequence of network heterogeneities.</s><s>Indeed, as shown in Figure <ref type="figure" target="#fig_10">10</ref> A, if the dispersion in applied current is absent (I ϭ 0), or if the connectivity is not random (M syn ϭ 100), is larger but still decreases with syn .</s><s>But if both I ϭ 0 and M syn ϭ 100, (hence, the network synchrony) is now maximal for all larger syn values.</s><s>Note that the heterogeneity in either the applied current or the connectivity produces stronger effects for larger syn values, because in the lower frequency range the network is more sensitive to input heterogeneities (see Fig. <ref type="figure" target="#fig_0">1 B</ref>).</s></p><p><s>On the other hand, the decrease in the network synchrony for small syn is presumably attributable to a synaptic (dynamical) effect: inhibition should not be too fast compared to the oscillation period, so as to synchronize the network <ref type="bibr" target="#b41">(Wang and</ref><ref type="bibr">Rinzel 1992, 1993;</ref><ref type="bibr" target="#b40">van Vreeswijk et al., 1995;</ref><ref type="bibr" target="#b11">Ermentrout, 1996)</ref>.</s><s>This is illustrated in Figure <ref type="figure" target="#fig_10">10C</ref> with syn ϭ 2 msec, where the rastergram is quite irregular (top).</s><s>This is probably related to the fact that with global connectivity (M syn ϭ 100) and without heterogeneity (I ϭ 0), the network displays two-clusters (bottom, Fig. <ref type="figure" target="#fig_10">10 D</ref>), similar to Figure <ref type="figure" target="#fig_3">3C</ref>.</s><s>In that case, the global network synchrony (one-cluster) was also observed with different initial conditions, but it was very sensitive to the network heterogeneity (data not shown).</s></p><p><s>It follows from the left and right panels of Figure <ref type="figure" target="#fig_10">10</ref> A that a peaked region for versus syn implies that the network coherence  Here, to take into account the change in firing rates, the coherence index was calculated with ϭ 0.1/f .</s><s>For large syn values, the network coherence decreases because of the heterogeneities in the connectivity and external drive, as can be seen by isolating each of the two effects (dotted and dashed lines, respectively).</s><s>In the absence of both, the coherence is maximal ( ϭ 1) for syn Ͼ 4 msec (dash-dotted line).</s><s>B, Decreased firing frequency is caused partly by the fact that with larger syn , the summated synaptic drive has a greater time average (horizontal lines) and shows less oscillatory fluctuations, thus providing an enhanced level of tonic hyperpolarization, which counteracts the depolarizing drive of the cells.</s><s>C, Rastergram of an asynchronous network with syn ϭ 2 msec (top).</s><s>The globally coupled network of identical cells shows a two-cluster dynamics; thus, it is only partially synchronous (bottom).</s></p><p><s>is high only within a limited range of the mean oscillation frequencies.</s><s>This interesting observation was confirmed with different levels of the external drive I (Fig. <ref type="figure" target="#fig_11">11 A</ref>).</s><s>When I is larger, the oscillation frequencies are higher (left).</s><s>Moreover, the maximum of is located at a smaller value of syn (right).</s><s>The network synchrony does not depend simply on syn , but on the ratio between syn and the mean oscillation period T , which is an increasing function of syn (Fig. <ref type="figure" target="#fig_11">11 B</ref>).</s><s>When the coherence index is plotted versus syn /T , it is small for small syn /T ratios and peaks at syn /T Ӎ 0.2 for all three external excitation levels (I app ϭ 1, 2, 3; Fig. <ref type="figure" target="#fig_11">11C</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Optimal synchronization in the gamma frequency range</head><p><s>That network synchronization is highest in a limited frequency range appears to be a robust finding in our simulations.</s><s>For instance, the phenomenon was also observed when the mean input current (I ) was varied continuously (Fig. <ref type="figure" target="#fig_12">12 A</ref>).</s><s>With stronger external drive, the mean oscillation frequency increases monotonically (Fig. <ref type="figure" target="#fig_12">12 A,</ref><ref type="figure">top</ref>), but the network coherence displays high values only for an intermediate I range (Fig. <ref type="figure" target="#fig_12">12 A</ref> <ref type="bibr">, bottom)</ref>.</s><s>In an all-to-all network of identical neurons, the network coherence was found to remain maximal ( ϭ 1) for the entire I range (data not shown).</s><s>Furthermore, at small I , heterogeneity in an all-to-all network reduces the synchrony dramatically (with I ϭ 0.4, ϭ 1, and 0.1 for I ϭ 0 and 0.03, respectively).</s><s>Thus, the decrease of the network synchrony at smaller I values is attributable to the high network sensitivity to heterogeneities at lower frequencies (see Fig. <ref type="figure" target="#fig_0">1 B</ref>) in addition to a decreased syn /T ratio (dynamical effect).</s><s>On the other hand, at larger I (higher frequencies), the network coherence requires tighter connectedness and our fixed M syn ϭ 60 may no longer be sufficient (see Fig. <ref type="figure" target="#fig_7">7A</ref>).</s></p><p><s>We also varied the coupling strength g syn systematically, with three different I values.</s><s>With stronger synaptic inhibition, the oscillation frequency decreases monotonically (Fig. <ref type="figure" target="#fig_12">12 B</ref> <ref type="bibr">, top)</ref>.</s><s>The network coherence, on the other hand, shows a peaked region at intermediate g syn values (Fig. <ref type="figure" target="#fig_12">12 B</ref> <ref type="bibr">, bottom)</ref>.</s><s>Again, without input heterogeneity and coupling sparseness, the network coherence is maximal ( ϭ 1) for the entire g syn range (data not shown).</s><s>Therefore, similar to the case of I variation, the decrease of is presumably caused by a reduced stability of the network synchrony against input heterogeneity at low frequencies (large g syn )  and by a lack of sufficiently tight connectivity (combined with a weakened coupling strength) at high frequencies (small g syn ).</s></p><p><s>When the network coherence index is plotted against the mean frequency, for all four curves in Figure <ref type="figure" target="#fig_12">12</ref>, A and B, it is clear that the network synchronization is realized only in a relatively narrow range of oscillation frequencies (30 -80 Hz; Fig. <ref type="figure" target="#fig_12">12C</ref>).</s><s>As shown by the three curves from Figure <ref type="figure" target="#fig_12">12</ref> B, this frequency range of high network synchrony can be shifted by the level of external drive.</s><s>With I ϭ 2 or 3 (instead of 1), the network is more excited and the coherence peak is located at higher frequencies, as expected, and the peak is somewhat enlarged.</s><s>However, the amplitude of the peak is dramatically reduced (compare I ϭ 1 and 3).</s><s>This can be explained, again, by the fact that at higher frequencies, the network synchronization requires denser connections (see Fig. <ref type="figure" target="#fig_7">7A</ref>), whereas here M syn ϭ 60 is kept constant.</s><s>Figure <ref type="figure" target="#fig_12">12C</ref> demonstrates that, although the optimal frequency range for synchronization is not precisely defined and does depend quantitatively on network parameters and external drive, the high network coherence is robustly limited to a frequency band that coincides roughly with the gamma (20 -80 Hz) frequency range.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DISCUSSION</head><p><s>We examined the emergence of synchronous gamma oscillations in an interneuronal network model.</s><s>The following conditions were identified for the synchronizing mechanism by GABA A synaptic inhibition.</s><s>(1) The spike afterhyperpolarization of single neurons should be above the synaptic reversal potential, so that the effect of synaptic inputs is always hyperpolarizing.</s><s>(2) The synaptic current decay should be relatively slow, such that the ratio between the decay time constant and the oscillation period is not small.</s><s>(3) Heterogeneities should be sufficiently small.</s><s>(4) The random network connectedness should be higher than a well defined minimum, which is not sensitive to the network size.</s><s>When the four conditions are fulfilled, a large-scale network coherence was observed preferentially in the gamma (20 -80 Hz) frequency range, although uncoupled neurons are potentially capable of discharging in a wide range of frequencies (0 -400 Hz).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Synchronization by synaptic inhibition</head><p><s>Rhythmogenesis in many biological central pattern generators is based on circuits of coupled inhibitory neurons exhibiting postinhibitory rebound excitation <ref type="bibr" target="#b33">(Selverston and Moulins, 1985)</ref>.</s><s>In such systems, however, rhythmic patterns are usually slower than the kinetic time constants of the inhibitory synapses, and reciprocally connected neurons typically fire out-of-phase <ref type="bibr" target="#b31">(Perkel and Mulloney, 1974)</ref>.</s><s>More recently, it was recognized that neural oscillations can be synchronized by mutual inhibition at zero phase shift, provided that the synaptic kinetics is sufficiently slow as compared to the oscillation period <ref type="bibr" target="#b41">(Wang and</ref><ref type="bibr">Rinzel, 1992, 1993)</ref>.</s><s>Intuitively, slow synaptic decay offers the possibility for neurons to "escape" synchronously as the synaptic inhibition wanes below a certain threshold, thus fire at the same time.</s><s>A general conclusion from this scenario is that synapses with given temporal characteristics may be suitable to synchronizing large neural populations in a particular oscillatory frequency range; a major determining factor is the ratio between the synaptic time constant and the oscillation period.</s><s>Other computational works have since shown that the mechanism of synchronization by inhibition may be quite general <ref type="bibr" target="#b40">(van Vreeswijk et al., 1995;</ref><ref type="bibr" target="#b46">Whittington et al., 1995;</ref><ref type="bibr" target="#b11">Ermentrout, 1996;</ref><ref type="bibr" target="#b39">Traub et al., 1996)</ref>.</s><s>Synchronization by GABA A synapses is facilitated if the synaptic reversal potential is more negative than the maximum spike afterhyper-polarization.</s><s>This, however, is necessary only for the perfect global, but not for partial, synchronization.</s><s>Although fast-spiking interneurons typically display larger AHP amplitudes than pyramidal cells, their measured maximal AHP is usually not below Ϫ70 mV <ref type="bibr" target="#b26">(McCormick et al., 1985;</ref><ref type="bibr" target="#b22">Lacaille and Williams, 1990;</ref><ref type="bibr">Morin et al., 1995;</ref><ref type="bibr" target="#b34">Sik et al., 1995)</ref>, hence, above the reversal potential of Ϫ75 mV for GABA A synapses <ref type="bibr" target="#b3">(Buhl et al., 1995)</ref>.</s><s>On the other hand, the time constant syn of the synaptic current determines the range of the oscillation frequencies where the synchronization can be realized by mutual inhibition.</s><s>For gamma oscillations (ϳ40 Hz), the syn should be larger than 3 msec, compatible with the estimated syn <ref type="bibr" target="#b30">(Otis and Mody, 1992)</ref>.</s><s>Therefore, these requirements seem to be fulfilled by cortical fastspiking interneurons, especially the basket cells, interconnected by GABA A synapses.</s><s>On the other hand, the synchronization mechanism does not require interneurons to be endowed with a postinhibitory rebound property.</s></p><p><s>The network synchronization was quantified by a coherence index that was defined in terms of the zero-time cross-correlations of spike trains.</s><s>This proved to be a useful and reliable measure of population synchrony.</s><s>By contrast, population-averaged quantities like the "synaptic field" may display significant oscillatory fluctuations even when most neurons are in fact asynchronous, if the size of the probed neural population is small.</s><s>In that case, however, the field fluctuations decrease with the network size and become almost flat for large networks.</s><s>This observation suggests caution in the interpretation of oscillatory local field potential in experimental measurements and in small-network simulations.</s></p><p><s>We studied the dependence of the network coherence on the heterogeneity in interneuronal properties.</s><s>Typically, with moderate heterogeneities, coupled oscillators break down into a synchronous and an asynchronous subpopulations.</s><s>In our model, asynchronous neurons in such a partially synchronous state all have lower firing frequencies than the synchronous ones.</s><s>The observed high sensitivity on the degree of heterogeneity can be attributed partly to the large frequency-current slope of these fast-spiking cells, so that a minor dispersion in the external drives may result in a wide distribution of single cells' oscillation frequencies.</s><s>It would be of interest to investigate whether the network synchronization may become more robust in the presence of heterogeneities and noise, if the neural connections are structured in space <ref type="bibr" target="#b37">(Somers and Kopell, 1995)</ref>, or when an excitatory pyramidal population is included that reciprocally interacts with the interneuronal population <ref type="bibr" target="#b21">(Kopell and LeMasson, 1994;</ref><ref type="bibr" target="#b44">Wang et al., 1995)</ref>.</s><s>Moreover, information processing in the cortex may involve a small subset of pyramidal neurons at a time.</s><s>These pyramidal cells, by activating their common interneuron targets, may exert localized effects on the synchronous oscillations in a selective neural subpopulation of the cortical network.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Random connection and critical sparseness</head><p><s>One of our main objectives was to assess how dense synaptic interconnections must be for the maintenance of the synchronized network oscillations.</s><s>The degree of network coherence depended on the average number of synaptic contacts per cell, M syn , in a highly nonlinear fashion.</s><s>A minimal M syn value was identified, below which the network becomes totally asynchronous.</s><s>For M syn above its critical value, the degree of network coherence becomes nonzero and increases with M syn .</s><s>We demonstrated that this critical connectedness does not increase in proportion with the number of neurons, hence, is not sensitive to the network size.</s><s>However, further analysis is needed to determine whether there is a very weak (e.g., logarithmic) dependence.</s><s>Such a dependence is expected, for instance, if the required connectedness is related to the minimal number of links for a random network to be topologically connected at large scales <ref type="bibr" target="#b10">(Erdo ¨s and Re ´nyi, 1960)</ref>.</s><s>The existence of a small critical connectedness has also been found in other neural network models <ref type="bibr" target="#b1">(Barkai et al., 1990;</ref><ref type="bibr" target="#b44">Wang et al., 1995)</ref>, suggesting that this may be a general feature of sparsely connected random neural networks.</s></p><p><s>Note that the actual value of this minimal connectedness depends on the details of single-cell and network properties, as well as on the cooperative dynamics under consideration.</s><s>Indeed, we found that synchronization of oscillations at higher frequencies requires tighter interneuronal connections (Fig. <ref type="figure" target="#fig_7">7A</ref>).</s><s>Further analyses are needed to provide a theoretical understanding of this simulation result.</s><s>For rhythmicities in the gamma frequency range, our model network require 60 or more synaptic contacts from an interneuron to other interneurons.</s><s>This number is comparable with the estimated divergence/convergence factor of CA1 basket cells in the hippocampus <ref type="bibr" target="#b34">(Sik et al., 1995)</ref>.</s></p><p><s>We also demonstrated that synchronization of oscillatory neurons usually cannot be attributed simply to the presence of monosynaptic couplings between the respective cells.</s><s>The macroscopic network synchronization is thus a truly emergent phenomenon of large neuronal aggregates.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Frequency selection for synchronization</head><p><s>An important finding of the present study is that interneuronal networks can be synchronized by GABA A synapses preferentially within the gamma frequency range.</s><s>This happens despite the wide range (0 -400 Hz) possible single-neuron firing rates.</s><s>For instance, when the synaptic time constant ( syn ), external drive (I ), or coupling strength (g syn ) is varied gradually, the neuronal firing frequencies change monotonically and cover a wide frequency range.</s><s>In all three cases, however, the degree of network synchronization shows a relatively narrow peak within the gamma frequency range .</s></p><p><s>This phenomenon of frequency selection may be qualitatively understood in terms of the following three neural and network properties: (1) the high network sensitivity to heterogeneities at low frequencies, attributable to the steep frequency/current curve of single neurons; (2) the minimal connectedness for the synchrony, which is larger at higher oscillation frequencies; (3) the "dynamical effect," namely, network synchronization is impossible or fragile against heterogeneities if the ratio between syn and the oscillation period T ( syn /T) becomes too small.</s><s>Hence, given syn Ӎ 10 msec, if the oscillation frequency is lower than 20 Hz (T Ͼ 50 msec), the network coherence may be abolished by a high sensitivity to input heterogeneity (see Fig. <ref type="figure" target="#fig_0">1 B</ref>) and by a reduced syn /T ratio.</s><s>On the other hand, if the frequency is higher than 80 Hz, the synchrony may no longer be possible because the interneuronal connectivity is not sufficiently tight (see Fig. <ref type="figure" target="#fig_7">7A</ref>).</s><s>Consequently, the network can be highly synchronized only at 20 -80 Hz.</s></p><p><s>We would like to emphasize that this frequency band for coherent oscillations cannot be determined in an absolute precision, and its quantitative limits do depend on the details of the model.</s><s>However, our results robustly demonstrated that the synaptic time constant delimits a frequency band of coherent network oscillations, and the GABA A -type synapse (with syn Ӎ 10 msec) seems especially suitable for the gamma rhythmicity.</s><s>The limited frequency range of population gamma oscillations has been observed in the behaving rat <ref type="bibr" target="#b2">(Bragin et al., 1995)</ref> and in hippocampal slices <ref type="bibr" target="#b46">(Whittington et al., 1995;</ref><ref type="bibr" target="#b39">Traub et al., 1996)</ref>.</s><s>Our findings suggest that the synchronization mechanism by an interneuronal network would be especially effective if the fast oscillations are generated in the gamma frequency range by pacemaker neurons <ref type="bibr" target="#b24">(Llina ´s et al., 1991;</ref><ref type="bibr" target="#b27">McCormick et al., 1993)</ref>.</s><s>On the other hand, even in the absence of pacemaker neurons, coherent field oscillations could still be observed in the gamma frequency range, not because possible firing rates of inhibitory interneurons are restricted to a narrow frequency band, but because outside this frequency range the large-scale coherence is not possible (by this particular synaptic mechanism).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Physiological implications</head><p><s>Recurrent excitatory connections have long been regarded as a possible synaptic substrate underlying correlated neural firings in general and massively synchronous brain rhythms in particular.</s><s>Although coherent slow (epileptic) rhythmic bursting may indeed emerge in a disinhibited pyramidal cell network <ref type="bibr" target="#b7">(Chagnac-Amitai and Connors, 1989;</ref><ref type="bibr" target="#b38">Traub et al., 1993)</ref>, modeling studies suggest that mutual excitation via the AMPA-type synapse often cannot synchronize neural oscillations in the gamma frequency range, at least for simple repetitive spiking neurons <ref type="bibr" target="#b17">(Hansel et al., 1995;</ref><ref type="bibr">van Vreeswijk, et al., 1995) (present work)</ref>.</s><s>An alternative mechanism for the fast entrainment of principal cells has emerged recently.</s><s>Previous work <ref type="bibr" target="#b2">(Bragin et al., 1995;</ref><ref type="bibr" target="#b46">Whittington et al., 1995;</ref><ref type="bibr" target="#b39">Traub et al., 1996)</ref> and the present model suggest that networks of interneurons are critically involved in the generation of coherent gamma oscillations.</s><s>The advantage of such "synchronizer" function of interneuronal networks is the maintenance of subthreshold and coherent modulation of the large, sparsely connected pyramidal cell populations and the resulting precise timing of their action potentials <ref type="bibr" target="#b5">(Buzsa ´ki and Chrobak, 1995;</ref><ref type="bibr" target="#b19">Hopfield, 1995)</ref>.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Model of single neuron and synapse.</s><s>A, Left, Firing frequency versus applied current intensity ( f Ϫ I app curve) of the model neuron.The firing rate can be as high as 400 Hz.</s><s>Right, The derivative df/dI app shows that the f/I app slope is much larger at smaller I app (lower f ) values.</s><s>B, Dispersion in firing rates caused by heterogeneity in input current.</s><s>A Gaussian distribution for input currents, with standard deviation I ϭ 0.03, is applied to a population of uncoupled neurons.</s><s>The dispersion in firing rates was computed as the ratio between the standard deviation and the mean of firing rates ( f /f ).</s><s>This ratio is much larger for smaller mean current amplitude I (top).</s><s>Plotting f /f versus f shows that the dispersion in firing rates is dramatically increased for f Ͻ 20 Hz (bottom).</s><s>C, A brief current pulse applied to a presynaptic cell generates a single action potential, which elicits an inhibitory postsynaptic current (I syn ) and membrane potential change in a postsynaptic cell ( g syn ϭ 0.1 mS/cm 2 ).</s></p></div></figDesc><graphic coords="2,337.42,67.64,199.11,348.32" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure2.</s><s>In vivo double staining of parvalbumin-positive interneuron in the hippocampus.</s><s>A, The axonal arbor of an intracellularly labeled basket cell, largely confined in the pyramidal layer, is overlayed with immunochemically stained other parvalbumin-positive cells.</s><s>The two-dimensional distribution of the interneuron-interneuron contacts is shown in B and then collapsed to a one-dimensional distribution (along the septo-temporal axis) in C. Overall, 99 boutons in contact with 64 parvalbumin-positive cells were counted (adapted from<ref type="bibr" target="#b34">Sik et al., 1995)</ref>.</s></p></div></figDesc><graphic coords="3,223.56,67.64,339.03,268.27" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Synchronization by GABA A synapses.In these simulations, neurons are identical and coupled in an all-to-all fashion.</s><s>Left panels, Rastergrams; right panels, membrane potentials of two cells (dotted line, Ϫ52 mV).</s><s>The synchrony is realized when the spike AHP of the cells does not fall below the synaptic reversal potential E syn ϭ Ϫ75 mV (dot-dashed line on the right panels).</s><s>From A to C, ϭ 5, 3.33, and 2 respectively; I app ϭ 1, 1.2, and 1.4 A/cm 2 accordingly to preserve a similar oscillation frequency.</s><s>With smaller values, I K is slower and the AHP amplitude (V AHP ) is more negative.</s><s>When V AHP Ͻ E syn , the full synchrony is lost (C).</s></p></div></figDesc><graphic coords="4,53.95,67.64,226.10,285.50" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Dependence of the network synchrony on the synaptic reversal potential E syn .</s><s>A, The coherence index ( ϭ 1 msec) is plotted versus E syn .</s><s>As E syn is varied, V AHP remains essentially the same (vertical dashed line).</s><s>There is a sudden transition from synchrony to asynchrony as E syn is increased above V AHP .</s><s>B, An example of asynchronous behavior when cells are coupled by excitatory synapses (E syn ϭ 0 mV, syn ϭ 2 msec; I app ϭ 0.1).</s><s>The oscillation frequency is f ϭ 43 Hz.</s><s>C, The network coherence function () increases linearly with , from 0 (at ϭ 0) to 1 (at ϭ T ), showing that the relative firing time of neural pairs is almost uniformly distributed between 0 and the oscillation period T ϭ 1/f.</s></p></div></figDesc><graphic coords="4,356.20,67.64,161.68,233.57" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Effects of the network heterogeneity.</s><s>A, The coherence index ( ϭ 1 msec) versus I (the standard deviation of the applied current distribution).</s><s>The network becomes asynchronous for I Ն 0.05.</s><s>Examples indicated by arrows (I ϭ 0.03 and 0.1) are illustrated in C-E and F-H, respectively.</s><s>B, The mean ( f ) and standard deviation ( f ) of the firing rates averaged over individual neurons are plotted versus I .</s><s>Note a decrease of f and a linear increase of f for I Ն 0.05.</s><s>The sensitivity to I is related to the steep frequency-current relationship of single cells.</s><s>C-E, A partially synchronous state.</s><s>C, The rastergram.</s><s>D, The coherence function () increases with rapidly, displays a plateau, and reaches the value of 1 near ϭ 1/f .</s><s>E, The derivative of () shows a sharp peak at ϭ 0. F-H, An asynchronous state, as seen by the rastergram ( F ). () is linear with and reaches 1 near ϭ 1/f (G), and its derivative is flat (H).</s></p></div></figDesc><graphic coords="5,55.91,67.64,222.01,310.45" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>Synaptic field in a large asynchronous network.</s><s>To demonstrate further the asynchronous nature of the network behavior of Figure 5F-H, the temporal variance 2 (N ) of the population synaptic field s(t) was calculated for different network sizes (N ϭ 100, 200, . . .</s><s>, 1000).</s><s>As expected for asynchronoized network states (see text), 2 (N ) decreases as ϳ1/N (A).</s><s>Three examples of s(t) are shown in B, and their power spectra in C (arrow indicating increasing N).</s><s>Thus, the fluctuations of s(t) vanish for large network sizes.</s></p></div></figDesc><graphic coords="5,330.77,67.64,212.49,264.19" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 7 .</head><label>7</label><figDesc><div><p><s>Figure7.</s><s>Minimal random connectivity is required for large-scale network synchronization.</s><s>A, The coherence index ( ϭ 1 msec) is plotted versus the mean number of synaptic inputs per cell M syn (N ϭ 100).</s><s>Filled circle, I ϭ 1 and g syn ϭ 0.1 (reference parameter set).</s><s>In this case, the network synchrony is realized when M syn is larger than a critical value M crit Ӎ 40.</s><s>This curve remains essentially the same when the maximal synaptic conductance is reduced by 1/2 (open circle).</s><s>By comparison, if the number of inputs per cell is identical to all cells, and equals M syn , the synchrony occurs with very small values of M syn (Ն5; filled square).</s><s>With I ϭ 3 (solid triangle), the mean oscillation frequency is increased from 35 to 100 Hz; the critical value of M syn for the network coherence is much larger (Ӎ70).</s><s>B, The coherence index ( ϭ 1 msec) versus M syn for different numbers of neurons N ϭ 100, 200, 500, 1000 (with reference parameter set).</s><s>The onset of network coherence occurs at a critical value of M syn , which does not grow as a fraction of the network size.</s></p></div></figDesc><graphic coords="6,346.51,67.64,180.97,379.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 8 .</head><label>8</label><figDesc><div><p><s>Figure 8.</s><s>A partially synchronous state with sparse connectivity (M syn ϭ 60) and heterogeneity (I ϭ 0.03).</s><s>A, The firing rates of neurons in the network ( filled circle) are lower than those when the neurons are uncoupled (open circle).</s><s>The bias current varies from 0.91 to 1.09, the firing rate from 55 to 63 Hz when g syn ϭ 0. With g syn ϭ 0.1, a large fraction of neurons have firing rates close to 39 Hz, the remaining cells have lower firing rates.</s><s>B, Time traces of the population synaptic field s(t), the membrane potential V(t) of one cell and its summated synaptic drive s syn (t).</s><s>C, The rastergram, with the cell shown in B indicated by a. D, The crosscorrelations between this cell with three other cells b, c, d indicated in C. E, The coherence index ij ( ϭ 1 msec) for each of all the pairs in the network, plotted versus the difference in the firing rates ͉ f i Ϫ f j ͉ of the pair.</s><s>Top, Pairs with oscillation frequencies above 34 Hz; bottom, remaining pairs.</s><s>Only pairs in the top panel show a high degree of zero-phase synchrony.</s><s>F, The histograms of ij in three groups of pairs: those not monosynaptically coupled (top), those coupled in one direction (middle), and those coupled in both directions (bottom).</s><s>The population averaged () function shows a steep rise for small values (G), and its derivative has a peak at ϭ 0 (H).</s></p></div></figDesc><graphic coords="7,49.81,67.64,234.26,496.18" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 9 .</head><label>9</label><figDesc><div><p><s>Figure 9. Desynchronization with reduced network connectivity.</s><s>Same as Figure 8, except that M syn ϭ 30 instead of 60.</s><s>The network dynamics is asynchronous, as seen by the scattered distribution of firing rates (A), the disordered rastergram (C), the small fluctuations of the synaptic field (B), and flat cross-correlations (D).</s><s>This asynchronous state is further characterized by small values of ij (E, F), the linear function of the network averaged () (G), and its flat derivative (H).</s></p></div></figDesc><graphic coords="8,57.70,67.64,218.61,455.35" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 10 .</head><label>10</label><figDesc><div><p><s>Figure10.</s><s>Synaptic time constant can modulate the oscillation frequency and population synchrony.</s><s>A, Slowing down the synaptic current decay (with increasing syn ) decreases the mean oscillation frequency f (left), whereas the network coherence shows a peaked region centered at syn Ӎ 7 msec (solid circle, right).</s><s>Here, to take into account the change in firing rates, the coherence index was calculated with ϭ 0.1/f .</s><s>For large syn values, the network coherence decreases because of the heterogeneities in the connectivity and external drive, as can be seen by isolating each of the two effects (dotted and dashed lines, respectively).</s><s>In the absence of both, the coherence is maximal ( ϭ 1) for syn Ͼ 4 msec (dash-dotted line).</s><s>B, Decreased firing frequency is caused partly by the fact that with larger syn , the summated synaptic drive has a greater time average (horizontal lines) and shows less oscillatory fluctuations, thus providing an enhanced level of tonic hyperpolarization, which counteracts the depolarizing drive of the cells.</s><s>C, Rastergram of an asynchronous network with syn ϭ 2 msec (top).</s><s>The globally coupled network of identical cells shows a two-cluster dynamics; thus, it is only partially synchronous (bottom).</s></p></div></figDesc><graphic coords="8,330.52,67.64,212.93,290.04" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 11 .</head><label>11</label><figDesc><div><p><s>Figure 11.</s><s>Dependence of the network coherence on the synaptic time constant syn .</s><s>A, The mean oscillation frequency as function of syn is shown with three levels of the network drive I (left).</s><s>The coherence index displays a peak which is shifted to smaller syn value with larger I (right).</s><s>B, The ratio between the synaptic time constant syn and the oscillation period T increases with syn .</s><s>C, The coherence index versus the ratio syn /T .</s><s>For all three I values, the coherence index peaks at the same syn /T (Ӎ0.2) and decreases at smaller ratio values (M syn ϭ 60, I ϭ 0.03; the coherence index was calculated with ϭ 0.1/f ).</s></p></div></figDesc><graphic coords="9,52.36,67.64,229.27,256.02" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 12 .</head><label>12</label><figDesc><div><p><s>Figure 12. High network coherence in the gamma oscillation frequency range.</s><s>A, With increasing mean drive I , the average oscillation frequency monotonically increases (top), but the coherence index is large only for intermediate I values (bottom).</s><s>B, Similarly, as the maximal synaptic conductance g syn is increased, with stronger inhibitory interactions the average oscillation frequency f monotonically decreases (top).</s><s>An increase in the external drive shifts the curve upwards.</s><s>On the other hand, the coherence index displays a pronounced peak for I ϭ 1, which flattens for larger I values (bottom).</s><s>C, The coherence index is plotted as function of f for all four curves from (A, B).</s><s>The macroscopic network coherence is observed only in the gamma range of the oscillation frequencies (20 -80 Hz) (M syn ϭ 60, I ϭ 0.03; the coherence index was calculated with ϭ 0.1/f ).</s></p></div></figDesc><graphic coords="9,311.16,67.64,252.18,389.36" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6404" xml:id="foot_0"><p><s>J. Neurosci., October 15, 1996, 16(20):6402-6413 Wang and Buzsa ´ki • Gamma Rhythm in an Interneuronal Network</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6406" xml:id="foot_1"><p><s>J. Neurosci., October 15, 1996, 16(20):6402-6413 Wang and Buzsa ´ki • Gamma Rhythm in an Interneuronal Network</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6408" xml:id="foot_2"><p><s>J. Neurosci., October 15, 1996, 16(20):6402-6413 Wang and Buzsa ´ki • Gamma Rhythm in an Interneuronal Network</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6410" xml:id="foot_3"><p><s>J. Neurosci., October 15, 1996, 16(20):6402-6413 Wang and Buzsa ´ki • Gamma Rhythm in an Interneuronal Network</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6412" xml:id="foot_4"><p><s>J. Neurosci., October 15, 1996, 16(20):6402-6413 Wang and Buzsa ´ki • Gamma Rhythm in an Interneuronal Network</s></p></note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>This work was supported by the <rs type="funder">National Institute of Mental Health</rs> (<rs type="grantNumber">MH53717-01</rs>), <rs type="funder">Office of Naval Research</rs> (<rs type="grantNumber">N00014-95-1-0319</rs>), and the <rs type="funder">Sloan Foundation</rs> to X.J.W.; and <rs type="funder">HFSP</rs> and the <rs type="funder">National Institute of Neurological Disease and Stroke</rs> (<rs type="grantNumber">NS34994</rs>) to G.B. and X.J.W. Simulations were partly performed at the <rs type="institution">Pittsburgh Supercomputing Center</rs>.We thank <rs type="person">D. Golomb</rs>, <rs type="person">D. Hansel</rs>, <rs type="person">J.-C.Lacaille</rs>, and <rs type="person">C. McBain</rs> for discussions, <rs type="person">A. Sik</rs> for preparing Figure 2, and <rs type="person">L. Abbott</rs>, <rs type="person">J. Lisman</rs>, and <rs type="person">R. Traub</rs> for carefully reading this manuscript.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_vW6DNMM">
+					<idno type="grant-number">MH53717-01</idno>
+				</org>
+				<org type="funding" xml:id="_nF7GNka">
+					<idno type="grant-number">N00014-95-1-0319</idno>
+				</org>
+				<org type="funding" xml:id="_KB4DhkM">
+					<idno type="grant-number">NS34994</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Quantitative analysis of GABA-like-immunoreactive and parvalbumin-containing neurons in the CA1 region of the rat hippocampus using a stereological method, the disector</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aika</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Q</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kosaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kosaka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="267" to="276" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Properties of sparsely connected excitatory neural networks</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Barkai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kanter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev A</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="590" to="597" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Gamma (40 -100 Hz) oscillation in the hippocampus of the behaving rat</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bragin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">´g</forename><surname>Jando</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Na</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Hetke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wise</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Buzsa ´ki G</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="47" to="60" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Properties of unitary IPSPs evoked by anatomically identified basket cells in the rat hippocampus</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Buhl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Cobb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Halasy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Somogyi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Eur J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1989" to="2004" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Synchronization of bursting action potential discharge in a model network of neocortical neurons</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Bush</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Douglas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="19" to="30" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Temporal structure in spatially organized neuronal ensenbles: a role for interneuronal networks</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsa ´ki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Chrobak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="504" to="510" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Cellular bases of hippocampal EEG in the behaving rat</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsa ´ki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Leung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Vanderwolf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Res Rev</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="139" to="171" />
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Horizontal spread of synchronized activity in neocortex and its control by GABA-mediated inhibition</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chagnac-Amitai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Connors</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="747" to="758" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Effect of synchronous neural activity on synaptic transmission in primate cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Fetz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Soc Neurosci Abstr</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="319" to="326" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Interhemispheric synchronization of oscillatory neuronal responses in cat visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ko ¨nig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Kreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Singer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">252</biblScope>
+			<biblScope unit="page" from="1177" to="1179" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">On the evolution of random graphs</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Erdo ¨s</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Re</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MTA Mat Kut Int Ko ¨zl</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="17" to="61" />
+			<date type="published" when="1960">1960</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Type I membranes, phase resetting and synchrony</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Ermentrout</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="979" to="1001" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Mass action in the nervous system</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Freeman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1975">1975</date>
+			<publisher>Academic</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">An approach to the quantitative analysis of electrophysiological data from single neurons</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Gerstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">Y</forename><surname>Kiang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophys J</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="15" to="28" />
+			<date type="published" when="1960">1960</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Synchronization properties of spindle oscillations in a thalamic reticular nucleus model</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Golomb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X-J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rinzel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="1109" to="1126" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Interneurons containing calretinin are specialized to control other interneurons in the rat hippocampus</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Gulya ´s</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Ha ´jos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">F</forename><surname>Freund</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="3397" to="3411" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Chaos and synchrony in a model of a hypercolumn in visual cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hansel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="7" to="34" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Synchrony in excitatory neural networks</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hansel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Meunier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="307" to="335" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">A quantitative description of membrane current and its application to conduction and excitation in nerve</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Hodgkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Huxley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Physiol (Lond)</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="500" to="544" />
+			<date type="published" when="1952">1952</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Pattern recognition computation using action potential timing for stimulus representation</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hopfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">376</biblScope>
+			<biblScope unit="page" from="33" to="36" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Visually evoked oscillations of membrane potential in cells of cat visual cortex</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Jagadeesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">257</biblScope>
+			<biblScope unit="page" from="552" to="554" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Rhythmogenesis, amplitude modulation, and multiplexing in a cortical architecture</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kopell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Lemasson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="10586" to="10590" />
+			<date type="published" when="1994">1994</date>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Membrane properties of interneurons in stratum oriens-alveus of the CA1 region of rat hippocampus in vitro</title>
+		<author>
+			<persName><forename type="first">J-C</forename><surname>Lacaille</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Williams</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="349" to="359" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Local circuit interactions between oriens/alveus interneurons and CA1 pyramidal cells in hippocampal slices: electrophysiology and morphology</title>
+		<author>
+			<persName><forename type="first">J-C</forename><surname>Lacaille</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Kunkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Schwartzkroin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1979" to="1993" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">In vitro neurons in mammalian cortical layer 4 exhibit intrisic oscillatory activity in the 10 -50 Hz frequency range</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Llina ´s</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Grace</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yarom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="897" to="901" />
+			<date type="published" when="1991">1991</date>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Simulations of cortical pyramidal neurons synchronized by inhibitory interneurons</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">W</forename><surname>Lytton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Sejnowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="1059" to="1079" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Comparative electrophysiology of pyramidal and sparsely spiny stellar neurons of the neocortex</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Connors</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Lighthall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Prince</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="782" to="806" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Chattering cells: a new physiological subtype which may contribute to 20 -60 Hz oscillations in cat visual cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Soc Neurosci Abstr</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="359" to="359" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Membrane properties and synaptic currents evoked in CA1 interneuron subtypes in rat hippocampal slices</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Morin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Beaulieu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J-C</forename><surname>Lacaille</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Coherent 25-35 Hz oscillations in the sensorimotor cortex of the awake behaving monkey</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">N</forename><surname>Murthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Fetz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="5670" to="5674" />
+			<date type="published" when="1992">1992</date>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Modulation of decay kinetics and frequency of GABA A receptor-mediated spontaneous inhibitory postsynaptic cur-rents in hippocampal neurons</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">S</forename><surname>Otis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Mody</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="13" to="32" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Motor pattern production in reciprocally inhibitory neurons exhibiting postinhibitory rebound</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Perkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mulloney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">185</biblScope>
+			<biblScope unit="page" from="181" to="183" />
+			<date type="published" when="1974">1974</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Quantitative methods for predicting neuronal behavior</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Perkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mulloney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Budelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="823" to="827" />
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Oscillatory neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Selverston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Moulins</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Physiol</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="29" to="48" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Hippocampal CA1 interneurons: an in vivo intracellular labeling study</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pentonnen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ylinen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Buzsa ´ki G</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="6651" to="6665" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Visual feature integration and the temporal correlation hypothesis</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Singer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Gray</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="555" to="586" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Solte ´sz I, Desche ˆnes M (1993) Low-and high-frequency membrane potential oscillations during theta activity in CA1 and CA3 pyramidal neurons of the rat hippocampus under ketamine-xylazine anesthesia</title>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="97" to="116" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Waves and synchrony in networks of oscillators of relaxation and non-relaxation type</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Somers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kopell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physica D</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="169" to="183" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Synaptic and intrinsic conductances shape picrotoxin-induced synchronized afterdischarges in the guinea-pig hippocampal slice</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Traub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Miles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jgr</forename><surname>Jeffreys</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Physiol (Lond)</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="525" to="547" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Analysis of gamma rhythms in the rat hippocampus in vitro and in vivo</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Traub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Whittington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Colling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsa ´ki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jgr</forename><surname>Jeffreys</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Physiol</title>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+			<pubPlace>Lond</pubPlace>
+		</imprint>
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">When inhibition, not excitation synchronizes neural firing</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Van Vreeswijk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Ermentrout</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comput Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="313" to="322" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Ionic basis for intrinsic 40 Hz neuronal oscillations</title>
+		<author>
+			<persName><forename type="first">X-J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">NeuroReport</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="221" to="224" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Alternating and synchronous rhythms in reciprocally inhibitory model neurons</title>
+		<author>
+			<persName><forename type="first">X-J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rinzel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="84" to="97" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Spindle rhythmicity in the reticularis thalami nucleus: synchronization among mutually inhibitory neurons</title>
+		<author>
+			<persName><forename type="first">X-J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rinzel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="899" to="904" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Emergent spindle oscillations and intermittent burst firing in a thalamic model: specific neuronal mechanisms</title>
+		<author>
+			<persName><forename type="first">X-J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Golomb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rinzel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="5577" to="5581" />
+			<date type="published" when="1995">1995</date>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Dynamic organization of motor control within the olivocerebellar system</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Welsh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Lang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sugihara</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Llina ´s Rr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">374</biblScope>
+			<biblScope unit="page" from="453" to="457" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Synchronized oscillations in interneuron networks driven by metabotropic glutamate receptor activation</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Whittington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Traub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jgr</forename><surname>Jeffreys</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">373</biblScope>
+			<biblScope unit="page" from="612" to="615" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Potassium conductances underlying action potential repolarization and afterhyperpolarization in rat CA1 hippocampal interneurons</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Mcbain</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Physiol (Lond)</title>
+		<imprint>
+			<biblScope unit="volume">488</biblScope>
+			<biblScope unit="page" from="661" to="672" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

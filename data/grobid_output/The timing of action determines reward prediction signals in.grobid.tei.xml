@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The timing of action determines reward prediction signals in identified midbrain dopamine neurons</title>
+				<funder>
+					<orgName type="full">Howard Hughes Medical Institute</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Luke</forename><forename type="middle">T</forename><surname>Coddington</surname></persName>
+							<email>luketc82@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Address: Janelia Research Campus</orgName>
+								<orgName type="institution">Howard Hughes Medical Institute</orgName>
+								<address>
+									<postCode>20147</postCode>
+									<settlement>Ashburn</settlement>
+									<region>VA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joshua</forename><forename type="middle">T</forename><surname>Dudman</surname></persName>
+							<email>dudmanj@janelia.hhmi.org</email>
+							<affiliation key="aff0">
+								<orgName type="department">Address: Janelia Research Campus</orgName>
+								<orgName type="institution">Howard Hughes Medical Institute</orgName>
+								<address>
+									<postCode>20147</postCode>
+									<settlement>Ashburn</settlement>
+									<region>VA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The timing of action determines reward prediction signals in identified midbrain dopamine neurons</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B6FFCC3269D64A7C66C1E325EDE95F08</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Animals adapt behavior in response to informative sensory cues using multiple brain circuits.</s><s>The activity of midbrain dopamine (mDA) neurons is thought to convey a critical teaching signal: reward prediction error (RPE).</s><s>Although RPE signals are thought to be essential to learning, little is known about the dynamic changes in mDA neuron activity as animals learn about novel sensory cues and appetitive rewards.</s><s>Here we describe a large dataset of cell-attached recordings of identified dopaminergic neurons as naïve mice learned a novel cue-reward association.</s><s>During learning mDA neuron activity results from summation of sensory cue-related and movement initiation-related response components.</s><s>These components are both a function of reward expectation yet dissociable.</s><s>Learning produces an increasingly precise coordination of action initiation following sensory cues that results in apparent RPE correlates.</s><s>Our data thus provide new insights into circuit mechanisms underlying a critical computation in a highly conserved learning circuit.</s></p><p><s>Users may view, print, copy, and download text and data-mine the content in such documents, for the purposes of academic research, subject always to the full Conditions of use:</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>A hungry guest's stomach rumbles at the sound of a dinner bell; a child extends her hand for a piece of candy.</s><s>Both sensory cues and the initiation of actions can become associated with expectations about future outcomes.</s><s>There are two broad conceptualizations of how associations between actions, events, and their resultant outcomes are formed.</s><s>The first is a gradual strengthening of an association between an action or a stimulus and a reliable outcome -often described as Hebbian learning <ref type="bibr" target="#b0">1</ref> .</s><s>The second is a gradual reduction in errors of prediction through comparison of expected and observed outcomes -often a critical component of reinforcement learning <ref type="bibr" target="#b1">2</ref> .</s><s>In a well-known example of such a representation, the activity of mammalian midbrain dopamine (mDA) neurons correlates with changes in reward expectation -or reward prediction errors (RPEs) -following associative learning <ref type="bibr" target="#b2">3</ref> .</s><s>This has provided direct evidence in support of the notion that reinforcement learning proceeds via a progressive reduction in error that is represented in the RPE correlates of mDA neurons.</s><s>RPE correlates have been observed in mDA neurons almost exclusively within a specific experimental condition: well-trained animals learning new associations through the introduction of new cues or altered contingencies <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref> .</s><s>Behavioral performance and mDA reward signals can adapt to these new contingencies within tens of trials in rodents <ref type="bibr" target="#b10">11</ref> and monkeys <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5</ref> .</s><s>However, it has also been observed that mDA neuron correlates can lag adaptive changes in behavior <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b6">7</ref> , calling into question the causal role of RPE correlates in the learning of associations.</s><s>Additionally, even in the well-studied overtrained condition the circuit mechanisms by which reward prediction errors are computed remains unclear <ref type="bibr" target="#b11">12</ref> .</s><s>This could be due, at least in part, to the tight coordination of multiple learning systems characteristic of the trained state <ref type="bibr" target="#b12">13,</ref><ref type="bibr" target="#b13">14</ref> .</s></p><p><s>In sharp contrast to the rapid adaptation to changed contingencies in trained animals, for naive animals learning a novel association many hundreds of trials can be required to observe stable or asymptotic behavior -especially for trace conditioning paradigms.</s><s>These more gradual adaptive changes in behavior allow for more observations of inherently probabilistic neural activity and behavior.</s><s>Influential models of the RPE computation make quantitative predictions about the emergence of RPE correlates reflected in mDA neuron activity during such novel learning <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b14">15</ref> .</s><s>However, to date, empirical data to quantitatively compare to these predictions is lacking.</s><s>Moreover, whereas novel learning requires intact mDA signaling <ref type="bibr" target="#b15">16</ref> , necessity has not been demonstrated for many aspects of adaptive changes in behavior following extensive training.</s><s>Thus, we reasoned that observing the dynamics with which mDA neuron activity changes over training could provide important constraints on possible circuit mechanisms underlying RPE correlates.</s></p><p><s>Here we examine movement-related mDA activity as naïve (but habituated) mice are first trained in a Pavlovian trace-conditioning paradigm.</s><s>We use optogenetic identification to unambiguously identify mDA neurons from two major midbrain populations in the ventral tegmental area (VTA) and substantia nigra pars compacta (SNc).</s><s>By studying the initial mDA response in naive animals through to responses to self-initiated movements, sweetened water rewards, and sensory cues in well trained mice we detail the time courses with which each correlate emerges.</s><s>We replicate the observation that RPE correlates become apparent in both VTA and SNc mDA neurons only after learning.</s><s>We find that this late emergence is due to that fact that RPE correlates are a consequence of temporal integration of independent reward expectation signals associated with reward-predictive sensory cues and initiation of appetitive actions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p><s>Adult transgenic mice expressing a light-activated opsin, channelrhodopsin-2 <ref type="bibr" target="#b16">17</ref> (Chr2), in mDA neurons were exposed to a trace conditioning paradigm in which a 0.5 sec long auditory tone was presented 1.5 sec before delivery of a sweetened water reward (Fig. <ref type="figure" target="#fig_1">1a-b</ref>; see Methods).</s><s>We chose to use a head fixed paradigm <ref type="bibr" target="#b17">18</ref> as in canonical studies on representations in mDA neurons <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b18">19</ref> and for the desirable reduction in variability of behavior.</s><s>While no action was necessary to receive water, anticipation of available water is often accompanied by body movements (readily observed in freely moving animals) not typically assessed in head-fixed subjects.</s><s>To enable such measurement, we supported mice in a spring-suspended basket equipped with an accelerometer (Fig. <ref type="figure" target="#fig_1">1a</ref>, see Methods).</s><s>Body movements were correlated with, but not synonymous with, bouts of licking (Fig. <ref type="figure" target="#fig_1">1b</ref>)confirming that body movement can provide an additional metric to track learned behaviors in head-fixed mice.</s></p><p><s>Learning was characterized by the emergence of conditioned changes in behavior both to the delivery of water and to the presentation of the tone.</s><s>With increasing experience mice exhibited increasingly rapid reactions to presence of available water (Fig. <ref type="figure" target="#fig_1">1c</ref>).</s><s>The mean reaction time to collect the water was monotonically reduced from hundreds of milliseconds in naïve animals to a latency of ~60 ms (~1/2 licking cycle) after ~1000 trials with water delivery.</s><s>This decrease in the latency to collect available water was correlated with a monotonic increase in the number of licks at the water spout during the delay between tone offset and water delivery steadily increased (Fig. <ref type="figure" target="#fig_1">1c-d</ref>; latency to initiate licking following tone, r = -0.50,</s><s>p &lt; 0.0001; licks in the CR during tone-reward interval, r = 0.63, p &lt; 0.0001).</s><s>In addition, body movements became increasingly stereotyped and reliable (Fig. <ref type="figure" target="#fig_1">1c</ref>; relative difference in basket displacement in response to the tone and reward, r = -0.43,</s><s>p &lt; 0.0001).</s><s>Whereas mice overtrained on this same paradigm rapidly re-acquire and extinguish responses to the tone <ref type="bibr" target="#b6">7</ref> , naïve learning is characterized by a rapid emergence of learned behavior (~3 sessions; ~100 trials/session) and a gradual asymptotic stabilization of multiple aspects of learned behavior (decreased latency to collect water, increased anticipatory licking and stereotyped body movements).</s></p><p><s>Given this examination of behavior during the first ~1000 trials of training we next explored how responses to mDA neurons emerge over this same period.</s><s>We obtained cell-attached electrophysiological recordings (Fig. <ref type="figure" target="#fig_1">1e-h</ref>; see Methods) from optogenetically-identified ('optotagged' <ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b20">21</ref> ) mDA neurons in the VTA (n =47) and SNc (n =88) of naïve mice as they learned an auditory trace conditioning paradigm.</s><s>Localization of the SNc or VTA on each penetration was determined by observing the magnitude of an optogenetically-evoked field potential (Fig. <ref type="figure" target="#fig_1">1g</ref>) known to reflect the presence of mDA neurons <ref type="bibr" target="#b21">22</ref> .</s><s>Cell-attached, loose-seal recordings were obtained in the region of the largest evoked potential (Fig. <ref type="figure" target="#fig_1">1f-g</ref>) and mDA neuron identity was confirmed by optically driving trains and bursts of action potentials (Fig. <ref type="figure" target="#fig_1">1g</ref>).</s><s>The range of depths over which evoked potentials and positively identified mDA neurons were found agreed well with the anatomy of the VTA and SNc (Fig. <ref type="figure" target="#fig_1">1h</ref>).</s><s>Moreover, identified mDA neurons had properties that agreed with canonical electrophysiological criteria and post-hoc confirmation of high penetrance labelling of mDA neurons (Supplementary Fig. <ref type="figure" target="#fig_1">1a-b</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Phasic modulation of mDA activity at initiation of body movements and licking</head><p><s>Recent studies have found that activity in at least some populations of mDA neurons correlates to movement initiation in naive or untrained animals <ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref> .</s><s>In trained animals, DA release in ventral striatum can correlate with initiation of reward-related actions <ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b26">27</ref> .</s><s>Thus, we first examined activity in naïve animals acclimated to the head-fixed context, but prior to receiving any rewards in that context.</s><s>In the absence of informative stimuli or expectation of water rewards, we observed significant inhibition in 10 of 12 mDA neurons from SNc and 9 of 17 in VTA upon initiation of body movement.</s><s>Only one mDA neuron in VTA and none in SNc exhibited significant excitation (Wilcoxon's signed rank test, modulation window vs baseline, see Methods; Fig. <ref type="figure" target="#fig_2">2a</ref>).</s><s>Reports of excitatory peri-movement responses in mDA neurons <ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b24">25</ref> led us to more carefully examine activity around the time of movement initiation.</s><s>We measured the interspike interval (ISI) just before movement-related pauses in activity (see Methods).</s><s>This analysis revealed an apparent "covert" excitation in the form of a spike phase advance present in mDA neurons from both SNc and VTA (Supplementary Fig. <ref type="figure" target="#fig_2">2a-b</ref>).</s><s>Thus, mDA neurons are modulated by a sequence of (covert) excitation followed by a more dominant inhibition prior to movement initiation in mice acclimated to headfixation.</s></p><p><s>Given evidence for more prominent positive modulation around purposive action initiation in rodents <ref type="bibr">2827,</ref><ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b29">30</ref> and primates <ref type="bibr" target="#b30">31</ref> , we next examined whether weak excitation in naïve mice might be altered by the presence of available water rewards.</s><s>Following the introduction of mice to auditory trace conditioning we again examined peri-movement mDA neuron activity.</s><s>We first considered movement bouts initiated during the long intertrial intervals that were well separated from either auditory cues or water delivery.</s><s>Such self-initiated movements occurred within the intertrial intervals in bouts (bout length: 3.9 ± 1.5 s) separated by periods of stillness (interbout interval: 6.4 ± 1.9 s).</s><s>Around half (57 ± 5%) of self-initiated movement bouts were accompanied by licking.</s><s>In contrast to the net inhibition of mDA neuron activity in the naive context, in a rewarded context we observed more significant excitation of individual mDA neurons just prior to self-initiated movement onset (23 out of 96 during training vs 1 out of 29 pre-reward training, p = 0.01, SNc: 19 of 66 during training vs 0 of 12 pre-training, p = 0.03; VTA: 4 of 30 during training vs 1 of 17 pretraining, p = 0.6, Fig. <ref type="figure" target="#fig_2">2b,</ref><ref type="figure">c</ref>).</s><s>Thus, SNc DA neurons were more likely to be excited at movement initiation than VTA DA neurons although significant excitation was observed from individual neurons in both populations.</s><s>As in naïve animals, net inhibition at movement initiation was still common in both mDA neuron subpopulations (SNc: 34 of 66, VTA: 17 of 30) and appeared to be unchanged in its magnitude (Fig. <ref type="figure" target="#fig_2">2c</ref>).</s><s>Also similar to naïve animals, covert excitation was present in non-"excited" neurons in the form of a spike phase advance just prior to movement-related pauses (Supplementary Fig. <ref type="figure" target="#fig_2">2c</ref>).</s><s>Together these results suggest a majority of mDA neurons receive both excitation and inhibition upon movement initiation; however, excitation can be enhanced by the presence of rewards, while inhibition is not.</s></p><p><s>We next examined within-trial modulation of mDA neuron activity as naïve mice first began to consume water rewards in our training context (sessions 1-3; n=22 mDA neurons; n=6 mice).</s><s>Consistent with activity around self-initiated movements, we found that modulation of mDA activity after water delivery appeared to be associated with the initiation of consumptive licking (Fig. <ref type="figure" target="#fig_3">3</ref>).</s><s>This was particularly apparent in mDA neurons recorded in mice with variable latencies to initiate consumption (Fig. <ref type="figure" target="#fig_3">3a</ref>).</s><s>On average, mDA activity peaked prior to the first contact of the tongue to the water port (Fig. <ref type="figure" target="#fig_3">3b-c</ref>), indicating that activity was related to movement initiation rather than sensation of the water.</s><s>In trained animals, mDA neurons have a highly characteristic latency of response to auditory sensory cues -around 50ms onset, 85ms peak <ref type="bibr" target="#b6">7</ref> .</s><s>However, early in training we observed little specific modulation of mDA activity until ~150 ms after water delivery (Fig. <ref type="figure" target="#fig_3">3a,</ref><ref type="figure">d</ref>).</s><s>This suggests that the audible solenoid valve did not provoke a robust sensory or "salience" response in mDA neurons.</s><s>As training progressed a large additional component of the mDA reward response emerged that was time-locked to reward delivery (within the first 150 ms post-reward, p = 0.0002 trials 1-300 vs trials 301-900; 151-400 ms post-reward, p = 0.6, Fig. <ref type="figure" target="#fig_3">3d</ref>).</s><s>Also consistent with the lack of a strong sensory component to mDA activity at this early stage of learning, we observed no response to the louder auditory cue (audible tone: 70 dB; solenoid valve: 52dB; background noise: 55 dB; see Fig. <ref type="figure" target="#fig_4">4</ref>) and none of our stimuli reached the intensities previously reported to produce salience responses (~90 dB <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b31">32</ref> ).</s></p><p><s>If it is the case that the modulation of mDA activity after reward delivery does not have a significant sensory component early in training, we reasoned that substantially reducing a salient sensory component of water delivery -activation of the solenoid valve -would not diminish the mDA response.</s><s>Thus, we recorded mDA neurons in a subset of animals using a silent solenoid that was undetectable across the ultrasonic frequency range (Supplementary Fig. <ref type="figure" target="#fig_3">3</ref>).</s><s>The phasic modulation of mDA neuron activity with an undetectable solenoid remained similarly well aligned to the initiation of consumptive licking (Fig. <ref type="figure" target="#fig_3">3e</ref>).</s><s>Notably, in primary thirst and hunger centers in the rodent brain, even in naïve animals, modulation of activity can be predictive of consumption rather than a reflection of physical, sensorial contact with water <ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b33">34</ref> .</s><s>Our data thus suggest that a movement initiation-associated phasic excitation-inhibition sequence is the earliest reward-related modulation of activity in SNc and VTA mDA neuron populations during novel learning.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Emergence of sensory cue-related activity in mDA neurons during early learning</head><p><s>We next sought to characterize the emergence of sensory cue-related activity of mDA neurons over early learning.</s><s>Consistent with a large body of prior work <ref type="bibr" target="#b2">3</ref> , mDA neurons lacked a coherent response to the auditory cue early in learning, but developed a robust, monotonically increasing phasic response with training (r = 0.32, p = 0.002, n = 96, Fig. <ref type="figure" target="#fig_4">4ac</ref>).</s><s>Surprisingly, the proportion of mDA neurons with a robust phasic response at the time of water delivery also increased over the first three sessions (1-3 sessions: 10 of 22, 4-8 sessions: 38 of 43, 9+ sessions: 27 of 31.</s><s>p &lt; 0.001; Fig. <ref type="figure" target="#fig_3">3d</ref>).</s><s>In contrast to responses to the auditory cue, response amplitude at the time of water delivery was not significantly correlated with the number of trials experienced (r = -0.06,</s><s>p=0.6, n = 96; Fig. <ref type="figure" target="#fig_4">4c</ref>).</s><s>The inference from existing data and influential models is that mDA neuron activity should directly "transfer" from a reward to an earlier, predictive stimulus <ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref> .</s><s>By contrast, our data -the first to examine the time course of the emerging mDA response to a predictive cue in naïve animals -suggest that mDA responses to the predictive cue and the reward do not exhibit the predicted, negative trial-by-trial correlation <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b35">36</ref> .</s><s>Rather, auditory cue and water delivery responses had a small but significant positive correlation in individual mDA neurons across training (r = 0.26, p = 0.01, n = 96; Fig. <ref type="figure" target="#fig_4">4d</ref>).</s><s>We finally examined the relationship of cue and reward signals on a trial-by-trial basis selectively within neurons that had significant sensory cue-related responses.</s><s>Only 6 of 75 such neurons exhibited significant correlations between auditory cue and reward responses, and they were positive (Fig. <ref type="figure" target="#fig_4">4e</ref>).</s><s>mDA responses to predictive sensory cues and water delivery thus appear to emerge independently while being scaled by a common cell-specific factor <ref type="bibr" target="#b31">32,</ref><ref type="bibr" target="#b37">38</ref> (Supplementary Fig. <ref type="figure" target="#fig_4">4</ref>).</s></p><p><s>We have described two apparently independent components of the phasic responses of mDA neurons: a movement-related excitatory-inhibitory sequence (Fig. <ref type="figure" target="#fig_2">2,</ref><ref type="figure" target="#fig_3">3</ref>) and a phasic excitation associated with sensory stimuli that emerges as mice begin to exhibit learned behavior (Fig. <ref type="figure" target="#fig_4">3d, 4a-c</ref>).</s><s>In the sensory cue-related component, excitation is specifically enhanced as a function of the extent of learning (Fig. <ref type="figure" target="#fig_3">3d,</ref><ref type="figure" target="#fig_4">4c</ref>).</s><s>For the movement initiationrelated component, excitation was pronounced once water rewards were first available even for self-initiated movements in the absence of cues or water rewards.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Movement-initiation related activity of mDA neurons reflects reward expectation</head><p><s>mDA movement-related activity was specific for the moment of movement initiation, as large accelerations within bouts of movement were not encoded by mDA neurons (Supplementary Fig. <ref type="figure" target="#fig_5">5</ref>).</s><s>We next sought to clarify whether the magnitude of movement initiation-related mDA excitation reflects animal's reward expectation.</s><s>We divided periods of self-initiated movement into those accompanied by licking (Lick+) and those without (Lick-), and examined mDA activity in neurons significantly excited or inhibited around movement initiation (Fig <ref type="figure" target="#fig_5">5a</ref>).</s><s>We then compared these self-initiated actions to movements initiated following the reward predictive auditory cues ("cued mvmt"; Fig <ref type="figure" target="#fig_5">5a</ref>).</s><s>We reasoned that this analysis should distinguish categories of action with relatively less (Lick-), more (Lick +), or most (Cued) degrees of reward expectation.</s><s>A 2-way ANOVA (movement type x movement response type) confirmed a main effect of movement response type (excited vs inhibited at mvmt, F (1,216) = 149.8,</s><s>p &lt; 0.0001) as well as a main effect of movement type (Lick-vs Lick+ vs Cued, F(2,216) = 18.1, p &lt; 0.0001) and an interaction (F (2, 216) = 5.6, p = 0.004).</s><s>Post hoc comparisons found that indeed, in mDA neurons positively modulated by movement initiation, Lick+ movements were accompanied by greater excitation than Lickmovements (3.2 ± 0.6 vs 1.0 ± 0.4 Hz, p = 0.036, n = 23), consistent with the proposal that the excitatory action initiation-related component of mDA responses is sensitive to reward expectation.</s><s>In contrast, inhibition apparent in negatively modulated mDA neurons was independent of expectation (-2.3 ± 0.3 vs -1.8 ± 0.3 Hz, p = 0.92, n = 51; Fig. <ref type="figure" target="#fig_5">5a-b</ref>).</s><s>Furthermore, modulation of mDA neuron activity around cued movement was significantly greater than self-initiated movements in both response classes (positively modulated: 4.8 ± 0.6 Hz, p &lt; 0.0001 vs Lick-; negatively modulated: -0.4 ± 0.5 Hz, p = 0.05 vs Lick-, p = 0.002 vs Lick+; Fig. <ref type="figure" target="#fig_5">5a-b</ref>), with the exception that in movement-excited neurons, cued movement responses were not significantly greater than self-initiated, Lick+ responses (3.</s><s>Excitation and inhibition were balanced such that there was a negligible self-initiated movement signal on average and a net inhibition during movements in naïve mice (Fig. <ref type="figure" target="#fig_2">2</ref>).</s><s>This indicates that in our paradigm mDA activity is not obligatory for movement.</s><s>However, it has recently been proposed that excitation in select mDA SNc neurons is specifically sufficient <ref type="bibr" target="#b23">24</ref> or perhaps even necessary <ref type="bibr" target="#b24">25</ref> for movement initiation.</s><s>Thus, we sought to directly test whether bursts of mDA activity of the duration and magnitude observed in our task might be responsible for initiating movement.</s><s>We injected the red-shifted Ca 2+ -indicator jRCaMP1a bilaterally directly under stimulation fiber sites in the SNc or VTA of separate cohorts of mice (n = 4 per group).</s><s>We then performed fiberometry recordings in the primary targets of those regions in the ventral (vSTR) or dorsal (dSTR) striatum, respectively (Fig <ref type="figure">6a</ref>).</s><s>Following 2-4 days of trace conditioning, we made use of our ability to monitor axonal population activity to calibrate somatic optogenetic stimulation to observed reward signals at the same recording sites (4 total conditions: axonal Ca 2+ responses that were, respectively, 1.1 ± 0.3, 2.8 ± 0.4, 2.1 ± 0.5, and 5.2 ± 1 times the magnitude of cued reward responses; see Methods; Fig. <ref type="figure">6a-e</ref>).</s><s>Neither SNc nor VTA stimulation matched to physiological signals was sufficient to elicit significant movement initiation (Fig. <ref type="figure">6c,</ref><ref type="figure">e</ref>).</s><s>Indeed, only one condition, the strongest stimulation in the SNc, resulted in a significant modulation of movement (VTA: 1-way ANOVA p = 0.8, n = 4; SNc: 1-way ANOVA p = 0.01, baseline vs 150 ms, 1 mW stim: p = 0.8, baseline vs 150 ms, 7 mW stim: p = 1, baseline vs 500 ms, 1 mW stim: p = 0.6, baseline vs 500 ms, 7 mW stim: p &lt; 0.0001, n = 4; Fig. <ref type="figure">6b-e</ref>; Supplementary Fig. <ref type="figure">6</ref>).</s><s>As a positive control, stimulation of mDA neurons matched to the magnitude of physiological reward signals (150 ms, 30 Hz burst at 1 mW peak power) was able to induce conditioned place preference in a single 60 minute session (Fig. <ref type="figure">6f-g</ref>; VTA: 50 ± 8 % in stim quadrant vs 17 ± 3 % in others, n = 4, p = 0. 02; SNc: 42 ± 6 % in stim quadrant vs 22 ± 8 % in others, n = 4, p = 0.03).</s><s>Thus, taken together these data argue that in the context of our task and within the physiological range of activity we observe in both electrophysiological and calcium imaging, phasic mDA neuron activity at the time of movement does not (exclusively) reflect activity that is causal for movement initiation <ref type="bibr" target="#b38">39</ref> .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Emergence of RPE correlates in mDA activity during novel learning</head><p><s>How do these sensory cue-related and movement initiation-related response components contribute to the quantitative representation of reward, and specifically RPE correlates, in mDA neurons?</s><s>RPE correlates are well known to be present in animals after extensive conditioning <ref type="bibr" target="#b2">3</ref> ; however, it is unclear when RPE correlates emerge during initial trace conditioning.</s><s>To address this question, we began to omit either the auditory cue or water delivery on a subset of trials (&lt;= 10% of trials in any session) once animals exhibited criterion learning (session 4; see Fig. <ref type="figure" target="#fig_1">1c,</ref><ref type="figure">d</ref>).</s><s>This produced trials with "unpredicted (uncued) rewards" and "omitted rewards", and thus trials with positive prediction errors and negative prediction errors, respectively <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b18">19</ref> .</s><s>mDA responses to water delivery remained unaffected by the presence or absence of a reward-predictive auditory cue in middle training (pred.</s><s>vs unpred.: 4.3 ± 0.6 vs 4.1 ± 0.7 Hz, p = 0.65, n = 30) despite clear evidence that mice had learnt the auditory cue was predictive of reward (Fig. <ref type="figure" target="#fig_1">1,</ref><ref type="figure" target="#fig_4">4</ref>) and had a reduced latency to consume reward when it was preceded by a cue (Fig. <ref type="figure">7a</ref>).</s><s>In late training, cued water delivery began to evoke smaller mDA responses than uncued water delivery (3.1 ± 0.6 vs 4.5 ± 1.0 Hz, p = 0.03, n = 24, Fig <ref type="figure">7b-d</ref>).</s><s>Thus, in late learning we observed clear evidence of positive prediction error correlates in mDA neuron activity.</s><s>We also examined the response of mDA neurons to omitted rewards to look for a negative prediction error correlate.</s><s>Brief pauses in mDA neuron activity at the time of omitted rewards have provided the most direct evidence to date for negative prediction errors mediated by inhibition of mDA neurons at the moment of an expected (but omitted) delivery of reward <ref type="bibr" target="#b39">40,</ref><ref type="bibr" target="#b40">41</ref> .</s><s>As with positive prediction errors we observed a significant pause in mDA activity to omitted rewards that emerged during late training, but was not present earlier (middle training: 5.4 ± 0.7 to 5.7 ± 0.9, p = 0.73, n = 16; late training: 5.3 ± 0.6 to 2.6 ± 0.4, p &lt;0.0001, n = 17; Fig. <ref type="figure">7d</ref>; Supplementary Fig. <ref type="figure">7</ref>).</s><s>Thus, the eventual emergence of signed RPE correlates (uncued &gt; cued &gt; 0 &gt; omitted), and the specific shape of the mDA neuron response to water delivery we observed is remarkably consistent with previous observations in mice with ~1000-2000 trials of training <ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b37">38</ref> .</s></p><p><s>The unpredicted mDA response had two clear peaks ('bimodal') consistent with many previous reports at later stages of training in a variety of species 3 including mice <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b35">36</ref> .</s><s>What has not been appreciated to date is that these two peaks occur at very similar latencies to canonical sensory cue-related responses (~50-150 ms) and the latency to initiate consumptive licking (&gt;150 ms) after uncued water delivery, respectively (Fig. <ref type="figure">7a-d</ref>).</s><s>Additionally, we found that only a subset of individual mDA neurons displayed bimodal response timecourses (Fig <ref type="figure">7e</ref>).</s><s>When analyzed separately, both unimodal and bimodal populations encoded positive prediction errors in the form of larger responses to uncued rewards (unimodal: 7.6 ± 0.5 vs 9.4 ± 0.7, p=0.03, n= 7; bimodal: 9.2 ± 0.7 vs 11.6 ± 1.1, p = 0.006, n = 11) indicating that unimodal responses did not reflect the absence of a component of the mDA response; rather, bimodal and unimodal response timecourses could reflect differences in temporal integration.</s><s>One key difference in action timing could dictate these changes in integration: while during bimodal responses the latency from reward delivery to the first rewarded lick event was significantly longer for cued vs uncued rewards (155 ± 9 vs 213 ± 27 ms, n = 11, p = 0.002), this difference was smaller and nonsignificant during the recording of unimodal responses (142 ± 14 vs 162 ± 1 ms, n = 7, p = 0.06).</s><s>The timing of action thus correlates with the timecourse of the mDA RPE correlate, indicating that temporal integration of sensory cue-related and action initiation-related components determines mDA reward expectation signals.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A model sufficient to account for the emergence of RPE correlates</head><p><s>To further assess whether temporal integration was quantitatively consistent with our data, we developed a model with the minimal features we propose to explain mDA responses during early learning.</s><s>mDA responses integrate: (1) an excitation associated with reward predictive sensory cues that strengthens with learning and (2) an excitation-inhibition sequence around initiation of appetitive actions (e.g.</s><s>lick bouts) constant throughout learning.</s><s>Predicted mDA neuron responses were generated by convolving these impulse response functions with observed behavior distributions (Fig. <ref type="figure">7c</ref>; the distribution of latencies to initiate consummatory lick bouts) across training phases (Fig. <ref type="figure" target="#fig_7">8</ref>; Supplemental Methods).</s><s>This reduced model was sufficient to account for the detailed time course of mDA neuron activity throughout novel learning (Fig. <ref type="figure" target="#fig_7">8</ref>).</s></p><p><s>Canonical implementation models of RPE predict that the magnitude of inhibition to an omitted reward is necessarily correlated with the difference between predicted and unpredicted rewards (e.g.</s><s>equations 3 and 4 in <ref type="bibr" target="#b14">15</ref> ).</s><s>As noted above, our data exhibit a positive, rather than negative, correlation inconsistent with predictions from such models (Fig. <ref type="figure" target="#fig_4">4c-e</ref>).</s><s>In the implementation we propose here (Fig. <ref type="figure" target="#fig_7">8</ref>), negative trial by trial correlations are not predicted nor is inhibition required to account for the difference between predicted and unpredicted reward responses.</s><s>Consistent with our implementation, suppression of activity on omitted trials was uncorrelated with either the timecourse or integrated difference between predicted and unpredicted reward responses (Supplementary Fig. <ref type="figure">7a-c</ref>).</s><s>In contrast, our account predicts that the magnitude of inhibition observed during omitted rewards reflects inhibition following self-initiated movement lacking expectation of reward (i.e.</s><s>similar to 'lick-' in Fig. <ref type="figure" target="#fig_5">5</ref>).</s><s>The magnitude of suppression of mDA neurons on omitted trials was indeed correlated with the magnitude of inhibition during self-initiated movements (Supplementary Fig. <ref type="figure">7d-e</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>Here we show that the positive, phasic responses of mDA neurons reflect the summation of an excitation-inhibition sequence related to initiation of appetitive actions and an excitation associated with sensory cues that predict future reward.</s><s>In both components, the excitation (but not inhibition) is modulated by expectation of reward; however, only the sensory cuerelated excitation depends upon the extent of training.</s><s>These two sources of input appear to summate and have distinct dynamics during learning.</s><s>We thus propose that these components of the mDA neuron response may reflect separate afferent pathways consistent with the diverse excitatory inputs to mDA neurons <ref type="bibr" target="#b41">42</ref> .</s><s>All inputs, albeit in different ratios <ref type="bibr" target="#b42">43</ref> , appear to be present in the majority of VTA and SNc mDA neurons consistent with a number of projections from frontal cortex and midbrain that target both mDA neuron populations <ref type="bibr" target="#b41">42</ref> .</s><s>Specific inactivation of colliculonigral projections has been observed to block some, but not all, components of mDA neuron responses in trained monkeys <ref type="bibr" target="#b43">44</ref> consistent with our observations that multiple, dissociable components underlie mDA neuron responses during conditioning.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Action determines the timing of mDA signals</head><p><s>Phasic mDA activity associated with the initiation of action has been observed many times in the literature; however, the sign, prevalence, timing, and learning-related properties of these correlates are variable across studies <ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b44">45</ref> . Here we </s><s>rovide a set of observations obtained in a large set of identified mDA neurons from two major midbrain nuclei during associative learning that can help to reconcile these observations.</s><s>We find that a majority of mDA neurons receive a sequence of excitation followed by inhibition around movement initiation, even in naïve animals.</s><s>Movement-related inhibition appears more constant than excitation, as the introduction of rewards to the context significantly increased excitation at least in the SNc subpopulation.</s><s>However, even in a rewarded context, selfinitiated movement did not result in large excitation across the entire population, but only within a minority of individual neurons in both VTA and SNc.</s></p><p><s>Arguing against a movement-specific subpopulation in our data, of 21 individual mDA neurons lacking excitation to reward cues, only 1 exhibited significant excitation around self-initiated movement (Supplementary Fig. <ref type="figure" target="#fig_1">1d</ref>), while over the population movement initiation-related and sensory cue-related activity was positively correlated (Fig. <ref type="figure" target="#fig_5">5d</ref>, n = 96, r = 0.35, p &lt; 0.001).</s><s>We note that our recordings were localized to relatively lateral VTA and medial SNc.</s><s>These subregions contain a substantial portion of midbrain dopamine neurons, and are less diverse in their connectivity, response patterns, and biophysical properties than the medial VTA and lateral SNc, which might exhibit more specialization <ref type="bibr" target="#b42">43,</ref><ref type="bibr" target="#b45">46</ref> .</s><s>While we did not observe a clear dissociation between mDA neurons that respond to action initiation and sensory cues, we note that the characteristic response to movement initiation was correlated with a difference in baseline firing rate (Supplementary Fig. <ref type="figure" target="#fig_1">1c</ref>) consistent with mDA heterogeneity reflected in the biophysics of individual neurons <ref type="bibr" target="#b45">46</ref> .</s></p><p><s>Optogenetic manipulation can drive a substantially larger and more sustained activation of mDA populations than observed during behavior.</s><s>Thus, we tested the sufficiency of mDA excitation for the control of movement using stimulation patterns calibrated (within the same animal) to physiological reward signals (largest transients observed during behavior).</s><s>Stimulation calibrated to reward responses was sufficient to produce conditioned place preference, yet effects on movement were not apparent -arguing for a primary role of phasic DA signals in learning, rather than online behavioral control.</s><s>A net effect on movement required stimulation at least 5x greater in magnitude and 2x greater in duration than that observed in response to reward and many fold greater than the observed correlate of movement initiation.</s><s>This data both highlights the value of using calibrated exogenous stimulation and suggests that the typical phasic bursts of mDA activity associated with action initiation are not causal for movement.</s><s>Rather, our data suggests that these mDA bursts may be a corollary signal associated with certain instances of action initiation under the expectation of a reward.</s><s>The tight temporal synchronization of certain actions with phasic mDA signals (e.g.</s><s>Fig <ref type="figure" target="#fig_3">3b</ref>) suggests that the circuit mechanisms for generating phasic movement-related bursts in mDA neurons may fundamentally rely on the transition to action <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b28">29</ref> not solely on motivationally-relevant sensory stimuli.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RPE correlates emerge following behavioral adaptation</head><p><s>Our study is consistent with the fundamental insight that mDA neuron activity reflects aspects of subjective reward expectation <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b30">31</ref> .</s><s>We elaborate a parsimonious model that is the first model to quantitatively account for the precise timecourse of mDA response and the slow emergence of RPE correlates during initial learning.</s><s>Our model contrasts with qualitative proposals that mDA responses in naïve mice are primarily salience or novelty responses and/or reflect direct sensation of a water reward <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b14">15</ref> .</s><s>Our data and model are consistent with causal evidence that exogenous induction of RPE correlates in mDA neuron activity is sufficient for learning <ref type="bibr" target="#b46">47,</ref><ref type="bibr" target="#b47">48</ref> and that even prolonged suppression of mDA neuron activity within trials does not impair motor components of task performance <ref type="bibr" target="#b38">39,</ref><ref type="bibr" target="#b48">49</ref> .</s></p><p><s>Detailed analysis of the emergence of mDA activity correlates revealed that both sensory cue-related and action initiation-related mDA neuron activity (at least in part) reflect expectation of reward.</s><s>Learning drives both changes in behavior (action timing) and enhanced sensory cue-related components that lead the integrated mDA response to correlate with RPE after learning.</s><s>However, our data and our proposed model calls for a revision of the proposed circuit implementation of RPE signaling during initial learning <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b35">36</ref> .</s><s>The additive combination of sensory-related (input) and movement-related (output) signals in mDA neurons suggests that dopamine release could mediate a Hebbian-like teaching signal reflecting moments when sensory input coincides with action output.</s><s>Hebbian rules are often sufficient for learning and can be equivalent to error-based rules <ref type="bibr" target="#b49">50</ref> .</s><s>Thus, an initial correlation-based teaching signal in the activity of mDA neurons may allow a novice animal to rapidly learn from its successes and later produce RPE correlates that could be useful for reducing errors or adapting to changes in contingency.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Animals.</head><p><s>All procedures and animal handling were performed in strict accordance with protocols (11-39) that were approved by the Institutional Animal Care and Use Committee (IACUC) and consistent with the standards set forth by the Association for Assessment and Accreditation of Laboratory Animal Care (AALAC).</s><s>For behavior and cell-attached recordings we used 11 adult male DAT-Cre::ai32 mice (10-24 weeks old) resulting from the cross of DAT IREScre (The Jackson Laboratory stock 006660) and Ai32 (The Jackson Laboratory stock 012569) lines of mice, such that a Chr2/EYFP fusion protein was expressed under control of the endogenous dopamine transporter Slc6a3 locus to specifically label dopaminergic neurons.</s><s>For combined fiber photometry and Chr2-stimulation experiments, we used 8 DAT-Cre::ai32 male mice (14-24 weeks old).</s><s>The specificity of labelling in the DAT-cre mice has been previously characterized with Rosa26 reporter mice <ref type="bibr" target="#b50">51</ref> and the DAT-cre::Ai32 double transgenic has been used previously to obtain specific activation of mDA neurons <ref type="bibr" target="#b51">52</ref> .</s><s>All animals were handled in accordance with guidelines approved by the Institutional Animal Care and Use Committee of Janelia Research Campus.</s><s>Animals were housed on a 12-hour dark/light cycle (8am-8pm) and recording sessions were all done between 9am-1pm.</s><s>Following at least 4 days recovery from headcap implantation surgery, animals' water consumption was restricted to 1 mL per day for at least 3 days before training.</s><s>Mice underwent daily health checks, and water restriction was eased if mice fell below 75% of their original body weight.</s><s>No randomization procedure was employed to determine inclusion of mice in the study-mice for each experiment type were chosen arbitrarily from among available litters.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral training.</head><p><s>Mice were habituated to head fixation in a separate area from the recording rig in multiple sessions of increasing length over &gt;= 3 days, including manual water administration through a syringe.</s><s>Mice were then habituated to head fixation while resting in a spring-suspended basket in the recording rig for at least two 30+ minute sessions before recordings were attempted or training commenced.</s><s>No liquid rewards were administered during this recording rig acclimation.</s><s>Mice head-fixed while resting in a spring-suspended basket were then trained to learn a classical (Pavlovian) auditory trace-conditioning paradigm.</s><s>The reward consisted of 3 μL of water sweetened with the non-caloric sweetener acesulfame potassium delivered through a lick port under control of a solenoid.</s><s>In the first training session, a 0.5 s, 10 kHz tone preceded reward delivery by 1.5 s on 100% of trials.</s><s>In subsequent training sessions, "unpredicted" reward responding was assessed by randomly omitting the predictive tone on 30% of trials during select blocks of trials, with the result that the proportion of unpredicted reward trials never exceeded 10% over any given training session.</s><s>"Omitted" reward responding was assessed by randomly omitting the reward following a predictive tone on 30% of trials during select blocks of trials, such that the proportion of omitted reward trials never exceeded 10% over any given training session.</s><s>Intertrial intervals were chosen from randomly permuted exponential distributions (means of ~10, 25, or 50 s) every 20 trials in order to fully disrupt reliable estimation of intertrial interval while keeping the mean interval tractable for recording.</s><s>Ambient room noise was 50-55 dB, while an audible click of ~53 dB attended solenoid opening upon water delivery and the predictive tone was ~65 dB loud.</s><s>It should be noted that these stimuli are all quieter than the 72-90 dB stimuli that were reported to activate mDA neurons via their salience in primates <ref type="bibr" target="#b31">32</ref> .</s><s>Indeed, in naïve animals no significant modulation was apparent to the tone (Fig. <ref type="figure" target="#fig_2">2a</ref>, left), and the timecourse of modulation by reward delivery early in training (Fig. <ref type="figure" target="#fig_5">5a,</ref><ref type="figure">b</ref>) was not consistent with proposed salience signaling in mDA neurons.</s><s>However, to control for such signaling as an alternative explanation for the predictive nature of the mDA reward response, we recorded from additional mice trained with an inaudible solenoid (The Lee Company, LHQA1231220H).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral and electrophysiological measurements.</head><p><s>Individual licks were timestapped according to deflections of a piezo strip supporting the lick port.</s><s>Piezo signals were high-pass filtered at 0.1 Hz, then rectified and smoothed by convolving with a square wave in order to facilitate identification of individual tongue strikes during high frequency lick bouts.</s></p><p><s>Basket movements were recorded by a triple-axis accelerometer (Adafruit, ADXL335) attached to the underside of a custom-designed 3D-printed basket suspended from springs (Century Spring Corp, ZZ3-36) well suited to allow robust movements but fully support the ~20-25 g body weight of adult mice.</s><s>Basket height relative to the point of head fixation was set so that a mouse's back was at a ~30° angle to the plane of the its headcap.</s><s>This positioning was comfortable for the animals and minimized the translation of body movement to movement of the brain with respect to the skull, allowing for more stable recordings.</s><s>Raw accelerometer signals summed across all axes were used to identify transitions from rest to movement (movement initiations).</s><s>Relative basket position was tracked by low-pass filtering accelerometer data at 2.5 Hz to enrich for the signal corresponding to forces due to the angle of the accelerometer with respect to the earth.</s><s>Both lick and movement events were detected by threshold crossing but were timestamped according to the their earliest deviation from the previous baseline signal.</s></p><p><s>Electrophysiological recordings were made with a Multiclamp 700B amplifier (Molecular Devices) interfaced to a computer by an analog-to-digital converter (National Instruments, PCI 6259) controlled by Axograph X recording software (www.axograph.com).</s><s>Spikes were recorded in current clamp mode, AC-coupled at 1 Hz, then high-pass filtered at 300 Hz to facilitate simple threshold crossing analysis to generate spike time stamps.</s><s>Data were smoothed by convolving with a Gaussian function with a 20 ms decay.</s></p><p><s>The above signals as well as the command signals that spanned the predictive tone length, the reward solenoid open time, and the on time of the laser used for optotagging were synchronously recorded and digitized (at 1 kHz for behavioral data, 30 kHz for electrophysiology data) with a Cerebus Signal Processor (Blackrock Microsystems).</s><s>Stimulations and cue deliveries were coordinated with custom-written software using Arduino Mega hardware (www.arduino.cc).</s><s>Data was analyzed using Matlab software (Mathworks).</s><s>Data analysis was done in batches following days or weeks of recording sessions.</s><s>During initial analysis including timestamping of action potentials and alignment to task and behavioral variables, the experimenter was blinded to the recording location (ventral tegmental area vs substantia nigra) of the individual neuron as well as the training progression of the animal at the time of recording.</s><s>Blinding to the above variables during data acquisition was not attempted.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cell-attached recording.</head><p><s>A small craniotomy (&lt;200 μm diameter) was made over the recording site (from bregma: -3.2 posterior, 0.5 lateral for VTA, -3.0 posterior, 1.5 lateral for SNc) at least 4 hours prior to recording.</s><s>Exposed brain tissue was kept moist with phosphate-buffered saline at all times, and craniotomy sites were covered with Kwik-Sil elastomer (WPI) outside of the recording session.</s><s>Borosillicate glass pipettes (Sutter, BF165-120-10) were pulled to a long taper (~10 mm taper) with a ~1-2 μm tip (resistance 4-14 mOhm) with a P-97 micropipette puller (Sutter).</s><s>Pipettes were filled with 0.5 M NaCl solution and mounted in a holder with a side port (Warner, PE30W-T17P) to allow insertion of a fiber (105 μm core, 0.22 NA, Thorlabs) that was coupled to a 473 nm laser (50mW, OEM Laser Systems) to carry light to the pipette tip.</s><s>An AgCl pellet reference electrode was placed in the well of saline that covered the craniotomy site.</s><s>Experimental power ranges out of the assembly were estimated by painting the taper of a pipette with nail polish in order to simulate brain tissue attenuation of light escaping the pipette, and were found to be 0.5-1.5 mW across the laser powers used during experiments.</s></p><p><s>Pipettes were lowered through the brain with a micromanipulator (Luigs and Neumann) while a small cycling current injection allowed monitoring of resistance changes across the pipette tip.</s><s>In addition to stereotactic coordinates, dopaminergic regions could be further targeted empirically by monitoring extracellular potentials in response to brief (&lt;5 ms) flashes of blue light through the pipette tip (Fig. <ref type="figure" target="#fig_1">1E</ref>).</s><s>The amplitude of population responses closely corresponded to patterns of dopaminergic cell body enrichments predicted from standard coordinates <ref type="bibr" target="#b21">22</ref> .</s><s>Deviations from that correspondence represented errors introduced through individual anatomical variation or the plane of headcap attachment to the skull, and referencing of the population response allowed correction on subsequent passes, greatly increasing the yield of identified mDA recordings across the life of each animal.</s><s>Once within a dopaminergic region, the pipette tip was advanced by 1-2 μm steps until a steep increase in resistance was detected.</s><s>The pipette was then advanced 5-10 μm until positivegoing spikes were resolved well above noise (&gt;~0.5 mV).</s><s>ChR2-expression was assayed with 0.5 s 473 nm light stimulations, either in bursts of 1 ms flashes at 10 Hz or continuous pulses.</s><s>Cells were not re-identified for the remainder of the recording session so as not to interfere with physiological responses.</s><s>Cells were held for a median of 11 trials (interquartile range 7:19) and a median of 27 self-initiated movements (IQR 14:47).</s><s>During pilot experiments, 0 of 20 neurons in the first 2 mm of tissue overlying the targeted areas were significantly modulated by stimulation with max laser power (~26 mW out of the fiber tip), indicating that activation due to heating or other nonspecific processes was not a concern.</s></p><p><s>This technique is commonly referred to as "juxtacellular" recording, however that term can imply that transmembrane labelling was always performed.</s><s>In order to increase yield from each animal, we did not label and recover a majority of cells, instead relying on the depth soundings reported by the extracellular responses to light for a reliable estimation of recording position.</s><s>However, in some pilot experiments, identified mDA cells were labeled in the juxtacellular configuration for future recovery by including Neurobiotin (Life Technologies) in the pipette solution and entraining spiking with 2 Hz, 50% duty cycle current injections of the minimum amplitude required to entrain spiking (&gt;1 nA).</s></p><p><s>We quantified tone and reward responses by averaging firing rates over a 500-ms window following the cue and subtracting the average baseline firing rate in the 1000 ms preceding tone delivery <ref type="bibr" target="#b20">21</ref> .</s><s>We quantified movement responses by averaging firing rates over a 300-ms window beginning 50 ms before movement initiation and subtracting baseline firing ratesthis window was chosen in order to capture the bulk of both excitatory and inhibitory responses across different neurons.</s><s>Slightly different windows were used for one-tailed tests of significant modulations of activity by movement initiation in single cells: for excitation, a 200 ms window beginning 100 ms before initiation was used; for inhibition, a 300 ms window beginning at the moment of movement initiation was used.</s><s>These parameters better described the activity during the optimal windows for each signal.</s></p><p><s>The numbers of cells recorded in each trail type for each animal is detailed in Supplementary Table <ref type="table">1</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Combined fiber photometry and optogenetic stimulation.</head><p><s>In the course of a single surgery session, DAT-Cre::ai32 mice received:</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>1)</head><p><s>Bilateral injections of AAV2/1-CAG-FLEX-jRCaMP1a in the VTA (50-100 nL at the coordinates -3.1 mm A/P, 1.3 mm M/L from bregma, at depths of 4.6 and 4.3 mm) or in the SNc (100 nL at the coordinates -3.2 mm A/P, 0.5 mm M/L, depth of 4.3 mm)</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>2)</head><p><s>Custom 0.39 NA, 200 μm fiber cannulas implanted bilateral directly above the injection sites, (VTA: -3.2 mm A/P, 0.5 mm M/L, depth of -4.1 mm; SNc: -3.2 mm A/P, 1.4 mm M/L, depth of 4 mm)</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3)</head><p><s>Fiber cannula implanted unilaterally in either dorsal striatum (0.9 mm A/P, 1.5 mm M/L, depth of 2.5 mm) or ventral striatum (1.5 mm A/P, 0.85 mm M/L, depth of 4.1 mm).</s><s>Hemisphere choice was counterbalanced across individuals.</s></p><p><s>Imaging began 20 days post-injections using a fiber photometry system custom-built around a 5-port filter cube (FMC5, Doric Lenses).</s><s>The system was designed with two parallel excitation-emission channels to allow for simultaneous measurement of RCaMP1a and eYFP fluorescence, the latter channel having the purpose of controlling for the presence of movement artifacts.</s><s>470 nm and 565 nm fiber-coupled LEDs (M470F3, M565F3, Thorlabs) were connected to excitation ports with acceptance bandwidths of 465-490 nm and 555-570 nm respectively with 200 μm, 0.22 NA fibers (Doric Lenses).</s><s>Light was conveyed between the sample port of the cube and the animal by a 200 μm core, 0.39 NA fiber (Doric Lenses) terminating in a ceramic ferrule that was connected to the implanted fiber cannula by a ceramic mating sleeve (ADAL1, Thorlabs) using index matching gel to improve coupling efficiency (G608N3, Thorlabs).</s><s>Light collected from the sample fiber was measured at separate output ports (emission bandwidths 500-540 nm and 600-680 nm) by 600 μm core, 0.48 NA fibers (Doric Lenses) connected to silicon photoreceivers (2151, Newport).</s><s>Signals from the receivers were streamed into the Blackrock Cerebus Signal Processor described above at 30 kHz.</s><s>In order to avoid influencing physiological RCaMP signals, blue excitation for the measurement of the static eYFP signal was only used intermittently outside of recording periods to verify the absence of significant movement artifacts aligned to task variables or somatic mDA stimulation.</s><s>LEDs were controlled at a frequency of 50 Hz (3 ms on, 17 ms off) by TTL signals which were recorded so that excitation-specific signals could be resolved in analysis using custom-written Matlab code.</s></p><p><s>Somatic Chr2 excitation was performed with a 473 nm laser (50mW, OEM Laser Systems) coupled by a branching fiber patch cord (200 μm, Doric Lenses) to the SNc or VTAimplanted fiber cannulas using a ceramic mating sleeve.</s><s>30 Hz burst activations (10 ms on, 23 ms off) were delivered with durations of either 150 ms or 500 ms.</s><s>Two levels of laser power were used, resulting in 1 mW or 7 mW peak power with constant illumination, measured at the tip of the ferrule of the patch cable.</s><s>The lower level of 1 mW was chosen because when given in a 150 ms-duration burst it resulted in axonal Ca2+ signals equivalent to those measured in response to reward delivery after 2-4 training sessions.</s><s>For movement initiation sufficiency tests (Fig. <ref type="figure">7b-d</ref>), burst stimulations were delivered with interstimulus intervals randomly chosen from an exponential distribution with a mean of 32 seconds.</s><s>One of the four burst options (low or high power, short or long burst) were chosen at random for each trial.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conditioned place preference.</head><p><s>Mice were placed in an open arena with a clear floor through which video data was monitored, and their VTA-or SNc-targeted fibers were mated to the laser patch cable tethered to a commutator suspended above the arena.</s><s>One quadrant was chosen at random in which the mouse would receive bilateral laser burst stimulation (calibrated to a rewardequivalent level: 150 ms long, 30 Hz burst with 1 mW peak power), and stimulation was triggered by entry into an area within one-half of the quadrant's length from the corner of the quadrant (see Fig <ref type="figure">7f</ref>).</s><s>Stimulation was delivered with a minimum interstimulus interval of 4 seconds while the mouse was in the designated stimulation area.</s><s>This intermittent schedule was chosen rather than the more common constant burst illuminations used in order to be comparable to the isolated bursts used in the tests for movement initiation sufficiency.</s><s>Sessions lasted 60 minutes and time spent in each quadrant was totaled over the entirety of the session.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistical analysis.</head><p><s>No statistical methods were used to pre-determine sample sizes but our sample sizes are similar to those reported in previous publications <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b22">23</ref> .</s><s>Data distribution was assumed to be normal but was not formally tested for normality.</s><s>Paired comparisons were made using twotailed Students' t-tests, except where significance was tested for individual neuron activity aligned to movement or reward, in which case one-tailed Wilcoxon signed rank tests were performed.</s><s>Multiple comparisons were made using ANOVAs with Tukey's post-hoc multiple comparisons test (Graphpad Prism).</s><s>Contingency testing was done with the chisquared test.</s><s>Errors are reported as standard errors of the mean (s.e.m.).</s><s>All sample sizes refer to the number of distinct neurons summarized in the data, or for behavioral quantification (e.g.</s><s>Fig. <ref type="figure" target="#fig_2">2b</ref>), it refers analogously to the number of distinct neuron recording sessions during which behavior was quantified.</s><s>For the receiver-operator characteristic (ROC) analysis of differences between baseline and delay period (anticipatory) licking, number of licks were counted per 100 ms-bins in the baseline period 1000 ms before cue delivery, and compared to lick counts in 100 ms bins during the 1000 ms delay period following cessation of the auditory cue.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Histology.</head><p><s>Mice were killed by anesthetic overdose (isoflurane, &gt;3%) and perfused with ice-cold phosphate-buffered saline (PBS), followed by paraformaldehyde (4% wt/vol in PBS).</s><s>Brains were post-fixed for 2 h at 4° C and then rinsed in saline.</s><s>Whole brains were then sectioned (100 μm thickness) using a vibrating microtome (VT-1200, Leica Microsystems).</s><s>For recovery of juxta-labelled cells from pilot experiments exemplified in Fig <ref type="figure" target="#fig_1">1e-g</ref>, slices were incubated with Alexafluor 594-conjugated streptavidin to visualize Neurobiotin-labeled neurons against the backdrop of EYFP-expressing mDA neurons.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Model simulations.</head><p><s>Simulations were implemented in Matlab as described in Figure <ref type="figure" target="#fig_7">8</ref> and the main text.</s></p><p><s>Example simulation code related to Figure <ref type="figure" target="#fig_7">8</ref> is available at www.dudmanlab.org/html/</s><s>learnda.html.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reporting Summary.</head><p><s>Further information on study design is available in the attached Life Science Reporting Summary.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s><s>predicted mDA activity panels: Impulse response functions were derived from data using a either a single excitatory Gaussian function for cue-related activity or a sequence of excitatory and delayed inhibitory Gaussian functions for movement-related activity (Fig. <ref type="figure" target="#fig_3">3</ref>, 5, 7).</s><s>Impulse response functions scaled by input strength for cue-related activity or scaled and convolved with a probability distribution matching observed behavior distributions for movement-related activity (distributions fit to Fig. <ref type="figure">7</ref>).</s><s>This yielded two components of mDA activity (cue-related in cyan and movement-related in magenta).</s><s>Simulated mDA responses are the sum of these components for predicted (red) and unpredicted (black) water delivery.</s><s>Lower box compares simulated mDA responses and to mDA neuron recording data for comparison.</s><s>See Matlab code in Supplemental Methods to recreate figure.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc><div><p><s>2 ± 0.6 vs 4.8 ± 0.6 Hz, p = 0.25, Fig 5b).</s><s>Importantly, responses to self-initiated movement were not correlated with training (Fig 5c, r = 0.1, p = 0.32) but were correlated with their response to auditory cues (Fig 5d, r = 0.35, p &lt; 0.001), as can be appreciated in the blunted cue responses for mDA neurons significantly inhibited around movement (Fig 5a, right; p &lt; 0.0001).</s><s>Together, these results suggest that mDA neuron activity reflects the sum of action initiation and reward-predictive sensory cue inputs.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 1 .</head><label>1</label><figDesc><div><p><s>Fig. 1.</s><s>Juxtacellular recording from identified midbrain dopamine neurons in awake, behaving mice.</s><s>a) Schematic of the head-fixed behavioral apparatus.</s><s>Mice were head-fixed in front of water port tube positioned within tongue-length and supported by a spring-suspended basket monitored by an accelerometer.</s><s>Small droplets of sweetened water (~3 uL) were delivered by opening a valve on a gravity fed line; a suspended drop of liquid stayed on port until collected by licking.</s><s>b) Auditory stimuli, openings of a solenoid water valve (reward), vibration of the water port due to licking (licking), and juxtacellular recordings from identified midbrain dopamine (mDA) neurons could be recorded simultaneously with bodily movements that displaced basket position relative to its resting position (relative basket position).</s><s>c) Licking (upper) and basket displacement (lower, 'mvmt') in response to auditory cue (shaded gray bar) and sweetened water delivery (dashed line) averaged for the same mouse at training sessions 1, 3, and 8, n = 50 trials for each average trace.</s><s>d) (upper) Area under the receiver operating characteristic (AU-ROC) curve to assess whether number of licks differed significantly from baseline (first session to reach significance at p &lt; 0.05 for each animal indicated with asterisk) during the 1 second delay between cue and reward.</s><s>Colored lines represent individual mice, mean data shown in bolded circles with SEM.</s><s>(lower) % of animals with p &lt; 0.05 for AU-ROC analysis as training progresses.</s><s>e) mDA neurons in DAT-cre::ai32 mice selectively express a channelrhodopsin-YFP (ChR2-YFP) fusion protein.</s><s>Representative histological section shows labeling of mDA soma in the midbrain and terminals in the striatum (also see Supplementary Fig. 1).</s><s>White and red arrows indicate the trajectory of a recording pipette and approximate location of recorded neuron for the example experiment shown in f-g.</s><s>White scale bar = 1 mm.</s></p></div></figDesc><graphic coords="20,84.00,62.00,504.00,275.76" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 2 .</head><label>2</label><figDesc><div><p><s>Fig. 2. Peri-movement excitation of mDA neurons, but not inhibition, depends on reward context.</s><s>a) (upper) Raster plot and perievent time histogram (PETH) for example SNc (left, dark blue) and VTA (right, cyan) DA neurons, (middle) Heat maps of z-scored PETHs for the two populations, (lower) and average PETHs recorded after acclimation to the recording rig but before animal ever received sweetened water rewards.</s><s>PETHs are aligned to the beginning of self-initiated movements.</s><s>Shaded areas indicate SEM.</s></p></div></figDesc><graphic coords="22,210.84,62.00,250.32,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 3 .</head><label>3</label><figDesc><div><p><s>Fig. 3. Initial mDA reward responses encode reward-related movements a) Raw cell-attached recording from a mDA SNc neuron aligned to water delivery during the first 30 training trials experienced by the mouse.</s><s>Trials are sorted according to the latency for the first lick (cyan) to collect the sweetened water droplet from the water port.</s><s>b) Trial by trial normalized cross correlation between lick rate and mDA neuron activity in the 1 sec surrounding reward delivery (n = 22 neurons recorded early in learning, mean ± SEM).</s><s>Points of max correlation above (circles, with overlayed mean and SEM bars).</s><s>Lag was -96 +/-44 ms.</s><s>Significantly different from zero; p = 0.04 two-sided t-test.</s><s>c) Mean firing rate (top) and lick (bottom) rates aligned to the first contact of the tongue to the lick port after water delivery for 10 (out of 22) mDA neurons with significant responses to water delivery (as determined by one-tailed sign rank test p &lt; 0.05) early in training (sessions 1-3).</s><s>Shaded areas indicate SEM.</s><s>d) (left) Average firing rates aligned to water delivery for mDA neurons recorded in the first 300 trials of training (gray, n = 22) or the next 600 trials of training (black dashed, n = 43).</s><s>(right) Mean modulation of firing rate for mDA neurons recorded in trials 1-300 (gray points) vs trials 301-900 (black points) in the time windows indicated by pink (1-150 ms post reward, two-sided t-test p = 0.0002) and gray (151-400 ms post reward, two-sided t-test p = 0.6) bars drawn below traces at left.</s><s>Black bars indicate mean ± SEM. e) Data from 2 additional mice trained with an inaudible solenoid (see Supplementary Fig. 3) controlling water delivery.</s><s>Mean firing rate for 5 (out of 10) mDA neurons with significant responses to water delivery (as determined by one-tailed sign rank test p &lt; 0.05) recorded early in training (session 1-3).</s><s>Shaded areas indicate SEM.</s></p></div></figDesc><graphic coords="24,84.00,62.00,504.00,222.96" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4 .</head><label>4</label><figDesc><div><p><s>Fig. 4. mDA neuron responses to predictive cue and reward stimuli evolve independently during acquisition learning a) Behavioral (upper row) and mean mDA firing rate aligned to the opening of the water valve and divided in to early (sessions 1-3, left column) middle (sessions 4-8, middle) and late (sessions &gt;8, right) training sessions.</s><s>Conditioned responding was assessed by measuring relative basket position (basket mvmt) and lick rate.</s><s>Smoothed peri-event time histograms (PETHs) for identified mDA neuron populations recorded in SNc (dark blue, middle row) and VTA (cyan, lower row).</s><s>Shaded area indicates the standard error of the mean (s.e.m.); number of cells composing the mean as labeled.</s><s>b) Behavioral learning measures during each individual neuron recording period (n = 96).</s><s>Both the number of licks during the cue-reward trace interval (licks in CR, left) and basket movement (fraction of movement following the reward) were significantly correlated with the number of training trials experienced at the time of recording.</s><s>Results of Pearson's correlation shown.</s><s>c) The mean modulation of mDA neuron activity following the predictive tone (left, n = 96) or reward (right, n = 96) were plotted as a function of the number of training trials experienced at the time of recording, with 10 sample running average overlaid (blue line), y=0 highlighted as thin dashed lines.</s><s>Colors reflect SNc (dark blue) and VTA (cyan) populations.</s><s>Results of Pearson's correlation shown.</s><s>d) Mean modulation of mDA neuron firing rate in response to predictive tone and reward stimuli are positively correlated (dotted line represents best-fit trend).</s><s>e) Rho values for within-neuron trial by trial Pearson's correlations between cue responses and reward responses for neurons with significant modulation by cues or water delivery (n=75).</s><s>Only filled circles were significant at (p &lt; 0.05).</s><s>(Inset) Histogram of cue-reward correlation rho values, with significant correlations shaded darker.</s></p></div></figDesc><graphic coords="25,84.00,62.00,504.00,171.12" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 5 .</head><label>5</label><figDesc><div><p><s>Fig. 5. Peri-movement activity reflects reward expectation and sums with cue responses a) (left) PETHs aligned to initiation time of movements from the intertrial intervals (selfinitiated) or following reward-repdcitive cue (cued) from the combined population of SNc and VTA mDA neurons.</s><s>mDA neurons were sorted into populations with significant excitation (left) or inhibition (right) around time of movement initiation (thin vertical lines).</s><s>Each set of PETHs is separated into self-initiated movements absent licking (dashed light green, Lick-), self-initiated movements accompanied by licking (dark green, Lick+).</s><s>(right) In the same neurons, activity aligned to movement initiations in the trace period following auditory cue onset separated according to whether mDA neurons were excited (gray) or inhibited (black) around self-initated movements.</s><s>Corresponding PETHs of the basket movement signal (mvmt) are shown in lower rows.</s><s>b) Quantification of individual mDA neurons for populations represented in (a).</s><s>c) Mean modulation of mDA neuron activity during movement initiation (ΔDA at movement) is not correlated to training trials experienced (Pearson's, n = 96).</s><s>d) ΔDA at movement is correlated to mean mDA response to the auditory cue (ΔDA at cue, Pearson's, n = 96).</s><s>SNc (dark blue) and VTA (cyan) mDA neurons identified by color.</s><s>Dotted line represents best-fit trend.</s></p></div></figDesc><graphic coords="26,84.00,62.00,504.00,193.44" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 6 .Fig. 7 .</head><label>67</label><figDesc><div><p><s>Fig. 6.</s><s>Physiological mDA stimulation supports learning but is insufficient to provoke movement initiation a) Illustration of strategy used to record projection-specific mDA activity while optogenetically stimulating mDA somata (see Methods for details).</s><s>Briefly, AAVs carrying a cre-dependent transgene for a red genetically encoded calcium indicator (jRCamp1a) were injected into either VTA or SNc.</s><s>Fibers were implanted in either SNc and dorsal striatum (dSTR; upper) or VTA and ventral striatum (vSTR; lower) to allow simultaneous optogenetic stimulation and fiberometry of mDA axons.</s><s>b) Comparison of reward responses recorded in mDA SNc&gt;dSTR projections to responses to 150 and 500 ms-duration optogenetic burst stimulations at low (1 mW peak, dark green) and high (7 mw peak, light green) laser power.</s><s>c) For an example mouse (1 of 4) average basket movement is plotted relative to time of stimulation onset.</s><s>Stimulus regimes are indicated by color and correspond to data in b.</s><s>Right panels show average modulation of movement for all mice (N=4) and stimulus conditions (N=4).</s><s>Asterisk indicates a significant difference, post-hoc Bonferroni's test p &lt; 0.0001 following 1-way ANOVA.</s><s>d-e) Same as b) and c) but for mDA VTA&gt;vSTR .</s><s>1-way ANOVA for (e) failed to find significance, F = 0.3, p = 0.8.</s><s>f) Example conditioned place preference session where mouse received 150 ms, low power burst (1 mW peak) stimulation in the blue-shaded area, showing raw movement data (left) and cumulative time spent in each quadrant as the session progressed (right).</s><s>Quadrants color coded corresponding to enclosure edges.</s></p></div></figDesc><graphic coords="27,84.00,62.00,504.00,310.80" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 8 .</head><label>8</label><figDesc><div><p><s>Fig. 8. mDA neuron responses are consistent with temporal summation of sensory cue and action initiation componentsOverview of simulation data from conceptual model (upper panels), through simulation (lower panels).</s><s>(Left box) Simulations assumed two classes of excitation onto mDA neurons: Sensory cue-related (cyan) and movement initiation-related (purple).</s><s>All excitatory inputs are independent functions of reward expectation with a shared history of reward experience.</s><s>In addition, movement-related input contained delayed inhibition.</s><s>Weight of input is schematized by fill shading in schematic.</s><s>Consistent with experimental data (Fig.2)</s></p></div></figDesc><graphic coords="31,154.92,62.00,362.16,503.50" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="29,113.52,62.00,444.96,310.75" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nat Neurosci.</s><s>Author manuscript; available in PMC 2019 April 15.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments:</head><p>This work was supported by the <rs type="funder">Howard Hughes Medical Institute</rs>.J.T.D. is a Janelia Group Leader.Thanks to Dudman lab members, <rs type="person">Kate Bittner</rs>, <rs type="person">Christine Grienberger</rs>, <rs type="person">David Hunt</rs>, <rs type="person">John Macklin</rs>, <rs type="person">Jeremy Cohen</rs>, and <rs type="person">Roian Egnor</rs> for technical guidance.Thanks to the <rs type="institution">Dudman lab, Vivek Jayaraman lab</rs>, <rs type="person">Brett Mensh</rs>, <rs type="person">Albert Lee</rs>, <rs type="person">Gerry Rubin</rs>, and <rs type="person">Jeremy Day</rs> for project feedback.Thanks to <rs type="person">Roger Rogers</rs>, <rs type="person">Jon Arnold</rs>, and <rs type="person">Cameron Loper</rs> for assistance with behavioral rig design and implementation.Thanks to <rs type="person">Sarah Lindo</rs> for assistance with surgeries.</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>The data used to generate results supporting the findings of this study are available from the corresponding authors upon reasonable request.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code availability statement:</head><p><s>The custom code used to generate results supporting the findings of this study are available from the corresponding authors upon reasonable request.</s><s>The code for the model simulation in relation to Figure <ref type="figure">8</ref> are available at the following website: www.dudmanlab.org/html/learnda.html</s></p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Hebb DO The organization of behavior; a neuropsychological theory</title>
+		<imprint>
+			<date type="published" when="1949">1949</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m">Sutton RS &amp; Barto AG Reinforcement learning : an introduction</title>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Reward and Decision Signals: From Theories to Data</title>
+		<author>
+			<persName><surname>Schultz</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/physrev.00023.2014</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol Rev</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="853" to="951" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26109341</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons report an error in the temporal prediction of reward during learning</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Hollerman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Schultz</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/1124</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="304" to="309" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10195164</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons learn relative chosen value from probabilistic rewards</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Stauffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Schultz</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.18044</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Dopamine cells respond to predicted events during classical conditioning: evidence for eligibility traces in the reward-learning network</title>
+		<author>
+			<persName><forename type="first">W-X</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Wickens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">I</forename><surname>Hyland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="6235" to="6242" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15987953</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Neural signals of extinction in the inhibitory microcircuit of the ventral midbrain</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">X</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Dudman</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.3283</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="71" to="78" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23222913</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Responses of monkey dopamine neurons to reward and conditioned stimuli during successive steps of learning a delayed response task</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Schultz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Apicella</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ljungberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="900" to="913" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8441015</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Roesch</surname></persName>
+		</author>
+		<title level="m">Calu DJ &amp; Schoenbaum G in Nature neuroscience</title>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1615" to="1624" />
+		</imprint>
+	</monogr>
+	<note>PubMed: 18026098</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Reward-predicting activity of dopamine and caudate neurons--a possible mechanism of motivational control of saccadic eye movement</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kawagoe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Takikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Hikosaka</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.00721.2003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="1013" to="1024" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14523067</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Opposite initialization to novel cues in dopamine signaling in ventral and posterior striatum in mice</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Menegas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Babayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Watabe-Uchida</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.21886</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Neural Circuitry of Reward Prediction Error</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Watabe-Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Eshel</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Uchida</surname></persName>
+		</author>
+		<idno type="DOI">10.1146/annurev-neuro-072116-031109</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Annual review of neuroscience</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Multiplicity of control in the basal ganglia: computational roles of striatal subregions</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Bornstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Daw</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.conb.2011.02.009</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="374" to="380" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21429734</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Dorsal and ventral streams: the distinct role of striatal subregions in the acquisition and performance of goal-directed actions</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">K</forename><surname>Leung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Balleine</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.nlm.2013.11.003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neurobiology of learning and memory</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="104" to="118" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24231424</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m">Suri RE &amp; Schultz W in Neuroscience</title>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="871" to="890" />
+		</imprint>
+	</monogr>
+	<note>PubMed: 10391468</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Palmiter RD Dopamine dependency for acquisition and performance of Pavlovian conditioned response</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Darvas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Wunsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Gibbs</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1400332111</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences of the United States of America</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page" from="2764" to="2769" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24550305</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">genetically targeted optical control of neural activity</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Boyden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bamberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nagel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Millisecond-Timescale</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn1525</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="1263" to="1268" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16116447</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Dudman JT RIVETS: a mechanical system for in vivo and in vitro electrophysiology and imaging</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Osborne</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0089007</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PloS one</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">89007</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24551206</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">A neural substrate of prediction and reward</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Schultz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Montague</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">275</biblScope>
+			<biblScope unit="page" from="1593" to="1599" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9054347</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">a new method of tagging neuronal populations for identification during in vivo electrophysiological recording</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Q</forename><surname>Lima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hromadka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Znamenskiy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Zador</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pinp</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0006099</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PloS one</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">6099</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19584920</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Neuron-type-specific signals for reward and punishment in the ventral tegmental area</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Haesler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Vong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bb &amp;</forename><surname>Lowell</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Uchida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">482</biblScope>
+			<biblScope unit="page" from="85" to="88" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22258508</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Component of the Evoked Potential Phasic Dopamine Neuron Activity during Conditioning</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">X</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jt A</forename><surname>Dudman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Specific</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.4096-14.2015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="10451" to="10459" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26203140</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Representation of spontaneous movement by dopaminergic neurons is cell-type selective and disrupted in parkinsonism</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Dodson</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1515941113</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences of the United States of America</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>E2180-2188. PubMed: 27001837</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Dombeck DA Rapid signalling in distinct dopaminergic axons during locomotion and reward</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Howe</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature18942</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Paixao V &amp; Costa RM Dopamine neuron activity before action initiation gates and invigorates future movements</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Da Silva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tecuapetla</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature25457</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">554</biblScope>
+			<biblScope unit="page" from="244" to="248" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29420469</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Mesolimbic dopamine signals the value of work</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Hamid</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.4173</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="117" to="126" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26595651</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Action initiation shapes mesolimbic dopamine encoding of future rewards</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Syed</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.4187</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="34" to="36" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26642087</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Beyond reward prediction errors: the role of dopamine in movement kinematics</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Barter</surname></persName>
+		</author>
+		<idno type="DOI">10.3389/fnint.2015.00039</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in integrative neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">39</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26074791</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Jin X &amp; Costa RM Start/stop signals emerge in nigrostriatal circuits during sequence learning</title>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">466</biblScope>
+			<biblScope unit="page" from="457" to="462" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20651684</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Dynamic mesolimbic dopamine signaling during action sequence learning and expectation violation</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Collins</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep20231</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Rep</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">20231</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26869075</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons of the monkey midbrain: contingencies of responses to active touch during self-initiated arm movements</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Schultz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="592" to="606" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 2329363</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Fiorillo CD Two dimensions of value: dopamine neurons represent reward but not aversiveness</title>
+		<idno type="DOI">10.1126/science.1238699</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">341</biblScope>
+			<biblScope unit="page" from="546" to="549" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23908236</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Neurons for hunger and thirst transmit a negative-valence teaching signal</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Betley</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature14416</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">521</biblScope>
+			<biblScope unit="page" from="180" to="185" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25915020</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Thirst neurons anticipate the homeostatic consequences of eating and drinking</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Zimmerman</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature18950</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">537</biblScope>
+			<biblScope unit="page" from="680" to="684" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27487211</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Wightman RM &amp; Carelli RM Associative learning mediates dynamic shifts in dopamine signaling in the nucleus accumbens</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Day</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Roitman</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn1923</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1020" to="1028" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17603481</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Tripartite mechanism of extinction suggested by dopamine neuron activity and temporal difference model</title>
+		<author>
+			<persName><forename type="first">W-X</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Wickens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">I</forename><surname>Hyland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="9619" to="9631" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18815248</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Stuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">321</biblScope>
+			<biblScope unit="page" from="1690" to="1692" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18802002</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons share common response function for reward prediction error</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Eshel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bukwich</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Uchida</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.4239</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="479" to="486" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26854803</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Midbrain dopamine neurons control judgment of time</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Soares</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">V</forename><surname>Atallah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Paton</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aah5234</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">354</biblScope>
+			<biblScope unit="page" from="1273" to="1277" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27940870</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Dopamine responses comply with basic assumptions of formal learning theory</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Waelti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dickinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Schultz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">412</biblScope>
+			<biblScope unit="page" from="43" to="48" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11452299</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Arithmetic and local circuitry underlying dopamine prediction errors</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Eshel</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature14855</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">525</biblScope>
+			<biblScope unit="page" from="243" to="246" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26322583</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Vamanrao A &amp; Uchida N Whole-brain mapping of direct inputs to midbrain dopamine neurons</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Watabe-Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Ogawa</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2012.03.017</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="858" to="873" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22681690</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">&amp; Malenka RC Reward and aversion in a heterogeneous midbrain dopamine system</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lammel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">K</forename><surname>Lim</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuropharm.2013.03.019</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuropharmacology</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="351" to="359" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23578393</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Emergence of visually-evoked reward expectation signals in dopamine neurons via the superior colliculus in V1 lesioned monkeys</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Takakuwa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Redgrave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Isa</forename></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.24459</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Kass RE &amp; Moghaddam B Networks of VTA Neurons Encode Real-Time Information about Uncertain Numbers of Actions Executed to Earn a Reward</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">W</forename><surname>Simon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">S</forename><surname>Koerner</surname></persName>
+		</author>
+		<idno type="DOI">10.3389/fnbeh.2017.00140</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in behavioral neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">140</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28848408</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Unique properties of mesoprefrontal neurons within a dual mesocorticolimbic dopamine system</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lammel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="760" to="773" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18341995</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">A causal link between prediction errors, dopamine neurons and learning</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Steinberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.3413</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="966" to="973" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23708143</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Brief optogenetic inhibition of dopamine neurons mimics endogenous negative reward prediction errors</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Chang</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.4191</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="111" to="116" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26642092</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Janak PH Inhibiting Mesolimbic Dopamine Neurons Reduces the Initiation and Maintenance of Instrumental Responding</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fischbach-Weiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Reese</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroscience.2017.12.003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">372</biblScope>
+			<biblScope unit="page" from="306" to="315" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29248527</note>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Seung HS Equivalence of backpropagation and contrastive Hebbian learning in a layered network</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xie</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/089976603762552988</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="441" to="454" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12590814</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Rayport S &amp; Hen R Targeted gene expression in dopamine and serotonin neurons of the mouse brain</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Masson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Gingrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neuroscience methods</title>
+		<imprint>
+			<biblScope unit="volume">143</biblScope>
+			<biblScope unit="page" from="27" to="32" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15763133</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<title level="m" type="main">Gu C &amp; Sabatini BL Midbrain dopamine neurons sustain inhibitory transmission using plasma membrane uptake of GABA, not synthesis</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">X</forename><surname>Tritsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Oh</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">1936</biblScope>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24843012</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

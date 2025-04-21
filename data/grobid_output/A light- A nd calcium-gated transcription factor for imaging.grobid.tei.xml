@@ -1,0 +1,1717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A light- and calcium-gated transcription factor for imaging and manipulating activated neurons</title>
+				<funder>
+					<orgName type="full">Stanford</orgName>
+				</funder>
+				<funder ref="#_MM3AE6x">
+					<orgName type="full">New York Stem Cell Foundation Robertson Investigator</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">MIT</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">JPB Foundation</orgName>
+				</funder>
+				<funder ref="#_gbzxaZD">
+					<orgName type="full">PIIF and PIIF Engineering Award</orgName>
+				</funder>
+				<funder ref="#_AnkPQEm">
+					<orgName type="full">National Institutes of Health</orgName>
+					<orgName type="abbreviated">NIH</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2017-12-26">2017 December 26.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wenjing</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Craig</forename><forename type="middle">P</forename><surname>Wildes</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Tanyaporn</forename><surname>Pattarabanjird</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mateo</forename><forename type="middle">I</forename><surname>Sanchez</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Gordon</forename><forename type="middle">F</forename><surname>Glober</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Gillian</forename><forename type="middle">A</forename><surname>Matthews</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kay</forename><forename type="middle">M</forename><surname>Tye</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Alice</forename><forename type="middle">Y</forename><surname>Ting</surname></persName>
+						</author>
+						<title level="a" type="main">A light- and calcium-gated transcription factor for imaging and manipulating activated neurons</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Biotechnology</title>
+						<title level="j" type="abbrev">Nat Biotechnol</title>
+						<idno type="ISSN">1087-0156</idno>
+						<idno type="eISSN">1546-1696</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">35</biblScope>
+							<biblScope unit="issue">9</biblScope>
+							<biblScope unit="page" from="864" to="871"/>
+							<date type="published" when="2017-12-26">2017 December 26.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2E0641115296EE422B919AEA8D8C7EE4</idno>
+					<idno type="DOI">10.1038/nbt.3909</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:03+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Activity remodels neurons, altering their molecular, structural, and electrical characteristics.</s><s>To enable the selective characterization and manipulation of these neurons, we present FLARE, an engineered transcription factor that drives expression of fluorescent proteins, opsins, and other genetically-encoded tools only in the subset of neurons that experienced activity during a userdefined time window.</s><s>FLARE senses the coincidence of elevated cytosolic calcium and externallyapplied blue light, which together produce translocation of a membrane-anchored transcription factor to the nucleus to drive expression of any transgene.</s><s>In cultured rat neurons, FLARE gives a light-to-dark signal ratio of 120 and a high-to-low calcium signal ratio of 10 after 10 minutes of stimulation.</s><s>Channelrhodopsin expression permitted functional manipulation of FLARE-marked neurons.</s><s>In adult mice, FLARE also gave light-and motor activity-dependent transcription in the cortex.</s><s>Due to its modular design, minute-scale temporal resolution, and minimal dark-state leak, FLARE should be useful for the study of activity-dependent processes in neurons and other cells that signal with calcium.</s></p><p><s>Neuronal activity is tightly coupled to rises in cytosolic calcium, both in distal dendrites and in the cell body of neurons.</s><s>Consequently, an important class of tools for studying neuronal activity is real-time fluorescence calcium indicators, including the GCaMP series 1-3 and small-molecule dyes such as Fura-2 4 and Fluo-4 5 .</s><s>However, these tools have two important Users may view, print, copy, and download text and data-mine the content in such documents, for the purposes of academic research, subject always to the full Conditions of use:</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>limitations.</s><s>First, real-time imaging is both technically demanding and restricted to small fields of view, should one desire single-cell resolution.</s><s>Second, these indicators allow one to only passively observe calcium patterns, but not to respond to them -for example, to selectively manipulate or further characterize subsets of neurons based on their history of activity.</s></p><p><s>A recently reported tool, CaMPARI, addresses the first limitation <ref type="bibr" target="#b5">6</ref> .</s><s>CaMPARI is a calciumand light-gated photoswitchable fluorescent protein.</s><s>Upon coincident detection of both elevated calcium (&gt;111 nM) and violet light, CaMPARI stably converts from a green-emitter to a red-emitter.</s><s>In contrast to real-time calcium indicators, CaMPARI allows one to integrate the history of calcium elevations in single neurons during time windows defined by the violet light.</s><s>Subsequently, one can fix the cells or tissue and slowly acquire highresolution, single-cell data across the entire sample.</s><s>However, CaMPARI does not address the second limitation, because it provides only a color readout.</s><s>A more general solution would couple coincident detection of elevated calcium and light in a living cell to transcription of any reporter gene of interest, whether a fluorescent protein, a toxin to ablate neuronal activity, or an opsin to permit subsequent light control of neuronal activity.</s><s>Furthermore, to improve upon the characteristics of CaMPARI, a new tool would ideally offer light-gating outside of UV wavelengths, which is toxic to cells.</s></p><p><s>We designed a light-and-calcium gated transcription factor (TF) system, called FLARE (for Fast Light-and Activity-Regulated Expression), shown in Figure <ref type="figure" target="#fig_2">1A</ref>.</s><s>In the basal state, the TF is tethered to the cell's plasma membrane, unable to activate transcription of the reporter gene located in the cell's nucleus.</s><s>Upon exposure to both blue light and high calcium, however, the TF is cleaved from the membrane and translocates to the nucleus because (1)  the protease recognition site is unblocked by the light-sensitive LOV domain <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b7">8</ref> , and (2) the protease is recruited to its recognition site via a calcium-regulated intermolecular interaction between calmodulin (CaM) and a CaM binding peptide.</s><s>High calcium alone is not sufficient to give TF release because the protease site remains blocked, and light alone is not sufficient because the protease is far away, and its affinity for its recognition site is too low to give substantial cleavage in the absence of induced proximity.</s><s>Also key to this design is that both calcium sensing and light sensing are fully reversible, such that sequential rather than coincident inputs (such as high calcium followed by light) are unable to trigger TF release.</s></p><p><s>The calcium-sensing mechanism of FLARE resembles the protein proximity-sensing mechanism of Tango <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b9">10</ref> , a tool developed for visualization of GPCR activity.</s><s>Tango utilizes the Tobacco Etch Virus (TEV) protease (TEVp), which is appealing for its high sequencespecificity; in mammalian cells, TEVp does not recognize and cleave any endogenous proteins.</s><s>For our initial FLARE constructs, we thus utilized the TEVp/TEVp cleavage site (TEVcs) pair from Tango.</s><s>However, Figure <ref type="figure" target="#fig_2">1B</ref> (columns 4-6) shows that these constructs gave no detectable difference in fluorescent protein expression after transient exposure of HEK 293T cells to ionomycin-induced high calcium versus low calcium conditions.</s><s>Inspection of the images indicated a problem with high background in the low calcium (untreated) cells.</s><s>Expression levels of tool components in these cells could reach 250 uM or more, exceeding the K m of the Tango TEVp/TEVcs pair (240 uM <ref type="bibr" target="#b10">11</ref> ).</s><s>This would explain the high extent of TEVcs cleavage even in the absence of calcium-induced proximity.</s><s>Cterminally truncated TEVp has reduced affinity for TEVcs sequences (K m ~450 μM), with minimal reduction in k cat <ref type="bibr" target="#b11">12</ref> (Figure SI-1).</s><s>We thus tested truncated TEVp in FLARE, along with two different TEVcs sequences (higher affinity and lower affinity) and three alternative CaMbp sequences.</s><s>All 12 permutations are shown in Figures <ref type="figure" target="#fig_2">1B-C</ref>.</s><s>As expected, truncated TEVp reduced background signal overall, enabling us to observe a difference in fluorescent protein expression between calcium-treated and untreated cells.</s><s>Of the three CaMbps tested, M2 gave the lowest background.</s></p><p><s>For light-gating of FLARE, we select the LOV domain because it has been used in vivo <ref type="bibr" target="#b12">13</ref> , is reversible <ref type="bibr" target="#b13">14</ref> , and does not require addition of exogenous cofactors as the Phy-PIF system does 15 .</s><s>To test light gating, we fused the LOV2 domain from Avena sativa <ref type="bibr" target="#b6">7</ref> to two TEVcs sequences, "biting back" 2, 3 or 6 amino acids into LOV2's C-terminal Jα helix (Figure <ref type="figure" target="#fig_2">1E</ref>). Figure <ref type="figure" target="#fig_2">1F</ref> shows that of 6 constructs tested, the best one gave only a light-to-dark signal ratio of 2 and dark state expression was high for all LOV2 fusions.</s></p><p><s>For FLARE to be a useful tool, it is imperative to minimize dark state leak.</s><s>FLARE will be expressed in cells for days or even weeks prior to the experiment of interest.</s><s>During this time, the cells may experience many calcium rises, but we require negligible TF release.</s><s>Subsequently, a short period of light irradiation permits TF release, if calcium is also elevated at the same time.</s><s>The large difference in duration between the dark period (days to weeks) and the light exposure period (minutes) necessitates a very large light-to-dark signal ratio for FLARE.</s><s>We found that this was not possible to achieve with the published LOV2 protein (G528A/N538E mutant <ref type="bibr" target="#b6">7</ref> ).</s></p><p><s>We thus turned to directed evolution to improve the light caging efficiency of LOV for the TEVcs sequence.</s><s>We reasoned that specific mutations in LOV2 might enhance the interactions between LOV2 and C-terminally fused TEVcs in the dark state, leading to better steric protection and minimal cleavage by TEV protease in the dark state.</s><s>To implement the evolution (Figure <ref type="figure" target="#fig_3">2A</ref>), we mutagenized LOV2 (G528A/N538E mutant <ref type="bibr" target="#b6">7</ref> ) by error prone PCR, fused it to the TEVcs, and displayed the library on the yeast cell surface via fusion to the Aga2p mating protein.</s><s>To perform positive selections for efficient TEVcs cleavage in the presence of blue light, we incubated the yeast library with purified TEVp for 1 hour under a light source.</s><s>After staining with antibody-fluorophore conjugates, we used fluorescence activated cell sorting (FACS) to enrich yeast cells displaying low anti-Flag/anti-HA fluorescence intensity ratios, indicative of TEVcs cleavage.</s><s>Negative selections for resistance to TEV cleavage in the dark were implemented by incubating the yeast library with purified TEV protease in the dark for 3 hours, then using FACS to enrich cells with high anti-Flag/anti-HA fluorescence intensity ratios, indicative of intact TEVcs.</s><s>We performed 6 rounds of alternating positive and negative selections (Figure SI-2).</s><s>These gradually enriched the yeast population displaying LOV mutants with both high TEVcs cleavage in the light state (yellow bars, Figure <ref type="figure" target="#fig_3">2B</ref>) and low TEVcs cleavage in the dark state (grey bars, Figure <ref type="figure" target="#fig_3">2B</ref>).</s></p><p><s>Sequencing of enriched clones from round 6 (Figure SI-3) identified five mutants of interest, three of which were superior to original LOV2 (G528A/N538E mutant <ref type="bibr" target="#b6">7</ref> ) on the yeast surface (Figure SI-4).</s><s>We manually combined mutations present in these clones into a single LOV gene to create "eLOV", for evolved LOV.</s><s>On the yeast surface (Figure <ref type="figure" target="#fig_3">2C</ref>) and in HEK mammalian cells (Figures 2D and SI-5), eLOV was clearly superior to the original LOV2 mutant for light gating of the TEVcs, especially in the dark state, where Citrine expression resulting from TEVcs cleavage was now minimal.</s><s>The quantified light-to-dark signal ratio in HEK was 23, in contrast to 2 for the original LOV2 mutant under identical conditions.</s><s>As anticipated, the introduction of light gating also improved the calcium response of the toolby reducing the time window for possible accumulation of background signal.</s><s>The same modules (truncated TEVp, M2 CaMbp) that gave a high-to-low Ca 2+ signal ratio of only 2 in HEK (Figure <ref type="figure" target="#fig_2">1C</ref>) now gave a ratio of 16 with eLOV incorporated (S/N of 5 with original LOV2 mutant incorporated) (Figure <ref type="figure" target="#fig_3">2D</ref>).</s></p><p><s>The 5 mutations in eLOV enriched via directed evolution are highlighted in Figure <ref type="figure" target="#fig_2">1D</ref>.</s><s>For example, Leu2, located in a flexible loop, is mutated to Arg in eLOV.</s><s>Perhaps this causes the formation of a salt bridge with the Glu sidechain in TEVcs (ENLYFQ ▲ Y), leading to tighter dark state caging.</s><s>H117 is located in the loop that connects the Jα helix to the rest of the LOV domain.</s><s>H117R in eLOV could potentially stabilize Jα in the dark state by forming a salt bridge to E123 (Figure <ref type="figure" target="#fig_5">SI-4C</ref>).</s></p><p><s>We then proceeded to test our tool in the more challenging environment of neurons.</s><s>Calcium increases in neurons are much more dynamic than the sustained 5-minute calcium rises we artificially induced with ionomycin in HEK cells and cell surface proteins that traffic well in HEK frequently fail to do so in neurons.</s><s>To address these and other challenges in transitioning FLARE from HEK to neurons, we made a number of changes and improvements to the tool as follows (Figure <ref type="figure" target="#fig_4">3A</ref>).</s><s>First, we expanded our testing of TEVcs sequences (Figure SI-6).</s><s>Second, we replaced the CD4 segment of FLARE with a neurexin-3β-derived transmembrane domain, which is half the size, and facilitates packaging into adeno-associated viruses (AAVs).</s><s>Third, we replaced Gal4 with the tTA-VP16 transcription factor, which has subnanomolar DNA binding affinity and a stronger transcriptional activation domain <ref type="bibr" target="#b15">16</ref> .</s><s>Fourth, to facilitate the translocation of cleaved TF from the plasma membrane to the nucleus, we inserted a soma targeting sequence into FLARE.</s></p><p><s>Figure <ref type="figure" target="#fig_4">3B</ref> shows that these modifications all contributed to improved FLARE performance in neuron culture.</s></p><p><s>Figures <ref type="figure" target="#fig_4">3C-D</ref> show imaging of our final FLARE tool in cultured rat neurons at DIV17.</s><s>The tTA-VP16 transcription factor drives expression of TRE-mCherry in the nucleus.</s><s>Light stimulation was 10 or 15 minutes using 467 nm blue light at 60 mW/cm 2 and 10-33% duty cycle.</s><s>To elevate intracellular calcium, we used either electrode stimulation (Figure <ref type="figure" target="#fig_4">3D</ref>), or we replaced half of the culture media with fresh media of the same composition (Figure <ref type="figure" target="#fig_4">3C</ref>).</s><s>We then allowed neurons 18 hours after calcium and light stimulation to transcribe and translate mCherry.</s><s>Figures <ref type="figure" target="#fig_4">3C-D</ref> show that mCherry expression was robust only in one of four conditions in each experiment, when neurons were subjected to both light and activity.</s></p><p><s>There was some detectable background signal in the light exposed/non-stimulated cells (&gt;10-fold less than with stimulation) but this may reflect basal calcium activity (Figure SI-8), as we did not repress/silence these neurons.</s><s>Notably, mCherry expression was barely detectable in all dark state conditions, attesting to the effectiveness of eLOV in caging TEVcs from protease cleavage over the entire 7-day expression window (light-to-dark signal ratios of 121 and 17, respectively, in Figures <ref type="figure" target="#fig_4">3C</ref> and<ref type="figure" target="#fig_4">3D</ref>).</s></p><p><s>To characterize the sensitivity of FLARE, or the amount of neural activity required to give a transcriptional output with reasonable signal-to-noise ratio, we delivered light to neurons for various lengths of time, coincident with two forms of activity stimulation (electrical stimulation or media change) (Figures 3E and SI-9).</s><s>Media change produced a robust signal (signal-to-noise ratio of 10) in just 4 minutes, whereas electrode stimulation (at 20 Hz) produced an 11-fold signal increase after 8 minutes.</s></p><p><s>The temporal resolution of FLARE is governed by the speed at which FLARE turns on and off.</s><s>Based on previous literature, the LOV domain and intermolecular CaM-CaMbp binding are both activated in 1 second or less <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b17">18</ref> .</s><s>We measured the reversion kinetics of eLOV, or the speed at which light-activated eLOV "re-sets" to the dark state.</s><s>Figure SI-10 shows that the reversion time constant is 140 seconds, similar to the time constants of original LOV2 (G528A/N538E mutant <ref type="bibr" target="#b6">7</ref> ) and WT-LOV2 <ref type="bibr" target="#b18">19</ref> .</s></p><p><s>To empirically test the overall off-rate of FLARE, we staggered light and calcium inputs by various time intervals.</s><s>If activated eLOV required many minutes to reset to the dark state, then blue light stimulation followed by electrical stimulation would still produce mCherry expression, because the TEVcs would remain accessible for some time after the blue light is removed.</s><s>Figure <ref type="figure" target="#fig_4">3F</ref> shows that even with an interval as short as 1 minute separating light and calcium inputs, mCherry expression is not detectable.</s><s>This demonstrates that eLOV reverses to the dark state in less than 1 minute, before the subsequent light stimulus is applied.</s><s>Similarly, calcium followed by light, with only a 1 minute intervening gap, produces no mCherry expression.</s><s>Based on these observations, we conclude that the temporal resolution of FLARE is 1 minute or less.</s></p><p><s>Next, to test if FLARE indeed works by the mechanism that we designed, we performed imaging in neurons using FLARE components containing targeted mutations.</s><s>Figure <ref type="figure" target="#fig_4">3G</ref> shows that mutation of the calcium-binding EF hands of the calmodulin domain, or deletion of the M2 CaMbp peptide from the TF component of FLARE, or mutation of eLOV to remove the cysteine that crosslinks with flavin (C48A) all abolish mCherry expression in the +light +activity condition.</s></p><p><s>We tested whether FLARE could be used for functional re-activation of selected neurons (Figure <ref type="figure" target="#fig_5">4A</ref>).</s><s>Instead of driving mCherry expression, we used FLARE to drive expression of a light-activated ion channel, ChrimsonR (a red-shifted depolarizing channlerhodopsin <ref type="bibr" target="#b19">20</ref> ), fused to mCherry, in neurons exposed to both blue light and electrode stimulation (for 15 minutes).</s><s>With such a short, single-session stimulation, would opsin expression levels be sufficient to enable functional reactivation of FLARE-marked neurons? Figure <ref type="figure" target="#fig_5">4B</ref> shows ChrimsonR-mCherry expression in previously-stimulated neurons but not in untreated neurons.</s><s>Recording of GCaMP5f fluorescence in response to pulses of opsin-activating red light shows that FLARE-marked cells can indeed be re-activated to give calcium transients (Figure <ref type="figure" target="#fig_5">4B</ref>).</s></p><p><s>To test the potential utility of FLARE for in vivo applications, we injected AAV viruses encoding FLARE components into the motor cortex of adult mice.</s><s>Blue light was delivered via implanted optical fiber, and mice were stimulated via wheel running (single 30 minute session).</s><s>24 hours later, mice were perfused and imaged for ChrimsonR-mCherry expression to quantify FLARE activation.</s><s>Figures <ref type="figure" target="#fig_5">4D-E</ref> and SI-11 show that FLARE is minimally activated in the absence of blue light exposure.</s><s>A small but statistically significant (p = 0.013) increase in signal intensity was observed in animals that were running during the blue light period compared to animals that were inactive (Figure <ref type="figure" target="#fig_5">4D</ref>-E, SI-11 and SI-12).</s><s>To see if FLARE could drive sufficient levels of ChrimsonR expression for functional manipulation, we performed whole cell patch clamping of mCherry-positive neurons in the motor cortex of light/running animals, and observed robust red-light induced action potentials (Figure <ref type="figure" target="#fig_5">4F</ref> and<ref type="figure" target="#fig_5">4G</ref>).</s><s>These results suggest that FLARE is sensitive to light and elevated calcium in the in vivo context as well.</s></p><p><s>A tool that retains memory of past calcium rises has distinct benefits over the real-time calcium indicators that are used ubiquitously in neuroscience.</s><s>Such a probe integrates calcium activity over user-defined time windows, stores the information in a form that survives cell fixation, and permits the user to carefully survey the entire sample at high resolution over large fields of view.</s><s>FLARE is such a memory probe, with the additional powerful capability that it can convert calcium memory into transcriptional regulation of any transgene of interest, giving FLARE enormous versatility.</s><s>In our study, we showed that FLARE-expressing cells exposed simultaneously to blue light and activity for just 10-15 minutes produced active transcription factor that drove the expression of EYFP, Citrine, mCherry, or channelrhodopsin.</s><s>Figure SI-13 shows that FLARE can also drive the expression of APEX2, a peroxidase that is useful for electron microscopy <ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b21">22</ref> and proteomics <ref type="bibr" target="#b22">23</ref> .</s><s>Other transgenes of interest to couple to FLARE include halorhodopsin <ref type="bibr" target="#b23">24</ref> or tetanus toxin <ref type="bibr" target="#b24">25</ref> to silence neuronal activity, and DREADDs to regulate neuronal activity with chemical ligands. <ref type="bibr" target="#b25">26</ref></s><s> the properties of the previously published Tango 9 and LOV 7 modules proved inadequate for achieving high signal-to-noise ratios, it was necessary to engineer improved components.</s></p><p><s>In particular, we truncated the TEV protease and replaced the TEVcs (after screening 8 variants) to produce a much more proximity-dependent system with higher signal-to-noise for calcium sensing.</s><s>For light gating, we performed directed evolution to create eLOV, a light-sensitive protein module that gates the protease recognition site in FLARE with a lightto-dark signal ratio of &gt;120.</s><s>Though evolved for one TEVcs sequence in particular, eLOV is more effective than LOV2 (G528A/N538E mutant <ref type="bibr" target="#b6">7</ref> ) at caging a variety of sequences, including recognition sites for other proteases (data not shown).</s><s>Our study illustrates the ability of directed evolution to optimize tool characteristics, and produces improved modules that should also be valuable for other protein engineering efforts.</s></p><p><s>Though promising, our in vivo results highlight aspects of FLARE that should be improved to render it a robust and generally applicable tool for circuit mapping in animals.</s><s>We observe heterogeneity across animals and even across sections from the same animal, because FLARE activity is highly expression-level dependent, and we delivered the tool components via viral injection.</s><s>Though dark state leak is negligible in neuron culture, we observed some light-independent background in vivo that could be addressed by further engineering of the light gate.</s><s>Finally, the sensitivity of FLARE is limited by TEV protease turnover rate, which is only 10.8 min -1 (and likely much lower for TEVp variants such as split TEVp 27 ); a faster protease variant could further reduce time windows of tagging.</s><s>Given the impact that existing "memory trace" tools -that use drug delivery and washout for temporal gating, resulting in tagging time windows of 6-24 hours <ref type="bibr" target="#b27">[28]</ref><ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref> -have had on systems neuroscience, a future FLARE tool that works more robustly in vivo on the timescale of seconds should provide access to the study and manipulation of a much wider array of cognitive processes.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cloning</head><p><s>All constructs for protein expression in HEK 293T cells, neuron culture, and mouse brain were cloned into the pAAV viral vector (a gift from Feng Zhang, MIT).</s><s>For HEK cells, we used the CMV promoter to drive expression.</s><s>For neurons and mouse brain, we used the synapsin promoter.</s></p><p><s>All constructs for yeast display were cloned into the pCTCON2 vector.</s><s>The calcium indicator GCaMP5f was cloned into the lentiviral vector FSW, derived from FUGW, and the promoter was synapsin.</s><s>TEV protease was cloned into pET21b vector for bacterial expression and purification.</s><s>LOV constructs were cloned into pYFJ16 vector for bacterial expression and purification.</s></p><p><s>Table <ref type="table">SI</ref>-1 lists all 38 plasmids used in this work.</s><s>The TEVp gene was a gift from the Waugh lab.</s><s>CaM was amplified from GCaMP5f.</s><s>AsLOV2 was synthesized via overlap extension PCR.</s></p><p><s>For cloning, PCR fragments were amplified using Q5 polymerase (NEB).</s><s>The vectors were double-digested and assembled with gel-purified PCR fragments by T4 ligation or Gibson reactions, followed by heat shock transformation into competent XL1-Blue bacteria.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Expression and purification of TEV protease</head><p><s>Full-length TEV protease was expressed as a fusion to maltose binding protein (MBP) from BL21-CodonPlus(DE3)-RIPL E. coli.</s><s>Homemade competent BL21s were transformed via heat shock with the MBP-TEVp(S219V)-pET21b expression plasmid.</s><s>Cells were cultured in 50 mL LB with 100 mg/L ampicillin at 37 °C and 220 rpm overnight.</s><s>Then 10 mL of this saturated culture was used to inoculate 1 L LB with 100 mg/L ampicillin, which was grown at 37 °C with 220 rpm shaking until OD 600 0.6.</s><s>IPTG was then added to the culture to a final concentration of 1 mM, and the culture was transferred to 25 °C for continued shaking at 220 rpm for 12 hours.</s><s>Cells were harvested by centrifugation at 5000 rpm at 4°C.</s><s>Pelleted cells were lysed in ice cold RIPA buffer (Thermo Fisher Scientific) supplemented with 1 mM DTT (Sigma-Aldrich, freshly made), then clarified by centrifugation at 10,000 rpm for 15 minutes at 4 °C.</s><s>The supernatant was incubated with 1 mL of Ni-NTA bead slurry (Thermo Fisher) at 4 °C for 10 min with rotation and then transferred to a gravity column.</s><s>The beads were washed at 4 °C with 10 mL washing buffer (30 mM imidazole, 50 mM Tris, 300 mM NaCl, 1 mM DTT, pH 7.8), then protein was eluted with 10 mL elution buffer (200 mM imidazole, 50 mM Tris, 300 mM NaCl, 1 mM DTT, pH 7.8).</s><s>The eluents from 5 separate preparations (five original 1L cultures) were combined and concentrated with a 15 mL 10,000 Da cutoff centrifugal unit (Millipore) to OD 280 ~70.</s></p><p><s>This purified and concentrated TEV protease was used for LOV directed evolution experiments.</s><s>To successfully implement the negative selections, we required very active and concentrated TEV protease to achieve appreciable TEVcs cleavage in the dark, LOV-caged state, and in the absence of induced proximity between protease and TEVcs.</s></p><p><s>We note that TEV protease is sensitive to oxidizing conditions, because it has an active site cysteine.</s><s>Purification and storage should all be under reducing conditions.</s><s>Even with these precautions, we observed a great deal of batch to batch variation in TEV protease yield and activity.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Yeast strains, transformation, and cell culture</head><p><s>Yeast expressing HA-LOV-TEVcs-FLAG as a fusion to Aga2p surface protein were generated by transformation of Sachharomyces cerevisiae strain EBY100 competent cells with the yeast display plasmid pCTCON2 <ref type="bibr" target="#b33">34</ref> .</s><s>To generate EBY100 competent cells, an overnight 1-day old culture of saturated EBY100 cells fully grown (OD&gt;10) were diluted ten to twenty-fold into 10 mL fresh YPD broth (Yeast Extract Peptone Dextrose), to OD 600 ~0.5, and grown at 30 °C and 220 rpm for 4-6 hrs until the OD 600 reached 1.5.</s><s>The cells were pelleted by centrifugation at 3000 rpm for 3 minutes, washed with 10 mL EZ1 solution (Frozen-EZ Yeast Transformation II, Zymo Research), then re-pelleted and resuspended with 1 mL EZ2 solution (Frozen-EZ Yeast Transformation II, Zymo Research).</s><s>The cell suspension was divided into 20 μL aliquots and frozen slowly at -20 °C and stored at -80°C.</s></p><p><s>For transformation of these EBY100 competent cells <ref type="bibr" target="#b21">22</ref> , 300 ng of pCTCON2 DNA was mixed with 20 μL of thawed EBY100 competent cells, then 500 μL of EZ3 solution (Frozen-EZ Yeast Transformation II, Zymo Research) was added and thoroughly mixed, and the solution was incubated at 30 °C for 45 minutes.</s><s>The cells were mixed a few more times during the 45 minute period and then plated onto synthetic dextrose plus casein amino acid (SDCAA) plates lacking tryptophan.</s><s>Colonies of transformed cells containing the Trp1 gene were selected after 2 days of incubation at 30 °C.</s><s>Single colonies were used to inoculate 5 mL SDCAA media, which was cultured at 30 °C and 220 rpm for 24 hrs until OD 600 &gt;5.</s><s>pCTCON2 construct expression was induced by combining 500 μL of the overnight yeast culture with 5 mL of SGCAA (synthetic galactose plus casein amino acid) media, and culturing at 30 °C and 220 rpm for 12-24 hrs.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Generation of LOV mutant library by error prone PCR and transformation of library into yeast</head><p><s>To perform error prone PCR, we combined 100 ng of the template plasmid (Aga2p-HA-LOV(-2)-TEVcs(high affinity)-FLAG in pCTCON2) with 0.4 μM forward and reverse primers that anneal to the sequences just outside the 5′ and 3′ ends of the AsLOV2 gene (sequences below), 2 mM MgCl 2 , 5 units of Taq polymerase (NEB), and 2 μM each of the mutagenic nucleotide analogs 8-oxo-2′-deoxyguanosine-5′triphosphate (8-oxo-dGTP) and 2′-deoxy-p-nucleoside-5′-triphosphate (dPTP) in a 50 μL volume (2 reactions were required).</s></p><p><s>Forward primer: 5′GCTCTGCAGCAAGGTCTGCAGGCTAGTGGTGGAGGAGGCTCTGGTGCTA GC</s></p><p><s>Reverse primer: 5′CTTATCGTCGTCATCCTTGTAGTCGGATCCTCCGCCGTACTGGAAGTAGAG ATTTTC</s></p><p><s>The PCR was run for 20 cycles with annealing temperature of 58 °C in each cycle.</s><s>Then the PCR product was gel-purified, and re-amplified for another 30 cycles with 0.4 μM forward and reverse primers that introduce ~45 bp of overlap with both ends of the vector:</s></p><p><s>Forward primer: 5′GCTCTGCAGCAAGGTCTGCAGGCTAGTGGTGGAGGAGGCTCTGGTGCTA GC Reverse primer: 5′CTGTTGTTATCAGATCTCGAGCTATTACTTATCGTCGTCATCCTTGTAGTCG GATCC PCR annealing temperature was 58 °C and regular dNTPs (10 μM) and 5 units of Taq polymerase in 50 μL volume was used.</s><s>The PCR products from four separate reactions were combined purified by gel extraction.</s></p><p><s>Separately, we linearized the Aga2p-HA-LOV(-2)-TEVcs(high)-FLAG-pCTCON2 plasmid by digesting with BamHI and NheI restriction enzymes for 3 hrs at 37°C.</s><s>These enzymes cut the gene just upstream of the LOV domain and downstream of the TEVcs.</s><s>The linearized plasmid was purified by gel extraction.</s><s>We then combined 1 μg of linearized vector with 4 ug of mutagenized LOV PCR product from above, concentrated using pellet paint (Millipore) according to the manufacturer's protocols (precipitation of DNA with ethanol and sodium acetate, and resuspended in 10 μL ddH 2 O.</s></p><p><s>In parallel, fresh electrocompetent EBY100 cells were prepared.</s><s>EBY100 cells are passaged at least two times before this procedure to ensure that the cells are healthy.</s><s>We used a 2-3 mL saturated culture of EBY100 cells to inoculate 100 mL of fresh YPD media (no older than 2 months), and grew the cells with shaking at 2000 rpm at 30 °C for 6-8 hrs until the OD 600 reached 1.5-1.8.</s><s>The cells were then harvested by centrifugation for three minutes at 3000 rpm and resuspended in 50 mL of sterile 100 mM lithium acetate in water, by vigorous shaking.</s><s>Fresh sterile DTT (1 M stock solution, made on the same day) was added to the yeast cells to a final concentration of 10 mM.</s><s>The cells were incubated with shaking at 220 rpm for 12 minutes at 30 °C (necessary to ensure adequate oxygenation).</s><s>Then cells were pelleted at 4 °C by centrifugation at 3000 rpm for 3 minutes and washed once with 25 mL ice-cold sterile water, pelleted again, and resuspended in 1 mL ice cold sterile water.</s></p><p><s>The concentrated mixed DNA from above was combined with 250 μL of electrocompetent EBY100 cells on ice and then electroporated using a Bio-Rad Gene pulser XCell.</s><s>The electroporated cells were immediately rescued with 2 mL pre-warmed YPD media and then incubated at 30 °C for 1 hr without shaking.</s><s>10 uL of this solution was used to determine transformation efficiency, and the remainder was spun down to remove the YDP media and resuspended in 100 mL SDCAA media supplemented with 50 units/mL penicillin and 50 μg/mL streptomycin.</s><s>The culture was grown at 30 °C with shaking at 220 rpm for 1 day, before induction of protein expression and positive selection as described below ("Yeast display selection").</s></p><p><s>Transformation efficiency of our LOV library into EBY100 yeast was 3.6 × 10 7 .</s><s>DNA sequencing of 12 individual clones (Figure SI-3) showed that each clone had 0-2 nucleotides changed relative to original AsLOV2 template.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Yeast display selection</head><p><s>Yeast cells transformed with the LOV library in pCTCON2 were induced by transferring them to 1:10 SDCAA:SGCAA media, and growing the cells for 18-24 hrs at 30 °C with shaking at 220 rpm.</s><s>For the first round of selection, 1 mL of saturated yeast culture (at OD 600 ~15; note that OD 600 ~1 corresponds to roughly 1×10 7 yeast cells/mL, which is over 3 times the size of our library, was pelleted in a clear microfuge tube at 5000 rpm for two minutes.</s><s>For subsequent rounds of selection (rounds 2-6), 0.5 mL of a saturated culture was pelleted in this way.</s><s>Pelleted cells were then washed twice with 1 mL PBSB (sterile phosphate-buffered saline supplemented with 0.1% BSA).</s><s>To remove residual liquid on the walls of the microfuge tube, the cells were pelleted again at 5000g for 30 seconds, and any remaining liquid was removed by gentle pipetting.</s><s>To provide an opportunity for any lightactivated LOV protein to re-set or return to the dark state, we kept the yeast cells in the dark for at least 5 minutes before addition of exogenous TEV protease for the positive selection.</s><s>All subsequent manipulations were performed in a dark room with a red light source to prevent unintended activation of the LOV domain.</s><s>To implement the positive selections, we added to the yeast cell pellet purified self-cleavage inhibiting full length TEV(S219V) protease diluted in PBSB, expressed and purified from E. coli as described above (Expression and purification of TEV protease), to a final concentration of μM.</s><s>Cells were then exposed to a daylight lamp (T5 Circline Fluorescent Lamp, 25W, 6500K, 480 nm, 530 nm, 590 nm) while rotating for 1 hour at room temperature.</s><s>To implement the negative selection, we added the same quantity of purified TEV protease, wrapped the tube in aluminum foil, and rotated for 3 hrs at room temperature in the dark.</s><s>Then, yeast cells were pelleted by centrifugation (5000 rpm, 25 °C, 2 minutes), washed with room temperature PBSB twice, and labeled with primary antibodies.</s><s>Sigma mouse-anti-FLAG antibody and Rockland rabbit-anti-HA antibody were each added at 1:200 dilution, then incubated with the cells at room temperature for 30 minutes with rotation.</s><s>After washing twice with PBSB, we then labeled with secondary antibodies anti-mouse-AlexaFlour 647 (Life Technology, 1:200 dilution) and anti-rabbit-phycoerythrin (Invitrogen, 1:200 dilution).</s><s>The labeled yeast cells were resuspended in PBSB to a concentration of 5×10 7 cells/mL and sorted by FACS.</s><s>Six rounds of alternating positive and negative selections were performed.</s><s>Gates were drawn as shown in</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>FACS analysis</head><p><s>To analyze sorted yeast populations, we prepared and labeled the cells in a manner similar to the description above (Yeast display selection).</s><s>A 250 μL saturated (OD 600 ~15) overnight culture of induced yeast cells were pelleted by centrifugation (5000g for 2 minutes at room temperature), washed with PBSB twice and pelleted.</s><s>We treated half the sample with purified TEV protease at C f 30 μM in the dark for 3 hours, and half in the light for 1 hour.</s><s>Yeast cells were then labeled with anti-FLAG and anti-HA primary antibodies, then antirabbit and anti-mouse secondary antibodies, as described above, before FACS analysis.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cloning, expression, and purification of LOV proteins</head><p><s>In a pYFJ16 vector, Avena sativa phototropin1 LOV2 (404-560) domain was cloned as a fusion with a GS linker to the C-terminus of E. coli maltose binding protein (MBP).</s></p><p><s>Mutations were made by standard molecular biology techniques.</s><s>All proteins were expressed in E. coli BL21 (DE3), cells grown in LB media with Ampicilin at 37°C to an OD 600 of 0.6 and induced with 1 mM IPTG.</s><s>Cultures were then incubated for 18 hrs at 18 °C.</s><s>The fusion protein is purified by metal affinity chromatography (IMAC).</s><s>Therefore, bacteria were spun down at 6,000 rpm for 6 min.</s><s>The pellet was not frozen and was immediately lysed with B-PER® (20 mL/culture liter), mixed gently by inversion and spun down at 10,000 rpm for 15 min; the supernatant was incubated with Ni-NTA agarose ® beads in binding buffer (Tris 50 mM, NaCl 300 mM, pH 7.8) for 10 min.</s><s>The slurry was placed in a peptide column and washed with washing buffer (Imidazole 30 mM, Tris 50 mM, NaCl 300 mM, pH 7.8).</s><s>The protein was eluted with elution buffer (Imidazole 200 mM, Tris 50 mM, NaCl 300 mM, pH 7.8).</s><s>The collected volume (intense bright yellow) was transferred to a centrifugal filter Amicon® Ultra-15 and washed 3x with DPBS.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>UV-Vis spectroscopy of LOV proteins</head><p><s>We characterized the reversion kinetics of LOV protein from light state to dark state following previous procedures <ref type="bibr" target="#b34">35,</ref><ref type="bibr" target="#b35">36</ref> .</s><s>UV-Vis spectra were acquired using a Nanodrop2000c spectrophotometer with a 5 nm bandwidth and a 1 cm pathlength cuvette at 22°C.</s><s>Kinetic traces were acquired after photosaturation of freshly purified LOV protein with MaestroGen ® UltraBright LED transilluminator (470 nm).</s><s>Samples (~10 μM in DPBS) were irradiated for 30 seconds and the absorbance at the λ max (usually 448 nm) was measured every 2 seconds.</s><s>The data were fit into a single exponential decay.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>HEK293T cell culture and transfection</head><p><s>HEK293T cells from ATCC (passage number &lt;20) were cultured as a monolayer in complete growth media, DMEM (Gibco) supplemented with 10% FBS (Sigma), at 37°C under 5% CO 2 .</s><s>For large field microscopic experiment (10x objective), cells were grown in 48 well plate that were pretreated with 50 μg/mL fibronectin (Millipore) for at least 10 min at 37°C before cell plating.</s><s>For high resolution fluorescence experiments (40x objective), cells were grown on a 7 × 7 mm glass cover slips in 48 well plate that were pretreated with fibronectin.</s><s>Cells were transfected at 60-90% confluence with 1 mg/mL PEI max solution (pH=7.3).</s><s>For imaging experiment in the 48 well plate, a mix of DNA (15 ng of UAS-Citrine reporter construct, 15 ng of TEV protease construct, 50-100 ng of the transcription factor construct) were incubated with 0.8 μL PEI max in 10 μL serum free DMEM media for 15 min at RT. DMEM media supplemented with 10% FBS (100 μL) was mixed with the DNA-PEI max solution and added to the HEK293T cells in 48 well plates and incubated for 18 hours before stimulation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fluorescence microscopy of cultured cells</head><p><s>Confocal Acquisition times ranged from 100 to 800 ms.</s><s>All images were collected and processed using SlideBook (Intelligent Imaging Innovations).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>HEK293T cell stimulation, imaging and analysis of the data for the calcium dependent protease cleavage</head><p><s>HEK293T cells were stimulated 18 hours post transfection.</s><s>For high Ca 2+ conditions, 100 μL ionomycin and CaCl 2 in complete growth media were added gently to the top of the media in a 48-well plate to a final concentration of 2 μM and 5 μM respectively.</s><s>For low Ca 2+ conditions, 100 μL complete growth media was added.</s><s>After five-minute incubation, the solution in the 48-well plates was replaced with 200 μL fresh complete growth media.</s><s>After stimulation, HEK293T cells were incubated for 12 hrs before fixation with 4% paraformaldehyde in PBS.</s><s>HEK293T cells were permeabilized by incubation with cold methanol at -20°C for 5 min, followed by immunostaining against mouse-anti-V5 (1:2000 dilution, Life Technology) and rabbit-anti-HA (1:1000 dilution, Rockland) and anti-mouse-alexafluoro568 (1:1000 dilution, Life Technology) and anti-rabbit-alexafluoro647 (1:1000 dilution, Life Technology) in 2% BSA solution in PBS.</s><s>HEK293T cells directly plated on the 48-well plate were imaged with 10x air objective in the Zeiss AxioObserver inverted confocal microscope.</s><s>Eight to ten fields of view were acquired for each condition.</s><s>A mask was defined according to the immunofluorescence of the V5 (protease expression) and mean intensity of Citrine within the mask was calculated as Intensity 1.</s><s>A second mask was drawn in the area outside of V5 immunofluorescence and mean intensity of Citrine within this mask was calculated as Intensity 2, attributed as background fluorescence due to autofluorescence of untransfected cells or plates.</s><s>Intensity 1 was subtracted by intensity 2 for each image to get the corrected mean intensity of Citrine, reporter gene expression.</s><s>The average value of the corrected mean intensity of Citrine was calculated across 8-10 fields of view for each condition.</s><s>Error bar was defined as the SEM, STD/Sqrt(# of the fields of view), for the corrected mean intensity of Citrine across 8-10 fields of view.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>HEK293T cell stimulation, imaging and analysis of the data for the light and calcium dependent protease cleavage</head><p><s>HEK293T cells were kept in dark after transfection and the following processes should be performed in a dark room with red light illumination.</s><s>HEK293T cells were stimulated 18 hours post transfection.</s><s>High and low Ca 2+ conditions were induced right before blue light irradiation.</s><s>For high Ca 2+ conditions, 100 μL ionomycin (Sigma-aldrich) and CaCl 2 in complete growth media were added gently to the top of the media in a 48-well plate to a final concentration of 2 μM and 5 μM respectively.</s><s>For low Ca 2+ conditions, 100 μL complete growth media was added.</s><s>For light stimulation, HEK293T cells in 48-well plate were placed on top of a custom-built light box with 467 nm blue light at 60 mW/cm 2 intensity and 33% duty cycle (2 seconds of light every 6 seconds) immediately after high and low Ca 2+ treatment.</s><s>For the dark condition, HEK293T cells were kept in dark by wrapping the plates in alumina foil.</s><s>After stimulation, HEK293T cells were kept in dark for 5 more minutes before the solution in the well were replaced with 200 μL fresh complete growth media.</s><s>HEK293T cells were incubated for additional 12 hours before fixation with 4% paraformaldehyde in PBS.</s><s>The rest of the procedures are the same as that for calcium dependent protease cleavage, see above.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>HEK293T cell imaging for the comparison of the original and evolved LOV domains</head><p><s>HEK293T cells were cultured on coverslips pretreated with human fibronectin.</s><s>For the evolved LOV conditions, HEK293T cells were transfected with a mix of DNA constructs P16 (50-100 ng/well, Table <ref type="table">SI</ref></s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AAV virus supernatant production</head><p><s>HEK293T cells were transfected at 60-90% confluence.</s><s>For each well in the 6-well plate, 0.35 μg viral DNA, 0.29 μg AAV1, 0.29 μg AAV2, 0.7 μg DF6 were incubated with 80 μL serum free DMEM for 15 min.</s><s>2 mL DMEM supplemented with FBS were mixed with the PEI max solution.</s><s>Media was aspirated from the HEK293T cells in the 6-well plate and the PEI max solution was added to the cells.</s><s>HEK293T cells were incubated for 48 hrs and the supernatant was collected and filtered through a 0.45 μm syringe filter (VWR).</s><s>AAV virus was aliquoted into 0.5 mL, flash frozen in liquid nitrogen and stored at -80°C.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Concentrated AAV virus production</head><p><s>Concentrated AAV virus was prepared as described previously <ref type="bibr" target="#b36">37</ref> .</s><s>Briefly, two T150 flasks of HEK293T cells under the passage of 10 were transfected at 80% conflucence.</s><s>For each T150 flask, 5.2 μg vector of interest plasmid, 4.35 μg of both AAV1 and AAV2 serotype plasmid, 10.4 μg pDF6 plasmid (adenovirus helper genes) were incubated with 130 μL PEI in 500 μL serum free DMEM media at RT for 10 min.</s><s>The media in the T150 flask was aspirated and replaced with 30 mL of complete growth media added to the DNA mix.</s><s>HEK293T cells were incubated for 48 hours at 37°C and then the cell pellet were collected by centrifugation at 800x g for 10 min.</s><s>The pellet was resuspended in 20 mL tris buffer containing 150 mM NaCl, 20 mM Tris, pH=8.0.</s><s>Freshly made 10% sodium deoxycholate (Sigma-aldrich) in H 2 O was added to the resuspended cells to a final concentration of 0.5% and benzonase nuclease (Sigma-aldrich) was added to a final concentration of 50 units per mL.</s><s>The solution was incubated at 37°C for 1 hr and then centrifuged at 3000x g for 15 min to remove the cellular debris.</s><s>The supernatant was then loaded using a peristaltic pump (Gilson MP4) at 1 mL/min flow rate to a HiTrap heparin column (GE healthcare Life Sciences) that was pre-equilibrated with 10 mL 150 mM NaCl, 20 mM Tris, pH=8.0 solution.</s><s>The column was washed with 20 mL 100 mM NaCl, 20 mM Tris, pH=8.0 using peristaltic pump, followed by washing with 1 mL 200 mM NaCl, 20 mM Tris, pH=8.0 and 1 mL 300 mM NaCl, 20 mM Tris, pH=8.0 using a 5 mL syringe.</s><s>The virus was eluted using 5 mL syringes with 1.5 mL 400 mM NaCl, 20 mM Tris, pH=8.0;</s><s>3.0 mL 450 mM NaCl, 20 mM Tris, pH=8.0 and 1.5 mL 500 mM NaCl, 20 mM Tris, pH=8.0.</s><s>The eluted virus was concentrated down using Amicon ultra 15 mL centrifugal units with a 100,000 molecular weight cut off at 2000x g for 2 min to a volume of 500 μL. 1 mL sterile DPBS was added to the filter unit and centrifuged to a final volume of ~200 μL.</s><s>The concentrated AAV virus was aliquoted at 10 μL to precoated eppendorf tubes and stored at -80°C.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AAV virus titration by qPCR</head><p><s>AAV virus (2 μL) was incubated with 1 μL DNAseI (NEB) in a final volume of 40 μL at 37°C for 30 min and then deactivated at 75°C for 15 min.</s><s>5 μL of the DNAse treated solution was incubated with 1 μL proteinase K (Thermo Fisher Scientific) at a total volume of 20 μL at 50°C for 30 min and proteinase K was deactivated at 98°C for 10 min. 2 μL sample from the proteinase K reaction was used for qPCR reactions following sybergreen protocol in qPCR (Applied Biosystems), along with the standard samples prepared from linearized AAV DNA plasmid.</s><s>AAV virus titer was quantified by dividing the dilution factors 1:20 × 1:4 × 2 = 1:40 and multiply 2 for the single stranded genome as compared to the standard AAV DNA plasmid.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Rat cortical neuron culture</head><p><s>Cortical neurons were harvested from rat embryos euthanized at embryonic day 18 and plated in 24-well plates as previously described <ref type="bibr" target="#b37">38</ref> .</s><s>At DIV4, 500 μL complete neurobasal media (neurobasal supplemented with 1x B27, Glutamax and Penstrep) with 5-Fluorodexoyuridine was added to each well, replacing 30% of the media in the well.</s><s>Subsequently, around 30% of the media were replaced with fresh complete neurobasal media every three days.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cortical neuron culture transduction and stimulation via media change</head><p><s>A mixture of AAV virus supernatant (50 μL of each AAV virus) was added to the neurons at DIV10-15 and incubated for two days before 30% of the solution in the well was replaced with fresh complete neurobasal media.</s><s>Neurons were cultured in the dark and the following procedures were performed in a dark room with red light illumination.</s><s>Six days posttransduction, neurons were stimulated and high Ca 2+ was induced just before light irradiation.</s><s>For high Ca 2+ , either 50% or 90% of the media in the well was replaced with fresh neurobasal media.</s><s>For low Ca 2+ , neurons were left at basal levels without perturbations.</s><s>For light stimulation, neurons in a 24-well plate were placed on top of the custom-built light box and irradiated by 467 nm blue light at 60 mW/cm 2 and 10-33% duty cycle.</s><s>After stimulation, neurons were incubated for 16-24 hrs before fixation with paraformaldehyde fixative (4% paraformaldehyde, 60 mM PIPES, 25 mM HEPES, 10 mM EGTA, 2 mM MgCl 2 , 0.12 M sucrose, pH=7.3).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>GCaMP5f imaging in cultured cortical neurons</head><p><s>DIV14 cortical rat neurons plated on 24-well plate were infected with lentivirus expressing GCaMP5f.</s><s>After 5 days of expression, time-lapse videos of GCaMP5f signals were taken before and after replacement of 1/2 of media volume with fresh media of identical composition (neurobasal supplemented with 1x B27, Glutamax and Penstrep) on a confocal microscope using 10x air objective at room temperature.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Immunostaining of fixed neurons and imaging</head><p><s>Fixed neurons were permeabilized by incubation with cold methanol at -20°C for 5 min and blocked with 2% BSA in PBS at RT for 1 hr.</s><s>Neurons were immunostained against mouseanti-V5 (1:2000 dilution, Invitrogen) and rabbit-anti-VP16 (1:2000 dilution, Abcam), followed by anti-mouse-alexafluoro488 (1:1000 dilution) and anti-rabbit-alexafluoro647 (1:1000 dilution) in 2% BSA solution in PBS.</s><s>Neurons directly plated on the 48-well plate were imaged with 10x air objective in the Zeiss AxioObserver inverted confocal microscope and neurons plated on glass cover slips were imaged with 40x oil objective in the Zeiss AxioObserver inverted confocal microscope.</s><s>Eight to ten fields of view were collected for each condition.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Analysis of the neuronal imaging data</head><p><s>For each field of view, a mask was created to encompass regions with positive anti-V5 immunofluorescence staining.</s><s>In these masked regions, the mean fluorescence intensity of mCherry (reporter gene) was calculated, and background mCherry intensity from a V5negative region was subtracted.</s><s>These mean mCherry intensity values were calculated individually for 8-10 fields of view per condition.</s><s>Error bar was defined as the SEM, STD/ Sqrt(# of the fields of view), for the corrected mean intensity of Citrine across 8-10 fields of view.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electrical stimulation of neurons infected with GCaMP5</head><p><s>Neurons were infected with 50 μL GCaMP5f virus and 30% of the media was replaced with fresh complete neurobasal media at day two post-transduction.</s><s>At day 6 post-transduction, electric stimulation was performed.</s><s>A Master 8 device (AMPI) was used to induce trains of electric stimuli; a stimulator isolator unit (Warner Instrument, SIU-102b) was used to provide constant current output ranging from 10-50 mA.</s><s>Platinum iridium alloy (70:30) wire from Alfa-Aesar was folded into a pair of rectangles and placed right above the neurons on the edge of the well to act as electrodes.</s><s>Time-lapse recording of GCaMP5f fluorescence was acquired with a 10x air objective on a Zeiss AxioObserver inverted confocal microscope while electric stimulation was delivered.</s><s>We found that 40 mA was the minimum current required to obtain robust GCaMP5f activation.</s><s>To achieve reliable neuronal activation, 48 or 50 mA was applied for electric stimulation.</s><s>To optimize the duration of the stimuli, 0.1, 0.2, 0.5, 1 and 5 milliseconds were tested; a minimum of 1 millisecond is required.</s><s>1 millisecond and 5 millisecond did not produce different results; hence, to minimize damage to neurons, we used 1-milliscond long pulses.</s><s>We found that GCaMP5f activation with 5 pulses of 1millisecond 20 Hz stimulation was better than 1 pulse of 5-millisecond stimulation at 48 mA.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electric stimulation of neurons transduced with FLARE AAV viruses</head><p><s>Neurons were transduced with FLARE supernatant AAV virus containing P24, P26 and P27 (Table <ref type="table">SI-1</ref>).</s><s>Six days post-transduction, neurons were either irradiated with light (467 nm, 60 mW/cm 2 , 10% duty cycle: 500 msec/5 sec) or kept in dark when electric stimulation was performed.</s><s>Neurons were activated by electric stimulation (3 second trains consisting of 32 1-millisecond 48 mA stimulation at 20 Hz) for 4, 8, 15 minutes.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DAB staining of APEX-expressing neurons</head><p><s>Cultured rat cortical neurons were infected at DIV13 with AAV viruses encoding FLARE components: TRE-Citrine-APEX (Table <ref type="table">SI</ref>-1, P38); NRX-TM-Nav1.6 -CaMbp(M2)-eLOV-TEVcs(ENLYFQ ▲ M)-tTA-VP16 (Table <ref type="table">SI</ref>-1, P24); CaM-TEVp(Δ220-242) (Table <ref type="table">SI</ref>-1, P26).</s><s>At DIV18, neurons were incubated in the dark or exposed to blue light for 10 minutes (467 nm, 10% duty cycle, 60 mW/cm 2 ).</s><s>Activity stimulation was via 90% media change.</s><s>18 hours later, neurons were fixed with paraformaldehyde fixative (4% paraformaldehyde, 60 mM PIPES, 25 mM HEPES, 10 mM EGTA, 2 mM MgCl 2 , 0.12 M sucrose, pH=7.3).</s><s>Icecold 0.5 mg/mL DAB with 0.03% H2O2 in cold PBS was added to the fixed cell and let sit for 5 minutes on ice.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reactivation of ChrimsonR</head><p><s>Cultured neurons were transduced with FLARE AAV viruses and GCaMP5f lentivirus at DIV13 and stimulated at DIV19 with light (467 nm, 60 mW/cm 2 , 10% duty cycle: 500 msec/5 sec) and electric stimulation (3 second trains consisting of 32 1-millisecond 48 mA stimulation at 20 Hz for 15 minutes).</s><s>18 hours later, live neurons were imaged with 10x air objective in the confocal microscope.</s><s>ChrimsonR was activated by 568 nm laser (50 mW, 800 msec, 60 mW/cm 2 ) delivered via the microscope objective every 5 seconds, as GCaMP5f fluorescence was recorded.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Virus infusion</head><p><s>Adult wild-type male C57BL/6 mice ~8 weeks old (Jackson Laboratory, Bar Harbor, ME) were used for all experiments.</s><s>All procedures were preformed in accordance with the guidelines from NIH and with approval from the MIT Committee on Animal Care (CAC).</s><s>All surgeries were conducted under aseptic conditions using a digital small animal stereotaxic instrument (David Kopf Instruments, Tujunga, CA).</s><s>Mice were anaesthetized with isoflurane (5% for induction, 1.5-2.0%</s><s>after) in the stereotaxic frame for the entire surgery and their body temperature was maintained using a heating pad.</s><s>The motor cortex was targeted using the following coordinates from bregma: +1.78mm AP, 1.5mm ML, and -1.75mm DV.</s><s>The 4 AAV viruses encoding the reporter were injected bilaterally using 10 μL microsyringe with a beveled 33 gauge microinjection needle (nanofil; WPI, Sarasota, FL).</s><s>1000nL of the viral suspensions at a rate of 150 nL/min was infused using a microsyringe pump (UMP3; WPI, Sarasota, FL) and its controller (Micro4; WPI, Sarasota, FL).</s><s>After each injection the needle was raised 100 μm for an additional 10 minutes to allow for viral diffusion at the injection site and then slowly withdrawn.</s><s>In one hemisphere an optic fiber (300 μm core, 0.37 NA) (Thorlabs, Newton, NJ, USA) held in a 1.25 mm ferrule (Precision Fiber Products, Milpitas, CA, USA) was implanted 0.5mm above the injection site.</s><s>The optic fiber was held in place using a layer of adhesive cement (C&amp;B metabond; Parkell, Edgewood, NY) followed by a layer of cranioplastic cement (Ortho-Jet; Lang, Wheeling, IL, USA).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stimulation in animals</head><p><s>Light stimulation was preformed seven days following viral injection.</s><s>The optic fiber implants were connected to a 473-nm diode-pumped solid state (DPSS) laser (OEM Laser Systems, Draper, UT, USA).</s><s>A Master-8 pulse stimulator (A.M.P.I., Jerusalem, Israel) was used to deliver 0.5 mW of 473-nm light 2 second pulses every 4 second, for 30 minutes.</s><s>For anesthetized experiments, the mice received isoflurane anesthesia (5% for induction, 2-2.5% after) 15 minutes prior to receiving stimulation and remained under anesthesia for an additional 30 minutes following light administration.</s><s>For wheel running experiments, one day before the experiment, animals were pre-exposed to the running wheel (Flying Saucer Exercise Wheel for Small Pets, Ware Manufacturing) for one hour in their home cage.</s><s>The following day animals were placed on the running wheel and received light stimulation for 30 minutes.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Perfusion</head><p><s>Animals were sacrificed 24 hrs after receiving stimulation by being deeply anesthetized with sodium pentobarbital (200 mg/kg; I.P.) and transcardially perfused with 10 mL of Ringer's solution followed by 10 mL of cold 4% PFA dissolved in 1x PBS.</s><s>The excised brains were held in a 4% PFA solution for at least 24 hours before being transferred to a 30% sucrose solution in 1x PBS.</s><s>The brains we then sectioned into 50 μm slices using a sliding microtome (HM420; Thermo Fischer Scientific, Waltham, MA, USA) before being mounted on glass microscope slides, and cover-slipped using PVA mounting medium with DABCO (Sigma-Aldrich, St. Louis, MO, USA).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Confocal microscopy and analysis of brain slices</head><p><s>Confocal imaging was performed with a Zeiss AxioObserver inverted confocal microscope with 10x air objectives, outfitted with a Yokogawa spinning disk confocal head, a Quadband notch dichroic mirror (405/488/568/647), and 405 (diode), 491 (DPSS), 561 (DPSS) and 640 nm (diode) lasers (all 50 mW).</s><s>The following laser excitation sources and filter sets were used:BFP (405 laser excitation, 445/40 nm emission), mCherry/Alexa Fluor 568 (561 laser excitation, 617/73 emission).</s><s>Acquisition times is 200 msec for BFP and 50 msec for mCherry.</s><s>All images were collected and processed using SlideBook (Intelligent Imaging Innovations).</s></p><p><s>One field of view was imaged from each brain hemisphere of each section where the mCherry signal was highest or BFP signal was highest in the case where mCherry was not observed.</s><s>If no BFP was observed, no image was taken.</s><s>To quantify the mCherry signal in each image, a segment mask was created to capture the mCherry signal from the neurons; a minimum size of 16 pixels was used to define the mask.</s><s>The sum intensity of mCherry within the mask was calculated.</s><s>For background correction, an area outside of the mCherry region was selected to calculate the mean background.</s><s>Final mCherry intensity = (mCherry sum) -(mean background intensity) × (area of the mCherry mask).</s></p><p><s>For analysis, seven consecutive brain sections were selected per animal.</s><s>We selected the seven section with the brightest mCherry signal in the middle of the sequence (the rationale is that the brightest brain slice is closest to the injection site).</s><s>Animals with no or low BFP signal were omitted due to the possibility of injection or infection failure.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistical analysis</head><p><s>Kolmogorove-Smirnov Test (one-sided) was performed for Figure <ref type="figure">5E</ref> and SI-11B.</s><s>N value was indicated in the figure or figure legends.</s><s>For box plot, the whiskers extend to the most extreme data point which is no more than 1.5 times the interquartile range from the box.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Ex vivo electrophysiology</head><p><s>Mice were deeply anaesthetized with sodium pentobarbital (200 mg/kg; intraperitoneal) 24 hr following blue light stimulation.</s><s>They were then transcardially perfused with 20 mL icecold ACSF (composition in mM: NaCl 87, KCl 2.5, NaH 2 PO 4 *H20 1.</s><s>Following recording, brain slices were fixed in 4 % paraformaldehyde (PFA) overnight and then washed with PBS (4 × 10 mins).</s><s>For immunohistochemistry, slices were blocked in PBS containing 5% (v/v) normal donkey serum (NDS) and 0.3% Triton for 1 hr at room temperature, then incubated with CF633-conjugated streptavidin (1:1000; Biotum, USA) in PBS containing 3% (v/v) NDS and 0.3% Triton for 2 hr at room temperature.</s><s>Slices were subsequently washed in PBS (4 × 10 mins) before mounting on glass slides and coverslipped using polyvinyl alcohol mounting medium with DABCO (PVA-DABCO).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Confocal microscopy of brain slides</head><p><s>Fluorescent images were obtained using a confocal laser scanning microscope (Olympus FV1000, Olympus, Center Valley, PA, USA) with FluoView software (Olympus, Center Valley, PA, USA) under a 10x/0.40</s><s>NA dry objective or a 40x/1.30</s><s>NA oil immersion objective.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Photostimulation device for cultured HEK cells and neurons</head><p><s>In vitro light stimulation of cultured HEK cells and neurons were performed with a custom built light box, as described previously <ref type="bibr" target="#b36">37</ref> .</s><s>All electronic elements were mounted on a custom printed circuit board (ExpressPCB).</s><s>Blue LEDs with peaks at 467 nm (L1-0-B5TH30-1, Ledsupply) were arryed in groups of three aligned with the wells of a Corning 24-well plate.</s><s>DynaOhm driver (Luxdrive dyna-Ohm 4006-025) were used to regulate LED current flow.</s><s>LED array were controlled by TTL (Fairchild seminconductor PN2222BU-ND) via an Arduino UNO microcontroller board (782-A000073).</s><s>An 80 mm tall spacer was used surrounding the LED lights to provide support for the 24-well plates.</s><s>Light output was measured from a distance 100 mm above the array by laser power meter (Coherent Field MAXII-TO).</s><s>Fans (Evercoll 50×15 mm fan, EC5015H12C) were mounted on one wall of the spacer for ventilation.</s><s>Engineering the calcium and light responses of FLARE.</s><s>(A) FLARE scheme.</s><s>FLARE components in the dark, low Ca +2 state (left) and in the light-exposed, high Ca +2 state (right).</s><s>The evolved LOV domain (eLOV) undergoes a reversible conformational change upon blue light exposure that allows steric access to an adjoining peptide <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b7">8</ref> , in this case, a protease recognition sequence.</s><s>On the left, the transcription factor (red) is tethered to the plasma membrane, sequestered from the cell nucleus.</s><s>On the right, the coincidence of neuronal activity (which leads to rises in cytosolic calcium) and blue light causes eLOV to "uncage" the protease cleavage site, and brings the protease into proximity of its cleavage site, via the intermolecular calmodulin-calmodulin binding peptide interaction.</s><s>Consequently, the transcription factor is irreversibly cleaved from the plasma membrane, translocates to the nucleus, and activates transcription of the reporter gene of interest (FP, fluorescent protein).</s><s>(B) Summary of constructs tested to optimize the calcium response.</s><s>None of these contain the light-sensitive LOV/eLOV domain, which is introduced later.</s><s>For testing in HEK cells, we used Gal4 as the transcription factor and the transmembrane domain of CD4 <ref type="bibr" target="#b12">13</ref> to target it to the plasma membrane.</s><s>We tested three different calmodulin (CaM) binding peptides (CaMbp), two different TEV protease (TEVp) cleavage sites (TEVcs), and two different forms of TEV protease (wild-type and C-terminally truncated).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Arduino control scripts for the custom-made photostimulation device</head><p><s>For the CaMbps, M1 is the M13 peptide with a A14F "bump" mutation 12 that complements the "hole" mutations in our CaM sequence (F19L/V35G, which reduce CaM affinity for endogenous CaM effectors <ref type="bibr" target="#b11">12</ref> ).</s><s>M2 and M3 CaMbps are derived from CaMKII and reported to have reduced CaM affinities in the low calcium state <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> .</s><s>For TEVcs, the lower affinity sequence is derived from Tango 9 , with a K m of 240 μM and k cat 0.84 min -1 , and the higher affinity sequence has a K m of 50 μM and k cat of 1.9 min -1 14 .</s><s>(C) Results from testing constructs in (B) in 12 combinations, under low and high calcium conditions in HEK cells.</s><s>Gal4 transcription factor drove the expression of Citrine fluorescent protein, whose intensity was quantified by microscopy in 8-10 fields of view per condition (&gt;250 cells per field of view).</s><s>To elevate cytosolic calcium, HEK were treated with 5 mM CaCl 2 in the presence of 2 μM ionomycin for 5 minutes; cells were then returned to regular media and Citrine was imaged 12 hours later.</s><s>Signal-to-noise (S/N) ratios at top are the ratios of mean Citrine intensities (black horizontal lines) under high versus low calcium conditions.</s><s>This experiment has been replicated once.</s><s>(D) Crystal structure of 16 kD Avena sativa LOV2 domain (PDB:2V1A <ref type="bibr" target="#b31">32</ref> ), the basis of FLARE's light gate.</s><s>Structure in the dark state is shown.</s><s>Upon blue light irradiation, the bound flavin of LOV2 rapidly (&lt;1 sec) conjugates to Cys48, leading to a conformational change that unwinds the C-terminal Jα helix.</s><s>This results in increased steric access to peptides fused to Jα <ref type="bibr" target="#b22">23</ref> .</s><s>For FLARE engineering, the residues shown as dark blue sticks at the C-terminal end of Jα were targeted for replacement by the TEV cleavage site ("biting back").</s><s>This structure also highlights the mutations we discovered via directed evolution of the LOV domain (Figure <ref type="figure" target="#fig_3">2</ref>).</s><s>The 5 mutations in evolved LOV (eLOV) are rendered in cyan space-filling mode.</s><s>(E) Summary of LOV-TEVcs fusions tested in FLARE (X in TEVcs = Y or L).</s><s>LOV here is the published AsLOV2 mutant (G528A/N538E) <ref type="bibr" target="#b6">7</ref> , not our eLOV.</s><s>(F) Results from testing six LOV-TEVcs fusion constructs in HEK cells.</s><s>Each construct was tested under 4 conditions and Citrine expression was quantified as in (C).</s><s>Calcium was elevated by 5 minute CaCl 2 and ionomycin treatment as in (C).</s><s>Light treatment was 5 minutes of 467 nm blue light at 60 mW/cm 2 , 33% duty cycle (2 sec light every 6 sec).</s><s>A star marks the fusion construct with the best performance in this assay (LOV(-2) fused to higher affinity TEVcs).</s><s>Black horizontal bars are mean values.</s><s>This experiment has been replicated once.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc><div><p><s>Figure SI-2 to collect the following amounts of cells: Round 1 (negative selection): 0.5% of cells collected (2.8 × 10 5 cells) Round 2 (negative selection): 25% of cells collected (1 × 10 6 cells) Round 3 (positive selection): 3.5% of cells collected (1.2 × 10 5 cells) Round 4 (positive selection): 9.3% of cells collected (5.0 × 10 5 cells) Round 5 (negative selection): 1.35% of cells collected (1.2 × 10 5 cells) Round 6 (positive selection): 3.1% of cells collected (3.7 × 10 5 cells)</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head></head><label></label><figDesc><div><p><s>1*uniform_brightness/2; int led3_brightness = 1*uniform_brightness/2; int led4_brightness = 1*uniform_brightness/2; int led5_brightness = 1*uniform_brightness/2; int led6_brightness = 1*uniform_brightness/2; unsigned long uniform_stim_time = 500; //'on' time in msec unsigned long led1_stim_time = uniform_stim_time; unsigned long led2_stim_time = uniform_stim_time; unsigned long led3_stim_time = uniform_stim_time; unsigned long led4_stim_time = uniform_stim_time;//uniform_stim_time; unsigned long led5_stim_time = uniform_stim_time; unsigned long led6_stim_time = uniform_stim_time; unsigned long uniform_off_time = 4500; //periodic time in msec unsigned long led1_off_time = uniform_off_time; unsigned long led2_off_time = uniform_off_time; unsigned long led3_off_time = uniform_off_time; unsigned long led4_off_time = uniform_off_time; unsigned long led5_off_time = uniform_off_time; unsigned long led6_off_time = uniform_off_time;</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s></p></div></figDesc><graphic coords="27,132.24,328.72,407.52,261.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Directed evolution of LOV domain to improve light gating in FLARE.</s><s>(A) Selection scheme.</s><s>A &gt;10 7 library of AsLOV2 variants was displayed on the yeast surface as a fusion to Aga2p protein.</s><s>The TEVp cleavage site ENLYFQ ▲ Y (higher affinity) was fused to LOV's C-terminal end, and HA and Flag are flanking epitope tags.</s><s>The positive selection (green) enriches mutants with low Flag staining (i.e., high TEVcs cleavage) after protease treatment in the light.</s><s>The negative selection (red) enriches mutants with high Flag staining (i.e., low TEVcs cleavage) after prolonged protease treatment in the dark.</s><s>(B) Graph summarizing yeast library characteristics after each round of selection.</s><s>Accompanying FACS plots in Figure SI-2.</s><s>Grey bars indicate the fraction of yeast cells in quadrant Q2 (out of all cells in Q2 + Q4) after 3 hours of TEV protease incubation in the dark.</s><s>Quadrants are defined in panel A. Yellow bars indicate the fraction of yeast cells in Q4 (out of all cells in Q2 + Q4) after 1 hour of TEV protease incubation in blue light.</s><s>This experiment has been performed once.</s><s>(C) FACS analysis of original AsLOV2 7 (top) and our evolved eLOV (bottom) on yeast.</s><s>eLOV provides superior protection of TEVcs against TEVp cleavage in the dark state (left).</s><s>eLOV has 5 mutations relative to AsLOV2 (G528A/N538E mutant 7 ), shown in Figure 1D.</s><s>This experiment has been replicated 2 times.</s><s>(D) Comparison of original AsLOV2 (G528A/N538E mutant 7 , top) and our evolved eLOV (bottom) in HEK cells, in the context of FLARE.</s><s>Constructs were TM(CD4)-CaMbp(M2)-(e)LOV-TEVcs(high affinity)-Gal4 and CaM-TEVp(truncated). Gal4 drives expression of the fluorescent protein Citrine.</s><s>High calcium (5 minutes) and light conditions were the same as in Figure 1F.</s><s>Anti-V5 staining detects expression of CaM-TEVp.</s><s>S/N ratios on right are based on mean Citrine intensities across &gt;500 cells from 10 fields of view per condition.</s><s>Scale bars, 20 μm.</s><s>This experiment has been replicated 2 times.</s></p></div></figDesc><graphic coords="29,172.20,62.00,327.60,234.65" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. FLARE optimization and testing in neurons.</s><s>(A) Summary of sequential improvements and changes to FLARE.</s><s>F1 and F2 are earlier versions of the tool.</s><s>Complete sequence of final FLARE tool in Figure SI-7.</s><s>(B) Comparison of tool versions in neurons.</s><s>tTA transcription factor drives expression of mCherry.</s><s>To elevate cytosolic calcium, half of the culture medium was replaced with fresh neurobasal media (of identical composition), and mixed by gentle pipetting.</s><s>GCaMP5f imaging showed that this treatment produced calcium transients for 10 minutes or more (Figure SI-8).</s><s>Low calcium samples were not treated.</s><s>Light stimulation was for 10 minutes using 467 nm light at 60 mW/cm 2 , 33% duty cycle (2 sec light every 6 sec).</s><s>Each datapoint corresponds to a single field-of-view with &gt;40 neurons.</s><s>Red bars denote mean values.</s><s>This experiment has been performed once.</s><s>(C) Confocal imaging of FLARE tool in rat cortical neuron cultures at DIV20.</s><s>Constructs were introduced by AAV viral transduction at DIV13.</s><s>Calcium and light conditions were identical to those in</s></p></div></figDesc><graphic coords="30,119.76,281.92,432.48,213.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4.Functional reactivation of neurons marked by FLARE and in vivo testing.</s><s>(A) Scheme for activity "replay" in neuron culture.</s><s>The coincidence of blue light and high calcium activate FLARE, resulting in expression of opsin(ChrimsonR)-mCherry in subsets of neurons.</s><s>To reactivate FLARE-marked neurons, red light is applied to stimulate opsin, resulting in cytosolic calcium rises, which can be detected with the GCaMP5f real-time fluorescence calcium indicator<ref type="bibr" target="#b32">33</ref> .</s><s>(B) Imaging results from experiment performed as in (A).</s><s>Cultured rat neurons were transduced with FLARE AAV viruses and GCaMP5f lentivirus at DIV13.</s><s>At DIV19, neurons were treated with blue light (467 nm at 60 mW/cm 2 , 10% duty cycle (0.5 sec light every 5 sec)) and electrode stimulation (15 minutes of 3-second long trains, each consisting of 32 1-millisecond 48 mA pulses at 20 Hz) for 15 minutes total.</s><s>18 hours later, at DIV20, GCaMP5f fluorescence timecourses were recorded (for the 6 indicated cells) while stimulating the ChrimsonR channelrhodopsin with pulses of red 568 nm light as indicated.</s><s>The bottom image set shows a negative control in which electrical stimulation was withheld at DIV13, but blue light was applied.</s><s>Scale bars, 50 μm.</s><s>This experiment has been replicated once.</s><s>(C) Scheme for testing FLARE in the mouse brain.</s><s>Concentrated AAV viruses encoding FLARE components (in addition to BFP, an infection marker), were injected into the motor cortex of adult mice (both left and right hemispheres, as shown).</s><s>After five days of expression, blue light was delivered to the right hemisphere via implanted optical fiber (single 30 minute session of 467 nm light at 0.5 mW, 50% duty cycle (2 sec light every 4 sec)), while mice were running on an exercise wheel or anesthetized.</s><s>24 hours later, mice were perfused for imaging analysis.</s><s>(D) Two representative brain sections from experiment in (C), for anesthesized mouse (top) and wheel running mouse (bottom).</s><s>Right hemisphere was illuminated for 30 minutes, whereas left hemisphere was in the dark.</s><s>Activated FLARE drives expression of mCherry.</s><s>BFP is an AAV infection marker.</s><s>(E) Quantitation of brain</s></p></div></figDesc><graphic coords="33,111.72,62.00,448.56,264.24" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head></head><label></label><figDesc><div><p><s>imaging was performed with a Zeiss AxioObserver inverted confocal microscope with 10x air and 40x oil-immersion objectives, outfitted with a Yokogawa spinning disk confocal head, a Quad-band notch dichroic mirror (405/488/568/647), and 405 (diode), 491 (DPSS), 561 (DPSS) and 640 nm (diode) lasers (all 50 mW).</s><s>The following laser excitation sources and filter sets were used: Citrine/GCaMP/Alexa Fluor 488 (491 laser excitation, 528/38 emission), mCherry/Alexa Fluor 568 (561 laser excitation, 617/73 emission), Alexa Fluor 647 (647 excitation, 680/30 emission) and differential interference contrast (DIC).</s></p></div></figDesc><table /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head></head><label></label><figDesc><div><p><s>Molecular Devices, CA, USA), and acquired with Clampex 10.4 software (Molecular Devices, CA, USA).</s><s>To monitor cell health, capacitance, series resistance, and input resistance were frequently measured during recordings.</s><s>Chrimson was activated by 5 ms pulses of 593 nm light (irradiance ~28.28 mW/mm 2 at the fiber tip) generated by a 593 nm diode-pumped solid state (DPSS) laser (OEM Laser Systems, Draper, UT) and controlled using a Master-8 pulse stimulator (A.M.P.I., Jerusalem, Israel).</s><s>Neurons were recorded in current-clamp mode, and light was delivered at 1, 10 and 20 Hz through an optic fiber resting on the brain slice, approximately 0.5 mm from the recorded neuron.</s><s>Opsin expression was confirmed by observing a constant inward current response to a 1 s light pulse delivered while recording in voltage-clamp mode.</s></p></div></figDesc><table><row><cell>interference contrast (DIC) optics and a Q-imaging Retiga Exi camera (Q Imaging, Canada).</cell></row><row><cell>Cortical neurons expressing mCherry were identified by brief fluorescence illumination</cell></row><row><cell>(Lumen 200; Prior Scientific, USA) through a Texas Red filter set (exciter D560/40x,</cell></row><row><cell>emitter D630/60m).</cell></row><row><cell>Electrodes for whole-cell patch-clamp electrophysiology were fabricated from thin-walled</cell></row><row><cell>borosilicate glass capillary tubing on a P-97 puller (Sutter Instrument, Novato, CA) and had</cell></row><row><cell>resistances of 5-7 MΩ when filled with internal solution (composition in mM: potassium</cell></row><row><cell>gluconate 125, NaCl 10, HEPES 20, MgATP 3, and 0.1 % neurobiotin, in ddH20; osmolarity</cell></row><row><cell>287 mOsm; pH 7.30). Recorded signals were amplified using a Multiclamp 700B amplifier</cell></row><row><cell>(Molecular Devices, CA, USA), low-pass filtered at 1 kHz, digitized at 10 kHz using a</cell></row><row><cell>Digidata 1550 (</cell></row><row><cell>3, MgCl 2 *6H2O 7,</cell></row><row><cell>NaHCO 3 25, sucrose 75, ascorbate 5, CaCl 2 *2H 2 O 0.5, in ddH 2 O; osmolarity 322-325</cell></row><row><cell>mOsm, pH 7.25-7.30) saturated with carbogen gas (95 % oxygen, 5 % carbon dioxide). The</cell></row><row><cell>brain was rapidly removed and 300 μm coronal sections containing the motor cortex were</cell></row><row><cell>prepared on a vibrating-blade microtome (Leica VT1000S, Leica Microsystems, Germany).</cell></row><row><cell>Slices were maintained in a holding chamber containing ACSF (composition in mM: NaCl</cell></row><row><cell>126, KCl 2.5; NaH 2 PO 4 *H 2 0 1.25, MgCl 2 *6H 2 O 1, NaHCO 3 26, glucose 10, CaCl 2 *2H 2 O</cell></row><row><cell>2.4, in ddH 2 O; osmolarity 299-301 mOsm; pH 7.30-7.35) saturated with carbogen gas at</cell></row><row><cell>approximately 32 °C for at least 60 mins before recording. Brain slices were transferred to</cell></row><row><cell>the recording chamber and continually perfused at a rate of 2 mL/min using a peristaltic</cell></row><row><cell>pump (MINIPULS 3; Gilson, USA) with ACSF saturated with carbogen gas at</cell></row><row><cell>approximately 32 °C. Neurons were visualized through a 40X water-immersion objective on</cell></row><row><cell>an upright microscope (Scientifica, UK) equipped with infra-red (IR) differential</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nat Biotechnol.</s><s>Author manuscript; available in PMC 2017 December 26.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We thank <rs type="person">Jenifer Einstein</rs> and <rs type="person">Austin Draycott</rs> for neuron cultures.Jenifer Einstein also assisted with cloning and some imaging assays.<rs type="person">Feng Zhang</rs>, <rs type="person">Silvana Konermann</rs>, and <rs type="person">Mark Brigham</rs> provided AAV vectors, AAV protocols, and guided us on the setup of our light stimulation device.Gang Liu built the LED light box.<rs type="person">Matthias Heidenreich</rs> advised us on preparation of concentrated <rs type="person">AAVs.Trevor J. Wardill</rs> and <rs type="person">Loren Looger</rs> provided electrode information.<rs type="person">Huiliang Wang</rs> and <rs type="person">Maya Djuristic</rs> assisted with electrical stimulation setup.<rs type="person">Peisong Han</rs> assisted with statistical analysis of the in vivo data.FACS experiments were performed at the <rs type="institution">Koch Institute Flow Cytometry Core (MIT)</rs>.A.Y.T. received funding from <rs type="funder">MIT</rs> and <rs type="funder">Stanford</rs>.K.M.T. is a <rs type="funder">New York Stem Cell Foundation Robertson Investigator</rs> and <rs type="grantName">McKnight Scholar</rs> and this work was supported by funding from the <rs type="funder">JPB Foundation</rs>, the <rs type="funder">PIIF and PIIF Engineering Award</rs>, <rs type="grantNumber">R01-MH102441-01</rs> (NIMH), and <rs type="funder">NIH</rs> <rs type="grantName">Director's New Innovator Award</rs> <rs type="grantNumber">DP2-DK-102256-01 (NIDDK)</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_MM3AE6x">
+					<orgName type="grant-name">McKnight Scholar</orgName>
+				</org>
+				<org type="funding" xml:id="_gbzxaZD">
+					<idno type="grant-number">R01-MH102441-01</idno>
+				</org>
+				<org type="funding" xml:id="_AnkPQEm">
+					<idno type="grant-number">DP2-DK-102256-01 (NIDDK)</idno>
+					<orgName type="grant-name">Director&apos;s New Innovator Award</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Imaging neural activity in worms, flies and mice with improved GCaMP calcium indicators</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Hires</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Chiappe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Chalasani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Petreanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Akerboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Mckinney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Schreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">I</forename><surname>Bargmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Looger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="875" to="U113" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19898485</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Optimization of a GCaMP Calcium Indicator for Neural Activity Imaging</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Akerboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Wardill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Marvin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mutlu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Calderon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Esposti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Borghuis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">R</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gordus</forename><surname>Orger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Portugues</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Engert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Macklin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Filosa</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kerr Ra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Takagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kracun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shigetomi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">S</forename><surname>Khakh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Baier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lagnado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ssh</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">I</forename><surname>Bargmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Kimmel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Schreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Looger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="13819" to="13840" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23035093</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Ultrasensitive fluorescent proteins for imaging neuronal activity</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Wardill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Pulver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Renninger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Baohan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Schreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kerr</forename><surname>Ra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Orger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Looger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">499</biblScope>
+			<biblScope unit="page" from="295" to="300" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23868258</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">A new generation of Ca2+ indicators with greatly improved fluorescence properties</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Grynkiewicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Poenie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Y</forename><surname>Tsien</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">In vivo two-photon calcium imaging of neuronal networks</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Stosiek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Garaschuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Holthoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Konnerth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="7319" to="7324" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12777621</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Neural circuits. Labeling of active neural circuits in vivo with designed calcium integrators</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">F</forename><surname>Fosque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Dana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Tadross</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Patel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zlatic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Ahrens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Looger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Schreiter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">347</biblScope>
+			<biblScope unit="page" from="755" to="760" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25678659</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Rationally improving LOV domain-based photoswitches</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Strickland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gawlak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Rosen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Gardner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Sosnick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="623" to="626" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20562867</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">A genetically encoded photoactivatable Rac controls the motility of living cells</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">I</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Frey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">I</forename><surname>Lungu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jaehrig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Schlichting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kuhlman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Hahn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">461</biblScope>
+			<biblScope unit="page" from="104" to="108" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19693014</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">The genetic design of signaling cascades to record receptor activation</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Barnea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Strapps</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Herrada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Berman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kloss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Axel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page">18165312</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Visualizing neuromodulation in vivo: TANGO-mapping of dopamine signaling reveals appetite control of sugar sensing</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Inagaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ben-Tabou</forename><surname>De-Leon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Jagadish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ishimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Barnea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kitamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Axel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">148</biblScope>
+			<biblScope unit="page" from="583" to="595" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22304923</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The P1′ specificity of tobacco etch virus protease</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Kapust</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tözsér</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Copeland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Waugh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochem Biophys Res Commun</title>
+		<imprint>
+			<biblScope unit="volume">294</biblScope>
+			<biblScope unit="page" from="949" to="955" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12074568</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Tobacco etch virus protease: mechanism of autolysis and rational design of stable mutants with wild-type catalytic proficiency</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Kapust</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tözsér</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Fox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anderson</forename><forename type="middle">De</forename><surname>Cherry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Copeland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Waugh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Protein Eng</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="993" to="1000" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11809930</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Labelling and optical erasure of synaptic memory traces in the motor cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hayashi-Takagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yagishita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nakamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Shirai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">I</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Loshbaugh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kuhlman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Hahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kasai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature advance on</title>
+		<imprint>
+			<biblScope unit="page" from="333" to="338" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">LOV-based optogenetic devices: light-driven modules to impart photoregulated control of cellular signaling</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pudasaini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">K</forename><surname>El-Arab</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Zoltowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Mol Biosci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">18</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25988185</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Spatiotemporal control of cell signalling using a light-switchable protein interaction</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Levskaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">D</forename><surname>Weiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Voigt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">461</biblScope>
+			<biblScope unit="page" from="997" to="1001" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19749742</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Structural basis of gene regulation by the tetracycline inducible Tet repressor-operator system</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Orth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Schnappinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hillen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Saenger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hinrichs</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Struct Biol</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="215" to="219" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10700280</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Conformational changes of calmodulin upon Ca2+ binding studied with a microfluidic mixer</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">Y</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Korlach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Rhoades</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">W</forename><surname>Kwok</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Zipfel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Waxham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">W</forename><surname>Webb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pollack</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="542" to="547" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18178620</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Unfolding of the C-Terminal Jα Helix in the LOV2 Photoreceptor Domain Observed by Time-Resolved Vibrational Spectroscopy</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Konold</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mathes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Weiβenborn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Groot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hegemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jtm</forename><surname>Kennis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Phys Chem Lett</title>
+		<imprint>
+			<biblScope unit="page" from="3472" to="3476" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27537211</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Factors that control the chemistry of the LOV domain photocycle</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Zayner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Sosnick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS One</title>
+		<imprint>
+			<biblScope unit="page">9</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Independent optical excitation of distinct neural populations</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Klapoetke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Murata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Pulver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Birdsey-Benson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">K</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Morimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Chuong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Carpenter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Chow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Surek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Melkonian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Constantine-Paton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gks</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Boyden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="338" to="346" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24509633</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Engineered ascorbate peroxidase as a genetically encoded reporter for electron microscopy</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Martell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Deerinck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sancak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Poulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">K</forename><surname>Mootha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Sosinsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Ellisman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ting</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="1143" to="1148" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23086203</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Directed evolution of APEX2 for electron microscopy and proximity labeling</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Lam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Martell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kamer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Deerinck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Ellisman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">K</forename><surname>Mootha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ting</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="51" to="54" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25419960</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Proteomic mapping of mitochondria in living cells via spatially restricted enzymatic tagging</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Rhee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Udeshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Martell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">K</forename><surname>Mootha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Carr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ting</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">339</biblScope>
+			<biblScope unit="page" from="1328" to="1331" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23371551</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Molecular and Cellular Approaches for Diversifying and Extending Optogenetics</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Gradinaru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ramakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mattis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Prakash</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Diester</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Goshen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Thompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page" from="154" to="165" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20303157</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Transgenic Inhibition of Synaptic Transmission Reveals Role of CA3 Output in Hippocampal Learning</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nakashiba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Young</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Mchugh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Buhl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tonegawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="1260" to="1264" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Evolving the lock to fit the key to create a family of G protein-coupled receptors potently activated by an inert ligand</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">N</forename><surname>Armbruster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Pausch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Herlitze</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Roth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="5163" to="5168" />
+			<date type="published" when="2007">2007</date>
+			<pubPlace>U S A.</pubPlace>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17360345</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Monitoring regulated protein-protein interactions using split TEV</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Wehr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Laage</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Bolz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grünewald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Scheek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Nave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Rossner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">17072307</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Optogenetic stimulation of a hippocampal engram activates fear memory recall</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ramirez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">T</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Puryear</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Govindarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tonegawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">484</biblScope>
+			<biblScope unit="page" from="381" to="385" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22441246</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Permanent genetic access to transiently active neurons via TRAP: Targeted recombination in active populations</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Guenthner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Miyamichi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Heller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="773" to="784" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23764283</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Localization of a stable neural correlate of associative memory</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Reijmers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Perkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Matsuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mayford</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">317</biblScope>
+			<biblScope unit="page">17761885</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">A robust activity marking system for exploring active neuronal ensembles</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Sørensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">A</forename><surname>Cooper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Baratta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Weng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ramamoorthi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Fropf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Laverriere</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Young</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Gøtzsche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hemberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Maier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">N-and C-terminal flanking regions modulate light-induced signal transduction in the LOV2 domain of the blue light sensor phototropin 1 from Avena sativa</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Halavaty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Moffat</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochemistry</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="14001" to="14009" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18001137</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Optimization of a GCaMP Calcium Indicator for Neural Activity Imaging</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Akerboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Wardill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Marvin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mutlu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Calderón</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Esposti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Borghuis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">R</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gordus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Orger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Portugues</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Engert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Macklin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Filosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aggarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Kerr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Takagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kracun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shigetomi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">S</forename><surname>Khakh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Baier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lagnado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ssh</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">I</forename><surname>Bargmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Kimmel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Schreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Looger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci Off J Soc Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="13819" to="13840" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Isolating and engineering human antibodies using yeast surface display</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">L</forename><surname>Lau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Hackel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Sazinsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Lippow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Wittrup</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Protoc</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">17406305</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Investigating models of protein function and allostery with a widespread mutational analysis of a light-activated protein</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Zayner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Antoniou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>French</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Hause</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Sosnick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophys J</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="1027" to="1036" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23972854</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">The amino-terminal helix modulates light-activated conformational changes in AsLOV2</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Zayner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Antoniou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Sosnick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Mol Biol</title>
+		<imprint>
+			<biblScope unit="volume">419</biblScope>
+			<biblScope unit="page" from="61" to="74" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22406525</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Optical control of mammalian endogenous transcription and epigenetic states</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Konermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Brigham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Trevino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Hsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Heidenreich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Platt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Scott</forename><surname>Da</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Church</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">500</biblScope>
+			<biblScope unit="page" from="472" to="476" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23877069</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Proteomic Analysis of Unbounded Cellular Compartments: Synaptic Clefts</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Stawski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Draycott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Udeshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Lehrman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Wilton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Svinkina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Deerinck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Ellisman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Stevens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Carr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ting</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">166</biblScope>
+			<biblScope unit="page" from="1295" to="1307" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27565350</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

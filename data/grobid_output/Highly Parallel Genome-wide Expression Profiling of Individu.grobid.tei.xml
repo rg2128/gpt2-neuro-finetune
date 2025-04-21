@@ -1,0 +1,1801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Highly Parallel Genome-wide Expression Profiling of Individual Cells Using Nanoliter Droplets</title>
+				<funder ref="#_ep7SHtq #_b7vyBPw">
+					<orgName type="full">NIMH</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Klarman Cell Observatory</orgName>
+				</funder>
+				<funder ref="#_fa2RE9n">
+					<orgName type="full">MGH Psychiatry Residency Research Program and Stanley-MGH Fellowship in Psychiatric Neuroscience</orgName>
+				</funder>
+				<funder ref="#_xJ6CusA">
+					<orgName type="full">National Science Foundation</orgName>
+				</funder>
+				<funder ref="#_kVqrZpy">
+					<orgName type="full">National Nanotechnology Infrastructure Network (National Science Foundation</orgName>
+				</funder>
+				<funder ref="#_ySUdErB">
+					<orgName type="full">Harvard Materials Research Science and Engineering Center</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Stanley Center for Psychiatric Research</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Simons Foundation</orgName>
+				</funder>
+				<funder ref="#_nRBUxvJ">
+					<orgName type="full">NHGRI</orgName>
+				</funder>
+				<funder ref="#_c2Kw2Ey">
+					<orgName type="full">National Institutes of Health</orgName>
+					<orgName type="abbreviated">NIH</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Elsevier BV</publisher>
+				<availability status="unknown"><p>Copyright Elsevier BV</p>
+				</availability>
+				<date type="published" when="2016-05-21">2016 May 21.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Evan</forename><forename type="middle">Z</forename><surname>Macosko</surname></persName>
+							<email>emacosko@genetics.med.harvard.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genetics</orgName>
+								<orgName type="institution">Harvard Medical School</orgName>
+								<address>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Stanley Center for Psychiatric Research</orgName>
+								<orgName type="institution" key="instit2">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Program in Medical and Population Genetics</orgName>
+								<orgName type="institution">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anindita</forename><surname>Basu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Klarman Cell Observatory</orgName>
+								<orgName type="institution" key="instit2">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">School of Engineering and Applied Sciences</orgName>
+								<orgName type="institution">Harvard University</orgName>
+								<address>
+									<postCode>02138</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rahul</forename><surname>Satija</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Klarman Cell Observatory</orgName>
+								<orgName type="institution" key="instit2">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="institution">New York Genome Center</orgName>
+								<address>
+									<postCode>10013</postCode>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff6">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution">New York University</orgName>
+								<address>
+									<postCode>10003</postCode>
+									<settlement>New York</settlement>
+									<region>New York</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">James</forename><surname>Nemesh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genetics</orgName>
+								<orgName type="institution">Harvard Medical School</orgName>
+								<address>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Stanley Center for Psychiatric Research</orgName>
+								<orgName type="institution" key="instit2">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Program in Medical and Population Genetics</orgName>
+								<orgName type="institution">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Karthik</forename><surname>Shekhar</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Klarman Cell Observatory</orgName>
+								<orgName type="institution" key="instit2">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Melissa</forename><surname>Goldman</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genetics</orgName>
+								<orgName type="institution">Harvard Medical School</orgName>
+								<address>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Itay</forename><surname>Tirosh</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Klarman Cell Observatory</orgName>
+								<orgName type="institution" key="instit2">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Allison</forename><forename type="middle">R</forename><surname>Bialas</surname></persName>
+							<affiliation key="aff7">
+								<orgName type="institution" key="instit1">The Program in Cellular and Molecular Medicine</orgName>
+								<orgName type="institution" key="instit2">Children&apos;s Hospital Boston</orgName>
+								<address>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nolan</forename><surname>Kamitaki</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genetics</orgName>
+								<orgName type="institution">Harvard Medical School</orgName>
+								<address>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Emily</forename><forename type="middle">M</forename><surname>Martersteck</surname></persName>
+							<affiliation key="aff8">
+								<orgName type="department">Department of Molecular and Cellular Biology and Center for Brain Science</orgName>
+								<orgName type="institution">Harvard University</orgName>
+								<address>
+									<postCode>02138</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">John</forename><forename type="middle">J</forename><surname>Trombetta</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Klarman Cell Observatory</orgName>
+								<orgName type="institution" key="instit2">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><forename type="middle">A</forename><surname>Weitz</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="department">School of Engineering and Applied Sciences</orgName>
+								<orgName type="institution">Harvard University</orgName>
+								<address>
+									<postCode>02138</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff9">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Harvard University</orgName>
+								<address>
+									<postCode>02138</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joshua</forename><forename type="middle">R</forename><surname>Sanes</surname></persName>
+							<affiliation key="aff8">
+								<orgName type="department">Department of Molecular and Cellular Biology and Center for Brain Science</orgName>
+								<orgName type="institution">Harvard University</orgName>
+								<address>
+									<postCode>02138</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alex</forename><forename type="middle">K</forename><surname>Shalek</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Klarman Cell Observatory</orgName>
+								<orgName type="institution" key="instit2">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff10">
+								<orgName type="institution">Ragon Institute of MGH</orgName>
+								<address>
+									<addrLine>MIT, and Harvard</addrLine>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff11">
+								<orgName type="department">Institute for Medical Engineering &amp; Science and Department of Chemistry</orgName>
+								<orgName type="institution">MIT</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aviv</forename><surname>Regev</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Klarman Cell Observatory</orgName>
+								<orgName type="institution" key="instit2">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff12">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution">MIT</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff13">
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Chevy Chase</orgName>
+								<address>
+									<postCode>20815</postCode>
+									<settlement>Maryland</settlement>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Steven</forename><forename type="middle">A</forename><surname>Mccarroll</surname></persName>
+							<email>mccarroll@genetics.med.harvard.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genetics</orgName>
+								<orgName type="institution">Harvard Medical School</orgName>
+								<address>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Stanley Center for Psychiatric Research</orgName>
+								<orgName type="institution" key="instit2">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Program in Medical and Population Genetics</orgName>
+								<orgName type="institution">Broad Institute of Harvard and MIT</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>Massachusetts</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Highly Parallel Genome-wide Expression Profiling of Individual Cells Using Nanoliter Droplets</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Cell</title>
+						<title level="j" type="abbrev">Cell</title>
+						<idno type="ISSN">0092-8674</idno>
+						<imprint>
+							<publisher>Elsevier BV</publisher>
+							<biblScope unit="volume">161</biblScope>
+							<biblScope unit="issue">5</biblScope>
+							<biblScope unit="page" from="1202" to="1214"/>
+							<date type="published" when="2016-05-21">2016 May 21.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8227FBAD407E58E16F31EEE1162A1F07</idno>
+					<idno type="DOI">10.1016/j.cell.2015.05.002</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Author Contributions E.Z.M. developed the barcoding and molecular biology analysis, advised by S.A.M. A.B. designed and fabricated the microfluidic devices, advised by D.A.W. and A.R. E.Z.M. and M.G. developed Drop-Seq experimental protocols and performed the Drop-Seq experiments in S.A.M.'s lab.</s><s>J.N. developed the methods and software for obtaining digital gene expression measurements for each cell, advised by E.Z.M. and S.A.M. J.N., E.Z.M. and S.A.M. performed the analyses of species-mixing experiments.</s><s>I.T. performed the cell cycle analysis.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Individual cells are the building blocks of tissues, organs, and organisms.</s><s>Each tissue contains cells of many types, and cells of each type can switch among biological states.</s><s>In most biological systems, our knowledge of cellular diversity is incomplete; for example, the cell-type complexity of the brain is unknown and widely debated <ref type="bibr" target="#b19">(Luo et al., 2008;</ref><ref type="bibr" target="#b22">Petilla Interneuron Nomenclature et al., 2008)</ref>.</s><s>To understand how complex tissues work, it will be important to learn the functional capacities and responses of each cell type.</s></p><p><s>A major determinant of each cell's function is its transcriptional program.</s><s>Recent advances now enable mRNA-seq analysis of individual cells <ref type="bibr" target="#b32">(Tang et al., 2009)</ref>.</s><s>However, methods of preparing cells for profiling have been applicable in practice to just hundreds <ref type="bibr" target="#b10">(Hashimshony et al., 2012;</ref><ref type="bibr" target="#b23">Picelli et al., 2013)</ref> or (with automation) a few thousand cells <ref type="bibr" target="#b14">(Jaitin et al., 2014)</ref>, typically after first separating the cells by flow sorting <ref type="bibr" target="#b27">(Shalek et al., 2013)</ref> or microfluidics <ref type="bibr" target="#b28">(Shalek et al., 2014)</ref> and then amplifying each cell's transcriptome separately.</s><s>Fast, scalable approaches are needed to characterize complex tissues with many cell types and states, under diverse conditions and perturbations.</s></p><p><s>Here we describe Drop-Seq, a method to analyze mRNA expression in thousands of individual cells by encapsulating cells in tiny droplets for parallel analysis.</s><s>Dropletsnanoliter-scale aqueous compartments formed by precisely combining aqueous and oil flows in a microfluidic device <ref type="bibr" target="#b33">(Thorsen et al., 2001;</ref><ref type="bibr" target="#b34">Umbanhowar, 2000)</ref> -have been used as tiny reaction chambers for PCR <ref type="bibr" target="#b12">(Hindson et al., 2011;</ref><ref type="bibr" target="#b37">Vogelstein and Kinzler, 1999)</ref> and reverse transcription <ref type="bibr" target="#b1">(Beer et al., 2008)</ref>.</s><s>We sought here to use droplets to compartmentalize cells into nanoliter-sized reaction chambers for analysis of all of their RNAs.</s><s>A basic challenge of using droplets for transcriptomics is to retain a molecular memory of the identity of the cell from which each mRNA transcript was isolated.</s><s>To accomplish this, we developed a molecular barcoding strategy to remember the cell-of-origin of each mRNA.</s><s>We critically evaluate Drop-Seq, then use it to profile cell states along the cell cycle.</s><s>We then applied it to a complex neural tissue, mouse retina, and from 44,808 cell profiles retrieved 39 distinct populations, each corresponding to one or a group of closely related cell types.</s><s>Our results demonstrate how large-scale single-cell analysis can help deepen our understanding of the biology of complex tissues and cell populations.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p><s>Drop-Seq consists of the following steps (Figure <ref type="figure">1A</ref>): (1) prepare a single-cell suspension from a tissue; (2) co-encapsulate each cell with a distinctly barcoded microparticle (bead) in a nanoliter-scale droplet; (3) lyse cells after they have been isolated in droplets; (4) capture a cell's mRNAs on its companion microparticle, forming STAMPs (Single-cell Transcriptomes Attached to Microparticles); (5) reverse-transcribe, amplify, and sequence thousands of STAMPs in one reaction; and (6) use the STAMP barcodes to infer each transcript's cell of origin.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A split-pool synthesis approach to generate large numbers of distinctly barcoded beads</head><p><s>To deliver large numbers of distinctly barcoded primer molecules into individual droplets, we use microparticles (beads).</s><s>We synthesized oligonucleotide primers directly on beads (from 5' to 3', yielding free 3' ends available for enzymatic priming).</s><s>Each oligonucleotide is composed of four parts (Figure <ref type="figure">1B</ref>): (1) a constant sequence (identical on all primers and beads) for use as a priming site for downstream PCR and sequencing; (2) a "cell barcode" (identical across all the primers on the surface of any one bead, but different from the cell barcodes on other beads); (3) a Unique Molecular Identifier (UMI) (different on each primer, to identify PCR duplicates) <ref type="bibr" target="#b17">(Kivioja et al., 2012)</ref>; and (4) an oligo-dT sequence for capturing polyadenylated mRNAs and priming reverse transcription.</s></p><p><s>To efficiently generate massive numbers of beads, each with a distinct barcode, we developed a "split-and-pool" DNA synthesis strategy (Figure <ref type="figure">1C</ref>).</s><s>A pool of millions of microparticles is divided into four equally sized groups; a different DNA base (A, G, C, or T) is then added to each.</s><s>All microparticles are then re-pooled, mixed, and re-split at random into another four groups, and then a different DNA base (A, G, C, or T) is added to each of the four new groups.</s><s>After 12 cycles of split-and-pool DNA synthesis, the primers on any given microparticle possess the same one of 4 12 = 16,777,216 possible 12-bp barcodes, but different microparticles have different sequences (Figure <ref type="figure">1C</ref>).</s><s>The entire microparticle pool then undergoes eight rounds of degenerate oligonucleotide synthesis to generate the UMI on each oligo (Figure <ref type="figure">1D</ref>); finally, an oligo-dT sequence (T30) is synthesized on the 3' end of all oligos on all beads.</s></p><p><s>To confirm that we could distinguish RNAs based on attached barcodes, we reversetranscribed a pool of synthetic RNAs onto 11 microparticles and sequenced the resulting cDNAs (Figure <ref type="figure">S1A</ref> and Extended Experimental Procedures); 11 microparticle barcodes each constituted 3.5% -14% of the resulting sequencing reads, whereas the next-mostabundant 12-mer constituted only 0.06% (Figure <ref type="figure">S1A</ref>).</s><s>These results suggested that the microparticle-of-origin for most cDNAs can be recognized by sequencing.</s><s>We also found that each bead contained more than 10 8 barcoded primer sites and that the sequence complexity of the barcodes approached theoretical limits <ref type="bibr">(Figures S1B and S1C,</ref><ref type="bibr">Extended Experimental Procedures)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Microfluidics device for co-encapsulating cells with beads</head><p><s>We designed a microfluidic "co-flow" device <ref type="bibr" target="#b35">(Utada et al., 2007)</ref> to co-encapsulate cells with barcoded microparticles <ref type="bibr">(Figures 2A,</ref><ref type="bibr">S2 and DataFile 1)</ref>.</s><s>This device quickly co-flows two aqueous solutions across an oil channel to form more than 100,000 nanoliter-sized droplets per minute.</s><s>One flow contains the barcoded microparticles suspended in a lysis buffer; the other flow contains a cell suspension (Figure <ref type="figure" target="#fig_0">2A</ref>, left, Figure <ref type="figure" target="#fig_0">2B</ref>).</s><s>The number of droplets created greatly exceeds the number of beads or cells injected, so that a droplet will generally contain zero or one cells, and zero or one beads.</s><s>Millions of nanoliter-sized droplets are generated per hour, of which thousands contain both a bead and a cell (Movie S1).</s><s>STAMPs are produced in the subset of droplets that contain both a bead and a cell.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Sequencing and analysis of many STAMPs in a single reaction</head><p><s>To efficiently process thousands of STAMPs at once, we break droplets, collect the mRNAbound microparticles, and reverse-transcribe the mRNAs (from the microparticle-attached primers) together in one reaction, forming covalent, stable STAMPs (Figure <ref type="figure" target="#fig_0">2A</ref>, step 7, and Experimental Procedures).</s><s>A scientist can then select any desired number of STAMPs for the preparation of 3'-end digital expression libraries (Figure <ref type="figure" target="#fig_0">2C</ref>, Experimental Procedures).</s><s>We sequence the resulting molecules from each end (Figure <ref type="figure" target="#fig_0">2C</ref>) using highcapacity parallel sequencing.</s><s>We digitally count the number of mRNA transcripts of each gene ascertained in each cell, using the UMIs to avoid double-counting sequence reads that arose from the same mRNA transcript.</s><s>We thereby create a matrix of digital geneexpression measurements (one measurement per gene per cell) for further analysis (Figure <ref type="figure" target="#fig_0">2D</ref>, Experimental Procedures).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The single cell accuracy and sensitivity of Drop-Seq libraries</head><p><s>To measure the accuracy with which Drop-Seq remembers the cell-of-origin of each mRNA, we analyzed mixtures of cultured human (HEK) and mouse (3T3) cells, scoring the numbers of human and mouse transcripts that associated with each cell barcode (Figure <ref type="figure" target="#fig_1">3A</ref>, 3B, S3A).</s><s>We found that the individual STAMPs created by Drop-Seq were highly organismspecific (Figure <ref type="figure" target="#fig_1">3A</ref>, 3B), indicating high single-cell integrity of the libraries.</s><s>At saturating levels of sequence coverage, we detected an average of 44,295 mRNA transcripts from 6,722 genes in HEK cells and 26,044 transcripts from 5,663 genes in 3T3 cells (Figures <ref type="figure" target="#fig_1">3C</ref> and<ref type="figure" target="#fig_1">3D</ref>).</s></p><p><s>To understand how Drop-Seq libraries compare to other single-cell methods, we used three quality metrics: (i) the frequency of cell-cell doublets; (ii) single-cell purity; and (iii) transcript capture rates.</s></p><p><s>Cell doublets-One potential mode of failure in any single-cell method involves cells that stick together or happen to otherwise be co-isolated for library preparation.</s><s>In Drop-Seq, across four conditions spanning 12.5 cells/µL to 100 cells/µL, the fraction of species-mixed STAMPs correlated with cell concentration (Figure <ref type="figure" target="#fig_1">3A</ref>, 3B, S3B; Experimental Procedures), with cell doublet estimates ranging from 0.36% to 11.3% for the various cell concentrations tested (under the assumption that human-mouse doublets account for half of all doublets).</s><s>This reflects the greater chance at higher cell concentrations that a droplet could encapsulate multiple cells.</s><s>By comparison, previous studies that used FACS <ref type="bibr" target="#b14">(Jaitin et al., 2014)</ref> or a commercial microfluidics platform <ref type="bibr" target="#b28">(Shalek et al., 2014)</ref> to isolate single cells reported doublet rates of 2.3% and 11% respectively, based upon examining microscopy images of captured cells.</s><s>In analyzing the above mouse-human cell suspension mixture in a commercial microfluidics system (Fluidigm C1), we found that 30% of the resulting libraries in that experiment were species-mixed (Figure <ref type="figure" target="#fig_1">S3C</ref>); about one-third of these doublets were visible in the microscopy images.</s></p><p><s>Single-cell impurity-Species-mixing experiments enabled us to measure single-cell purity across thousands of libraries prepared at different cell concentrations.</s><s>We found that purity was strongly related to cell concentration, ranging from 98.8% at 12.5 cells / µL to 90.4% at 100 cells / µL (Figure <ref type="figure" target="#fig_1">S3B</ref>).</s><s>The largest source of single-cell impurity appeared to be ambient RNA that is present in the cell suspension (a first step of almost all single-cell methods) and presumably results from cells that are damaged during preparation (Figure <ref type="figure" target="#fig_1">S3D</ref>).</s><s>We measured a mean single-cell purity of 95.8% for the same cell mixtures in the Fluidigm C1 system (Figure <ref type="figure" target="#fig_1">S3C</ref>), similar to Drop-Seq at 50 cells / µL.</s></p><p><s>Conversion efficiency-The use of synthetic RNA "spike-in" controls at known concentrations, together with UMIs to avoid double-counting, allows estimation of capture rates for digital single-cell expression technologies <ref type="bibr" target="#b3">(Brennecke et al., 2013;</ref><ref type="bibr" target="#b13">Islam et al., 2014)</ref>.</s><s>We identified evidence that PCR and sequencing errors inflate the numbers of apparently unique UMIs (Table <ref type="table">S1</ref> and Extended Experimental Procedures), so we developed a more conservative estimation method than has been used in earlier studies <ref type="bibr" target="#b13">(Islam et al., 2014)</ref>; in our approach, we collapse similar UMI sequences into a single count.</s><s>Using this approach we calculated a capture rate of 12.8% for Drop-Seq (Figure <ref type="figure" target="#fig_1">3G</ref>).</s><s>We corroborated this estimate by making independent digital expression measurements (on bulk RNA from 50,000 HEK cells) on 10 genes using droplet digital PCR (ddPCR) <ref type="bibr" target="#b12">(Hindson et al., 2011)</ref>, calculating an average conversion efficiency of 10.7% (Figures <ref type="figure" target="#fig_2">S4A, S4B,</ref> and<ref type="figure" target="#fig_2">S4C</ref>).</s></p><p><s>To further evaluate how the digital transcriptomes ascertained by Drop-Seq related to the underlying mRNA content of cells, we compared Drop-Seq log-expression measurements to those made by a commonly used in-solution amplification process, finding strong correlation (r = 0.94, Figure <ref type="figure" target="#fig_1">3E</ref>), though Drop-Seq ascertained GC-rich transcripts at a lower rate (Figure <ref type="figure" target="#fig_2">S4D</ref>).</s><s>We also compared Drop-Seq single-cell log-expression measurements with measurements from bulk mRNA-seq, observing a correlation of r=0.90 <ref type="bibr">(Figures 3F,</ref><ref type="bibr">S4E,</ref><ref type="bibr">and S4F)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cell states: Drop-Seq analysis of the cell cycle</head><p><s>To evaluate the visibility of cell states in Drop-Seq, we first examined cell-to-cell variation among the 589 HEK and 412 3T3 STAMPs shown in Figure <ref type="figure" target="#fig_1">3B</ref>.</s><s>Both cultures consisted of asynchronously dividing cells; principal components analysis (PCA) of the single-cell expression profiles showed the top principal components to be dominated by genes with roles in protein synthesis, growth, DNA replication, and other aspects of the cell cycle.</s><s>We inferred the cell-cycle phase of each of the 1,001 cells by scoring for gene sets (signatures) reflecting five phases of the cell cycle previously characterized in chemically synchronized cells (G1/S, S, G2/M, M, and M/G1) (Figure <ref type="figure" target="#fig_2">4A</ref>, Table <ref type="table">S2</ref>) <ref type="bibr" target="#b39">(Whitfield et al., 2002)</ref>.</s><s>We identified 544 human and 668 mouse genes with expression patterns that varied along the cell cycle (at a false discovery rate of 5%; Experimental Procedures) (Figure <ref type="figure" target="#fig_2">4B</ref>), including 200 orthologous gene pairs (p &lt; 10 -65 by hypergeometric test).</s><s>Of these orthologous gene pairs, most (82.5%) have been previously annotated as related to the cell cycle in at least one species; among the other 17.5%, we found some that would be expected to show cell cycle variation (e.g.</s><s>E2F7 and PARPBP) and many that to our knowledge were not previously connected to the cell cycle (Figure <ref type="figure" target="#fig_2">4C</ref> and Table <ref type="table">S3</ref>).</s><s>Single-cell analysis at this scale enabled characterization of cell-cycle gene expression without chemical synchronization and at high temporal resolution.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cell types: Drop-Seq analysis of the retina</head><p><s>We selected the retina as the first tissue to study with Drop-Seq because decades of work has generated molecular information about many retinal cell types <ref type="bibr" target="#b20">(Masland, 2012;</ref><ref type="bibr" target="#b25">Sanes and Zipursky, 2010)</ref>, allowing us to relate our RNA-seq data to prior classification.</s><s>The retina contains five neuronal classes-retinal ganglion, bipolar, horizontal, photoreceptor, and amacrine-each defined by morphological, physiological, and molecular criteria (Figure <ref type="figure" target="#fig_3">5A</ref>).</s><s>Most of the classes are divisible into discrete types -a total currently estimated at about 100 -but well under half of these types possess known, distinguishing molecular markers.</s></p><p><s>We sequenced 49,300 STAMPs prepared from 14-day-old mouse retinas (STAMPs were collected in seven batches over four days).</s><s>We performed principal components analysis on the 13,155 largest libraries (Figure <ref type="figure" target="#fig_3">S5</ref>, Table <ref type="table">S3</ref>), then reduced the 32 statistically significant PCs (Experimental Procedures) to two dimensions using t-Distributed Stochastic Neighbor Embedding (tSNE) <ref type="bibr" target="#b0">(Amir el et al., 2013;</ref><ref type="bibr" target="#b36">van der Maaten and Hinton, 2008)</ref>.</s><s>We projected the remaining 36,145 cells in the data into the tSNE analysis.</s><s>We then combined a density clustering approach with post hoc differential expression analysis to divide 44,808 cells among 39 transcriptionally distinct clusters (Extended Experimental Procedures) ranging from 50 to 29,400 cells (Figures <ref type="figure" target="#fig_3">5B</ref> and<ref type="figure" target="#fig_3">5C</ref>).</s><s>Finally, we organized the 39 cell populations into larger categories (classes) by building a dendrogram of similarity relationships among the 39 cell populations (Figure <ref type="figure" target="#fig_3">5D</ref>, left).</s></p><p><s>The cell populations inferred from this analysis were readily matched to the known retinal cell types, including all five neuronal cell classes, based on the specific expression of known markers for these cell types (Figure <ref type="figure" target="#fig_3">5D</ref>, right, and Figure <ref type="figure" target="#fig_4">S6A</ref>).</s><s>Additional clusters corresponded to astrocytes (associated with retinal ganglion cell axons exiting the retina), resident microglia, endothelial cells (from intra-retinal vasculature), pericytes, and fibroblasts (Figure <ref type="figure" target="#fig_3">5D</ref>).</s><s>The relative abundances of the major cell classes in our data agreed with earlier estimates from microscopy <ref type="bibr" target="#b15">(Jeon et al., 1998)</ref> (Table <ref type="table">1</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Replication and cumulative power of Drop-Seq data</head><p><s>Replication across experimental sessions enables the construction of cumulatively powerful datasets -but only if data are replicable and comparable.</s><s>The retinal STAMPs were generated on four different days (weeks apart), utilizing different litters and multiple runs in several sessions, for a total of seven replicates.</s><s>One of the runs was performed at a particularly low cell concentration (15 cells/µL) and thus high purity, to evaluate whether results were artifacts of cell-cell doublets or single-cell impurity.</s><s>We found that all 39 clusters contained cells from every experiment.</s><s>One cluster (arrow in Figure <ref type="figure" target="#fig_3">5E</ref>; star in Figure <ref type="figure" target="#fig_4">S6B</ref>), which drew disproportionately from two replicates, expressed markers of fibroblasts, a nonretinal cell type that is present in tissue surrounding the retina, and hence likely represents imprecise dissection.</s></p><p><s>We examined how the classification of cells (based on their patterns of gene expression) evolved as a function of the numbers of cells in analysis.</s><s>We used 500, 2,000, or 9,731 cells from our dataset, and asked how (for example) cells identified as amacrines in the full dataset clustered in analyses of smaller numbers of cells (Figure <ref type="figure" target="#fig_3">5F</ref>).</s><s>As the number of cells in the data increased, distinctions between related clusters become clearer, stronger, and finer in resolution, with the result that a greater number of rare amacrine cell subpopulations (each representing 0.1-0.9% of the cells in the experiment) could ultimately be distinguished from one another (Figure <ref type="figure" target="#fig_3">5F</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Profiles of amacrine cell types</head><p><s>To characterize distinctions among closely related cell populations, we focused on the 21 clusters of amacrines.</s><s>Amacrines are the most morphologically diverse neuronal class <ref type="bibr" target="#b20">(Masland, 2012)</ref>, but the majority of types lack defining molecular markers.</s><s>Most amacrine cells are inhibitory, utilizing either GABA or glycine as a neurotransmitter.</s><s>Excitatory amacrine cells that release glutamate have also been identified <ref type="bibr" target="#b11">(Haverkamp and Wassle, 2004)</ref>.</s><s>Another amacrine cell population expresses no GABAergic, glycinergic or glutamatergic markers; its neurotransmitter is unidentified (nGnG amacrines) <ref type="bibr" target="#b16">(Kay et al., 2011)</ref>.</s></p><p><s>We first identified markers that were most universally expressed by amacrines relative to other cell classes (Figure <ref type="figure" target="#fig_4">6A</ref>).</s><s>We then assessed the expression of known glycinergic and GABAergic markers; their mutually exclusive expression is a fundamental distinction among amacrines.</s><s>Of the 21 amacrine clusters, 12 were identifiable as GABAergic (Gad1 and/or Gad2-positive) and 5 others were glycinergic (glycine transporter Slc6a9-positive) (Figure <ref type="figure" target="#fig_4">6B</ref>).</s><s>An additional cell population was identified as excitatory by its expression of a glutamate transporter, Slc17a8 (Figure <ref type="figure" target="#fig_4">6B</ref>).</s><s>The remaining three clusters (clusters 4, 20, and 21) had low levels of GABAergic, glycinergic, and glutamatergic markers; these likely include nGnG amacrines.</s></p><p><s>Among the glycinergic and GABAergic clusters, we found many amacrine types with known markers.</s><s>A-II amacrine neurons appeared to correspond to the most divergent glycinergic cluster (Figure <ref type="figure" target="#fig_4">6B</ref>, cluster 16), as this was the only cluster to strongly express the Gjd2 gene encoding the gap junction protein connexin 36 <ref type="bibr" target="#b9">(Feigenspan et al., 2001)</ref>.</s><s>Ebf3, a transcription factor found in SEG glycinergic as well as nGnG amacrines, was specific to clusters 17 and 20.</s><s>Starburst amacrine neurons (SACs), the only retinal cells that use acetylcholine as a co-transmitter, were identifiable as cluster 3 by their expression of the cholinergic marker Chat (Figure <ref type="figure" target="#fig_4">6B</ref>).</s><s>Unlike other GABAergic cells, SACs expressed Gad1 but not Gad2, as previously observed in rabbit <ref type="bibr" target="#b8">(Famiglietti and Sundquist, 2010)</ref>.</s></p><p><s>We then identified selectively expressed markers for each of the 21 amacrine cell populations (Figure <ref type="figure" target="#fig_4">6C</ref> and Table <ref type="table">S4</ref>).</s><s>We validated two of the markers immunohistochemically.</s><s>First, we co-stained retinal sections with antibodies to the transcription factor MAF, the top marker of cluster 7, plus antibodies to either GAD1 or SLC6A9, markers of GABAergic and glycinergic transmission, respectively.</s><s>As predicted by the Drop-Seq analysis, MAF was found in a small subset of amacrine cells that were GABAergic and not glycinergic (Figure <ref type="figure" target="#fig_4">6D</ref>).</s><s>Cluster 7 had numerous genes that were enriched relative to its nearest neighbor, cluster 6 (Figure <ref type="figure" target="#fig_4">6E</ref>, 16 genes &gt; 2.8-fold enrichment, p&lt;10 -9 ), including Crybb3, which belongs to the crystallin family of proteins that are known to be directly upregulated by Maf <ref type="bibr" target="#b40">(Yang and Cvekl, 2005)</ref>, and another, the protease Mmp9, which accepts crystallins as substrates <ref type="bibr" target="#b6">(Descamps et al., 2005)</ref>.</s><s>Second, we stained sections with antibodies to PPP1R17 (Figure <ref type="figure" target="#fig_4">6F</ref>).</s><s>Cluster 20 shows weak, infrequent glycine transporter expression and is one of only two clusters (with cluster 21) that express Neurod6, a marker of nGnG neurons <ref type="bibr" target="#b16">(Kay et al., 2011)</ref>.</s><s>We used a transgenic strain (MitoP) that has been shown to express cyan fluorescent protein (CFP) specifically in nGnG amacrines <ref type="bibr" target="#b16">(Kay et al., 2011)</ref>.</s><s>PPP1R17 stained 85% of all CFP-positive amacrines in the MitoP line, validating this as a marker of nGnG cells (Figure <ref type="figure" target="#fig_4">6F</ref>).</s><s>PPP1R17 was one of several markers that distinguished Cluster 20 from its closest neighbor, Cluster 21 (Figure <ref type="figure" target="#fig_4">6G</ref>; 12 genes &gt; 2.8-fold enrichment, p&lt;10 -9 ).</s><s>The differences between Clusters 20 and 21 suggest a hitherto unsuspected level of heterogeneity among nGnG amacrines.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supervised analysis reveals additional diversity</head><p><s>Our unsupervised analysis grouped cells into 39 transcriptionally distinct populations, but morphological and functional criteria suggest that there are ~100 retinal cell types.</s><s>We asked whether supervised analysis could reveal multiple types within individual clusters.</s><s>For example, retinal ganglion cells (RGCs), which consist of about 30 types <ref type="bibr" target="#b24">(Sanes and Masland, 2015)</ref>, formed a single cluster in our analysis, perhaps because it is a rare cell population (1%, Table <ref type="table">1</ref>).</s><s>Five RGC types, called intrinsically photosensitive RGCs (ipRGCs), express Opn4, the gene encoding the photopigment melanopsin.</s><s>Opn4+ RGCs (26/432) expressed nine genes at levels two-fold higher than Opn4-RGCs (p &lt; 10 9 , Figure <ref type="figure" target="#fig_4">6H</ref>), including Tbr2/Eomes, known to be a selective marker for this population <ref type="bibr" target="#b31">(Sweeney et al., 2014)</ref>.</s><s>This result reveals additional heterogeneity that may also emerge ab initio as analyses expand to include more cells.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>Ascertaining transcriptional variation across individual cells is a valuable way of learning about complex tissues and functional responses, but single-cell analysis has been limited by the time and cost of preparing libraries from many individual cells.</s><s>A scientist employing Drop-Seq can prepare 10,000 single-cell libraries for sequencing in twelve hours, for about 6.5 cents per cell (Table <ref type="table">S5</ref>), representing a &gt;100-fold improvement in both time and cost relative to existing methods.</s><s>A Drop-Seq setup can be constructed quickly and inexpensively in a standard biology lab using readily available equipment (Figure <ref type="figure" target="#fig_0">S2B</ref> and Extended Experimental Procedures).</s><s>We hope that ease, speed, and low cost facilitate exuberant experimentation, careful replication, and many cycles of experiments, analyses, ideas, and more experiments.</s></p><p><s>In validating Drop-Seq, we developed stringent species-mixing experiments to measure single-cell purity and cell doublet rates in our libraries.</s><s>In another article in this issue, Klein et al. <ref type="bibr" target="#b18">(Klein, 2015)</ref> describe a droplet-based approach to single-cell RNA-seq, and also use species-mixing experiments to evaluate it.</s><s>Our results indicate that all methods of isolating single cells from a cell suspension, including Drop-Seq, fluorescence activated cell sorting (FACS) and microfluidics, are vulnerable to impurities, and highlight the value of performing species mixing experiments to assess single-cell approaches.</s><s>In our retina analysis, even relatively impure libraries generated in "ultra-high-throughput" modes (100 cells per µL, allowing the processing of 10,000 cells per hour at ~10% doublet and impurity rates) appeared to yield a robust and biologically validated cell classification, but other tissues or applications may require using Drop-Seq in purer modes.</s></p><p><s>Unsupervised computational analysis of Drop-Seq data identified 39 transcriptionally distinct retinal cell populations, many representing specific subtypes of the major retinal cell classes (Figures <ref type="figure" target="#fig_3">5</ref> and<ref type="figure" target="#fig_4">6</ref>).</s><s>It is a particular strength of the retina that establishing correspondence between cluster and type was in many cases straightforward; an important direction will be to identify cell types and states in other parts of the brain-as well as in other tissues-about which less is currently known.</s></p><p><s>We see many applications of Drop-Seq, beyond the identification of cell types and cell states.</s><s>Genome-scale genetic studies are identifying many genes whose variation contributes to disease risk, but biology has lacked similarly high-throughput ways of connecting these genes to specific cell populations and unique functional responses.</s><s>Drop-Seq could be used to provide initial insights into how these genes function in the diverse cell types composing each tissue.</s><s>In addition, coupling Drop-Seq to perturbations -such as small molecules, mutations, pathogens, or other stimuli -could generate an information-rich, multidimensional readout of the influence of perturbations on many kinds of cells.</s></p><p><s>The functional implications of a gene's expression are a product not just of that gene's intrinsic properties, but also of the entire cell-level context in which the gene is expressed.</s><s>We hope Drop-Seq enables the abundant and routine discovery of such relationships in many areas of biology.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimental Procedures Device design and fabrication</head><p><s>Microfluidic devices were designed using AutoCAD software (Autodesk, Inc.), and the components tested using COMSOL Multiphysics (COMSOL Inc.).</s><s>Full details are described in Extended Experimental Procedures.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Barcoded microparticle synthesis</head><p><s>Bead functionalization and reverse-direction phosphoramidite synthesis were performed by Chemgenes Corp (Wilmington, MA).</s><s>"Split-and-pool" cycles were accomplished by removing the dry resin from each column, hand mixing, and weighing out four equal portions before returning the resin for an additional cycle of synthesis.</s><s>Full details are described in Extended Experimental Procedures.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Drop-Seq procedure</head><p><s>Monodisperse droplets ~1 nL in size were generated using the microfluidic device described in Extended Experimental Procedures, in which barcoded microparticles, suspended in lysis buffer, were flowed at a rate equal to that of a single-cell suspension, so that resulting droplets were composed of an equal amount of each component.</s><s>As soon as droplet generation was complete, droplets were broken with perfluorooctanol in 30 mL of 6x SSC.</s><s>The addition of a large aqueous volume to the droplets reduces hybridization events after droplet breakage, because DNA base pairing follows second-order kinetics <ref type="bibr" target="#b4">(Britten and Kohne, 1968;</ref><ref type="bibr" target="#b38">Wetmur and Davidson, 1968</ref>).</s><s>The beads were then washed and resuspended in a reverse transcriptase mix, followed by a treatment with exonuclease I to remove unextended primers.</s><s>The beads were then washed, counted, aliquoted into PCR tubes, and PCR amplified.</s><s>The PCR reactions were purified and pooled, and the amplified cDNA quantified on a BioAnalyzer High Sensitivity Chip (Agilent).</s><s>The cDNA was fragmented and amplified for sequencing with the Nextera XT DNA sample prep kit (Illumina) using custom primers that enabled the specific amplification of only the 3' ends (Table <ref type="table">S6</ref>).</s><s>The libraries were purified, quantified, and then sequenced on the Illumina NextSeq 500.</s><s>All details regarding reaction conditions, primers used, and sequencing specifications can be found in the Extended Experimental Procedures.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cell cycle analysis of HEK and 3T3 cells</head><p><s>Gene sets reflecting five phases of the HeLa cell cycle (G1/S, S, G2/M, M and M/G1) were taken from Whitfield et al. <ref type="bibr" target="#b39">(Whitfield et al., 2002)</ref> with some modification (Extended Experimental Procedures and Table <ref type="table">S2</ref>).</s><s>A phase-specific score was generated for each cell, across all five phases, using averaged normalized expression levels (log 2 (TPM+1) of the genes in each set.</s><s>Cells were then ordered along the cell cycle by comparing the patterns of these five phase scores per cell.</s><s>To identify cell cycle-regulated genes, we used a sliding window approach, and identified windows of maximal and minimal average expression, both for ordered cells, and for shuffled cells, to evaluate the false-discovery rate.</s><s>Full details may be found in Extended Experimental Procedures.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Principal components and clustering analysis of retina data</head><p><s>The clustering algorithm for the retinal cell data was implemented and performed using Seurat, a recently developed R package for single-cell analysis <ref type="bibr" target="#b26">(Satija et al., 2015)</ref>.</s><s>Principal components analysis (PCA) was first performed on a 13,155-cell "training set" of the 49,300-cell dataset, using single-cell libraries in which transcripts from &gt; 900 genes were detected.</s><s>We found this approach was more effective in discovering structures corresponding to rare cell types than performing PCA on the full dataset, which was dominated by numerous, tiny rod photoreceptors (Extended Experimental Procedures).</s><s>Thirty-two statistically significant PCs were identified using a permutation test and independently confirmed using a modified resampling procedure <ref type="bibr" target="#b5">(Chung and Storey, 2014)</ref>.</s><s>We projected individual cells within the training set based on their PC scores onto a single two-dimensional map using t-Distributed Stochastic Neighbor Embedding (t-SNE) (van der <ref type="bibr" target="#b36">Maaten and Hinton, 2008)</ref>.</s><s>The remaining 36,145 single-cell libraries (&lt; 900 genes detected) were next projected on this t-SNE map, based on their representation within the PCsubspace of the training set <ref type="bibr" target="#b2">(Berman et al., 2014;</ref><ref type="bibr" target="#b29">Shekhar et al., 2014)</ref>.</s><s>This approach mitigates the impact of noisy variation in the lower complexity libraries due to gene dropouts.</s><s>It was also reliable in the sense that when we withheld from the t-SNE all cells from a given cluster and then tried to project them, these withheld cells were not spuriously assigned to another cluster by the projection (Table <ref type="table">S7</ref>).</s><s>Point clouds on the t-SNE map represent candidate cell types; density clustering <ref type="bibr" target="#b7">(Ester et al., 1996)</ref> identified these regions.</s><s>Differential expression testing <ref type="bibr" target="#b21">(McDavid et al., 2013)</ref> was then used to confirm that clusters were distinct from each other.</s><s>Hierarchical clustering based on Euclidean distance and complete linkage was used to build a tree relating the clusters.</s><s>We noted expression of several rod-specific genes, such as Rho and Nrl, in every cell cluster, an observation that has been made in another retinal cell gene expression study <ref type="bibr" target="#b30">(Siegert et al., 2012)</ref> and likely arises from solubilization of these high-abundance transcripts during cell suspension preparation.</s><s>Additional information regarding retinal cell data analysis can be found in the Extended Experimental Procedures.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Figure 1. Molecular barcoding of cellular transcriptomes in droplets</head><p><s>(A) Drop-Seq barcoding schematic.</s><s>A complex tissue is dissociated into individual cells, which are then encapsulated in droplets together with microparticles (gray circles) that deliver barcoded primers.</s><s>Each cell is lysed within a droplet; its mRNAs bind to the primers on its companion microparticle.</s><s>The mRNAs are reverse-transcribed into cDNAs, generating a set of beads called "single-cell transcriptomes attached to microparticles" (STAMPs).</s><s>The barcoded STAMPs can then be amplified in pools for high-throughput mRNA-seq to analyze any desired number of individual cells.</s><s>(B) Sequence of primers on the microparticle.</s><s>The primers on all beads contain a common sequence ("PCR handle") to enable PCR amplification after STAMP formation.</s><s>Each microparticle contains more than 10 8 individual primers that share the same "cell barcode" (panel C) but have different unique molecular identifiers (UMIs), enabling mRNA transcripts to be digitally counted (panel D).</s><s>A 30 bp oligo dT sequence is present at the end of all primer sequences for capture of mRNAs.</s><s>(C) Split-and-pool synthesis of the cell barcode.</s><s>To generate the cell barcode, the pool of microparticles is repeatedly split into four equally sized oligonucleotide synthesis reactions, to which one of the four DNA bases is added, and then pooled together after each cycle, in a total of 12 split-pool cycles.</s><s>The barcode synthesized on any individual bead reflects that bead's unique path through the series of synthesis reactions.</s><s>The result is a pool of microparticles, each possessing one of 4 12 (16,777,216) possible sequences on its entire complement of primers (see also Figure <ref type="figure">S1</ref>).</s><s>(D) Synthesis of a unique molecular identifier (UMI).</s><s>Following the completion of the "split-and-pool" synthesis cycles, all microparticles are together subjected to eight rounds of degenerate synthesis with all four DNA bases available during each cycle, such that each individual primer receives one of 4 8 (65,536) possible sequences (UMIs).</s><s>A customdesigned microfluidic device joins two aqueous flows before their compartmentalization into discrete droplets.</s><s>One flow contains cells, and the other flow contains barcoded primer beads suspended in a lysis buffer.</s><s>Immediately following droplet formation, the cell is lysed and releases its mRNAs, which then hybridize to the primers on the microparticle surface.</s><s>The droplets are broken by adding a reagent to destabilize the oil-water interface (Experimental Procedures), and the microparticles collected and washed.</s><s>The mRNAs are then reverse-transcribed in bulk, forming STAMPs, and template switching is used to introduce a PCR handle downstream of the synthesized cDNA <ref type="bibr" target="#b41">(Zhu et al., 2001)</ref>.</s><s>(B) Microfluidic device used in Drop-Seq.</s><s>Beads (brown in image), suspended in a lysis agent, enter the device from the central channel; cells enter from the top and bottom.</s><s>Laminar flow prevents mixing of the two aqueous inputs prior to droplet formation (see also Movie S1).</s><s>Schematics of the device design and how it is operated can be found in Figure <ref type="figure" target="#fig_0">S2</ref>.</s></p><p><s>(C) Molecular elements of a Drop-Seq sequencing library.</s><s>The first read yields the cell barcode and UMI.</s><s>The second, paired read interrogates sequence from the cDNA (50 bp is typically sequenced); this sequence is then aligned to the genome to determine a transcript's gene of origin.</s><s>(D) In silicoreconstruction of thousands of single-cell transcriptomes.</s><s>Millions of pairedend reads are generated from a Drop-Seq library on a high-throughput sequencer.</s><s>The reads are first aligned to a reference genome to identify the gene-of-origin of the cDNA.</s><s>Next, reads are organized by their cell barcodes, and individual UMIs are counted for each gene in each cell (Extended Experimental Procedures).</s><s>The result, shown at far right, is a "digital expression matrix" in which each column corresponds to a cell, each row corresponds to a gene, and each entry is the integer number of transcripts detected from that gene, in that cell.</s><s>cell for 54 HEK (human) STAMPs (blue) and 28 3T3 (mouse) STAMPs (green) that were sequenced to a mean read depth of 737,240 high-quality aligned reads per cell.</s><s>(E,F) Correlation between gene expression measurements in Drop-Seq and non-singlecell RNA-seq methods.</s><s>Comparison of Drop-Seq gene expression measurements (averaged across 550 STAMPs) to measurements from bulk RNA analyzed by: (E) an in-solution template switch amplification (TSA) procedure similar to Smart-Seq2 <ref type="bibr" target="#b23">(Picelli et al., 2013)</ref> (Extended Experimental Procedures); and (F) Illumina TruSeq mRNA-Seq.</s><s>All comparisons involve RNA derived from the same cell culture flask (3T3 cells).</s><s>All expression counts were converted to average transcripts per million (ATPM) and plotted as log (1+ATPM).</s><s>(G) Quantitation of Drop-Seq capture efficiency by ERCC spike-ins.</s><s>Drop-Seq was performed with ERCC control synthetic RNA at an estimated concentration of 100,000 ERCC RNA molecules per droplet.</s><s>84 beads were sequenced at a mean depth of 2.4 million reads, aligned to the ERCC reference sequences, and UMIs counted for each ERCC species, after applying a stringent down-correction for potential sequencing errors (Table <ref type="table">S1</ref> and Extended Experimental Procedures).</s><s>For each ERCC RNA species above an average concentration of one molecule per droplet, the predicted number of molecules per droplet was plotted in log space (x-axis), versus the actual number of molecules detected per droplet by Drop-Seq, also in log space (y-axis).</s><s>The intercept of a regression line, constrained to have a slope of 1 and fitted to the seven highest points, was used to estimate a conversion factor (0.128).</s><s>A second estimation, using the average number of detected transcripts divided by the number of ERCC molecules used (100,000), yielded a conversion factor of 0.125.</s><s>Maximal and minimal expression was calculated for each gene across a sliding window of the ordered cells, and compared with shuffled cells to obtain a false discovery rate (FDR) (Experimental Procedures).</s><s>The plotted genes (FDR threshold of 5%) were then clustered by k-means analysis to identify sets of genes with similar expression patterns.</s><s>Cluster boundaries are represented by dashed gray lines.</s><s>(C) Representative cell cycle regulated genes discovered by Drop-Seq.</s><s>Selected genes that were found to be cell cycle regulated in both the HEK and 3T3 cell sets.</s><s>Left, genes that are well-known to be cell cycle regulated.</s><s>Right, some genes identified in this analysis that were not previously known to be associated with the cell cycle (Experimental Procedures).</s><s>A complete list of cell cycle regulated genes can be found in Table <ref type="table">S2</ref>.</s><s>In this heat map, rows correspond to individual genes found to be selectively upregulated in individual clusters (p &lt; 0.01, Bonferroni corrected); columns are individual cells, ordered by cluster (1-39).</s><s>Clusters with &gt; 1,000 cells were downsampled to 1,000 cells to prevent them from dominating the plot.</s><s>(D) Gene expression similarity relationships among 39 inferred cell populations.</s><s>Average expression across all detected genes was calculated for each of 39 cell clusters, and the relative (Euclidean) distances between gene-expression patterns for the 39 clusters are represented by a dendrogram.</s><s>The branches of the dendrogram were annotated by examining the differential expression of known markers for retina cell classes and types.</s><s>Twelve examples are shown at right, using violin plots to represent the distribution of expression within the clusters.</s><s>Violin plots for additional genes are in Figure <ref type="figure" target="#fig_4">S6A</ref>.</s><s>(E) Representation of experimental replicates in each cell population.</s><s>tSNE plot from Figure <ref type="figure" target="#fig_0">2B</ref>, with each cell now colored by experimental replicate (for visual clarity, the central rod cluster was downsampled to 10,000 cells).</s><s>Each of the 7 replicates contributes to all 39 cell populations.</s><s>Cluster 36 (arrow), in which these replicates are unevenly represented, expressed markers of fibroblasts, which are not native to the retina and are presumably a dissection artifact (see also Figure <ref type="figure" target="#fig_4">S6B</ref>).</s><s>(F) Trajectory of amacrine clustering as a function of number of cells analyzed.</s><s>Three different downsampled datasets were generated: (1) 500, (2) 2,000, or (3) 9,731 cells (Extended Experimental Procedures).</s><s>Cells identified as amacrines (clusters 3-23) in the full analysis are here colored by their cluster identities in that analysis.</s><s>Analyses of smaller numbers of cells incompletely distinguished these subpopulations from one another.</s><s>(C) Nomination of novel candidate markers of amacrine subpopulations.</s><s>Each cluster was screened for genes differentially expressed in that cluster relative to all other amacrine clusters (p&lt;0.01,</s><s>Bonferroni corrected) <ref type="bibr" target="#b21">(McDavid et al., 2013)</ref>, and filtered for those with highest relative enrichment.</s><s>Expression of a single candidate marker for each cluster is shown across all amacrines.</s><s>(D) Validation of MAF as a marker for a GABAergic amacrine population.</s><s>Staining of a fixed adult retina from wild-type mice for MAF (panels i, ii, v, and green staining in iv and vii), GAD1 (panels iii and iv, red staining), and SLC6A9 (panels vi and vii, red staining), demonstrating co-localization of MAF with GAD1, but not SLC6A9.</s><s>(E) Differential expression of cluster 7 (MAF+) with nearest neighboring amacrine cluster (#6).</s><s>Average gene expression was compared between cells in clusters 6 and 7; sixteen genes (red dots) were identified with &gt;2.8-fold enrichment in cluster 7 (p&lt;10 -9 ).</s><s>(F) Validation of PPP1R17 as a marker for an amacrine subpopulation.</s><s>Staining of a fixed adult retina from Mito-P mice, which express CFP in both nGnG amacrines and type 1 bipolars <ref type="bibr" target="#b16">(Kay et al., 2011)</ref>.</s><s>Overlapping labeling by PPP1R17 antibody (green) and Mito-P CFP (red) supports Drop-Seq identification of Ppp1r17 expression in the nGnG amacrine neurons.</s><s>85% of CFP+ cells were PPP1R17+ and 50% of the PPP1R17+ cells were CFP-, suggesting a second amacrine type expressing this marker.</s><s>Blue staining is for VSX2, a marker of bipolar neurons.</s><s>(G) Differential expression of cluster 20 (PPP1R17+) with nearest neighboring amacrine cluster (#21).</s><s>Average gene expression was compared between cells in clusters 20 and 21; twelve genes (red dots) were identified with &gt;2.8-fold enrichment in cluster 20 (p&lt;10 -9 ).</s><s>(H) Differential expression of melanopsin-positive and negative RGCs.</s><s>Average expression was compared between Opn4-positive and -negative RGCs in cluster 2. Seven genes were identified as enriched in Opn4-positive cells (red dots, &gt;2-fold, p&lt;10 -9 ).</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Extraction and processing of single-cell transcriptomes by Drop-Seq (A) Schematic of single-cell mRNA-Seq library preparation with Drop-Seq.</s><s>A customdesigned microfluidic device joins two aqueous flows before their compartmentalization into discrete droplets.</s><s>One flow contains cells, and the other flow contains barcoded primer beads suspended in a lysis buffer.</s><s>Immediately following droplet formation, the cell is lysed and releases its mRNAs, which then hybridize to the primers on the microparticle surface.</s><s>The droplets are broken by adding a reagent to destabilize the oil-water interface (Experimental Procedures), and the microparticles collected and washed.</s><s>The mRNAs are</s></p></div></figDesc><graphic coords="16,95.64,62.00,480.72,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Critical evaluation of Drop-Seq using species-mixing experiments (A,B) Drop-Seq analysis of mixutres of mouse and human cells.</s><s>Mixtures of human (HEK) and mouse (3T3) cells were analyzed by Drop-Seq at the concentrations shown.</s><s>The scatter plot shows the number of human and mouse transcripts associating to each STAMP.</s><s>Blue dots indicate STAMPs that were designated from these data as human-specifiic (average of 99% human transcripts); red dots indicate STAMPs that were mouse-specific (average 99%).</s><s>At the lower cell concentration, one STAMP barcode (of 570) associated with a mixture of human and mouse transcripts (panel A, purple).</s><s>At the higher cell concentration, about 1.9% of STAMP barcodes associated with mouse-human mixtures (panel B).</s><s>Data for other cell concentrations and a different single-cell analysis platform are in Figures S3B and S3C.</s><s>(C,D) Sensitivity analysis of Drop-Seq at high read-depth.</s><s>Violin plots show the distribution of the number of transcripts (C, scored by UMIs) and genes (D) detected per</s></p></div></figDesc><graphic coords="18,84.00,62.00,504.00,419.52" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Cell-cycle analysis of HEK and 3T3 cells analyzed by Drop-Seq (A) Cell-cycle state of 589 HEK cells (left) and 412 3T3 cells (right) measured by Drop-Seq.</s><s>Cells were assessed for their progression through the cell cycle by comparison of each cell's global pattern of gene expression with gene sets known to be enriched in one of five phases of the cycle (horizontal rows).</s><s>A phase-specific score was calculated for each cell across these five phases (Extended Experimental Procedures), and the cells ordered by their phase scores.</s><s>(B) Discovery of cell cycle regulated genes.</s><s>Heat map showing the average normalized expression of 544 human and 668 mouse genes found to be regulated by the cell cycle.</s><s>Maximal and minimal expression was calculated for each gene across a sliding window of</s></p></div></figDesc><graphic coords="20,84.13,62.00,503.74,473.04" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Ab initio reconstruction of retinal cell types from 44,808 single-cell transcription profiles prepared by Drop-Seq (A) Schematic representation of major cell classes in the retina.</s><s>Photoreceptors (rods or cones) detect light and pass information to bipolar cells, which in turn contact retinal ganglion cells that extend axons into other CNS tissues.</s><s>Amacrine and horizontal cells are retinal interneurons; Müller glia act as support cells for surrounding neurons.</s><s>(B) Clustering of 44,808 Drop-Seq single-cell expression profiles into 39 retinal cell populations.</s><s>The plot shows a two-dimensional representation (tSNE) of global gene</s></p></div></figDesc><graphic coords="22,123.60,62.00,424.80,503.72" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>Finer-scale expression distinctions among amacrine cells, cones and retinal ganglion cells (A) Pan-amacrine markers.</s><s>The expression levels of the six genes identified (Nrxn2Atp1b1Pax6Slc32a1Slc6a1Elavl3) are represented as dot plots across all 39 clusters; larger dots indicate broader expression within the cluster; deeper red denotes a higher expression level.</s><s>(B) Identification of known amacrine types among clusters.</s><s>The twenty-one amacrine clusters consisted of twelve GABAergic, five glycinergic, one glutamatergic and three non-</s></p></div></figDesc><graphic coords="24,153.48,62.00,365.04,503.67" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="15,84.00,62.00,504.00,194.88" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Cell.</s><s>Author manuscript; available in PMC 2016 May 21.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>This work was supported by the <rs type="funder">Stanley Center for Psychiatric Research</rs> (to SM), the <rs type="funder">MGH Psychiatry Residency Research Program and Stanley-MGH Fellowship in Psychiatric Neuroscience</rs> (to EZM), a <rs type="grantName">Stewart Trust Fellows Award</rs> (to SM), a grant from the <rs type="funder">Simons Foundation</rs> to the <rs type="institution">Simons Center for the Social Brain at MIT</rs> (to AR, SM and DW), an <rs type="funder">NHGRI</rs> CEGS <rs type="grantNumber">P50 HG006193</rs> (to AR), the <rs type="funder">Klarman Cell Observatory</rs> (to AR and AB), <rs type="funder">NIMH</rs> grant <rs type="grantNumber">U01MH105960</rs> (to SM, AR and JRS), <rs type="funder">NIMH</rs> grant <rs type="grantNumber">R25MH094612</rs> (to EM), <rs type="funder">NIH</rs> <rs type="grantNumber">F32 HD075541</rs> (to RS).AR is an investigator of the <rs type="institution">Howard Hughes Medical Institute</rs>.Microfluidic device fabrication was performed at the <rs type="institution">Harvard Center for Nanoscale Systems (CNS)</rs>, a member of the <rs type="funder">National Nanotechnology Infrastructure Network (National Science Foundation</rs> award no.<rs type="grantNumber">ECS-0335765</rs>), with support from the <rs type="funder">National Science Foundation</rs> (<rs type="grantNumber">DMR-1310266</rs>) and the <rs type="funder">Harvard Materials Research Science and Engineering Center</rs> (<rs type="grantNumber">DMR-1420570</rs>).We thank</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_fa2RE9n">
+					<orgName type="grant-name">Stewart Trust Fellows Award</orgName>
+				</org>
+				<org type="funding" xml:id="_nRBUxvJ">
+					<idno type="grant-number">P50 HG006193</idno>
+				</org>
+				<org type="funding" xml:id="_ep7SHtq">
+					<idno type="grant-number">U01MH105960</idno>
+				</org>
+				<org type="funding" xml:id="_b7vyBPw">
+					<idno type="grant-number">R25MH094612</idno>
+				</org>
+				<org type="funding" xml:id="_c2Kw2Ey">
+					<idno type="grant-number">F32 HD075541</idno>
+				</org>
+				<org type="funding" xml:id="_kVqrZpy">
+					<idno type="grant-number">ECS-0335765</idno>
+				</org>
+				<org type="funding" xml:id="_xJ6CusA">
+					<idno type="grant-number">DMR-1310266</idno>
+				</org>
+				<org type="funding" xml:id="_ySUdErB">
+					<idno type="grant-number">DMR-1420570</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p><s>Both raw and analyzed data have been deposited at Gene Expression Omnibus Accession GSE63473.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material:</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p><p><s>Christina Usher and Leslie Gaffney for contributions to the manuscript figures and Chris Patil for helpful comments on the manuscript.</s><s>We thank Connie Cepko for helpful conversations about the retina data; Beth Stevens for advice on retinal dissociations; and Assaf Rotem and Huidan Zhang for advice on microfluidics design and fabrication.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Pe&apos;er D. viSNE enables visualization of high dimensional single-cell data and reveals phenotypic heterogeneity of leukemia</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Amir El</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Tadmor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Simonds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Levine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Bendall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Shenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Krishnaswamy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P</forename><surname>Nolan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature biotechnology</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="545" to="552" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">On-chip single-copy real-time reverse-transcription PCR in isolated picoliter droplets</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Beer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Wheeler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lee-Houghton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Watkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nasarabadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Hebert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Leung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Arnold</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Bailey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Colston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Analytical chemistry</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="1854" to="1858" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18278951</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Mapping the stereotyped behaviour of freely moving fruit flies</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>Berman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bialek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Shaevitz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Royal Society, Interface / the Royal Society</title>
+		<imprint>
+			<biblScope unit="page">11</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Accounting for technical noise in single-cell RNA-seq experiments</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Brennecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Anders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Kolodziejczyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Proserpio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Baying</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Benes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Teichmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Marioni</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature methods</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1093" to="1095" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24056876</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Hundreds of thousands of copies of DNA sequences have been incorporated into the genomes of higher organisms</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Britten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Kohne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">161</biblScope>
+			<biblScope unit="page">4874239</biblScope>
+			<date type="published" when="1968">1968</date>
+		</imprint>
+	</monogr>
+	<note>Repeated sequences in DNA</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Statistical Significance of Variables Driving Systematic Variation in High-Dimensional Data</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Storey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Gelatinase B/matrix metalloproteinase-9 provokes cataract by cleaving lens betaB1 crystallin</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Descamps</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Martens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Proost</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Starckx</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Van Den Steen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Van Damme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Opdenakker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">FASEB journal : official publication of the Federation of American Societies for Experimental Biology</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="29" to="35" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15629892</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">A density-based algorithm for discovering clusters in large spatial databases with noise</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ester</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Kriegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xu</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+			<publisher>AAAI Press</publisher>
+			<pubPlace>Menlo Park, Calif</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Development of excitatory and inhibitory neurotransmitters in transitory cholinergic neurons, starburst amacrine cells, and GABAergic amacrine cells of rabbit retina, with implications for previsual and visual development of retinal ganglion cells</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">V</forename><surname>Famiglietti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Sundquist</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Visual neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="19" to="42" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20392300</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Expression of neuronal connexin36 in AII amacrine cells of the mammalian retina</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Feigenspan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Teubner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Willecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Weiler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="230" to="239" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11150340</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">CEL-Seq: single-cell RNA-Seq by multiplexed linear amplification</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hashimshony</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Wagner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Yanai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell reports</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="666" to="673" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22939981</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Characterization of an amacrine cell type of the mammalian retina immunoreactive for vesicular glutamate transporter 3</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Haverkamp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wassle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of comparative neurology</title>
+		<imprint>
+			<biblScope unit="volume">468</biblScope>
+			<biblScope unit="page" from="251" to="263" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14648683</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">High-throughput droplet digital PCR system for absolute quantitation of DNA copy number</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Hindson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Ness</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Masquelier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Belgrader</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Heredia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Makarewicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">J</forename><surname>Bright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Lucero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Hiddessen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Legler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Analytical chemistry</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="8604" to="8610" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22035192</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Quantitative single-cell RNA-seq with unique molecular identifiers</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Islam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zeisel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Joost</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">La</forename><surname>Manno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zajac</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kasper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lonnerberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Linnarsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature methods</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="163" to="166" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24363023</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Massively parallel single-cell RNA-seq for marker-free decomposition of tissues into cell types</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Jaitin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kenigsberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Keren</forename><forename type="middle">-</forename><surname>Shaul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Elefant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Paul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zaretsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Mildner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tanay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">343</biblScope>
+			<biblScope unit="page" from="776" to="779" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24531970</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The major cell populations of the mouse retina</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Jeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Strettoi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Masland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="8936" to="8946" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Neurod6 expression defines new retinal amacrine cell subtypes and regulates their fate</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Kay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Voinescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Sanes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="965" to="972" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Counting absolute numbers of molecules using unique molecular identifiers</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kivioja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vaharautio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Karlsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bonke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Enge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Linnarsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Taipale</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature methods</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="72" to="74" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22101854</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Droplet barcoding for single cell transcriptomics and its application to embryonic stem cells</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Klein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mazutis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Akartuna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Tallapragada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Veres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Peshkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Weitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Kirschner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell PRESS</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Genetic dissection of neural circuits</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Callaway</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="634" to="660" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18341986</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">The neuronal organization of the retina</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Masland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="266" to="280" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23083731</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Data exploration, quality control and testing in single-cell qPCR-based gene expression experiments</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mcdavid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Finak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Chattopadyay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dominguez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lamoreaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Roederer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gottardo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="461" to="467" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23267174</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Petilla terminology: nomenclature of features of GABAergic interneurons of the cerebral cortex</title>
+		<author>
+			<persName><forename type="first">Petilla</forename><surname>Interneuron Nomenclature</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ascoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Alonso-Nanclares</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Barrionuevo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Benavides-Piccione</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Burkhalter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Buzsaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cauli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Defelipe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="557" to="568" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Smart-seq2 for sensitive full-length transcriptome profiling in single cells</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Picelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Bjorklund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">R</forename><surname>Faridani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sagasser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Winberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sandberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature methods</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1096" to="1098" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24056875</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">The Types of Retinal Ganglion Cells: Current Status and Implications for Neuronal Classification. Annual review of neuroscience</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Sanes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Masland</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Design principles of insect and vertebrate visual systems</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Sanes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Zipursky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="15" to="36" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20399726</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Spatial reconstruction of single-cell gene expression data</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Satija</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Farrell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gennert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Schier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Regev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature biotechnology</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Single-cell transcriptomics reveals bimodality in expression and splicing in immune cells</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Shalek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Satija</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Adiconis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Gertner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Gaublomme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Raychowdhury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Schwartz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Yosef</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Malboeuf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">498</biblScope>
+			<biblScope unit="page" from="236" to="240" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23685454</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Single-cell RNA-seq reveals dynamic paracrine control of cellular variation</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Shalek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Satija</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Shuga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Trombetta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gennert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Gertner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Gaublomme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Yosef</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">510</biblScope>
+			<biblScope unit="page" from="363" to="369" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24919153</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Automatic Classification of Cellular Expression by Nonlinear Stochastic Embedding (ACCENSE)</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shekhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Brodin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Chakraborty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the National Academy of Sciences of the United States of America</title>
+		<meeting>the National Academy of Sciences of the United States of America</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page" from="202" to="207" />
+		</imprint>
+	</monogr>
+	<note>PubMed: 24344260</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Transcriptional code and disease map for adult retinal cell types</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Siegert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cabuy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Scherf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kohler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Panda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Z</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Fehling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gaidatzis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Stadler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Roska</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="481" to="482" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Tbr2 is required to generate a neural circuit mediating the pupillary light reflex</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Sweeney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tierney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Feldheim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience : the official journal of the Society for Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="5447" to="5453" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24741035</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">mRNA-Seq whole-transcriptome analysis of a single cell</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Barbacioru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Nordman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bodeau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Tuch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Siddiqui</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature methods</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="377" to="382" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19349980</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Dynamic pattern formation in a vesicle-generating microfluidic device</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Thorsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Roberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H</forename><surname>Arnold</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Quake</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical review letters</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="4163" to="4166" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11328121</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Monodisperse Emulsion Generation via Drop Break Off in a Coflowing Stream</title>
+		<author>
+			<persName><forename type="first">Pbpv</forename><surname>Umbanhowar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Weitz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="347" to="351" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Dripping to jetting transitions in coflowing liquid streams</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Utada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fernandez-Nieves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Stone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Weitz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical review letters</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page">94502</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17931011</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Visualizing Data using t-SNE</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Van Der Maaten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Machine Learning Research</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="2579" to="2605" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Vogelstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Kinzler</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="9236" to="9241" />
+		</imprint>
+		<respStmt>
+			<orgName>Digital PCR. Proceedings of the National Academy of Sciences of the United States of America</orgName>
+		</respStmt>
+	</monogr>
+	<note>PubMed: 10430926</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Kinetics of renaturation of DNA</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Wetmur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Davidson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of molecular biology</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="349" to="370" />
+			<date type="published" when="1968">1968</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 5637197</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Identification of genes periodically expressed in the human cell cycle and their expression in tumors</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Whitfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sherlock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Saldanha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Murray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Ball</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Alexander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Matese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Perou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Hurt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Brown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Molecular biology of the cell</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1977" to="2000" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12058064</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Tissue-specific regulation of the mouse alphaA-crystallin gene in lens via recruitment of Pax6 and c-Maf to its promoter</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cvekl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of molecular biology</title>
+		<imprint>
+			<biblScope unit="volume">351</biblScope>
+			<biblScope unit="page" from="453" to="469" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16023139</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Reverse transcriptase template switching: a SMART approach for full-length cDNA library construction</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Y</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Machleder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chenchik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Siebert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BioTechniques</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="892" to="897" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11314272</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

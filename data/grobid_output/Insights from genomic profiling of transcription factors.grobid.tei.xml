@@ -1,0 +1,1845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Insights from genomic profiling of transcription factors</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2010-09-01">2010 September 1.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Peggy</forename><forename type="middle">J</forename><surname>Farnham</surname></persName>
+							<email>pjfarnham@ucdavis.edu.weblinks</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Pharmacology and the Genome Center</orgName>
+								<orgName type="institution">University of California-Davis</orgName>
+								<address>
+									<postCode>95616</postCode>
+									<settlement>Davis</settlement>
+									<region>CA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Insights from genomic profiling of transcription factors</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Reviews Genetics</title>
+						<title level="j" type="abbrev">Nat Rev Genet</title>
+						<idno type="ISSN">1471-0056</idno>
+						<idno type="eISSN">1471-0064</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">10</biblScope>
+							<biblScope unit="issue">9</biblScope>
+							<biblScope unit="page" from="605" to="616"/>
+							<date type="published" when="2010-09-01">2010 September 1.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6F5FBEDE236C42FFCC9290A7257EDD51</idno>
+					<idno type="DOI">10.1038/nrg2636</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>A crucial question in the field of gene regulation is whether the location at which a transcription factor binds influences its effectiveness or the mechanism by which it regulates transcription.</s><s>Comprehensive transcription factor binding maps are needed to address these issues, and genomewide mapping is now possible thanks to the technological advances of ChIP-chip and ChIP-Seq.</s><s>This review discusses how recent genomic profiling of transcription factors gives insight into how binding specificity is achieved and what features of chromatin influence the ability of transcription factors to interact with the genome, and also suggests future experiments to further our understanding of the causes and consequences of transcription factor-genome interactions.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Understanding how genomic information is translated into gene regulation has been the subject of intense scientific investigation for the last several decades.</s><s>Until recently, most studies focused on detailed characterization of a particular gene or gene family.</s><s>These studies resulted in the development of general principles of gene regulation, but genome-scale studies are now prompting re-examination of some of these principles.</s></p><p><s>The established view of transcriptional regulation is that cis regulatory elements, such as promoters and enhancers, and proteins that bind to these elements control different levels of transcription of different genes1 , 2 .</s><s>Promoters are composed of common sequence elements, such as a TATA box and initiator, and binding sites for other transcription factors, which work together to recruit the general transcriptional machinery to the transcriptional start site (TSS).</s><s>Enhancers also contain binding sites for transcription factors but are located some distance from the site of transcription initiation.</s><s>Transcriptional activity resulting from the general factors binding to the core promoter is usually quite low but can be increased by site-specific factors binding to proximal promoter regions, which can help to recruit or stabilize the interaction of the general factors at the core promoter.</s><s>Promoter activity can be further stimulated by factors binding to distal enhancer regions and subsequent recruitment of a histone modifying enzyme that creates a more favorable chromatin environment for transcription, or a kinase that induces a bound initiation complex to begin elongation (Figure <ref type="figure" target="#fig_0">1</ref>).</s><s>Transcription can also be modulated by repressive factors that bind to upstream repressing sequences and/ or silencers, which can interfere with activator binding (and thus prevent recruitment of the It has been estimated that there are 200-300 transcription factors, in humans, that can be considered components of the general transcriptional machinery that bind to core promoter elements (for example, subunits of RNA polymerases and complexes such as TFIID that are required for transcription of most protein-coding genes), and perhaps 1400 transcription factors that have sequence-specific DNA binding properties and thus regulate only a subset of genes by binding to site-specific cis elements 6-8.</s><s>Interestingly, the site-specific factors tend to be either expressed in all or most tissues or instead are expressed in only one or two tissues, suggesting either a very broad or very specific function 7. Alterations in gene expression caused by the inappropriate level, structure, or function of a transcriptional regulator have been associated with a diverse set of human diseases, including cancers and developmental disorders 9.</s><s>For example, 164 transcription factors have been shown to be directly responsible for 277 diseases <ref type="bibr" target="#b6">7</ref> .</s><s>This is undoubtedly a large underestimate of the importance of transcription factors in human disease due to the fact that most human transcription factors are essentially uncharacterized <ref type="bibr" target="#b6">7</ref> .</s><s>Because of the paucity of our knowledge concerning the function of transcription factors and the likelihood that increased knowledge of transcription factors will lead to increased insight into the causes of human diseases, it is of utmost importance to expand our understanding of how site-specific transcription factors contribute to gene regulation.</s><s>Crucial questions that need to be addressed are: where do transcription factors bind in the genome; how is specificity of binding achieved; what features of the chromatin can influence the ability of transcription factors to stably interact with the genome; and how is binding of the factor related to its subsequent function in respect to regulation of a nearby gene?</s><s>Fortunately, recent advances in the techniques of chromatin immunoprecipitation followed by microarray (ChIP-chip) or by sequencing (ChIP-seq) (Box 1), and similar techniques such as DamID now allow investigators to create a global map of specific protein-DNA interactions in a given cell type in a single experiment <ref type="bibr">10-18 19</ref>.</s><s>Binding sites identified from these ChIP studies 20 -28 are categorized relative to genomic features such as the nearest gene, frequency of binding relative to gene structure (for example a promoter, enhancer, exon, or intron), and the type of chromatin domain.</s><s>The cost of ChIP-Seq depends partly on the depth of sequencing, but an estimate is that 10-12 million uniquely mapped reads should be sufficient for most human transcription factors, which can obtained in 1 or 2 lanes of sequencing, for a cost of one to two thousand dollars.</s><s>As multiple DNA microarrays are needed to cover the entire human genome, comprehensive studies by ChIP-chip are more expensive.</s><s>However, for certain applications (such as detailed analyses of a protein complex binding to a small segment of a genome), a focused ChIP-chip experiment currently remains more cost-effective than a genome-wide ChIP-seq analysis.</s><s>This review summarizes recent discoveries provided by genome-wide profiling of site-specific transcription factors and how they have led to new insights regarding patterns of transcription factor binding, how binding specificity is achieved, and what features of the chromatin can influence the ability of transcription factors to interact stably with the genome.</s><s>The focus will be on the human genome, although relevant insights from other organisms are also incorporated (in particular when studies using model organisms are more advanced than similar studies of the human genome) as it is likely that the implications of transcription factor recruitment for gene regulation will be similar across all eukaryotes.</s><s>Importantly, genome-wide studies have not only provided new information, they have also created new challenges in our understanding of gene regulation, such as why certain transcription factors bind to so many places in the genome and why so much of the regulation appears to be via steps that occur after recruitment of the site-specific factor to the DNA.</s><s>Therefore, this review concludes with suggestions for future experiments that are needed to further our understanding of the causes and consequences of specific transcription factor-genomic interactions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Localization of binding sites</head><p><s>Two decades ago, investigators were using in vitro assays or reporter constructs, to define cis elements necessary for basal transcriptional activity or regions that control cell type-specific, hormonal, or environmental transcriptional responses.</s><s>In most cases, relatively small promoter segments (from 500 bp to perhaps 10 kb upstream of a TSS) were used as the starting point for mutational analyses.</s><s>One common observation was that severe truncation of a fragment could cause large changes in promoter activity but that incremental deletion of the 5′ end of the fragment resulted in only minor changes in activity, suggesting that multiple transcription factor binding sites were scattered throughout the analyzed region (for example ref. 29).</s><s>In contrast, other studies found that hormonal regulation or cell type-specific transcription from a promoter could not be reproduced using reporter assays (for example ref. 30).</s><s>Such results raised two important questions that are now being addressed by genome-wide binding analyses: do different transcription factors bind in clusters near each other and are most of the binding sites for a given transcription factor located in proximal promoter regions?</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Binding to proximal promoters</head><p><s>Transcription factors have been categorized into those that bind proximal promoters and those that bind enhancers <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2</ref> .</s><s>However, in most past work, a single binding site, or in some cases a small set of sites, was studied for a particular factor.</s><s>Such focused analyses do not allow general conclusions to be drawn as to whether a factor usually binds near or distal to a promoter region.</s><s>Thus, accurate categorization of factors is not possible without genome-wide analysis of binding sites.</s><s>Knowing the location, relative to the TSS, at which a factor binds is of interest as it can provide insight into the mechanisms by which it regulates transcription (Figure <ref type="figure" target="#fig_0">1</ref>).</s><s>For example, factors that bind close to TSSs have been proposed to regulate transcription by stabilizing general transcription factors at the core promoter elements; factors that bind to distal regions, either upstream or downstream of a gene, might regulate transcription by mediating protein-protein contacts between distal complexes and the general transcriptional machinery bound at start sites (that is, by a looping mechanism).</s><s>Thus, comprehensive location analysis of a factor can not only allow the development of a genomic map but can also provide insight into the mechanisms by which it regulates transcription.</s><s>Initial large-scale analyses of transcription factor binding, by ChIP-chip, focused on the identification of binding sites near CpG islands or within 1-5 kb of the TSS of known genes 15, 31-34 .</s><s>Although these studies identified hundreds, and in some cases thousands, of promoters that were bound by a particular transcription factor they were limited to target sites in proximal promoter regions so it was not known whether the identified sites were representative of the majority of the genomic binding sites for a given factor.</s><s>Analyses of 1% of the human genome as part of the ENCODE pilot project, which are being continued both by the ENCODE Consortium and others <ref type="bibr">3, 22-24, 35, 36</ref> , have now shown that transcription factors that bind almost exclusively at proximal promoters might be the exception, not the rule.</s><s>Some factors, for example E2F transcription factor family members, are almost always bound in proximal promoter regions (Figure <ref type="figure" target="#fig_1">2A</ref>).</s><s>In fact, it is often difficult to distinguish E2F binding patterns from the binding patterns of general transcription factors such as RNAPII or the TATA box binding protein-associated factor TAF1 <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b21">22</ref> .</s><s>However, other factors that have recently been analyzed by genome-wide ChIP-chip or ChIP-seq, such as GATA1 and ZNF263, bind to diverse regions of the genome (Figure <ref type="figure" target="#fig_1">2B</ref>), including extragenic regions distant from the TSS and intragenic regions (including both introns and exons).</s><s>Other examples of transcription factors that have wide-spread binding patterns include p53, p63, the estrogen receptor, FoxA2, and TCF4 <ref type="bibr">13 10 , 24 , 36 , 37</ref> .</s></p><p><s>Although it is difficult to make accurate comparisons of binding patterns generated by different research groups using different experimental platforms, genome-wide profiles for a large number of factors were compared in the ENCODE pilot project <ref type="bibr" target="#b2">3</ref> .</s><s>This study found that less than 10% of the factors tested had greater than 50% of their binding sites within 2.5 kb of a transcription start site (see Figure <ref type="figure" target="#fig_4">6</ref> and Figure <ref type="figure" target="#fig_2">S31</ref> of ref 28).</s><s>Another study, which analyzed 13 site-specific factors in mouse ES cells using ChIP-seq, also found that many binding sites were located outside of proximal promoter regions <ref type="bibr" target="#b37">38</ref> .</s><s>Clearly, a typical reporter or in vitro assay cannot monitor the contribution to promoter activity of sites distant from the proximal promoter.</s><s>The new findings of the distribution of factors throughout the genome might explain many of the failed attempts in the past to demonstrate accurate regulation of a target gene using reporter assays or transgenic constructs.</s><s>Also, the distributive pattern of binding seen for many factors has important implications for subsequent functional analyses.</s><s>For example, it is not easy to link enhancers to specific promoters if the enhancer is between two genes, but at a great distance from both; this is discussed in more detail below.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Binding to enhanceosomes</head><p><s>Early studies of Drosophila melanogaster development identified regulatory regions that are bound by combinations of different transcription factors, leading to the concept that transcription factors can cluster near each other to regulate transcription cooperatively <ref type="bibr" target="#b38">39</ref> .</s><s>For example, enhancers that regulate D. melanogaster segmentation contain a module that typically receives input from multiple transcription factors and has multiple binding sites for each of the factors; in many cases the binding sites are clustered within a small interval of 0.5-1 kb.</s><s>Recently, large-scale profiling of the binding patterns of a set of D. melanogaster transcription factors revealed binding hotspots, each 1-5 kb in length and spaced ~50 kb apart <ref type="bibr" target="#b39">40</ref> .</s><s>The D. melanogaster genome is one-tenth the size of the human genome and therefore it is not yet clear if the same sort of clustering will be commonly found for human transcription factors.</s></p><p><s>Owing to the large size of the human genome and the large number of transcription factors (1 400), most investigations of the concept of clustered binding sites creating a regulatory element have used computational tools <ref type="bibr" target="#b40">41</ref> .</s><s>As detailed below, bioinformatic analyses are not sufficient to determine which of all possible binding sites are actually occupied by a transcription factor in vivo.</s><s>However, there is some experimental evidence that at least a few binding hotspots do exist in the human genome.</s><s>An extensively studied mammalian enhancer is the interferon beta enhanceosome 42 , 43 in which 8 transcription factors bind to overlapping elements within a 55 bp region upstream of the interferon beta gene (IFNB1).</s><s>This enhancer was characterized over many years using classical mutational analyses of a single regulatory element.</s><s>Although very few regions of the human genome have been characterized in as much detail as the IFNB1 enhancer, several other enhancer regions have been fairly well-studied, including the mouse and chicken beta-globin locus control regions and the human growth hormone and MHCII enhancer regions <ref type="bibr" target="#b43">44</ref> .</s></p><p><s>Chen et al analyzed a set of factors that work together to mediate pluripotency and maintain self-renewal properties of mouse ES cells <ref type="bibr" target="#b37">38</ref> .</s><s>They found that some regions (termed MTL for multiple transcription factor-binding loci) were bound by several factors.</s><s>Specifically, clusters of Nanog, Oct4, and Sox2 sites were identified outside of promoter regions, suggesting that these regions might be enhancers, and a subset of MTL showed strong enhancer activity in follow-up experiments.</s><s>Identification of these MTL may have been facilitated by the fact that Nanog, Oct4, and Sox2 were previously known to cooperate in regulating the mouse ES cell transcriptome.</s></p><p><s>Unfortunately, to date only a handful of human factors (very few of which have been implicated in regulating the same sets of genes) have been analyzed using ChIP-seq and these factors do not seem to show a large degree of overlap in binding at locations outside of promoter regions (Figure <ref type="figure" target="#fig_1">2B</ref>).</s><s>However, it is hard to know if the lack of observed clustering is because there are in fact no hotspots for binding in the human genome or because the correct combinations of factors have not yet been studied.</s><s>Knowledge of the extent of clustered binding in mammalian genomes must await the collection of more ChIP-seq data.</s><s>Genome-wide analyses of enhancers based on specific histone modification patterns have also recently been initiated <ref type="bibr" target="#b44">45,</ref><ref type="bibr" target="#b45">46</ref> .</s><s>However, identifying a potential enhancer region based on histone patterns does not reveal how many site-specific factors bind to the region.</s><s>If clusters of binding sites are found in mammalian genomes, they could correspond to enhancesomes similar to the one at IFNB1, with multiple factors all working together to mediate transcriptional activation.</s><s>Alternatively, they could represent nonfunctional "storage bins" for excess transcription factors, provide functional redundancy that decreases the chances that a gene might be turned off due to mutation, or allow activation of a gene by multiple different signaling cascades.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Do consensus motifs specify binding?</head><p><s>In vitro studies, such as CASTing (cyclic amplification and selection of targets), and sequence comparisons of small sets of promoters known to be bound by a factor have allowed the derivation of consensus binding motifs for some transcription factors <ref type="bibr" target="#b46">47</ref> .</s><s>Subsequent bioinformatic analyses that search the human genome using consensus motifs or position weight matrices -a collection of motifs similar, but not identical, to the consensus motif -allow the identification of all locations in the genome to which a transcription factor might bind 41 , 48.</s><s>This approach provides the set of all possible locations for a given factor; however, in a mammalian genome there are clearly many more occurrences of a consensus motif for a given factor than there are binding sites 37 , 49 .</s><s>Also, the utility of bioinformatic studies relies on the assumption that transcription factors are recruited to the genome in vivo via motifs similar to identified in vitro studies.</s><s>These caveats have led to uncertainties as to the importance of consensus motifs for in vivo binding.</s><s>ChIP-chip and ChIP-seq studies have allowed investigators to address two important questions concerning motif usage: what percentage of binding sites contain a consensus motif and what influences whether a specific motif is in fact bound by a particular factor?</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Motif enrichment within binding regions</head><p><s>Although some factors appear to be recruited to a majority of their binding sites via a common motif, other factors seem to have a more diverse set of recruitment mechanisms.</s><s>For example, members of the E2F family appear to lack a requirement for a specific motif for binding in vivo <ref type="bibr" target="#b48">49</ref> .</s><s>In contrast, the set of binding sites for factors such as p63, STAT1 and NRSF show high enrichment for a specific motif <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b36">37</ref> .</s><s>It should be stressed that binding detected at sites that lack a consensus motif is not due to a general, low affinity DNA binding activity.</s></p><p><s>ChIP-chip and ChIP-seq measure DNA-protein interactions as an average of individual binding events in millions of cells and a peak at a site without a motif can be as high and as sharp as a peak located over a consensus motif, which is inconsistent with random protein-DNA interaction.</s></p><p><s>Several mechanisms have been proposed to explain how specific recruitment can occur in the absence of a consensus motif (Figure <ref type="figure" target="#fig_2">3</ref>).</s><s>These include: binding at a distal site that contains a consensus motif and looping to the site in question via protein-protein interactions (perhaps via a co-activator or co-repressor); 'piggyback' binding mediated by protein-protein interactions with a second factor, with no contribution of the DNA binding domain of the first factor; or assisted binding to a site that is somewhat similar to the consensus site, enhanced by protein-protein interaction with another site-specific DNA binding factor or with a specifically modified histone.</s><s>Clearly, the greater the contribution of protein-protein interactions to the genomic localization of a factor, the greater is the difficulty of using a strictly bioinformatic approach to identify in vivo binding sites.</s></p><p><s>Sorting binding sites for a factor into subsets that contain or lack a specific motif might eventually provide insight into alternative recruitment or regulatory mechanisms mediated by that factor; the ability of a factor to be recruited to the genome in more than one way might allow a factor to participate in multiple different signaling pathways.</s><s>For example, serum response factor (SRF) is ubiquitously expressed but its activity is modulated at several levels, including protein-protein interaction <ref type="bibr" target="#b49">50</ref> 51.</s><s>Perhaps recruitment of SRF via a consensus motif allows for regulation of one set of targets in many cell types, whereas stabilized binding via protein-protein interaction to sites lacking the consensus motif allows the constitutively expressed SRF to also have some cell type-specific functions.</s><s>It should be noted that even factors that prefer to bind to regions containing a specific motif can also have subsets of binding sites that lack that motif 52 , 53.</s><s>A recent study has shown that the ability of a factor to bind to more than one motif is not necessarily due to protein-protein interactions but instead can be observed using purified proteins and in vitro assays.</s><s>Using protein binding microarrays, Badis et al. <ref type="bibr" target="#b53">54</ref> found that about half of a set of 104 mouse DNA binding proteins recognized multiple different sequence motifs.</s><s>Such studies suggest that motif analysis of ChIP-seq data should be performed under the assumption that more than one motif can be present in the set of identified binding regions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Do epigenetic modifications influence motif usage?</head><p><s>As discussed above, a major difficulty with using a bioinformatics motif-driven approach to identify binding sites is that it is clear that only a small percentage of all occurrences of a motif are actually bound by that factor.</s><s>Therefore, the majority of regions in the genome that contain a consensus motif for a given factor are not occupied.</s><s>Lack of binding to the genome in certain regions could be due to chromatin structure (inaccessibility due to close packing of the nucleosomes in heterochromatin) or to DNA methylation (reduced binding affinity due to methylation of a critical residue in the recognition motif).</s><s>However, a comparison of unoccupied E2F consensus sites in a human breast cancer cell line to sites of repressive chromatin (that is, histone H3 trimethylated on lysine 9 or lysine 27 (H3K9me3 or H3K27me3)) and DNA methylation showed that neither repressive histone marks nor DNA methylation appeared to account for the lack of E2F binding <ref type="bibr" target="#b48">49</ref> .</s><s>An alternative possibility is that specific histone modifications enhance transcription factor recruitment to certain genomic regions.</s><s>For example, recent ChIP-chip and ChIP-seq studies have shown that histone H3 monomethylated at lysine 4 (H3K4me1) is localized at enhancer regions 45 , 46.</s><s>Of course, it is not known whether the histone modification or the binding of a factor comes first, but it is possible that certain factors might have an affinity for a specific histone modification.</s><s>For example, PHD finger domains in several proteins, such as the TAF3 subunit of TFIID, BPTF, and ING2, can mediate a specific high affinity interaction with histone H3 trimethylated on lysine 4 55 56 <ref type="bibr" target="#b56">57,</ref><ref type="bibr" target="#b57">58</ref> , which is highly localized to promoter regions <ref type="bibr">3 46</ref> .</s><s>PHD domains in site-specific factors or co-activators could help localize DNA binding factors to consensus motifs located in proximal promoters; other domains might mediate interaction of transcription factors or co-activators with H3K4me1, resulting in preferential occupancy of motifs located in enhancer regions (Figure <ref type="figure" target="#fig_2">3D</ref>).</s></p><p><s>Although each of the models presented in Figure <ref type="figure" target="#fig_2">3</ref> are possible, it is generally not clear why some consensus motifs are occupied and others are not.</s><s>Perhaps once we have binding maps for hundreds of factors, it will become obvious that binding of a factor to one motif commonly prevents another motif from being occupied by a different factor.</s><s>For example, an ETS and an E2F binding site overlap in the MYC promoter and it is only after mutation of the E2F site that ETS1 can bind in vivo <ref type="bibr" target="#b58">59</ref> .</s><s>Alternatively, as described above, we might find that stable binding is rarely mediated by a single DNA-protein interaction but requires cooperative binding between adjacent site-specific factors either through direct interaction between the two sitespecific factors or indirect interaction through a platform such as a co-activator or co-repressor <ref type="bibr" target="#b59">60</ref> .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Are all occupied binding sites important?</head><p><s>The discovery of thousands of binding sites by genome-wide profiling has raised two important questions: can a factor occupy a certain site in many cell types but regulate transcription via binding to that site in only one (or a few) cell types, and is functional redundancy a built-in safeguard for maintaining accurate regulation of the genome?</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Understanding gene expression data</head><p><s>Several recent studies have attempted to assess the functional importance of each of the thousands of binding sites for a given factor by altering the level of that factor in the cell.</s><s>A frequent finding is that changing the level of a factor alters expression of 1-10% of the potential target genes <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b36">37,</ref><ref type="bibr" target="#b60">61,</ref><ref type="bibr" target="#b61">62</ref> .</s><s>One interpretation of these results is that most binding is not functional.</s><s>There are, however, several caveats to this conclusion.</s><s>First, the assignment of a specific binding site to a target gene is not always accurate.</s><s>Investigators use the most expedient approach, which is to assign the binding site to the nearest known gene, but this can lead to false binding site -target gene pairing due to long-range regulation, undiscovered genes, or alternative upstream promoters.</s><s>Changes in expression of a gene that does not have a nearby binding site for the factor that is altered might initially be interpreted as indicative of indirect regulation, but might be owing to direct regulation by a site many thousands of kb away (Figure <ref type="figure">4a</ref>).</s><s>Second, altering expression of a human transcription factor is fraught with problems.</s><s>Down regulation of a transcription factor in human cells is usually accomplished using small interfering RNAs (siRNAs or shRNAs).</s><s>However, loss of expression is rarely complete; it is possible that a reduction of 90% of the protein might not have functional consequences if there is a 10-fold excess of the factor under normal conditions.</s><s>Many studies are performed in cancer cell lines that can have, as shown by western blot, a massive increase in the amount of particular transcription factor compared to a normal cell.</s><s>Thus, what appears to be an efficient knockdown in a cancer cell line might leave sufficient levels of the factor for normal regulation (Figure <ref type="figure">4B</ref>).</s><s>Very few studies have actually shown reduced binding of a transcription factor in knockdown cells by ChIP-chip or ChIP-seq.</s><s>To deal with this problem, mouse knockouts can be used.</s><s>However, cells from these mice could undergo compensation for loss of a factor during development, resulting in related proteins being selected to regulate the targe genes.</s><s>Third, closely related family members might bind to the same sites and have the same function.</s><s>Thus, elimination of one family member could allow more binding of another family member (Figure <ref type="figure">4C</ref>).</s><s>Finally, only a small proportion of the binding sites for a factor might be functional in a given cell type.</s><s>For example, if a cell type-specific partner needs to be recruited for transcriptional activity, then binding of the site-specific factor is necessary but not sufficient for transcription of a target gene (Figure <ref type="figure">4D</ref>).</s><s>Thus, knockdown of a factor in 10 cell types may show 10 different subsets of affected target genes.</s><s>To address this possibility, one would have to collect ChIP-chip or ChIP-seq data and gene expression data before and after knockdown of the factor in a diverse set of cell lines.</s><s>However, most transcription factors have been studied on a genome-wide scale in only one cell type.</s><s>The ENCODE consortium (http://www.genome.gov/10005107)</s><s>has chosen a set of different cell types for thorough characterization of binding of a large number of site-specific factors and initial studies appear to show that factors can be grouped into those that show very little cell type specificity in binding, such as E2F4 and YY1 (H.</s><s>O'Geen and P. Farnham, unpublished observations) and those that show considerable cell type-specific binding, such as JunD (D. Raha and M. Snyder personal communication) and the estrogen receptor <ref type="bibr">15, 63 , 64</ref>.</s><s>Continuing studies will address whether factors that have small numbers of cell type-specific binding sites show regulation of a large percentage of their target genes in a given cell type compared to factors that show constitutive binding to a large number of sites and might regulate only a subset of target genes in each cell type.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Functional redundancy within clusters</head><p><s>Many previous analyses of transcriptional regulation used the assumption that transcription factors act as "individuals", with a specific assigned role in regulating a particular gene and a specific mechanism of action.</s><s>However, it is possible that a factor acts as an individual at subset of its sites (perhaps those that show altered regulation of a nearby gene upon loss or enhanced expression of that factor), but has a very different "community" function at other sites.</s><s>For example, binding of a set of factors in a cluster might regulate transcription throughout a chromatin domain by helping to keep an open chromatin structure, through recruitment of histone acetyltransferases or histone methyltransferases.</s><s>Loss of single factor would not affect transcription of the nearby genes; it would take the removal of a large proportion of factors bound in the cluster to alter gene regulation (Figure <ref type="figure" target="#fig_3">5a</ref>).</s><s>Alternatively, a cluster of bound factors could serve to define a local genomic search space for a second binding factor.</s><s>Recent studies have shown that many transcription factors have a very fast dissociation rate in vivo <ref type="bibr" target="#b64">65</ref> .</s><s>A factor might rebind to the same region of DNA, but in a nonspecific manner, and begin scanning for its high affinity binding site.</s><s>If the factor moves unimpeded in the wrong direction, there could be a detrimental time lag before it finds another binding site.</s><s>However, a cluster of bound factors that blocks scanning in the wrong direction might favor release, rebinding, and perhaps scanning in the correct direction.</s><s>That is, binding of a cluster of factors might affect the expression of a nearby gene whose activation is controlled by an entirely different factor.</s><s>Again, reduced expression of one of the "bumper proteins" may be fairly inconsequential; loss of several factors from the cluster would be required to cause a significant effect (Figure <ref type="figure" target="#fig_3">5b</ref>).</s><s>Data to support either of these possibilities is not yet available due to the lack of genome-wide binding information for most transcription factors.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>NEXT STEPS FOR GENOMIC LANDSCAPES</head><p><s>Although enormous progress has been made in mapping transcription factor binding sites throughout the genome and expanding the number of transcription factors for which we have information about global binding patterns is very important, simply collecting genome-wide datasets will not be sufficient to answer all crucial questions.</s><s>A number of methodological problems now need to be tackled.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Accurate target gene assignment</head><p><s>It is not yet possible to conclusively link a specific binding site with a specific target gene.</s><s>It remains possible that many binding sites, scattered perhaps tens or hundreds of kb away each other (or perhaps even on different chromosomes), all cooperate to regulate a single target gene.</s><s>If so, then linking a binding site to the nearest gene is not appropriate and leads both to an incorrect assignment of target genes and to an underestimate of the number of binding sites that contribute to transcriptional regulation.</s><s>Methods that define features of chromosomal architecture such as transcription factories 66, 67 could aid in defining co-regulated groups of genes, perhaps by collapsing thousands of seemingly unlinked binding sites into a smaller number of interactomes.</s><s>For example, 3C, a technique which can identify chromosomal loops mediated by multiple, long range protein-protein interactions 68, might reveal a connection between an enhancer binding protein and the promoter of a distant gene, and thereby allow a more accurate interpretation of the regulatory role of that factor in the cell.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Comprehensiveness</head><p><s>Although ChIP-seq can identify all the binding sites for a given factor in a given cell type, the possibility that we must perform ChIP-seq experiments in many different cell types to determine all possible binding sites for a given factor is quite daunting.</s><s>The ENCODE Consortium is currently performing studies to estimate how many cell types are needed to identify most binding sites for a set of factors.</s><s>If a limited, but diverse, set of cell types could be identified that are representative of many different human tissues, then perhaps genomewide analyses will not have to be performed in every possible cell type.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Functional analysis of specific regulatory elements</head><p><s>Most approaches designed to study the relationship between a specific cis element and a potential target gene involve creating a reporter construct that includes the regulatory element of interest 4 , 69.</s><s>Unfortunately, as reporter analyses remove the cis element from its normal genomic context they cannot reveal effects on long-range regulation.</s><s>Precise mutation or deletion of a single cis element within the genome can be performed in model organisms such as yeast, for which efficient methods to substitute genomic sections have been developed.</s><s>Theoretically, mutations could be engineered to alter a specific binding site in animal models or human cell lines.</s><s>However, mutagenesis of specific small regions of the mouse or human genome is not routinely used to study the significance of individual binding sites, due to low frequencies of homologous recombination that limit the efficiency of this technique.</s><s>New approaches in site-specific targeting of DNAses using artificial zinc fingers 70 might improve the efficiency of genomic replacement, so mutagenesis could become a practical method for dissecting the role of individual cis elements.</s><s>Also, artificial zinc fingers fused to transcriptional activation or repression domains have been used to specifically regulate cellular promoters <ref type="bibr" target="#b70">71</ref> .</s><s>It is therefore possible that artificial zinc fingers (without either an activation or repression domain) could be used to simply block access of a factor to single binding site in the genome, but this has not yet been demonstrated successfully.</s><s>Other possible methods include the use of pyrrole-imidazole polyamides or peptide nucleic acids to bind to (and perhaps also mutate) specific cis elements in the genome <ref type="bibr" target="#b71">72</ref>  71 73.</s><s>Although very few studies have used these methods to target a specific site and even fewer have examined the consequences of such agents on the entire transcriptome, they do hold the promise of providing a method to test the function of a specific binding site in its natural genomic context.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CONCLUSIONS</head><p><s>ChIP-chip and ChIP-seq have greatly advanced our understanding of gene regulation.</s><s>First, genomic studies have confirmed that RNAPII together with general and site-specific factors are bound to thousands of proximal promoters that are active at very low levels <ref type="bibr" target="#b73">[74]</ref><ref type="bibr" target="#b74">[75]</ref><ref type="bibr" target="#b75">[76]</ref> , thus supporting the first step in the model set out in the introduction.</s><s>These studies have also revealed that binding of a factor to an enhancer region can be necessary, but not sufficient, for high levels of promoter activity, which leads to the inclusion of a new step in the model (Figure <ref type="figure" target="#fig_4">6</ref>, step 3): the binding of a cell type-specific partner protein that allows the recruitment of a coactivator, resulting in cell type-specific function of a constitutively expressed factor.</s><s>Although the principle that binding of a transcription factor can be necessary, but not sufficient, for regulation of a specific gene was previously established using one-gene-at-a-time approaches, it was not clear whether a cooperative mode of regulation was the exception or the rule for most genes.</s><s>Recent genome-wide analyses suggest that this type of regulation is very common.</s><s>For example, of the ~3700 Oct4, ~4500 Sox2 and ~10,000 Nanog binding sites identified in mouse ES cells, only a small number of regions were bound by all three factors and by the co-activator p300 <ref type="bibr" target="#b37">38</ref> .</s><s>These studies support the hypothesis that occupancy of an upstream site by a single factor (Oct4) was not functional (as in Figure <ref type="figure" target="#fig_4">6</ref> step 2), but binding of Sox2 and/or Nanog near to the occupied Oct4 site resulted in recruitment of the p300 coactivator (step 3) and transcriptional activation.</s></p><p><s>Other discoveries, such as the findings that most transcription factors bind to thousands of places in the genome, that binding sites are not localized only in proximal promoter regions, and that some binding sites lack sequences similar to the consensus motif, have also stimulated new ideas concerning long range and combinatorial regulation.</s><s>However, current genomic studies have not yet determined whether most transcription factors cluster at hotspots in the human genome or with what frequency binding events have a functional outcome.</s><s>The answers to these two questions will require the genomic profiling of many more factors.</s><s>It is likely that a true understanding of the role of a given factor at a particular site in the genome will require the identification of all other factors binding nearby and knowledge of histone modifications in that region.</s><s>These studies will be best performed by a cooperation between large groups such as the ENCODE Consortium (http://www.genome.gov/10005107)</s><s>and the NIH Roadmap Epigenomics Program (http://nihroadmap.nih.gov/epigenomics/) that can identify binding sites for a large number of transcription factors and develop reference epigenomes in many different cell types and individual investigators who can perform the follow-up functional analyses of the role of a specific factor in a particular cell type.</s><s>The next several years of largescale data collecting should provide investigators with a plethora of information that will form the basis for hundreds of follow-up experiments that address important biological questions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Box 1: Chromatin immunoprecipitation methods</head><p><s>Briefly, chromatin immunoprecipitation (ChIP) (illustrated in the figure) involves crosslinking DNA-binding proteins to DNA by treatment of cells with formaldehyde and preparation of chromatin by sonication or enzymatic digestion.</s><s>An immunoprecipitation of the crosslinked chromatin is performed using an antibody that recognizes a specific transcription factor or histone isoform, resulting in the collection of all the binding sites in the genome for the factor of interest.</s><s>After purification of the precipitated fragments, the sample can be analyzed by PCR to study particular genes.</s><s>However, genome-wide analysis can be performed by microarray (ChIP-chip) or sequencing (ChIP-Seq).</s><s>For ChIP-chip, the immunoprecipitated sample and input DNA, as a control, are labeled with fluorescent dyes and hybridized to microarrays.</s><s>Binding sites are identified by the intensity of signal of the ChIP sample in relation to the signal of the input sample at each probe on the microarray using various ChIP-chip peak-calling programs <ref type="bibr" target="#b20">21</ref> 22.</s><s>For a single ChIP-chip experiment, most investigators use between 10 6 and 10 7 cells, however recent methodological improvements using amplification methods have enabled successful ChIP-chip experiments with as few as 10 4 cells <ref type="bibr" target="#b76">[77]</ref><ref type="bibr" target="#b77">[78]</ref><ref type="bibr" target="#b78">[79]</ref><ref type="bibr" target="#b79">[80]</ref> .</s><s>For ChIP-seq, the immunoprecipitated sample is used to create a library that is analyzed using high throughput next generation sequencers.</s><s>Binding sites are identified using various ChIP-seq peak calling programs <ref type="bibr">16 27 81 26 82</ref> , all of which identify target sites based on the number of sequenced tags from the ChIP library corresponding to each position in the genome.</s><s>For a ChIP-seq experiment designed to map binding of a site-specific factor, most investigators use 10 7 to 10 8 cells, although 10 4 to 10 5 cells is sufficient for the ChIP-seq analysis of certain histone modifications <ref type="bibr" target="#b82">83</ref> .</s><s>It is important to note that because ChIP assays require such large cell numbers, the observed peaks in either ChIP-chip or ChIP-seq represent an average of binding of a factor at a particular site in the cell population.</s><s>Thus, a small peak could represent very strong binding in only a subset of the cells (for example, cells at one stage of the cell cycle) or modest binding in the entire cell population.</s><s>ChIP-seq experiments, which allow binding to be analyzed at all unique overlapping oligomers of a certain length (usually 27-50 nts are sequenced per fragment) in the genome, can provide very high resolution mapping of transcription factor binding sites.</s><s>For example, three-fourths of all the ChIP-Seq peak positions for the DNA binding proteins CTCF, NRSF and STAT1 are within 18, 27 and 51 bp, respectively, of the nearest motif for that factor <ref type="bibr" target="#b81">82</ref> .</s><s>In general, genome-scale ChIP-chip experiments are less precise in mapping the exact location of a binding site because the oligomers on the array are not overlapping but are spaced approximately 35-100 nt apart, due to the large number of arrays that would be required if overlapping oligomers were used.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ONLINE SUMMARY</head><p><s>• Alterations in gene expression caused by the inappropriate level, structure, or function of a transcription factor have been associated with a diverse set of human diseases.</s><s>However, because most human transcription factors are essentially uncharacterized, the role of transcription factors in human health is currently greatly underappreciated.</s></p><p><s>• Technological advances (such as ChIP-chip and ChIP-seq) now allow transcription factor binding to be studied on a genome-wide scale.</s></p><p><s>• Recent discoveries, such as the finding that most transcription factors bind to thousands of places in the genome, that binding sites are not only localized to proximal promoter regions, and that some binding sites lack sequences similar to the consensus motif, have stimulated new ideas concerning long range and combinatorial regulation.</s></p><p><s>• Current genomic studies have not yet determined whether most human transcription factors bind alone or if they cluster at hot spots in the genome.</s><s>Answers to these questions require the genomic profiling of many more factors.</s></p><p><s>• A critical unanswered question is whether all binding events have a functional outcome (perhaps under some specific condition or in a specific cell type) or whether some transcription factor/genome interactions are simply irrelevant.</s></p><p><s>• Issues that remain to be addressed include the design of comprehensive studies (for example, should all factors be studied in all cell types?) and functional validation (for example, how can we determine the role of one specific binding site in its normal genomic context?).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>GLOSSARY</head><p><s>TATA Box A consensus sequence within promoters that is enriched in thymine and adenine residues, and is important for the recruitment of the general transcriptional machinery at some promoters.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Initiator</head><p><s>An element, with a consensus of YYANWYY where A is the transcription start site, which helps to recruit the general transcriptional machinery to promoters.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Initiation complex</head><p><s>The assembly of RNA Polymerase and associated general factors that binds to the core promoter region.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CpG island</head><p><s>A sequence of at least 200 bp with a greater number of CpG sites than expected for its GC content.</s><s>These regions are often GC rich, typically undermethylated, and correspond to promoter regions of many mammalian genes.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Enhanceosome</head><p><s>A protein complex that binds to an enhancer region (which can be located upstream, downstream, or within a gene); the transcription factors that compose the enhanceosome are thought to work cooperatively to stimulate transcription.</s></p><p><s>PHD finger (Plant Homeo Domain) A 50-80 amino acid domain that contains a Cys4-His-Cys3 motif.</s><s>It is found in more than 100 human proteins, several of which are involved in chromatin-mediated gene regulation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Small interfering RNAs (siRNAs)</head><p><s>Small antisense RNAs (20-25 nucleotides long) that can be directly introduced into cells or be generated within cells from longer dsRNAs.</s><s>They serve as guides for the cleavage of homologous mRNA in the RNA-induced silencing complex (RISC).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Transcription factory</head><p><s>A nuclear subcompartment that is rich in RNA polymerases and transcription factors where there is clustering of active genes.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Interactome</head><p><s>A complete set of macromolecular interactions (physical and genetic).</s><s>Current use of the word tends to refer to a comprehensive set of protein-protein interactions.</s><s>However, the protein-DNA interactome (a network formed by transcription factors and their target genes) is also commonly studied.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Silencer</head><p><s>A DNA sequence capable of binding transcription factors termed repressors, which can negatively influence transcription by preventing recruitment of the general transcriptional machinery or by recruiting histone-modifying complexes that create repressive chromatin structures.</s></p><p><s>TFIID (Transcription Factor II D) A protein complex composed of several subunits called TBP-associated factors (TAFs) and the TATA Binding Protein (TBP).</s><s>It is one of several complexes that make up the RNA polymerase II initiation machinery.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Heterochromatin</head><p><s>Chromatin that is characterized by very dense packing of DNA, which makes it less accessible to transcription factors.</s><s>Certain regions of the genome, such as centromeres and telomeres, are always heterochromatinized (constitutive heterochromatin) whereas other regions are densely packed and repressed only in certain cells (facultative heterochromatin).</s></p><p><s>Reporter construct A plasmid containing a promoter (and sometimes an enhancer) cloned upstream of a reporter gene (often simply called the reporter) which is introduced into cultured cells, animals or plants.</s><s>Certain genes are chosen as reporters because their products can be easily or quantitatively assayed or used as selectable markers.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DNA methylation</head><p><s>An epigenetic DNA modification that can be added and removed without changing the original DNA sequence and which is characterized by the addition of a methyl group to the number 5 carbon of the cytosine pyrimidine ring.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Artificial Zinc finger protein</head><p><s>Chimeras of zinc finger domains -small protein domains that coordinate one or more zinc ions, commonly found in mammalian transcription factors -and an effector domain (for example, activator, repressor, methylase, or nuclease).</s><s>Linking together six zinc fingers produces a target-site of 18 bp, which is long enough to be unique in all known genomes.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DamID</head><p><s>An alternate method to ChIP employing a DNA-binding protein fused to a DNA methyltransferase.</s><s>Adenine methylation of a region identifies it as being located near a binding site.</s><s>Shown is the analysis of binding sites identified using ChIP-seq for E2F4, E2F6, and GATA1 for a region of chromosome 1 containing the UCHL5 gene (the direction of transcription is shown by the arrow beginning at the start site).</s><s>E2F4 and E2F6 bind to the promoter region whereas GATA1 binds downstream of the gene.</s><s>(B) Shown is the analysis of binding sites identified using ChIP-seq for GATA1 and ZNF263 for a region of chromosome 1.</s><s>The binding sites for these two factors do not cluster at the same genomic locations.</s><s>that is located at a distant region of the chromosome.</s><s>In this case, because formaldehyde can create both protein-DNA and protein-protein crosslinks, ChIP assays for Factor X would enrich for a region containing its own consensus motif and a region bound by the other factor.</s><s>(B) Factor X could be recruited to a sequence via protein-protein interactions with another transcription factor (TF) in a manner completely independent of its DNA binding abilities.</s><s>In this case, ChIP assays would detect binding of Factor X at a region that has no match to its consensus or position weight matrix (PWM).</s><s>Factor X could bind to a sequence that has a low match to its PWM and be anchored on the genome via protein-protein interactions with a nearby factor (C) or with a specifically modified histone (D).</s><s>In both of these cases, ChIP assays would detect binding of Factor X at a region that contains a low match to its PWM.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Figure 4. Incorrect interpretation of functional assays</head><p><s>There are a number of reasons, other than a lack of function, why reduction in the level of a transcription factor might not result in a change in expression of the predicted target gene.</s><s>(A)</s></p><p><s>The transcription factor regulates a gene that is distal to the binding site; therefore, the nearest gene will not show a change in expression upon knockdown of the factor.</s><s>(B) Knockdown of a factor with an siRNA does not lower the level below that needed for full binding site occupancy; therefore, expression of target genes is not affected.</s><s>(C) Knockdown of a factor (pink triangle) results in full occupancy by another family member (green triangle) at a site that, under normal conditions, is bound interchangeably by both family members; target gene expression is not affected because the family members are redundant in function.</s><s>(D) Regulation is dependent on the ubiquitous site-specific factor (yellow oval) in combination with cell type-specific factors.</s><s>In this example, factor X (yellow oval) is bound to the promoter regions of gene A and gene B in both liver and breast cells and gene A and B are expressed in both tissues.</s><s>However, in liver, factor X is not involved in regulation of gene B because there is no binding site for the liver-specific factor (blue oval) near the factor X binding site in the gene B promoter.</s><s>Conversely, in breast cells, factor X regulates gene B through interaction with the breast-specific factor (pink oval) but does not regulate gene A because there is no binding site for the breast-specific factor near the factor X site in the gene A promoter.</s><s>Thus different subsets of target genes may show changes in expression in different cell types when levels of the ubiquitous site-specific factor are reduced.</s><s>ChIP-chip and ChIP-seq studies have confirmed that RNA polymerase II (RNAPII) and other factors are bound to thousands of promoters that are on at low levels, thus supporting step 1 (as shown in Figure <ref type="figure" target="#fig_0">1</ref>).</s><s>That is, promoter activity can be increased by site-specific DNA binding factors interacting with cis elements in the proximal promoter region and stabilizing the recruitment of the transcriptional machinery through direct interaction of the site-specific factor and the general factors.</s><s>However, these studies have also revealed that binding of a factor to an enhancer region may be necessary, but not sufficient, for high levels of promoter activity (step 2), thus leading to the inclusion of a new step in the model (step 3): the binding of a cell type-specific partner protein that allows the recruitment of a coactivator to provide for cell type-specific function of a constitutively bound factor.</s><s>Currently, the projected later steps remain as shown in Figure <ref type="figure" target="#fig_0">1</ref>: the enhancer factors can stimulate transcription by (A) recruiting a histone-modifying enzyme to create a more favorable chromatin environment for transcription or (B) recruiting a kinase that can phosphorylate the C terminal domain of RNA polymerase II and stimulate elongation.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Transcriptional regulation by promoters and enhancersGeneral transcription factors (green) bind to core promoter regions via recognition of common elements such as TATA boxes (TATA) and initiators (INR).</s><s>However, these elements on their own provide very low levels of transcriptional activity due to unstable interactions of the general factors with the promoter region.</s><s>Promoter activity can be increased by site-specific DNA binding factors (red) interacting with cis elements in the proximal promoter region and stabilizing the recruitment of the transcriptional machinery through direct interaction of the site-specific factor and the general factors (step 1).</s><s>Promoter activity can be further stimulated to higher levels by site-specific factors (orange) binding to enhancers (step 2).</s><s>The enhancer factors can stimulate transcription by (A) recruiting a histone-modifying enzyme (for example</s></p></div></figDesc><graphic coords="18,123.93,61.00,424.13,503.92" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Location analysis of transcription factors (A) Localization analysis reveals two classes of binding patterns for transcription factors.Shown is the analysis of binding sites identified using ChIP-seq for E2F4, E2F6, and GATA1 for a region of chromosome 1 containing the UCHL5 gene (the direction of transcription is shown by the arrow beginning at the start site).</s><s>E2F4 and E2F6 bind to the promoter region whereas GATA1 binds downstream of the gene.</s><s>(B) Shown is the analysis of binding sites identified using ChIP-seq for GATA1 and ZNF263 for a region of chromosome 1.</s><s>The binding sites for these two factors do not cluster at the same genomic locations.</s></p></div></figDesc><graphic coords="20,197.52,61.00,276.96,288.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Models for recruitment of factors to sites that lack consensus motifs(A) Transcription factor X could bind to its consensus motif (black box) and loop via proteinprotein interactions to another transcription factor (TF) bound to a different binding site (TFBS) that is located at a distant region of the chromosome.</s><s>In this case, because formaldehyde can create both protein-DNA and protein-protein crosslinks, ChIP assays for Factor X would enrich for a region containing its own consensus motif and a region bound by the other factor.</s><s>(B) Factor X could be recruited to a sequence via protein-protein interactions with another transcription factor (TF) in a manner completely independent of its DNA binding abilities.</s><s>In this case, ChIP assays would detect binding of Factor X at a region that has no match to its consensus or position weight matrix (PWM).</s><s>Factor X could bind to a sequence that has a low</s></p></div></figDesc><graphic coords="21,168.70,61.00,334.60,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Communal action of a set of transcription factors (A) The schematic shows a possible scenario in which two different factors (large yellow and dark red triangles) can bind near to each other on inactive chromatin (represented by the red flags) and each recruit a histone acetyltransferase (HAT), which acetylates histones and creates an open chromatin region (green flags), allowing the binding of another factor (diamond) that stimulates transcription of a gene.</s><s>In this case, loss of a single factor that recruits a HAT would not result in a major change in regulation of the gene.</s><s>(B)The schematic shows a possible scenario in which multiple factors (hexagons) bound on either side of factor X (circle) can create a limited search domain for factor X (which is required for activation of a downstream gene).</s><s>Factor X binds transiently to its binding site; dissociation from the site is followed by localized rebinding and scanning for the high affinity binding site.</s><s>Transcriptional activation can be enhanced if the scanning is spatially limited by adjacent clusters of other bound factors; loss of a single factor in the cluster would not result in a major change in regulation of the gene.</s></p></div></figDesc><graphic coords="24,84.14,61.00,503.72,455.11" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>Revised model for transcriptional regulation</s></p></div></figDesc><graphic coords="25,162.96,61.00,346.08,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="11,150.00,247.00,216.00,322.92" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nat Rev Genet.</s><s>Author manuscript; available in PMC 2010 September 1.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>The author thanks <rs type="person">Xiaoqin Xu</rs>, <rs type="person">Henriette O'Geen</rs>, and <rs type="person">Seth Frietze</rs> for providing data used in Figure 2 and the members of the <rs type="institution">Farnham lab</rs> for their insights and discussions.</p></div>
+			</div>			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AUTHOR BIOGRAPHY</head><p><s>Dr. Farnham earned a B.A. from Rice University, Houston, USA, a PhD from Yale University, New Haven, USA, and performed postdoctoral work at Stanford University, Palo Alto, USA.</s><s>She was a faculty member at University of Wisconsin, Madison, USA, from 1987-2004 and moved to University of California Davis, USA, in 2004 where she is Associate Director of Genomics.</s><s>Dr. Farnham has been a leader in using chromatin immunoprecipitation (ChIP) to study mammalian transcription factors.</s><s>Currently, she is using ChIP with high throughput sequencing (ChIP-seq) to analyze chromatin structure, as a member of a Reference Epigenome Mapping Center, and for identification of target genes of human transcription factors, as a member of the ENCODE Consortium.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">PubMed: 11092823] A detailed review of transcriptional regulation, general factors, and accessory proteins that control transcription initation and elongation</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">I</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Young</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Genet</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="77" to="137" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>Transcription of eukaryotic protein-coding genes</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Mammalian RNA polymerase II core promoters: insights from genome-wide studies</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sandelin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Reviews Genetics</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="424" to="436" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">PubMed: 17571346] Demonstrates how genome-wide studies of transcription, factor binding, chromatin structure, DNA replication, and sequence conservation can synergize</title>
+		<author>
+			<persName><forename type="first">Tep</forename><surname>Consortium</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">447</biblScope>
+			<biblScope unit="page" from="799" to="816" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>Identification and analysis of functional elements in 1% of the human genome by the ENCODE pilot project</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Comprehensive analysis of transcriptional promoter structure and function in 1% of the human genome</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Cooper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Trinklein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Anton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Myers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Research</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1" to="10" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16344566</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Diversification of transcriptional modulation: Large-scale identification and characterization of putative alternative promoters of human genes</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kimura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Res</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="55" to="65" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16344560</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Initial sequencing and analysis of the human genome</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Lander</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">409</biblScope>
+			<biblScope unit="page" from="860" to="921" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11237011</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">A summary of the expression, conservation, and activity of the set of human sequence-specific transcription factors</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Vaquerizas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Kummerfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Teichmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Luscombe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Reviews Genetics</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="252" to="263" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>A census of human transcription factors: function, expression and evolution</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">The sequence of the human genome</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Venter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="page" from="1304" to="1351" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11181995</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Human disease genes</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Jimenez-Sanchez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Childs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Valle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">409</biblScope>
+			<biblScope unit="page" from="853" to="855" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11237009</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Global analysis of in vivo Foxa2-binding sites in mouse liver using massively parallel sequencing</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Wederell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="4549" to="4564" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18611952</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Genome-wide occupancy of SREBP1 and its partners NFY and SP1 reveals novel functional roles and combinatorial regulation of distinct classes of genes</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Reed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Charos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Szekely</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Weissman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Snyder</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS Genetics</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="2008">2008. 1000133</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18654640</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Genome-wide analysis of menin binding provides insights to MEN1 tumorigenesis</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Scacheri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Genet</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16604156</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Genome-wide pattern of TCF7L2/TCF4 chromatin occupancy in colorectal cancer cells</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hatzis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell. Biol</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="2732" to="2744" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18268006</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Genome-Wide Analysis of KAP1 Binding Suggests Autoregulation of KRAB-ZNFs</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>O'geen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Genet</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17542650</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">A comprehensive ChIP-chip analysis of E2F1, E2F4, and E2F6 in normal and tumor cells reveals iterchangeable roles of E2F family members</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Res</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1550" to="1561" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17908821</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">PubMed: 17252627] An early demonstration that high throughput sequencing of ChIP samples can be used to identify genome-wide binding sites of site-specific transcription factors</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Robertson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="1" to="7" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>Genome-wide profiles of STAT1 DNA association using chromatin immunoprecipitation and massively parallel sequencing</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Genome-wide mapping of in vivo protein-DNA interactions</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mortazavi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Myers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wold</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">316</biblScope>
+			<biblScope unit="page" from="1497" to="1502" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17540862</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Whole-genome maps of USF1 and USF2 binding and histone H3 acetylation reveal new aspects of promoter structure and candidate genes for common human disorders</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rada-Iglesias</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Research</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="380" to="392" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18230803</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Detection of in vivo protein-DNA interactions using DamID in mammalian cells</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Vogel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Peric-Hupkes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Van Steensel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Protoc</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">17545983</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Genome-wide analysis of transcription factor binding sites based on ChIP-seq data</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Valouev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Methods</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="829" to="834" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19160518</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Systematic evaluation of variability in ChIP-chip experiments using predefined DNA targets</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Johnson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Research</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="393" to="403" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18258921</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">PubMed: 16606705] Demonstration that some factors bind exclusively to proximal promoters and do not have strict motif requirements for their binding sites</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bieda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Singer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Farnham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Research</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="595" to="605" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>Unbiased location analysis of E2F1 binding sites suggests a widespread role for E2F1 in the human genome</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">PubMed: 15988478] An early demonstration that high density oligonucleotide arrays can be used to identify genome-wide binding sites for human transcription factors</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">436</biblScope>
+			<biblScope unit="page" from="876" to="880" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>A high-resolution map of active promoters in the human genome</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Unbiased mapping of transcription factor binding sites along human chromosomes 21 and 22 points to widespread regulation of noncoding RNAs</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cawley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="page" from="499" to="509" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14980218</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Empirical methods for controlling false positives and estimating confidence in ChIP-seq peaks</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Nix</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Courdy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Boucher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">523</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19061503</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Model-based analysis of ChIP-Seq (MACS)</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Biology</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18798982</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">FindPeaks 3.1: a tool for identifying areas of enrichment from massively parallel short-read sequencing technology</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Fejes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="1729" to="1730" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18599518</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">PeakSeq enables systematic scoring of ChIP-seq experiments relative to controls</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rozowsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="66" to="75" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19122651</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Structural and functional characterization of the mouse hepatocyte growth factor gene promoter</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Michalopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zarnegar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">269</biblScope>
+			<biblScope unit="page" from="4152" to="4160" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8307976</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Analysis of tissue-specific and PPARalpha-dependent induction of FABP gene expression in the mouse liver by an in vivo DNA electroporation method</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Fujishiro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Cell Biochem</title>
+		<imprint>
+			<biblScope unit="volume">239</biblScope>
+			<biblScope unit="page" from="165" to="172" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12479582</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Isolating human transcription factor targets by coupling chromatin immunoprecipitation and CpG island microarray analysis</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Weinmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Oberley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Th-M</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Farnham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genes &amp; Dev</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="235" to="244" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11799066</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">A global transcriptional regulatory role for c-Myc in Burkitt&apos;s lymphoma cells</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page">12808131</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">E2F integrates cell cycle progression with DNA repair, replication, and G2/M checkpoints</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ren</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genes &amp; Dev</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="245" to="256" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11799067</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Control of pancreas and liver gene expression by HNF transcription factors</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">T</forename><surname>Odom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">303</biblScope>
+			<biblScope unit="page" from="1378" to="1381" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14988562</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">The ENCODE (ENCyclopedia of DNA Elements) Project</title>
+		<author>
+			<persName><forename type="first">Tep</forename><surname>Consortium</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">306</biblScope>
+			<biblScope unit="page" from="636" to="640" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15499007</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Chromosome-wide mapping of estrogen receptor binding reveals long-range regulation requiring the forkhead protein FoxA1</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Carroll</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">122</biblScope>
+			<biblScope unit="page" from="33" to="43" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16009131</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Relationships between p63 binding, DNA sequence, transcription activity, and biological function in human cells</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="593" to="602" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17188034</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Integration of external signaling pathways with the core transcriptional network in embryonic stem cells</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">133</biblScope>
+			<biblScope unit="page" from="1106" to="1117" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18555785</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Molecular mechanisms of selector gene function and evolution</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Mann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Carroll</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Genet Dev</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="592" to="600" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12200165</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Hotspots of transcription factor colocalization in the genome of Drosophila melanogaster</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Moorman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+			<pubPlace>U S A</pubPlace>
+		</imprint>
+	</monogr>
+	<note>103 Demonstrates clustering of transcription factors throughout the Drosophila genome</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Locating Mammalian Transcription Factor Binding Sites: A Survey of Computational and Experimental Techniques</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Elnitski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">X</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Farnham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sjm</forename><surname>Jones</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Research</title>
+		<imprint>
+			<date type="published" when="2006-10-19">Oct 19. 2006</date>
+			<pubPlace>Advance</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">The enhanceosome</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Panne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Structural Biol</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="236" to="242" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Structure and function of the interferon-B enhanceosome</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Maniatis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cold Spring Harb Symp Quant Biol</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="609" to="620" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10384326</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">On a chromosome far, far away: LCRs and gene expression</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dean</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends in Genetics</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="38" to="45" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16309780</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Histone modifications at human enhancers reflect global cell-type-specific gene expression</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Heintzman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">459</biblScope>
+			<biblScope unit="page" from="108" to="112" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19295514] Identifies specific histone modifications that are associated with cell type specific transcriptional regulation</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Distinct predictive chromatin signatures of transcriptional promoters and enhancers in the human genome</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Heintzman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Genetics. Feb</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="2007">2007. 2007</date>
+		</imprint>
+	</monogr>
+	<note>published online</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">CASTing for multicomponent DNA-binding components</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">D</forename><surname>Funk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Biochem. Sci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="77" to="80" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8386867</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Predicting combinatorial binding of transcription factors to regulatory elements in the human genome by association rule mining</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">C</forename><surname>Morgan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Miranker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">R</forename><surname>Iyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">445</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18005433</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">E2F in vivo binding specificity: comparison of consensus vs. non-consensus binding sites</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">X</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Farnham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Research</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1763" to="1777" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18836037</note>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Differential usage of signal transduction pathways defines two types of serum response factor target gene</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gineitis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Treisman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">276</biblScope>
+			<biblScope unit="page" from="24531" to="24539" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11342553</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Serum response factor binding sites differ in three human cell types</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Cooper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Trinklein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Myers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Research</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">17200232</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Identification of an OCT4 and SRY regulatory module using integrated computational and experimental genomics approaches</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">X</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>'geen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Iyengar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Farnham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Research</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">17567999</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Transcription factors bind thousands of active and inactive regions in the Drosophila blastoderm</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Macarthur</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS Biology</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18271625</note>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Diversity and complexity in DNA recognition by transcription factors</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Badis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="page" from="1720" to="1723" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19443739</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Molcular basis for site-specific read-out of histone H3K4me3 by the BPTF PHD finger of NURF</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">442</biblScope>
+			<biblScope unit="page" from="91" to="95" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16728978</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Molecular mechanism of histone H3K4me3 recognition by plant homeodomain of ING2</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V</forename><surname>Pena</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">442</biblScope>
+			<biblScope unit="page" from="100" to="103" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16728977</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Proteome-wide analysis in Saccharomyces cerevisiae identifies several PHD fingers as novel direct and selective binding modules of histone H3 methylated at either lysine 4 or lysine 36</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Shi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">282</biblScope>
+			<biblScope unit="page" from="2450" to="2455" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17142463</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Selective anchoring of TFIID to nucleosomes by trimethylation of histone H3 lysine 4</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vermeulen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">131</biblScope>
+			<biblScope unit="page" from="58" to="69" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17884155</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">The chromatin structure of the dual c-Myc promoter P1/P2 is regulated by separate elements</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Albert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">276</biblScope>
+			<biblScope unit="page" from="20482" to="20490" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11279041</note>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">A computational genomics approach to identify cis-regulatory modules from chromatin immunoprecipitation microarray data-a case study using E2F1</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rabinvich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Squazzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Farnham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Research</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1585" to="1595" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17053090</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Identification of genes directly regulated by the oncogene ZNF217 using chromatin immunoprecipitation (ChIP)-chip assays</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Krig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">282</biblScope>
+			<biblScope unit="page">17259635</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Distribution of NF-kappaB-binding sites across human chromosome 22</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Martone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="12247" to="12252" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14527995</note>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Unique ERalpha cistromes control cell type-specific gene regulation</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Krum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Endocrinol</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="2393" to="2406" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18818283</note>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Snyder</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>unpublished data</note>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Visualizing chromatin dynamics in intact cells</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Voss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Hager</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochem Biophys Acta</title>
+		<imprint>
+			<biblScope unit="volume">1783</biblScope>
+			<biblScope unit="page" from="2044" to="2051" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18675855</note>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Active genes dynamicaly colocalize to shared sites of ongoing transcription</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Osborne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Genet</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="1065" to="1071" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15361872</note>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Specialized transcription factories</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bartlett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochem Soc Symp</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="67" to="75" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16626288</note>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Capturing chromosome conformation</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dekker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rippe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dekker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kleckner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">295</biblScope>
+			<biblScope unit="page" from="1306" to="1311" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11847345</note>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">PubMed: 19212405] Demonstrates that binding sites identified for p300 by ChIP-seq is a highly accurate means for identifying enhancers that can be shown, using follow-up assays in transgenic mice</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Visel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">457</biblScope>
+			<biblScope unit="page" from="854" to="858" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>ChIP-seq accurately predicts tissue-specific activity of enhancers. to function in a tissue-specific manner</note>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Critical parameters for genome editing using zinc finger nucleases</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Camenisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Brilliant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Segal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mini Rev Med Chem</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="669" to="676" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18537722</note>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Interrogating genomes with combinatorial artificial transcription factor libraries: asking zinc finger questions</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bletran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Parikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Temple</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Blancafort</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Assay Drug Dev Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="317" to="331" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16834537</note>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Peptide nucleic acid-targeted mutagenesis of a chromosomal gene in mouse cells</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Faruqi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Egholm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Glazer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="1398" to="1403" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9465026</note>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">DNA sequence-specific polyamides alleviate transcription inhibition associated with long GAA-TCC repeats in Friedreich&apos;s ataxia</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Burnett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page" from="11497" to="11502" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16857735</note>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">A chromatin landmark and transcription initiation at most promoters in human cells</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Guenther</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Levine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Boyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jaenisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Young</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">130</biblScope>
+			<biblScope unit="page">17632057</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">RNA polymerase is poised for activation across the genome</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Muse</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Genet</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="1507" to="1511" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17994021</note>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Using ChIP-chip technology to reveal common principles of transcriptional repression in normal and cancer cells</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Komashko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Research</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="521" to="532" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18347325</note>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Genome-scale ChIP-chip analysis using 10,000 human cells</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Acevedo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biotechniques</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="791" to="797" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18251256</note>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Epigenetic characterization of the early embryo with a chromatin immunoprecipitation protocol applicable to small cell populations</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>O'neill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Vermilyea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Turner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Genetics</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">16767102</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">Q2ChIP, a quick and quantitative chromatin immunoprecipitation assay, unravels epigenetic dynamics of developmentally regulated genes in human carcinoma cells</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Collas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Stem Cells</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page">17272500</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">Epigenetic characterization of hematopoietic stem cell differentiation using miniChIP and bisulfite sequencing analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Attema</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="12371" to="12376" />
+			<date type="published" when="2007">2007</date>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17640913</note>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">An HMM approach to genome-wide identification of differential histone modification sites from ChIP-seq data</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C-L</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lin</forename><forename type="middle">F</forename><surname>Sung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W-K</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="2344" to="2349" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18667444</note>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Genome-wide identification of in vivo protein-DNA binding sites from ChIP-seq data</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jothi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cuddapah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="5221" to="5231" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18684996</note>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Genome-wide identification of DNA-protein interactions using chromatin immunoprecipitation coupled with flow cell sequencing</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Hoffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Jones</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Endocrinol</title>
+		<imprint>
+			<biblScope unit="volume">201</biblScope>
+			<biblScope unit="page" from="1" to="13" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19136617</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

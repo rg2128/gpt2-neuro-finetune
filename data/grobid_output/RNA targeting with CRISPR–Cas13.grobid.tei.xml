@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">RNA targeting with CRISPR–Cas13</title>
+				<funder>
+					<orgName type="full">National Institutes of Health</orgName>
+					<orgName type="abbreviated">NIH</orgName>
+				</funder>
+				<funder ref="#_gX39mBa">
+					<orgName type="full">Air Force Office of Scientific Research</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">D.O.E.Computational Science Graduate Fellowship</orgName>
+				</funder>
+				<funder ref="#_9nvF7AA">
+					<orgName type="full">NIAID</orgName>
+				</funder>
+				<funder ref="#_kb9dEpB">
+					<orgName type="full">National Science Foundation</orgName>
+					<orgName type="abbreviated">NSF</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Howard Hughes Medical Institute</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">New York Stem Cell Foundation-Robertson Investigator</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Josh</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Paul and Daisy Soros Fellowship and National Defense Science and Engineering Fellowship</orgName>
+				</funder>
+				<funder ref="#_AHsHkJB">
+					<orgName type="full">James</orgName>
+				</funder>
+				<funder ref="#_c7pJ8Yg #_kxAXMAR">
+					<orgName type="full">NIMH</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2018-04-12">2018 April 12.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Omar</forename><forename type="middle">O</forename><surname>Abudayyeh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Broad Institute of MIT and Harvard</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">McGovern Institute for Brain Research at MIT</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Brain and Cognitive Science</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Biological Engineering</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Health Sciences and Technology</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jonathan</forename><forename type="middle">S</forename><surname>Gootenberg</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Broad Institute of MIT and Harvard</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">McGovern Institute for Brain Research at MIT</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Brain and Cognitive Science</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Biological Engineering</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department" key="dep1">Department of Systems Biology</orgName>
+								<orgName type="department" key="dep2">Harvard Medical School</orgName>
+								<address>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Patrick</forename><surname>Essletzbichler</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Broad Institute of MIT and Harvard</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">McGovern Institute for Brain Research at MIT</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Brain and Cognitive Science</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Biological Engineering</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuo</forename><surname>Han</surname></persName>
+							<affiliation key="aff6">
+								<orgName type="department">Departments of Genetics, Biology, and Chemistry</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Julia</forename><surname>Joung</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Broad Institute of MIT and Harvard</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">McGovern Institute for Brain Research at MIT</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Brain and Cognitive Science</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Biological Engineering</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joseph</forename><forename type="middle">J</forename><surname>Belanto</surname></persName>
+							<affiliation key="aff7">
+								<orgName type="department" key="dep1">Department of Genetics</orgName>
+								<orgName type="department" key="dep2">Cell Biology &amp;Development and Center for Genome Engineering</orgName>
+								<orgName type="institution">University of Minnesota</orgName>
+								<address>
+									<postCode>55455</postCode>
+									<settlement>Minneapolis</settlement>
+									<region>Minnesota</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vanessa</forename><surname>Verdine</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Broad Institute of MIT and Harvard</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">McGovern Institute for Brain Research at MIT</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Brain and Cognitive Science</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Biological Engineering</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><forename type="middle">B T</forename><surname>Cox</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Broad Institute of MIT and Harvard</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">McGovern Institute for Brain Research at MIT</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Brain and Cognitive Science</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Biological Engineering</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff8">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Max</forename><forename type="middle">J</forename><surname>Kellner</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Broad Institute of MIT and Harvard</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aviv</forename><surname>Regev</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Broad Institute of MIT and Harvard</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff8">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Eric</forename><forename type="middle">S</forename><surname>Lander</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Broad Institute of MIT and Harvard</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department" key="dep1">Department of Systems Biology</orgName>
+								<orgName type="department" key="dep2">Harvard Medical School</orgName>
+								<address>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff8">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><forename type="middle">F</forename><surname>Voytas</surname></persName>
+							<affiliation key="aff7">
+								<orgName type="department" key="dep1">Department of Genetics</orgName>
+								<orgName type="department" key="dep2">Cell Biology &amp;Development and Center for Genome Engineering</orgName>
+								<orgName type="institution">University of Minnesota</orgName>
+								<address>
+									<postCode>55455</postCode>
+									<settlement>Minneapolis</settlement>
+									<region>Minnesota</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alice</forename><forename type="middle">Y</forename><surname>Ting</surname></persName>
+							<affiliation key="aff6">
+								<orgName type="department">Departments of Genetics, Biology, and Chemistry</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Feng</forename><surname>Zhang</surname></persName>
+							<email>zhang@broadinstitute.org</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Broad Institute of MIT and Harvard</orgName>
+								<address>
+									<postCode>02142</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">McGovern Institute for Brain Research at MIT</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Brain and Cognitive Science</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Biological Engineering</orgName>
+								<orgName type="institution">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">RNA targeting with CRISPR–Cas13</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature</title>
+						<title level="j" type="abbrev">Nature</title>
+						<idno type="ISSN">0028-0836</idno>
+						<idno type="eISSN">1476-4687</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">550</biblScope>
+							<biblScope unit="issue">7675</biblScope>
+							<biblScope unit="page" from="280" to="284"/>
+							<date type="published" when="2018-04-12">2018 April 12.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">44CEA0CCCFB8407F36E7593CE4B455CB</idno>
+					<idno type="DOI">10.1038/nature24049</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>RNA plays important and diverse roles in biology, but molecular tools to manipulate and measure RNA are limited.</s><s>For example, RNA interference (RNAi) 1-3 can efficiently knockdown RNAs, but it is prone to off-target effects 4 , and visualizing RNAs typically relies on the introduction of exogenous tags 5 .</s><s>Here, we demonstrate that the class 2 type VI 6,7 RNA-guided RNA-targeting CRISPR-Cas effector Cas13a 8 (previously known as C2c2) can be engineered for mammalian cell RNA knockdown and binding.</s><s>After initial screening of fifteen orthologs in E. coli, we identified Cas13a from Leptotrichia wadei (LwaCas13a) as the most effective.</s><s>LwaCas13a can be heterologously expressed in mammalian and plant cells for targeted knockdown of either reporter or endogenous transcripts.</s><s>We demonstrate that LwaCas13a is capable of providing comparable levels of knockdown as RNAi, but with dramatically improved specificity.</s><s>Moreover, catalytically</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>inactive LwaCas13a maintains targeted RNA binding, allowing for programmable tracking of transcripts in live cells.</s><s>Our results establish CRISPR-Cas13a as a flexible platform for RNA targeting with wide applicability for studying RNA in mammalian cells.</s></p><p><s>Previous work has shown that Cas orthologs exhibit varying degrees of activity in bacterial and mammalian cells <ref type="bibr" target="#b8">9</ref> .</s><s>We therefore evaluated fifteen Cas13a orthologs for PFS preference and activity (Extended Data Fig. <ref type="figure" target="#fig_1">1a</ref>) using a previously described ampicillin resistance bacterial assay <ref type="bibr" target="#b7">8</ref> (Fig. <ref type="figure" target="#fig_1">1a</ref>).</s><s>Cas13a-mediated cleavage of the ß-lactamase (ampicillin resistance) transcript results in bacterial death under ampicillin selection, which can be measured by quantifying surviving colonies.</s><s>Using this approach, we found that the Cas13a ortholog from L.wadei (LwaCas13a) was most active, followed by the previously characterized LshCas13a (Fig. <ref type="figure" target="#fig_1">1b</ref> and Extended Data Fig. <ref type="figure" target="#fig_1">1b</ref>) <ref type="bibr" target="#b7">8</ref> .</s><s>Next generation sequencing analysis of the PFS distributions from LwaCas13a and LshCas13a screens revealed that most LwaCas13a PFS sequences were depleted (Extended Data Fig. <ref type="figure" target="#fig_1">1c-e</ref>), suggesting robust LwaCas13a RNA cleavage activity.</s><s>Indeed, motif analysis of the depleted PFS sequences at varying thresholds revealed the expected 3′ H motif of LshCas13a, but no significant PFS motif for LwaCas13a (Fig. <ref type="figure" target="#fig_1">1c</ref> and Extended Data Fig. <ref type="figure" target="#fig_1">1f,</ref><ref type="figure">g</ref>).</s><s>Consistent with these results, LwaCas13a was also found to be more active than LshCas13a in our recent work developing a nucleic acid sensor and exhibited a weak 3′ H PFS when biochemically characterized <ref type="bibr" target="#b9">10</ref> .</s><s>Because of its high activity and lack of PFS in bacteria, we focused on LwaCas13a for further development.</s></p><p><s>In vitro cleavage reactions with LwaCas13a demonstrated programmable RNA cleavage with a crRNA encoding a 28 nt spacer, shorter than the 29-30 nt length found in the native L. wadei CRISPR array,(Extended Data Figure <ref type="figure" target="#fig_2">2a</ref>), confirmed the dramatically higher cleavage efficiency of LwaCas13a over LshCas13a (Extended Data Fig <ref type="figure" target="#fig_2">2b-c</ref>), and exhibited similar biochemical characteristics for the two enzymes (Extended Data Fig. <ref type="figure" target="#fig_2">2d-g</ref> and Supplementary Note 1).</s><s>We found that LwaCas13a could cleave the corresponding pre-crRNA transcript from L. wadei (Extended Data Fig. <ref type="figure" target="#fig_2">2h</ref>).</s><s>We also explored the crRNA constraints on LwaCas13a cleavage by truncating the spacer and found that LwaCas13a retained in vitro cleavage activity with spacer lengths as short as 20 nt (Extended Data Fig. <ref type="figure" target="#fig_2">2i</ref>).</s><s>Although guide lengths less than 20 nt no longer display catalytic activity, the LwaCas13-crRNA complex may still retain binding activity, providing an opportunity for orthogonal applications with a single catalytic enzyme <ref type="bibr" target="#b10">11</ref> .</s></p><p><s>We next evaluated the ability of LwaCas13a to cleave transcripts in mammalian cells.</s><s>We cloned mammalian codon-optimized LwaCas13a into mammalian expression vectors with msfGFP fusions on the C-or N-terminus and either a dual-flanking nuclear export sequence (NES) or nuclear localization sequence (NLS) and evaluated expression and localization (Fig. <ref type="figure" target="#fig_1">1d</ref>).</s><s>We found that msfGFP-fused LwaCas13a constructs expressed well and localized effectively to the cytoplasm or nucleus according to the localization sequence.</s><s>To evaluate the in vivo cleavage activity of LwaCas13a we developed a dual luciferase reporter system, which expresses both Gaussia luciferase (Gluc) and Cypridinia luciferase (Cluc) under different promoters on the same vector, allowing one transcript to serve as the Cas13a target and the other to serve as a dosing control (Fig. <ref type="figure" target="#fig_1">1e</ref>).</s><s>We then designed guides against Gluc and cloned them into a tRNA Val -promoter-expressing guide vector.</s><s>We transfected the LwaCas13a expression vector, guide vector, and dual-luciferase construct into HEK293FT cells and measured luciferase activity at 48 hours post-transfection.</s><s>We found that nuclearlocalized LwaCas13a-msfGFP resulted in the highest levels of knockdown (75.7% for guide 1, 72.9% for guide 2), comparable to position-matched shRNA controls (78.3% for guide 1, 51.5% for guide 2) (Fig. <ref type="figure" target="#fig_1">1f</ref>), which control for accessibility and sequence in the target region.</s><s>Because of the superior cleavage of the LwaCas13a-msfGFP-NLS construct, we used this design for all further knockdown experiments.</s><s>We also find that LwaCas13a yields greatest Gluc knockdown with a spacer length of 28 nt (73.8%) (Extended Data Fig. <ref type="figure" target="#fig_3">3a</ref>), that knockdown is dose-responsive to both the protein and guide transfected vector amounts (Extended Data Fig. <ref type="figure" target="#fig_3">3b,</ref><ref type="figure">c</ref>), and that knockdown is not sensitive to RNA polymerase III promoter choice.</s><s>(Extended Data Fig. <ref type="figure" target="#fig_3">3d</ref>).</s></p><p><s>We next tested knockdown in HEK293FT cells on three endogenous genes: KRAS, CXCR4, and PPIB.</s><s>We observed varying levels of knockdown, and for KRAS and CXCR4, LwaCas13a knockdown (40.4% for PPIB, 83.9% for CXCR4, 57.5% for KRAS) was similar to RNAi with position-matched shRNAs (63.0% for PPIB, 73.9% for CXCR4, 44.3% for KRAS) (Fig. <ref type="figure" target="#fig_1">1g</ref>).</s><s>We also found that knockdown of KRAS was flexible to guide promoter choice (Extended Data Fig. <ref type="figure" target="#fig_3">3e</ref>), that LwaCas13a knockdown was possible in the A375 melanoma cell line (Extended Data Fig. <ref type="figure" target="#fig_3">3f</ref>), and that knockdown was due to the catalytic activity of the LwaCas13a (Extended Data Fig. <ref type="figure" target="#fig_3">3g</ref>) (Supplementary Note 2).</s><s>Additionally, we tested if LwaCas13a knockdown is efficient in plants.</s><s>We designed guides against transcripts for rice (Oryza sativa) genes and co-transfected LwaCas13a and guide vectors into O. sativa protoplasts (Fig. <ref type="figure" target="#fig_1">1h</ref>).</s><s>After transfection, we observed &gt;50% knockdown of for all three genes and 7 out of 9 guides tested, with maximal knockdown of 78.0% (Fig. <ref type="figure" target="#fig_1">1i</ref>).</s><s>Together, these results suggest that LwaCas13a is able to mediate similar levels of RNA knockdown as RNAi.</s></p><p><s>To comprehensively characterize the dependence of RNA context on the efficiency of LwaCas13a knockdown, we harnessed the programmability of LwaCas13a to tile guides along the length of four transcripts: Gluc, Cluc, KRAS, and PPIB (Fig. <ref type="figure" target="#fig_2">2a</ref>).</s><s>The Gluc and Cluc screens revealed guides with greater than 60% knockdown (Fig. <ref type="figure" target="#fig_2">2b,</ref><ref type="figure">c</ref>), with the majority of Gluc targeting guides exhibiting&gt;50% knockdown and up to 83% knockdown.</s><s>To compare LwaCas13a knockdown with RNAi, we selected the top three performing guides against Gluc and Cluc and compared them to position-matched shRNAs.</s><s>We found that five out of six top performing guides achieved significantly higher levels of knockdown (p &lt;0.05) than their matched shRNA (Extended Data Fig. <ref type="figure" target="#fig_3">3h</ref>).</s><s>For KRAS and PPIB, we found that, while knockdown efficiency was transcript dependent, there was maximal knockdown of 85% and 75% for KRAS and PPIB, respectively (Fig. <ref type="figure" target="#fig_2">2d,</ref><ref type="figure">e</ref>).</s></p><p><s>To further understand the efficiency of LwaCas13a knockdown versus RNAi, we compared a variety of guides to shRNA constructs that were position matched to the same target region.</s><s>We selected the top three guides from each of the endogenous tiling screens (KRAS and PPIB) and observed robust knockdown with LwaCas13a (53.7%-88.8%)</s><s>equivalent to levels attained by shRNA knockdown (61.8%-95.2%),</s><s>with shRNA significantly better for 2 out of 6 guides (p &lt;0.01) and LwaCas13a significantly better for 2 out of 6 guides (p &lt;0.01) (Fig. <ref type="figure" target="#fig_2">2f</ref>).</s></p><p><s>One limitation of current RNAi technology is the difficulty of targeting nuclear transcripts.</s><s>We leveraged the ability of LwaCas13a to function in different cellular compartments to knockdown MALAT1 and XIST, which are localized to the nucleus <ref type="bibr" target="#b12">13</ref> , and found varying levels of knockdown, with up to as much as 50% knockdown for MALAT1 and 83.9% knockdown for XIST (Fig. <ref type="figure" target="#fig_2">2g</ref> and Extended Data Fig. <ref type="figure" target="#fig_3">3i</ref>), more effective than positionmatched shRNAs, which showed no detectable knockdown (p &gt; 0.05) (Fig. <ref type="figure" target="#fig_2">2h</ref>).</s><s>LshCas13a activity is governed by target accessibility in E. coli <ref type="bibr" target="#b7">8</ref> , and we therefore used our data from the four tiling screens to investigate whether LwaCas13a activity is higher for guides located in regions of accessibility.</s><s>The most effective guides were closer together than expected by chance (Extended Data Fig. <ref type="figure" target="#fig_4">4a</ref>) and that predicted target accessibility could explain some of the variation in targeting efficacy (4.4%-16% of the variation in knockdown) (Extended Data Fig. <ref type="figure" target="#fig_4">4b-d</ref> and Supplementary Note 2).</s></p><p><s>Because LwaCas13a can process also its own pre-crRNA, we tested multiplexed delivery of LwaCas13a guides as a CRISPR array expressed under a single promoter.</s><s>We designed five different guides against the endogenous PPIB, CXCR4, KRAS, TINCR, and PCAT transcripts and delivered the targeting system as a CRISPR array with 28-nt guides flanked by 36-nt DR, representing an unprocessed DR and a truncated spacer, under expression of the U6 promoter.</s><s>With this approach, we found levels of knockdown for each gene that were comparable to single or pooled guide controls (Fig. <ref type="figure" target="#fig_2">2i</ref>).</s><s>To evaluate specificity in this context, we tested multiplexed delivery of three guides against PPIB, CXCR4, and KRAS or three variants where each one of the three guides was replaced with a non-targeting guide.</s><s>We found that in each case where a guide was absent from the array, only the targeted transcripts were knocked down by LwaCas13a (Fig. <ref type="figure" target="#fig_2">2j</ref>).</s></p><p><s>To investigate the specificity of Cas13a in vivo, we introduced single mismatches into guides targeting either Gluc (Fig. <ref type="figure" target="#fig_3">3a</ref>) or endogenous genes (Fig. <ref type="figure" target="#fig_3">3b</ref>, Extended Data Fig. <ref type="figure">5a-b</ref>),as well as double mismatches (Fig. <ref type="figure" target="#fig_3">3c</ref> and Extended Fig. <ref type="figure">5c</ref>), and found that knockdown was sensitive to mismatches in the central seed region of the guide:target duplex, which we additionally confirmed by biochemical profiling (Data Fig <ref type="figure">5d</ref>-k and Supplementary Note 3).</s><s>To comprehensively search for off-target effects of LwaCas13a knockdown, we performed transcriptome-wide mRNA sequencing.</s><s>We targeted the Gluc transcript with LwaCas13a or a position matched-shRNA construct, and found significant knockdown of the target transcript (p &lt;.01) (Fig. <ref type="figure" target="#fig_3">3d,</ref><ref type="figure">e</ref>).</s><s>Similar results were found for the same comparison on two endogenous genes KRAS and PPIB (p &lt; .05)</s><s>(Extended Data Figure <ref type="figure">6a,</ref><ref type="figure">b</ref>).</s><s>We characterized the number of significant off-targets by differential expression analysis and found hundreds of off-targets in each of the shRNA conditions but zero off-targets in LwaCas13a conditions (Fig. <ref type="figure" target="#fig_3">3f</ref>), despite comparable levels of knockdown of the target transcripts (30.5%, 43.5%, and 64.7% for shRNA, 62.6%, 27.1%, and 29.2% for Cas13a, for Gluc, KRAS, and PPIB, respectively) (Fig. <ref type="figure" target="#fig_3">3g</ref>).</s><s>We performed additional analysis of the Gluc targeting RNA-seq comparisons and found that the shRNA libraries show higher variability between targeting and non-targeting conditions compared to Cas13a because of off-target effects (Extended Data Fig. <ref type="figure">6c</ref>-f, 7 and Supplementary Note 4).</s></p><p><s>The multiplexed leave-one-out and RNA-seq analyses suggested a lack of sequence-specific RNA degradation.</s><s>We wanted to further confirm a lack of sequence-specific off-target cleavage as a result of LwaCas13a targeting by re-analyzing the knockdown tiling screens (Fig. <ref type="figure" target="#fig_2">2b-e</ref>) and found that the gene control expression in the luciferase and endogenous knockdown screens had no significant correlation to expression of the gene targeted for knockdown (Gluc: R=-0.078, p &gt; 0.05; PPIB: R= -0.058, p &gt; 0.05; KRAS: R= -0.51, p &lt; 0.001) (Extended Data Fig. <ref type="figure">8a-h</ref>), in contrast to what would be expected if the collateral effect were present.</s></p><p><s>The collateral activity of LshCas13a has been directly observed biochemically in vitro and indirectly through growth suppression in bacteria <ref type="bibr" target="#b7">8</ref> , but the extent of this activity in mammalian cells is unclear.</s><s>We saw no sequence-specific off-target LwaCas13a activity in our RNA sequencing experiments, and LwaCas13a-mediated knockdown of targeted transcripts did not affect the growth of mammalian cells expressing similar levels of LwaCas13a (Fig. <ref type="figure" target="#fig_3">3h</ref>).</s><s>Additionally, there were no detectable gene expression changes, indicating that the presence of LwaCas13a targeting does not lead to an observable cell stress response at the transcriptomic level <ref type="bibr" target="#b13">14</ref> (Fig. <ref type="figure" target="#fig_3">3d</ref>,e and Extended Data Fig. <ref type="figure">6a,</ref><ref type="figure">b</ref>).</s><s>Because activation of non-specific RNA nucleases in mammalian cells results in detectable changes in RNA size distribution <ref type="bibr" target="#b14">15</ref> , we examined global RNA degradation in cells after LwaCas13a knockdown of Gluc transcripts and found no difference in the RNA integrity between targeting and non-targeting conditions from LwaCas13a knockdown experiments (p &gt; 0.05) (Extended Data Fig <ref type="figure">8i,</ref><ref type="figure">j</ref>) (Supplementary Note 4).</s></p><p><s>We mutated catalytic arginine residues in LwaCas13a to generate dCas13a and quantified RNA binding by dCas13a with RNA immunoprecipitation (RIP) (Fig. <ref type="figure" target="#fig_4">4a</ref>) using guides containing the 36-nt DR and 28-nt spacers.</s><s>We found that pulldown of dCas13a targeted to either luciferase transcripts or ACTB mRNA (Fig. <ref type="figure" target="#fig_4">4b</ref>) resulted in significant enrichment of the corresponding target over non-targeting controls (7.8-11.2×</s><s>enrichment for luciferase and 2.1-3.3×</s><s>enrichment for ACTB; p &lt; 0.05), validating dCas13a as a reprogrammable RNA binding protein.</s></p><p><s>To engineer dCas13a for in vivo imaging and reduce background noise due to unbound protein, we incorporated a negative-feedback system based upon zinc finger self-targeting and KRAB domain repression <ref type="bibr" target="#b15">16</ref> (Fig. <ref type="figure" target="#fig_4">4c</ref> and Supplementary Note 5).</s><s>In comparison to dCas13a, dCas13a-NF effectively re-localized when targeted to ACTB mRNA (Extended Data Fig. <ref type="figure">9a</ref>).</s><s>To further characterize translocation of dCas13a-NF, we targeted ACTB transcripts with two guides and found that both guides increased translocation compared to a non-targeting guide (3.1-3.7×</s><s>cellular/nuclear signal ratio; p &lt; 0.001) (Fig. <ref type="figure" target="#fig_4">4d,</ref><ref type="figure">e</ref> and Extended Data Fig. <ref type="figure">9b-d</ref>).</s><s>To further validate dCas13a-NF imaging, we analyzed the correlation of dCas13a-NF signal to ACTB mRNA fluorescent in situ hybridization (FISH) signal (Extended Data Fig. <ref type="figure" target="#fig_1">10a</ref>) and found that there was significant correlation and signal overlap for the targeting guides versus the non-targeting guide conditions (R = 0.27 and 0.30 for guide 1 and 2, respectively, and R = 0.00 for the non-targeting guide condition; p &lt; 0.0001) (Extended Data Fig. <ref type="figure" target="#fig_1">10b</ref>).</s><s>To observe a phenotype for mRNA tracking, we investigated the accumulation of mRNA into stress granules <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b17">18</ref> by combining dCas13a-NF imaging of transcripts with visualization of stress granules marker G3BP1 <ref type="bibr" target="#b20">21</ref> .</s><s>In fixed samples, we found significant correlations between the dCas13a-NF signal and the G3BP1 fluorescence for ACTB-targeting guides compared to non-targeting controls (R = 0.49 and 0.50 for guide 1 and guide 2, respectively, and 0.08 for the non-targeting guide; p &lt; 0.001) (Fig. <ref type="figure" target="#fig_4">4f-g</ref>) Given co-localization in fixed samples, we next performed stress granule tracking in live cells and found that dCas13a-NF targeted to ACTB localized to significantly more stress granules per cell over time than the corresponding non-targeting control (p &lt; 0.05) (Extended Data Fig. <ref type="figure" target="#fig_1">10c-d</ref> and Supplementary Note 6).</s></p><p><s>The class 2 type VI CRISPR-Cas effector Cas13a can be effectively reprogrammed with guide RNAs to knockdown or bind transcripts in mammalian cells.</s><s>Cas13a knockdown is comparable to RNAi knockdown efficiency, but with drastically reduced off-targets, and is a versatile platform with the ability for nuclear RNA knockdown, multiplexed gene knockdown, and further engineering of the protein for improved functionality.</s><s>Importantly, we do not observe any evidence for collateral activity of LwaCas13a in mammalian cells (Supplementary Note 4).</s><s>RNA knockdown with Cas13a can be applied to perturbing RNAs in multiple biological contexts, including genome-wide pooled knockdown screening, interrogation of lncRNA and nascent transcript function, allele-specific knockdown, and RNA viral therapeutics.</s><s>In addition, dCas13a and derivatives enable RNA pulldown to study RNA-protein interactions, imaging via reconstitution of split fluorophores, translational modulation, RNA base editing, epitranscriptomic perturbation, splicing modulation, or targeted induction of apoptosis based on RNA expression levels, which would be useful for studying specific cell populations or killing cancerous cells.</s><s>We have shown Cas13a to be a robust platform for both programmable knockdown and binding of RNAs in mammalian and plant cells, suggesting it may be generally extended to other eukaryotic organisms, paving the way for a range of transcriptome analysis tools.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cloning of orthologs for activity screen and recombinant expression</head><p><s>We synthesized human codon-optimized versions of fifteen Cas13a orthologs (Genscript, Jiangsu, China) (Supplementary Table <ref type="table">9</ref>) and cloned them into pACYC184 under expression by a pLac promoter.</s><s>Adjacent to the Cas13a expression cassette, we cloned the ortholog's corresponding direct repeats flanking either a β-lactamase targeting or non-targeting spacer.</s><s>Spacer array expression was driven by the J23119 promoter.</s></p><p><s>For purification of LwaCas13a, we cloned the mammalian codon-optimized LwaCas13a sequence into a baterial expression vector for protein purification (6× His/Twin Strep SUMO, a pET-based expression vector received as a gift from Ilya Finkelstein, University of Texas-Austin).</s></p><p><s>All plasmids used in this study are listed in Supplementary Table <ref type="table">2</ref>. Information on Cas13a orthologs used in this study can be found in Supplementary Table <ref type="table">9</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Bacterial in vivo testing for Cas13a activity and PFS identity</head><p><s>Briefly, Cas13a is programmed to target a 5′ stretch of sequence on the β-lactamase transcript flanked by randomized PFS nucleotides.</s><s>Cas13a cleavage activity results in death of bacteria under ampicillin selection and PFS depletion is subsequently analyzed by next generation sequencing.</s><s>In order to allow for quantitative comparisons between orthologs, we cloned each Cas13a ortholog under a pLac promoter along with a single-spacer CRISPR array nearby under expression of the pJ23119 small RNA promoter.</s></p><p><s>To test for activity of Cas13a orthologs, 90 ng of ortholog expression plasmids, with either targeting or non-targeting guide, was co-transformed with 25 ng of a previously described βlactamase target plasmid <ref type="bibr" target="#b7">8</ref> into NovaBlue Singles competent cells (Millipore).</s><s>Posttransformation, cells were diluted, plated on LB-agar supplemented with 100 μg/uL ampicillin and 25 μg/uL chloramphenicol, and incubated at 37°C overnight.</s><s>Transformants were counted next day.</s></p><p><s>For determination of LshCas13a and LwaCas13a PFS identity, 40 ng of ortholog expression plasmids with either targeting or non-targeting spacer was co-transformed with 25 ng of βlactamase target plasmid into 2 aliquots of NovaBlue Giga Singles (Millipore) per biological replicate.</s><s>Two biological replicates were performed.</s><s>Post-transformation, cells were recovered at 37°C in 500 uL of SOC (ThermoFisher Scientific) per biological replicate for 1 hour, plated on bio-assay plates (Corning) with LB-agar (Affymetrix) supplemented with 100 μg/uL ampicillin and 25 μg/uL chloramphenicol, and incubated at 37°C for 16 hours.</s><s>Colonies were then harvested by scraping, and plasmid DNA was purified with NuceloBond Xtra EF (Macherey-Nagel) for subsequent sequencing.</s></p><p><s>Harvested plasmid samples were prepared for next generation sequencing by PCR with barcoding primers and Illumina flow cell handles using NEBNext High Fidelity 2X Master Mix (New England Biosciences).</s><s>PCR products were pooled and gel extracted using a Zymoclean gel extraction kit (Zymo Research) and sequenced using a MiSeq next generation sequencing machine (Illumina).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Computational analysis of PFS</head><p><s>From next generation sequencing of the LshCas13a and LwaCas13a PFS screening libraries, we aligned the sequences flanking the randomized PFS region and extracted the PFS identities.</s><s>We collapsed PFS identities to 4 nucleotides to improve sequence coverage, counted the frequency of each unique PFS, and normalized to total read count for each library with a pseudocount of 1. Enrichment of each distribution as displayed in Fig. <ref type="figure" target="#fig_1">1e</ref> was calculated against the pACYC184 control (no protein/guide locus) as -log 2 (f condition / f pACYC184 ), where f condition is the frequency of PFS identities in the experimental condition and f pACYC184 is the frequency of PFS identities in the pACYC184 control.</s><s>For analysis of a conserved PFS motif, top depleted PFS identities were calculated using each condition's non-targeting control as follows: -log 2 (f i,targeting /f i,non-targeting ) where f i,targeting is the frequency of PFS identities in condition i with targeting spacer and f i,non-targeting is the frequency of PFS identities in condition i with non-targeting spacer.</s><s>PFS motifs were analyzed for a range of thresholds as shown in Extended Data Figure <ref type="figure" target="#fig_1">1d,</ref><ref type="figure">e</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Purification of LwaCas13a</head><p><s>Purification of LwaCas13a was performed as previously described <ref type="bibr" target="#b9">10</ref> .</s><s>Briefly, LwaCas13a bacterial expression vectors were transformed into Rosetta 2(DE3)pLysS singles Competent Cells (Millipore) and 4 L of Terrific Broth 4 growth media (TB) was seeded with a starter culture.</s><s>Cell protein expression was induced with IPTG and after overnight growth, cell pellet was harvested and stored at -80°C.</s><s>Following cell lysis, protein was bound using a StrepTactin Sepharose resin (GE) and protein was eluted by SUMO protease digestion (ThermoFisher).</s><s>Protein was further purified by cation exchange using a HiTrap SP HP cation exchange column (GE Healthcare Life Sciences) and subsequently by gel filtration using a Superdex 200 Increase 10/300 GL column (GE Healthcare Life Sciences), both steps via FPLC (AKTA PURE, GE Healthcare Life Sciences).</s><s>Final fractions containing LwaCas13a protein were pooled and concentrated into Storage Buffer (600 mM NaCl, 50 mM Tris-HCl pH 7.5, 5% Glycerol, 2 mM DTT) and aliquots were frozen at -80°C for longterm storage.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cloning of mammalian expression constructs</head><p><s>The human codon optimized Cas13a gene was synthesized (Genscript) and cloned into a mammalian expression vector with either a nuclear export sequence (NES) or nuclear localization sequence (NLS) under expression by the EF1-α promoter.</s><s>Because of the stability conferred by monomeric-super-folded GFP (msfGFP), we fused msfGFP to the Cterminus of LwaCas13a.</s><s>The full-length direct-repeat of LwaCas13a was used for cloning the guide backbone plasmid with expression under a U6 promoter.</s><s>The catalytically-inactive LwaCas13a-msfGFP construct (dead Cas13a or dCas13a) was generated by introducing R474A and R1046A mutations in the two HEPN domains.</s><s>A drug-selectable version of LwaCas13a-msfGFP was generated by cloning the protein into a backbone with Blasticidin selection marker linked to the C-terminus via a 2A peptide sequence.</s><s>The negative feedback version of the dCas13a-msfGFP construct was generated by cloning zinc-finger binding site upstream of the promoter of dCas13a-msfGFP and fusing a Zinc finger and KRAB domain to the C-terminus.</s></p><p><s>The reporter luciferase construct was generated by cloning Cypridinia luciferase (Cluc) under expression by CMV and Gaussia luciferase (Gluc) under expression by EF1-α both on a single vector.</s><s>Expression of both luciferases on a single vector allows one luciferase to serve as a dosing control for normalization of knockdown of the other luciferase, controlling for variation due to transfection conditions.</s></p><p><s>For the endogenous knockdown experiments in Fig. <ref type="figure" target="#fig_1">1g</ref>, guides and shRNAs were designed using the RNAxs siRNA design algorithm <ref type="bibr" target="#b21">22</ref> .</s><s>The prediction tool was used to design shRNAs and guides were designed in the same location to allow for comparison between shRNA and Cas13a knockdown.</s></p><p><s>The rice actin promoter (pOsActin) was PCR amplified from pANIC6A <ref type="bibr" target="#b22">23</ref> and each Cas13a was PCR amplified from existing Cas13a constructs.</s><s>These fragments were ligated into existing plant expression plasmids such that each Cas13a was driven by the rice actin promoter and transcription was terminated by the HSP terminator.</s><s>Cas13a gRNAs were expressed from the rice U6 promoter (pOsU6).</s><s>The gRNA target sequence was identical for each gene whereas the scaffold sequence was Cas13a-specific.</s><s>In these experiments, we targeted the rice 5-enolpyruvylshikimate-3-phosphate synthase (OsEPSPS) gene, which is the target of glyphosate-based herbicides, and the rice hydroxycinnamoyl-CoA shikimate/ quinate hydroxycinnamoyl transferase (OsHCT) gene, which is necessary for proper plant growth.</s></p><p><s>All guides and shRNAs used in this study are listed in Supplementary Tables <ref type="table">1</ref> and<ref type="table">3</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Protoplast Preparation</head><p><s>Green rice protoplasts (Oryza sativa L. ssp.</s><s>japonica var.</s><s>Nipponbare) were prepared as previously described <ref type="bibr" target="#b23">24</ref> with slight modifications.</s><s>Seedlings were grown for 14 days and protoplasts resuspended in MMG buffer containing 0.1 M CaCl 2 .</s><s>This modified MMG buffer was used to prepare fresh 40% PEG buffer as well as in place of WI buffer.</s><s>Finally, protoplasts were kept in total darkness for 48 hours post-transformation.</s><s>All other conditions were as previously described.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Nucleic acid target and crRNA preparation for in vitro reactions and collateral activity</head><p><s>For generation of nucleic acid targets, oligonucleotides were PCR amplified with KAPA Hifi Hot Start (Kapa Biosystems).</s><s>dsDNA amplicons were gel extracted and purified using a MinElute gel extraction kit (Qiagen).</s><s>The resulting purified dsDNA was transcribed via overnight incubation at 30°C with the HiScribe T7 Quick High Yield RNA Synthesis kit (New England Biolabs).</s><s>Transcribed RNA was purified using the MEGAclear Transcription Clean-up kit (Thermo Fisher).</s><s>All RNA targets used in this study are listed in Supplementary Table <ref type="table">4</ref> and<ref type="table">6.</ref></s><s>To generate crRNAs, oligonucleotides were ordered as DNA (Integrated DNA Technologies) with an additional 5′ T7 promoter sequence.</s><s>crRNA template DNA was annealed with a T7 primer (final concentrations 10 uM) and transcribed via overnight incubation at 37°C with the HiScribe T7 Quick High Yield RNA Synthesis kit (New England Biolabs).</s><s>The resulting transcribed crRNAs were purified with RNAXP clean beads (Beckman Coulter), using a 2× ratio of beads to reaction volume, supplemented with additional 1.8× ratio of isopropanol (Sigma).</s><s>crRNA constructs used for in vitro experiments study are listed in Supplementary Table <ref type="table">5</ref> and crRNA constructs used for collateral detection are listed in Supplementary Table <ref type="table">6</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>LwaCas13a cleavage and collateral activity detection</head><p><s>For biochemical characterization of LwaCas13a, assays were performed as previously described <ref type="bibr" target="#b7">8</ref> .</s><s>Briefly, nuclease assays were performed with 160 nM of end-labeled ssRNA target, 200 nM purified LwaCas13a, and 100 nM crRNA, unless otherwise indicated.</s><s>All assays were performed in nuclease assay buffer (40 mM Tris-HCl, 60 mM NaCl, 6 mM MgCl2, pH 7.3).</s><s>For array processing, 100 ng of in vitro transcribed array was used per nucelease assay.</s><s>Reactions were allowed to proceed for 1 hour at 37°C (unless otherwise indicated) and were then quenched with proteinase buffer (proteinase K, 60 mM EDTA, and 4 M Urea) for 15 minutes at 37°C.</s><s>The reactions were then denatured with 4.5 M urea denaturing buffer at 95°C for 5 minutes.</s><s>Samples were analyzed by denaturing gel electrophoresis on 10% PAGE TBE-Urea (Invitrogen) run at 45°C.</s><s>Gels were imaged using an Odyssey scanner (LI-COR Biosciences).</s></p><p><s>Collateral activity detection assays were performed as previously described <ref type="bibr" target="#b24">25</ref> .</s><s>Briefly, reactions consisted of 45 nM purified LwaCas13a, 22.5 nM crRNA, 125 nM quenched fluorescent RNA reporter (RNAse Alert v2, Thermo Scientific), 2 μL murine RNase inhibitor (New England Biolabs), 100 ng of background total human RNA (purified from HEK293FT culture), and varying amounts of input nucleic acid target, unless otherwise indicated, in nuclease assay buffer (40 mM Tris-HCl, 60 mM NaCl, 6 mM MgCl2, pH 7.3).</s><s>Reactions were allowed to proceed for 1-3 hr at 37°C (unless otherwise indicated) on a fluorescent plate reader (BioTek) with fluorescent kinetics measured every 5 min.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RNA extraction and qRT-PCR</head><p><s>Total RNA was isolated after 48 hours of incubation using Trizol and the accompanying protocol.</s><s>One nanogram of total RNA was used in the SuperScript III Plantinum SYBR Green One-Step qRT-PCR Kit (Invitrogen) using the accompanying protocol.</s><s>All samples were run in technical triplicate of three biological replicates in a 384-well format on a LightCycler 480 Instrument (Roche).</s><s>All PCR primers were verified as being specific based on melting curve analysis and are as follows: OsEPSPS (Os06g04280), 5′ -TTG CCA TGA CCC TTG CCG TTG TTG -3′ and 5′ -TGA TGA TGC AGT AGT CAG GAC CTT -3′; OsHCT (Os11g07960), 5′ -CAA GTT TGT GTA CCC GAG GAT TTG -3′ and 5′ -AGC TAG TCC CAA TAA ATA TGC GCT -3′; OsEF1a (Os03g08020), 5′ -CTG TAG TCG TTG GCT GTG GT -3′ and 5′ -CAG CGT TCC CCA AGA AGA GT -3′.</s><s>Primers for OsEF1a were previously described <ref type="bibr" target="#b25">26</ref> .</s><s>All data are presented as the mean plus/minus the standard error with each sample relative to the expression of EF1a.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cloning of tiling guide screens</head><p><s>For tiling guide screens, spacers were designed to target mRNA transcripts at even intervals to fully cover the entire length of the transcript.</s><s>Spacers were ordered from IDT, annealed, and golden-gate cloned into LwaCas13a guide expression constructs with either a tRNA val promoter, for Gluc and Cluc screens, or U6 promoter, for all endogenous screens.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Mammalian cell culture and transfection for knockdown with LwaCas13a</head><p><s>All mammalian cell experiments were performed in the HEK293FT line (ATCC) unless otherwise noted.</s><s>HEK293FT cells were cultured in Dulbecco's Modified Eagle Medium with high glucose, sodium pyruvate, and GlutaMAX (Thermo Fisher Scientific) supplemented with 10% fetal bovine serum (VWR Seradigm) and 1X Penicillin-Streptomycin (Thermo Fisher Scientific).</s><s>Cells were passaged to maintain confluency below 70%.</s><s>For experiments involving A375 (ATCC), cells were cultured in RPMI Medium 1640 (Thermo Fisher Scientific) supplemented with 9% fetal bovine serum (VWR Seradigm) and 1X Penicillin-Streptomycin (Thermo Fisher Scientific).</s></p><p><s>To test knockdown of endogenous genes, Lipofectamine 2000 (Thermo Fisher Scientific) transfections were performed with 150 ng of LwaCas13a plasmid and 250 ng of guide plasmid per well, unless otherwise noted.</s><s>Experiments testing knockdown of reporter plasmids were supplemented with 12.5 ng reporter construct per well.</s><s>16 hours prior to transfection, cells were plated in 96-well plates at approximately 20,000 cells/well and allowed to grow to 90% confluency overnight.</s><s>For each well, plasmids were combined with Opti-MEM® I Reduced Serum Medium (Thermo Fisher) to a total of 25 uL, and separately 0.5 uL of Lipofectamine 2000 was combined with 24.5 uL of Opti-MEM.</s><s>Plasmid and lipofectamine solutions were then combined, incubated for 5 min, and slowly pipetted onto cells to prevent disruption.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Transformation of green rice protoplasts</head><p><s>For the green rice experiments, plasmids expressing each LwaCas13a and the corresponding guide RNA were mixed in equimolar ratios such that a total of 30mg of DNA was used to transform a total of 200,000 protoplasts per transformation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Measurement of luciferase activity</head><p><s>Media containing secreted luciferase was harvested at 48 hours post transfection, unless otherwise noted.</s><s>Media was diluted 1:5 in PBS and then luciferase activity was measured using the BioLux Cypridinia and Biolux Gaussia luciferase assay kits (New England Biolabs) on a Biotek Synergy 4 plate reader with an injection protocol.</s><s>All replicates were performed as biological replicates.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Harvest of total RNA and quantitative PCR</head><p><s>For gene expression experiments, cell harvesting and reverse transcription for cDNA generation was performed using a previously described modification <ref type="bibr" target="#b26">27</ref> of the commercial Cells-to-Ct kit (Thermo Fisher Scientific) 48 hours post-transfection.</s><s>Transcript expression was then quantified with qPCR using Fast Advanced Master Mix (Thermo Fisher Scientific) and TaqMan qPCR probes (Thermo Fisher Scientific, Supplementary Table <ref type="table">7</ref> and<ref type="table">8</ref>) with GAPDH control probes (Thermo Fisher Scientific).</s><s>All qPCR reactions were performed in 5uL reactions with 4 technical replicates in 384-well format, and read out using a LightCycler 480 Instrument II (Roche).</s><s>For multiplexed targeting reactions, readout of different targets was performed in separate wells.</s></p><p><s>Expression levels were calculated by subtracting housekeeping control (GAPDH) Ct values from target Ct values to normalize for total input, resulting in ΔCt levels.</s><s>Relative transcript abundance was computed as 2 ˄ (-ΔCt).</s><s>All replicates were performed as biological replicates For analysis of RNA quality post-knockdown with LwaCas13a, total RNA was harvested by lysing cells using TRI Reagent ® and purifying the RNA using the Direct-zol RNA MiniPrep Plus kit (Zymo).</s><s>4 ng of total RNA was analyzed using a RNA 6000 Pico Bioanalyzer kit (Agilent).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Computational analysis of target accessibility</head><p><s>To first analyze target accessibility, top guides from the tiling screen were analyzed to determine whether they grouped closer together than expected under the assumption that if there were regions of accessibility, multiple guides in that region would be expected to be highly active.</s><s>Top guides were defined as the top 20% performing guides for the Gluc tiling screen and top 30% performing guides for the Cluc, KRAS, and PPIB tiling screens.</s><s>A null probability distribution was generated for pair-wise distances between guides by randomly simulated 10,000 guide positions and then compared to experimentally determined top guide pair-wise distances.</s></p><p><s>Accessibility was predicted using the RNApl fold algorithm in the Vienna RNA software suite <ref type="bibr" target="#b27">28</ref> .</s><s>The default window size of 70 nt was used and probability of a target region being unpaired was calculated as the average of the 28 single-nucleotide unpaired probabilities across the target region.</s><s>These accessibility curves were smoothened and compared to smoothened knockdown curves across each of the four transcripts and correlations between the two factors were computed using Pearson's correlation coefficient.</s><s>The probability space of these two factors was also visualized by performing 2D kernel density estimation across the two variables.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RNA sequencing and analysis</head><p><s>For specificity analysis of LwaCas13a knockdown,RNA sequencing was performed on mRNA from knockdown experiments involving both LwaCas13a and shRNA constructs.</s><s>Total RNA was prepared from transfection experiments after 48 hours using the Qiagen RNeasy Plus Mini mit.</s><s>mRNA was then extracted using the NEBNext Poly(A) mRNA Magnetic Isolation Module and RNA-seq libraries were prepared using the NEBNext Ultra Directional RNA Library Prep Kit for Illumina.</s><s>RNA-sequencing libraries were sequenced on an Illumina NextSeq instrument with at least 10M reads per library.</s></p><p><s>An index was generated using the RefSeq GRCh38 assembly and reads were aligned and quantified using Bowtie and RSEM v1.2.31 using default parameters <ref type="bibr" target="#b28">29</ref> .</s><s>Transcript per million (TPM) values were used for expression counts and were transformed to log-space by taking the log 2 (TPM+1).</s></p><p><s>To find differentially expressed genes, Student's t-test was performed on the three targeting replicates versus the three non-targeting replicates.</s><s>The statistical analysis was only performed on genes that had a log 2 (TPM+1) value greater than 2.5 in at least two of the 6 replicates.</s><s>Only genes that had a differential expression greater than 2 or less than 0.75 and a false discovery rate &lt; 0.10 were reported to be significantly differentially expressed.</s></p><p><s>Cross-correlations between replicates and averages of replicates were performed using Kendall's tau coefficient.</s><s>The variation of shRNA vs Cas13a libraries was analyzed by considering the distribution of standard deviations for gene expression across the 6 replicates (3 targeting and 3 non-targeting replicates) and plotted as violin plots.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cell viability assay</head><p><s>Mammalian cells were transfected with luciferase reporter target, guide plasmid, and either LwaCas13a or drug-selectable LwaCas13a.</s><s>24 hours post-transfection, cells were split 1:5 into fresh media and drug-selectable LwaCas13a samples were supplemented with 10 ug/mL Blasticidin S (Thermo Fisher Scientific).</s><s>After 48 hours of additional growth, cells were assayed for luciferase knockdown, maintenance of LwaCas13a expression via GFP fluorescence measurement on a multimode plate reader (Biotek Neo2), and cell growth by CellTiter-Glo® Luminescent Cell Viability Assay (Promega).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Quantifying dCas13a binding with RIP</head><p><s>For RNA immunoprecipitation experiments, HEK293FT cells were plated in 6-well plates and transfected with 1.3 ug of dCas13a expression plasmid and 1.7 ug of guide plasmid, with an additional 150 ng of reporter plasmid for conditions involving reporter targeting.</s><s>48 hours post transfection, cells were washed twice with ice-cold PBS (Sigma) and fixed with 0.2% paraformaldehyde (Electron Microscopy Sciences) in PBS for 15 min at room temperature.</s><s>After fixation, the paraformaldehyde was removed, 125 mM glycine in PBS was added to quench crosslinking, and the cells were incubated for 10 minutes.</s><s>Cells were washed twice again with ice-cold PBS, harvested by scraping, and the cell suspension was centrifuged at 800 g for 4 min to pellet the cells.</s><s>The supernatant was removed and the pellet was washed with PBS prior to lysis.</s><s>Cells were lysed with 200 μL of 1X RIPA Buffer (Cell Signaling) supplemented with cOmplete™ ULTRA Tablets, EDTA-free (Sigma) and Ribonuclease inhibitor (Sigma R1158).</s><s>Cells were allowed to lyse on ice for 10 min and then sonicated for 2 min with a 30 sec on/30 sec off cycle at low intensity on a Bioruptor sonicator (Diagenode).</s><s>Insoluble material pelleted by centrifugation at 16,000 g for 10 min at 4°C, and the supernatant containing cleared lysate was used for pulldown with magnetic beads.</s></p><p><s>To conjugate antibodies to magnetic beads, 100 μL/sample of Dynabeads® Protein A for Immunoprecipitation (Thermo Fisher Scientific) were pelleted by application of a magnet, and the supernatant was removed.</s><s>Beads were resuspended in 200 μL of wash buffer (PBS supplemented with 0.02% Tween-20 (Sigma)) and 5 μg of rabbit anti-Mouse IgG (Sigma M7023) was added.</s><s>The sample was incubated for 10 min at room temperature on a rotator to allow antibody to conjugate to the beads.</s><s>After incubation, beads were pelleted via magnet, supernatant was removed, and beads were washed twice with wash buffer.</s><s>The pellet was resuspended in 100 μL wash buffer and split into two 50 μL volumes for conjugation of anti-HA antibody (Thermo Fisher Scientific 26183) or IgG antibody control (Sigma I5381).</s><s>For each antibody, 2.5 μg of antibody was added with 200 μL wash buffer and incubated for 10 min at room temperature on a rotator.</s><s>Post-incubation, beads were pelleted via magnet and washed twice with wash buffer, and resuspended in 200 μL 1X RIPA with Ribonuclease inhibitor (Sigma R1158) and protease inhibitor cocktail (Sigma P8340).</s><s>100 μL of sample lysate was added to beads and rotated overnight at 4°C.</s><s>After incubation with sample lysate, beads were pelleted, washed three times with 1X RIPA, 0.02% Tween-20, and then washed with DNase buffer (350 mMTris-HCl [pH 6.5]; 50 mM MgCl2; 5 mM DTT).</s><s>Beads were resuspended in DNase buffer and TURBO DNase (Life Technologies) was added to final concentration of 0.08 units/μl.</s><s>DNase was incubated 30 min at 37C on a rotator.</s><s>Proteins were then digested by addition of Proteinase K (New England Biosciences) to a final concentration of 0.1 units/μl and incubated at 37°C with rotation for an additional 30 min.</s><s>For denaturation and purification, urea (Sigma) was added to a final concentration of 2.5 M, samples were incubated for 30 min, and RNA was purified using a Direct-Zol RNA miniprep (Zymo Research).</s><s>Purified RNA was reverse transcribed to cDNA using the qScript Flex cDNA (Quantabio) and pulldown was quantified with qPCR using Fast Advanced Master Mix and TaqMan qPCR probes (Supplementary Table <ref type="table">7</ref> and<ref type="table">8</ref>).</s><s>All qPCR reactions were performed in 5 μL reactions with 4 technical replicates in 384-well format, and read out using a LightCycler 480 Instrument II.</s><s>Enrichment was quantified for samples as compared to their matched IgG antibody controls.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Translocation measurement of LwaCas13a and LwaCas13a-NF</head><p><s>HEK293FT cells were plated in 24-well tissue culture plates on poly-D-lysine coverslips (Corning) and transfected with 150ng dCas13a-NF vector and 300 ng guides for imaging ACTB.</s><s>For translocation experiments, cells were fixed with 4% PFA and permeabilized with 0.2% Triton X-100 after 48 hours and mounted using anti-fade mounting medium with DAPI (Vectashield).</s><s>Confocal microscopy was performed using a Nikon Eclipse Ti1 with Andor Yokagawa Spinning disk Revolution WD system.</s></p><p><s>Nuclear export of dCas13a-NF-msfGFP with guides targeting ACTB mRNA was analyzed by measuring the average cytoplasmic and nuclear msfGFP fluorescence and comparing the ratio across many cells between targeting and non-targeting conditions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fluorescent in situ hybridization (FISH) of ACTB transcript</head><p><s>HEK293FT cells were plated in 24-well tissue culture plates on poly-D-lysine coverslips (Corning) and transfected with 75 ng dCas13a-NF vector and 250 ng guides for imaging ACTB.</s><s>After 48 hours, cells were fixed with 4% PFA for 45 minutes.</s><s>The QuantiGene view RNA ISH Cell assay kit (Affymetrix) was used for performing the FISH on the cell samples and the protocol was followed as described by the manufacturer.</s><s>After finishing the FISH procedure, coverslips were mounted using anti-fade mounting medium (Vectashield).</s><s>Confocal microscopy was performed using a Nikon Eclipse Ti1 with Andor Yokagawa Spinning disk Revolution WD system.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Tracking of LwaCas13a to stress granules</head><p><s>HEK293FT cells were plated in 24-well tissue culture plates on poly-D-lysine coverslips (Corning) and transfected with 75 ng dCas13a-NF vector and 250 ng guides for imaging ACTB.</s><s>For stress granule experiments, 200 μM sodium arsenite was applied for 1 hour prior to fixing and permeabilizing the cells.</s><s>For immunofluorescence of G3BP1, cells were blocked with 20% goat serum, and incubated over night at room temperature with anti-G3BP1 primary antibody (Abnova H00010146-B01P).</s><s>Cells were then incubated with secondary antibody labeled with Alexa Fluor 594 and mounted using anti-fade mounting medium with DAPI (Vectashield).</s><s>Confocal microscopy was performed using a Nikon Eclipse Ti1 with Andor Yokagawa Spinning disk Revolution WD system.</s></p><p><s>Stress granule co-localization with dCas13a-NF-msfGFP was calculated using the average msfGFP and G3BP1 signal per cell using Pearson's correlation coefficient.</s><s>The colocalization analyses were performed in the image analysis software FIJI <ref type="bibr" target="#b29">30</ref> using the Coloc 2 plugin.</s></p><p><s>For live imaging experiments, HEK293FT cells were plated in 96-well tissue culture plates and transfected with 150 ng dCas13a-NF vector, 300 ng guides for imaging ACTB, and 5 ng of G3BP1-RFP reporter.</s><s>After 48 hours, the cells were subjected to 0 μM or 400 μM sodium arsenite and imaged every 15 minutes every 2 hours on an Opera Phenix High Content Screening System (PerkinElmer) using the spinning disk confocal setting with 20× water objective.</s><s>Cells were maintained at 37°C in a humidified chamber with 50% CO 2 .</s><s>Live cell dCas13a-NF-msfGFP colocalization with G3BP1-RFP in stress granules was measured using the Opera Phenix Harmony software (PerkinElmer).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Extended Data</head><note type="other">Extended</note></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Data Fig. 1 .</head><label>1</label><figDesc><div><p><s>Evaluation of LwaCas13a PFS preferences and comparisons to LshCas13a a, Sequence comparison tree of the fifteen Cas13a orthologs evaluated in this study.</s><s>b, Ratios of in vivo activity from Fig. 1B.</s><s>c, Distributions of PFS enrichment for LshCas13a and LwaCas13a in targeting and non-targeting samples.</s><s>d, Number of LshCas13a and LwaCas13a PFS sequences above depletion threshold for varying depletion thresholds.</s><s>e, Distributions of PFS enrichment for LshCas13a and LwaCas13a in targeting samples, normalized to non-targeting samples.</s><s>f, Sequence logos and counts for remaining PFS sequences after LshCas13a cleavage at varying enrichment cutoff thresholds.</s><s>g, Sequence logos and counts for remaining PFS sequences after LwaCas13a cleavage at varying enrichment cutoff thresholds.</s><s>Extended Data Fig. 2. Biochemical characterization of LwaCas13a RNA cleavage activity a, LwaCas13a has more active RNAse activity than LshCas13a.</s><s>b, Gel electrophoresis of ssRNA1 after incubation with LwaCas13a and with and without crRNA 1 for varying amounts of times.</s><s>c, Gel electrophoresis of ssRNA1 after incubation with varying amounts of LwaCas13a-crRNA complex.</s><s>d, Sequence and structure of ssRNA 4 and ssRNA 5. crRNA spacer sequence is highlighted in blue.</s><s>e, Gel electrophoresis of ssRNA 4 and ssRNA 5 after incubation with LwaCas13a and crRNA 1. f, Sequence and structure of ssRNA 4 with sites of poly-x modifications highlighted in red.</s><s>crRNA spacer sequence is highlighted in blue.</s><s>g, Gel electrophoresis of ssRNA 4 with each of 4 possible poly-x modifications incubated with LwaCas13a and crRNA 1. h, LwaCas13a can process pre-crRNA from the L. wadei CRISPR-Cas locus.</s><s>i, Cleavage efficiency of ssRNA 1 for crRNA spacer truncations after incubation with LwaCas13a.</s><s>Extended Data Fig. 3. Engineering and optimization of LwaCas13a for mammalian knockdown a, Knockdown of Gluc transcript by LwaCas13a and Gluc guide 1 spacers of varying length.</s><s>b, Knockdown of Gluc transcript with Gluc guide 1 and varying amounts of transfected LwaCas13a plasmid.</s><s>c, Knockdown of Gluc transcript by LwaCas13a and varying amounts of transfected Gluc guide 1 and 2 plasmid.</s><s>d, Knockdown of Gluc transcript using guides expressed from either U6 or tRNA Val promoters.</s><s>e, Knockdown of KRAS transcript using guides expressed from either U6 or tRNA Val promoters.</s><s>f, Knockdown of KRAS and CXC4 transcripts by LwaCas13a using guides transfected in A375 cells with shRNA comparisons.</s><s>g, Knockdown of Gluc transcript and endogenous transcripts PPIB, KRAS,and CXCR4 with active and catalytically dead Cas13a.</s><s>h, Validation of the top three guides from the arrayed knockdown Gluc and Cluc screens with shRNA comparisons.</s><s>i, Arrayed knockdown screen of 93 guides evenly tiled across the XIST transcript.</s><s>All values are mean ± SEM with n = 3. **p&lt; 0.01; *p&lt; 0.05.</s><s>ns = not significant.</s><s>A two-tailed student's T-test was used for comparisons.</s><s>Extended Data Fig. 4. LwaCas13a targeting efficiency is influenced by accessibility along the transcript a, First row: Top knockdown guides are plotted by position along target transcript.</s><s>The top 20% of guides are chosen for Gluc and top 30% of guides for Cluc, KRAS, and PPIB.</s><s>Second row: Histograms for the pairwise distance between adjacent top guides for each transcript (blue) compared to a random null-distribution (red).</s><s>Inset shows the cumulative frequency curves for these histograms.</s><s>A shift of the blue curve (actual measured distances) to the left of the red curve (null distribution of distances) indicates that guides are closer together than expected by chance.</s><s>b, Gluc, Cluc, PPIB, and KRAS knockdown partially correlates with target accessibility as measured by predicted folding of the transcript.</s><s>c,Kernel density estimation plots depicting the correlation between target accessibility (probability of a region being base-paired) and target expression after knockdown by LwaCas13a.</s><s>d, First row: Correlations between target expression and target accessibility (probability of a region being base-paired) measured at different window sizes (W) and for different k-mer lengths.</s><s>Second row: P-values for the correlations between target expression and target accessibility (probability of a region being base-paired) measured at different window sizes (W) and for different k-mer lengths.</s><s>The color scale is designed such that pvalues &gt; 0.05 are shades of red and p-values &lt; 0.05 are shades of blue.</s><s>Extended Data Fig. 5. Detailed evaluation of LwaCas13a sensitivity to mismatches in the guide:target duplex at varying spacer lengths a, Knockdown of KRAS evaluated with guides containing single mismatches at varying positions across the spacer sequence.</s><s>b, Knockdown of PPIB evaluated with guides containing single mismatches at varying positions across the spacer sequence.</s><s>c, Knockdown of Gluc evaluated with guides containing non-consecutive double mismatches at varying positions across the spacer sequence.</s><s>The wild-type sequence is shown at the top with mismatch identities shown below.</s><s>d, Collateral cleavage activity on ssRNA 1 and 2 for varying spacer lengths.</s><s>(n=4 technical replicates; bars represent mean ± s.e.m.) e, Specificity ratios of guide tested in (d).</s><s>Specificity ratios are calculated as the ratio of the on-target RNA (ssRNA 1) collateral cleavage to the off-target RNA (ssRNA 2) collateral cleavage.</s><s>(n=4 technical replicates; bars represent mean ± s.e.m.) f, Collateral cleavage activity on ssRNA 1 and 2 for 28 nt spacer crRNA with synthetic mismatches tiled along the spacer.</s><s>(n=4 technical replicates; bars represent mean ± s.e.m.) g, Specificity ratios, as defined in (e), of crRNA tested in (f).</s><s>(n=4 technical replicates; bars represent mean ± s.e.m.) h, Collateral cleavage activity on ssRNA 1 and 2 for 23 nt spacer crRNA with synthetic mismatches tiled along the spacer.</s><s>(n=4 technical replicates; bars represent mean ± s.e.m.) i, Specificity ratios, as defined in (e), of crRNA tested in (h).</s><s>(n=4 technical replicates; bars represent mean ± s.e.m.) j, Collateral cleavage activity on ssRNA 1 and 2 for 20 nt spacer crRNA with synthetic mismatches tiled along the spacer.</s><s>(n=4 technical replicates; bars represent mean ± s.e.m.) k, Specificity ratios, as defined in (e), of crRNA tested in (j).</s><s>(n=4 technical replicates; bars represent mean ± s.e.m.).</s><s>Extended Data Fig. 6.</s><s>LwaCas13a is more specific than shRNA knockdown on endogenous targets a, Left: Expression levels in log2(transcripts per million (TPM)) values of all genes detected in RNA-seq libraries of non-targeting shRNA-transfected control (x-axis) compared to KRAS-targeting shRNA (y-axis).</s><s>Shown is the mean of three biological replicates.</s><s>The KRAS transcript data point is colored in red.</s><s>Right: Expression levels in log2(transcripts per million (TPM)) values of all genes detected in RNA-seq libraries of non-targeting LwaCas13a-guide-transfected control (x-axis) compared to KRAS-targeting LwaCas13aguide (y-axis).</s><s>Shown is the mean of three biological replicates.</s><s>The KRAS transcript data point is colored in red.</s><s>b, Left: Expression levels in log2(transcripts per million (TPM)) values of all genes detected in RNA-seq libraries of non-targeting shRNA-transfected control (x-axis) compared to PPIB-targeting shRNA (y-axis).</s><s>Shown is the mean of three biological replicates.</s><s>The PPIB transcript data point is colored in red.</s><s>Right: Expression levels in log2(transcripts per million (TPM)) values of all genes detected in RNA-seq libraries of non-targeting LwaCas13a-guide-transfected control (x-axis) compared to PPIBtargeting LwaCas13a-guide (y-axis).</s><s>Shown is the mean of three biological replicates.</s><s>The PPIB transcript data point is colored in red.</s><s>c, Comparisons of individual replicates of nontargeting shRNA conditions (first row) and Gluc-targeting shRNA conditions (second row).</s><s>d, Comparisons of individual replicates of non-targeting guide conditions (first row) and Gluc-targeting guide conditions (second row).</s><s>e, Pairwise comparisons of individual replicates of non-targeting shRNA conditions against the Gluc-targeting shRNA conditions.</s><s>f, Pairwise comparisons of individual replicates of non-targeting guide conditions against the Gluc-targeting guide conditions.</s><s>Extended Data Fig. 7. Detailed analysis of LwaCas13a and RNAi knockdown variability (standard deviation) across all samples a, Heatmap of correlations (Kendall's tau) for log2(transcripts per million (TPM+1)) values of all genes detected in RNA-seq libraries between targeting and non-targeting replicates for shRNA or guide targeting either luciferase reporters or endogenous genes.</s><s>b, Heatmap of correlations (Kendall's tau) for log2(transcripts per million (TPM+1)) values of all genes detected in RNA-seq libraries between all replicates and perturbations.</s><s>c,Distributions of standard deviations for log2(transcripts per million (TPM+1)) values of all genes detected in RNA-seq libraries among targeting and non-targeting replicates for each gene targeted for either shRNA or guide.</s><s>Extended Data Fig. 8. LwaCas13a knockdown is specific to the targeted transcript with no activity on a measured off-target transcript a, Heatmap of absolute Gluc signal for first 96 spacers tiling Gluc.</s><s>b, Heatmap of absolute Cluc signal for first 96 spacers tiling Gluc.</s><s>c, Relationship between absolute Gluc signal and normalized luciferase for Gluc tiling guides.</s><s>d, Relationship between absolute Cluc signal and normalized luciferase for Gluc tiling guides.</s><s>e, Relationship between PPIB 2 -Ct levels and PPIB knockdown for PPIB tiling guides.</s><s>f, Relationship between GAPDH 2 -Ct levels and PPIB knockdown for PPIB tiling guides.</s><s>g, Relationship between KRAS 2 -Ct levels and KRAS knockdown for KRAS guides.</s><s>h, Relationship between GAPDH 2 -Ct levels and KRAS knockdown for KRAS guides.</s><s>i, Bioanalyzer traces of total RNA isolated from cells transfected with Gluc-targeting guides 1 and 2 or non-targeting guide from the experiment with active Cas13a in Extended Data Fig. 3g.</s><s>The RNA-integrity number (RIN) is shown and 18S rRNA and 28S rRNA peaks are labeled above.</s><s>A student's t-test shows no significant difference for the RIN between either of the targeting conditions and the nontargeting condition.</s><s>The curves are shown as a mean of three replicates and the shaded area in red around the curves show the s.e.m. j, The Bioanalyzer trace for the RNA ladder with peak sizes labeled above.</s><s>Extended Data Fig. 9. dCas13a-NF can be used for ACTB imaging a, Comparison between localization of dCas13-GFP and dCas13a-GFP-KRAB constructs for imaging ACTB.</s><s>Scale bars, 10μm b, Additional fields of view of the dCas13a-NLS-msfGFP negative-feedback construct delivered with a non-targeting guide.</s><s>Scale bars, 10μm.</s><s>c, Additional fields of view of the dCas13a-NLS-msfGFP negative-feedback construct delivered with ACTB guide 3. Scale bars, 10μm.</s><s>d, Additional fields of view of the dCas13a-NLS-msfGFP negative-feedback construct delivered with ACTB guide 4. Scale bars, 10μm.</s><s>Extended Data Fig. 10.</s><s>dCas13a-NF can image stress granule formation in living cells a, Representative images from RNA FISH of the ACTB transcript in dCas13a-NFexpressing cells with corresponding ACTB-targeting and non-targeting guides.</s><s>Cell outline is shown with a dashed line.</s><s>Scale bars, 10μm b, Overall signal overlap between ACTB RNA FISH signal and dCas13a-NF quantified by the Mander's overlap coefficient (left) and Pearson's correlation (right).</s><s>Correlations and signal overlap are calculated pixel-by-pixel on a per cell basis.</s><s>All values are mean ± SEM with n = 3. ****p&lt; 0.0001; ***p&lt; 0.001; **p &lt; 0.01.</s><s>A two-tailed student's T-test was used for comparisons.</s><s>c, Representative images from live-cell analysis of stress granule formation in response to 400 uM sodium arsenite treatment.</s><s>Scale bars, 20μm d, Quantitation of stress granule formation in response to sodium arsenite treatment.</s><s>Quantitation is based on overlapping dCas13a-NF and G3BP1 puncta.</s><s>All values are mean ± SEM with n = 3. ****p&lt; 0.0001; ***p&lt; 0.001; **p&lt; 0.01; *p&lt; 0.05.</s><s>ns = not significant.</s><s>A two-tailed student's T-test was used for comparisons.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Cas13a from Leptotrichia wadei (LwaCas13a) is capable of eukaryotic transcript knockdown a, Schematic of PFS characterization screen on Cas13a orthologs.</s><s>b, Quantitation of Cas13a activity in E. coli measured by colony survival from PFS screen.</s><s>c, in vivo PFS screening shows LwaCas13a has a minimal PFS preference.</s><s>Error bars indicate an approximate Bayesian 95% confidence interval.</s><s>d, Imaging showing localization and expression of each of the mammalian constructs.</s><s>Scale bars, 10μm.</s><s>e, Schematic of the mammalian luciferase reporter system used to evaluate knockdown.</s><s>f, Knockdown of Gaussia luciferase (Gluc) using engineered variants of LwaCas13a.</s><s>Sequences for guides and shRNAs are shown above.</s><s>g, Knockdown of three different endogenous transcripts with LwaCas13a compared against corresponding RNAi constructs.</s><s>h, Schematic for LwaCas13a knockdown of transcripts in rice (Oryza sativa) protoplasts.</s><s>i, LwaCas13a knockdown of three transcripts in O. sativa protoplasts using three targeting guides per transcript.</s><s>All values are mean ± SEM with n = 3, unless otherwise noted.</s></p></div></figDesc><graphic coords="27,208.92,62.00,254.16,359.66" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. LwaCas13a arrayed screening of mammalian coding and non-coding RNA targets and multiplexed guide delivery a, Schematic of LwaCas13a arrayed screening.</s><s>b-e, Arrayed knockdown screen of 186 guides evenly tiled across the Gluc transcript (b) or 93 guides evenly tiled across each of the Cluc (c), KRAS (d), and PPIB (e) transcripts.</s><s>f, Validation of the top three guides from the endogenous arrayed knockdown screens with shRNA comparisons.</s><s>All values are mean ± SEM with n = 3. ***p&lt; 0.001; **p &lt; 0.01; two-tailed student's T-test).</s><s>g, Arrayed knockdown screen of 93 guides evenly tiled across the MALAT1 transcript.</s><s>h, Validation of top three guides from the endogenous arrayed MALAT1 knockdown screen with shRNAcomparisons.</s><s>i, Multiplexed delivery of five guides in a CRISPR array against five different endogenous genes under the expression of a single promoter is capable of robust knockdown.</s><s>j, Multiplexed delivery of three guides against three different endogenous genes or with constructs replacing each of the guides with a non-targeting sequence shows specific knockdown of the genes targeted.</s><s>All values are mean ± SEM with n = 3.</s></p></div></figDesc><graphic coords="28,156.14,62.00,359.72,308.16" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Evaluation of LwaCas13a knockdown specificity and comparisons to RNA interference a, b Knockdown of Gluc (a) or CXCR4 (b) evaluated with guides containing single mismatches at varying positions across the spacer sequence (shown above).</s><s>c, Knockdown of Gluc evaluated with guide 3 containing single or double mismatches at varying positions across the spacer sequence (shown above).</s><s>d, e Expression levels in log2(transcripts per million (TPM)) values of all genes detected in RNA-seq libraries of non-targeting control (xaxis) compared to Gluc-targeting condition (y-axis) for shRNA (d) and LwaCas13a (e).</s><s>Shown is the mean of three biological replicates.</s><s>The Gluc transcript data point is colored in red.</s><s>The guide sequence used is shown above.</s><s>f, Differential gene expression analysis of six RNA-seq libraries (each with three biological replicates) comparing LwaCas13a knockdown to shRNA knockdown at three different genes.</s><s>g, Quantified mean knockdown levels for the targeted genes from the RNA seq libraries.</s><s>h, Luciferase knockdown (left), cell viability (middle), and LwaCas13a-GFP expression (right) for cells transfected with LwaCas13a for 72 hours with and without selection.</s><s>All values are mean ± SEM with n = 3.</s></p></div></figDesc><graphic coords="29,156.13,62.00,359.73,324.72" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Catalytically-inactive LwaCas13a (dCas13a) is capable of binding transcripts and tracking stress granule formation a, Schematic of RNA immunoprecipitation for quantitation of dCas13a binding.</s><s>b, dCas13a targeting Gluc and ACTB transcripts is significantly enriched compared to non-targeting controls.</s><s>c, Schematic of dCas13a-GFP-KRAB construct used for negative-feedback imaging.</s><s>d, Representative images for dCas13a-GFP-KRAB imaging with multiple guides targeting ACTB.</s><s>Scale bars, 10μm.</s><s>e, Quantitation of translocation of dCas13a-GFP-KRAB.</s><s>f, Representative immunofluorescence images of HEK293FT cells treated with 400 uM sodium arsenite.</s><s>Stress granules are indicated by G3BP1 staining.</s><s>Scale bars, 5μm.</s><s>g, G3BP1 and dCas13a-GFP-KRAB co-localization quantified per cell by Pearson's correlation.</s><s>All values are mean ± SEM with n = 3. ****p&lt; 0.0001; ***p&lt; 0.001; **p&lt; 0.01; *p&lt; 0.05.</s><s>ns = not significant.</s><s>A one-tailed student's t-test was used for comparisons in (b) and a two-tailed student's t-test was used for comparisons in (e) and (g).</s></p></div></figDesc><graphic coords="30,193.92,62.00,284.16,360.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="16,182.28,62.00,307.44,359.72" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="17,214.08,62.00,243.84,360.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="18,184.92,62.00,302.16,360.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="19,156.00,62.00,360.00,260.52" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="20,185.16,62.00,301.68,359.71" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="21,227.76,130.37,216.48,360.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="22,197.10,62.00,277.80,360.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="23,255.84,62.00,160.32,360.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="24,218.28,62.00,235.44,359.63" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nature.</s><s>Author manuscript; available in PMC 2018 April 12.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We thank <rs type="person">M. Alimova</rs>, <rs type="person">D. Feldman</rs>,<rs type="person">F.Chen</rs>, <rs type="person">J.G. Doench</rs>, <rs type="person">J.M. Engreitz</rs>, <rs type="person">N. Habib</rs>, <rs type="person">D. Tenen</rs>, <rs type="person">A. Allen</rs>, <rs type="person">R. Macrae</rs>, and <rs type="person">R. Belliveau</rs> for discussions and support.O.A.A. is supported by a <rs type="funder">Paul and Daisy Soros Fellowship and National Defense Science and Engineering Fellowship</rs>.J.S.G. is supported by a <rs type="funder">D.O.E.Computational Science Graduate Fellowship</rs>.R.P.B, J.L, and D.T.H. are supported by the <rs type="funder">NIH</rs> through <rs type="funder">NIAID</rs> (<rs type="grantNumber">R01AI117043</rs>).A.D. is supported by an <rs type="funder">NSF</rs> <rs type="grantName">Graduate Research Fellowship</rs> and a <rs type="funder">Air Force Office of Scientific Research</rs> grant (<rs type="grantNumber">FA9550-14-1-0060</rs>).Zika work was partially funded by <rs type="person">Marc</rs> and <rs type="person">Lynne Benioff</rs> to P.C.S. and antibiotic resistance work was partially funded by <rs type="funder">Josh</rs> and <rs type="person">Anita Bekenstein</rs> to D.T.H. A.R. is supported by the <rs type="funder">Howard Hughes Medical Institute</rs>.F.Z. is a <rs type="funder">New York Stem Cell Foundation-Robertson Investigator</rs>.F.Z. is supported by the <rs type="funder">NIH</rs> through <rs type="funder">NIMH</rs> (<rs type="grantNumber">5DP1-MH100706</rs> and <rs type="grantNumber">1R01-MH110049</rs>), <rs type="funder">NSF</rs>, <rs type="funder">Howard Hughes Medical Institute</rs>, the <rs type="institution">New York Stem Cell, Simons</rs>, <rs type="person">Paul G. Allen Family</rs>, and <rs type="person">Vallee Foundations</rs>; and <rs type="funder">James</rs> and <rs type="person">Patricia Poitras</rs>, <rs type="person">Robert Metcalfe</rs>, and <rs type="person">David Cheng</rs>.<rs type="grantNumber">Cas13a/C2c2</rs> expression plasmids are available from Addgene under UBMTA.Support forums and computational tools are available via the Zhang lab website (http://www.genome-engineering.org) and Github (https://github.com/fengzhanglab)</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_9nvF7AA">
+					<idno type="grant-number">R01AI117043</idno>
+				</org>
+				<org type="funding" xml:id="_kb9dEpB">
+					<orgName type="grant-name">Graduate Research Fellowship</orgName>
+				</org>
+				<org type="funding" xml:id="_gX39mBa">
+					<idno type="grant-number">FA9550-14-1-0060</idno>
+				</org>
+				<org type="funding" xml:id="_c7pJ8Yg">
+					<idno type="grant-number">5DP1-MH100706</idno>
+				</org>
+				<org type="funding" xml:id="_kxAXMAR">
+					<idno type="grant-number">1R01-MH110049</idno>
+				</org>
+				<org type="funding" xml:id="_AHsHkJB">
+					<idno type="grant-number">Cas13a/C2c2</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Relevant code for data analysis is available on Github (https://github.com/fengzhanglab)</s><s>Data availability: High throughput sequencing data related to this study is available at BioProject PRJNA383832.</s></p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Potent and specific genetic interference by double-stranded RNA in Caenorhabditis elegans</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fire</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/35888[PubMed:9486653</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">391</biblScope>
+			<biblScope unit="page" from="806" to="811" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Duplexes of 21-nucleotide RNAs mediate RNA interference in cultured mammalian cells</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Elbashir</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/35078107</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">411</biblScope>
+			<biblScope unit="page" from="494" to="498" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11373684</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Genome-scale loss-of-function screening with a lentiviral RNAi library</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Root</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Hacohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Hahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Lander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Sabatini</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth924</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="715" to="719" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16929317</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Expression profiling reveals off-target gene regulation by RNAi</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Jackson</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nbt831</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="635" to="637" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12754523</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Imaging intracellular RNA distribution and dynamics in living cells</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tyagi</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.1321</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="331" to="338" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19404252</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Diversity and evolution of class 2 CRISPR-Cas systems</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shmakov</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nrmicro.2016.184</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Microbiol</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="169" to="182" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28111461</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Discovery and Functional Characterization of Diverse Class 2 CRISPR-Cas Systems</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shmakov</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.molcel.2015.10.008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Cell</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="385" to="397" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26593719</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">C2c2 is a single-component programmable RNA-guided RNA-targeting CRISPR effector</title>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">O</forename><surname>Abudayyeh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">353</biblScope>
+			<biblScope unit="page">5573</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">In vivo genome editing using Staphylococcus aureus Cas9</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Ran</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature14299</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">520</biblScope>
+			<biblScope unit="page" from="186" to="191" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25830891</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Nucleic acid detection with CRISPR-Cas13a/C2c2</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Gootenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>In press</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Orthogonal gene knockout and activation with a catalytically active Cas9 nuclease</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Dahlman</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nbt.3390</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="1159" to="1161" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26436575</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">The highways and byways of mRNA decay</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">L</forename><surname>Garneau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wilusz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Wilusz</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nrm2104</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Mol Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="113" to="126" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17245413</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">A screen for nuclear transcripts identifies two linked noncoding RNAs associated with SC35 splicing domains</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Hutchinson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Genomics</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">17270048</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Gene set enrichment analysis: a knowledge-based approach for interpreting genome-wide expression profiles</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Subramanian</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.0506580102</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page" from="15545" to="15550" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16199517</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Human RNase L tunes gene expression by selectively destabilizing the microRNAregulated transcriptome</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rath</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1513034112</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="15916" to="15921" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26668391</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Recombinant probes for visualizing endogenous synaptic proteins in living neurons</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Gross</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2013.04.017</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="971" to="985" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23791193</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">mRNA escape from stress granule sequestration is dictated by localization to the endoplasmic reticulum</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Unsworth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Raguz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Edwards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Higgins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Yague</surname></persName>
+		</author>
+		<idno type="DOI">10.1096/fj.09-151142</idno>
+	</analytic>
+	<monogr>
+		<title level="j">FASEB J</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="3370" to="3380" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20453113</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Programmable RNA Tracking in Live Cells with CRISPR/Cas9</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Nelles</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cell.2016.02.054</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">165</biblScope>
+			<biblScope unit="page" from="488" to="496" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26997482</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wyss-Coray</surname></persName>
+			<affiliation>
+				<orgName type="collaboration">neurodegeneration and brain rejuvenation</orgName>
+			</affiliation>
+		</author>
+		<author>
+			<persName><surname>Ageing</surname></persName>
+			<affiliation>
+				<orgName type="collaboration">neurodegeneration and brain rejuvenation</orgName>
+			</affiliation>
+		</author>
+		<idno type="DOI">10.1038/nature20411</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">539</biblScope>
+			<biblScope unit="page" from="180" to="186" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27830812</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Principles and Properties of Stress Granules</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Protter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Parker</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tcb.2016.05.004</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="668" to="679" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27289443</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">The RasGAP-associated endoribonuclease G3BP assembles stress granules</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tourriere</surname></persName>
+		</author>
+		<idno type="DOI">10.1083/jcb.200212128</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">160</biblScope>
+			<biblScope unit="page" from="823" to="831" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12642610</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">The impact of target site accessibility on the design of effective siRNAs</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tafer</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nbt1404</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="578" to="583" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18438400</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Gateway-compatible vectors for high-throughput gene functional analysis in switchgrass (Panicum virgatum L.) and other monocot species</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Mann</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1467-7652.2011.00658.x[PubMed:21955653</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Plant Biotechnol J</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="226" to="236" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">A highly efficient rice green tissue protoplast system for transient gene expression and studying light/chloroplast-related processes</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plant Methods</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">30</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21961694</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Nucleic acid detection with CRISPR-Cas13a/C2c2</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Gootenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Validation of housekeeping genes as internal control for studying gene expression in rice by quantitative real-time PCR</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nijhawan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Tyagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Khurana</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bbrc.2006.04.140</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biochem Biophys Res Commun</title>
+		<imprint>
+			<biblScope unit="volume">345</biblScope>
+			<biblScope unit="page" from="646" to="651" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16690022</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Genome-scale CRISPR-Cas9 knockout and transcriptional activation screening</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Joung</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nprot.2017.016</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Protoc</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="828" to="863" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28333914</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Local RNA base pairing probabilities in large sequences</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Bernhart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">L</forename><surname>Hofacker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">F</forename><surname>Stadler</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/bioinformatics/btk014</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="614" to="615" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16368769</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">N</forename><surname>Dewey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">323</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21816040</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Fiji: an open-source platform for biological-image analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schindelin</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.2019</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="676" to="682" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22743772</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

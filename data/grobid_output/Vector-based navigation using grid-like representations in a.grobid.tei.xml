@@ -1,0 +1,1850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Vector-based Navigation using Grid-like Representations in Artificial Agents</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Andrea</forename><surname>Banino</surname></persName>
+							<email>abanino@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Cell and Developmental Biology</orgName>
+								<orgName type="institution">University College London</orgName>
+								<address>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Centre for Computation, Mathematics and Physics in the Life Sciences and Experimental Biology (CoMPLEX)</orgName>
+								<orgName type="institution">University College London</orgName>
+								<address>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">equal contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Caswell</forename><surname>Barry</surname></persName>
+							<email>caswell.barry@ucl.ac.uk</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Cell and Developmental Biology</orgName>
+								<orgName type="institution">University College London</orgName>
+								<address>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">equal contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Benigno</forename><surname>Uria</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Charles</forename><surname>Blundell</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Timothy</forename><surname>Lillicrap</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Piotr</forename><surname>Mirowski</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexander</forename><surname>Pritzel</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Martin</forename><forename type="middle">J</forename><surname>Chadwick</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Thomas</forename><surname>Degris</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joseph</forename><surname>Modayil</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Greg</forename><surname>Wayne</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hubert</forename><surname>Soyer</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fabio</forename><surname>Viola</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Brian</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ross</forename><surname>Goroshin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Neil</forename><surname>Rabinowitz</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Razvan</forename><surname>Pascanu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Charlie</forename><surname>Beattie</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Stig</forename><surname>Petersen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Amir</forename><surname>Sadik</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Stephen</forename><surname>Gaffney</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Helen</forename><surname>King</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Koray</forename><surname>Kavukcuoglu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Demis</forename><surname>Hassabis</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="laboratory">Gatsby Computational Neuroscience Unit</orgName>
+								<address>
+									<addrLine>25 Howland Street</addrLine>
+									<postCode>W1T 4JG</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Raia</forename><surname>Hadsell</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dharshan</forename><surname>Kumaran</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DeepMind</orgName>
+								<address>
+									<addrLine>5 New Street Square</addrLine>
+									<postCode>EC4A 3TW</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Centre for Computation, Mathematics and Physics in the Life Sciences and Experimental Biology (CoMPLEX)</orgName>
+								<orgName type="institution">University College London</orgName>
+								<address>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Vector-based Navigation using Grid-like Representations in Artificial Agents</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2028D6680E9186824CB08F7280F7B9B9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Author Contributions Conceived project. A.B</term>
+					<term>D.K.</term>
+					<term>C.Ba.</term>
+					<term>R.H.</term>
+					<term>P.M.</term>
+					<term>B.U.</term>
+					<term>Contributed ideas to experiments. A.B.</term>
+					<term>D.K.</term>
+					<term>C.Ba.</term>
+					<term>B.U.</term>
+					<term>R.H.</term>
+					<term>T.L.</term>
+					<term>C.Bl.</term>
+					<term>P.M.</term>
+					<term>A.P.</term>
+					<term>T.D.</term>
+					<term>J.M.</term>
+					<term>K.K.</term>
+					<term>N.R.</term>
+					<term>G.W.</term>
+					<term>R.G.</term>
+					<term>D.H.</term>
+					<term>R.P. Performed experiments and analysis: A.B.</term>
+					<term>C.Ba.</term>
+					<term>B.U.</term>
+					<term>M.C.</term>
+					<term>T.L.</term>
+					<term>H.S.</term>
+					<term>A.P.</term>
+					<term>B.Z</term>
+					<term>F.V. Development of testing platform and environments. C.Be.</term>
+					<term>S.P.</term>
+					<term>R.H.</term>
+					<term>T.L.</term>
+					<term>G.W.</term>
+					<term>D.K.</term>
+					<term>A.B.</term>
+					<term>B.U.</term>
+					<term>D.H. Human expert tester. A.S. Managed project. D.K</term>
+					<term>R.H.</term>
+					<term>A.B.</term>
+					<term>H.K.</term>
+					<term>S.G.</term>
+					<term>D.H. Wrote paper. D.K.</term>
+					<term>A.B.</term>
+					<term>C.Ba.</term>
+					<term>T.L.</term>
+					<term>C.Bl.</term>
+					<term>B.U.</term>
+					<term>M.C.</term>
+					<term>A.P.</term>
+					<term>R.H.</term>
+					<term>N.R.</term>
+					<term>K.K.</term>
+					<term>D.H</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Deep neural networks have achieved impressive successes in diverse areas ranging from object recognition to complex games such as Go 1, 2 .</s><s>Navigation, however, remains a substantial challenge for artificial agents, with deep neural networks trained by reinforcement learning (RL) [3]<ref type="bibr" target="#b0">[4]</ref><ref type="bibr" target="#b1">[5]</ref> failing to rival the proficiency of mammalian spatial behavior, underpinned by grid cells in the entorhinal cortex 6 .</s><s>Grid cells are viewed to provide a multi-scale periodic representation that functions as a metric for coding space 7, 8 which is critical for integrating self-motion (path integration) 6, 7, 9 and planning direct trajectories to goals (vector-based navigation) <ref type="bibr" target="#b3">7,</ref><ref type="bibr" target="#b6">10,</ref><ref type="bibr" target="#b7">11</ref> .</s><s>We set out to leverage the computational functions of grid cells to develop a deep RL agent with mammalian-like navigational abilities.</s><s>We first trained a recurrent network to perform path integration, leading to the emergence of representations resembling grid cells, as well as other entorhinal cell types 12 .</s><s>We then showed that this representation Stachenfeld and Jason Yosinski for discussions; Matthew Botvinick, and Jane Wang for comments on an earlier version of the manuscript .</s><s>C.Ba. funded by Royal Society and Wellcome Trust.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>provided an effective basis for an agent to locate goals in complex, unfamiliar, and changeable environments -optimizing the primary objective of navigation through deep RL.</s><s>The performance of agents endowed with grid-like representations surpassed that of an expert human and comparison agents, with the metric quantities necessary for vector-based navigation derived from grid-like units within the network.</s><s>Further, grid-like representations enabled agents to conduct shortcut behaviours reminiscent of those performed by mammals.</s></p><p><s>Our findings show that emergent grid-like representations furnish agents with a Euclidean spatial metric and associated vector operations, providing a foundation for proficient navigation.</s><s>As such, our results support neuro-scientific theories that see grid cells as critical for vector-based navigation <ref type="bibr" target="#b3">7,</ref><ref type="bibr" target="#b6">10,</ref><ref type="bibr" target="#b7">11</ref> , demonstrating that the latter can be combined with pathbased strategies to support navigation in complex environments.</s></p><p><s>The ability to self-localize in the environment and update one's position on the basis of selfmotion are core components of navigation <ref type="bibr" target="#b9">13</ref> .</s><s>We trained a deep neural network to path integrate within a square arena (2.2m×2.2m),</s><s>using simulated trajectories modelled on those of foraging rodents (see Methods).</s><s>The network was required to update its estimate of location and head direction based on translational and angular velocity signals, mirroring those available to the mammalian brain <ref type="bibr" target="#b8">12,</ref><ref type="bibr" target="#b10">14,</ref><ref type="bibr" target="#b11">15</ref> (see Methods, Fig. <ref type="figure" target="#fig_0">1a&amp;b</ref>).</s><s>Velocity was provided as input to a recurrent network with a Long Short-Term Memory architecture (LSTM) which was trained using backpropagation through time (see Methods and Supplemental Discussion), allowing the network to dynamically combine current input signals with activity patterns reflecting past events (see Methods, Fig. <ref type="figure" target="#fig_0">1a</ref>).</s></p><p><s>The LSTM projected to place and head direction units via a linear layer -units with activity defined as a simple linear function of their input (see Extended Data Figure <ref type="figure" target="#fig_0">1</ref> for architecture).</s></p><p><s>Importantly, the linear layer was subject to regularization, in particular dropout <ref type="bibr" target="#b12">16</ref> , such that 50% of the units were randomly silenced at each time step.</s><s>The vector of activities in the place and head direction units, corresponding to the current position, was provided as a supervised training signal at each time step (see Methods and Extended Data Figure <ref type="figure" target="#fig_0">1</ref>).</s><s>This form of supervision follows evidence that in mammals, place and head direction representations exist in close anatomical proximity to entorhinal grid cells <ref type="bibr" target="#b8">12</ref> and emerge in rodent pups prior to the appearance of mature grid cells <ref type="bibr" target="#b13">17,</ref><ref type="bibr" target="#b14">18</ref> .</s><s>Equally, in adult rodents, entorhinal grid cells are known to project to the hippocampus <ref type="bibr" target="#b15">19</ref> and appear to contribute to the neural activity of place cells <ref type="bibr" target="#b15">19</ref> .</s></p><p><s>As expected, the network was able to path integrate accurately in this setting involving foraging behavior (mean error after 15s trajectory, 16cm vs 91cm for an untrained network, effect size = 2.83; 95% CI [2.80, 2.86], Fig. <ref type="figure" target="#fig_0">1b&amp;c</ref>).</s><s>Strikingly, individual units within the linear layer of the network developed stable spatial activity profiles similar to neurons within the entorhinal network <ref type="bibr" target="#b2">6,</ref><ref type="bibr" target="#b8">12</ref> (Fig. <ref type="figure" target="#fig_0">1d</ref>, Extended Data Figure <ref type="figure" target="#fig_1">2</ref>).</s><s>Specifically, 129 of the 512 linear layer units (25.2%) resembled grid cells, exhibiting significant hexagonal periodicity (gridness <ref type="bibr" target="#b16">20</ref> ) versus a null distribution generated by a conservative fields shuffling procedure (see Methods).</s><s>The scale of the grid-patterns, measured from the spatial autocorrelograms of the activity maps <ref type="bibr" target="#b16">20</ref> , varied between units (range 28cm to 115cm, mean 66cm) and followed a multi-modal distribution, consistent with empirical results from rodent grid cells <ref type="bibr" target="#b17">21,</ref><ref type="bibr" target="#b18">22</ref> (Fig. <ref type="figure" target="#fig_0">1e</ref>).</s><s>To assess these clusters we fit mixtures of Gaussians, finding the most parsimonious number by minimizing the Bayesian Information Criterion (BIC).</s><s>The distribution was best fit by 3 Gaussians (means 47cm, 70cm, and shows activity over location (top), spatial autocorrelogram of the ratemap with gridness indicated (middle), polar plot show activity vs. head direction (bottom).</s><s>e, Spatial scale of grid-like units (n = 129) is clustered.</s><s>Distribution is more discrete <ref type="bibr" target="#b18">22</ref> than chance (effect size = 2.98, 95% CI [0.97, 4.91]) and best fit by a mixture of 3 Gaussians (centres 0.47, 0.70 &amp; 1.06m, ratio=1.</s><s>49 &amp;   1.51).</s><s>f, Directional tuning of the most strongly directional units (n = 52).</s><s>Lines indicate length and orientation of resultant vector (see Methods), exhibiting a six-fold clustering reminiscent of conjunctive grid cells <ref type="bibr" target="#b20">24</ref> .</s><s>g, Distribution of gridness and directional tuning.</s><s>Dashed lines indicate 95% confidence interval from null distributions (based on 500 data permutations), 14 (11%) grids exhibit directional modulation (see Methods).</s><s>Similar results were seen in a circular environment (Extended Data Figure <ref type="figure" target="#fig_2">3</ref>).</s></p><p><s>To ascertain how robust these representations were, we retrained the network 100 times, in each instance finding similar proportions of grid-like units (mean 23% SD 2.8%, units with significant gridness scores) and other spatially modulated units (Extended Data Figure <ref type="figure" target="#fig_2">3</ref>).</s><s>Conversely, grid-like representations did not emerge in networks without regularization (e.g.</s><s>dropout, see Methods; also see <ref type="bibr" target="#b21">25</ref> , Extended Data Figure <ref type="figure" target="#fig_3">4</ref>).</s><s>Therefore, the use of regularization, including dropout which has been viewed to be a parallel of noise in neural systems <ref type="bibr" target="#b12">16</ref> , was critical to the emergence of entorhinal-like representations.</s><s>Notably, therefore, our results show that grid-like representations reminiscent of those found in the mammalian entorhinal cortex emerge in a generic network trained to path integrate, contrasting with previous approaches using pre-configured grid cells (e.g. <ref type="bibr" target="#b22">26</ref> ; see Supplemental Discussion).</s><s>Further our results are consistent with the view that grid cells represent an efficient and robust basis for a location code updated by self-motion cues <ref type="bibr" target="#b2">[6]</ref><ref type="bibr" target="#b3">[7]</ref><ref type="bibr" target="#b4">[8]</ref><ref type="bibr" target="#b5">[9]</ref> .</s></p><p><s>Next, we sought to test the hypothesis that the emergent representations provide an effective basis function for goal-directed navigation in complex, unfamiliar, and changeable environments, when trained through deep RL.</s><s>Entorhinal grid cells have been proposed to provide a Euclidean spatial metric and thus support the calculation of goal-directed vectors, enabling animals to follow direct routes to a remembered goal, a process known as vector-based navigation <ref type="bibr" target="#b3">7,</ref><ref type="bibr" target="#b6">10,</ref><ref type="bibr" target="#b7">11</ref> .</s><s>Theoretically, the advantage of decomposing spatial location into a multi-scale periodic code, as provided by grid cells, is that the relative position of two points can be retrieved by examining the difference in the code at the level of each scale -combining the modulus remainders to return the true vector <ref type="bibr" target="#b3">7,</ref><ref type="bibr" target="#b7">11</ref> (Fig. <ref type="figure" target="#fig_1">2a</ref>).</s><s>However, despite the obvious utility of such a framework, experimental evidence for the direct involvement of grid representations in goal-directed navigation is still lacking.</s></p><p><s>To develop an agent with the potential for vector-based navigation, we incorporated the "grid network" described above, into a larger architecture that was trained using deep RL (Fig. <ref type="figure" target="#fig_1">2d</ref>, Extended Data Figure <ref type="figure">5</ref>).</s><s>As before, the grid network was trained using supervised learning but, to better approximate the information available to navigating mammals, it now received velocity signals perturbed with random noise as well as visual input.</s><s>Experimental evidence suggests that place cell input to grid cells corrects for drift and anchors grids to environmental cues <ref type="bibr" target="#b17">21</ref> .</s><s>To parallel this, visual input was processed by a "vision module" consisting of a convolutional network that produced place and head direction cell activity patterns which were provided as input to the grid network 5% of the time -akin to a moving animal making occasional, imperfect observations of salient environmental cues <ref type="bibr" target="#b23">27</ref> (see Methods, Fig. <ref type="figure" target="#fig_1">2b&amp;c</ref> and Extended Data Figure <ref type="figure">5</ref>).</s><s>The output of the linear layer of the grid network, corresponding to the agent's current location, was provided as input to the "policy LSTM", a second recurrent network controlling both the agent's actions and outputting a value function.</s><s>Additionally, whenever the agent reached the goal, the "goal grid code" -activity in the linear layer -was subsequently provided to the policy LSTM during navigation as an additional input.</s></p><p><s>We first examined the navigational capacities of the agent in a simple setting inspired by the classic Morris water maze (Fig. <ref type="figure" target="#fig_1">2b&amp;c</ref>; 2.5m×2.5m</s><s>square arena; see Methods and Supplemental Results).</s><s>Notably, the agent was still able to self localize accurately in this more challenging setting where ground truth information about location was not provided and velocity inputs were noisy (mean error after 15s trajectory, 12cm vs 88cm for an untrained network, effect size = 2.82; 95% CI [2.79, 2.84], Fig. <ref type="figure" target="#fig_1">2e</ref>).</s><s>Further, the agent exhibited proficient goal-finding abilities, typically taking direct routes to the goal from arbitrary starting locations (Fig. <ref type="figure" target="#fig_1">2h</ref>).</s><s>Performance exceeded that of a control place cell agent (Fig. <ref type="figure" target="#fig_1">2f</ref>, Supplemental Results and Methods), chosen because place cells provide a robust representation of self-location but are not thought to provide a substrate for long range vector calculations <ref type="bibr" target="#b7">11</ref> .</s><s>We examined the units in the linear layer, again finding a heterogeneous population resembling those found in entorhinal cortex, including grid-like units (21.4%) as well as other spatial representations (Fig. <ref type="figure" target="#fig_1">2g</ref>, Extended Data Figure <ref type="figure">6</ref>) -paralleling the dependence of mammalian grid cells on self-motion information <ref type="bibr" target="#b11">15,</ref><ref type="bibr" target="#b24">28</ref> and spatial cues <ref type="bibr" target="#b2">6,</ref><ref type="bibr" target="#b17">21</ref> .</s><s>Accuracy of self-location decoded from place cell units.</s><s>f, Performance of grid cell agent and place cell agent (y-axis shows reward obtained within a single episode, 10 points per goal arrival, gray band displays the 68% confidence interval based on 5000 bootstrapped samples).</s><s>g, As before the linear layer develops spatial representations similar to entorhinal cortex.</s><s>Left to right, 2 grid cells, 1 border cell, and 1 head direction cell.</s><s>h, On the first trial of an episode the agent explores to find the goal and subsequently navigates directly to it.</s><s>i, After successful navigation, the policy LSTM was supplied with a "fake" goal grid-code, directing the agent to this location where no goal was present.</s><s>j&amp;k, Decoding of goal-directed metric codes (i.e.</s><s>Euclidean distance and direction) from the policy LSTM of grid cell and place cell agents.</s><s>The bootstrapped distribution (1000 samples) of correlation coefficients are each displayed with a violin plot overlaid on a Tukey boxplot.</s></p><p><s>We next turn to our central claim, that grid cells endow agents with the ability to perform vector-based navigation, enabling downstream regions to calculate goal directed vectors by comparing current activity with that of a remembered goal <ref type="bibr" target="#b3">7,</ref><ref type="bibr" target="#b6">10,</ref><ref type="bibr" target="#b7">11</ref> .</s><s>In the agent, we expect these calculations to be performed by the policy LSTM, which receives the current activity pattern over the linear layer (termed "current grid code"; see Fig. <ref type="figure" target="#fig_1">2d</ref> and Extended Data Figure <ref type="figure">5</ref>) as well as that present the last time the agent reached the goal (termed "goal grid code"), using them to control movement.</s><s>Hence we performed several manipulations, which yielded four lines of evidence in support of the vector-based navigation hypothesis (see Supplemental Results for details).</s></p><p><s>First, to demonstrate that the goal grid code provided sufficient information to enable the agent to navigate to an arbitrary location, we substituted it with a "fake" goal grid code sampled randomly from a location in the environment (see Methods).</s><s>The agent followed a direct path to the newly specified location, circling the absent goal (Fig. <ref type="figure" target="#fig_1">2i</ref>) -similar to rodents in probe trials of the Morris water maze (escape platform removed).</s><s>Secondly, we demonstrated that withholding the goal grid code from the policy LSTM of the grid cell agent had a strikingly deleterious effect on performance (see Extended Data Fig. <ref type="figure">6c</ref>).</s><s>Thirdly, we demonstrated that the policy LSTM of the grid cell agent contained representations of key components of vector-based navigation (Figure <ref type="figure" target="#fig_1">2j&amp;k</ref>), and that both Euclidean distance (difference in r = 0.17; 95% CI [0.11, 0.24]) and allocentric goal direction (difference in r = 0.22; 95% CI [0.18, 0.26]) were represented more strongly than in the place cell agent.</s><s>Notably, a neural representation of goal distance has recently been reported in mammalian hippocampus <ref type="bibr" target="#b25">29</ref> .</s><s>Finally, we provide evidence consistent with a prediction of the vector-based navigation hypothesis, namely that a targeted lesion (i.e.</s><s>silencing) to the most gridlike units within the goal grid code should have a greater adverse effect on performance and the representation of vector-based metrics (e.g.</s><s>Euclidean distance) than a sham lesion (i.e silencing of non-grid units; average score for 100 episodes: 126.1 vs. 152.5,</s><s>respectively; effect size = 0.38, 95% CI [0.34, 0.42] see Supplemental Results).</s></p><p><s>Having demonstrated the effectiveness of grid-like representations in optimizing one-shot goal learning in a simple square arena, we assessed the agent's performance in complex, procedurally-generated multi-room environments, termed "goal-driven" and "goal-doors" (see Methods).</s><s>Notably, these environments are challenging for deep RL agents with external memory (see Extended Data Figure <ref type="figure">7e</ref>,f,h&amp;i and Supplemental Results).</s><s>Again, the grid-cell agent exhibited high levels of performance, was strikingly robust across a range of network hyperparameters (see Extended Data Figure <ref type="figure">7a</ref>,b&amp;c), and reached the goal more frequently than either control agents or a human expert -a typical benchmark for the performance of deep RL agents in game playing scenarios 2 (Fig. <ref type="figure" target="#fig_2">3e&amp;f</ref> and see Supplemental Results).</s><s>Further, when agents were tested, without retraining, in environments considerably larger than those seen previously, only the grid cell agent was able to generalise effectively (Fig. <ref type="figure" target="#fig_2">3g&amp;h</ref> and see Supplemental Results).</s><s>Despite the complexity of the "goal-driven" environment, we could still decode the key metric codes from the grid agent policy LSTM with high accuracy during the initial period of navigation -with decoding accuracy substantially higher in the grid cell agent than both the place cell and deep RL control agents (Figure <ref type="figure" target="#fig_2">3j&amp;k</ref> and Supplemental Results, Extended Data Figures <ref type="figure">8</ref> and<ref type="figure">9</ref> for control agent architectures).</s><s>Finally, a core feature of mammalian spatial behaviour is the ability to exploit novel shortcuts and traverse unvisited portions of space, a capacity thought to depend on vector-based navigation <ref type="bibr" target="#b5">9,</ref><ref type="bibr" target="#b7">11</ref> .</s><s>Strikingly, the grid cell agent -but not comparison agents -robustly demonstrated these abilities in specifically designed neuroscience-inspired mazes, taking direct routes to the goal as soon as they became available (Fig. <ref type="figure" target="#fig_3">4</ref>, Extended Data Figure <ref type="figure" target="#fig_9">10</ref> and Supplemental Results).</s><s>Conventional simultaneous localization and mapping (SLAM) techniques typically require an accurate and complete map to be built, with the nature and position of the goal externally defined <ref type="bibr" target="#b26">30</ref> .</s><s>In contrast, the deep reinforcement learning approach described in this work has the ability to learn complex control policies end-to-end from a sparse reward, taking direct routes involving shortcuts to goals in an automatic fashion -abilities that exceed previous deep RL approaches <ref type="bibr">[3]</ref><ref type="bibr" target="#b0">[4]</ref><ref type="bibr" target="#b1">[5]</ref> , and that would have to be hand-coded in any SLAM system.</s></p><p><s>Our work, in demonstrating that grid-like representations provide an effective basis for flexible navigation in complex novel environments, supports theoretical models of grid cells in vectorbased navigation previously lacking strong empirical support <ref type="bibr" target="#b3">7,</ref><ref type="bibr" target="#b6">10,</ref><ref type="bibr" target="#b7">11</ref> .</s><s>We also show that vector-based navigation can be effectively combined with a path-based barrier avoidance strategy to enable the exploitation of optimal routes in complex multi-compartment environments.</s><s>In sum, we argue that grid-like representations furnish agents with a Euclidean geometric framework -paralleling their proposed computational role in mammals as an early-developing Kantian-like spatial scaffold that serves to organize perceptual experience <ref type="bibr" target="#b13">17,</ref><ref type="bibr" target="#b14">18</ref></s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head><p><s>Path integration: Supervised learning experiments.</s><s>Simplified 2D environment.</s><s>Simulated rat trajectories of duration T were generated in square and circular environments with walls of length L (diameter in the circular case).</s><s>The simulated rat started at a uniformly sampled location and facing angle within the enclosure.</s><s>A rat-like motion model <ref type="bibr" target="#b27">31</ref> was used to obtain trajectories that uniformly covered the whole environment by avoiding walls (see Table <ref type="table">1</ref> in supplementary methods for the model's parameters).</s></p><p><s>Ground truth place cell distribution.</s><s>Place cell activations, c ∈ [0, 1] N , for a given position x ∈ R 2 , were simulated by the posterior probability of each component of a mixture of twodimensional isotropic Gaussians,</s></p><formula xml:id="formula_0">c i = e - x-µ (c) i 2 2 2 ( σ (c) ) 2 N j=1 e - x-µ (c) j 2 2 2 ( σ (c) ) 2 ,<label>(1) where µ (c)</label></formula><p><s>i ∈ R 2 , the place cell centres, are N two-dimensional vectors chosen uniformly at random before training, and σ (c) , the place cell scale, is a positive scalar fixed for each experiment.</s></p><p><s>Ground truth head-direction cell distribution.</s><s>Head-direction cell activations, h ∈ [0, 1] M , for a given facing angle ϕ were represented by the posterior probability of a each component of a mixture of Von Mises distributions with concentration parameter κ (h) ,</s></p><formula xml:id="formula_1">h i = e κ (h) cos ϕ-µ (h) i M j=1 e κ (h) cos ϕ-µ (h) j ,<label>(2)</label></formula><p><s>where the M head direction centres µ</s></p><formula xml:id="formula_2">(h) i ∈ [-π, π],</formula><p><s>are chosen uniformly at random before training, and κ (h) the concentration parameter is a positive scalar fixed for each experiment.</s></p><p><s>Supervised learning inputs.</s><s>In the supervised setup the grid cell network receives, at each step t, the egocentric linear velocity v t ∈ R, and the sine and cosine of its angular velocity φt .</s></p><p><s>Grid cell network architecture The grid cell network architecture (Extended Data Figure <ref type="figure" target="#fig_0">1</ref>) consists of three layers: a recurrent layer, a linear layer, and an output layer.</s><s>The single recurrent layer is an LSTM (long short-term memory <ref type="bibr" target="#b28">32</ref> ) that projects to place and head direction units via the linear layer.</s><s>The linear layer implements regularisation through dropout <ref type="bibr" target="#b12">16</ref> .</s><s>The recurrent LSTM layer consists of one cell of 128 hidden units, with no peephole connections.</s><s>Input to the recurrent LSTM layer is the vector [v t , sin( φt ), cos( φt )].</s><s>The initial cell state and hidden state of the LSTM, l 0 and m 0 respectively, are initialised by computing a linear transformation of the ground truth place and head-direction cells at time 0:</s></p><formula xml:id="formula_3">l 0 = W (cp) c 0 + W (cd) h 0<label>(3)</label></formula><formula xml:id="formula_4">m 0 = W (hp) c 0 + W (hd) h 0<label>(4)</label></formula><p><s>The parameters of these two linear transformations (W (cp) , W (cd) , W <ref type="bibr">(hp)</ref> , and W (hd) ) were optimised during training.</s><s>The output of the LSTM, m t is then used to produce predictions of the place cells y t and head direction cells z t by means of a linear decoder network.</s></p><p><s>The linear decoder consists of three sets of weights and biases: first, weights and biases that map from the LSTM hidden state m t to the linear layer activations g t ∈ R 512 .</s><s>The other two sets of weights map from the linear layer activations g t to the predicted head directions, z t , and predicted place cells, y t , respectively via softmax functions <ref type="bibr" target="#b29">33</ref> .</s><s>Dropout <ref type="bibr" target="#b12">16</ref> with drop probability 0.5 was applied to each g t unit.</s><s>Note that there is no intermediary non-linearity in the linear decoder.</s></p><p><s>Supervised learning loss.</s><s>The grid cell network is trained to predict the place and head-direction cell ensemble activations, c t and h t respectively, at each time step t.</s><s>During training, the network was trained in a single environment where the place cell centres were constant throughout.</s><s>The parameters of the grid cell network are trained by minimising the cross-entropy between the network place cell predictions, y, and the synthetic place-cells targets, c, and the cross-entropy between head-direction predictions, z, and their targets, h:</s></p><formula xml:id="formula_5">L( y, z, c, h) = - N i=1 c i log(y i ) - M j=1 h j log(z j ),<label>(5)</label></formula><p><s>Gradients of ( <ref type="formula" target="#formula_5">5</ref>) with respect to the network parameters were calculated using backpropagation through time <ref type="bibr" target="#b30">34</ref> , unrolling the network into blocks of 100 time steps.</s><s>The network parameters were updated using stochastic-gradient descent (RMSProp <ref type="bibr" target="#b31">35</ref> ), with weight decay <ref type="bibr" target="#b32">36</ref> for the weights incident upon the bottleneck activations.</s><s>Hyperparameter values used for training are listed in Table <ref type="table">1</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Gradient clipping</head><p><s>In our simulations gradient clipping was used for parameters projecting from the dropout linear layer, g t , to the place and head-direction cell predictions y t and z t .</s><s>Gradient clipping clips each element of the gradient vector to lie in a given interval</s></p><formula xml:id="formula_6">[-g c , g c ].</formula><p><s>Gradient clipping is an important tool for optimisation in deep and recurrent artificial neural networks where it helps to prevent exploding gradients <ref type="bibr" target="#b33">37</ref> .</s><s>Gradient clipping also introduces distortions into the weight updates which help to avoid local minima <ref type="bibr" target="#b34">38</ref> .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Navigation through Deep RL</head><p><s>Environments and Task We assessed the performance of agents on three environments seen by the agent from a first-person perspective in the DeepMind Lab 39 platform.</s></p><p><s>Custom Environment: Square Arena This comprised a 10×10 square arena -which correspond to 2.5×2.5 meters assuming an agent speed of 15 cm/s (Fig. <ref type="figure" target="#fig_1">2b,</ref><ref type="figure">c</ref>).</s><s>The arena contained a single, coloured, intra-arena cue whose position and colour changed each episode -as did the texture of the floor, the texture of the walls and the goal location.</s><s>As in the goal-driven and goal-door environments described below, there were a set of distal cues (i.e.</s><s>buildings) that paralleled the design of virtual reality environments used in human experiments <ref type="bibr" target="#b20">24</ref> .</s><s>These distal cues were rendered at infinity -so as to provide directional but not distance information -and their configuration was consistent across episodes.</s><s>At the start of each episode the agent (described below) started in a random location and was required to explore in order to find an unmarked goal, paralleling the task of rodents in the classic Morris water maze.</s><s>The agent always started in the central 6×6 grids (i.e.</s><s>1.5×1.5 meters) of the environment.</s><s>Noise in the velocity input u t was applied throughout training and testing (i.e.</s><s>Gaussian noise , with µ = 0 and σ = 0.01).</s><s>The action space is discrete (six actions) but affords fine-grained motor control (i.e. the agent could rotate in small increments, accelerate forward/backward/sideways, or effect rotational acceleration while moving).</s></p><p><s>DeepMind Lab Environments: Goal-Driven and Goal-Doors Goal-driven and Goal-Doors are complex, visually-rich multi-room environments (see Fig. <ref type="figure" target="#fig_2">3a-d</ref>).</s><s>Mazes were formed within an 11×11 grid, corresponding to 2.7 × 2.7 meters, (see below for definition of larger 11×17 mazes).</s></p><p><s>Mazes were procedurally generated at the beginning of each episode; thus, the layout, wall textures, landmarks (i.e.</s><s>intra-maze cues on walls) and goal location were different for each episode but consistent within an episode.</s><s>Distal cues, in the form of buildings rendered at infinity, were as described for the square arena (see above).</s></p><p><s>The critical difference between goal-driven and goal-doors tasks is that the latter had the additional challenge of stochastic doors within the maze.</s><s>Specifically, the state of the doors (i.e.</s></p><p><s>open or closed) randomly changed during an episode each time the agent reached the goal.</s><s>This meant that the optimal path to the goal from a given location changed during an episode -requiring the agent to recompute trajectories.</s></p><p><s>In both tasks the agent starts at a random location within the maze and its task is to explore to find the goal.</s><s>The goal in both levels was always represented by the same object (see Fig. <ref type="figure" target="#fig_2">3c</ref>).</s></p><p><s>After getting to the goal the agent received a reward of 10 points after which it was teleported to a new random location within the maze.</s><s>In both levels, episodes lasted a fixed duration of 5, 400 environment steps (90 seconds).</s></p><p><s>Generalisation on larger environments.</s><s>We tested the ability of agents trained on the standard environment (11×11) to generalise to larger environments (11×17, corresponding to 2.7 × 4.25 meters).</s><s>The procedural generation and composition of these environments was done as with the standard environments.</s><s>Each agent was trained in the 11×11 goal-driven maze for a total of 10 9</s></p><p><s>environment steps, and the best performing replica (i.e.</s><s>highest asymptotic performance averaged over 100 episodes in 11×11) was selected for evaluation in the larger maze.</s><s>Note that the weights of the agent were frozen during evaluation on the larger maze.</s><s>Evaluation was over 100 episodes of fixed duration 12, 600 environment steps (210 seconds).</s></p><p><s>Probe mazes to assess shortcut behaviour To test the agent's ability to follow novel, goaldirected routes, we created a series of environments inspired by mazes designed to test the shortcut abilities of rodents.</s></p><p><s>The first maze is a linearised version of Tolman's sunburst maze (Fig. <ref type="figure" target="#fig_3">4a</ref>) used to determined if the agent was able to follow an accurate heading towards the goal when a path became available (see Supplementary Methods for details).</s><s>In this maze, after reaching the goal, the agent was teleported to the original position with the same heading orientation.</s><s>Here we tested agents trained in the "goal doors" environments.</s><s>Specifically, the network weights were held frozen during testing and all the agents were tested for 100 episodes, each one lasting for a fixed duration of 5, 400 environment steps (90 seconds).</s></p><p><s>The second environment, the double E-maze (Fig. <ref type="figure" target="#fig_3">4d</ref>), was designed to test the agent's ability to traverse an entirely novel portion of space (see Supplementary Methods for details).</s><s>In this maze we had a training and a testing condition.</s><s>During the former agents were trained as in the other mazes (e.g.</s><s>goal-driven; training details given below), whereas at test time weights were frozen.</s></p><p><s>The agent always started in the central room (e.g.</s><s>see Fig. <ref type="figure" target="#fig_3">4d</ref>).</s><s>The maze had stochastic doors</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Agent Architectures</head><p><s>Architecture for the Grid Cell Agent.</s><s>The agent architecture (see Extended Data Figure <ref type="figure">5</ref>) was composed of a visual module, of the grid cell network (described above), and of an actor-critic learner <ref type="bibr" target="#b36">40</ref> .</s><s>The visual module was a neural network with input consisting of a three channel (RGB)</s></p><formula xml:id="formula_7">64 × 64 image φ ∈ [-1, 1] 3×84×84 .</formula><p><s>The image was processed by a convolutional neural network (see Supplementary Methods for the details of the convolutional neural network), which produced embeddings, e, which in turn were used as input to a fully connected linear layer trained in a supervised fashion to predict place and head-direction cell ensemble activations, c and h (as specified above), respectively.</s><s>The predicted place and head direction cell activity patterns were provided as input to the grid network 5% of the time on average, akin to occasional imperfect observations made by behaving animals of salient environmental cues <ref type="bibr" target="#b23">27</ref> .</s><s>Specifically, the output of the convolutional network e is then passed through a masking layer which zeroed the units with a probability of 95%.</s></p><p><s>The grid cell network of the agent was implemented as in the supervised learning set up except that the LSTM ("GRID LSTM") was not initialised based upon ground truth place cell activations but rather set to zero.</s><s>The input to the grid cell network were the two translational velocities, u and v, as in DeepMind Lab it is possible to move in a direction different from the facing direction, and the sine and cosine of the angular velocity, φ, (these velocities are provided by DeepMind Lab) -and additionally the y and z output by the vision module.</s><s>In contrast to the supervised learning case, here the grid cell network had to use y and z to learn how to reset its internal state each time it was teleported to an arbitrary location in the environment (e.g. after visit to goal).</s><s>As in the supervised learning experiments described above, the configuration of place fields (i.e.</s><s>location of place field centres in the 11×11 environments, "goal-driven" and "goaldoors", 10×10 square arena, and 13×13 double E) were constant throughout training (i.e.</s><s>across episodes).</s></p><p><s>For the actor-critic learner the input was a three channel (RGB) 64 × 64 image φ t ∈</s></p><p><s>[-1, 1] 3×84×84 , which was processed by a convolutional neural network followed by a fully connected layer (see Supplementary Methods for the details of the convolutional neural network).</s><s>The output of the fully connected layer of the convolutional network e 1 t was then concatenated with the reward r t , the previous action a t-1 , the current "grid code", g t , goal "grid code", g * (i.e.</s><s>linear layer activations observed last time the goal was reached) -or zeros if the goal had not yet been reached in the episode.</s><s>Note we refer to these linear layer activations as "grid codes" for brevity, even though units in this layer comprise also units resembling head direction cells, and border cells (e.g.</s><s>see Extended Figure <ref type="figure">6a</ref>).</s><s>This concatenated input was provided to an LSTM with 256 units.</s><s>The LSTM had 2 different outputs.</s><s>The first output, the actor, is a linear layer with 6 units followed by a softmax activation function, that represents a categorical distribution over the agent's next action.</s><s>The second output, the critic, is a single linear unit that estimates the value function.</s><s>Note that we refer to this as the "policy LSTM" for brevity, even though it also outputs the value function.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Comparison agents</head><p><s>We compared the performance of the grid cell agent against two agents specifically because they use a different representational scheme for space (i.e.</s><s>place cell agent, place cell prediction agent), and relate to theoretical models of goal-directed navigation from the neuroscience literature (e.g. <ref type="bibr" target="#b37">41,</ref><ref type="bibr" target="#b38">42</ref> </s><s>.</s><s>We also compared the grid cell agent against a baseline deep RL agent, Asynchronous Advantage Actor-Critic (A3C) <ref type="bibr" target="#b36">40</ref> .</s></p><p><s>Place cell agent.</s><s>The place cell agent architecture is shown in Extended Data Figure <ref type="figure">8b</ref>.</s><s>In contrast to the grid cell agent, the place cell agent used ground truth information: specifically, the ground-truth place, c t , and head-direction, h t , cell activations (as described above).</s><s>These activity vectors were provided as input to the policy LSTM in an analogous way to the provision of grid codes in the grid cell agent.</s></p><p><s>Specifically, the output of the fully connected layer of the convolutional network e t was concatenated with the reward r t , the previous action a t-1 , the ground-truth current place code, c t , and current head-direction code, h t -together with the ground truth goal place code, c * , and ground truth head direction code, h * , observed last time the goal was reached -or zeros if the goal had not yet been reached in the episode (see Extended Data Figure <ref type="figure">8b</ref>).</s><s>The convolutional network had the same architecture described for the grid cell agent.</s></p><p><s>Place cell prediction agent.</s><s>The architecture of the place cell prediction agent (Extended Data Figure <ref type="figure">9a</ref>) is similar to the grid cell agent described above: the key difference is the nature of the input provided to the policy LSTM as described below.</s><s>The place cell prediction agent had a grid cell network -with the same parameters as that of the grid cell agent.</s><s>However, instead of using grid codes from the linear layer of the grid network g, as input for the policy LSTM (i.e. as in the grid cell agent), we used the predicted place cell population activity vector y and the predicted head direction population activity vector z (i.e. the activations present on the output place and head direction unit layers of the grid cell network at each timestep) (see Supplementary Methods).</s></p><p><s>The critical difference between the place cell agent and the place cell prediction agent (see Extended Data Figure <ref type="figure">8b</ref> and 9a respectively) is that the former used ground truth information (i.e.</s></p><p><s>place and head direction cell activations for current location and goal location) -whereas the latter used the population activity produced across the output place and head direction cell layers (i.e.</s></p><p><s>for current location and goal location) by the linear layer of the same grid network as utilised by the grid cell agent.</s></p><p><s>A3C We implemented the asynchronous advantage actor-critic architecture described in <ref type="bibr" target="#b36">40</ref> with convolutional network having the same architecture described for the grid cell agent (Extended Data Figure <ref type="figure">8a</ref>).</s></p><p><s>Other Agents We also assessed the performance of two deep RL agents with external memory (Extended Data Figure <ref type="figure">9b</ref>), which served to establish the challenging nature of the multicompartment environments (goal-doors and goal-driven).</s><s>First, we implemented a memory network agent ("NavMemNet") consisting of the FRMQN architecture 3 but instead of Q-learning we used the Asynchronous Advantage Actor-Critic (A3C) algorithm described below.</s><s>Further, the input to memory was generated as an output from the LSTM controller (Extended Data Figure <ref type="figure">9b</ref>), rather than constituting embeddings from the convolutional network (i.e. as in 3 ).</s><s>The convolutional network had the same architecture described for the grid cell agent and the memory was formed of 2 banks (keys and values), each one with 1350 slots.</s></p><p><s>Second, we implemented a Differentiable Neural Computer ("DNC") agent which uses content-based retrieval and writes to the most recently used or least recently used memory slot. <ref type="bibr" target="#b39">43</ref></s><s>ning algorithms We used the Asynchronous Advantage Actor-Critic (A3C) algorithm <ref type="bibr" target="#b36">40</ref> , which implements a policy, π(a|s, θ), and an approximation to its value function, V (s, θ), using a neural network parameterised by θ.</s><s>A3C adjusts the network parameters using n-step lookahead values, Rt = i=0...n-1 γ i r t+i + γ n V (s t+n , θ), to minimise:</s></p><formula xml:id="formula_8">L A3C = L π + αL V + βL H ,</formula><p><s>where</s></p><formula xml:id="formula_9">L π = -E st∼π Rt , L V = E st∼π Rt -V (s t , θ) 2 , L H = -E st∼π [H(π(•|s t , θ))].</formula><p><s>Where L H is a policy entropy regularisation term (see Supplementary Methods for details of the reinforcement learning approach).</s><s>The grid cell network and the vision module were trained with the same loss reported for supervised learning:</s></p><formula xml:id="formula_10">L( y, z, c, h) = -N i=1 c i log(y i ) -M j=1 h j log(z j )</formula><p><s>Agent training details.</s><s>We follow closely the approach of <ref type="bibr" target="#b36">40</ref> .</s><s>Each experiment used 32 actor-critic learner threads running on a single CPU machine.</s><s>All threads applied updates to their gradients every 4 actions (i.e.</s><s>action repeat of 4) using RMSProp with shared gradient statistics <ref type="bibr" target="#b36">40</ref> .</s><s>All the experiments were run for a total of 10 9 environment steps.</s></p><p><s>In architectures where the grid cell network and the vision module were present we used a shared buffer <ref type="bibr" target="#b40">44,</ref><ref type="bibr" target="#b41">45</ref> where we stored the agents experiences at each time-step, e t = (φ t , u t , v t ), collected over many episodes.</s><s>All the 32 actor-critic workers were updating the same shared buffer which had a total size of 20e6 slots.</s><s>The vision module was trained with mini batches of size 32 frames ( φ) sampled randomly from the replay buffer.</s><s>The grid cell network was trained with mini batches of size 10, randomly sample from the buffer, each one comprising a sequence of 100 consecutive observations, [ φ, u, v].</s><s>These mini batches were firstly forwarded through the vision module to get c, and h, which were then passed trough a masking layer which masked them to 0 with a probability of 95% (i.e. as described above in section on grid cell architecture).</s><s>The output of this masking layer was then concatenate with u, v, sin φ, cos φ, which were then used as inputs to the grid network, as previously described (see Extended Data Figure <ref type="figure">5</ref> for details).</s></p><p><s>Both networks were trained using one single thread, one to train the vision module and another to train the grid network (so in total we used 34 threads).</s><s>Also, there was no gradient sharing between the actor-critic learners, the vision module and the grid network.</s></p><p><s>The hyperparameters of the grid cell network were kept fixed across all the simulations and were derived from the best performing network in the supervised learning experiments.</s><s>For the hyperparameter details of the vision module, the grid network and the actor-critic learner please refer to Table <ref type="table">2</ref>.</s><s>For each of the agents in this paper, 60 replicas were run with hyperparameters sampled from the same interval (see Table <ref type="table">2</ref>) and different initial random seeds.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Details for lesion experiment</head><p><s>To conduct a lesioning experiment in the agent we trained the grid cell agent with dropout applied on the goal grid code input g * .</s><s>Specifically, every 100 training steps we generated a random mask to silence 20% of the units in the goal grid code ( g * ) -i.e. units were zeroed.</s><s>This procedure was implemented to ensure that the policy LSTM would become robust through training to receiving a lesioned input (i.e. would not catastrophically fail), and still be able to perform the task.</s></p><p><s>We then selected the agent with the best performance over 100 episodes, and we computed the grid score of all units found in g.</s><s>The critical comparison to test the importance of grid-like units to vector-based navigation was as follows.</s><s>In one condition we ran 100 testing episodes where we silenced the 25% units in g * with the highest grid scores.</s><s>In the other condition, we ran 100 testing episodes with the same agent with 25% random units in g * silenced.</s><s>In this second case we ensured head direction cells with a resultant vector length of more than 0.47 were not silenced, to preserve crucial head direction signals.</s><s>We then compared the performance, and representation of metrics relating to vector-based navigation, of the agents under these two conditions.</s></p><p><s>Details of experiment using "fake" goal grid code To demonstrate that the goal grid code provided sufficient information to enable the agent to navigate to an arbitrary location we took an agent trained in the square arena, we froze the weights and we ran it in the same square arena for 5, 400 steps.</s><s>Critically, after the 6th time that the agent reach the goal, we sampled the grid code from a random point that the agent visited in the environment (called fake goal grid code).</s><s>We then substituted the true goal grid code with this fake goal grid code, to show that this would be sufficient to direct the agent to a location where there was no actual goal.</s></p><p><s>Agent Performance For evaluating agent performance during training (as in Fig. <ref type="figure" target="#fig_1">2f</ref>, Fig. <ref type="figure" target="#fig_2">3e,</ref><ref type="figure">f</ref>)</s></p><p><s>we selected the 30 replicas (out of 60) which had the highest average cumulative reward across 100 episodes.</s><s>Also we assessed the robustness of the architecture over different initial random seeds and the hyperparameters in Table <ref type="table">2</ref> by calculating the area under the curve (AUC).</s><s>To plot the AUC we ran 60 replicas with hyperparameters sampled from the same interval (see Table <ref type="table">2</ref>)</s></p><p><s>and different initial random seeds (Extended Data Figure <ref type="figure">7a-c</ref>).</s></p><p><s>Neuroscience-based analyses of network units Generation of activity maps Spatial (ratemaps) and directional activity maps were calculated for individual units as follows.</s><s>Each point in the trajectory was assigned to a specific spatial and directional bin based on its location and direction of facing.</s><s>Spatial bins were defined as a 32×32</s></p><p><s>square grid spanning each environment and directional bins as 20 equal width intervals.</s><s>Then, for each unit, the mean activity over all the trajectories points assigned to that bin was found.</s><s>These values were displayed and analysed further without additional smoothing.</s></p><p><s>Inter-trial stability For each unit the reliability of spatial firing between baseline trials was assessed by calculating the spatial correlation between pairs of rate maps taken at 2 different logging steps in training (t = 2e5; t = 3e5).</s><s>The total training time was 3e5 so the points were selected with enough time difference to minimise the chances of finding random correlations.</s><s>The Pearson product moment correlation coefficient was calculated between equivalent bins in the two trials and unvisited bins were excluded from the measure.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Quantification of spatial activity</head><p><s>Where possible, we assessed the spatial modulation of units using measures adopted from the neuroscience literature.</s><s>The hexagonal regularity and scale of grid-like patterns were quantified using the gridness score <ref type="bibr" target="#b14">18,</ref><ref type="bibr" target="#b16">20</ref> and grid scale <ref type="bibr" target="#b16">20</ref> , measures derived from the spatial autocorellogram <ref type="bibr" target="#b16">20</ref> of each unit's ratemap.</s><s>Similarly, the degree of directional modulation exhibited by each unit was assessed using the length of the resultant vector <ref type="bibr" target="#b42">46</ref> of the directional activity map.</s><s>Finally, the propensity of units to fire along the boundaries of the environment was quantified with the border score <ref type="bibr">47</ref> .</s></p><p><s>The gridness and border scores exhibited by units in the linear layer were benchmarked against the 95th percentile of null distributions obtained using a permutation procedure (spatial field shuffle 48 ) applied to each unit's ratemap.</s><s>This shuffling procedure aimed to preserve the local topography of fields within each ratemap while distributing the fields themselves at random 48 .</s></p><p><s>The means, over units, of the thresholds obtained were gridness &gt; 0.37 and border score &gt; 0.50.</s></p><p><s>Units exceeding these thresholds were considered to be grid-like and border-like, respectively.</s><s>To identify directionally modulated cells we applied Rayleigh tests of directional uniformity to the binned directional activity maps.</s><s>A unit was considered to be directionally modulated if the null hypothesis of uniform was rejected at the α = 0.01 level -corresponding to units with resultant vector length in excess of 0.47 (See Supplementary Methods for further details).</s></p><p><s>Clustering of scale in grid-like units To determine if grid-like units exhibited a tendency to cluster around specific scales we applied two methods.</s><s>First, following <ref type="bibr" target="#b18">22</ref> , to determine if the scales of grid-like units (gridness &gt; 0.37, 129/512 units) followed a continuous or discrete distribution we calculated the discreteness measure <ref type="bibr" target="#b18">22</ref> of the distribution of their scales (see Supplementary Methods).</s><s>The discreteness score of the real data was found to exceed that of all of the 500 shuffles.</s></p><p><s>Second, to characterise the number and location of scale clusters, the distribution of scales from grid-like units was fit with Gaussian mixture distributions, 3 components were found to provide the most parsimonious fit, indicating the presence of 3 scale clusters.</s><s>(See Supplementary Methods for further details.)</s></p><p><s>Multivariate decoding of representation of metric quantities within LSTM To test whether the grid agent learns to use the predicted vector based navigation (VBN) metric codes, we recorded the activation from the hidden units of the the Policy LSTM layer while the agent navigated 200 hundred episodes in the land maze.</s><s>We used L2-regularized (ridge) regression to decode Euclidean distance and allocentric direction to the goal (see Supplementary Methods for full decoding details).</s><s>We specifically focussed on twelve steps (steps 9-21) during the early portion of navigation, but after the agent has had time to accurately self-localize.</s><s>It is this early period after the agent has reached the goal for the first time where a VBN strategy should be most effective.</s><s>We conducted the same analysis on the place cell agent control which is not predicted to use vector-based navigation as efficiently.</s><s>The decoding accuracy was measured as the correlation between predicted and actual metric values in held-out data.</s><s>Decoding accuracy was compared across different agents by assessing the difference in decoding correlations between the agents.</s><s>A bootstrap method (using 10,000 samples) was used to computed a 95% confidence interval on this correlation difference, and these are reported for each comparison.</s><s>The same approach was used to decode and compare these two metrics in the lesioned agents on the land maze.</s><s>Finally, to explore VBN metrics in a more complex environment, the same method was applied to the goal-driven task.</s><s>In this case we also investigated metric decoding in the control A3C agent.</s></p><p><s>Data availability statement All reinforcement learning tasks described throughout the paper were built using the publicly available DeepMind Lab platform (https://github.com/deepmind/lab).</s><s>We expect to release this set of tasks through this platform in the near future.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>BiorXiv (2017).</head><p><s>There is Supplemental Information that contains additional results, discussion and details about the Methods.</s></p><p><s>Extended data for Vector-based Navigation using Grid-like Representations in Artificial Agents.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>605</head><p><s>Extended Data Figure <ref type="figure" target="#fig_0">1</ref>: Network architecture in the supervised learning experiment.</s><s>The recurrent layer of the grid cell network is an LSTM with 128 hidden units.</s><s>The recurrent layer receives as input the vector [v t , sin( φt ), cos( φt )].</s><s>The initial cell state and hidden state of the LSTM, l 0 and m 0 respectively, are initialised by computing a linear transformation of the ground truth place c 0 and head-direction h 0 activity at time 0. The output of the LSTM is followed by a linear layer on which dropout is applied.</s><s>The output of the linear layer, g t , is linearly transformed and passed to two softmax functions that calculate the predicted head direction cell activity, z t , and place cell activity, y t , respectively.</s><s>We found evidence of grid-like and head direction-like units in the linear layer activations g t .</s></p><p><s>Extended Data Figure <ref type="figure" target="#fig_2">3</ref> This separation was imposed to minimise the effect of temporal correlations and to provide a conservative test of stability.</s><s>Grid-like units (gridness &gt; 0.37) blue, directionally modulated units (resultant vector length &gt; 0.47) green.</s><s>Grid-like units exhibit high spatial stability, while directionally modulated units do not.</s><s>c) Robustness of the grid representation to starting conditions.</s><s>The network was retrained 100 times with the same hyperparamters but different random seeds controling the initialisation of network weights, c and h.</s><s>Populations of grid-like units (gridness &gt; 0.37) were found to appear in all cases, the average proportion of grid-like units being 23% (SD of 2.8%).</s><s>In this case the supervised learner does not receive the ground truth c 0 and h 0 to signal its initial position, but uses input from the visual module to self-localize after placement at a random position within the environment.</s><s>Visual module: since experimental evidence suggests that place cell input to grid cells functions to correct for drift and anchor grids to environmental cues <ref type="bibr" target="#b17">21,</ref><ref type="bibr" target="#b23">27</ref> , visual input was processed by a convolutional network to produce place cell (and head direction cell) activity patterns which were used as input to the grid network.</s><s>The output of the vision module was only provided 5% of the time to the grid network; see Methods for implementational details), akin to occasional observations made by behaving animals of salient environmental cues <ref type="bibr" target="#b23">27</ref> .</s><s>The output of the vision module was concatenated with u, v, sin φ, cos φ to form the input to the GRID LSTM, which is the same network as in the supervised case (see Methods and Extended</s></p><p><s>Data Figure <ref type="figure" target="#fig_0">1</ref>).</s><s>The actor critic learner (light blue dashed) receives as input the concatenation of e 1 t produced by a convolutional network with the reward r t , the previous action a t -1 , the linear layer activations of the grid cell network g t ("current grid-code"), and the linear layer activations observed last time the goal was reached, g * .</s><s>g * ("goal grid-code"), which is set to zeros if the goal has not been reached in the episode.</s><s>The fully connected layer was followed by an LSTM with 256 units.</s><s>The LSTM has 2 different outputs.</s><s>The first output, the actor, is a linear layer with 6 units followed by a softmax activation function, that represents a categorical distribution over the agent's next action π t .</s><s>The second output, the critic, is a single linear unit that estimates the value function v t .</s><s>Extended Data Figure <ref type="figure">8</ref>: Architecture of the A3C and place cell agent.</s><s>a) The A3C implementation is as described in <ref type="bibr" target="#b36">40</ref> .</s><s>b) The place cell agent was provided with the ground-truth place, c t , and head-direction, h t , cell activations (as described above) at each time step.</s><s>The output of the fully connected layer of the convolutional network e t was concatenated with the reward r t , the previous action a t -1, the ground-truth current place code, c t , and current head-direction code, h t -together with the ground truth goal place code, c * , and ground truth head direction code, h * , observed the last time the agent reached the goal (see Methods).</s></p><p><s>Extended Data Figure <ref type="figure">9</ref>: Architecture of the place cell prediction agent and of the NavMem-Net agent.</s><s>a) The architecture of the place cell prediction agent is similar to the grid cell agent -having a grid cell network with the same parameters as that of the grid cell agent.</s><s>The key difference is the nature of the input provided to the policy LSTM.</s><s>Instead of using grid codes from the linear layer of the grid network g, we used the predicted place cell population activity vector y and the predicted head direction population activity vector z (i.e. the activations present on the output place and head direction unit layers of the grid cell network, corresponding to the current and goal position) as input for the policy LSTM.</s><s>As in the grid cell agent, the output of the fully connected layer of the convolutional network, e t , the reward r t , and the previous action a t -1, were also input to the policy LSTM.</s><s>The convolutional network had the same architecture described for 1 -Supplementary Results for Vector-based Navigation using Grid-like Representations in Artificial Agents.</s></p><p><s>1a -Assessing path integration and goal-finding in a square arena To better understand the advantage conveyed by a grid-like representation, we trained the agent to navigate to an unmarked goal in a simple setting inspired by the classic Morris water maze (Fig. <ref type="figure" target="#fig_1">2b&amp;c</ref>; 2.5m×2.5m</s><s>square arena; see Methods).</s><s>The agent was trained in episodes to ensure it was able to generalize to arbitrary open field enclosures, each episode consisted of 5, 400 steps -corresponding to approximately 90 s in total -after which the goal location, floor texture, and cue location were</s></p><p><s>randomized.</s><s>An episode started with the agent in a random location, requiring it to first explore in order to find an unmarked goal.</s><s>Upon reaching the goal the agent was teleported to another random location and continued to navigate with the aim of maximising the number of times it reached the goal before the episode ended.</s><s>In this setting self-localisation was more challenging.</s></p><p><s>Previously, in experiment described above, information about the ground truth initial location was provided to initialise the LSTM, here the grid network learned to use visual information to determine the agent's starting location and to correct for drift resulting from noise introduced to the velocity inputs (see Methods).</s><s>Despite these differences the grid network continued to self-localize accurately, outputting place cell predictions consistent with the agent's location (Fig. <ref type="figure" target="#fig_1">2e</ref>).</s></p><p><s>After locating the goal for the first time during an episode, the agent typically returned directly to it from each new starting position, showing decreased latencies for subsequent visits (average score for 100 episodes: grid cell agent = 289 vs place cell agent = 238, effect size = 1.80, 95% CI [1.63, 1.99], Fig. <ref type="figure" target="#fig_1">2h</ref>, Extended Data Figure <ref type="figure">6d</ref>).</s><s>Performance of the grid cell agent was substantially focused on the initial portion of navigation after the agent had reached the goal and was teleported to a new location.</s><s>We found that the policy LSTM of the grid cell agent contained representations of two key components of vector-based navigation (Euclidean distance, and allocentric goal direction), and that both were more strongly present than in the place cell agent (Euclidean distance difference in r = 0.17; 95% CI [0.11, 0.24]; Goal direction difference in r = 0.22; 95% CI [0.18, 0.26]; Figure <ref type="figure" target="#fig_1">2j&amp;k</ref>).</s><s>Notably, a neural representation of goal distance has recently been reported in mammalian hippocampus <ref type="bibr" target="#b25">29</ref> (also see <ref type="bibr" target="#b43">49</ref> ).</s><s>To determine the behavioral relevance of these two metric codes, we examined the goal-homing accuracy in each episode over several steps immediately following the period of metric decoding.</s><s>We found that variation in both Euclidean distance (r = 0.22, 95% CI [-0.32, -0.09]) and allocentric goal direction (r = 0.22, 95% CI [-0.38, -0.15]) decoding error correlated with subsequent behavioral accuracy.</s><s>This suggests that stronger metric codes are indeed important for accurate goal-homing behavior.</s></p><p><s>Finally, to determine the specific contribution of the grid-like units, we made targeted lesions to the goal grid code and reexamined performance and representation of the goal directed vector.</s><s>When 25% of the most grid-like units were silenced (see Methods), performance was worse than lesioning 25% at random (average score for 100 episodes: 126.1 vs. 152.5,</s><s>respectively; effect size = 0.38, 95% CI [0.34, 0.42]).</s><s>Further, as expected, goal-directed vector codes were more strongly degraded (Euclidean distance: random lesions decoding accuracy r = 0.45, top-grid lesions decoding accuracy r = 0.38, difference in decoding accuracy = 0.08, 95% CI [0.03, 0.13]).</s><s>We also performed an additional experiment where the effect of the targeted grid lesion was compared to that of lesioning non-grid units with patchy firing (see Supplemental Methods -section 3d for the details of the procedure).</s><s>Our results show that the targeted grid cell lesion had a greater effect than the patchy non-grid cell lesion (average score for 100 episodes: 126.1 vs. 151.7,</s><s>respectively; effect size = 0.38, 95% CI [0.34, 0.42]).</s><s>These results support a role for the grid-like units in vector-based navigation, with the relatively mild impact on performance potentially accounted for by the difference in lesioning networks as compared to animals.</s><s>Specifically, the procedure for lesioning networks differs in important respects from experimental lesions in animals -which bears upon the results observed.</s><s>Briefly, networks have to be trained in the presence of an incomplete goal grid code and thus have the opportunity to develop a degree of robustness to the lesioning procedure -which would otherwise likely result in a catastrophic performance drop (see Methods).</s><s>This opportunity is not typically afforded to experimental animals.</s><s>This, therefore, may explain the significant but relatively small performance deficit observed in lesioned networks.</s></p><p><s>1c -Comparison of grid cell agent with other agents in challenging, procedurally-generated multi-room environments Our comparison agents for the grid cell agent included an agent specifically designed to use a different representational scheme for space (i.e.</s><s>place cell agent, see Extended Data Figure <ref type="figure">8b</ref> and see Methods), and a baseline deep RL agent (A3C <ref type="bibr" target="#b36">40</ref> , see Extended Data Figure <ref type="figure">8a</ref>).</s><s>.</s><s>A key difference between grid and place cell based models is that the former are proposed to enable the computation of goal-directed vectors across large-scale spaces 7, 10, 11 and 50 , whereas place cell based models are inherently limited in terms of navigational range (i.e. to the largest place field) and do not support route planning across unexplored spaces <ref type="bibr" target="#b7">11</ref> .</s></p><p><s>First, we test these three agents in the "goal-driven" maze (see Methods).</s><s>The grid-cell agent ex-hibited high levels of performance, and over the course of 100 episodes, attained an average score of 346.</s><s>https://youtu.be/BWqZwLQfwlM).</s><s>Interestingly, therefore, the enhanced performance of the grid cell agent was particularly evident when it was necessary to recompute trajectories due to changes in the door configuration, highlighting the flexibility of vector-based navigation in exploiting ad hoc short-cuts (Fig. <ref type="figure" target="#fig_2">3f</ref>).</s></p><p><s>The grid cell agent exhibited stronger performance than a professional human player in both "goaldriven" (average score: grid cell agent = 346.50 vs. professional human player = 261, effect size = 4.00, 95% CI [3.50, 4.52]) and "goal-doors" (average score: grid cell agent = 284.30</s><s>vs. professional human player = 240.5,</s><s>effect size = 2.49, 95% CI [2.18, 2.81]).</s><s>The human expert received 10 episodes worth of training in each environment before undergoing 20 episodes of testing.</s><s>This is considerably less training than that experienced by the network.</s><s>Importantly, however, the mammalian brain has evolved to path integrate and naturally the human expert had a lifetimes worth of relevant navigational experience.</s><s>Hence, although directly drawing concrete conclusions from relative performance of human and agents is necessarily difficult, providing human-level performance is useful as a broad comparison and represents a commonly used benchmark in similar papers <ref type="bibr" target="#b40">44</ref> .</s></p><p><s>We also tested the ability of agents trained on the standard environment (11 × 11)  We assessed the performance of two deep RL agents with external memory 3 , <ref type="bibr" target="#b39">43</ref> (see Extended Data Figure <ref type="figure">9b</ref>).</s><s>Whilst these agents were trained purely using RL -that is, they did not utilize supervised learning implemented by the grid cell agent -their relatively poor performance illustrates the challenge posed by the environments used (i.e.</s><s>goal-driven and goal-doors) and shows that is not readily solved by the use of external memory alone.</s><s>Importantly, this also serves to highlight the substantial advantage afforded to agents that can exploit vector-based mechanisms grounded in a grid-cell based Euclidean framework of space -and the potential for future work to examine the combination of such navigational strategies with more memory-intensive approaches.</s><s>We also compare the grid cell agent with a variation of the place cell agent which used the predicted place cell and head direction cell as input to the Policy LSTM instead of the ground truth information (see Extended Data Figure <ref type="figure">9a</ref> and Supplementary Methods).</s><s>This agent exhibited substantially poorer performance than the grid agent.</s></p><p><s>Further, decoding accuracy was substantially and significantly higher in the grid cell agent than 1d -Probe mazes assessing ability to take novel shortcuts A core feature of mammalian spatial behaviour is the ability to exploit novel shortcuts and traverse unvisited portions of space <ref type="bibr" target="#b5">9</ref> , a capacity thought to depend on vector-based navigation <ref type="bibr" target="#b5">9,</ref><ref type="bibr" target="#b7">11</ref> .</s><s>To assess this, we examined the ability of the grid cell agent and comparison agents to use novel shortcuts when they became available in specifically configured probe mazes (see Methods for details).</s><s>First, agents trained in the goal-doors environment were exposed to a linearized version of Tolman's sunburst maze.</s><s>The grid cell agent, but not comparison agents, was reliably able to exploit shortcuts, preferentially passing through the doorways that offered a direct route towards the goal (Fig. <ref type="figure" target="#fig_3">4a-c</ref>, and Extended Data Figure <ref type="figure" target="#fig_9">10</ref>).</s></p><p><s>The average testing score of the grid cell agent was higher than that of the place agent (124.1 vs 60.9, effect size = 1.</s><s>Next, to test the agents' abilities to traverse a previously unvisited section of an environment, we employed the "double-E shortcut" maze (Fig. <ref type="figure" target="#fig_3">4d</ref>-f, and Extended Data Figure <ref type="figure" target="#fig_9">10e-l</ref>).</s><s>During training, the corridor presenting the shortest route to the goal was closed at both ends, preventing access or observation of the interior.</s><s>In this simple configuration the grid and place cell agents performed similarly, exceeding the RL control agent (Extended Data Figure <ref type="figure" target="#fig_9">10i</ref>).</s><s>However, at test, when the doors were opened, the grid cell agent was able to exploit the short-cut corridor, whereas the control agents continued to follow the longer route they had previously learnt (Extended Data Figure <ref type="figure" target="#fig_9">10j-l</ref>).</s><s>In the "double-E shortcut" maze performance does not significantly differ between the grid and place cell agents, but both are significantly better than the A3C control (grid cell agent vs. place cell agent, effect size = 0. 2a -Backpropagation through time (BPTT) Whilst backpropagation provides a powerful mechanism for adjusting the weights within hierarchical networks analogous to those found in the brain (e.g. the ventral visual stream), it has long been thought to be biologically implausible for several reasons: for example, it requires access to information that is non-local to a synapse (i.e.</s><s>information about errors many layers downstream).</s><s>However, recent research in several directions have provided fresh new insights into how a process akin to backpropagation may be implemented in the brain <ref type="bibr" target="#b45">51</ref> .</s><s>Whilst less research has been conducted into how BPTT could be implemented in the brain, recent work points to potentially promising avenues that deserve further exploration <ref type="bibr" target="#b46">52</ref> .</s></p><p><s>2b -Relationship to previous models of grid cells Our work contrasts with previous approaches where grid cells have been hard-wired <ref type="bibr" target="#b47">[53]</ref><ref type="bibr" target="#b48">[54]</ref><ref type="bibr" target="#b49">[55]</ref><ref type="bibr" target="#b50">[56]</ref> and <ref type="bibr" target="#b51">57</ref> , derived through eigendecomposition of place fields <ref type="bibr" target="#b52">58,</ref><ref type="bibr" target="#b53">59</ref> , or arisen through self organization in the absence of an objective function <ref type="bibr" target="#b54">60</ref> .</s><s>It is worth noting that our experiments were not designed to provide insights into the development of grid cells in the brain -due to the limitations of the training algorithm used (i.e.</s><s>backpropagation) in terms of biological plausibiliy (although see <ref type="bibr" target="#b55">61</ref> ).</s><s>More generally, however, our findings accord with the perspective that the internal representations of individual brain regions such as the entorhinal cortex arise as a consequence of optimizing for specific ethologically important objective functions (e.g.</s><s>path integration) -providing a parallel to the optimization process in neural networks <ref type="bibr" target="#b56">62</ref> .</s></p><p><s>3 -Supplementary Methods for Vector-based Navigation using Grid-like Representations in Artificial Agents.</s></p><p><s>3a -Navigation through Deep RL Probe mazes to test for shortcut behavior The first maze used to test shortcut behaviour was a linearized version of Tolman's sunburst maze <ref type="bibr" target="#b57">63</ref> (Fig. <ref type="figure" target="#fig_3">4a</ref>).</s><s>The maze was used to determined if the agent was able to follow an accurate heading towards the goal when a path became available.</s><s>The door was open (door 5, Fig. <ref type="figure" target="#fig_3">4a</ref>), but after that all the doors were opened for the remainder of the episode.</s><s>After reaching the goal, the agent was teleported to the original position with the same heading orientation.</s><s>This maze was used to test the shortcut capabilities of agents that had been previously trained in the "goal doors" environment.</s><s>All the agents were tested in the maze for 100 episodes, each one lasting for a fixed duration of 5, 400 environment steps (90 seconds).</s></p><p><s>The second maze, termed double E-maze, was designed to test the agents abilities to traverse a previously unvisited section of an environment.</s><s>The maze was size 12×13 and was formed of 2 symmetric sides each one with 3 corridors.</s><s>The goal location was always on the bottom right or left, and the location was randomized over episodes.</s><s>During training, the left and right corridors closest to the bottom (i.e.</s><s>those providing the shortest paths to the goals) were always closed from both sides to avoid any exploration down these corridors (see Extended Data Figure <ref type="figure" target="#fig_9">10e&amp;f</ref>).</s><s>This ensured any subsequent shortcut behavior had to traverse unexplored space.</s><s>Of the remaining corridors, at any time, on each side only one was accessible (top or middle, randomly determined).</s><s>Each time the agent reached the goal, the doors were randomly configured again (with the same constraints).</s><s>The agent always started in a random location in the central room with a random orientation.</s><s>At test time, after the agent reached the goal for the first time, all corridors were opened, allowing potential shortcut behavior (see Extended Data Figure <ref type="figure" target="#fig_9">10g&amp;h</ref>).</s></p><p><s>During the test phase, the agent always started in the center of the central room facing north.</s><s>Each agent was trained for 1e9 environment step divided into episodes of 5, 400 steps (90 seconds), and subsequently tested for 100 episodes, each one lasting for a fixed duration of 5, 400 environment steps (90 seconds).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3b -Additional information about Agent Architectures</head><p><s>Details of vision module in the grid cell agent The convolutional neural network had four convolutional layers.</s><s>The first convolutional layer had 16 filters of size 5 × 5 with stride 2 and padding 2. The second convolutional layer had 32 filters of size 5 × 5 with stride 2 and padding 2. The third convolutional layer had 64 filters of size 5 × 5 with stride 2 and padding 2. Finally, the fourth convolutional layer with 128 filters of size 5 × 5 with stride 2 and padding 2. All convolutional hidden layers were followed by a rectifier nonlinearity.</s><s>The last convolution was followed by a fully connected layer with 256 hidden units.</s><s>The same convolutional neural network was used for the actor-critic learner.</s><s>The weights of the two network were not shared.</s></p><p><s>Further details about the place cell agent Place cell agent with homogeneously sized place fields: we tested agents with fields -modelled as regular 2D Gaussians -having standard deviations of 7.5cm, 25cm, and 75cm bins.</s><s>The agent with fields of size 7.5cm was found to perform best (highest cumulative reward on the Morris water maze task; see Supplemental Results) and hence was chosen as the primary place cell control agent (see main text for score comparisons).</s></p><p><s>Place cell agent with heterogeneously sized place fields: to control for differences in the number and area of spatial fields between agents, we also generated two further place cell agents that were explicitly matched to the grid cell agent.</s><s>Specifically, we used a watershedding algorithm <ref type="bibr" target="#b58">64</ref> to detect 660 individual grid fields in the grid-like units of the grid cell agent.</s><s>The distribution of the areas of these fields were found to exhibit 3 peaks -based on a Gaussian fitting procedure -having means equivalent to 2D Gaussians with standard deviations of 8.2cm, 15.0cm, and 21.7cm.</s><s>Hence we generated a further control agent having 395 place cells of size 8.2cm, 198 of size 15.0cm, and 67 of 21.7cm -660 place cells in total, the relative numbers reflecting the magnitudes of the Gaussians fit to the distribution.</s><s>A final control agent was also generated having 256 place cell units in total -the same number of linear layer units as the grid agent -distributed across the same three scales in a similar ratio.</s><s>Additionally, we note that from a machine learning perspective, the place cell and grid cell agents with the same number of linear layer units are in principle well matched since they are provided with the same input information and have an identical number of parameters.</s></p><p><s>Place cell prediction agent.</s><s>The architecture of the place cell prediction agent (Extended Data Figure <ref type="figure">9a</ref>) is similar to the grid cell agent described in the Methods : the key difference is the nature of the input provided to the policy LSTM as described below.</s><s>Specifically, the output of the fully connected layer of the convolutional network, e t , was concatenated with the reward r t , the previous action a t -1, the current predicted place cell activity vector, y t , and the current predicted head direction cell activity vector h t -and the goal predicted place cell activity vector , y * , and goal head direction activity vector, h * , observed the last time the agent had reached the goal -or zeros if the agent had not yet reached the goal within the episode.</s><s>The convolutional network had the same architecture described for the grid cell agent.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3c -Training algorithms</head><p><s>We assume the standard reinforcement learning setting where an agent interacts with an environment over a number of discrete time steps.</s><s>As previously defined the at time t the agent receives an observation o t along with a reward r t and produces an action a t .</s><s>The agent's state s t is a function of its experience up until time t, s t = f (o 1 , r 1 , a 1 , ..., o t , r t ) (The specifics of o t are defined in the architecture section).</s><s>The n-step return R t:t+n at time t is defined as the discounted sum of rewards, Rt = i=0...n-1 γ i r t+i + γ n V (s t+n , θ).</s><s>The value function is the expected return from state s, V π (s) = E[R t:∞ |s t = s, π], under actions selected accorded to a policy π(a|s).</s><s>See main methods for the details of the loss functions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3d -Neuroscience-based analyses of units</head><p><s>Gridness score and grid scale calculation Following 20 and 18 spatial autocorrelograms of ratemaps were used to assess the gridness and grid scale of linear layer units.</s><s>First, for each unit, the spatial autocorrelogram was calculated as defined in <ref type="bibr" target="#b16">20</ref> .</s><s>To calculate gridness <ref type="bibr" target="#b16">20</ref> , a measure of hexagonal periodicity, we followed the 'expanding gridness' method introduced by <ref type="bibr" target="#b14">18</ref> .</s><s>Briefly, a circular annulus centred on the origin of the autocorrelogram was defined, having radius of 8</s></p><p><s>bins and with the central peak excluded.</s><s>The annulus was rotated in 30 • increments and, at each increment, the Pearson product moment correlation coefficient with the unrotated version of itself</s></p><p><s>found.</s><s>An interim gridness value was then defined as the highest correlation obtained from rotations of 30, 90 and 150 • subtracted from the lowest at 0, 60 and 120 • .</s><s>This process was then repeated, each time expanding the annuls by 2, up to a maximum of 20.</s><s>Finally, the gridness value was taken as the highest interim score.</s></p><p><s>Grid scale <ref type="bibr" target="#b16">20</ref> , a simple measure of the wavelength of spatial periodicity, was defined from the autocorrelogram as follows.</s><s>The six local maxima closest to but excluding the central peak were identified.</s><s>Grid scale was then calculated as the median distance of these peaks from the origin.</s></p><p><s>Directional measures Following 46 the degree of directional modulation exhibited by each unit was assessed using the length of the resultant vector of the directional activity map.</s><s>Vectors corresponding to each bin of the activity map were created:</s></p><formula xml:id="formula_11">r i =     β i cos α i β i sin α i     ,<label>(6)</label></formula><p><s>where α and β are, respectively, the centre and intensity of angular bin i in the activity map.</s><s>These vectors were averaged to generate a mean resultant vector:</s></p><formula xml:id="formula_12">r = N n=1 r i N n=1 β i ,<label>(7)</label></formula><p><s>and the length of the resultant vector calculated as the magnitude of r.</s><s>We used 20 angular bins.</s></p><p><s>Border score To identify units that were preferentially active adjacent to the edges of the enclosure we adopted a modified version of the border score 47 .</s><s>For each of the four walls in the square enclosure, the average activation for that wall, b i , was compared to the average centre activity c obtaining a border score for that wall, and the maximum was used as the border-score for the unit: Threshold setting for gridness, border score, and directional measures The hexagonality of the spatial activity map (gridness), directional modulation (length of resultant vector), and propensity to be active against environmental boundaries (border scale) exhibited by units in the linear layer were benchmarked against null distributions obtained using permutation procedures 6548 .</s></p><formula xml:id="formula_13">b s = max i∈{1,2,3,4} b i -c b i + c<label>(8</label></formula><p><s>For the gridness measure and border score, null distributions were constructed using a 'field shuffle' procedure equivalent to that specified by <ref type="bibr">48</ref> .</s><s>Briefly, a watershedding algorithm <ref type="bibr" target="#b58">64</ref> was applied to the ratemap to segment spatial fields.</s><s>The peak bin of each field was found and allocated to a random position within the ratemap.</s><s>Bins around each peak were then incrementally replaced, retaining as far as possible their proximity to the peak bin.</s><s>This procedure was repeated 100 times for each of the units present in the linear layer and the gridness and border score of the shuffled ratemaps assessed as before.</s><s>In each case the 95th percentile of the resulting null distribution was found and used as a threshold to determine if that unit exhibited significant grid or border-like activity.</s></p><p><s>To validate the thresholds obtained using shuffling procedures we calculated alternative null distributions by analysing the grid and border responses of linear units from 500 untrained networks.</s><s>Again, in each case, a grid score and border score for each unit was calculated, these were pooled, and the 95th percentile found.</s><s>In all cases the thresholds obtained by the first method were found to be most stringent and these were used for all subsequent analyses</s></p><p><s>To establish a significance threshold for directional modulation we calculated the length of the resultant vector that would demonstrate statistically significance under a Rayleigh test of directional uniformity at α = 0.01.</s><s>The resultant vector was calculated by first calculating the average activation for 20 directional bins.</s><s>A threshold length of 0.47 for the resultant vector was obtained.</s></p><p><s>The most stringent of these two thresholds was used.</s></p><p><s>Clustering of scale in grid-like units To determine if grid-like units exhibited a tendency to cluster around specific scales we applied two methods.</s></p><p><s>First, following <ref type="bibr" target="#b18">22</ref> , to determine if the scales of grid-like units (gridness &gt; 0.37, 129/512 units) followed a continuous or discrete distribution we calculated the 'discreteness measure' <ref type="bibr" target="#b18">22</ref> of the distribution of their scales.</s><s>Specifically, scales were binned into a histogram with 13 bins distributed evenly across a range corresponding to scales 10 to 36 spatial bins.</s><s>'Discreteness' was defined as the standard deviation of the counts in each bin.</s><s>Again following <ref type="bibr" target="#b18">22</ref> , statistical significance for this value was obtained by comparing it to a null distribution generated from a shuffled version of the same data.</s><s>Specifically, shuffles were generated as follows: For each unit, a random number was drawn from a flat distribution between -1/2 and +1/2 of the smallest grid scale in this case between -7 and +7 spatial bins.</s><s>The random number was added to the grid scales, the population was binned as before, and the discreteness score calculated.</s><s>This procedure was completed 500 times.</s><s>The discreteness score of the real data was found to exceed that of all the 500 shuffles (p&lt; 0.002).</s></p><p><s>Second, to characterise the number and location of scale clusters, the distribution of scales from grid-like units was fit with Gaussian mixture distributions containing 1 to 8 components.</s></p><p><s>Fits were made using an Expectation-Maximization approach implemented with fitgmdist (Matlab 2016b, Mathworks, MA).</s><s>The efficiency of fits made with different numbers of components was compared using Bayesian Information Criterion (BIC) <ref type="bibr" target="#b60">66</ref> the model (3 components) with the lowest BIC score was selected as the most efficient.</s></p><p><s>Lesioning experiment: comparison of targeted grid unit lesion vs lesion of patchy non-grid units We lesioned a random subset of patchy multi-field spatial cells that were non-grid units (i.e.</s></p><p><s>grid score lower than 0.37 threshold).</s><s>The units chosen had a head-direction score lower than 0.47 and the number of spatial fields was in the same range as grid-like units (3 to 13).</s><s>The number of fields in each ratemap was calculated by applying a watershedding algorithm <ref type="bibr" target="#b58">64</ref> to their ratemap -ignoring fields with area smaller than 4 bins.</s><s>This procedure identified 174 units as multifield patchy spatial cells (out of 256 units in the linear layer).</s><s>We then selected 64 random units from these 174 and we ran 100 episodes in which these units were silenced (see Supplemental</s></p><p><s>Results section 1b).</s><s>We also ran another variant of the experiment where we ran 100 episodes and in each episode we selected a different subset of 64 random units from the 174 identified by the watershedding procedure, and these units were silenced.</s><s>The results were not qualitatively different from the former experiment (data not shown).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3e -Multivariate decoding of representation of metric quantities within LSTM</head><p><s>A key prediction of the vector-based navigation hypothesis is that grid codes should allow downstream regions to compute a set of metric codes relevant to accurate goal-directed navigation.</s></p><p><s>Specifically, Euclidean distance and allocentric direction to the goal should both be computed by an agent using vector-based navigation (see Fig. <ref type="figure" target="#fig_1">2j&amp;k</ref> also 3i-k).</s><s>To test whether the same representations can be found in the grid cell agent, and thereby provide additional evidence that it is indeed using a vector-based navigation strategy, we recorded the activity in the policy LSTM of the grid cell agent while it navigated in the land-maze and goal-driven environments.</s><s>For each environment and agent, we collected data from 200 separate episodes.</s><s>In each episode, we recorded data from the time period following the first time the agent reached the goal and was teleported to a new location in the maze.</s><s>After an initial period to allow self-localization (8 steps), we examined the representation of the metric quantities over the next 12 steps, where the LSTM activity was sampled at 4 even points over those steps.</s><s>We focussed on this time period because the agent potentially has knowledge of the goal location, but has not yet been able to learn the optimal path to the goal.</s><s>Thus it is this initial period of time where the computation of the vector-based navigation metrics should be most useful, as this allows accurate navigation right from the start of being teleported to a new location.</s><s>In the land maze task, we additionally collected the same data from a place cell agent control, and the two lesioned grid cell agents.</s><s>In the goal driven task, we collected data from the place cell agent and A3C.</s><s>For each agent, we applied a decoding analysis to the LSTM dictating the policy and value function.</s><s>We ran two separate decoding analyses, looking for evidence of each of the two metric codes (i.e.</s><s>Euclidean distance, allocentric goal direction).</s></p><p><s>For each decoding analysis we trained a L2-regularized (ridge) regression model on all data apart from the first 21 time-steps of each episode.</s><s>The model was then tested on the four early sampling steps of interest, where accuracy was assessed as the Pearson correlation between the predicted and actual values over the 200 episodes.</s><s>The penalization parameter was selected by randomly splitting the training data into internal training and validation sets (90% and 10% of the episodes respectively).</s><s>The optimal parameter was selected from 30 values, evenly spaced on a log scale between 0.001 and 1000, based on the best performance on the validation set.</s><s>This parameter was then used to train the model on the full training set, and evaluated on the fully independent test set.</s></p><p><s>As the allocentric direction metric is circular, we decomposed the vector into two target variables:</s></p><p><s>the cosine and sine of the polar angle.</s><s>All reported allocentric decoding results are the average of the cosine and sine results.</s><s>For the purpose of comparing decoding accuracy across agents, we report the difference in accuracy, along with a 95% bootstrapped confidence interval on this difference, based on 10,000 samples.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3f -Statistical reporting</head><p><s>We followed the guidelines outlined by <ref type="bibr" target="#b61">67</ref> .</s><s>Specifically reporting effect sizes and confidence intervals.</s><s>Unless otherwise stated, the effect sizes are calculated using the following formula:</s></p><formula xml:id="formula_14">ef f ect size = µ group1 -µ group2 σ pooled ,<label>(9)</label></formula><p><s>σ pooled = (N group1 -1) × σ 2 group1 + (N group2 -1) × σ 2 group2 N group1 + N group2 -2</s></p><p><s>The confidence interval for the effect size was calculated accordingly to 69 using:</s></p><formula xml:id="formula_16">ci ef f ectsize = N group1 + N group2 N group1 × N group2 + + ef f ect size 2 2 × (N group1 + N group2 ) .<label>(11)</label></formula></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 :</head><label>1</label><figDesc><div><p><s>Figure 1: Entorhinal-like representations emerge in a network trained to path integrate.</s><s>a,</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 :</head><label>2</label><figDesc><div><p><s>Figure 2: One-shot open field navigation to a hidden goal.</s><s>a, Schematic of vector-based</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 :</head><label>3</label><figDesc><div><p><s>Figure 3: Navigation in complex environments a-b, Overhead view of multi-room environments</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 :</head><label>4</label><figDesc><div><p><s>Figure 4: Flexible use of short-cuts a, Example trajectory from grid cell agent during training in the linear</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head></head><label></label><figDesc><div><p><s>with two different configurations, one for the training phase and one for testing phase.</s><s>During training the state of the doors (i.e.</s><s>open or closed) randomly changed during an episode each time the agent reached the goal.</s><s>Critically, during training the corridors presenting the shortest route to the goal (i.e. the ones closer to the central room) were closed at both ends, preventing access or observation of the interior.</s><s>At test time, after the agent reached the goal the first time, all doors were opened.</s><s>All the agents were tested for 100 episodes, each one lasting for a fixed duration of 5, 400 environment steps (90 seconds).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head></head><label></label><figDesc><div><p><s>47. Solstad, T., Boccara, C. N., Kropff, E., Moser, M.-B.</s><s>&amp; Moser, E. I. Representation of geometric borders in the entorhinal cortex.</s><s>Science 322, 1865-1868 (2008).</s><s>48.</s><s>Barry, C. &amp; Burgess, N. To be a grid cell: Shuffling procedures for determining gridness.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>:</head><label></label><figDesc><div><p><s>Characterization of grid-like units in Square environment and Circular environment.</s><s>a) The scale (assessed from the spatial autocorrelogram of the ratemaps) of grid-like units exhibited a tendency to cluster at specific values.</s><s>The number of distinct scale clusters was assessed by sequentially fitting Gaussian mixture models with 1 to 8 components.</s><s>In each case, the efficiency of the fit (likelihood vs. number of parameters) was assessed using Bayesian information criterion (BIC).</s><s>BIC was minimized with three Gaussian components indicating the presence of three distinct scale clusters.</s><s>b) Spatial stability of units in the linear layer of the supervised network was assessed using spatial correlations -bin-wise Pearson product moment correlation between spatial activity maps (32 spatial bins in each map) generated at 2 different points in training, t = 2e5 and t = 3e5 training steps.</s><s>That is, 2 3 of the way through training and the end of training, respectively.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Extended Data Figure 4 : 608 Extended Data Figure 5 :</head><label>46085</label><figDesc><div><p><s>d) circular environment: the supervised network was also trained in a circular environment (diameter = 2.2m).</s><s>As before, units in the linear layer exhibited spatially tuned responses resembling grid, border, and head direction cells.</s><s>Eight units are shown.</s><s>Top, ratemap displaying activity binned over location.</s><s>Middle, spatial autocorrelogram of the ratemap, gridness 20 is indicated above.</s><s>Bottom, polar plot of activity binned over head direction.</s><s>e) Spatial scale of grid-like units (n = 56 (21.9%)) is clustered.</s><s>Distribution is best fit by a mixture of 2 Gaussians (centres 0.58 &amp; 0.96m, ratio = 1.66).</s><s>f) Distribution of directional tuning for 31 most directionally active units, single line for each unit indicates length and orientation of resultant vector 46 g) Distribution of gridness and directional tuning.</s><s>Dashed lines indicate 95% confidence interval derived from shuffling procedure (500 permutations), 5 grid units (9%) exhibit significant directional modulation.607</s><s>Grid-like units did not emerge in the linear layer when dropout was not applied.</s><s>Linear layer spatial activity maps (n=512) generated from a supervised network trained without dropout.</s><s>The maps do not exhibit the regular periodic structure diagnostic of grid cells.</s><s>Architecture of the grid cell agent.</s><s>The architecture of the supervised network (grid network, light blue dashed) was incorporated into a larger deep RL network, including a visual module (green dashed) and an actor critic learner (based on A3C<ref type="bibr" target="#b36">40</ref> ; dark blue dashed).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>609 51 Extended Data Figure 6 :</head><label>516</label><figDesc><div><p><s>Characterisation of grid-like representations and robustness of performance for the grid cell agent in the square "land maze" environment.</s><s>a) Spatial activity plots for the 256 linear layer units in the agent exhibit spatial patterns similar to grid, border, and place cells.</s><s>b) Cumulative reward indexing goal visits per episode (goal = 10 points) when distal cues are removed (dark blue) and when distal cues are present (light blue) -performance is unaffected, hence dark blue largely obscures light blue.</s><s>Average of 50% best agent replicas (n=32) plotted (see Methods).</s><s>The gray band displays the 68% confidence interval based on 5000 bootstrapped samples.</s><s>c) Cumulative reward per episode when no goal code was provide (light blue) and when goal code was provided (dark blue).</s><s>When no goal code was provided the agent performance fell to that of the baseline deep RL agent (A3C) (100 episodes average score "no goal code" = 123.22 vs. A3C = 112.06</s><s>,effect size = 0.21, 95% CI [0.18, 0.28]).</s><s>Average of 50% best agent replicas (n=32) plotted (see Methods).</s><s>The gray band displays the 68% confidence interval based on 5000 bootstrapped samples.</s><s>d) After locating the goal for the first time during an episode the agent typically returned directly to it from each new starting position, showing decreased latencies for subsequent visits, paralleling the behaviour exhibited by rodents.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Extended Data Figure 10 :</head><label>10</label><figDesc><div><p><s>the grid cell agent.</s><s>b) NavMemNet agent.</s><s>The architecture implemented is the one described in 3 , specifically FRMQN but the Asynchronous Advantage Actor-Critic (A3C) algorithm was used in place of Q-learning.</s><s>The convolutional network had the same architecture described for the grid cell agent and the memory was formed of 2 banks (keys and values), each one composed of 1350 slots.</s><s>Flexible use of short-cuts a) Overhead view of the linear sunburst maze in initial configuration, with only door 5 open.</s><s>Example trajectory from grid cell agent during training (green line, icon indicates start location).</s><s>b) Test configuration with all doors open: grid cell agent uses the newly available shortcuts (multiple episodes shown).</s><s>c) Histogram showing proportion of times the agent uses each of the doors during 100 test episodes.</s><s>The agent shows a clear preference for the shortest paths.</s><s>d) Performance of grid cell agent and comparison agents during test episodes.</s><s>e) Example grid cell agent and f) example place cell agent trajectory during training in the double E-maze (corridor 1 doors closed).</s><s>g-h) in the test phase, with all doors open, the grid cell agent exploits the available shortcut (g), while the place cell agent does not (h).</s><s>i-j) Performance of agents during training (i) and test (j).</s><s>k-l, The proportion of times the grid (k) and place (l) cell agents use the doors on the 1st to 3rd corridor during test.</s><s>The grid cell agent shows a clear preference for available shortcuts, while the place cell agent does not.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head></head><label></label><figDesc><div><p><s>to generalise to larger environments (11 × 17, corresponding to 2.7 × 4.25 meters) (see Methods).</s><s>The grid cell agent exhibited strong generalistion performance compared to the control agents (average score over 100 episodes grid cell agent = 366.5 vs place cell agent = 175.7,</s><s>effect size = 4.60, 95% CI [4.16, 5.06]; A3C agent = 219.4,</s><s>effect size = 3.78, 95% CI [3.41, 4.15]).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head></head><label></label><figDesc><div><p><s>both the place cell (Euclidean distance difference in r = 0.44; 95% CI [0.37, 0.51]; Goal direction difference in r = 0.52; 95% CI [0.49, 0.56]) and deep RL (Euclidean distance difference in r = 0.57; 95% CI [0.5, 0.63]; Goal direction difference in r = 0.66; 95% CI [0.62, 0.70]) control agents (Figure3j&amp;k).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head></head><label></label><figDesc><div><p><s>maze was size 13×13 and contained 5 evenly spaced corridors, each of which had a door at the end closest to the start position of the agent.</s><s>The agent always started on one side of the corridors with the same heading orientation (North; see Fig 4a) and the goal was always placed in the same location on the other side of the corridors.</s><s>Until the agent reached the goal the first time only one</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head></head><label></label><figDesc><div><p><s>) where b i is the mean activation for bins within d b distance from the i-th wall and c the average activity for bins further than d b bins from any wall.</s><s>In all our experiments 20 by 20 bins where used and d b took value 3.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="43,164.27,85.98,283.47,362.15" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head></head><label></label><figDesc><div><p><s>5 (video: https://youtu.be/BWqZwLQfwlM),</s><s>beating both the place cell agent (average</s></p></div></figDesc><table><row><cell>score 258.76; contrast effect size = 1.98, 95% CI [1.79, 2.18]) and the A3C agent (average score</cell></row><row><cell>137.00; contrast effect size = 14.31, 95% CI [12.91, 15.71]). The grid cell agent showed markedly</cell></row><row><cell>superior performance compared to the other agents in the "goal-doors" maze (average score over</cell></row><row><cell>100 episodes: grid cell agent = 284.30 vs place cell agent = 90.53, effect size = 7.86, 95% CI</cell></row><row><cell>[7.09, 8.63]; A3C agent = 48.69, effect size = 7.73, 95% CI [6.97, 8.48]) (video of grid cell agent:</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head></head><label></label><figDesc><div><p><s>27, 95% CI [0.24, 0.29]; grid cell agent vs. A3C agent,</s></p></div></figDesc><table><row><cell>effect size = 2.99, 95% CI [2.69, 3.29]; place cell agent vs. A3C agent, effect size = 2.92, 95%</cell></row><row><cell>CI [2.63, 3.21]). When shortcuts become available in the test phase, the grid cell agent performs</cell></row><row><cell>significantly better than the place agent (grid cell agent vs. place cell agent, effect size = 1.89, 95%</cell></row><row><cell>CI [1.69, 2.09]; grid cell agent vs. A3C agent, effect size = 12.77, 95% CI [11.48, 14.07]; place</cell></row><row><cell>cell agent vs. A3C agent, effect size = 14.87, 95% CI [13.35, 16.38]).</cell></row><row><cell>2 -Supplementary Discussion for Vector-based Navigation using Grid-like Representations in</cell></row><row><cell>Artificial Agents.</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>106cm), indicating the presence of scale clusters with a ratio between neighbouring clusters of approximately 1.5, closely matching theoretical predictions<ref type="bibr" target="#b19">23</ref> and lying within the range reported for rodents<ref type="bibr" target="#b17">21,</ref><ref type="bibr" target="#b18">22</ref> (Fig.1e, Extended Data Figure3).</s><s>The linear layer also exhibited units resembling head direction cells (10.2%), border cells (8.7%), and a small number of place cells<ref type="bibr" target="#b8">12</ref> as well as conjunctions of these representations (Fig.1d,f&amp;g, Extended Data Figure2).</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgements We thank <rs type="person">Max Jaderberg</rs>, <rs type="person">Volodymyr Mnih</rs>, <rs type="person">Adam Santoro</rs>, <rs type="person">Tom Schaul</rs>, Kim</p></div>
+			</div>
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Code availability statement We will release the code for the supervised learning experiments within the next six months.</s><s>The codebase for the deep RL agents makes use of proprietary com-</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Extended Data Figure <ref type="figure">2</ref>: Linear layer spatial activity maps from the supervised learning experiment.</s><s>Spatial activity plots for all 512 units in the linear layer g t .</s><s>Units exhibit spatial activity patterns resembling grid cells, border cells, and place cells -head direction tuning was also present but is not shown.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>606</head><p><s>Supplemental Information for Vector-based Navigation using Grid-like Representations in Artificial Agents.</s></p><p><s>Andrea Banino 1 * , Caswell Barry 2 * , Benigno Uria 1 , Charles Blundell 1 , Timothy Lillicrap 1 , Piotr  better than that of a control place cell agent with homogeneous place fields tuned to maximize performance (see Supplemental Methods).</s><s>Further, to additionally control for differences in the number and area of spatial fields between agents, we also generated two place cell agents -incorporating 256 and 660 heterogeneously sized place fields -that were explicitly matched to the grid cell agent (see Supplemental Methods for details).</s><s>Again, the performance of the grid cell agent was found to be considerably better than these additional place cell agents (Average score over 100 episodes: grid cell agent = 289 vs. best place agent with 660 heterogeneous fields = 212, effect size = 3.93, 95% CI [3.</s><s>54, 4.31]; best place agent with 256 heterogeneous fields = 225, effect size = 3.52, 95% CI [3.18, 3.87]).</s></p><p><s>1b -Experimental manipulations to test the Vector-Based navigation hypothesis First, to demonstrate that the goal grid code provided sufficient information to enable the agent to navigate to an arbitrary location, we substituted it with a "fake" goal grid code sampled randomly from a location in the environment (see Methods).</s><s>The agent followed a direct path to the newly specified location, circling the absent goal (Fig. <ref type="figure">2i</ref>) -similar to rodents in probe trials of the Morris water maze (escape platform removed).</s><s>As a second test, we trained a grid cell agent without providing the goal grid vector to the policy LSTM, effectively "lesioning" this code.</s><s>Performance of the grid agent drops to that of the baseline deep RL agent (A3C -a standard deep RL architecture, trained without any grid or place cell input), confirming that the goal grid code is critical for vector based navigation (see Extended Data Fig. <ref type="figure">6c</ref>).</s><s>Thirdly, to confirm the presence of a goal-directed vector, we attempted to decode the scalar quantities composing the vector from the policy LSTM.</s><s>Reasoning that the goal directed vector would be particularly important at the start of a trajectory, we</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Deep successor reinforcement learning</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Kulkarni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Saeedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gautam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Gershman</surname></persName>
+		</author>
+		<idno>CoRR abs/1606.02396</idno>
+		<ptr target="http://arxiv.org/abs/1606.02396" />
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Learning to navigate in complex environments</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mirowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Microstructure of a spatial map in the entorhinal cortex</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hafting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fyhn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Molden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-B</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">I</forename><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">436</biblScope>
+			<biblScope unit="page" from="801" to="806" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">What grid cells convey about rat location</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">R</forename><surname>Fiete</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Burak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Brookings</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="6858" to="6871" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Optimal population codes for space: grid cells outperform place cells</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mathis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Herz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stemmler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="2280" to="2317" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Path integration and the neural basis of the&apos;cognitive map&apos;</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Mcnaughton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">P</forename><surname>Battaglia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">I</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-B</forename><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="663" to="678" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">A goal-directed spatial navigation model using forward trajectory planning based on grid cells</title>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">M</forename><surname>Erdem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hasselmo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="916" to="931" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Using grid cells for navigation</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bush</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Manson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Burgess</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="507" to="520" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Neural mechanisms of self-location</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Burgess</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="330" to="R339" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Homing by path integration in a mammal</title>
+		<author>
+			<persName><forename type="first">M.-L</forename><surname>Mittelstaedt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Mittelstaedt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Naturwissenschaften</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="566" to="567" />
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Neural correlates for angular head velocity in the rat dorsal tegmental nucleus</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Bassett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Taube</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="5740" to="5751" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Speed cells in the medial entorhinal cortex</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kropff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Carmichael</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-B</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">I</forename><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">523</biblScope>
+			<biblScope unit="page" from="419" to="424" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Dropout: a simple way to prevent neural networks from overfitting</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Srivastava</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Krizhevsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Salakhutdinov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Machine Learning Research</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="1929" to="1958" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Development of the hippocampal cognitive map in preweanling rats</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Wills</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cacucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>O'keefe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">328</biblScope>
+			<biblScope unit="page" from="1573" to="1576" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Development of the spatial representation system in the rat</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Langston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">328</biblScope>
+			<biblScope unit="page" from="1576" to="1580" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Optogenetic dissection of entorhinal-hippocampal functional connectivity</title>
+		<author>
+			<persName><forename type="first">S.-J</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">340</biblScope>
+			<biblScope unit="page">1232627</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Conjunctive representation of position, direction, and velocity in entorhinal cortex</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Sargolini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">312</biblScope>
+			<biblScope unit="page" from="758" to="762" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Experience-dependent rescaling of entorhinal grids</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hayman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Jeffery</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="682" to="684" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The entorhinal grid map is discretized</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Stensola</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">492</biblScope>
+			<biblScope unit="page" from="72" to="78" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Connecting multiple spatial scales to decode the population activity of grid cells</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stemmler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mathis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Herz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science advances</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">1500816</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Evidence for grid cells in a human memory network</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Doeller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Burgess</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">463</biblScope>
+			<biblScope unit="page" from="657" to="661" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Training recurrent networks to generate hypotheses about how the brain solves hard navigation problems</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kanitscheider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Fiete</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1609.09059</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Mapping a suburb with a single camera using a biologically inspired slam system</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Milford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">F</forename><surname>Wyeth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Robotics</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="1038" to="1053" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Environmental boundaries as an error correction mechanism for grid cells</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hardcastle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ganguli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Giocomo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="827" to="839" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">How vision and movement combine in the hippocampal place code</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>O'keefe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="378" to="383" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Vectorial representation of spatial goals in the hippocampus of bats</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sarel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Finkelstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Las</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Ulanovsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">355</biblScope>
+			<biblScope unit="page" from="176" to="180" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">A solution to the simultaneous localization and map building (slam) problem</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Dissanayake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Newman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">F</forename><surname>Durrant-Whyte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Csorba</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Robotics and Automation</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="229" to="241" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>ponents, and we are unable to publicly release this code. However, all experiments and agents are described in sufficient detail to allow independent replication</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Modeling boundary vector cell firing given optic flow as a cue</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Raudies</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Hasselmo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS computational biology</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">1002553</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Long short-term memory</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hochreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1735" to="1780" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Training stochastic model recognition algorithms as networks can lead to maximum mutual information estimation of parameters</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Bridle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<editor>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Touretzky</surname></persName>
+		</editor>
+		<imprint>
+			<publisher>Morgan-Kaufmann</publisher>
+			<date type="published" when="1990">1990</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="211" to="217" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Exploiting lawful variability in the speech wave. Invariance and variability in speech processes 1</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Elman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Mcclelland</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1986">1986</date>
+			<biblScope unit="page" from="360" to="380" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Lecture 6.5-RmsProp: Divide the gradient by a running average of its recent magnitude</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tieleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">COURSERA: Neural Networks for Machine Learning</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">A practical bayesian framework for backpropagation networks</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Mackay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="448" to="472" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">On the difficulty of training recurrent neural networks</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICML</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1310" to="1318" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">A learning algorithm for boltzmann machines</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Ackley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Sejnowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cognitive science</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="147" to="169" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Deepmind lab</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Beattie</surname></persName>
+		</author>
+		<idno>CoRR abs/1612.03801</idno>
+		<ptr target="http://arxiv.org/abs/1612.03801" />
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Asynchronous methods for deep reinforcement learning</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Mnih</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 33nd International Conference on Machine Learning, ICML 2016</title>
+		<meeting>the 33nd International Conference on Machine Learning, ICML 2016<address><addrLine>New York City, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016">June 19-24, 2016. 2016</date>
+			<biblScope unit="page" from="1928" to="1937" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Theory of rodent navigation based on interacting representations of space</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Touretzky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Redish</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="247" to="270" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">A model of hippocampally dependent navigation, using the temporal difference learning rule</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Morris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dayan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1" to="16" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Hybrid computing using a neural network with dynamic external memory</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Graves</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">538</biblScope>
+			<biblScope unit="page" from="471" to="476" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Human-level control through deep reinforcement learning</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Mnih</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">518</biblScope>
+			<biblScope unit="page" from="529" to="533" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title level="m" type="main">Reinforcement learning for robots using neural networks</title>
+		<author>
+			<persName><forename type="first">L.-J</forename><surname>Lin</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+		<respStmt>
+			<orgName>Carnegie-Mellon Univ Pittsburgh PA School of Computer Science</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Tech. Rep</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Light purple is the grid agent, blue is the place cell agent and dark purple is A3C. a) Square arena b) Goal-driven c) Goal Doors. In all cases the grid cell agent shows higher robustness to variations in hyperparameters and seeds. d-i Performance of place cell prediction/NavMemNet/DNC agents (see Methods) against grid cell agent. Dark blue is the grid cell agent (Extended Data Figure 5), green is the place cell prediction agent (Extended Data Figure 9a), purple is the DNC agent, light blue is the NavMemNet agent (Extended Data Figure 9b). The gray band displays the 68% confidence interval based on 5000 bootstrapped samples. d-f) Performance in goal-driven</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Knight</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">Philosophical Transactions of the Royal Society of London B: Biological Sciences</title>
+		<imprint>
+			<biblScope unit="volume">369</biblScope>
+			<date type="published" when="2014">20120512. 2014</date>
+		</imprint>
+	</monogr>
+	<note>Extended Data Figure 7: Robustness of grid cell agent and performance of other agents. ac) AUC performance gives the robustness to hyperparameters (i.e. learning rate, baseline cost, entropy cost -see Table 2 in Supplementary Methods for details of the range) and seeds (see Methods). Performance in goal-doors. Note that the performance of the place cell agent (Extended Data Figure 8b, lower</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">A goal direction signal in the human entorhinal/subicular region</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Chadwick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Jolly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Amos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hassabis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Spiers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="87" to="92" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Linear look-ahead in conjunctive cells: an entorhinal mechanism for vector-based navigation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Kubie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Fenton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in neural circuits</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">20</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<author>
+			<persName><forename type="first">B</forename><surname>Scellier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1602.05179914</idno>
+		<title level="m">Towards a biologically plausible backprop</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Sparse attentive backtracking: Long-range credit assignment in recurrent networks</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Ke</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1711.02326</idno>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">An oscillatory interference model of grid cell firing</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>O'keefe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="801" to="812" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Grid cell firing may arise from interference of theta frequency membrane potential oscillations in single neurons</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Hasselmo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Giocomo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Zilli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1252" to="1271" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Accurate path integration in continuous attractor network models of grid cells</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Burak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">R</forename><surname>Fiete</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">1000291</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">A spin glass model of path integration in rat medial entorhinal cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Fuhs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Touretzky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="4266" to="4276" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Grid cells, place cells, and geodesic generalization for spatial reinforcement learning</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Gustafson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Daw</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">1002235</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Design principles of the hippocampal cognitive map</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Stachenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Botvinick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Gershman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="2528" to="2536" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<monogr>
+		<title level="m" type="main">Extracting grid cell characteristics from place cell inputs using non-negative principal component analysis</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dordek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Soudry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Meir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Derdikman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page">10094</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">How does the brain solve the computational problems of spatial navigation?</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Widloski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Fiete</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Space, Time and Memory in the Hippocampal Formation</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="373" to="407" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bornschein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mesnard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lin</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1502.04156</idno>
+		<title level="m">Towards biologically plausible deep learning</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Toward an integration of deep learning and neuroscience</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Marblestone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Wayne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Kording</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in Computational Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<monogr>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Tolman</surname></persName>
+		</author>
+		<title level="m">Cognitive maps in rats and men</title>
+		<imprint>
+			<date type="published" when="1948">1948</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Use of watersheds in contour detection</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Beucher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the International Workshop on Image Processing</title>
+		<meeting>the International Workshop on Image Processing</meeting>
+		<imprint>
+			<publisher>CCETT</publisher>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Grid cells without theta oscillations in the entorhinal cortex of bats</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Yartsev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Witter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Ulanovsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">479</biblScope>
+			<biblScope unit="page" from="103" to="107" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Estimating the dimension of a model</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Schwarz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Annals of Statistics</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="461" to="464" />
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">The fickle p value generates irreproducible results</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Halsey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Curran-Everett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Vowler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Drummond</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature methods</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">179</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Measures of effect size for comparative studies: Applications, interpretations, and limitations</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Olejnik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Algina</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Contemporary educational psychology</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="241" to="286" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<monogr>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hedges</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Olkin</surname></persName>
+		</author>
+		<ptr target="https://books.google.co.uk/books?id=brNpAAAAMAAJ" />
+		<title level="m">Statistical Methods for Meta-analysis</title>
+		<imprint>
+			<publisher>Academic Press</publisher>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

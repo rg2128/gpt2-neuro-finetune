@@ -1,0 +1,1814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Inductance in Neural Systems</title>
+				<funder>
+					<orgName type="full">National Research Foundation Competitive</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Astrid</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Cold Spring Harbor Laboratory</publisher>
+				<availability status="unknown"><p>Copyright Cold Spring Harbor Laboratory</p>
+				</availability>
+				<date type="published" when="2018-06-13">2018-06-13</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Wang</surname></persName>
+							<idno type="ORCID">0000-0002-4240-1799</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical and Computer Engineering</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117583</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Center For Intelligent Sensor and MEMS</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117581</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Hybrid Integrated Flexible Electronic Systems</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117583</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiahui</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical and Computer Engineering</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117583</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Singapore Institute for Neurotechnology (SINAPSE)</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117456</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xin</forename><surname>Yuan Thow</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Singapore Institute for Neurotechnology (SINAPSE)</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117456</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Center For Intelligent Sensor and MEMS</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117581</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Hybrid Integrated Flexible Electronic Systems</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117583</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sanghoon</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical and Computer Engineering</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117583</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Singapore Institute for Neurotechnology (SINAPSE)</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117456</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Center For Intelligent Sensor and MEMS</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117581</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Hybrid Integrated Flexible Electronic Systems</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117583</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wendy</forename><forename type="middle">Yen</forename><surname>Xian Peh</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Singapore Institute for Neurotechnology (SINAPSE)</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117456</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kian</forename><surname>Ann Ng</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Tianyiyi</forename><surname>He</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical and Computer Engineering</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117583</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Singapore Institute for Neurotechnology (SINAPSE)</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117456</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Center For Intelligent Sensor and MEMS</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117581</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Hybrid Integrated Flexible Electronic Systems</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117583</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nitish</forename><forename type="middle">V</forename><surname>Thakor</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Singapore Institute for Neurotechnology (SINAPSE)</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117456</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chia-Hung</forename><surname>Chen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Singapore Institute for Neurotechnology (SINAPSE)</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117456</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Department of biomedical engineering</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117583 *</postCode>
+									<settlement>Hao Wang</settlement>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chengkuo</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical and Computer Engineering</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117583</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Singapore Institute for Neurotechnology (SINAPSE)</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117456</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Center For Intelligent Sensor and MEMS</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117581</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">NUS Graduate School for Integrative Sciences and Engineering</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117456</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Hybrid Integrated Flexible Electronic Systems</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+								<address>
+									<postCode>117583</postCode>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Inductance in Neural Systems</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<publisher>Cold Spring Harbor Laboratory</publisher>
+							<date type="published" when="2018-06-13" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">E9F78A3FC6B6CFC30ED92F3BE02E928E</idno>
+					<idno type="DOI">10.1101/343905</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>A neural circuit model involving inductance is established to explain the neural networks' behavior.</s><s>A parallel resistor-inductor-capacitor (RLC) circuit was used to fit the stimulus artifacts in the electromyography (EMG) recording of cortical and pelvic electrical nerve stimulations.</s><s>This parallel RLC circuit model also predicts the resonance effect in both stimulus artifacts and EMG signals.</s><s>Moreover, the well-known strength-duration relationship was directly derived to be a precise format with this parallel RLC circuit model.</s><s>A theoretical explanation is provided to show the inductance is generated by the coil structure of the myelin sheath and the piezoelectric effect of the plasma membrane.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>One Sentence Summary: The inductance in the neural systems is generated by the coil structure of the myelin sheath and the piezoelectric effect of the plasma membrane.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Main Text:</head><p><s>Neural circuit model is a popular approach and a useful mathematical model to investigate the electrical current and neural signal propagation on neurites at different sites and times <ref type="bibr" target="#b0">(1)</ref>.</s><s>A most critical issue for this approach is the configuration of the circuit.</s><s>Starting from the cable model, which is directly derived from the biological structure of the axon, and developed by the famous Hodgkin-Huxley model (H-H model) <ref type="bibr" target="#b1">(2)</ref>, the RC (resistor-capacitor) configuration has been a basic circuitry unit for whole computational neuroscience.</s><s>The existence of the inductance has never drawn the attention of the mainstream academia.</s><s>However, even in the early stage of neuroscience, the direct impedance measurement of giant squid axon already confirms the inductive reactance in axons <ref type="bibr" target="#b2">(3)</ref>.</s><s>This huge inductance can be repeatedly measured in all kinds of neuron related research <ref type="bibr" target="#b3">(4)</ref><ref type="bibr" target="#b4">(5)</ref><ref type="bibr" target="#b5">(6)</ref><ref type="bibr" target="#b6">(7)</ref><ref type="bibr" target="#b7">(8)</ref><ref type="bibr" target="#b8">(9)</ref><ref type="bibr" target="#b9">(10)</ref><ref type="bibr" target="#b10">(11)</ref><ref type="bibr" target="#b11">(12)</ref><ref type="bibr" target="#b12">(13)</ref><ref type="bibr" target="#b13">(14)</ref><ref type="bibr" target="#b14">(15)</ref><ref type="bibr" target="#b15">(16)</ref><ref type="bibr" target="#b16">(17)</ref><ref type="bibr" target="#b17">(18)</ref>.</s><s>Moreover, some abnormal experimental observations, such as the frequency dependent response of nerve fibers <ref type="bibr" target="#b18">(19)</ref><ref type="bibr" target="#b19">(20)</ref><ref type="bibr" target="#b20">(21)</ref><ref type="bibr" target="#b21">(22)</ref><ref type="bibr" target="#b22">(23)</ref> and the anode break excitation <ref type="bibr" target="#b23">(24,</ref><ref type="bibr" target="#b24">25)</ref>, cannot be well explained without including the inductor in the neural circuit.</s><s>To solve these issues, some theories and ideas are proposed, such as frequency-dependent membrane capacitance <ref type="bibr" target="#b25">(26)</ref> (for the frequency dependent response) and the virtual-cathode hypothesis <ref type="bibr" target="#b26">(27)</ref> (for the anode break excitation).</s><s>To develop a comprehensive model, an inductor was added in the neural circuit.</s><s>With the inductor, the neural circuit should follow an RLC configuration rather than an RC configuration.</s><s>Then the frequency dependent response becomes the intrinsic feature of the neural system.</s><s>The anode break excitation is also comprehensible: the biphasic voltage oscillation of the RLC circuit after the termination of a hyperpolarizing current, which will be detailed demonstrated in this study, surely has a chance to fire the action potential.</s><s>Is there an inductance factor in the neural systems?</s><s>The answer is "Yes".</s><s>Previously people tend to believe this inductance does not really exist simply because they cannot find a physical entity to account for such a huge inductive reactance.</s><s>In this study, together with the direct experimental evidence of the existence of the inductance in neural systems, a comprehensive theoretical explanation of the physical entities to generate this inductance will be provided.</s><s>To proof the correctness of this theory, we will show how those most important experimental observations and phenomena are derived from this theory.</s></p><p><s>In the experiment part, we analyzed the signal in EMG recording of electrical nerve stimulations.</s><s>The curve fitting of the stimulus artifact shows that the neural circuit should generally follow a parallel RLC configuration.</s><s>The resonance frequency of this RLC circuit can be measured in both stimulus artifacts and EMG signals.</s><s>Then based on this RLC circuit, the well-known strengthduration relationship <ref type="bibr" target="#b27">(28,</ref><ref type="bibr" target="#b28">29)</ref>, can be directly derived from this parallel RLC circuit.</s><s>Moreover, this strength-duration relationship is amended to a more precise format and its prediction has already been validated by experimental observations from other groups <ref type="bibr" target="#b29">(30)</ref><ref type="bibr" target="#b30">(31)</ref><ref type="bibr" target="#b31">(32)</ref>.</s></p><p><s>In the theory part, a comprehensive theoretical explanation of the physical entities to generate the inductance is provided.</s><s>Simply speaking, this inductance is generated by the coil structure of the myelin sheaths and the piezoelectric effect of the plasma membrane.</s><s>Based on this theory, we can get many unique predictions, which are all validated by previous researches and observations.</s><s>Here we only give the two most critical predictions:</s></p><p><s>1. Adjacent myelin sheaths always follow the opposite wrapping orientations, which has been well validated by the previous study <ref type="bibr" target="#b32">(33)</ref><ref type="bibr" target="#b33">(34)</ref><ref type="bibr" target="#b34">(35)</ref>.</s><s>This phenomenon cannot be explained by any previous theories and models, but now can be obtained from this theory.</s><s>2. There will be a mechanical wave accompany with the electrical neural signal.</s><s>This mechanical wave has been studied for more than 10 years and an alternative theory called soliton theory has been developed to explain this mechanical wave <ref type="bibr" target="#b35">(36)</ref>.</s><s>In soliton theory, with a complicated calculation, it is claimed that the propagation speed of the mechanical wave is the same as that of the electrical signal predicted by the H-H model.</s><s>However, in our theory, we can get this result without any calculation.</s><s>This mechanical wave is an attendant phenomenon with the electric neural signal.</s><s>It surely has the same speed as the electric signal.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimental data showing the evidence of the inductance in neural systems</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Analysis of the stimulus artifacts</head><p><s>The typical samples of the EMG recording in the electrical stimulation of the cortical and pelvic nerves are shown in Figure <ref type="figure">1</ref>(a) and (c), respectively.</s><s>The experimental details can be found in Supplementary S1 and S2.</s><s>As seen, there will be two separate signals: the stimulus artifact and the EMG signal induced by the electrical stimulation.</s><s>For most of the cases in previous studies <ref type="bibr" target="#b36">(37,</ref><ref type="bibr" target="#b37">38)</ref>, people only focused on the analysis of the EMG signals since they are the real neural responses.</s><s>However, the stimulus artifacts are the direct electrical responses of the whole tissue and organism affected by the injected current, revealing its electrical characteristics.</s><s>In other words, the configuration of the equivalent neural circuit can be obtained from these electrical responses.</s></p><p><s>A detailed analysis of the stimulus artifacts are shown in Figure <ref type="figure">1</ref>(b) and (d), respectively.</s><s>A monophasic square wave current pulse (blue curve) of a certain single phase pulse width (SPPW) was applied.</s><s>As seen, the stimulus artifacts (red curve) and the current pulse share the same rising edge and falling edge.</s><s>But there are two interesting points to be observed:</s></p><p><s>1. Within the current pulse, the stimulus artifact has a certain voltage oscillation.</s><s>2. After the current pulse, there is another voltage oscillation with an opposite polarity.</s></p><p><s>Previously, it was widely believed that there is no inductance in the neural circuit.</s><s>The whole neural circuit should follow a general RC configuration.</s><s>However, the electrical response of the RC circuit to a square wave current pulse will not show a voltage oscillation.</s><s>This voltage oscillation is the feature of an RLC circuit.</s><s>Therefore, we tried fitting the stimulus artifact with an RLC circuit.</s><s>Here we used a parallel RLC circuit (Figure <ref type="figure">1</ref>(e)) for modeling to fit the stimulus artifacts, shown as green curves in Figure <ref type="figure">1</ref>(b) and (d), respectively.</s><s>The voltage oscillations within and after the current pulses can be duplicated and the whole waveform can be generally fitted.</s><s>The detailed modeling parameters in Figure1(b) and (d) of all electrical units can be found in Table <ref type="table" target="#tab_1">1</ref>(</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>2-(b)&amp;(d)).</head><p><s>From the waveform fitting in Figure <ref type="figure">1</ref>(b) and (d), it is quite possible that the general equivalent neural circuit should follow a parallel RLC configuration.</s><s>We can validate this from two aspects:</s></p><p><s>1.</s><s>By changing the SPPW and the waveforms of the current pulses, the waveforms of the stimulus artifacts will change with a certain pattern, which can also be fitted by the electrical voltage response of the equivalent parallel RLC circuit.</s><s>In other words, the stimulus artifacts generated by any kinds of current waveforms with any pulse widths shall be fitted.</s><s>2. The voltage response of the parallel RLC circuit is frequency dependent.</s><s>In some cases, when the quality factor, which is the Q factor, is high enough, there will be a resonance effect, resulting in a maximum amplitude of the recording data.</s><s>So in both the stimulus artifact the EMG recording, there should be a measurable resonance frequency of the neural system.</s></p><p><s>The results of the validation of the two points mentioned above are shown in Figure <ref type="figure">2</ref>. Three kinds of commonly used square current waveforms are used in tests: positive monophasic, negative monophasic and positive-first biphasic waveform (indicated at the left upper corner of all (i) figures).</s><s>The SPPW is changed within a certain range to clearly show the changing pattern of the stimulus artifacts (all (i) figures).</s><s>Then the modeling results are shown in all (ii) figures.</s><s>All the modeling parameters can be found in Table <ref type="table" target="#tab_1">1</ref>(2-(a) to (f)).</s></p><p><s>Firstly, it can be clearly observed that the general changing pattern of the stimulus artifacts can be well fitted by the modeling results.</s><s>Even the changing pattern of different waveforms are completely different, the changing pattern can always be duplicated by tuning the circuit parameters.</s><s>Secondly, in Figure <ref type="figure">2(c),</ref><ref type="figure">(d</ref>) and (f), a distinct resonance effect can be found, indicated by the solid purple arrow in experimental data and dash purple arrow in modelling results.</s><s>In cortical stimulation, the resonance effect happens between SPPW of 300 µs and 350 µs, referring to a resonance frequency between 1429 Hz and 1667 Hz.</s><s>In pelvic nerve stimulation, the resonance effect happens between SPPW of 60 µs and 100 µs, referring to a resonance frequency between 5000 Hz and 8333 Hz.</s></p><p><s>An interesting phenomenon to be observed in Figure <ref type="figure">2</ref> is that, together with the RLC circuit response, some data shows an RC discharging pattern, indicated with the black arrows in Figure <ref type="figure">2</ref>(a-i), (b-i), (c-i) and (f-i).</s><s>This RC discharging effect can be recognized by comparing the experimental data with the modelling results.</s><s>The voltage curve gradually drops at the position, whereas the voltage is predicted to keep constant in the modelling.</s><s>This indicates that an additional capacitor should be added in the circuit to improve the modeming precision.</s><s>The corresponding circuit with this additional capacitor and be found in the supplementary S3.</s><s>And more repeated testing data showing the similar result can be found in the supplementary S4, validating the stability of the RLC neural circuit for analysis.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Analysis of the EMG signals</head><p><s>The above-mentioned data confirms the existence of the inductance in the neural system.</s><s>Then this inductance will also induce a resonance effect on the neural responses, which shall be observed in EMG signals.</s><s>However, not all kinds of waveforms are effective to induce the nerve stimulation, only the data with successful stimulation is shown in Figure <ref type="figure" target="#fig_2">3</ref> and<ref type="figure">4</ref>.</s></p><p><s>The cortical stimulation results are shown in Figure <ref type="figure" target="#fig_2">3</ref>.</s><s>The negative monophasic square current pulses of 300 µA and 500 µA with SPPW from 100 µs to 900 µs were applied.</s><s>Figure <ref type="figure" target="#fig_2">3(a-i</ref>) and (b-i) shows the complete data.</s><s>The detailed artifacts are shown in Figure <ref type="figure" target="#fig_2">3</ref>(a-ii) and (b-ii), respectively.</s><s>As seen, these stimulus artifacts share the same pattern as observed in Figure <ref type="figure">2(b-i</ref>).</s></p><p><s>The detailed EMG signals are shown in Figure <ref type="figure" target="#fig_2">3</ref>(a-iii) and (b-iii).</s><s>The inset figures show the amplitude of the EMG signal with different SPPWs.</s><s>The resonance effect is quite distinct.</s><s>The amplitude peaks at SPPW= 500 µs for both results of 300 µA and 500 µA, indicating that the resonance frequency of cortical is 1000 Hz.</s></p><p><s>The pelvic nerve stimulation results are shown in Figure <ref type="figure">4</ref>. Three kinds of waveforms were applied with a constant current amplitude, 70 µA.</s><s>The complete data is shown in Figure <ref type="figure">4(a)</ref>.</s><s>The detailed stimulus artifacts can be found in Figure <ref type="figure">2(d-f</ref>).</s><s>The EMG amplitudes with SPPW for three waveforms in Figure <ref type="figure">4</ref>(b) shows a clear resonance effect happened at SPPW=150 µs, which agrees with the resonance frequency of the stimulus artifact.</s><s>The resonance effect is the strongest for the negative monophasic waveform: the amplitude of the EMG signal significantly drops when the SPPW is higher than 150 µs.</s></p><p><s>Up to here, we have shown clear data to prove the existence of the inductance in neural tissue.</s><s>People may 1.</s><s>Why the resonance frequencies of the stimulus artifacts and EMG signal are not matched with each other.</s><s>In pelvic nerve stimulation, the resonance frequencies of stimulus artifacts and EMG signal are all within the range from 5000 Hz to 8333 Hz.</s><s>But in cortical stimulation, the resonance frequency of stimulus artifacts is between 1667 Hz and 1429 Hz (Figure <ref type="figure">2(a-c</ref>)), which is quite different from the resonance frequency in EMG signals, which is 1000 Hz. 2. The exact circuit configuration of the real neural tissue should be very complicated, which normally be considered as a distributed parameter circuit.</s><s>Why can we model it with a simple parallel RLC circuit?</s></p><p><s>These two questions will be answered in Supplementary S5.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Derivation of the Strength-duration relationship</head><p><s>Another evidence to support the parallel RLC circuit configuration comes from a well-known empirical model, which called the strength-duration relationship.</s><s>Now, this model can be directly derived and moreover, can be amended to a more precise format.</s></p><p><s>Previously, it is widely believed that charge is the factor to induce nerve stimulation.</s><s>In such charge based theory, there is an empirical linear relationship between the threshold charge level and pulse duration, which is called Weiss's strength-duration equation <ref type="bibr" target="#b27">(28)</ref> for negative monophasic square current pulses.</s><s>This equation describes the threshold charge as a function of pulse width as follows:</s></p><formula xml:id="formula_0">𝑸𝑸 𝒕𝒕𝒕𝒕 (𝑷𝑷𝑷𝑷) = 𝑰𝑰 𝒓𝒓𝒕𝒕 × 𝑷𝑷𝑷𝑷 + 𝑻𝑻 𝒄𝒄𝒕𝒕 × 𝑰𝑰 𝒓𝒓𝒕𝒕</formula><p><s>where   is the rheobase current,   is the chronaxie, and  is the pulse width.</s><s>The rheobase current is defined as the threshold current for infinitely long pulses.</s><s>The chronaxie is defined as the pulse duration required for excitation when the current amplitude is equal to twice the rheobase current.</s><s>And Lapicque reiterated Weiss's equation for the strength-duration relationship <ref type="bibr" target="#b28">(29)</ref>, but in terms of the threshold current, and introduced the rheobase current and chronaxie as the constants:</s></p><formula xml:id="formula_1">𝑰𝑰 𝒕𝒕𝒕𝒕 (𝑷𝑷𝑷𝑷) = 𝑰𝑰 𝒓𝒓𝒕𝒕 (𝟏𝟏 + 𝑻𝑻 𝒄𝒄𝒕𝒕 𝑷𝑷𝑷𝑷 )</formula><p><s>Apparently, these two equations are just mathematical descriptions without explaining how   happen and why the curve follows a specific trend.</s><s>As follows is the derivation of this relationship with the physical definition of   .</s></p><p><s>Figure <ref type="figure">5</ref>(a) shows a typical voltage waveform by applying negative monophasic square current pulses with different SPPW.</s><s>For the voltage waveform of each SPPW, the peak voltage is denoted as   , which is a function of the current, , and the pulse width, , written as   (, ).</s></p><p><s>Here we need to set a hypothesis that the nerve stimulation happens when the voltage exceeds a threshold voltage, which is denoted as   .</s><s>This   is of a negative value since the ion channel can be activated by a negative voltage.</s><s>Thus the criteria to induce the nerve excitation is   (, ) ≥   .</s><s>Then both the threshold current,   , and the threshold charge,   =   × , are defined as the current and charge required to make the   reaches   .</s></p><p><s>Then the critical condition is:</s></p><formula xml:id="formula_2">𝑽𝑽 𝑷𝑷 (𝑰𝑰 𝒕𝒕𝒕𝒕 , 𝑺𝑺𝑷𝑷𝑷𝑷𝑷𝑷) = 𝑽𝑽 𝑻𝑻𝒕𝒕𝒓𝒓𝑻𝑻𝑻𝑻𝒕𝒕𝑻𝑻𝑻𝑻𝑻𝑻</formula><p><s>  and   can be written as functions of  and   :</s></p><formula xml:id="formula_3">𝑰𝑰 𝒕𝒕𝒕𝒕 = 𝒇𝒇(𝑺𝑺𝑷𝑷𝑷𝑷𝑷𝑷, 𝑽𝑽 𝑻𝑻𝒕𝒕𝒓𝒓𝑻𝑻𝑻𝑻𝒕𝒕𝑻𝑻𝑻𝑻𝑻𝑻 ) 𝑸𝑸 𝒕𝒕𝒕𝒕 = 𝑰𝑰 𝒕𝒕𝒕𝒕 × 𝑺𝑺𝑷𝑷𝑷𝑷𝑷𝑷 = 𝒇𝒇(𝑺𝑺𝑷𝑷𝑷𝑷𝑷𝑷, 𝑽𝑽 𝑻𝑻𝒕𝒕𝒓𝒓𝑻𝑻𝑻𝑻𝒕𝒕𝑻𝑻𝑻𝑻𝑻𝑻 ) × 𝑺𝑺𝑷𝑷𝑷𝑷𝑷𝑷</formula><p><s>Since   (  , ) cannot be expressed analytically, only numerical solutions of   and   , which are calculated with a set of modeling parameter, are provided in Figure <ref type="figure">5</ref>(b)and Figure <ref type="figure">5</ref>(c).</s></p><p><s>In Figure <ref type="figure">5</ref>(b), all curves decrease to a constant value,   .</s><s>This is because the   will saturate at a maximum value,    , when  ≥    , as shown in Figure <ref type="figure">5</ref>(a).</s></p><p><s>Meanwhile,</s></p><formula xml:id="formula_4">𝑸𝑸 𝒕𝒕𝒕𝒕 = 𝑰𝑰 𝒕𝒕𝒕𝒕 × 𝑺𝑺𝑷𝑷𝑷𝑷𝑷𝑷 = 𝑰𝑰 𝒓𝒓𝒕𝒕 × 𝑺𝑺𝑷𝑷𝑷𝑷𝑷𝑷 𝑤𝑤ℎ𝑒𝑒𝑒𝑒 𝑺𝑺𝑷𝑷𝑷𝑷𝑷𝑷 ≥ 𝑺𝑺𝑷𝑷𝑷𝑷𝑷𝑷 𝑷𝑷 𝒎𝒎𝒎𝒎𝒎𝒎</formula><p><s>Since   is a constant,   increases linearly with  , when  ≥    , as shown in Figure <ref type="figure">5</ref>(c).</s></p><p><s>The physical meaning of   is the threshold current when    =   .</s><s>Meanwhile, the nonlinear curve of   versus , the existence of   and linear curve of   versus , can be directly obtained without any additional hypotheses.</s><s>The exact analytical equation for this relationship is not available.</s><s>The curves in Figure <ref type="figure">5</ref>(b) and Figure <ref type="figure">5</ref>(c) are the numerical solutions of strength-duration relationship.</s><s>It corrects the relationship in two aspects:</s></p><p><s>1. Rather than infinitely approaching to the   as the case in Weiss's strength-duration equation, the threshold current curve will be equal to the   when  ≥    , which is a straight line indicated by the black arrow in Figure <ref type="figure">5</ref>(b).</s></p><p><s>2. Rather than being a completely straight line, the threshold charge curve is linear only when  ≥    .</s><s>When the  is approaching zero, the slope of the threshold charge curve will also approach zero, meaning that the threshold charge will converge in a constant value at low , indicated as the point of convergence in Figure <ref type="figure">5(c)</ref>.</s></p><p><s>These two major special differences with the Weiss's equation have already be confirmed by previous research <ref type="bibr" target="#b29">(30,</ref><ref type="bibr" target="#b30">31)</ref> and now can be well explained with the parallel RLC circuit model.</s></p><p><s>Moreover, it also explains why such a relationship is only valid to the negative monophasic square current waveform.</s><s>Because the voltage waveforms differ with the current waveforms, inducing a more complicated trend without a stable   , which was observed in other researches <ref type="bibr" target="#b31">(32)</ref>.</s><s>In Figure <ref type="figure">5</ref> (d) and (e), representative strength-duration curves of other waveforms including different types of square waves and sine waves are shown.</s><s>As seen, these curves don't share the same curve pattern as that of the negative monophasic square current pulse.</s><s>For example, the threshold current of sinewave current increases at high SPPW range, this phenomenon has been observed in previous research with triangle current waveform <ref type="bibr" target="#b31">(32)</ref>.</s><s>But as explained before, the analytical solution for this relationship is not available, we can only numerically calculate the curve, which highly depends on the exact circuit parameter.</s><s>Therefore, except the case of the negative monophasic square wave, the exact curve shape of other waveforms may vary with different circuit parameter.</s><s>This explains why this relationship valid for negative monophasic square current pulses.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Theoretical explanation of the physical entities for the inductance</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. The inductance generated by the coil structure of myelin sheaths</head><p><s>The biological structure of a segment of the myelinated axon is shown in Figure <ref type="figure" target="#fig_4">6</ref>(a).</s><s>The proposed distributed-parameter circuit model is as shown in Figure <ref type="figure" target="#fig_4">6</ref>(b), which is equivalent to a segment of a single axon shown in Figure <ref type="figure" target="#fig_4">6</ref>(a).</s><s>This axon segment has two parts with different structures: part with myelin sheath and node of Ranvier without myelin sheath.</s><s>For the Ranvier node, the cell membrane can be modelled as capacitors,   , connecting the inside terminal and outside terminal of the cell membrane.</s><s>The intracellular and extracellular fluid can be modelled as resistors.</s><s>For the part covered by myelin sheath, an extra inductors, , is connected between the cell membrane,   , and extracellular fluid.</s><s>Then the whole axon can be modelled as a circuit cascade as shown in Figure <ref type="figure" target="#fig_4">6</ref>(c).</s><s>Multiple axons can be modelled as a cascade network as shown in Figure <ref type="figure" target="#fig_4">6(d)</ref>.</s><s>The outside terminals of each axon are connected with resistors.</s><s>Meanwhile, a key feature need to be added in this circuit, which is the mutual inductance between the adjacent myelin sheaths.</s><s>In term of physics, this mutual inductance can be either positive or negative, depending on their mutual spiraling orientations.</s><s>In this circuit model, a definite conclusion will be drawn that this mutual inductance can only be positive (will be explained in the next section), meaning that the spiraling orientations of adjacent myelin sheaths have to be opposite.</s><s>We noticed that this phenomenon has been reported by previous experimental observations ( <ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref> but cannot be explained by any previous theories and models.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">How the distributed-parameter circuit compatible with the lumped-parameter circuit</head><p><s>A single axon can be modeled as a cascade of basic units, indicated within the red dash box in Figure <ref type="figure" target="#fig_5">7</ref>(a)).</s><s>The configuration of this basic unit is a parallel RLC circuit with an extra capacitor (  ) connected in series with the inductor.</s><s>Here the physical meaning of   is the capacitance of the Ranvier node and   is the capacitance of the cell membrane covered by myelin sheath.</s></p><p><s>Considering that the length of the segment covered by myelin sheath is much longer than the Ranvier node, here   ≫   .</s><s>Apparently, this cascade can be simplified as a circuit which has the same configuration as its basic unit, as shown in Figure <ref type="figure" target="#fig_5">7(c)</ref>.</s></p><p><s>This simplified circuit is exactly the revised lumped-parameter circuit proposed in Figure <ref type="figure" target="#fig_2">S3</ref>.</s><s>In the initial version of the lumped-parameter circuit shown in Figure <ref type="figure">1</ref>, the extra capacitor   is not included.</s><s>However, in Figure2, we have already shown that an extra capacitor should be added for a better curve fitting.</s><s>Now based on the distributed-parameter circuit, which is derived from the biological structure of the axon, we know this   really exists and its physical meaning is the cell membrane covered by the myelin sheath.</s></p><p><s>This circuit cascade can be directly used for the study of the nerve stimulation.</s><s>An equivalent circuit cascade with 11 stages is shown in Figure <ref type="figure" target="#fig_5">7</ref> In summary, if we only care about the voltage waveforms on the Ranvier node, which determines the result in electrical nerve stimulation, a lumped-parameter circuit in Figure <ref type="figure" target="#fig_5">7</ref>(c) can simplify the analysis.</s><s>However, an in-depth study of the distributed-parameter circuit can help understand more about the nervous system, which will be explained in the following sections.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">How the myelin sheath enhances the propagation speed of neural signals?</head><p><s>In conventional neural models, the myelin sheath is always modeled as a pure resistor to increase the propagation speed of neural signals by decreasing capacitance and increasing electrical resistance across the cell membrane.</s><s>However, in our new circuit model by considering the myelin sheath as an inductor, this propagation speed enhancement will have a new explanation.</s><s>Generally speaking, this propagation speed enhancement is induced by two mechanisms: mutual inductance between two adjacent myelin sheaths and frequency modulated signal decay.</s><s>To demonstration these two mechanisms, a circuit which is similar to one in Figure <ref type="figure" target="#fig_5">7</ref>(a) is proposed in Figure <ref type="figure" target="#fig_6">8</ref>(a), with a different configuration of the current source.</s><s>The current source is connected in parallel with the   of stage 6.</s><s>A sinewave current pulse is applied to mimic the generation of action potential.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>a. Mutual inductance</head><p><s>Since the node of Ranvier is very short, the mutual inductance between the two adjacent myelin sheaths will not be negligible.</s><s>An illustrative plotting for this mutual inductance is shown in Figure <ref type="figure" target="#fig_6">8(b</ref>).</s><s>When an action potential is activated on the node of Ranvier before the anterior myelin sheath, this action potential is also coupled onto this myelin sheath.</s><s>Assuming at an instant, the potential cross the myelin sheath is positive outside and negative inside, then a current will flow along the spiraling orientation from outside to inside, generating a magnetic field.</s><s>This magnetic field will generate an inductive current on the posterior myelin sheath.</s><s>Due to the opposite spiraling orientations of adjacent myelin sheaths, the voltage induced by the inductive current on the posterior myelin sheath will share the same polarity, which is also positive outside and negative inside.</s><s>This voltage will be further coupled onto the node of Ranvier between these two myelin sheaths.</s><s>Surely, even without this mutual inductance, the action potential on the anterior node of Ranvier still can generate some voltage onto the posterior node of Ranvier.</s><s>However, this mutual inductance can increase the voltage amplitude, reduce the signal decay and finally enhance the propagation speed of neural signal.</s></p><p><s>The effect of the mutual inductance upon the propagation of the action potential is shown in Figure <ref type="figure" target="#fig_6">8</ref>(c).</s><s>A sine wave current pulse is applied on   of stage 6 to mimic the generation of an action potential.</s><s>The voltage waveforms on   of stage 6 and stage 5 are compared when the mutual inductance is positive (opposite spiraling orientations) and negative (same spiraling orientations).</s><s>This mutual inductance only has a minor effect on the voltage of stage 6, but affects the voltage of stage 5 a lot.</s><s>The voltage of positive mutual inductance is higher than that of negative mutual inductance.</s><s>Meanwhile, the positive mutual inductance can guarantee a same voltage polarity between the anterior and posterior stage, which can make the activation of the action potential on the posterior stage earlier.</s><s>But the negative mutual inductance may induce a polarity reversing.</s><s>As shown in Figure <ref type="figure" target="#fig_6">8</ref>(c), the voltage on stage 6 has a positive-first polarity while the voltage for negative mutual inductance on stage 5 has a negative-first polarity, which will delay the activation of action potential.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>b. Frequency modulated signal decay</head><p><s>Another effect induced by myelin sheaths upon the neural signal propagation is the frequency modulated signal decay.</s><s>Considering the same situation as shown in Figure <ref type="figure">9</ref>(a), an action potential is activated on the stage 6, the voltage waveforms on   of each stage are shown in Figure <ref type="figure">9</ref>(a).</s><s>The voltage amplitude reaches maximum on stage 6 and gradually decay for the stages farther from stage 6.</s><s>In this circuit, the decay constant  is defined as the voltage ratio between the anterior and posterior stages:</s></p><formula xml:id="formula_5">𝝀𝝀 = 𝑽𝑽 𝑻𝑻𝒕𝒕𝒎𝒎𝒔𝒔𝑻𝑻𝒔𝒔 𝑽𝑽 𝑻𝑻𝒕𝒕𝒎𝒎𝒔𝒔𝑻𝑻𝒔𝒔 �</formula><p><s>This decay constant  is determined by the frequency of the input signal.</s><s>A detailed circuit analysis can be found in Supplement S6.</s><s>A simple conclusion drawn from the circuit analysis is that the decay constant  reaches maximum at the resonance frequency of each stage, meaning a minimum signal decay.</s><s>This conclusion is also confirmed by modeling as shown in Figure <ref type="figure">9</ref>(b)-(d).</s><s>The voltage amplitudes of each stage with different input frequency is shown in Figure <ref type="figure">9</ref>(b).</s><s>For the curve of 2 kHz, which is the resonance frequency set for each stage, the response voltage has the maximum amplitude and minimum decay.</s><s>In Figure <ref type="figure">9</ref>(c), the voltage-frequency curves of stage 5 and stage 6 are shown.</s><s>These two curves all exhibit a parallel RLC circuit characteristic, which is similar to the result in Figure <ref type="figure" target="#fig_5">7(d)</ref>.</s><s>Then calculate the decay constant  in Figure <ref type="figure">9</ref>(d).</s><s>As can been seen,  reaches maximum at the frequency very close to resonance frequency set for modelling, which is 2 kHz.</s><s>But there is still a slight frequency mismatch.</s><s>This is because the resonance frequency set for modelling is calculated by the equation:</s></p><formula xml:id="formula_6">𝒇𝒇 = 𝟏𝟏 𝟐𝟐𝟐𝟐�𝑳𝑳𝑪𝑪 𝟏𝟏</formula><p><s>However, the actual resonance frequency is also affected by factors such as   , other resistors and mutual inductance.</s><s>So the frequency with maximum  has a certain shift with 2 kHz.</s><s>In this case, the actual resonance frequency is 1500 Hz.</s><s>It means the action potential can propagate with a minimum decay when its major frequency is at 1500 Hz.</s><s>Or in other words, the growth of the myelin will fit the major frequency of the action potential to realize a minimum signal decay.</s></p><p><s>In summary, the myelin sheath can enhance the propagation of neural signal by two mechanisms.</s></p><p><s>The opposite spiraling orientations of adjacent myelin sheaths can induce a positive mutual inductance to increase the coupling between the anterior and posterior nodes of Ranvier, enhancing the propagation speed of action potential.</s><s>The myelin will grow to a certain length and thickness to make the resonance frequency of the axon the same as the major frequency of the action potential, minimizing the signal decay along the axon to enhance the propagation speed of action potential.</s><s>Surely, as a direct prediction, there should be a magnetic field accompany with the electric signal of the action potential.</s><s>This magnetic field with action potential has been measured for more than half century <ref type="bibr" target="#b38">(39)</ref><ref type="bibr" target="#b39">(40)</ref><ref type="bibr" target="#b40">(41)</ref><ref type="bibr" target="#b41">(42)</ref><ref type="bibr" target="#b42">(43)</ref><ref type="bibr" target="#b43">(44)</ref><ref type="bibr" target="#b44">(45)</ref><ref type="bibr" target="#b45">(46)</ref><ref type="bibr" target="#b46">(47)</ref><ref type="bibr" target="#b47">(48)</ref><ref type="bibr" target="#b48">(49)</ref><ref type="bibr" target="#b49">(50)</ref><ref type="bibr" target="#b50">(51)</ref><ref type="bibr" target="#b51">(52)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Effect of myelin on magnetic nerve stimulations</head><p><s>Since the myelin sheath is an inductor in our theory, an external applied magnetic field can also generate inductive current within the myelin sheath and further generate voltage on the node of Ranvier to activate action potential.</s><s>An illustrative drawing of this electromagnetic induction is shown in Figure <ref type="figure">10</ref>(a).</s><s>When a magnetic field is applied along the longitudinal direction of the axon, the inductive current on the anterior and posterior myelin sheaths will flow in opposite directions because of their opposite spiraling orientations.</s><s>So the inductive potential on these two myelin sheaths will have opposite polarities.</s><s>Since the outside terminals of these two myelin sheaths are connected, these two inductive potential will cancel with each other and finally, only their potential difference can be coupled onto the node of Ranvier in between.</s><s>This phenomenon can be modeled by the circuit as shown in Figure <ref type="figure">10(b</ref>).</s><s>The inductive potential can be modeled as a voltage source connected in series with the inductor.</s><s>Here only stage 5 and 6 are used for a simple demonstration.</s><s>The voltage source of these two stages will be applied with sine wave current pulse of opposite polarities.</s><s>The amplitudes of these two voltage sources are   and   for stage 5 and 6, respectively.</s></p><p><s>The difference between   and   is ∆:</s></p><formula xml:id="formula_7">∆𝑽𝑽 = 𝑽𝑽 𝟏𝟏 -𝑽𝑽 𝟏𝟏 ;</formula><p><s>The voltage on   of stage 6, which is the node of Ranvier between two myelin sheaths of stage 5 and 6, by increasing ∆ is shown in Figure <ref type="figure">10(c</ref>).</s><s>As can be seen, the voltage on   is proportional to ∆.</s><s>When there is no potential difference, the voltage on   is also zero.</s></p><p><s>Since the inductive potential on the myelin sheath is proportional to the amplitude of the magnetic field component in the longitudinal direction of the axon, the voltage difference between two adjacent myelin sheaths is proportional to the amplitude difference of this magnetic field, which is the spatial gradient along the axon.</s><s>It means, it is the spatial gradient, not the amplitude, of the magnetic field actually taking effect for magnetic nerve stimulation.</s><s>This phenomenon is validated by previous study <ref type="bibr" target="#b52">(53,</ref><ref type="bibr" target="#b53">54)</ref> and now can be explained by our theory.</s><s>In normal condition when a coil is positioned near a straight axon, the gradient of the magnetic field along the axon is very low.</s><s>It explains why the current required for magnetic field stimulation is so high <ref type="bibr" target="#b52">(53)</ref>.</s></p><p><s>A more detailed analysis for nerves with different bending angles in magnetic stimulations is shown in Figure <ref type="figure">11</ref>.</s><s>Here only consider the situation when the magnetic field is along the axon.</s><s>When the axon is straight (Figure <ref type="figure">11</ref>(a)), the inductive potentials of the two near location are denoted as   and   .</s><s>Since the magnetic field is along the axon, these two potential are all proportional to the amplitude of the magnetic field.</s><s>Their difference is proportional to the gradient of the magnetic field:</s></p><formula xml:id="formula_8">∆𝑽𝑽 ∝ � 𝑻𝑻𝒅𝒅 𝑻𝑻𝒎𝒎 �</formula><p><s>The direction along the axon is set as  axis.</s></p><p><s>When part of the axon is bent with an angle  as shown in Figure <ref type="figure">11</ref>(b), the inductive potential   will change as:</s></p><formula xml:id="formula_9">𝑽𝑽 𝟐𝟐 ∝ 𝒅𝒅 × 𝒄𝒄𝑻𝑻𝑻𝑻 𝜽𝜽</formula><p><s>Generally,   will decrease since   ≤ , and ∆ , the difference between   and   , will increase, lowering the threshold current required for magnetic nerve stimulation.</s><s>When the bending angle  = ° as shown in Figure <ref type="figure">11</ref>(c),   = .</s><s>Then the voltage difference ∆ =   , which is the theoretically maximum value can be achieved.</s><s>In this situation, the current required for magnetic stimulation will be the minimum.</s><s>The analysis results for these three situations in Figure <ref type="figure">11</ref> are exactly the experimental observations in previous study <ref type="bibr" target="#b53">(54)</ref>.</s><s>Now all these phenomena can be theoretically explained in our theory.</s></p><p><s>Moreover, another case demonstration in Figure <ref type="figure" target="#fig_1">12</ref> shows how our theory predicts an exact experiment observation in previous study <ref type="bibr" target="#b53">(54)</ref>.</s><s>It was observed that there will be two stimulation points when a straight nerve is placed above the coil with a figure of eight shape.</s><s>Figure <ref type="figure" target="#fig_1">12(a)</ref> shows the experiment configuration.</s><s>A straight nerve along the x axis is placed above the coil and the current directions in two circles are anticlockwise and clockwise, respectively.</s><s>Two yellow points refer to the two stimulation points.</s><s>The magnetic field gradient along x axis, �   �, in x-z plane when y deviates a bit from zero point, is shown in Figure <ref type="figure" target="#fig_1">12(b)</ref>.</s><s>As can be seen, there will be two peaks, corresponding to the two stimulation points observed in previous study.</s><s>It needs to be emphasized that the magnetic field along x axis is always zero when y=0, because of the perfect symmetric coil shape used in our modelling.</s><s>The magnetic field along x axis generated by two circles will completed balance with each other.</s><s>However, this situation will never happen in real experiment since the coils shape will never be perfectly symmetric and the nerve has a certain volume.</s></p><p><s>Since the coil structure is the main factor to enable the magnetic nerve stimulations, as a direct prediction, unmyelinated nerves and other excitable membranes such as muscle fibers will be very difficult to be stimulated by magnetic field.</s><s>It is reported that C-fibers and cardiac nerve (unmyelinated nerve fiber) are hard to be stimulated by magnetostimulation <ref type="bibr" target="#b54">(55,</ref><ref type="bibr" target="#b55">56)</ref>, which can be an evidence to support this prediction.</s></p><p><s>Based on the above explanation, it is clearly shown that the coil structure of myelin sheath can generate an inductive reactance to realize an energy conversion between electric field and magnetic field.</s><s>In perspective of circuit, myelin sheath should be considered as a real inductor, which can generate magnetic field from electric current and sense magnetic field by generating inductive current.</s><s>However, based on the equation of the resonance frequency:</s></p><formula xml:id="formula_10">𝒇𝒇 = 𝟏𝟏 𝟐𝟐𝟐𝟐√𝑳𝑳𝑪𝑪</formula><p><s>This inductance will be a huge value, can be as high as several Henry (H), when we consider the cell membrane capacitance as a reasonable value, which is of nF level, and the measured resonance frequency  is at kHz level.</s><s>This huge inductor has been measured in the original paper of H-H model (2) and Cole's early stage results (3).</s><s>Apparently, the myelin sheath, which is a microscale object, cannot provide such as a huge inductance.</s><s>Thus, there should be another mechanism to provide this huge inductance.</s><s>Actually, this huge inductor is not a real one, but an equivalent one.</s><s>It is induced by the piezoelectric effect of the plasma membrane.</s><s>This piezoelectric effect is illustrated in Figure <ref type="figure" target="#fig_9">13</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Piezoelectric effect of plasma membrane</head><p><s>The plasma membrane is of a lipid bilayer structure as shown in Figure <ref type="figure" target="#fig_9">13(a)</ref>.</s><s>The lipid molecules are polar molecules, with positive tails toward the center and negative tails toward the extra-and intracellular fluid (shown as the + and -signs) <ref type="bibr" target="#b56">(57)</ref>.</s><s>Then when an external electric field is applied onto this lipid bilayer membrane, the two layers will have opposite deformations as shown in Figure <ref type="figure" target="#fig_9">13(c</ref>).</s><s>When the electric field is top positive and bottom negative (shown in (c-i)), the top layer will be stretched and bottom layer will be compressed.</s><s>When the electric field is top negative and bottom positive (shown in (c-ii)), the top layer will be compressed and bottom layer will be stretched.</s><s>Here in the Figure <ref type="figure" target="#fig_9">13</ref>(c), only axial deformation is depicted.</s><s>However, the actual deformation will happen along all directions, resulting in a change of the surface tension.</s><s>This surface tension can be measured not only in axons, but also in any cells with such lipid bilayer membranes <ref type="bibr" target="#b57">(58)</ref><ref type="bibr" target="#b58">(59)</ref><ref type="bibr" target="#b59">(60)</ref>.</s><s>On the other hand, a surface tension applied upon the lipid bilayer membrane can also change its electrostatic potential <ref type="bibr" target="#b60">(61)</ref> and polarity <ref type="bibr" target="#b61">(62)</ref>.</s></p><p><s>This phenomenon is called piezoelectric effect in MEMS (Microelectromechanical systems).</s><s>The equivalent circuit of this piezoelectric layer is shown in Figure <ref type="figure" target="#fig_9">13</ref>(b) <ref type="bibr" target="#b62">(63)</ref>.</s><s>In the right branch,   is the capacitance of the cell membrane, determined by its area, thickness and dielectric constant.</s><s>Then in the left branch, the three parameters, ,  and , are just modelling parameters to fit the experiment result.</s><s>They don't have exact physical meanings.</s><s>Here the value of  must be much smaller than   .</s></p><p><s>As can be seen, there will be an inductor in the equivalent circuit.</s><s>Meanwhile, the circuit configuration is exactly the same as the simplified circuit shown in Figure <ref type="figure">1</ref>.</s><s>The value of the inductance is determined by the capacitance of the cell membrane   and the resonance frequency .</s><s>The resonance frequency is determined by the mechanical structure of the cell membrane.</s></p><p><s>Considering the cell membrane is very thin and soft, it can be modeled as a very long, very thin and very soft beam, which has a very low mechanical resonance frequency.</s><s>In our previous experiment on myelinated nerves, this resonance frequency is between 1k to 2k Hz.</s><s>In Cole's early experiment on giant squid axon, which is a non-myelinated, this resonance frequency is around 300 Hz.</s><s>Now it is easy to comprehend why the resonance frequency is so low.</s><s>With this very low resonance frequency, a huge inductor in the circuit is inevitable, since it is just an equivalent inductor to fit the experiment result.</s><s>This equivalent inductor will not induce any magnetic field, but introduce a mechanical surface stress.</s></p><p><s>Then as an easy prediction, this mechanical stress can also be measured as a mechanical wave, which is accompany with the propagation of the action potential.</s><s>This prediction was also made by Kenneth S. <ref type="bibr">Cole at 1941 (64)</ref> after he measured the huge inductance in squid giant axon <ref type="bibr" target="#b2">(3)</ref>.</s></p><p><s>Even without any evidence at that time, Cole still believe it is the piezoelectric effect of plasma membrane to introduce this huge inductance.</s><s>Since this mechanical wave is directly induced by the electric signal, it also has the same propagation speed as the electric signal of the action potential.</s><s>This mechanical wave has been measured and studied for more than 10 years (36) and to be observed with not only exactly the same speed but also the same phase with the action potential <ref type="bibr" target="#b64">(65)</ref>.</s><s>An alternative theory, called soliton theory, was developed based on the observation of this mechanical wave.</s><s>Based on the calculation of soliton theory, the propagation speed of the mechanical wave will be close to the action potential.</s><s>However, after understanding the physical mechanism to generate this mechanical wave, we can immediately know this even without any calculation.</s></p><p><s>Moreover, this piezoelectric effect of the plasma membrane also explains the mechanism of acoustic nerve stimulation.</s><s>Previous, there are several different possible mechanisms were proposed to explain why ultrasound can stimulate the nerve <ref type="bibr" target="#b65">(66)</ref>.</s><s>Now since the cell membrane is a piezoelectric film, the surface stress can be generated by applying electric field, and on the other hand, the surface stress can also generate electric field.</s><s>The external applied acoustic wave can introduce this surface stress and then generate a voltage on the plasma membrane to activate the ion channels.</s><s>This mechanism is totally the same as that of the electric stimulation.</s><s>The only difference is that, this voltage on the plasma membrane is not induced by electrical coupling but by piezoelectric effect.</s></p><p><s>In summary, with the understanding of the inductance of myelin sheaths and the piezoelectric effect of the plasma membrane, a series of phenomena can be well explained.</s><s>Meanwhile, a new explanation of the function of myelin can directly be obtained from this theory.</s><s>Most importantly, it provides a comprehensive understanding of the nature of the neural signal: the neural signal is a combination of electric, magnetic and mechanical signals.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc><div><p><s>Figure 7(d), which is almost the same as the blue curve.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 1 .Fig. 2 .</head><label>12</label><figDesc><div><p><s>Fig. 1.</s><s>The stimulus artifacts in EMG recording from electrical stimulation of the cortical and pelvic nerve can be fitted by the voltage response of a parallel RLC circuit.</s><s>(a) An EMG signal sample of the cortical stimulation; (b) The detailed analysis of the stimulus artifact: the recorded stimulus artifact is the red curve, the applied current is the blue curve and the voltage response of</s></p></div></figDesc><graphic coords="18,172.40,72.00,267.20,266.35" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc><div><p><s>Fig. 3. EMG recording of cortical stimulation by applying negative monophasic square current pulses of (a) 300 µA and (b) 500 µA: (i) The complete EMG data including the stimulus artifacts and EMG signal; (ii) detailed stimulus artifacts; (iii) detailed EMG signals, inset figure shows the voltage amplitude of EMG signals with SPPW.</s></p></div></figDesc><graphic coords="20,157.23,491.70,297.55,186.05" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4 .Fig. 5 .</head><label>45</label><figDesc><div><p><s>Fig. 4. EMG recording of pelvic nerve stimulation by applying (a-i) positive monophasic, (a-ii) negative monophasic and (a-iii) positive-first biphasic square current pulses of 70 µA; (b) The voltage amplitude of EMG signals of three waveforms with SPPW.</s></p></div></figDesc><graphic coords="21,167.20,119.40,277.60,260.95" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 6 .</head><label>6</label><figDesc><div><p><s>Fig. 6.</s><s>The equivalent neural circuit of axons by considering the myelin sheaths as inductors.</s><s>(a) 3D illustration of the biological structure of a myelinated axon segment; (b) the cross-sectional view of the axon segment with the equivalent circuit model; (c) the equivalent circuit cascade of a myelinated axon; (d) the equivalent cascaded circuit network of multiple axons.</s></p></div></figDesc><graphic coords="22,182.93,394.30,282.15,283.40" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 7 .</head><label>7</label><figDesc><div><p><s>Fig. 7. Circuit analysis showing the lumped-parameter circuit can used as simplification of the distributed-parameter neural circuit.</s><s>(a) A circuit cascade with 11 stages for modeling; (b) The</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 8 .</head><label>8</label><figDesc><div><p><s>Fig. 8. Circuit analysis showing the opposite wrapping orientations of adjacent myelin sheaths can enhance the signal propagation speed.</s><s>(a) A circuit cascade with 11 stages for modeling, the current source for applying a sine wave current pulse is connected on   of stage 6 to mimic the activation of an action potential; (b) Illustrative plotting of the mutual inductance between adjacent myelin sheaths; (c) Comparison of the voltage waveforms on   of stage 5 and 6 with positive and negative mutual inductance.</s></p></div></figDesc><graphic coords="23,126.00,466.07,360.00,201.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 9 .Fig. 10 .</head><label>910</label><figDesc><div><p><s>Fig. 9. Circuit analysis showing myelin sheaths can minimize the spatial decay of the neural signal and enhance the propagation speed.</s><s>(a) Voltage waveforms on   of each stage when an action potential is activated on stage 6, the circuit for modeling is shown in Figure 8(a); (b) The amplitude</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 11 .Fig. 12 .</head><label>1112</label><figDesc><div><p><s>Fig. 11.</s><s>A detailed analysis of magnetic nerve stimulation with different axon bending angles.</s><s>(a) The axon is straight; (b) The axon is bent with angle ; (c) The bending angle  = °.</s></p></div></figDesc><graphic coords="25,72.00,105.87,468.20,231.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Fig. 13 .</head><label>13</label><figDesc><div><p><s>Fig. 13.</s><s>Illustration of the piezoelectric effect of the lipid bilayer structure of the cell membrane.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="19,113.98,72.00,402.05,252.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="24,121.43,150.51,369.15,187.70" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="24,170.95,419.47,270.10,284.25" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head></head><label></label><figDesc><div><p><s>research programme (NRF-CRP) 'Peripheral Nerve Prostheses: A Paradigm Shift in Restoring Dexterous Limb Function' (NRF-CRP10-2012-01), National Research Foundation Competitive research programme (NRF-CRP) 'Energy Harvesting Solutions for Biosensors' (R-263-000-A27-281), National Research Foundation Competitive research programme (NRF-CRP) 'Piezoelectric Photonics Using CMOS Compatible AlN Technology for Enabling The Next Generation The theory was developed by Hao Wang, Jiahui Wang and Tianyiyi He.</s><s>The modeling work was carried out by Hao Wang.</s><s>The major framework of experiment design was carried out by Hao Wang, Jiahui Wang and Xin Yuan Thow.</s><s>The experiments of CP nerve stimulation were carried out by Sanghoon Lee, Jiahui Wang, Xin Yuan Thow and Hao Wang.</s><s>The experiments of TA muscle stimulation were carried out by Jiahui Wang, Xin Yuan Thow and Hao Wang.</s><s>The experiments of cortical stimulation were carried out by Xin Yuan Thow, Jiahui Wang and Hao Wang.</s><s>The experiments of pelvic stimulation were carried out Wendy Yen Xian Peh, Yuan Thow, Jiahui Wang and Hao Wang.</s><s>The experiments of stimulus artifact recording with high sampling frequency system were carried out by Kian Ann Ng, Xin Yuan Thow, Jiahui Wang and Hao Wang.</s><s>The data analysis was carried out by Hao Wang, Jiahui Wang, Xin Yuan Thow and Wendy Yen Xian Peh.</s><s>The manuscript was written by Hao Wang, Jiahui Wang and Xin Yuan Thow.</s><s>All authors discussed the experimental results and contributed to the final version of the manuscript.</s><s>Prof. Nitish V. Thakor, Prof. Chengkuo Lee and Prof. Chia-hung Chen provided general guidance and supervision of the project.</s><s>Authors declare no competing interests.</s><s>All data is available in the main text or the supplementary materials.</s></p></div></figDesc><table><row><cell>Photonics ICs and Nanosensors' (R-263-000-C24-281), Faculty Research Committee (FRC)</cell></row><row><cell>'Thermoelectric Power Generator (TEG) Based Self-Powered ECG Plaster -System Integration</cell></row><row><cell>(Part 3)' (R-263-000-B56-112) and HIFES Seed Funding 'Hybrid Integration of Flexible Power</cell></row><row><cell>Source and Pressure Sensors' (R-263-501-012-133).</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 1 .</head><label>1</label><figDesc><div><p><s>Modelling parameters</s></p></div></figDesc><table><row><cell>No.</cell><cell>𝑹𝑹 𝟏𝟏 (Ω)</cell><cell cols="2">𝑹𝑹 𝟐𝟐 (Ω) 𝑹𝑹 𝟑𝟑 (Ω)</cell><cell>𝑪𝑪(F)</cell><cell>𝑳𝑳(H)</cell></row><row><cell>2-(a)</cell><cell>2000</cell><cell>1350</cell><cell>500</cell><cell>10n</cell><cell>0.1464</cell></row><row><cell>2-(b)</cell><cell>3701</cell><cell>350</cell><cell>500</cell><cell>10n</cell><cell>0.1464</cell></row><row><cell>2-(c)</cell><cell>9000</cell><cell>1350</cell><cell>500</cell><cell>10n</cell><cell>0.2326</cell></row><row><cell>2-(d)</cell><cell>80000</cell><cell>300</cell><cell>1700</cell><cell>18n</cell><cell>0.1086</cell></row><row><cell>2-(e)</cell><cell>2656</cell><cell>1800</cell><cell>800</cell><cell>18n</cell><cell>0.0813</cell></row><row><cell>3-(f)</cell><cell>2656</cell><cell>1800</cell><cell>800</cell><cell>18n</cell><cell>0.0813</cell></row><row><cell>8-(b)</cell><cell>16579</cell><cell>100</cell><cell>3000</cell><cell>12n</cell><cell>2.1109</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_0"><p><s>the parallel RLC circuit by modelling is the green curve; (c) An EMG signal sample of the pelvic nerve stimulation; (d) The detailed analysis of the stimulus artifact: the recorded stimulus artifact is the red curve, the applied current is the blue curve and the voltage response of the parallel RLC circuit by modelling is the green curve; (e) The circuit configuration of the parallel RLC circuit used for modelling.</s><s>10 certified by peer review) is the author/funder.</s><s>All rights reserved.</s><s>No reuse allowed without permission.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments:</head><p>We would like to thank for the experiment setup support from <rs type="person">Han Wu</rs>, <rs type="person">Shih Chiang Liu</rs>, <rs type="funder">Astrid</rs>, <rs type="person">Shuhao Lu</rs>, <rs type="person">Li Jing Ong</rs> and <rs type="person">Dian Sheng Wong</rs>.We also would like to thank for the animal experiment support from <rs type="person">Gammad Gil Gerald Lasam</rs>.We have our special acknowledgement to <rs type="person">James T. Fulton</rs> for his pioneer research of neuroscience published on the Internet.This work was supported by grants from the <rs type="funder">National Research Foundation Competitive</rs></p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Materials:</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Mathematical neuroscience</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Brzychczy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Poznanski</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<publisher>Academic Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A quantitative description of membrane current and its application to conduction and excitation in nerve</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Hodgkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Huxley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of physiology</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="500" to="544" />
+			<date type="published" when="1952">1952</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Longitudinal impedance of the squid giant axon</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Cole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Baker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of general physiology</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="771" to="788" />
+			<date type="published" when="1941">1941</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Incorporating inductances in tissue-scale models of cardiac electrophysiology</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Griffith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chaos: An Interdisciplinary Journal of Nonlinear Science</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page">93926</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Effect of the series inductance of a nerve axon upon its conduction velocity</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Scott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mathematical Biosciences</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">3-4</biblScope>
+			<biblScope unit="page" from="277" to="290" />
+			<date type="published" when="1971">1971</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">The effect of the nonlinearity of the response of lipid membranes to voltage perturbations on the interpretation of their electrical properties. A new theoretical description</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">D</forename><surname>Mosgaard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Zecchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Heimburg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Budvytyte</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Membranes</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="495" to="512" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Resonance, oscillation and the intrinsic frequency preferences of neurons</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hutcheon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yarom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends in neurosciences</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="216" to="222" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Resonance in neocortical neurons and networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dwyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Martell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Van Drongelen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="3698" to="3708" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Potential changes produced by application of current steps in motoneurones</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Araki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Oshima</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">191</biblScope>
+			<biblScope unit="issue">4793</biblScope>
+			<biblScope unit="page">1104</biblScope>
+			<date type="published" when="1961">1961</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Analysis of specific impedance of rabbit cerebral cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Ranck</surname><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Experimental neurology</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="153" to="174" />
+			<date type="published" when="1963">1963</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Harmonic oscillation as model for cortical excitability changes with attention in cats</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Freeman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">133</biblScope>
+			<biblScope unit="issue">3470</biblScope>
+			<biblScope unit="page" from="2058" to="2059" />
+			<date type="published" when="1961">1961</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Pseudo-inductive behaviour of the membrane potential of Chara corallina under galvanostatic conditions: a time-variant conductance property of potassium channels</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Homble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jenard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of experimental botany</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1309" to="1322" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">The quantitative analysis of excitation and conduction in nerve</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Huxley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Les Prix Nobel</title>
+		<imprint>
+			<biblScope unit="page" from="242" to="260" />
+			<date type="published" when="1963">1963. 1963</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Temperature dependence of oscillation in squid axons: comparison of experiments with computations</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Guttman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophysical journal</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">269</biblScope>
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Oscillatory behavior of the squid axon membrane potential</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Sjodin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Mullins</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of general physiology</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="39" to="47" />
+			<date type="published" when="1958">1958</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Membrane resting and action potentials from the squid giant axon</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Curtis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Cole</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of cellular and comparative physiology</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="135" to="144" />
+			<date type="published" when="1942">1942</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Memristor-based neural networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thomas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Physics D: Applied Physics</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page">93001</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Subthreshold behavior and phenomenological impedance of the squid giant axon</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mauro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Conti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Dodge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Schor</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of general physiology</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="497" to="523" />
+			<date type="published" when="1970">1970</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Effects of frequency-dependent membrane capacitance on neural excitability</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Howell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">E</forename><surname>Medina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Grill</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neural engineering</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">56015</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Excitability characteristics of the A-and C-fibers in a peripheral nerve</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Experimental neurology</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="67" to="79" />
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">The frequency response and other properties of single fibres in the guineapig cochlear nerve</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Evans</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of physiology</title>
+		<imprint>
+			<biblScope unit="volume">226</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="263" to="287" />
+			<date type="published" when="1972">1972</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Spatial resolution of cochlear implants: the electrical field and excitation of auditory afferents</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kral</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hartmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mortazavi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Klinke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hearing research</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="issue">1-2</biblScope>
+			<biblScope unit="page" from="11" to="28" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Discharge patterns of cat primary auditory fibers with electrical stimulation of the cochlea</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hartmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Topp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Klinke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hearing research</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="47" to="62" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Anode break excitation in desheathed frog nerve</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Frankenhaeuser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Widén</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of physiology</title>
+		<imprint>
+			<biblScope unit="volume">131</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="243" to="247" />
+			<date type="published" when="1956">1956</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Anode break excitation and Pflüger&apos;s law</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">B</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ooyama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Journal of Physiology-Legacy Content</title>
+		<imprint>
+			<biblScope unit="volume">200</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="219" to="222" />
+			<date type="published" when="1961">1961</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Effects of frequency-dependent membrane capacitance on neural excitability</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Howell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">E</forename><surname>Medina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Grill</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neural engineering</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">56015</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Mechanism of anode break stimulation in the heart</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ranjan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Chiamvimonvat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">V</forename><surname>Thakor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">F</forename><surname>Tomaselli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Marban</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophysical journal</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1850" to="1863" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Sur la possibilite de rendre comparables entre eux les appareils servant a l&apos;excitation electrique</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Weiss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Archives Italiennes de Biologie</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="413" to="445" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Definition experimentale de 1&apos;excitabilite</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lapicque</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Soc Biol</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="280" to="283" />
+			<date type="published" when="1909">1909</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Evaluation of Pulse-Width of Spinal Nerve Stimulation in a Rat Model of Bladder Micturition Reflex</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Simenson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Dinsmoor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Orser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuromodulation: Technology at the Neural Interface</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="793" to="798" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Strength-duration curve: a measure for assessing sensory deficit in peripheral neuropathy</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">G</forename><surname>Friedli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurosurgery &amp; Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="184" to="189" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+	<note>Journal of Neurology</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Strength-duration curves of the common fibular nerve show hypoexcitability in people with functional ankle instability</title>
+		<author>
+			<persName><forename type="first">Á</forename><forename type="middle">L</forename><surname>Rodríguez-Fernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rebollo-Roldán</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Jiménez-Rejano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Güeita-Rodríguez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PM&amp;R</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="536" to="544" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Electron microscope studies of the formation of nodes of Ranvier in mouse sciatic nerves</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Uzman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nogueira-Graf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Cell Biology</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="589" to="598" />
+			<date type="published" when="1957">1957</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">An update on Schwann cell biologyimmunomodulation, neural regulation and other surprises</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Armati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Mathey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the neurological sciences</title>
+		<imprint>
+			<biblScope unit="volume">333</biblScope>
+			<biblScope unit="issue">1-2</biblScope>
+			<biblScope unit="page" from="68" to="72" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Movements of the Schwann cell nucleus implicate progression of the inner (axon-related) Schwann cell process during myelination</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Bunge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Bunge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bates</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Cell Biology</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="273" to="284" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">A comparison of the Hodgkin-Huxley model and the soliton theory for the action potential in nerves</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Appali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Van Rienen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Heimburg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Planar Lipid Bilayers and Liposomes</title>
+		<imprint>
+			<publisher>Academic Press</publisher>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="275" to="299" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Electrical stimulation and multichannel EMG recording for identification of functional neural tissue during cauda equina surgery</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Legatt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Schroeder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Gill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Goodrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Child&apos;s Nervous System</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="185" to="189" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">EMG signals detection and processing for on-line control of functional electrical stimulation</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Frigo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ferrarin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Frasson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Pavan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Thorsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Electromyography and Kinesiology</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="351" to="360" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">A source of large inductance and concentrated moving magnetic fields on axons</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Lieberstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Mahrous</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mathematical Biosciences</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1-2</biblScope>
+			<biblScope unit="page" from="41" to="60" />
+			<date type="published" when="1970">1970</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">The Magnetic Field Accompanying Neuronal Activity A New Method for The Study of The Nervous System</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Seipel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Morrow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Washington Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1" to="4" />
+			<date type="published" when="1960">1960</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Magnetic fields accompanying transmission of nerve impulses in the frog&apos;s sciatic</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Gengerelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Holter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Glasscock</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Psychology</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="317" to="326" />
+			<date type="published" when="1961">1961</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Magnetic fields around the torso: production by electrical activity of the human heart</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">156</biblScope>
+			<biblScope unit="issue">3775</biblScope>
+			<biblScope unit="page" from="652" to="654" />
+			<date type="published" when="1967">1967</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Magnetoencephalography: evidence of magnetic fields produced by alpharhythm currents</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">161</biblScope>
+			<biblScope unit="issue">3843</biblScope>
+			<biblScope unit="page" from="784" to="786" />
+			<date type="published" when="1968">1968</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">A low-noise low input impedance amplifier for magnetic measurements of nerve action currents</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Wikswo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Samson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Giffard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Biomedical Engineering</title>
+		<imprint>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="215" to="221" />
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Magnetic field of a nerve impulse: first measurements</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Wikswo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Barach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Freeman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">208</biblScope>
+			<biblScope unit="issue">4439</biblScope>
+			<biblScope unit="page" from="53" to="55" />
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Experiments on the magnetic field of nerve action potentials</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Barach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Freeman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Wikswo</surname><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Applied Physics</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="4532" to="4538" />
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Recent developments in the measurement of magnetic fields from isolated nerves and muscles</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Wikswo</surname><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Applied Physics</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="2554" to="2559" />
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Improved instrumentation for measuring the magnetic field of cellular action currents</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Wikswo</surname><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Review of Scientific Instruments</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1846" to="1850" />
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">The magnetic field of a single axon. A comparison of theory and experiment</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Roth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Wikswo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophysical journal</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="93" to="109" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Magnetic measurements of action currents in a single nerve axon: A core-conductor model</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Barach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Roth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Wikswo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Biomed Eng</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="136" to="140" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Magnetic measurements of peripheral nerve function using a neuromagnetic current probe</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Wijesinghe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Experimental Biology and Medicine</title>
+		<imprint>
+			<biblScope unit="volume">235</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="159" to="169" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">First magnetic measurements of action currents in isolated cardiac Purkinje fibers</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Wikswo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Barach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Gundersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Mclean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Freeman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Il Nuovo Cimento D</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="368" to="378" />
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Transcranial magnetic stimulation: a primer</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hallett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="187" to="199" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Magnetic coil stimulation of straight and bent amphibian and mammalian peripheral nerve in vitro: locus of excitation</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Maccabee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">E</forename><surname>Amassian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Eberle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Q</forename><surname>Cracco</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Physiology</title>
+		<imprint>
+			<biblScope unit="volume">460</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="201" to="219" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Predicting Magnetostimulation Thresholds in the Peripheral Nervous System using Realistic Body Models</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Davids</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Guérin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Malzacher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">R</forename><surname>Schad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Wald</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Scientific reports</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">5316</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Electrostimulation by time-varying magnetic fields</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Irnich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biology and Medicine</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="43" to="49" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+	<note>Magnetic Resonance Materials in Physics</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Probing the lipid membrane dipole potential by atomic force microscopy</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Mayer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">S</forename><surname>Wickremasinghe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Hafner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophysical journal</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="5193" to="5199" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Incorporation of surface tension into molecular dynamics simulation of an interface: a fluid phase lipid bilayer membrane</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Chiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Balaji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Subramaniam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">L</forename><surname>Scott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Jakobsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophysical journal</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1230" to="1245" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Dipole potential of lipid membranes</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Brockman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chemistry and physics of lipids</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="issue">1-2</biblScope>
+			<biblScope unit="page" from="57" to="79" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Molecular dynamics simulations of lipid bilayers</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Feller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current opinion in colloid &amp; interface science</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">3-4</biblScope>
+			<biblScope unit="page" from="217" to="223" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Effect of membrane tension on the electric field and dipole potential of lipid bilayer membrane</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">T</forename><surname>Warshaviak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Muellner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chachisvilis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochimica et Biophysica Acta (BBA)-Biomembranes</title>
+		<imprint>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="2608" to="2617" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Laurdan fluorescence senses mechanical strain in the lipid bilayer membrane</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Frangos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chachisvilis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochemical and biophysical research communications</title>
+		<imprint>
+			<biblScope unit="volume">347</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="838" to="841" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Piezoelectric equivalent circuit models</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Richter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Twiefel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wallaschek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Energy Harvesting Technologies</title>
+		<meeting><address><addrLine>Boston, MA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="107" to="128" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Rectification and inductance in the squid giant axon</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Cole</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of general physiology</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="29" to="51" />
+			<date type="published" when="1941">1941</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Solitary electromechanical pulses in lobster neurons</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gonzalez-Perez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">D</forename><surname>Mosgaard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Budvytyte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Villagran-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Jackson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Heimburg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophysical chemistry</title>
+		<imprint>
+			<biblScope unit="volume">216</biblScope>
+			<biblScope unit="page" from="51" to="59" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Ultrasonic stimulation of peripheral nervous tissue: an investigation into mechanisms</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rothwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Saffari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Journal of Physics: Conference Series</title>
+		<imprint>
+			<publisher>IOP Publishing</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">581</biblScope>
+			<biblScope unit="page">12003</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

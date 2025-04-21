@@ -1,0 +1,1691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Natural Whisker-Guided Behavior by Head-Fixed Mice in Tactile Virtual Reality</title>
+				<funder>
+					<orgName type="full">Howard Hughes Medical Institute</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Society for Neuroscience</publisher>
+				<availability status="unknown"><p>Copyright Society for Neuroscience</p>
+				</availability>
+				<date type="published" when="2014-07-16">2014-07-16</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nicholas</forename><forename type="middle">J</forename><surname>Sofroniew</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jeremy</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Albert</forename><forename type="middle">K</forename><surname>Lee</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><roleName>Dr</roleName><forename type="first">Karel</forename><surname>Svoboda</surname></persName>
+							<email>svobodak@janelia.hhmi.org</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Janelia Farm Research Campus</orgName>
+								<orgName type="institution">Howard Hughes Medical Institute</orgName>
+								<address>
+									<postCode>20147</postCode>
+									<settlement>Ashburn</settlement>
+									<region>Virginia</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Janelia Farm Research Campus</orgName>
+								<orgName type="institution">Howard Hughes Medical Institute</orgName>
+								<address>
+									<postCode>20147</postCode>
+									<settlement>Ashburn</settlement>
+									<region>VA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Natural Whisker-Guided Behavior by Head-Fixed Mice in Tactile Virtual Reality</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">The Journal of Neuroscience</title>
+						<title level="j" type="abbrev">J. Neurosci.</title>
+						<idno type="ISSN">0270-6474</idno>
+						<idno type="eISSN">1529-2401</idno>
+						<imprint>
+							<publisher>Society for Neuroscience</publisher>
+							<biblScope unit="volume">34</biblScope>
+							<biblScope unit="issue">29</biblScope>
+							<biblScope unit="page" from="9537" to="9550"/>
+							<date type="published" when="2014-07-16" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">30A4733F4BA9DEA904BC28E61B8CD3A0</idno>
+					<idno type="DOI">10.1523/jneurosci.0712-14.2014</idno>
+					<note type="submission">Received Feb. 19, 2014; revised April 18, 2014; accepted May 24, 2014.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:08+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>During many natural behaviors the relevant sensory stimuli and motor outputs are difficult to quantify.</s><s>Furthermore, the high dimensionality of the space of possible stimuli and movements compounds the problem of experimental control.</s><s>Head fixation facilitates stimulus control and movement tracking, and can be combined with techniques for recording and manipulating neural activity.</s><s>However, head-fixed mouse behaviors are typically trained through extensive instrumental conditioning.</s><s>Here we present a whisker-based, tactile virtual reality system for head-fixed mice running on a spherical treadmill.</s><s>Head-fixed mice displayed natural movements, including running and rhythmic whisking at 16 Hz.</s><s>Whisking was centered on a set point that changed in concert with running so that more protracted whisking was correlated with faster running.</s><s>During turning, whiskers moved in an asymmetric manner, with more retracted whisker positions in the turn direction and protracted whisker movements on the other side.</s><s>Under some conditions, whisker movements were phase-coupled to strides.</s><s>We simulated a virtual reality tactile corridor, consisting of two moveable walls controlled in a closed-loop by running speed and direction.</s><s>Mice used their whiskers to track the walls of the winding corridor without training.</s><s>Whisker curvature changes, which cause forces in the sensory follicles at the base of the whiskers, were tightly coupled to distance from the walls.</s><s>Our behavioral system allows for precise control of sensorimotor variables during natural tactile navigation.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Investigating neural circuits requires recording and manipulating defined cell types in behaving animals <ref type="bibr" target="#b38">(O'Connor et al., 2009)</ref>.</s><s>Genetically encoded reporters <ref type="bibr" target="#b11">(Chen et al., 2013)</ref> and effectors <ref type="bibr" target="#b17">(Fenno et al., 2011)</ref> of neural activity can be combined with transgenic mice <ref type="bibr" target="#b22">(Heintz, 2004;</ref><ref type="bibr" target="#b32">Madisen et al., 2012;</ref><ref type="bibr" target="#b18">Gerfen et al., 2013)</ref> for cell-type-specific imaging and perturbation of neural circuits <ref type="bibr" target="#b31">(Luo et al., 2008)</ref>.</s><s>These advances drive the need for mouse behaviors compatible with cellular imaging and optogenetics.</s><s>Such assays should (1) provide quantitative behavioral data to enable correlations with neural variables, (2) be quick for mice to learn to facilitate throughput in experimentation, and (3) be ethologically relevant to ensure study of the brain under relevant conditions.</s></p><p><s>Head-fixed behaviors allow for a high degree of stimulus control and precise monitoring of movement <ref type="bibr" target="#b16">(Evarts, 1968;</ref><ref type="bibr" target="#b52">Wurtz, 1968;</ref><ref type="bibr" target="#b7">Boyden et al., 2006;</ref><ref type="bibr" target="#b48">Verhagen et al., 2007;</ref><ref type="bibr" target="#b28">Komiyama et al., 2010;</ref><ref type="bibr" target="#b37">O'Connor et al., 2010)</ref>.</s><s>Current head-fixed mouse behaviors involve training mice to make decisions based on sensory stimuli <ref type="bibr" target="#b1">(Andermann et al., 2010;</ref><ref type="bibr" target="#b28">Komiyama et al., 2010;</ref><ref type="bibr" target="#b37">O'Connor et al., 2010)</ref> or allow mice to navigate visually defined virtual environments <ref type="bibr" target="#b21">(Harvey et al., 2012)</ref>.</s><s>Virtual reality enables sensory stimuli to be presented coupled to the motion of the animal, in closed-loop, and independently in open-loop <ref type="bibr" target="#b51">(Wolf and Heisenberg, 1990;</ref><ref type="bibr" target="#b0">Ahrens et al., 2012;</ref><ref type="bibr" target="#b14">Dombeck and Reiser, 2012;</ref><ref type="bibr" target="#b26">Keller et al., 2012;</ref><ref type="bibr" target="#b43">Saleem et al., 2013)</ref>.</s><s>Open-loop and closed-loop experiments can be used to disentangle correlated sensory and motor variables and deduce control laws underlying behavior <ref type="bibr" target="#b40">(Poggio and Reichardt, 1973)</ref>.</s></p><p><s>Mice are primarily nocturnal animals, which live in narrow underground burrows <ref type="bibr" target="#b9">(Brecht et al., 1997;</ref><ref type="bibr" target="#b30">Latham and Mason, 2004)</ref>.</s><s>Rodents use their whiskers to recognize and locate objects in space <ref type="bibr" target="#b29">(Krupa et al., 2001;</ref><ref type="bibr" target="#b27">Knutsen et al., 2006;</ref><ref type="bibr" target="#b33">Mehta et al., 2007;</ref><ref type="bibr" target="#b37">O'Connor et al., 2010;</ref><ref type="bibr" target="#b39">Pammer et al., 2013)</ref> and guide their locomotion <ref type="bibr" target="#b49">(Vincent, 1912)</ref>.</s><s>Whiskers are thin tapered rods <ref type="bibr" target="#b6">(Birdwell et al., 2007)</ref> with mechanosensory receptors at their base.</s><s>These translate forces generated by whisker-object contact into neural excitation.</s><s>Sensory stimuli and motor actions can be quantified by tracking whisker curvature and position using high-speed video <ref type="bibr" target="#b10">(Carvell and Simons, 1990;</ref><ref type="bibr" target="#b5">Bermejo and Zeigler, 2000;</ref><ref type="bibr" target="#b27">Knutsen et al., 2006;</ref><ref type="bibr" target="#b50">Voigts et al., 2008;</ref><ref type="bibr" target="#b19">Grant et al., 2009;</ref><ref type="bibr" target="#b37">O'Connor et al., 2010;</ref><ref type="bibr" target="#b12">Clack et al., 2012)</ref>.</s></p><p><s>During locomotion, rodents move their whiskers rhythmically and direct their whiskers toward objects <ref type="bibr" target="#b34">(Mitchinson et al., 2007)</ref>.</s><s>Whisker movements can reveal a rodent's expectations about the environment <ref type="bibr" target="#b19">(Grant et al., 2009)</ref>.</s><s>Running speed and direction is coupled with average whisker position <ref type="bibr" target="#b47">(Towal and Hartmann, 2006;</ref><ref type="bibr" target="#b2">Arkley et al., 2011;</ref><ref type="bibr" target="#b35">Mitchinson et al., 2011)</ref>; however, the finer-scale structure of this coupling has been hard to ascertain due to difficulties in measuring whisking in freely moving rodents.</s></p><p><s>We developed a tactile virtual reality system for head-fixed mice that enables quantitative analysis of whisker-guided loco-motion.</s><s>Here we show that whisking and running are tightly coupled, and that mice naturally guide their locomotion along walls by monitoring wall position, velocity, and acceleration.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and Methods</head><p><s>Mice.</s><s>Mice (females or males; Ͼ3-months-old) were housed individually in cages with bedding and running wheels (Bio-Serv; K3327 and K3251) in a reverse light cycle room (Table <ref type="table" target="#tab_0">1</ref>).</s><s>Data from the following strains were pooled: C57BL/6Crl (The Jackson Laboratory; 000664, RRID: IMSR_JAX:000664 ), scnn1a-tg3-cre (The Jackson Laboratory; 009613, RRID:IMSR_JAX:009613) X AI32 (The Jackson Laboratory; 012569), VGAT-ChR2-EYFP (The Jackson Laboratory; 014548, RRID:IMSR_JAX: 014548; Table <ref type="table" target="#tab_0">1</ref>).</s><s>Mice received 1.5 ml of water per day, which corresponds to ϳ50% of ad libitum water consumption for C57BL/6J mice (Mouse Phenome Database from The Jackson Laboratory; http://www.</s><s>jax.org/phenome).</s><s>Mice obtained water either during behavioral sessions or by supplemental water given after the session.</s><s>Weight gain during the behavioral session was taken as a lower bound on the amount of water consumed, and the water supplemented was determined accordingly.</s><s>The weight and health (posture, condition of fur, and motor activity) of the mice were monitored daily.</s><s>All procedures were in accordance with protocols approved by the Janelia Farm Institutional Animal Care and Use Committee.</s></p><p><s>Surgical procedures.</s><s>Mice were head-fixed using a titanium head postimplant (22.5 mm length; 3.2 mm width; <ref type="bibr" target="#b20">Guo et al., 2014)</ref>.</s><s>For implantation, mice were anesthetized with isoflurane, (1-2% by volume in O 2 ; SurgiVet, Smiths Medical), and maintained at 37°C body temperature on a thermal blanket (Harvard Apparatus).</s><s>Following a local injection of Marcaine (50 l), the scalp and periosteum over the dorsal surface of the skull were removed.</s><s>The skull was then coated with a thin layer of cyanoacrylate adhesive (Krazy Glue, Elmer's Products).</s><s>The head post was placed on the skull with its anterior edge aligned to the lambdoid suture and fixed in place using clear dental acrylic (Jet Repair Acrylic, Lang Dental Manufacturing; P/N 1223-clear).</s><s>The remaining exposed cyano-acrylate adhesive was covered with a thin layer of dental acrylic.</s><s>Buprenorphine HCl (0.1 mg/kg, subcutaneous injection; Bedford Laboratories) was used for postoperative analgesia.</s><s>Ketoprofen (5 mg/kg, subcutaneous injection; Fort Dodge Animal Health) was used at the time of surgery and postoperatively for two additional days to reduce inflammation.</s><s>Mice were allowed at least 3 d to recover from surgery before being placed on water restriction.</s></p><p><s>Whisker trimming.</s><s>For some experiments (see Fig. <ref type="figure" target="#fig_1">12</ref>) whiskers were trimmed progressively: full whisker field; a row of whiskers (C1-C3); a single whisker (C2); no whiskers.</s><s>Whisker trimming was performed under isofluorane anesthesia and mice were given overnight to recover.</s><s>At least two behavioral sessions were performed with each whisker configuration.</s></p><p><s>Data acquisition and control.</s><s>Behavioral control was implemented using a real-time system (BControl; http://brodylab.princeton.edu/bcontrol)</s><s>based on real-time Linux (code.google.com/p/rt-fsm).</s><s>A MATLAB (Math-Works) program running on Windows XP communicated over Ethernet with the real-time system which also interfaced with PCI-6229 and PCI-6713 data acquisition boards (National Instruments) using COMEDI drivers <ref type="bibr">(comedi.org;</ref><ref type="bibr" target="#b37">O'Connor et al., 2010)</ref>.</s><s>The real-time system executed a module of C code at 6 kHz that read and wrote digital and analog voltages on the data acquisition boards for monitoring and controlling the apparatus.</s><s>The system received commands from MATLAB and sent data back to MATLAB for logging at 4 Hz.</s></p><p><s>Spherical treadmill.</s><s>The spherical treadmill was a 15.56 inch diameter hollow Smoothfoam ball (Plasteel; 16 inch diameter, Ball no.</s><s>183).</s><s>Balls were purchased as hollow halves with an initial wall thickness of 19.5 Ϯ 0.2 mm and weight of 121.3 Ϯ 0.5 g.</s><s>The inside of the halves was carved with a hot wire system (Hot Wire Foam Factory) to give a wall thickness of 3.79 Ϯ 0.66 mm.</s><s>Two matched halves were glued together with expanded polystyrene foam glue (Hot Wire Foam Factory; Foam Glue, no.</s><s>028B-8).</s><s>The total weight of the ball was 82.5 g.</s><s>The ball was supported by 10 Ping-Pong balls (JOOLA Gold 3-Star 40 mm) in air cannons.</s><s>Each air cannon consisted of a 1.577 inch diameter acrylic tube plugged at one end with an acetyl resin base plate containing a tube fitting (McMaster Carr, no.</s><s>50745K15) for air flow.</s><s>The air cannons were clamped at regular intervals around the ball in a custom 19 inch diameter acrylic ribbed bowl.</s><s>One cannon was located under the bottom of the ball, three cannons were located in a ring at a latitude of 60°S, and six were located in a ring at a latitude of 20°S.</s><s>The airflow to the bottom cannon, the ring of cannons at 60°S, and two groups of three cannons at 20°S was controlled independently with regulators <ref type="bibr">(McMaster Carr,</ref><ref type="bibr">nos. 3846K29 and 5627K511)</ref>.</s></p><p><s>Ball tracking.</s><s>Rotation of the ball was tracked using two cameras containing chips that measure optic flow (Avago Technologies, ADNS-6090) with a serial interface to a microcontroller (Atmel, ATMega644p; <ref type="bibr" target="#b44">Seelig et al., 2010)</ref>.</s><s>The cameras were mounted on the ribbed bowl around the equator of the ball, 45 mm from the ball surface.</s><s>One camera was directly in front of the mouse, and one was on the right.</s><s>The surface of the ball in front of each camera was illuminated using a 940 nm IR LED (Roithner, ELJ-940-629).</s><s>Each camera imaged a 2.2 ϫ 2.2 mm 2 field of view onto a 30 ϫ 30 pixel sensor with a lens (focal length 25 mm; Computar) and a 10 mm extension tube.</s><s>The microcontroller interfaced with a PC running MATLAB via serial communication and provided shutter time (inverse of light level) and contrast metrics.</s><s>These parameters were used to focus the lenses and adjust the illumination during initial setup.</s><s>For tracking ball motion, every 2 ms the microcontroller received two signed integers measuring the optic flow ⌬ x and ⌬ y from each camera.</s><s>These signals were converted to analog voltages ranging from 0 to 5 V, centered on 2.5 V, with 150 mV resolution.</s><s>The microcontroller also provided a clock signal.</s><s>The RTLinux was triggered by the clock signal to read and rediscretize the analog values of the optic flow.</s><s>The vector of camera motion displacement signals was transformed to a vector of ball motion v ball by multiplication with a calibration matrix A calib ,</s></p><formula xml:id="formula_0">v ball ϭ A calib ϫ [⌬ x1 , ⌬ y1 , ⌬ x2 , ⌬ y2 ]Ј.</formula><p><s>Ball rotation calibration.</s><s>To determine A calib , the rotation of the ball was recorded independently of the ball tracking system using a highspeed (500 Hz) camera (Mikrotron MC1362).</s><s>The field-of-view was 11 ϫ 11 mm 2 (27 pixels per mm).</s><s>The camera was focused on the surface of the top of the ball, where the head of the mouse would be.</s><s>Each video image was corrected for uneven illumination.</s><s>For each frame, the forward and sideways rotation of the ball was computed from the x and y displacements that gave the peak cross-correlation with the next frame.</s><s>A calib was determined by least squares fitting a linear transformation from the camera-motion displacement signals to the recorded forward and sideways rotation of the ball.</s><s>The predicted ball motion and actual ball motion had a correlation coefficient of 0.97.</s><s>Thus, the real-time tracking system provided a high bandwidth and accurate measurement of ball motion.</s></p><p><s>Moveable walls for tactile virtual reality.</s><s>Two walls were mounted on either side of the mouse.</s><s>For most experiments, each wall (height, 0.75 inches; length, 2 inches) was a 0.04-inch-thick aluminum sheet; in some cases, the walls were standard glass microscope slides <ref type="bibr">(Fischerbrand,</ref>.</s><s>The use of glass walls allowed unobstructed video of the mouse from the side.</s><s>The lower edges of the walls were 1 mm above the surface of the ball and parallel to the anterior-posterior axis of the mouse.</s><s>The back edges of the walls were positioned in line with the posterior end of the whisker pad.</s><s>This prevented the front paws of the mouse from touching the walls.</s><s>The head of the mouse was positioned such that the distance from the surface of the ball to the center of the eyes was ϳ19 mm and to the tip of the nose was ϳ15 mm.</s><s>Each wall was attached to an x-y translation stage moved by linear servomotors (MX80 L, Parker Hannifin).</s><s>The linear servos were tuned without integral control to maximize response speed.</s><s>Each axis had 50 mm of travel and could be controlled either from software or via an analog voltage provided directly to the controller (ACR9000, Parker Hannifin).</s><s>The analog input was used to update the position of the walls at 500 Hz.</s><s>Each axis was controlled over 40 mm of travel.</s><s>The repeatability of the wall position was Ϯ13 m (SD), as determined by tracking wall position with the same high-speed video system that was used for calibrating the ball rotation, (37 m pixel size).</s><s>The analog input was low-pass filtered with a second order lowpass Butterworth filter (cutoff frequency, 100 Hz).</s><s>To characterize the control of the servomotors, sinusoidal command signals (frequencies 0.5-7.5 Hz, amplitude 5 mm) were sent to the wall while tracking wall position with high-speed video.</s><s>The average lag of the wall position was 13 ms across frequencies.</s><s>The ratio of the measured motion amplitude to the command amplitude ranged from 1.00 to 1.12 across frequencies.</s><s>Before the start of each experiment, the software control was used to home and position the walls in the desired place.</s><s>The walls were not allowed to come closer than 4 mm to the face, ensuring that mice touched the walls only using their whiskers.</s></p><p><s>Delivery of water rewards.</s><s>Water was delivered through a 0.05 inch outer diameter stainless steel tube (Small Parts, HTX-18H-36-10).</s><s>Water flow was controlled using a solenoid valve (Lee Company, LHDA0533115H) such that each droplet was ϳ6.6 l.</s><s>The tube was attached to a 3D printed thermoplastic piece that could be positioned using a three-axis stepper motor system controlled via a joystick (Zaber 3X, NA11B30 and T-JOY3).</s><s>Licks were detected using an electrical lick detector that uses a small current to trigger a voltage change when a lick completes a circuit and triggers a change in the output voltage of the detector <ref type="bibr" target="#b45">(Slotnick, 2009)</ref>.</s><s>Lick rate was calculated by convolving the individually detected licks with a 1 s window.</s></p><p><s>Infrared illumination system.</s><s>The tactile virtual reality system was contained in a lighttight box built from 25 mm construction rails (Thorlabs, XE25 series) and aluminum sheets held in place with magnetic tape <ref type="bibr">(McMaster Carr,</ref><ref type="bibr">5759K36)</ref>.</s><s>For videography, the area around the mouse was illuminated with four 940 nm IR LEDs (Roithner, TO package 940-66-60) powered by LED drivers (BuckPuck 3023-D-E-1000) and focused with 40 mm focal length aspheric condenser lenses (Thorlabs, ACL5040-B).</s><s>A fiber optic illuminator (Edmund Optics, Dolan-Jenner Model 180) controlled by a foot pedal (Treadlite II T-91-SC3) provided visible light for placing the animal into the head-fixation apparatus.</s><s>For trials with visual illumination two 470 nm 700 mA LEDs (Luxeon Star) were used (see Fig. <ref type="figure" target="#fig_2">13</ref>).</s></p><p><s>Video tracking of movements.</s><s>Video of whisker movements was acquired at 500 Hz, 640 ϫ 480 pixels, using a high-speed camera (Mikrotron, MC1362) with a 0.36ϫ telecentric lens <ref type="bibr">(Edmund Optics,</ref>, and frame grabber (Bitflow) controlled by StreamPix5 multicamera software (Norpix).</s><s>Each frame was triggered by a transistor-transistor logic (TTL) pulse from the real-time system.</s><s>A mirror directed light from the whiskers to the camera (Ted Pella; 26002-G).</s><s>For some sessions, a piece of laminated white paper was placed immediately on top of the surface of the ball and under the whiskers to provide a uniform background for whisker video.</s></p><p><s>Video of other mouse movements was acquired at 100 Hz from two cameras (Basler, acA640) in StreamPix5.</s><s>Each frame was triggered by a TTL pulse from the real-time system.</s><s>Either every trial, or every 12 s, whichever was shorter, a trigger was sent by the RTLinux to instruct StreamPix5 to create a new video file.</s></p><p><s>Locomotion.</s><s>High-resolution forward and lateral components of velocity were calculated from the ball motion displacements by filtering with a low-pass filter (four pole Butterworth, 30 Hz).</s><s>Running speed was the magnitude of the velocity.</s><s>A running speed threshold was defined as the minimum of the speed distribution between 0 cm/s and the peak running speed of each mouse (Fig. <ref type="figure" target="#fig_0">1D</ref>).</s><s>The lateral acceleration was the derivative of the lateral velocity component.</s><s>The run angle was the angle of the velocity smoothed with a moving average (500 ms window).</s><s>The smoothing was applied to average angle fluctuations produced by individual strides.</s><s>Positive values of run angle correspond to running left.</s><s>Power spectra of the lateral acceleration were calculated for each trial with Welch's method (1 s Hamming window, 90% overlap, 1024 fft points) and averaged together across 4 s trials where the mean running speed was above the running speed threshold (Fig. <ref type="figure" target="#fig_1">2C</ref>).</s><s>To generate a probability density function of stride frequency (Fig. <ref type="figure" target="#fig_1">2D</ref>), the peak frequency (Ͻ6 Hz) of the power spectrum was calculated on a trial-by-trial basis.</s><s>The stride signal (Fig. <ref type="figure" target="#fig_1">2B</ref>) was the bandpass filtered lateral acceleration (four pole Butterworth, 2-6 Hz).</s><s>Stride amplitude and phase were calculated as the magnitude and angle of the Hilbert transform of the stride signal.</s><s>Stride frequency is the derivative of the unwrapped stride phase computed with the Savitzky Golay method (fourth order, 400 ms window).</s><s>The slope of stride frequency against running speed was calculated by linear regression after discarding speeds Ͻ0.1 cm/s (Fig. <ref type="figure" target="#fig_1">2F</ref> ).</s></p><p><s>Whisker tracking and whisking variables.</s><s>Whisker angle and curvature were tracked using automated, freely available software <ref type="bibr" target="#b37">(O'Connor et al., 2010;</ref><ref type="bibr" target="#b12">Clack et al., 2012</ref>; http://openwiki.janelia.org/wiki/display/</s><s>MyersLab/WhiskerϩTracking).</s><s>All whisker tracking was done on mice with only C2 whiskers either unilaterally or bilaterally.</s><s>Whisker angle was measured as the angle between the whisker and a line perpendicular to the midline of the mouse.</s><s>Thus, 0°corresponds to a whisker perpendicular to the mouse, positive values correspond to protracted whiskers, and negative values correspond to retracted angles.</s><s>Trials with whisker tracking errors in Ͼ10% of images (27% of trials) were rejected.</s><s>For the remaining trials, whisker angle was interpolated over the mistracked frames.</s><s>Whisker set point was calculated as the moving average of whisker angle (500 ms window).</s><s>Whisking amplitude and phase were calculated as the magnitude and angle of the Hilbert transform of the bandpass filtered whisker angle (four pole Butterworth, 8 -30 Hz; <ref type="bibr" target="#b23">Hill et al., 2011)</ref>.</s><s>Whisking frequency was the derivative of the unwrapped whisker phase taken with the Savitzky Golay method (fourth order, 400 ms window).</s><s>The slope of whisking variables against running speed was calculated by linear regression after discarding speeds less than the running threshold (see Fig. <ref type="figure">4 D,</ref><ref type="figure">F,</ref><ref type="figure">H</ref> ).</s><s>Power spectra of whisking were calculated from the whisking angle for each trial with Welch's method (1 s Hamming window, 90% overlap, 1024 fft points) and averaged together across trials where the mean running speed was above the running speed threshold (Fig. <ref type="figure" target="#fig_2">3E</ref>).</s><s>To generate a probability density function of whisking frequency (Fig. <ref type="figure" target="#fig_2">3F</ref> ), the peak frequency (Ͼ10 Hz) of the power spectrum was calculated on a trial-by-trial basis <ref type="bibr" target="#b4">(Berg and Kleinfeld, 2003)</ref>.</s><s>Whisking frequency was also analyzed when mice were within 8 mm of a wall and when mice were running in closed-loop with the walls.</s><s>A lowfrequency component of the whisking signal was isolated with a bandpass filter (four pole Butterworth, 2-8 Hz).</s><s>Amplitude, phase, and frequency of this component of whisking were calculated using the Hilbert transform as described above.</s><s>The normalized strength of this low-frequency component was calculated as the ratio of its amplitude to the sum of its amplitude and the whisking amplitude (see Fig. <ref type="figure">5 D,</ref><ref type="figure">E</ref>).</s><s>The coherence of whisker angle and lateral acceleration was computed using Welch's method (MATLAB mscohere; 1 s Hamming window, 90% overlap, 1024 fft points) on the unfiltered signals on a trial-by-trial basis for trials where the mean running speed was above the running speed threshold (see Fig. <ref type="figure">5B</ref>).</s></p><p><s>Whisker curvature was measured 1 mm from the base.</s><s>The intrinsic curvature of the whisker in the absence of contact was subtracted off <ref type="bibr" target="#b39">(Pammer et al., 2013)</ref>.</s><s>Measured whisker curvature changes during light touches are likely to underestimate the actual whisker curvature change due to resolution of the images.</s><s>Whisker curvature was quantified only in mice with a single C2 whisker.</s><s>In this case, most touches were retraction touches (see Fig. <ref type="figure">7A</ref>).</s><s>This resulted in negative values of whisker curvature and the absolute value of the whisker curvature was taken (see Fig. <ref type="figure">7B</ref>).</s><s>The maximum whisker curvature on each trial was calculated as the 90th percentile of the whisker curvature and averaged together across trials where the mean running speed was above the running speed thresh-old (see Fig. <ref type="figure">7D</ref>).</s><s>In mice with multiple whiskers both protraction and retraction touches were observed which were either of a sustained or transient nature.</s></p><p><s>Acclimatization to head-fixation and the behavioral apparatus.</s><s>Acclimatization lasted between one and three 15-30 min daily sessions (see Fig. <ref type="figure" target="#fig_0">11</ref>).</s><s>During these sessions mice were head-fixed on the ball and rewarded for forward motion.</s><s>Initially the mice were rewarded for every 40 cm of movement.</s><s>As mice ran more, the reward distance threshold was steadily increased up to a final value of 200 cm.</s></p><p><s>Open-loop trials.</s><s>Open-loop trials either contained no walls within reach of the mouse (see Figs. <ref type="figure" target="#fig_0">1</ref><ref type="figure" target="#fig_1">2</ref><ref type="figure" target="#fig_2">3</ref><ref type="figure">4</ref><ref type="figure">5</ref><ref type="figure" target="#fig_4">6</ref>) or had the right hand wall move to a fixed distance from the mouse for 2 s before moving away (see Figs. <ref type="figure">7,</ref><ref type="figure">8</ref>).</s><s>Each trial lasted 4 s and was separated by a 1 s intertrial interval.</s><s>The right wall moved from out of reach of the mouse to <ref type="bibr">4,</ref><ref type="bibr">6,</ref><ref type="bibr">8,</ref><ref type="bibr">10,</ref><ref type="bibr">12,</ref><ref type="bibr">14,</ref><ref type="bibr">16,</ref><ref type="bibr">20,</ref><ref type="bibr">24,</ref><ref type="bibr">29</ref>, or 34 mm from the mouse's whisker pad during the first second of the trial.</s><s>The wall returned to 34 mm from the face during the last second of the trial.</s><s>Data from the middle two seconds of the trial, when the wall was in a fixed position, was analyzed.</s><s>Mice were rewarded with one drop of water for every 200 cm of distance covered on the ball, regardless of trial start and end and independent of behavioral performance.</s></p><p><s>Closed-loop control of wall position.</s><s>For the tactile virtual reality system the walls moved in closed loop with the movements of the mice (see Figs. 9 -12).</s><s>Lateral motion of the walls was controlled in closed-loop using the component of the ball velocity perpendicular to a coupling vector (Table <ref type="table" target="#tab_2">3</ref>; Fig. <ref type="figure" target="#fig_6">9A</ref>).</s><s>The length and sign of the coupling vector, the coupling gain, ␥, determines how far and in which direction the walls move for a given movement of the ball.</s><s>A negative value of the coupling gain means that movement on the ball toward a wall moves that wall closer, as expected when moving toward a real wall.</s><s>A positive value of the coupling gain does the opposite.</s><s>A gain value of ␥ ϭ Ϫ0.2 (i.e., 2 mm of wall motion for 1 cm of ball motion) was used.</s><s>The choice of gamma depends on the weight of the ball and the friction of the system, as the ability of the mouse to move the ball depends on these values.</s><s>␥ ϭ Ϫ0.2 was chosen to prevent large wall movements associated with the stepping of the animal during straight running.</s><s>The angle of the coupling vector, referred to as the turn angle,, determines an ideal movement direction in the forward-sideways plane along which motion produces no movement of the walls.</s><s>When the run angle matches the turn angle, the walls do not move.</s><s>ϭ 0°corresponds to a straight corridor as in this case pure forward motion results in no movement of the walls.</s><s>Positive values of corresponded to left turns and negative values to right turns.</s><s>In the tactile virtual reality, the walls were always controlled together so that the corridor had a fixed width of 30 mm travel.</s><s>The walls were 45 mm apart to allow for space for the mouse's head in the center of the corridor.</s></p><p><s>Closed-loop virtual reality corridor.</s><s>Mice ran through a winding corridor in tactile virtual reality (see Figs. 9 -12).</s><s>Trials were 200 cm long.</s><s>Trials were either straight or contained a 100 cm long left or right 11.3°t urn during the middle of the trial.</s><s>Trials of different turn angles were randomly interleaved.</s><s>For the majority of experiments, during the last 10 cm of each trial, the walls reset themselves such that mice started every trial in the center of the corridor.</s><s>During some experiments, the walls did not reset themselves, and a new trial would not start unless the mouse was in the middle 87% of the corridor.</s><s>Mice received a drop of water if they were in the middle 87% of the corridor during the 170 -180th cm of the trial.</s><s>Task performance was evaluated using the absolute difference between the run angle of the mice and the turn angle over the last 50 cm of the turn.</s><s>This difference is termed the "angle error".</s><s>The smallest angle error that mice can achieve without knowledge of the wall position occurs if they run perfectly straight.</s><s>This behavior will result in a mean angle error of 7.53°ϭ 2/3 ϫ 11.3°(as 2/3 of the trials contain turns).</s><s>If mice guess random turn angles, the angle error will be higher.</s><s>For statistical evaluation of performance of the task (see Fig. <ref type="figure" target="#fig_0">10C</ref>), angle errors were compared with this chance level using a one-sided t test for each animal.</s><s>For statistical evaluation of performance in two different conditions (see Figs. <ref type="figure" target="#fig_0">11A,</ref><ref type="figure" target="#fig_1">12A,</ref><ref type="figure" target="#fig_2">13A</ref>) one-sided unpaired t tests were done for each animal.</s></p><p><s>Model fitting.</s><s>Only trials where mice stayed in the middle 20 mm of the corridor were used for modeling as these trials are indicative of good performance (see Fig. <ref type="figure" target="#fig_0">14</ref>).</s><s>Only mice which had at least 20 acceptable trials on both left and right turns were included in the modeling (14 of 23 mice).</s><s>For each trial, the run angle was computed as a function of forward distance in the trial by taking the derivative of the lateral run trajectory with respect to forward distance using the Savitzky-Golay method (fourth order, 12.5 cm window).</s><s>The mean run angle trajectory on left turns and the negative of the mean run angle trajectory on right turns were averaged together to remove left/right biases.</s><s>The run angle trajectory was further normalized by subtraction of its mean value during the 25 cm before the onset of the turn to give the run angle trajectory z used for modeling.</s><s>The error in the mean run angle trajectory was calculated using bootstrapping with 1000 resamples of the included trials.</s><s>Our model makes the following assumptions: (1) the mouse wants to run straight (as mean left/right biases have been subtracted), (2) if the mouse deviates from the its ideal angle it corrects its trajectory at a rate that is proportional to the deviation, (3) the mouse experiences a damping force proportional to its velocity, and (4) turns act like external perturbations.</s><s>This produces dynamics of a forced damped harmonic oscillator zЉ ϩ 2 0 zЈ ϩ 0 2 z ϭ 0 2 F (Table <ref type="table" target="#tab_2">3</ref>).</s><s>Where, is the damping coefficient, 0 is the undamped angular frequency of the oscillator, and F is the applied force, which should match the turn angle.</s><s>The run angle trajectory z was fit to solutions of the forced damped harmonic oscillator, allowing for the damping coefficient to be Ͻ1 (under-damped), equal to 1 (critically damped), or Ͼ1 (overdamped).</s></p><formula xml:id="formula_1">z͑ x͒ ϭ Ά F 1 Ϫ e Ϫ 0 x sin ͩͩ ͱ1 Ϫ 2 ͪ 0 x ϩ ͪ sin͑͒ , Ͻ 1, cos ϭ F͑1 Ϫ e Ϫ 0 x ͑1 ϩ 0 x͒͒, ϭ 1 F 1 Ϫ Ϫ ϩ ͱ 2 Ϫ 1 2 ͱ 2 Ϫ 1 e ͩϪϪͱ 2 Ϫ1ͪ 0 x Ϫ Ϫ Ϫ ͱ 2 Ϫ 1 2 ͱ 2 Ϫ 1 e ͩϪϩͱ 2 Ϫ1ͪ 0 x</formula><p><s>, Ͼ 1</s></p><p><s>The three parameters, , 0 , and F were fit using a nonlinear regression (MATLAB, nlinfit).</s><s>Corridor trajectories from left and right trials were averaged together, after the right trials had been flipped in sign to give the wall trajectory u, which represents deviation from the baseline wall distance.</s><s>The derivative of the wall trajectory was then modeled as u ˆЈ ϭ ␥( Ϫ z), where represents the turn angle, and ␥ represents the coupling gain (see Fig. <ref type="figure" target="#fig_0">14B</ref>).</s><s>This equation is a small angle approximation of the true equation coupling ball motion to wall motion.</s><s>The parameters were fit using regression (MATLAB, regress).</s><s>The run angle was then regressed (MATLAB, regress) against the modeled wall trajectory position, velocity, and acceleration along with a bias term, z ϭ Au ˆϩ Bu ˆЉ ϩ Cu ˆЉ ϩ Dx.</s><s>This equation is independent of ␥ and , and describes how mice transform sensory stimuli into motor output.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p><s>Head-fixed mice exhibit natural running and whisking on a spherical treadmill Our goal was to develop a behavioral assay for whisker-guided locomotion.</s><s>To achieve precise measurement of movement and tactile input we used head-fixed mice running on a large (diameter, 15.5 inch), light (82.5 g) spherical treadmill (Fig. <ref type="figure" target="#fig_0">1A</ref>).</s><s>We first quantified free running and whisking behavior of head-fixed mice in the absence of walls.</s><s>Movements of the ball were tracked in twodimensions at 500 Hz <ref type="bibr" target="#b44">(Seelig et al., 2010)</ref>.</s><s>Whisker movements were recorded using high-speed video at 500 Hz and tracked using automated software <ref type="bibr" target="#b12">(Clack et al., 2012)</ref>.</s><s>For simplicity in whisker tracking, mice were trimmed to have only the C2 whisker on each side.</s></p><p><s>We motivated mice to run on the treadmill by providing water rewards for every 200 cm of forward travel.</s><s>Mice thus ran in short bursts, and stopped to drink in between bursts (Fig. <ref type="figure" target="#fig_0">1 B,</ref><ref type="figure">C</ref>).</s><s>The distributions of running speed showed peaks at zero and 23 Ϯ 4.1 cm/s (4 mice), which corresponds to the preferred running speed of the mice.</s><s>The distributions also have a minimum at 8.3 Ϯ 3.4 cm/s (4 mice), which we define as the running speed threshold (Fig. <ref type="figure" target="#fig_0">1 D,</ref><ref type="figure">E</ref>).</s><s>Mice stopped 136 Ϯ 71 ms (4 mice) after onset of water delivery and drank for 4.8 Ϯ 2.4 s (4 mice) before starting to run again (Fig. <ref type="figure" target="#fig_0">1E</ref>).</s><s>While drinking, mice licked at rates of 7.7 Ϯ 0.2 Hz (4 mice; Fig. <ref type="figure" target="#fig_0">1E</ref>).</s></p><p><s>We extracted mouse strides, the successive touchdowns of the paws, from video images (Fig. <ref type="figure" target="#fig_1">2A</ref>).</s><s>We noticed that the lateral ball acceleration was synchronized with the stride frequency, allowing us to compute the stride frequency from the ball movement (Fig. <ref type="figure" target="#fig_1">2A,</ref><ref type="figure">B</ref>).</s><s>Stride frequency during running was 3.8 Ϯ 0.5 Hz (4 mice) (Fig. <ref type="figure" target="#fig_1">2C,</ref><ref type="figure">D</ref>) and increased with running speed as expected (Fig. <ref type="figure" target="#fig_1">2  E,</ref><ref type="figure">F</ref>).</s></p><p><s>Whisker movements were measured from high-speed videography (Fig. <ref type="figure" target="#fig_2">3A</ref>).</s><s>During running, mice moved their whiskers in a rhythmic fashion (Fig. <ref type="figure" target="#fig_2">3 B,</ref><ref type="figure">C</ref>).</s><s>The average whisking amplitude was 9.3 Ϯ 1.1°(4 mice; Fig. <ref type="figure" target="#fig_2">3C,</ref><ref type="figure">D</ref>).</s><s>Power spectra of whisking frequency showed peaks at 3.9 Ϯ 0.6 Hz (4 mice) and 16.9 Ϯ 0.5 Hz (4 mice; Fig. <ref type="figure" target="#fig_2">3E</ref>), implying two timescales of whisking.</s><s>The lower-frequency is close to the stride frequency, whereas the faster-frequency (Fig. <ref type="figure" target="#fig_2">3F</ref> ) is close to the typical whisking frequency seen in freely moving mice <ref type="bibr" target="#b50">(Voigts et al., 2008)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Running speed and whisking are tightly coupled</head><p><s>We investigated the coupling between whisking and running, two basic rhythmic movements.</s><s>Running speed and whisker set point, the slowly changing whisker position about which the  Corridor position error û ϭ u Ϫ u 0 rapid whisker movements occur, were highly correlated.</s><s>After initiation of running, mice protracted their whiskers by ϳ30°(Fig.</s><s><ref type="figure">4 A,</ref><ref type="figure">B</ref>).</s><s>The faster mice ran, the further forward they pushed their whiskers (Fig. <ref type="figure">4C,</ref><ref type="figure">D</ref>).</s><s>The fast component of the whisking frequency increased monotonically with running speed (Fig. <ref type="figure">4 E,</ref><ref type="figure">F</ref> ).</s></p><p><s>Whisking amplitude initially increased sharply with running speed, but then monotonically decreased with speeds from 10 to 40 cm/s as the set point became more protracted (3 of 4 mice; one mouse did not run at high speeds; Fig. <ref type="figure">4G,</ref><ref type="figure">H</ref> ).</s></p><p><s>Whisking epochs either had one dominant whisking frequency ϳ15 Hz (Fig. <ref type="figure" target="#fig_2">3B</ref>), or contained an additional frequency component ϳ4 Hz (Fig. <ref type="figure">5A</ref>).</s><s>The 4 Hz whisking component was coherent with the strides of the mice (Fig. <ref type="figure">5A-C</ref>).</s><s>The strength of the 4 Hz whisking component increased at higher speeds (3 of 4 mice; one mouse did not run at high speeds; Fig. <ref type="figure">5 D,</ref><ref type="figure">E</ref>).</s><s>Thus, at high running speeds whisking and running were coupled on a step-by-step basis.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Running direction and whisking are tightly coupled</head><p><s>We recorded bilateral whisker movements to assess whisking behavior during turning.</s><s>Mice moved their left and right whiskers at the same frequency (Fig. <ref type="figure" target="#fig_4">6A</ref>).</s><s>The difference in whisking set point between the left and right side was modulated by running direction.</s><s>When turning to the left, mice protracted their right whiskers and retracted their left whiskers, resulting in an asymmetric arrangement of the whiskers (Fig. <ref type="figure" target="#fig_4">6B-D</ref>).</s><s>This asymmetry is similar to behaviors performed by freely moving rats <ref type="bibr" target="#b47">(Towal and Hartmann, 2006;</ref><ref type="bibr" target="#b35">Mitchinson et al., 2011)</ref>.</s><s>This suggests that mice have not learnt unnatural actions to interact with the ball, but are instead performing natural movements.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Whisker curvature increased with decreasing wall distance</head><p><s>We next characterized the sensory variables that could underlie whisker-guided locomotion.</s><s>We recorded the interactions of the C2 whisker with a wall presented at different distances from the mice (Fig. <ref type="figure">7A</ref>).</s><s>The movements of the wall were in an open-loop, independent of the movement of the mice.</s><s>Mice continued to whisk at a normal frequency 16.0 Ϯ 0.5 Hz (4 mice) when running close to the wall.</s><s>During running along the wall, the C2 whisker was very protracted with a set point of 42.8 Ϯ 2.8°(4 mice).</s><s>Therefore mice mainly made retraction touches onto the wall, resulting in negative whisker curvature changes (Fig. <ref type="figure">7 A,</ref><ref type="figure">B</ref>).</s><s>We analyzed the absolute value of the curvature change.</s><s>The curvature change in the whiskers during touch is proportional to the forces acting on the mechanoreceptors at the base of the whiskers et <ref type="bibr">al., 2007;</ref><ref type="bibr" target="#b3">Bagdasarian et al., 2013;</ref><ref type="bibr" target="#b39">Pammer et al., 2013)</ref>.</s><s>Whisker curvature increased as mice moved their whiskers into the wall.</s><s>Smaller wall distances resulted in larger slopes of whisker curvature versus whisker angle, as predicted by mechanical models (Fig. <ref type="figure">7C,</ref><ref type="figure">D</ref>; <ref type="bibr" target="#b6">Birdwell et al., 2007)</ref>.</s><s>Whisker curvature increased monotonically with decreasing wall distance (Fig. <ref type="figure">7 E,</ref><ref type="figure">F</ref> ).</s><s>The resulting distance-dependent forces likely underlie perception of wall distance.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Mice naturally keep walls at a distance</head><p><s>During open-loop presentations of the wall, mice turned away from the wall.</s><s>The turn angle increased monotonically with decreasing distance between wall and mouse (Fig. <ref type="figure">8A-C</ref>).</s><s>Mice thus naturally kept a safe distance from the Based on this observation, we reasoned that mice would try to stay in the middle of a winding corridor if they could control the position of the walls in closed-loop.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Head-fixed mice navigate a two-dimensional tactile virtual reality environment</head><p><s>We next presented mice with two walls in closed-loop with their running speed and direction.</s><s>This configuration allowed us to test the ability of head-fixed mice to use their whiskers to guide their locomotion through a winding corridor on the spherical treadmill (Fig. <ref type="figure" target="#fig_0">1A</ref>).</s><s>The two walls 45 mm apart, one on each side of the mouse.</s><s>This width corresponds to typical sizes of mouse tunnels <ref type="bibr" target="#b30">(Latham and Mason, 2004)</ref>.</s><s>The faces of mice are Ͼ5 mm wide at the whisker pad, so the minimum distance to a wall from the whisker pad was always Ͻ20 mm.</s><s>When mice were in the center of the corridor, they could touch both walls with their whiskers.</s><s>Experiments were conducted in the dark to remove visual cues.</s><s>The walls were moved in real-time based on movements of the ball.</s><s>Changing the coupling between ball motion and wall motion allowed simulation of turns at different angles (Fig. <ref type="figure" target="#fig_6">9A</ref>).</s></p><p><s>Individual trials were 200 cm long and were either straight or contained a single left or right 11.3°turn over the middle 100 cm of the trial (Fig. <ref type="figure" target="#fig_6">9B</ref>).</s><s>Trials with different turn-directions were randomly interleaved, thus simulating a winding two-dimensional corridor.</s><s>The two-dimensional trajectory of the mouse on the ball was compared with the ideal running trajectory, which occurred if mice maintained a constant position in the corridor throughout the turn (Fig. <ref type="figure" target="#fig_6">9C</ref>).</s><s>Task performance was quantified using the angle error, the absolute difference between the run angle of the mice and the turn angle during the last 50 cm of the turn.</s><s>Zero angle error implies that mice track the walls at a fixed distance throughout the turn.</s></p><p><s>Mice successfully matched their run angle to the turn angle on a trial-by-trial basis (Fig. <ref type="figure" target="#fig_0">10A</ref>).</s><s>Changes in distance to the walls drove turning (Fig. <ref type="figure" target="#fig_0">10B</ref>).</s><s>During straight running, mice tended to stay in the center of the corridor, though some mice favored different sides of the corridor.</s><s>On left turns, mice ran closer to the right wall, whereas on right turns mice ran closer to the left wall.</s></p><p><s>Mice tracked the walls with angle errors of 2.1 Ϯ 0.9°(23 mice), well below chance levels (Fig. <ref type="figure" target="#fig_0">10C</ref>).</s><s>The median trial duration was 14.1 Ϯ 5.9 s (23 mice), including drinking (Fig. <ref type="figure" target="#fig_0">10D</ref>).</s><s>Mice ran 199 Ϯ 96 m per session (Table <ref type="table" target="#tab_0">1</ref>).</s><s>Thus, mice naturally track a winding corridor in a virtual reality environment using their whiskers.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Corridor-tracking does not require training</head><p><s>We next quantified performance as a function of training.</s><s>Mice were first acclimatized to head-fixation and were allowed to run on the ball in the absence of walls.</s><s>During these baseline sessions, the running angle error was calculated by randomly assigning each trial a turn angle.</s><s>These mice were then introduced into the tactile virtual reality environment.</s><s>The running angle error dropped to steadystate performance levels on the first trial in which mice experienced the simulated winding corridor (Fig. <ref type="figure" target="#fig_0">11 A,</ref><ref type="figure">B</ref>).</s><s>These data show that following the narrow winding corridor is a natural behavior for mice.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Corridor-tracking is whisker-dependent</head><p><s>We next tested how corridor-tracking in the dark depended on the large mystacial whiskers.</s><s>Whiskers were gradually trimmed between behavioral sessions.</s><s>Wall-tracking performance degraded as the number of whiskers was reduced bilaterally, with significant performance drops from all whiskers to the C rows of whiskers (4 of 5 mice, p Ͻ 0.02, one-sided unpaired t test), from the C rows to single C2 whiskers (5 of 5 mice, p Ͻ 0.01, one-sided unpaired t test), and from single C2 whiskers to no whiskers (5 of 5 mice, p Ͻ 0.001, one-sided unpaired t test; Fig. <ref type="figure" target="#fig_1">12A</ref>).</s><s>Whisker movements were also measured in a subset of these mice while they were performing the task with their C2 whiskers.</s><s>These mice continued to show normal whisking while performing the closed-loop corridor-tracking task, with whisking frequency 15.6 Ϯ 0.2 Hz (3 mice) and whisker set point 40.1 Ϯ 6.7°(3 mice).</s><s>When mice had all their whiskers, touches occurred with both positive and negative curvature on the protraction and retraction phases of whisking.</s><s>Mice with fewer whiskers ran closer to the walls (Fig. <ref type="figure" target="#fig_1">12B</ref>).</s><s>Mice without whiskers are disoriented and spend most of their time at the closest allowed wall distance, farthest from the center of the corridor.</s><s>Thus, running through the middle of the narrow winding corridor requires whiskers.</s><s>Furthermore, multiple whiskers are normally used together for guiding locomotion.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Visually mediated corridor-tracking without whiskers</head><p><s>Mice without whiskers may have been unable to perform the corridor-tracking task due to discomfort or a lack of motivation.</s><s>We tested these hypotheses by illuminating the behavioral apparatus, allowing mice to see the walls.</s><s>Four of five mice without whiskers partially regained the ability to run through the simulated winding corridor in an illuminated arena (Fig. 13A).</s><s>This finding shows that in the dark mice without whiskers lacked the necessary sensory information to navigate their environment.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Modeling whisker-guided turning behavior</head><p><s>How do mice transform sensory inputs to motor control signals as they execute turns in the corridor?</s><s>Because mice tried to maintain a fixed position in the corridor, u 0 , we modeled how mice might determine their mean run angle trajectory, z, as a function of their deviation from this ideal position, u ˆϭ u Ϫ u 0 .</s><s>This approach is inspired by the framework of control theory, where a controller, in this case the mouse, tries to limit an error, in this case deviation from the ideal corridor position, in a system with feedback, in this case the closed-loop coupling between the ball and the walls (Fig. <ref type="figure" target="#fig_0">14A</ref>; Åstro ¨m and <ref type="bibr" target="#b2">Murray, 2008)</ref>.</s><s>We modeled data where mice had all their whiskers so at least one of the walls was within their contact range at all times.</s></p><p><s>During a turn, the mean run angle trajectory, z, approached the target value of the turn angle with an oscillatory transient (Fig. <ref type="figure" target="#fig_0">14B</ref>).</s><s>Curves with such transients can be described as solutions of a forced damped harmonic oscillator zЉ ϩ 2 0 zЈ ϩ 0 2 z ϭ 0 2 F. We thus used a nonlinear fitting approach to determine the coefficients , 0 , and F (Table <ref type="table" target="#tab_3">4</ref>).</s><s>The distance for mice to reach the steady-state turn angle, given by ( 0 ) Ϫ1 , was 12.1 Ϯ 5.2 cm (14 mice).</s><s>The parameters for this equation only hold for a specific turn angle.</s></p><p><s>To determine how mice transformed sensory stimuli into motor output, we fit an equation describing run angle as a function of wall position and its derivatives that is independent of the experimentally set turn angle and coupling gain.</s><s>The open-loop experiments (Fig. <ref type="figure">8</ref>) suggest that the mice determine their run angle as a function of wall position; however, the presence of the oscillatory transient in the run angle requires that mice also adjust their run angle as a function of the wall velocity and acceleration.</s><s>Mice that only monitored wall position would show an exponential approach to the turn angle.</s><s>Therefore, we fit an equation describing run angle as a function of wall distance, velocity, acceleration and an innate bias, z ϭ Au ˆϩ Bu ˆЈ ϩ Cu ˆЉ ϩ Dx (Fig. <ref type="figure" target="#fig_0">14B</ref>; Table <ref type="table" target="#tab_3">4</ref>).</s><s>The parameters A-D no longer depend on the turn angle or coupling gain.</s><s>The bias term was included to reflect that some mice naturally run more to the left and others naturally run more to the right.</s><s>The run angle trajectory was related to the corridor position trajectory, u, by fitting the coupling equation u ˆЈ ϭ ␥( Ϫ z).</s><s>The average behavior of the mice can be well described by a function of the deviation of wall position from an ideal value, wall velocity, and wall acceleration.</s><s>This suggests that that neural activity in the whisker system may code for these state variables.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>We developed a whisker-guided locomotion task for head-fixed mice.</s><s>The virtual reality aspects of the system allowed for decoupling the sensory stimuli from motor behavior, which would not be possible in a study of freely moving rodents.</s></p><p><s>The running speeds of the head-fixed mice (Fig. <ref type="figure" target="#fig_0">1</ref>) were similar to reports of running in freely moving mice <ref type="bibr" target="#b13">(Clarke and Still, 1999;</ref><ref type="bibr" target="#b43">Saleem et al., 2013)</ref>, but somewhat slower than some reports of head-fixed mice on smaller spherical treadmills <ref type="bibr" target="#b21">(Harvey et al., 2012)</ref>.</s><s>Stride frequencies are also similar to freely moving mice <ref type="bibr" target="#b13">(Clarke and Still, 1999)</ref>.</s><s>Whisking frequencies in freely moving mice range from 11.4 Ϯ 1.0 Hz (30 mice) during locomotion with a mean speed of 13.2 Ϯ 8.2 cm/s (30 mice; <ref type="bibr" target="#b35">Mitchinson et al., 2011)</ref> to 15-20 Hz in mice performing a gap crossing task <ref type="bibr" target="#b50">(Voigts et al., 2008)</ref>.</s><s>These values are in the same range as in our experiments (Fig. <ref type="figure" target="#fig_2">3</ref>).</s><s>Headfixed mice running on a large spherical treadmill therefore appear to perform natural exploratory behaviors.</s></p><p><s>Few studies have examined the coupling between running and whisking.</s><s>The correlation between speed and whisker set point A, Schematic illustrating coupling between ball movement and movement of the walls.</s><s>Turns were defined by a turn angle that was positive for left turns.</s><s>The coupling gain ␥ determined the scaling between ball motion and wall motion.</s><s>The movement of the wall, ⌬u, was determined based on the coupling equation.</s><s>The example shown contains a leftward winding corridor ( Ͼ 0), and a mouse running very left ( Ͼ ), resulting in the left wall moving closer to the mouse and the right wall moving farther away.</s><s>If the mouse run angle matched the turn angle, ( ϭ ), the walls did not move (⌬u ϭ 0).</s><s>B, Trial structure of the winding corridor task.</s><s>Trials were 200 cm long and contained a single 100 cm left turn, right turn, or no turn, during their middle half.</s><s>C, Overlay of one example running trajectory from a mouse, and the ideal trajectory if the mouse maintained the same position in the corridor throughout the turn.</s><s>Performance was quantified by comparing the angle of the mouse's trajectory at the end of the turn and the angle of the turn.</s></p><p><s>has been reported for rats <ref type="bibr" target="#b2">(Arkley et al., 2011)</ref>.</s><s>Whisking asymmetry during head turning has also been noted <ref type="bibr" target="#b47">(Towal and Hartmann, 2006;</ref><ref type="bibr" target="#b35">Mitchinson et al., 2011)</ref>.</s><s>In these studies, during left turning the right whiskers were more protracted than the left whiskers, similar to our observed increase in the set point of the right whisker during head-fixed leftward turning.</s><s>The 4 Hz whisking component and its synchronization with the stride frequency (Fig. <ref type="figure">5</ref>) has not previously been described.</s><s>This coupling could be passive, related to stretching of the skin during stepping, or might be under neural control.</s><s>Breathing was not recorded in our study; however, normal breathing in mice can occur ϳ4 Hz <ref type="bibr" target="#b41">(Ranade et al., 2013)</ref> and quadrupeds tend to lock breathing and stride in a one-to-one manner <ref type="bibr" target="#b8">(Bramble and Carrier, 1983)</ref>.</s><s>As the breathing oscillator can reset the whisking oscillator <ref type="bibr" target="#b36">(Moore et al., 2013)</ref>, the coherence between whisking and strides could be a consequence of the coupling between whisking and breathing.</s></p><p><s>The synchronization of whisking and stepping could provide a common time base for neural computations.</s><s>It is unknown whether touch signals in barrel cortex are modulated by locomotor signals relating to either running velocity or the phase of locomotion.</s><s>Such modulation would allow for self-motion information to be coupled to sensory input for information processing.</s><s>During the closed-loop corridor-tracking experiments, mice continued to whisk at normal frequencies; however, they may subtly adapt their whisking strategies to maximize the amount of information about the walls available to them <ref type="bibr" target="#b19">(Grant et al., 2009)</ref>.</s></p><p><s>Whisker-guided locomotion in the simulated winding corridor did not require training (Fig. <ref type="figure" target="#fig_0">11</ref>), demonstrating that mice experience the virtual reality as natural.</s><s>Virtual reality experiments using visual cues have been mainly confined to onedimensional tracks <ref type="bibr" target="#b26">(Keller et al., 2012;</ref><ref type="bibr" target="#b15">Domnisoru et al., 2013;</ref><ref type="bibr" target="#b42">Ravassard et al., 2013;</ref><ref type="bibr" target="#b43">Saleem et al., 2013)</ref> or required extensive training to get rodents to make turns and not run through walls <ref type="bibr" target="#b25">(Ho ¨lscher et al., 2005;</ref><ref type="bibr" target="#b21">Harvey et al., 2012)</ref>.</s><s>An advantage of a tactile virtual reality system is that naive mice correctly navigate two-dimensional environments from the first trial.</s><s>In the current system, the walls only moved perpendicular to the mouse.</s><s>Mice therefore lack cues related to the parallel motion of the walls that would normally be present during running along a wall.</s><s>As the walls were smooth, it is unclear how significant this absence was.</s><s>A more realistic system would have walls made from rotating cylinders whose speed of rotation could be coupled to the speed of the mouse.</s><s>Tactile virtual reality can be combined with visual  Corridor-tracking is whisker-dependent.</s><s>A, Average angle error for mice with different numbers of whiskers.</s><s>Black, all whiskers; brown, C row of whiskers; dark red, single C2 whisker; bright red, no whisker); four of five mice showed a significant increase in angle error following trimming of all whiskers to a row of whiskers ( p Ͻ 0.02, one-sided unpaired t test), five of five mice showed a significant increase in angle error following trimming of a row of whiskers to a single whisker ( p Ͻ 0.01, one-sided unpaired t test), and trimming of a single whisker to no whiskers ( p Ͻ 0.001, one-sided unpaired t test).</s><s>B, Average histograms of distance to nearest wall for different whisker configurations; five mice.</s></p><p><s>virtual reality to create a system where the boundaries of an environment are defined with tactile walls and where visual information gives the animal distal cues to it location in the environment.</s></p><p><s>Mice were only lightly water restricted to motivate more consistent running and larger total running distance per session; many mice received rewards on every single trial (Table <ref type="table" target="#tab_0">1</ref>).</s><s>Water restriction was not necessary for performance of whisker-guided locomotion.</s></p><p><s>Corridor-tracking performance depended on the number of whiskers (Fig. <ref type="figure" target="#fig_1">12</ref>).</s><s>With multiple rows of whiskers, interactions with the walls were rich and varied, occurring both during protraction and retraction, and lasting different durations.</s><s>Similar to previous object localization tasks, performance degraded with whisker trimming <ref type="bibr" target="#b29">(Krupa et al., 2001;</ref><ref type="bibr" target="#b27">Knutsen et al., 2006;</ref><ref type="bibr" target="#b33">Mehta et al., 2007;</ref><ref type="bibr" target="#b37">O'Connor et al., 2010)</ref>.</s><s>There was a large decrement in performance from three C row whiskers to a C2 single whisker.</s><s>Interactions between the wall and a C2 single whisker were mainly retraction touches.</s><s>Multiple whiskers provide mice with a rich set of algorithms to estimate wall distance, some of which are formally inaccessible to mice with single whiskers.</s><s>This includes for example, strategies based on labeled line coding <ref type="bibr" target="#b9">(Brecht et al., 1997)</ref> or triangulation <ref type="bibr" target="#b46">(Solomon and Hartmann, 2011)</ref>.</s><s>Because whiskers are naturally of different lengths, a simple strategy to measure distance to a wall would be to determine which whiskers are touching, and which whiskers are not touching a wall.</s><s>However, mice that were able to use only this strategy would be unable to measure distances with a single whisker, in contrast to behavior that we observed during the open-loop presentations of the wall.</s><s>Triangulation strategies depend on mice using knowledge of the positions of their whiskers during touch to calculate object distance <ref type="bibr" target="#b46">(Solomon and Hartmann, 2011;</ref><ref type="bibr" target="#b39">Pammer et al., 2013)</ref>.</s><s>The large drop in performance may be because mice with multiple whiskers use multiple strategies.</s><s>However, as mice were still able to track the winding corridor with a single whisker, these strategies cannot be the only ones available to mice.</s></p><p><s>Whisker curvature change is directly proportional to the forces acting on the mechanoreceptors at the base of the whisker <ref type="bibr" target="#b6">(Birdwell et al., 2007)</ref>.</s><s>Because whiskers are linearly tapered, the bending stiffness decreases rapidly with distance from the follicle.</s><s>The absolute and relative amplitudes of different stress variables change dramatically with the point of force application (i.e., position of contact with the wall) along the whisker length.</s><s>Distance-dependent whisker mechanics could be used by mice to estimate the wall distance.</s><s>Consistent with this view, induced whisker curvature increased monotonically with decreasing wall distance (Fig. <ref type="figure">7</ref>; <ref type="bibr" target="#b6">Birdwell et al., 2007)</ref>.</s><s>Whiskers can also slip along the walls.</s><s>These high-frequency acceleration events could also underlie measurements of wall distance <ref type="bibr" target="#b24">(Hires et al., 2013)</ref>.</s><s>Measuring wall-tracking performance for walls with different mechanical properties could further disambiguate radial distance coding strategies that depend on absolute or relative force measurements.</s><s>Mice may make bilateral comparisons of the forces on their whiskers to stay in the center of the winding corridor.</s></p><p><s>The phenomenological modeling of turning behavior suggests that mice do not just compute their running angle based on an instantaneous measurement of wall position, but also take into account the velocity and acceleration of the wall (Fig. <ref type="figure" target="#fig_0">14</ref>).</s><s>Computation of these additional variables may require integration of sensory inputs over hundreds of milliseconds.</s></p><p><s>This tactile virtual reality system allows for rich natural behavior while sensory stimuli and motor output can be precisely quantified.</s><s>The system can easily be extended beyond simple trials with a single turn to richer environments with multiple turns and changes in the width of the corridor that create choice points.</s><s>Trials can also be presented in a repeating fashion, creating two-dimensional mazes that mice can plan routes through.</s><s>This paradigm would allow for study of the role of the hippocampus in a whisker-based navigation paradigm.</s><s>Tactile virtual reality can be also combined with recordings and manipulation of neural activity to examine coding of object location in the whisker system.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Awhisker-basedtactilevirtualrealitysystem.A,Sideviewofamouseonasphericaltreadmill.Ballmovementwasmeasured using two optic flow sensors (only one sensor is shown).</s><s>Values of ball movement were used to update the position of two walls on either side of the mouse.</s><s>B, Example data showing running speed (black), licking (magenta), and water rewards (blue).</s><s>C, Higher-magnification view (corresponding to gray bar in B).</s><s>D, Histograms of speed for four mice (gray line corresponds to data in B).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Stride frequency.</s><s>A, Time-lapse images showing one stride.</s><s>The right hindpaw was rendered red.</s><s>B, Example traces of paw position along the longitudinal axis determined manually from video (top) and the filtered lateral ball acceleration (bottom).</s><s>C, The power spectrum of the lateral ball acceleration (mean Ϯ SD).</s><s>The peak between 3 and 4 Hz corresponds to the stride frequency of the mouse.</s><s>D, Probability density function of the peak frequency of the power spectrum, four mice, gray line corresponds to mouse in C. E, Stride frequency as a function of running speed across time points (mean Ϯ SD; same mouse as in B, C).</s><s>F, Stride frequency as a function of running speed for four mice.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Whisker movements of mice running on a spherical treadmill.</s><s>A, Left, Definition of the whisker angle.</s><s>Right, Timelapse images of a mouse with a single whisker on the right hand side, moving over half a whisker cycle.</s><s>The first 7.5 mm of the tracked whisker are highlighted in blue.</s><s>B, Example trace of whisker angle.</s><s>C, Blow-up of whisker trace (corresponding to gray bar in B).</s><s>D, Histogram of fraction of time spent at a particular whisking amplitude when running, four mice; gray line corresponds to mouse in B. E, Power spectrum of the whisker angle for one mouse (mean Ϯ SD).</s><s>F, Probability density function of the major peak frequency (i.e., Ͼ10 Hz) of the power spectrum, four mice; gray line corresponds to mouse in C.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .Figure 5 .</head><label>45</label><figDesc><div><p><s>Figure 4. Coupling between running speed and whisking.</s><s>A, Example showing running speed (black) and whisker angle (gray).</s><s>The slow (4 Hz) oscillation in the running speed corresponds to strides and is locked one-to-one to a slow oscillation in the whisker angle.</s><s>B, Overlay of 300 whisker traces (600 ms) when the mouse is still (left) and during a running bout (right).</s><s>C, Whisking set point as a function of running speed for all time points for one mouse (mean Ϯ SD).</s><s>D, Whisking set point as a function of running speed, four mice.</s><s>E, Whisking frequency as a function of running speed for all time points (mean Ϯ SD).</s><s>F, Whisking frequency as a function of running speed; four mice.</s><s>G, Whisking amplitude as a function of running speed across time points (mean Ϯ SD).</s><s>H, Same as G; four mice.A</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>Asymmetric whisking during turning.</s><s>A, Example trace of left whisker angle (red) and right whisker angle (blue) during a transition from turning right to turning left.</s><s>B, Overlay of 250 whisker traces (500 ms) when the mouse is turning right, running straight, and turning left.</s><s>C, Right/left difference in whisking set point as a function of run angle for one mouse (mean Ϯ SD).</s><s>D, Right/left difference in whisking set point as a function of run angle; three mice.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>CFigure 7 .Figure 8 .</head><label>78</label><figDesc><div><p><s>Figure 7. Interactions between whiskers and the wall.</s><s>A, Images of a single C2 whisker touching a wall at different distances (4, 6, and 8 mm) or without wall present.</s><s>B, Cumulative distribution of curvature changes during close wall distance (Յ8 mm) trials (dark purple) and trials where the wall was out of reach (pink); four mice.</s><s>C, Scatter plot of absolute change in whisker curvature against whisker angle for different wall distances (dark purple, 4 mm; medium purple, 6 mm; light purple, 8 mm; pink, no wall present).</s><s>D, Slope of absolute change in whisker curvature versus angle, four mice.</s><s>E, Max absolute change in whisker curvature for different wall distances across trials for one mouse (mean Ϯ SD).</s><s>F, Max absolute change in whisker curvature for different wall distances; four mice.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 9 .</head><label>9</label><figDesc><div><p><s>Figure9.</s><s>Tactile virtual reality environment.</s><s>A, Schematic illustrating coupling between ball movement and movement of the walls.</s><s>Turns were defined by a turn angle that was positive for left turns.</s><s>The coupling gain ␥ determined the scaling between ball motion and wall motion.</s><s>The movement of the wall, ⌬u, was determined based on the coupling equation.</s><s>The example shown contains a leftward winding corridor ( Ͼ 0), and a mouse running very left ( Ͼ ), resulting in the left wall moving closer to the mouse and the right wall moving farther away.</s><s>If the mouse run angle matched the turn angle, ( ϭ ), the walls did not move (⌬u ϭ 0).</s><s>B, Trial structure of the winding corridor task.</s><s>Trials were 200 cm long and contained a single 100 cm left turn, right turn, or no turn, during their middle half.</s><s>C, Overlay of one example running trajectory from a mouse, and the ideal trajectory if the mouse maintained the same position in the corridor throughout the turn.</s><s>Performance was quantified by comparing the angle of the mouse's trajectory at the end of the turn and the angle of the turn.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 10 .Figure 11 .</head><label>1011</label><figDesc><div><p><s>Figure10.</s><s>Performance in tactile virtual reality.</s><s>A, Left, Twenty randomly selected running trajectories from each turn angle for one behavioral session.</s><s>Red, right turns; purple, no turns; blue, left turns; ideal running trajectories, black dashed lines.</s><s>Middle, Deviation of run angles at given turn angles across trials from one mouse (mean Ϯ SD).</s><s>Right, Mean run angle versus turn angle; 23 mice.</s><s>B, Corridor position trajectories for same trials as in A. Thick gray lines represent the left hand wall (LW) and right hand wall (RW).</s><s>Middle, Corridor position at the end of the turn at given turn angles across trials from one mouse (mean Ϯ SD).</s><s>Right, Mean corridor position versus turn angle; 23 mice.</s><s>C, Boxplots of run angle error, 23 of 23 mice showed angle errors significantly below chance levels ( p Ͻ 0.001, one-sided t test).</s><s>Gray shading represents range of angle errors that could be generated via chance performance.</s><s>D, Histogram of trial durations (mean Ϯ SD; 23 mice).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 13 .Figure 14 .</head><label>1314</label><figDesc><div><p><s>Figure13.</s><s>Vision partially compensates for absence of whiskers.</s><s>Average angle error for mice with all whiskers (black), no whiskers (red), and no whiskers but with illumination provided (yellow).</s><s>Four of 5 mice showed a significant decrease in angle error following introduction of the light when they had no whiskers ( p Ͻ 0.001, one-sided unpaired t test).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head></head><label></label><figDesc><div><p><s>Figure 12.Corridor-tracking is whisker-dependent.</s><s>A, Average angle error for mice with different numbers of whiskers.</s><s>Black, all whiskers; brown, C row of whiskers; dark red, single C2 whisker; bright red, no whisker); four of five mice showed a significant increase in angle error following trimming of all whiskers to a row of whiskers ( p Ͻ 0.02, one-sided unpaired t test), five of five mice showed a significant increase in angle error following trimming of a row of whiskers to a single whisker ( p Ͻ 0.01, one-sided unpaired t test), and trimming of a single whisker to no whiskers ( p Ͻ 0.001, one-sided unpaired t test).</s><s>B, Average histograms of distance to nearest wall for different whisker configurations; five mice.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 . Mice used</head><label>1</label><figDesc></figDesc><table><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>Mean</cell><cell></cell><cell></cell></row><row><cell></cell><cell></cell><cell></cell><cell>Trials</cell><cell>session</cell><cell>Meters run</cell><cell>Trials</cell></row><row><cell></cell><cell>Shown in</cell><cell>Sessions</cell><cell>total per</cell><cell>duration,</cell><cell>per session</cell><cell>rewarded, %</cell></row><row><cell>Mouse (sex)</cell><cell>figures</cell><cell>per figure</cell><cell>figure</cell><cell>min (Fig. 10)</cell><cell>(Fig. 10)</cell><cell>(Fig. 10)</cell></row><row><cell>JF171981 (F)</cell><cell>1*-8, 10, 13, 14</cell><cell>3, 2, 6, 2</cell><cell>808, 407, 742, 93</cell><cell>32.5</cell><cell>407</cell><cell>96.1</cell></row><row><cell>JF174752 (M)</cell><cell>1-8 (2-5*), 10</cell><cell>3, 2</cell><cell>829, 70</cell><cell>31.0</cell><cell>174</cell><cell>92.9</cell></row><row><cell>JF174754 (M)</cell><cell>1-8 (7-8*), 10</cell><cell>4, 2</cell><cell>853, 56</cell><cell>28.0</cell><cell>145</cell><cell>76.8</cell></row><row><cell>JF174755 (M)</cell><cell>1-8, 10</cell><cell>4, 2</cell><cell>806, 91</cell><cell>32.6</cell><cell>227</cell><cell>75.8</cell></row><row><cell>JF217490 (M)</cell><cell>6</cell><cell>1</cell><cell>193</cell><cell>-</cell><cell>-</cell><cell>-</cell></row><row><cell>JF217489 (M)</cell><cell>6</cell><cell>1</cell><cell>185</cell><cell>-</cell><cell>-</cell><cell>-</cell></row><row><cell>JF220126 (M)</cell><cell>6*</cell><cell>1</cell><cell>157</cell><cell>-</cell><cell>-</cell><cell>-</cell></row><row><cell>JF174950 (M)</cell><cell>10, 11, 14</cell><cell>3, 6, 3</cell><cell>295, 407, 189</cell><cell>30.3</cell><cell>197</cell><cell>100.0</cell></row><row><cell>JF174949 (M)</cell><cell>10, 11</cell><cell>3, 6</cell><cell>123, 178</cell><cell>29.3</cell><cell>82</cell><cell>96.7</cell></row><row><cell>JF174947 (M)</cell><cell>10, 11, 14</cell><cell>3, 6, 3</cell><cell>211, 319, 124</cell><cell>29.7</cell><cell>141</cell><cell>100.0</cell></row><row><cell>JF173936 (M)</cell><cell>10, 11, 14</cell><cell>7, 10, 7</cell><cell>181, 247, 90</cell><cell>24.6</cell><cell>92</cell><cell>100.0</cell></row><row><cell>JF173937 (M)</cell><cell>10, 11, 14</cell><cell>11, 14, 11</cell><cell>413, 525, 242</cell><cell>30.3</cell><cell>123</cell><cell>100.0</cell></row><row><cell>JF172934 (M)</cell><cell>10, 11, 12, 14</cell><cell>5, 9, 11, 5</cell><cell>403, 555, 601, 186</cell><cell>31.2</cell><cell>264</cell><cell>99.8</cell></row><row><cell>JF173081 (M)</cell><cell>10, 11, 12, 14*</cell><cell>5, 9, 12, 5</cell><cell>401, 546, 881, 232</cell><cell>29.4</cell><cell>235</cell><cell>100.0</cell></row><row><cell>JF172933 (M)</cell><cell>10, 12, 14</cell><cell>5, 11, 5</cell><cell>158, 470, 73</cell><cell>31.4</cell><cell>109</cell><cell>100.0</cell></row><row><cell>JF156283 (M)</cell><cell>10, 12, 13, 14</cell><cell>9, 18, 15, 9</cell><cell>285, 906, 755, 133</cell><cell>27.4</cell><cell>112</cell><cell>99.3</cell></row><row><cell>JF156948 (M)</cell><cell>10, 12, 13, 14</cell><cell>3, 13, 9, 3</cell><cell>433, 1382, 860, 245</cell><cell>27.8</cell><cell>289</cell><cell>100.0</cell></row><row><cell>JF156282 (M)</cell><cell>10, 13, 14</cell><cell>11, 21, 11</cell><cell>275, 513, 87</cell><cell>23.6</cell><cell>73</cell><cell>98.9</cell></row><row><cell>JF171977 (M)</cell><cell>10, 13, 14</cell><cell>2, 6, 2</cell><cell>219, 514, 106</cell><cell>23.8</cell><cell>219</cell><cell>100.0</cell></row><row><cell>JF159346 (F)</cell><cell>10*, 14</cell><cell>5, 5</cell><cell>180, 79</cell><cell>29.4</cell><cell>368</cell><cell>100.0</cell></row><row><cell>JF159347 (F)</cell><cell>10</cell><cell>3</cell><cell>148</cell><cell>27.1</cell><cell>202</cell><cell>87.8</cell></row><row><cell>JF158391 (F)</cell><cell>10</cell><cell>6</cell><cell>66</cell><cell>13.9</cell><cell>47</cell><cell>69.7</cell></row><row><cell>JF159667 (F)</cell><cell>10</cell><cell>5</cell><cell>168</cell><cell>25.0</cell><cell>307</cell><cell>67.3</cell></row><row><cell>JF171980 (F)</cell><cell>10, 14</cell><cell>6, 6</cell><cell>670, 121</cell><cell>18.8</cell><cell>223</cell><cell>79.4</cell></row><row><cell>JF178838 (M)</cell><cell>10</cell><cell>2</cell><cell>129</cell><cell>30.8</cell><cell>285</cell><cell>85.3</cell></row><row><cell>JF173351 (F)</cell><cell>10</cell><cell>2</cell><cell>102</cell><cell>29.5</cell><cell>258</cell><cell>98.0</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 . Running and whisking parameters</head><label>2</label><figDesc></figDesc><table><row><cell>Running</cell><cell>Stride</cell><cell>Whisking</cell><cell>Main whisking</cell><cell>1st peak</cell><cell>Whisker</cell><cell></cell></row><row><cell>speed</cell><cell>frequency</cell><cell>amplitude</cell><cell>frequency</cell><cell>whisking frequency</cell><cell>set point</cell><cell>Lick rate</cell></row><row><cell>23 Ϯ 4.1 cm/s</cell><cell>3.8 Ϯ 0.5 Hz</cell><cell cols="2">9.3 Ϯ 1.1°16.9 Ϯ 0.5 Hz</cell><cell>3.9 Ϯ 0.6 Hz</cell><cell cols="2">39.8 Ϯ 6.2°7.7 Ϯ 0.2 Hz</cell></row></table><note><p><s>Values when mice are running (mean Ϯ SD; 4 mice).</s></p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 . Definition of variables</head><label>3</label><figDesc></figDesc><table><row><cell cols="2">v anm Run speed</cell><cell>Speed mouse is running at</cell></row><row><cell></cell><cell>Run angle</cell><cell>Direction mouse is running</cell></row><row><cell>z</cell><cell>Mean run angle</cell><cell>Run angle averaged over trials</cell></row><row><cell>␥</cell><cell>Coupling gain</cell><cell>Scale factor between ball motion and wall motion</cell></row><row><cell></cell><cell>Turn angle</cell><cell>Experimenter set direction of turn in winding corridor</cell></row><row><cell>⑀</cell><cell>Angle error</cell><cell>⑀ ϭ Ϫ difference between run angle and turn angle</cell></row><row><cell>u</cell><cell>Corridor position</cell><cell>Distance from right wall to right whisker pad</cell></row><row><cell>u 0</cell><cell cols="2">Mean corridor position Average corridor position</cell></row><row><cell>û</cell><cell></cell><cell></cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4 . Parameters from model fits</head><label>4</label><figDesc></figDesc><table><row><cell></cell><cell></cell><cell>0.58 Ϯ 0.11</cell><cell>␥</cell><cell>Ϫ0.0023 Ϯ 0.0002 mm/°A</cell><cell>Ϫ3.89 Ϯ 0.89°/mm</cell></row><row><cell>F</cell><cell>0</cell><cell cols="3">0.17 Ϯ 0.05 cm Ϫ1 11.0 Ϯ 0.2°C 11.0 Ϯ 0.3°B</cell><cell>Ϫ1.51 Ϯ 0.35°cm/mm Ϫ179 Ϯ 78.2°cm 2 /mm</cell></row><row><cell cols="2">( 0 ) Ϫ1</cell><cell>12.1 Ϯ 5.2 cm</cell><cell></cell><cell>D</cell><cell>Ϫ0.007 Ϯ 0.024°/cm</cell></row></table><note><p><s>Mean Ϯ SD; 14 mice.</s></p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9538" xml:id="foot_0"><p><s>• J. Neurosci., July 16, 2014 • 34(29):9537-9550 Sofroniew et al. • Mouse Tactile VR</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9540" xml:id="foot_1"><p><s>• J. Neurosci., July 16, 2014 • 34(29):9537-9550 Sofroniew et al. • Mouse Tactile VR</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9542" xml:id="foot_2"><p><s>• J. Neurosci., July 16, 2014 • 34(29):9537-9550 Sofroniew et al. • Mouse Tactile VR</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_3"><p><s>J. Neurosci., July 16, 2014 • 34(29):9537-9550 • 9543</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9544" xml:id="foot_4"><p><s>• J. Neurosci., July 16, 2014 • 34(29):9537-9550 Sofroniew et al. • Mouse Tactile VR</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9546" xml:id="foot_5"><p><s>• J. Neurosci., July 16, 2014 • 34(29):9537-9550 Sofroniew et al. • Mouse Tactile VR</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_6"><p><s>J. Neurosci., July 16, 2014 • 34(29):9537-9550 • 9547</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9548" xml:id="foot_7"><p><s>• J. Neurosci., July 16, 2014 • 34(29):9537-9550 Sofroniew et al. • Mouse Tactile VR</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9550" xml:id="foot_8"><p><s>• J. Neurosci., July 16, 2014 • 34(29):9537-9550 Sofroniew et al. • Mouse Tactile VR</s></p></note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>This work was supported by the <rs type="funder">Howard Hughes Medical Institute</rs>.We thank <rs type="person">Dan O'Connor</rs> and <rs type="person">Daniel Huber</rs> for help during the initial stages of this project, and</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Brain-wide neuronal dynamics during motor adaptation in zebrafish</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Ahrens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Orger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Robson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Schier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Engert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Portugues</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature11057</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">485</biblScope>
+			<biblScope unit="page" from="471" to="477" />
+			<date type="published" when="2012">2012</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Chronic cellular imaging of mouse visual cortex during operant behavior and passive viewing</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Andermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Kerlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Reid</surname></persName>
+		</author>
+		<idno type="DOI">10.3389/fncel.2010.00003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Front Cell Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>3. CrossRef Medline</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Feedback systems: an introduction for scientists and engineers</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Arkley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Grant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mitchinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tj ;</forename><surname>Prescott</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Murray</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Soc Neurosci Abstr</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="76" to="100" />
+			<date type="published" when="2008">2011. 2008</date>
+			<pubPlace>Princeton, Princeton UP</pubPlace>
+		</imprint>
+	</monogr>
+	<note>The relationship between whisking and locomotion in rats</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Pre-neuronal morphological processing of object location by individual whiskers</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Bagdasarian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Szwed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Knutsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Deutsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Derdikman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pietr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Simony</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ahissar</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.3378</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="622" to="631" />
+			<date type="published" when="2013">2013</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Rhythmic whisking by rat: retraction as well as protraction of the vibrissae is under active muscular control</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Berg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kleinfeld</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.00600.2002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="104" to="117" />
+			<date type="published" when="2003">2003</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Real-time&quot; monitoring of vibrissa contacts during rodent whisking</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bermejo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Zeigler</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08990220020002248</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Somatosens Mot Res</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="373" to="377" />
+			<date type="published" when="2000">2000</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Biomechanical models for radial distance determination by the rat vibrissal system</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Birdwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Solomon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Thajchayapong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Taylor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cheely</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Towal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Conradt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Hartmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.00707.2006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="2439" to="2455" />
+			<date type="published" when="2007">2007</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Selective engagement of plasticity mechanisms for motor memory storage</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Boyden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Katoh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Pyle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Chatila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Tsien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Raymond</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2006.08.026</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="823" to="834" />
+			<date type="published" when="2006">2006</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Running and breathing in mammals</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Bramble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Carrier</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.6849136</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">219</biblScope>
+			<biblScope unit="page" from="251" to="256" />
+			<date type="published" when="1983">1983</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Functional architecture of the mystacial vibrissae</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Brecht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Preilowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Merzenich</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0166-4328(97)83328-1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Behav Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page" from="81" to="97" />
+			<date type="published" when="1997">1997</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Biometric analysis of vibrissal tactile discrimination in the rat</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Carvell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Simons</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="2638" to="2648" />
+			<date type="published" when="1990">1990</date>
+			<publisher>Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Ultrasensitive fluorescent proteins for imaging neuronal activity</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Wardill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Pulver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Renninger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Baohan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Schreiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Kerr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Orger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Looger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature12354</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">499</biblScope>
+			<biblScope unit="page" from="295" to="300" />
+			<date type="published" when="2013">2013</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Automated tracking of whiskers in videos of head fixed rodents</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">G</forename><surname>Clack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O'</forename><surname>Connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Petreanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hires</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Peron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Myers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">W</forename></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pcbi.1002591</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">1002591</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>CrossRef Medline</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Gait analysis in the mouse</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Clarke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Still</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0031-9384(98)00343-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol Behav</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="723" to="729" />
+			<date type="published" when="1999">1999</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Real neuroscience in virtual worlds</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Dombeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Reiser</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.conb.2011.10.015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="3" to="10" />
+			<date type="published" when="2012">2012</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Membrane potential dynamics of grid cells</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Domnisoru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Kinkhabwala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Tank</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature11973</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">495</biblScope>
+			<biblScope unit="page" from="199" to="204" />
+			<date type="published" when="2013">2013</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Relation of pyramidal tract activity to force exerted during voluntary movement</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">V</forename><surname>Evarts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="14" to="27" />
+			<date type="published" when="1968">1968</date>
+			<publisher>Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">The development and application of optogenetics</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Fenno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yizhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<idno type="DOI">10.1146/annurev-neuro-061010-113817</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="389" to="412" />
+			<date type="published" when="2011">2011</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">GENSAT BAC cre-recombinase driver lines to study the functional organization of cerebral cortical and basal ganglia circuits</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Gerfen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Paletzki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Heintz</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2013.10.016</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="1368" to="1383" />
+			<date type="published" when="2013">2013</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Active touch sensing in the rat: anticipatory and regulatory control of whisker movements during surface exploration</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Grant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mitchinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Fox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Prescott</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.90783.2008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="862" to="874" />
+			<date type="published" when="2009">2009</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Connor DH1, Komiyama T1, Ophir E1, Huber D2, Bonardi C3, Morandell K3, Gutnisky D1, Peron S1, Xu NL1</title>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">V</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sa1</forename><surname>Hires</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N1</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0088678</idno>
+	</analytic>
+	<monogr>
+		<title level="j">CrossRef Medline</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">88678</biblScope>
+			<date type="published" when="2014">2014</date>
+			<pubPlace>Cox J1, Svoboda</pubPlace>
+		</imprint>
+	</monogr>
+	<note>PLos One</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Choice-specific sequences in parietal cortex during a virtual-navigation decision task</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Harvey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Coen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Tank</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature10918</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">484</biblScope>
+			<biblScope unit="page" from="62" to="68" />
+			<date type="published" when="2012">2012</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Gene expression nervous system atlas (GENSAT)</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Heintz</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn0504-483</idno>
+	</analytic>
+	<monogr>
+		<title level="j">CrossRef Medline</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">483</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>Nat Neurosci</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Primary motor cortex reports efferent control of vibrissa motion on multiple timescales</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Hill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Curtis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kleinfeld</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2011.09.020</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="344" to="356" />
+			<date type="published" when="2011">2011</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Hires</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pammer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Golomb</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.01350</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>Tapered whiskers are required for active tactile sensation. eLife 2:e01350. CrossRef Medline</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Rats are able to navigate in virtual environments</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ho ¨lscher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schnee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Dahmen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Setia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Mallot</surname></persName>
+		</author>
+		<idno type="DOI">10.1242/jeb.01371</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Exp Biol</title>
+		<imprint>
+			<biblScope unit="volume">208</biblScope>
+			<biblScope unit="page" from="561" to="569" />
+			<date type="published" when="2005">2005</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Sensorimotor mismatch signals in primary visual cortex of the behaving mouse</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Keller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bonhoeffer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hu ¨bener M</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2012.03.040</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="809" to="815" />
+			<date type="published" when="2012">2012</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Haptic object localization in the vibrissal system: behavior and performance</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Knutsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pietr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ahissar</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.1516-06.2006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="8451" to="8464" />
+			<date type="published" when="2006">2006</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Learning-related fine-scale specificity imaged in motor cortex circuits of behaving mice</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Komiyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O'</forename><surname>Connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">X</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hooks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Gabitto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename></persName>
+		</author>
+		<idno type="DOI">10.1038/nature08897</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">464</biblScope>
+			<biblScope unit="page" from="1182" to="1186" />
+			<date type="published" when="2010">2010</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Behavioral properties of the trigeminal somatosensory system in rats performing whisker-dependent tactile discriminations</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Krupa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Matell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Brisben</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Oliveira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Nicolelis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="5752" to="5763" />
+			<date type="published" when="2001">2001</date>
+			<publisher>Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">From house mouse to mouse house: the behavioural biology of free-living Mus musculus and its implications in the laboratory</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Latham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mason</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.applanim.2004.02.006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl Anim Behav Sci</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="261" to="289" />
+			<date type="published" when="2004">2004</date>
+			<publisher>CrossRef</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Genetic dissection of neural circuits</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Callaway</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2008.01.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="634" to="660" />
+			<date type="published" when="2008">2008</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">A toolbox of Cre-dependent optogenetic transgenic mice for light-induced activation and silencing</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Madisen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Zhuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Berenyi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fujisawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">W</forename><surname>Hsu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Garcia Aj 3rd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zanella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kidney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Hooks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Boyden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsa ´ki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Ramirez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Han</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.3078</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="793" to="802" />
+			<date type="published" when="2012">2012</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Active spatial perception in the vibrissa scanning sensorimotor system</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Mehta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Whitmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Figueroa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kleinfeld</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pbio.0050015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">CrossRef Medline</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">15</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PLoS Biol</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Feedback control in active sensing: rat exploratory whisking is modulated by environmental contact</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mitchinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Grant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Prescott</surname></persName>
+		</author>
+		<idno type="DOI">10.1098/rspb.2006.0347</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Biol Sci</title>
+		<imprint>
+			<biblScope unit="volume">274</biblScope>
+			<biblScope unit="page" from="1035" to="1041" />
+			<date type="published" when="2007">2007</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Active vibrissal sensing in rodents and marsupials</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mitchinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Grant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arkley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rankov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Perkon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Prescott</surname></persName>
+		</author>
+		<idno type="DOI">10.1098/rstb.2011.0156</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Philos Trans R Soc Lond B Biol Sci</title>
+		<imprint>
+			<biblScope unit="volume">366</biblScope>
+			<biblScope unit="page" from="3037" to="3048" />
+			<date type="published" when="2011">2011</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Hierarchy of orofacial rhythms revealed through whisking and breathing</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Desche ˆnes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Furuta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Smear</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Demers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kleinfeld</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature12076</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">497</biblScope>
+			<biblScope unit="page" from="205" to="210" />
+			<date type="published" when="2013">2013</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Vibrissa-based object localization in head-fixed mice</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>O'connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">G</forename><surname>Clack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Komiyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">W</forename><surname>Myers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.3762-09.2010</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="1947" to="1967" />
+			<date type="published" when="2010">2010</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Reverse engineering the mouse brain</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>O'connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature08539</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">461</biblScope>
+			<biblScope unit="page" from="923" to="929" />
+			<date type="published" when="2009">2009</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">The mechanical variables underlying object localization along the axis of the whisker</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pammer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O'</forename><surname>Connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Hires</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Clack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">G</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Myers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">W</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.4316-12.2013</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="6726" to="6741" />
+			<date type="published" when="2013">2013</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">A theory of the pattern induced flight orientation of the fly Musca domestica</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Poggio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Reichardt</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF00270572</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Kybernetik</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="185" to="203" />
+			<date type="published" when="1973">1973</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Multiple modes of phase locking between sniffing and whisking during active exploration</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ranade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hangya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kepecs</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.3874-12.2013</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="8250" to="8256" />
+			<date type="published" when="2013">2013</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Multisensory control of hippocampal spatiotemporal selectivity</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ravassard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kees</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Willers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Aharoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cushman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">M</forename><surname>Aghajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Mehta</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1232655</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">340</biblScope>
+			<biblScope unit="page" from="1342" to="1346" />
+			<date type="published" when="2013">2013</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Integration of visual motion and locomotion in mouse visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Saleem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ayaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Jeffery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.3567</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1864" to="1869" />
+			<date type="published" when="2013">2013</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Two-photon calcium imaging from head-fixed Drosophila during optomotor walking behavior</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Seelig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Chiappe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Lott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dutta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Osborne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Reiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.1468</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="535" to="540" />
+			<date type="published" when="2010">2010</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">A simple 2-transistor touch or lick detector circuit</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Slotnick</surname></persName>
+		</author>
+		<idno type="DOI">10.1901/jeab.2009.91-253</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Exp Anal Behav</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="253" to="255" />
+			<date type="published" when="2009">2009</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Radial distance determination in the rat vibrissal system and the effects of Weber&apos;s law</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Solomon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Hartmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1098/rstb.2011.0166</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Philos Trans R Soc Lond B Biol Sci</title>
+		<imprint>
+			<biblScope unit="volume">366</biblScope>
+			<biblScope unit="page" from="3049" to="3057" />
+			<date type="published" when="2011">2011</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Right-left asymmetries in the whisking behavior of rats anticipate head movements</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Towal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Hartmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.0581-06.2006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="8838" to="8846" />
+			<date type="published" when="2006">2006</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Sniffing controls an adaptive filter of sensory input to the olfactory bulb</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Verhagen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Wesson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">I</forename><surname>Netoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>White</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wachowiak</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn1892</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="631" to="639" />
+			<date type="published" when="2007">2007</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">The function of vibrissae in the behavior of the white rat</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Vincent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav Monogr</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1" to="82" />
+			<date type="published" when="1912">1912</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Unsupervised whisker tracking in unrestrained behaving animals</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Voigts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sakmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Celikel</surname></persName>
+		</author>
+		<idno type="DOI">10.1152/jn.00012.2008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="504" to="515" />
+			<date type="published" when="2008">2008</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Visual control of straight flight in Drosophila melanogaster</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wolf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Heisenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comp Physiol A</title>
+		<imprint>
+			<biblScope unit="volume">167</biblScope>
+			<biblScope unit="page" from="269" to="283" />
+			<date type="published" when="1990">1990</date>
+			<publisher>Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Visual cortex neurons: response to stimuli during rapid eye movements</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Wurtz</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.162.3858.1148</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">162</biblScope>
+			<biblScope unit="page" from="1148" to="1150" />
+			<date type="published" when="1968">1968</date>
+			<publisher>CrossRef Medline</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

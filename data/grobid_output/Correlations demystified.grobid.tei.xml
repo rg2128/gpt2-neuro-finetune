@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main"></title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Peter</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+							<email>pel@gatsby.ucl.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="department">Gatsby Computational Unit</orgName>
+								<orgName type="institution">University College London</orgName>
+								<address>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">77A6739DAC4071B4D615C79E2436A962</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:05+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract/>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>An elegant study answers a long-standing question: how do correlations arise in large, highly interconnected networks of neurons?</s><s>The answer represents a major step forward in our understanding of spiking networks in the brain.</s></p><p><s>One of the most notable features of single neurons in the mammalian brain is that they are highly variable.</s><s>A neuron might emit 8 spikes on one trial, 5 on another and 10 on a third, even when conditions on each trial are virtually identical.</s><s>At the population level, this variability tends to be correlated: upward fluctuations in the activity of one neuron are often mirrored by upward fluctuations in other, nearby neurons, and similarly for downward fluctuations.</s><s>For example, on the same three trials, a second neuron might emit 7, 3 and 12 spikes.</s></p><p><s>These correlated fluctuations are termed noise correlations, and there are two reasons to care about them.</s><s>First, as their name implies, they are mainly a nuisance: noise correlations can greatly reduce the amount of information in a population, in many cases by orders of magnitude <ref type="bibr" target="#b0">1</ref> .</s><s>Second, and related, computations must be efficient in the face of these noise correlations.</s><s>So, to understand computations in the brain, it is essential to understand how noise correlations arise.</s><s>In this issue of Nature Neuroscience, Rosenbaum et al. <ref type="bibr" target="#b1">2</ref> show, using arguments that are both elegant and simple, that correlations must arise when external input to a network varies over a length scale that is small compared to that of its lateral connectivity.</s></p><p><s>To put this work in context, flash back to 1998, when van Vreeswijk and Sompolinsky published what has become the de facto standard model of large networks of spiking neurons <ref type="bibr" target="#b2">3</ref> .</s><s>An underappreciated assumption in that model was that connectivity was so sparse that correlations were eliminated altogether.</s><s>This allowed the rigorous development of an elegant theory describing large networks of spiking neurons.</s><s>Of course, because of the ultrasparse assumption, this may seem like a classic case of looking where the light is.</s><s>However, in a rare stroke of luck for theoreticians, the analysis gave very accurate predictions even when the sparseness assumption was violated.</s><s>But why the theory worked so well remained a mystery that was not solved for another 14 years, when Renart and colleagues showed that it is the interplay of excitation and inhibition that causes correlations to dynamically cancel, making them near zero on average <ref type="bibr" target="#b3">4</ref> .</s></p><p><s>While the result of Renart et al. <ref type="bibr" target="#b3">4</ref> was extremely important, it brought a new mystery.</s><s>In some areas of the brain correlations are indeed near zero on average <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b5">6</ref> .</s><s>However, that's the exception, not the rule: in most areas correlation coefficients hover around 0.1-0.2</s><s>(refs.</s><s>5,6), appreciably larger than the prediction of Renart et al. <ref type="bibr" target="#b3">4</ref> .</s><s>But this mystery has now been solved as well, by Rosenbaum et al. <ref type="bibr" target="#b1">2</ref> .</s><s>They showed that for networks with spatially inhomogeneous connectivity (connectivity that falls off with distance, as is found in the brain), relatively large correlations should emerge if the input is spatially localized.</s><s>The resulting spatial profile of correlations, large for nearby neurons and small for more distant neurons, is qualitatively similar to what is found in the brain <ref type="bibr" target="#b6">7</ref> .</s><s>Quantitatively, however, it differs: the model of Rosenbaum et al. <ref type="bibr" target="#b1">2</ref> predicts that correlations should average to zero, something that is not typically seen.</s><s>We'll return to that point shortly, but first we'll explain what they did.</s></p><p><s>As is typical in the analysis of neuronal networks in mammalian cortex, Rosenbaum et al. <ref type="bibr" target="#b1">2</ref> noted that each neuron makes a large number of connections, on the order of 1,000.</s><s>They then used one of the favorite tricks of physicists: when they see a moderately large number, they pretend that it is very, very large.</s><s>When the external input is fixed, networks of this type can fire at the kinds of low rates seen in the brain (a few hertz), with near-Poisson variability <ref type="bibr" target="#b7">8</ref> .</s><s>But under realistic conditions input is never fixed.</s><s>Instead, it varies from trial to trial, by enough to make any single neuron, in isolation, change its firing rate by at least a few hertz.</s><s>When the variability is correlated across the population, one might think that the firing rates of all the neurons in the network would change together, leading to large correlations in their firing rates.</s><s>If the neurons were disconnected, that would indeed be the case.</s><s>However, for highly connected networks of excitatory and inhibitory neurons, it's not.</s><s>That's because for such networks to remain stable (that is, not exhibit runaway excitation) they must be inhibition dominated, in the sense that small increases in excitatory firing rate cause a larger increase in inhibitory firing rate <ref type="bibr" target="#b8">9</ref> .</s><s>This has an interesting corollary: if one were to increase the firing rate of all excitatory neurons in a network, that would cause a sufficient increase in inhibitory firing rate that the change in synaptic drive to every neuron in the network would be negative.</s></p><p><s>To make this explicit, we plot the firing rate of a test neuron, defined to be a neuron with typical connectivity, as a function of the average excitatory firing rate in the network (Fig. <ref type="figure" target="#fig_0">1a</ref>).</s><s>There are multiple curves in this plot; focusing for now on the thick one, such a curve could be produced experimentally by controlling the firing rate of every excitatory neuron (except for the test neuron) and monitoring the firing rate of the test neuron.</s><s>While this has not been done, such a curve is consistent with every viable model of large, biologically plausible networks to date.</s><s>There are two important features to this plot.</s><s>First, the firing rate of the test neuron decreases as the average firing rate increases-a consequence of the fact that networks are inhibition dominated.</s><s>Second, the curve is steep: in the high connectivity limit assumed by Rosenbaum et al. <ref type="bibr" target="#b1">2</ref> , it would be infinitely steep (here we drew it shallower than it should be; otherwise, the thick and thin lines would be indistinguishable).</s></p><p><s>If the test neuron is sufficiently typical, then the equilibrium firing rate in the network occurs where the diagonal unity line crosses the firing rate curve.</s><s>Trial-to-trial variability in the input would shift the firing rate of the test neuron up and down, as shown by the thin lines.</s><s>However, because the lines are steep, the resulting shift in equilibrium firing rates is small.</s><s>Consequently, in the high connectivity regime, even highly correlated trial-to-trial variability has virtually no effect on the average firing rate in the network, and so the average correlation coefficient is very small.</s><s>This is, essentially, the result of Renart et al. <ref type="bibr" target="#b3">4</ref> : the dynamic cancellation referred to above is what produces the steep, downward sloping firing rate curve, and so reduces fluctuations in firing rates.</s><s>To see what Rosenbaum et al. <ref type="bibr" target="#b1">2</ref> added, assume that some fraction of the excitatory neurons, the preferred population (say, 1/9), receives input that varies from trial to trial.</s><s>Again, high connectivity clamps the mean firing rates.</s><s>Consequently, whenever the activity of the preferred population increases, the activity of the other 8/9 of the excitatory neurons (the non-preferred populations) will decrease, and vice versa.</s><s>Thus, as a result of variability in the input, neurons in the preferred population will fluctuate together, and neurons in the non-preferred population will fluctuate togetherbut in the opposite direction.</s><s>The network is shown in Figure <ref type="figure" target="#fig_0">1b</ref>, where we have arbitrarily divided the neurons into nine groups.</s><s>Because the networks are inhibition dominated (see Fig. <ref type="figure" target="#fig_0">1a</ref>), coupling is effectively inhibitory.</s><s>It is this inhibitory coupling that causes preferred and non-preferred populations to be anticorrelated (Fig. <ref type="figure" target="#fig_0">1c</ref>).</s></p><p><s>It is not hard to extrapolate from this scenario to one in which connectivity falls off with distance (Fig. <ref type="figure" target="#fig_0">1d</ref>).</s><s>The only real change is that the correlations are no longer long range, as distant neurons no longer have much effect on each other.</s><s>This results in a telltale pattern of correlations: positive for nearby neurons, negative for intermediate neurons, and zero for distant neurons (Fig. <ref type="figure" target="#fig_0">1e</ref>).</s><s>This telltale pattern is a key experimental prediction.</s></p><p><s>In both scenarios, because of the high connectivity, correlations average to zero-something that is not seen in the brain.</s><s>How can positive correlations come about in the high connectivity regime?</s><s>There are at least four ways.</s><s>First, networks of excitatory and inhibitory neurons are prone to oscillations and up-down states <ref type="bibr" target="#b8">9</ref> , collective activity that leads to large correlations.</s><s>Second, synaptic strength can changes on slow timescales, hundreds of milliseconds to seconds.</s><s>Because the synaptic strength determines the equilibrium firing rate, this would cause slow fluctuations in the overall level of activity.</s><s>Third, external input might fluctuate by an amount much larger than was assumed above.</s><s>Fourth, neuromodulators might modify overall excitability.</s><s>Which, if any, of these is responsible for nonzero average correlations is not clear, and this is an active area of research.</s><s>When analyzing experimental data in macaque primary visual cortex, Rosenbaum et al. <ref type="bibr" target="#b1">2</ref> sidestepped the issue and took long range fluctuations into account without explicitly considering their source.</s><s>When subtracted from experimentally observed correlations, the resulting correlational structure (positive, then negative, then near zero as distance between neurons increased) was exactly as predicted.</s></p><p><s>The analysis by Rosenbaum et al. <ref type="bibr" target="#b1">2</ref> was beautiful, elegant and, ultimately, straightforward: they simply extended results from randomly connected networks with high connectivity to networks in which connection probability falls off with distance; the rest was algebra (occupying 35 pages of supplementary information).</s><s>And this was not just theory; the authors took the laudable additional step of comparing their results to experiments-and, fortunately, finding agreement.</s><s>Their analysis adds much needed insight into the dynamics of large networks of spiking neurons-exactly the kind of insight we need if we are ever going to understand how the brain works.</s></p><p><s>Finally, how do these correlations affect the ability of networks to store information?</s><s>The answer, as is typical in neuroscience, is "we don't know."</s><s>The only correlations that reduce information are ones that make the noise look like the signal <ref type="bibr" target="#b9">10</ref> .</s><s>As shown recently, these correlations emerges naturally in circuits that receive very little information compared to their coding capacity <ref type="bibr" target="#b10">11</ref> .</s><s>Whether the internally induced correlations described by Rosenbaum et al. <ref type="bibr" target="#b1">2</ref> also introduce such correlations is an open question, one that is likely to keep theorists busy for the foreseeable future.</s><s>The thick line is the firing rate curve when the input is fixed and static; the thin lines are firing rate curves on trials with different amounts of external input.</s><s>The intersection of the firing rate curves with the dashed 45° line correspond to network equilibria (as indicated by the red dots).</s><s>For ease of visualization, the firing rate curve is not very steep; in high connectivity networks it would be much steeper.</s><s>This would bring the thin lines very close together (because external drive shifts the firing rate curve up and down), so there would be very little variation in firing rate as input changed.</s><s>(b) A randomly connected network arbitrarily broken into nine populations, only one of which (red) receives external input (which is applied uniformly to all neurons in the red subpopulation).</s><s>Connection strengths are negative, mirroring the fact that networks of excitatory and inhibitory neurons are effectively inhibitory, and because the network is randomly connected they are uniform.</s><s>(c) Average population activity on two trials relative to baseline (dashed line).</s><s>For the blue points, the preferred population receives positive input; for the green points, it receives negative input.</s></p><p><s>The central data points corresponds to activity of the red subpopulation.</s><s>All neurons within each subpopulation are correlated, but the neurons in the red subpopulation are anticorrelated with the rest of the neurons.</s><s>(d) Same as b, except the connectivity falls off with distance, as indicated by the progressively thinner lines connecting more distant populations.</s><s>(e) Activity on two trials, as in c (with the same color code).</s><s>Because connectivity is short range, activity is a decreasing function of distance, leading to correlations that fall off with distance.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1</head><label>1</label><figDesc><div><p><s>Figure 1Firing rates and correlations in large, highly connected networks of excitatory and inhibitory neurons.</s><s>(a) Firing rate of a test neuron versus the average excitatory firing rate.</s><s>The thick line is the firing rate curve when the input is fixed and static; the thin lines are firing rate curves on trials with different amounts of external input.</s><s>The intersection of the firing rate curves with the dashed 45° line correspond to network equilibria (as indicated by the red dots).</s><s>For ease of visualization, the firing rate curve is not very steep; in high connectivity networks it would be much steeper.</s><s>This would bring the thin lines very close together (because external drive shifts the firing rate curve up and down), so there would be very little variation in firing rate as input changed.</s><s>(b) A randomly connected network arbitrarily broken into nine populations, only one of which (red) receives external input (which is applied uniformly to all neurons in the red subpopulation).</s><s>Connection strengths are negative, mirroring the fact that networks of excitatory and inhibitory neurons are effectively inhibitory, and because the network is randomly connected they are uniform.</s><s>(c) Average population activity on two trials relative to baseline (dashed line).</s><s>For the blue points, the preferred population receives positive input; for the green points, it receives negative input.</s></p></div></figDesc><graphic coords="4,72.00,72.00,451.29,460.00" type="bitmap" /></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Correlated neuronal discharge rate and its implications for psychophysical performance</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zohary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shadlen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">370</biblScope>
+			<biblScope unit="page" from="140" to="143" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rosenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="107" to="114" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Chaotic balanced state in a model of cortical circuits</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Van Vreeswijk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1321" to="1371" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The asynchronous state in cortical circuits</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Renart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">327</biblScope>
+			<biblScope unit="page" from="587" to="590" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Measuring and interpreting neuronal correlations</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="811" to="819" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">The mechanics of state-dependent neural correlations</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Litwin-Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rosenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Oc Ker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josi Ć</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="383" to="393" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Spatial and temporal scales of neuronal correlation in primary visu al cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience B</title>
+		<imprint>
+			<biblScope unit="page" from="12591" to="12603" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Partitioning neuronal variability</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Goris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Movshon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Simoncelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neurosci. B</title>
+		<imprint>
+			<biblScope unit="page" from="858" to="865" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Intrinsic dynamics in neuronal networks. I. theory</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Latham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Richmond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Nelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nirenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="808" to="827" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">Xaq Pitkow, Peter Latham &amp; Alexandre Pouget Information-limiting correlations Nature Neurosci</title>
+		<author>
+			<persName><forename type="first">Rubén</forename><surname>Moreno-Bote</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Beck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ingmar</forename><surname>Kanitscheider</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1410" to="1417" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The origin of information-limiting noise correlations</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kanitscheider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ruben Coen-Cagli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="6973" to="6982" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

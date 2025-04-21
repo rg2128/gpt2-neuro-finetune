@@ -1,0 +1,1482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Formation and maintenance of neuronal assemblies through synaptic plasticity</title>
+				<funder ref="#_WnfqNWk">
+					<orgName type="full">National Science Foundation</orgName>
+					<orgName type="abbreviated">NSF</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2014-11-14">14 Nov 2014</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ashok</forename><surname>Litwin-Kumar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Program for Neural Computation</orgName>
+								<orgName type="institution">Carnegie Mellon University and University of Pittsburgh</orgName>
+								<address>
+									<postCode>15260</postCode>
+									<settlement>Pittsburgh</settlement>
+									<region>Pennsylvania</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Pittsburgh</orgName>
+								<address>
+									<postCode>15260</postCode>
+									<settlement>Pittsburgh</settlement>
+									<region>Pennsylvania</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Neural Basis of Cognition</orgName>
+								<address>
+									<postCode>15213</postCode>
+									<settlement>Pittsburgh</settlement>
+									<region>Pennsylvania</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Brent</forename><surname>Doiron</surname></persName>
+							<email>bdoiron@pitt.edu</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Pittsburgh</orgName>
+								<address>
+									<postCode>15260</postCode>
+									<settlement>Pittsburgh</settlement>
+									<region>Pennsylvania</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Neural Basis of Cognition</orgName>
+								<address>
+									<postCode>15213</postCode>
+									<settlement>Pittsburgh</settlement>
+									<region>Pennsylvania</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Formation and maintenance of neuronal assemblies through synaptic plasticity</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Communications</title>
+						<title level="j" type="abbrev">Nat Commun</title>
+						<idno type="eISSN">2041-1723</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">5</biblScope>
+							<biblScope unit="issue">1</biblScope>
+							<date type="published" when="2014-11-14">14 Nov 2014</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">086C58C662E8158995A902B91685A1A5</idno>
+					<idno type="DOI">10.1038/ncomms6319</idno>
+					<note type="submission">Received 12 May 2014 | Accepted 18 Sep 2014 |</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>The architecture of cortex is flexible, permitting neuronal networks to store recent sensory experiences as specific synaptic connectivity patterns.</s><s>However, it is unclear how these patterns are maintained in the face of the high spike time variability associated with cortex.</s></p><p><s>Here we demonstrate, using a large-scale cortical network model, that realistic synaptic plasticity rules coupled with homeostatic mechanisms lead to the formation of neuronal assemblies that reflect previously experienced stimuli.</s><s>Further, reverberation of past evoked states in spontaneous spiking activity stabilizes, rather than erases, this learned architecture.</s><s>Spontaneous and evoked spiking activity contains a signature of learned assembly structures, leading to testable predictions about the effect of recent sensory experience on spike train statistics.</s><s>Our work outlines requirements for synaptic plasticity rules capable of modifying spontaneous dynamics and shows that this modification is beneficial for stability of learned network architectures.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C</head><p><s>ortical neurons undergo complex and variable activity fluctuations during spontaneous dynamics <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref> , but how this activity relates to functional processing is poorly understood.</s><s>Several studies have observed spontaneous reactivation of evoked activity patterns without stimulus application <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref> .</s><s>The spiking variability of pairs of neurons due to shared network architecture increases with the overlap in their stimulus preferences <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref> .</s><s>Together, these observations suggest spontaneous dynamics are related to previously experienced stimuli.</s><s>This is likely due to synaptic plasticity that reorganizes networks to reflect past activation patterns <ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref> .</s><s>This view is consistent with studies showing that connections between similarly tuned visual cortical neurons are more probable <ref type="bibr" target="#b13">14</ref> and that this specificity emerges after eye opening <ref type="bibr" target="#b14">15</ref> .</s></p><p><s>To address the mechanisms behind these observations, realistic models of both spontaneous dynamics and plasticity are needed.</s><s>Model networks with balanced excitation and inhibition have addressed the first concern, reproducing the high variability of spontaneous cortical dynamics <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> .</s><s>Many prior models of plasticity in spiking neuronal networks have neglected this balance, modelling few synapses per neuron <ref type="bibr" target="#b18">19</ref> or normalizing network firing rates rather than modelling inhibition <ref type="bibr" target="#b19">20</ref> .</s><s>Conversely, work in balanced attractor circuits has lacked realistic plasticity mechanisms <ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b21">22</ref> .</s><s>This is in part due to the fact that previous attempts to embed spike timing-dependent plasticity (STDP) in balanced networks have led to pathological behaviour <ref type="bibr" target="#b22">23</ref> .</s><s>Recently, detailed STDP models have been proposed <ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref> , but studies so far have been restricted to small or homogeneous networks.</s></p><p><s>One central difficulty is that spontaneous activity in plastic networks can destabilize learned network architectures, especially if spontaneous fluctuations are similar in magnitude to evoked responses <ref type="bibr" target="#b1">2</ref> .</s><s>Many models do not study this possibility or assume plasticity is inactivated after learning <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b24">25</ref> .</s><s>Prior theoretical studies have suggested that reactivation of trained patterns can prevent degradation of learned architectures <ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b27">28</ref> , but have not done so in spiking networks with spontaneous activity.</s><s>Thus, it is unclear how the plasticity mechanisms that ensure the stability of learned network architectures coexist with the fluctuations that define spontaneous cortical dynamics.</s></p><p><s>We study balanced networks with realistic STDP <ref type="bibr" target="#b24">25</ref> , showing that stimulus application leads to interconnected neuronal assemblies.</s><s>After training, spontaneous dynamics reflect experienced stimuli, with transient reactivations of previously trained assemblies.</s><s>These dynamics depend on maintenance of the learned connectivity by homeostatic mechanisms <ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b29">30</ref> .</s><s>Furthermore, we show that cortical trial-to-trial variability is sufficient for spontaneous assembly reactivation, promoting stability of learned patterns.</s><s>Our model is the first to demonstrate stable modification of spontaneous dynamics in balanced networks through realistic STDP mechanisms.</s><s>It also suggests that the interaction between spontaneous dynamics and STDP plays an important role in memory stability.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p><s>Instability of Hebbian STDP without homeostasis.</s><s>While many studies have investigated the dynamics of balanced networks with fixed connection weights, few have investigated the case of plastic synapses.</s><s>We simulated a model cortical network of excitatory and inhibitory neurons, supplemented with plasticity rules that modified connections onto excitatory neurons (see Methods).</s><s>The network was composed of 4,000 adaptive exponential integrateand-fire excitatory neurons and 1,000 integrate-and-fire inhibitory neurons <ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b31">32</ref> coupled randomly with a connection probability of 0.2.</s><s>Excitatory-to-excitatory synapses were governed by a voltage-based STDP rule <ref type="bibr" target="#b24">25</ref> (Fig. <ref type="figure" target="#fig_0">1a</ref>, top).</s><s>The STDP rule captured the dependence of long-term depression and potentiation on firing rate <ref type="bibr" target="#b32">33</ref> (Fig. <ref type="figure" target="#fig_0">1a</ref>, bottom), so that neurons that exhibited correlated rate fluctuations tended to recruit longterm potentiation.</s></p><p><s>We investigated whether external stimuli could modify the network's structure and dynamics through STDP.</s><s>We began with a network with a homogeneous weight structure.</s><s>The network exhibited irregular and asynchronous firing due to a balance between excitatory and inhibitory currents <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b16">17</ref> .</s><s>Neuronal assemblies did not form spontaneously, as the uniformly low firing rates tended to recruit depression (Supplementary Fig. <ref type="figure" target="#fig_0">1</ref>).</s><s>To investigate how this connectivity could be modified by the application of external stimuli, we defined a set of 20 stimulus patterns, which when active corresponded to an increased excitatory drive to neurons targeted by that pattern.</s><s>Neurons were targeted by each pattern with a probability of 0.05.</s><s>Consequently, the number of stimuli targeting each neuron was binomially distributed.</s><s>Approximately 36% of neurons were not targeted, 38% were targeted by one stimulus and 26% were targeted by multiple stimuli.</s><s>For each stimulus i ¼ 1, 2, y, 20, we refer to those neurons targeted by the stimulus as neuronal assembly i.</s></p><p><s>Stimuli were presented sequentially in repeated presentation blocks.</s><s>Each stimulus presentation increased the external drive to targeted neurons by 8 kHz, which may be interpreted as an increase in the firing rate of 1,000 presynaptic neurons by 8 Hz each, on average.</s><s>Stimulus presentations lasted 1 s, with 3-s gaps between stimuli (see Methods).</s><s>Stimuli recruited increased firing rates in subsets of the network (Fig. <ref type="figure" target="#fig_0">1b</ref>).</s><s>However, as has been reported in previous studies of balanced networks with STDP <ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b33">34</ref> , after a few tens of stimulus applications, the network firing rate increased abruptly (Fig. <ref type="figure" target="#fig_0">1b</ref>) and exhibited high frequency oscillations (Fig. <ref type="figure" target="#fig_0">1c</ref>) that reflected a loss of stability of the asynchronous balanced state.</s><s>These dynamics were due to runaway positive feedback of Hebbian STDP during training <ref type="bibr" target="#b34">35</ref> .</s><s>Indeed, such instability has precluded the development of realistic models of stimulus-evoked plasticity in such systems <ref type="bibr" target="#b22">23</ref> .</s></p><p><s>Our study investigates homeostatic mechanisms for synaptic plasticity <ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b34">35</ref> , which regulate network activity, preventing this instability and producing spontaneous dynamics consistent with experimental data from cortex.</s></p><p><s>Formation of neuronal assemblies.</s><s>We implemented a recently proposed symmetric Hebbian STDP rule that acted on inhibitory to excitatory synapses <ref type="bibr" target="#b29">30</ref> (Fig. <ref type="figure" target="#fig_1">2a</ref>).</s><s>This inhibitory synaptic plasticity (iSTDP) controlled the firing rate of excitatory neurons, as frequently firing neurons recruited more inhibition, while low-firing rate neurons recruited less inhibition <ref type="bibr" target="#b29">30</ref> We also normalized the total excitatory conductance onto any neuron <ref type="bibr" target="#b35">36,</ref><ref type="bibr" target="#b36">37</ref> , thus imposing competition between synapses (note that our results hold for a variety of soft normalization time scales; Supplementary Fig. <ref type="figure" target="#fig_1">2</ref>).</s><s>We recorded W in , the average synaptic strength of connections in each of the 20 neuronal assemblies.</s><s>During the training period, this quantity increased as stimuli were presented, until synapses between neurons in the same assembly were strongly potentiated (Fig. <ref type="figure" target="#fig_1">2b,</ref><ref type="figure">c</ref>).</s><s>Due to the normalization of excitatory conductance, W out decreased slightly on average (Fig. <ref type="figure" target="#fig_1">2b</ref>, bottom).</s><s>Despite this reorganization, the average excitatory firing rate after training did not diverge, stabilizing at B1.7 Hz (Supplementary Fig. <ref type="figure">3</ref>).</s><s>Besides modifying synaptic weights, training also changed the network's spontaneous dynamics.</s><s>The clustered excitatory connectivity led to transient activations of previously stimulated neuronal assemblies (Fig. <ref type="figure" target="#fig_1">2d</ref>,e; Supplementary Movie 1).</s><s>These high-firing rate activations occurred over a time scale of hundreds of milliseconds.</s><s>However, due to infrequent activations, the timeaveraged firing rates of individual neurons remained low, consistent with recordings from spontaneous cortex <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b2">3</ref> .</s><s>We conclude that the network reorganizes its connections in response to stimulus presentation, and that this reorganization substantially modifies spontaneous dynamics to reflect prior stimuli.</s><s>We refer to these new dynamics as structured spontaneous activity, in contrast to the uncorrelated activity in the homogeneously connected network.</s></p><p><s>Effects of homeostatic inhibitory plasticity.</s><s>Under the iSTDP rule, inhibitory synapses were potentiated when the postsynaptic excitatory neuron fired above a target firing rate and depressed otherwise (Fig. <ref type="figure" target="#fig_1">2a</ref>).</s><s>As a result, the rule homeostatically regulated the distribution of excitatory firing rates in the network towards this target value.</s><s>We next investigate how this mechanism permits stable formation of assemblies.</s></p><p><s>A frequently encountered challenge in networks with multiple stable states is winner-take-all dynamics, in which a single stable state, typically characterized by a specific subset of neuronal subpopulations with high firing rates, is dominant <ref type="bibr" target="#b17">18</ref> .</s><s>In such networks, high-firing rate subpopulations suppress the rest of the network, preventing other neurons from responding to inputs or exhibiting strong spontaneous fluctuations.</s><s>In general, finetuning of parameters is needed to avoid these pathological states <ref type="bibr" target="#b35">36</ref> .</s></p><p><s>To robustly prevent winner-take-all dynamics, a mechanism by which high-firing rate neurons are suppressed is necessary.</s><s>The iSTDP rule satisfies this requirement.</s><s>Indeed, after training, certain assemblies received more inhibition than others (Fig. <ref type="figure">3b</ref>).</s><s>This heterogeneity prevented winner-take-all dynamics during training.</s><s>Blocking iSTDP led to less potentiation for stimulated assemblies (Fig. <ref type="figure">3c</ref>) and spontaneous activity in which only a single assembly exhibited high firing rates (Fig. <ref type="figure">3d</ref>).</s><s>Thus, we conclude iSTDP is necessary to prevent winner-take-all dynamics that would eventually lead to a degradation of connectivity between suppressed assemblies.</s></p><p><s>Stability of learned connectivity.</s><s>We next examined the stability of the network architecture during structured spontaneous activity.</s><s>Many studies have examined how different synaptic dynamics can affect the stability of learned connectivity in the face of random spontaneous firing, employing models that include, for example, cascades of synaptic states 38 or metaplasticity <ref type="bibr" target="#b38">39</ref> .</s><s>We took a complementary approach, asking whether the modification of network dynamics after training could be beneficial for the persistence of the learned architecture compared with the random firing case.</s><s>We reasoned that structured spontaneous activity (Fig. <ref type="figure" target="#fig_1">2d</ref>) could consolidate the learned assembly structure, in line with proposals that link memory stability to reactivation during sleep or quiet wakefulness <ref type="bibr" target="#b39">40</ref> .</s></p><p><s>We therefore compared the trained recurrent network with a hypothetical non-recurrent network without structured spontaneous activity.</s><s>Both networks began with the same initial trained weight matrix and exhibited the same firing rates (see Methods).</s><s>However, in the non-recurrent network, synaptic plasticity modified the weight matrix depending on neurons' spike times, but excitatory spikes did not cause excitatory postsynaptic potentials (EPSPs) in postsynaptic targets (Fig. <ref type="figure">4a</ref>).</s><s>Therefore, excitatory inputs were purely external and uncorrelated, which prevented coordinated assembly activation.</s><s>We measured W in over a period of spontaneous activity in the two models.</s><s>In the non-recurrent network, W in decayed faster than in the recurrent network with structured spontaneous activity (Fig. <ref type="figure">4b</ref>, compare black and yellow curves), despite the fact that neurons fired at the same rates in both networks.</s><s>This suggests that the particular timing of assembly activation during structured spontaneous activity prevents degradation of learned network connectivity.</s></p><p><s>To further probe the effect of structured spontaneous activity, we perturbed W in , reducing it by 10% for one assembly, and analysed the resulting dynamics.</s><s>After the perturbation, W in increased for that assembly, showing that structured spontaneous activity can retrain a network if its architecture is weakly disrupted (Fig. <ref type="figure">4c</ref>, black curve).</s><s>This was not true for the nonrecurrent network (Fig. <ref type="figure">4c</ref>, yellow curve).</s><s>Hence, structured spontaneous activity both lengthens the time scale over which a network can retain its learned connectivity and provides an errorcorrecting mechanism given disruptions of this connectivity.</s></p><p><s>We note that this error-correcting mechanism provides a novel means by which a plastic network may maintain its learned architecture.</s><s>Mechanisms that improve the stability of single synapses <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b37">38</ref> may complement structured spontaneous activity in improving stability.</s><s>However, such mechanisms, on their own, will not demonstrate recovery after a perturbation (Fig. <ref type="figure">4c</ref>).</s><s>This is because coordinated activation of entire assemblies during structured spontaneous activity is necessary for this recovery to occur.</s></p><p><s>To verify that W in reached a steady state, we increased the speed of plasticity and simulated the network for 4,000 s.</s><s>Indeed, most assemblies maintained potentiated values (Supplementary Fig. <ref type="figure">4</ref>).</s><s>To verify that the rate of change of individual synaptic weights decreased during spontaneous activity as the network remained near a stable equilibrium, we plotted the summed instantaneous rate of change of weights across the network (Supplementary Fig. <ref type="figure" target="#fig_3">5</ref>).</s><s>This quantity substantially decreased after training was complete, suggesting that the fluctuations in the connectivity matrix were indeed small.</s><s>Finally, we also verified that our results were not dependent on the simulation time step 41 (Supplementary Fig. <ref type="figure" target="#fig_4">6</ref>).</s></p><p><s>While we have focused mainly on the voltage-based excitatory STDP rule for clarity of exposition, we also tested our results using two other realistic plasticity rules: the triplet rule of Pfister and Gerstner <ref type="bibr" target="#b23">24</ref> and the calcium-based rule of Graupner and Brunel <ref type="bibr" target="#b25">26</ref> .</s><s>All three rules exhibited a firing rate dependence of potentiation and depression, with high postsynaptic rates leading to strong potentiation (Fig. <ref type="figure" target="#fig_3">5a</ref>).</s><s>However, the calcium-based rule led to synaptic potentiation at sufficiently high presynaptic rates, even with low postsynaptic rates (Fig. <ref type="figure" target="#fig_3">5a,</ref><ref type="figure">right</ref>).</s><s>This implies that activation of assembly j will lead to potentiation of synapses from j to i in the absence of activation of i.</s><s>This could potentially lead to interference between activated assemblies during the training protocol.</s><s>Indeed, after training, the triplet and voltage-based rules behaved similarly, with spontaneous activity improving the stability of W in for most but not all assemblies, while the calcium-based rule behaved differently (Fig. <ref type="figure" target="#fig_3">5b</ref>).</s><s>For the calciumbased rule, W in increased for certain assemblies after training, suggesting that training was unable to fully potentiate synapses within assemblies.</s><s>Furthermore, the calcium-based rule led to winner-take-all behaviour, with only certain assemblies remaining potentiated after training (Fig. <ref type="figure" target="#fig_3">5b,</ref><ref type="figure">c</ref>, right).</s><s>These results suggest that structured spontaneous activity improves stability for a variety of plasticity rules, but the details depend on the specific instantiation of the STDP rule.</s><s>In particular, rules that potentiate when the presynaptic, but not postsynaptic, neuron fires at a high rate are likely to exhibit interference between assemblies during training.</s><s>Remapping architecture with novel stimuli.</s><s>We have shown that a set of stimulus patterns can be embedded in a recurrent network with STDP.</s><s>How flexible is this network architecture?</s><s>Can assemblies associated with novel stimulus sets be embedded in the network?</s><s>We examined this question by defining a new set of 20 stimulus patterns and repeatedly presenting them to the network.</s><s>We then compared W in for the new stimulusdefined assemblies and the old assemblies throughout this protocol.</s></p><p><s>During this retraining protocol, W in increased for the new assemblies and decayed for the old assemblies (Fig. <ref type="figure" target="#fig_4">6a</ref>).</s><s>Fully potentiating the new set of assemblies required more stimulus presentations than the original training protocol, indicating that previously trained stimulus-specific assemblies can interfere with the formation of new ones.</s><s>Retraining also shifted spontaneous activity.</s><s>Prior to retraining, the original assemblies were activated during spontaneous activity (Fig. <ref type="figure" target="#fig_4">6b</ref>).</s><s>Afterwards, the new assemblies were activated (Fig. <ref type="figure" target="#fig_4">6c</ref>).</s><s>Given the stability of the trained assemblies (Fig. <ref type="figure">4</ref>) and these results, we conclude that the network architecture is stable to weak perturbations of its input statistics, but sufficiently strong changes in its inputs cause the network to reorganize itself.</s></p><p><s>Mechanisms of stability and remapping in a reduced model.</s><s>The high dimensional and complex dynamics of our spiking network precluded a mathematically rigorous analysis of the dynamics of neuronal assemblies.</s><s>In particular, it was not possible to formally reduce the dynamics of synaptic weights to a lowdimensional system whose stable states could be identified.</s><s>In this section, we develop a simplified model of interacting neuronal populations that qualitatively reproduces the dynamics of assembly formation in the spiking network (see Supplementary Methods for a full descriptioin of the reduced model).</s><s>We explore this model and show three core requirements for stable assembly structure: a firing rate-dependent plasticity rule, multistability in the firing rates of different assemblies and homeostasis.</s></p><p><s>We considered two populations whose firing rates reflect the number of active neurons in the population at a given time (see Methods).</s><s>Populations interacted according to a 2 Â 2 excitatory synaptic weight matrix, as well as via global inhibition that was proportional to the total excitatory activity.</s><s>We implemented a plasticity rule with a firing rate dependence similar to that of the spiking network (Fig. <ref type="figure" target="#fig_0">1a</ref>, bottom; see Methods).</s><s>The change in the synaptic strength from population j to i was given by DW ij pr j Á r i (r i À y), where r i is the firing rate of population i and y is the threshold for potentiation.</s><s>Strong potentiation therefore only occurred when both the postsynaptic and presynaptic firing rates, r i and r j , were large.</s></p><p><s>When all synaptic weights were equal, both populations exhibited low levels of activity (Fig. <ref type="figure" target="#fig_5">7a</ref>, left).</s><s>However, when recurrent excitation within populations 1 and 2 was strong (W 11 ¼ W 22 ¼ w max ), the populations exhibited multistability and transitioned between low and high activity states, similar to the trained spiking network (Fig. <ref type="figure" target="#fig_5">7a</ref>, right).</s><s>These different dynamics led to differential recruitment of plasticity.</s><s>In particular, little plasticity was recruited when both populations had low rates, but the within-population weight W ii was strongly potentiated whenever population i was in a high activity state (Fig. <ref type="figure" target="#fig_5">7a,</ref><ref type="figure">bottom</ref>).</s></p><p><s>Similar to the spiking model, we assumed that each row of the 2 Â 2 matrix defining the weights for the two populations summed to a constant (homeostatic synaptic normalization;</s></p><formula xml:id="formula_0">W 11 þ W 12 ¼ W 22 þ W 21 ¼ w max )</formula><p><s>. This led to competition between the synapses onto each population.</s><s>This feature allowed us to reduce the four-dimensional dynamics of the weights to a two-dimensional plane of W 11 and W 22 , the strength of the synaptic weight within each of the two populations.</s><s>Further, since synaptic plasticity occurred on a time scale that is much slower than the stochastic activity of the population dynamics, we applied standard mathematical techniques from dynamical systems theory to derive the phase portrait for the synaptic weights (Supplementary Methods).</s><s>Specifically, to determine the stability of any fixed points of W ij , we computed the vector field dW 11 /dt and dW 22 /dt for each location in the W 11 and W 22 planes (black arrows in Fig. <ref type="figure" target="#fig_5">7d</ref>).</s><s>When both W ii were not potentiated, the network had only one stable activity level, and W ii did not change substantially (Fig. <ref type="figure" target="#fig_5">7a</ref>, left and Fig. <ref type="figure" target="#fig_5">7b</ref>, bottom left).</s><s>But when the W ii were sufficiently large, the system exhibited structured spontaneous activity and activation of populations drove the W ii to w max , their fully potentiated value (Fig. <ref type="figure" target="#fig_5">7a</ref>, right and Fig. <ref type="figure" target="#fig_5">7b</ref>, top right).</s><s>Thus, the model illustrated that when W ii is potentiated, structured spontaneous activity appears and causes W ii to approach w max .</s><s>This dynamic makes the assembly structure (W 11 ¼ W 22 ¼ w max ) stable to small fluctuations in W ij .</s></p><p><s>Next, we extended the model to study the effects of remapping.</s><s>We defined a four-population model in which each population was half the size of the two-population case, so that pairs of populations could together form assemblies with identical dynamics to Fig. <ref type="figure" target="#fig_5">7a</ref>.</s><s>When populations 1 and 3 were strongly connected and populations 2 and 4 were strongly connected, each pair (1,3) and (2,4) formed an assembly that underwent correlated fluctuations (Fig. <ref type="figure" target="#fig_5">7c</ref>, left).</s><s>Further, if the connectivity was changed such that the pairs (1,2) and (3,4) were strongly connected, the new pairs underwent correlated fluctuations (Fig. <ref type="figure" target="#fig_5">7c,</ref><ref type="figure">right</ref>).</s></p><p><s>We examined the dynamics of the synaptic weights in the subspace spanned by W 12 and W 34 (see Methods).</s><s>We found that both the (1,3) and (2,4) pairing (Fig. <ref type="figure" target="#fig_5">7c</ref>, left and Fig. <ref type="figure" target="#fig_5">7d</ref>, bottom left) and the (1,2) and (3,4) pairing (Fig. <ref type="figure" target="#fig_5">7c</ref>, right and Fig. <ref type="figure" target="#fig_5">7d</ref>, top right) were stable weight configurations.</s><s>The model therefore shows that learned synaptic weight matrices can be stabilized by structured spontaneous activity, and that there may be multiple such stable weight matrices.</s><s>As the number of possible combinations of subpopulations that can form assemblies increases, the number of stable weight matrices will grow exponentially.</s></p><p><s>In total, our simplified model recapitulated the formation and remapping of stable assemblies that was the central result from the spiking model network.</s><s>Our analysis identified the core requirements to be rate-dependent plasticity with potentiation reserved for high pre-and postsynaptic activity, coupled with bistable firing rate dynamics.</s><s>Furthermore, the simplicity of the model suggests that the results of the spiking model did not critically depend on the exact choice of the spiking model neuron or synaptic dynamics.</s><s>We note, however, that the simplified model is not formally derived from the spiking network, and therefore does not rigorously establish the stability of the spiking network.</s></p><p><s>Spike statistics before and after training.</s><s>We have investigated the mechanisms that cause spiking network's connectivity to reorganize due to input.</s><s>Next, we quantify the resulting changes in spike train statistics.</s><s>We examined the responses of neurons to the new set of stimulus patterns (Fig. <ref type="figure" target="#fig_4">6</ref>) before and after training on those patterns.</s><s>This allowed us to make predictions about spontaneous and evoked dynamics before and after training.</s></p><p><s>We first considered evoked firing rates.</s><s>Consistent with increased recurrent connectivity, the gain of stimulated neurons was higher for trained versus untrained inputs (Fig. <ref type="figure">8a</ref>).</s><s>In addition to amplification, structured excitatory connectivity is often proposed as a mechanism for pattern completion <ref type="bibr" target="#b41">42</ref> .</s><s>To test whether the network could perform pattern completion, we presented stimuli that targeted half of the neurons in an assembly.</s><s>We then compared firing rates of stimulated and non-stimulated neurons in targeted assemblies to baseline firing rates.</s><s>Before training, stimulated neurons fired at increased rates, but non-stimulated neurons within a stimulated assembly fired at baseline levels (Fig. <ref type="figure">8b</ref>).</s><s>After training, both stimulated and non-stimulated neurons had increased firing rates.</s><s>Hence, the presence of a stimulus could be read out from neurons that did not directly receive it through feedforward projections, as long as they were part of the corresponding assembly.</s></p><p><s>We also examined trial-to-trial variability of excitatory neurons in the network.</s><s>We computed the Fano factor of spike counts in 100-ms windows over repeated stimulus presentations.</s><s>Stimulation caused a reduction in Fano factor as is frequently observed in cortex <ref type="bibr" target="#b2">3</ref> (Fig. <ref type="figure">8b</ref>).</s><s>This reduction was due to the suppression of spontaneous fluctuations by the stimulus <ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b42">43</ref> .</s><s>The magnitude of this reduction was greater for trained versus untrained stimuli (Fig. <ref type="figure">8c</ref>).</s><s>This combination of decreased trial-to-trial variability and increased gain (Fig. <ref type="figure">8a</ref>) suggests that training improved the reliability of stimulus representation.</s><s>To test this, we attempted to detect the presence of a stimulus using the spike count of single neurons in 200-ms intervals after stimulus onset.</s><s>The resulting receiver-operating characteristic curve was higher after training (Fig. <ref type="figure">8d</ref>).</s><s>Hence, training led to a measurable improvement in stimulus encoding, even at the single-neuron level.</s></p><p><s>We also quantified collective activity using the spike count correlation between neuron pairs measured in 100-ms windows across trials.</s><s>On average, correlations during spontaneous activity were near zero consistent with a balanced asynchronous state <ref type="bibr" target="#b16">17</ref> (Fig. <ref type="figure">9a</ref>).</s><s>However, neuron pairs in the same assembly had positive average spontaneous spike count correlation after training (Fig. <ref type="figure">9b</ref>).</s><s>This correlation reflected collective fluctuations due to structured spontaneous activity.</s><s>Notably, the contribution of these positive correlations was suppressed when the network was stimulated, with greater suppression for trained stimuli (Fig. <ref type="figure">9c</ref>).</s><s>We conclude that, after training, networks exhibit collective spontaneous fluctuations consistent with their previous inputs.</s><s>However, when external input is applied, these fluctuations are suppressed and reliable responses are produced.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>We have explored how realistic synaptic plasticity rules combined with homeostatic mechanisms allow stable neuronal assemblies to form in balanced networks.</s><s>The presence of these assemblies leads to spontaneous dynamics that reflect past stimuli.</s><s>Previous studies have often neglected the influence of spontaneous dynamics on the stability of network architectures <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b24">25</ref> .</s><s>However, recent work showing large fluctuations in spontaneous spiking activity, similar in magnitude <ref type="bibr" target="#b43">44</ref> and temporal patterning 2 to evoked states, challenges the validity of this assumption.</s><s>We specifically investigated the interaction of ongoing synaptic plasticity with spontaneous dynamics, showing that spontaneous fluctuations can consolidate learned assemblies, rather than dissolving them.</s></p><p><s>Clearly identifying neuronal assemblies is difficult because accessing a large fraction of the connections in a local circuit is experimentally challenging, although some progress has been made <ref type="bibr" target="#b44">45</ref> .</s><s>Our model, however, makes predictions that can be tested with single neurons or pairs (Figs <ref type="figure">8</ref> and<ref type="figure">9</ref>).</s><s>One prediction, that recurrent connectivity is responsible for a large proportion of stimulus-tuned excitatory input, is consistent with findings from visual and auditory cortex that tuned recurrent excitation amplifies responses to thalamic input <ref type="bibr" target="#b45">[46]</ref><ref type="bibr" target="#b46">[47]</ref><ref type="bibr" target="#b47">[48]</ref> .</s><s>The fact that these responses are associated with slow dynamics <ref type="bibr" target="#b17">18</ref> is also consistent with results from auditory cortex, suggesting that recurrent excitation prolongs response duration <ref type="bibr" target="#b47">48</ref> .</s><s>Taken together, our results are consistent with a picture of sensory cortex in which specific connectivity between functionally related neurons strongly influences cortical processing <ref type="bibr" target="#b48">49</ref> .</s></p><p><s>Experimental studies have demonstrated that spike train statistics can be modified by training or stimulus application.</s><s>In our model, the formation of neuronal assemblies led to an increase in gain and reduction in trial-to-trial variability.</s><s>Consistent with this, repeated presentation of an auditory stimulus increases gain and reduces variability of evoked membrane responses in auditory cortex <ref type="bibr" target="#b12">13</ref> .</s><s>An increase in firing rate and decrease in variability in neurons in prefrontal cortex was also found after training on a working-memory task <ref type="bibr" target="#b49">50</ref> .</s></p><p><s>Our network also makes predictions about spike train covariability.</s><s>Structured spontaneous activity leads to increased correlations for neurons with similar stimulus preference, as is commonly reported <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b8">9</ref> .</s><s>Further, because connectivity is related to stimulus preference in our network, this implies that neurons that share strong connections have higher correlations (Fig. <ref type="figure">9b</ref>).</s><s>This is consistent with findings from visual cortex showing noise correlations are higher for connected pairs <ref type="bibr" target="#b13">14</ref> .</s></p><p><s>While assembly dynamics have been studied previously, our model is the first to include balance, realistic STDP and stability of learned architecture after training.</s><s>Amit and Brunel 21 did not explicitly model potentiation, instead assuming within-assembly synapses were selectively potentiated and then studying the resulting dynamics.</s><s>Mongillo et al. <ref type="bibr" target="#b21">22</ref> implemented plasticity, but assembly stability was due to bistability in synaptic weights owing to cellular mechanisms, as opposed to the network mechanisms presented in our work.</s><s>Morrison et al. <ref type="bibr" target="#b22">23</ref> implemented STDP without homeostatic mechanisms, and found that network dynamics were unstable.</s><s>Further, none of these attractor studies examined the dynamics of networks with rich spontaneous dynamics including assembly reactivation.</s><s>We show that, in fact, spontaneous dynamics can improve the stability of learned architectures (Fig. <ref type="figure">4</ref>), a feature lacking in models that obtain stability through synaptic mechanisms <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b37">38</ref> .</s><s>Izhikevich et al. <ref type="bibr" target="#b18">19</ref> considered large, but non-balanced networks with extremely low (0.1%) connection probability, finding that neuronal assemblies randomly formed, but only persisted transiently.</s><s>Finally, Brea et al. <ref type="bibr" target="#b50">51</ref> examined learning in networks of Poisson neurons, showing that sequences could be learned with a specific learning rule that is similar to those studied in our manuscript.</s><s>However, noisy sequences led to degradation of connectivity during spontaneous dynamics, as the stability mechanisms discussed in our study (Fig. <ref type="figure">4</ref>) were not present.</s></p><p><s>Prior literature has proposed that reactivation of hippocampal neuronal ensembles is crucial for memory consolidation <ref type="bibr" target="#b39">40</ref> .</s><s>Computational models have argued that such reactivation can be beneficial for memory stability <ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b27">28</ref> .</s><s>In these studies, connectivity perturbations were due to the formation of new associative memories.</s><s>In contrast, we consider stability in the face of ongoing cortical spontaneous activity, which has proven difficult for stable models of cortical plasticity <ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b34">35</ref> .</s><s>In both cases, reactivation is beneficial for memory stability.</s><s>Our results suggest that, even in the absence of new learned associations, reactivation may prevent random firing from degrading learned connectivity.</s><s>Further, cortical trial-to-trial variability permits reactivation without hippocampal input.</s></p><p><s>Memory systems must contend with the 'stability-plasticity dilemma,' the fact that improving the stability of existing associations leads to difficulty in learning new associations.</s><s>This is clearly visible in our model, as small perturbations of connectivity died out (Fig. <ref type="figure">4c</ref>) while larger ones led to reorganization (Fig. <ref type="figure" target="#fig_4">6</ref>).</s><s>Further work is necessary to determine what mechanisms precisely determine the region of stability for a given connectivity.</s><s>Possible mechanisms that may promote plasticity for relevant inputs include neuromodulators that manipulate synaptic plasticity and signal for novelty <ref type="bibr" target="#b51">52</ref> or feedforward iSTDP that biases responses towards novel stimuli <ref type="bibr" target="#b29">30</ref> .</s></p><p><s>We have shown that homeostatic regulation of firing rates in the form of iSTDP is crucial for robust training of the network (Fig. <ref type="figure">3</ref>).</s><s>We do not claim that this particular form of plasticity is necessary, but rather that regulation of the average firing rate is likely important for maintaining stable activity patterns.</s><s>Firing rate-modulated scaling of total excitatory input weight, for example, could accomplish similar effects.</s><s>Indeed, miniature excitatory postsynaptic current sizes and firing rates increase following sensory deprivation that initially decreases visual cortex activity <ref type="bibr" target="#b52">53</ref> .</s><s>Previous theoretical studies have shown that homeosynaptic scaling can be beneficial for heterogeneous working-memory circuits, similar to how iSTDP prevents winner-take-all dynamics <ref type="bibr" target="#b35">36</ref> (Fig. <ref type="figure">3</ref>).</s></p><p><s>Our network also relied on heterosynaptic competition, which maintained a neuron's total excitatory synaptic input, and bounds on synaptic strength.</s><s>Heterosynaptic competition has been studied experimentally and in model networks <ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b36">37,</ref><ref type="bibr" target="#b53">54</ref> .</s><s>In a previous computational model, normalization of both presynaptic and postsynaptic weights along with a simple STDP rule led to the spontaneous development of feedforward chains <ref type="bibr" target="#b36">37</ref> .</s><s>Our model, in contrast, includes a dependence of STDP on firing rate and fewer constraints on synaptic weights, leading to qualitatively different dynamics.</s><s>Bounds on synaptic strength were also necessary to curb the instrinsic instability of excitatory STDP.</s><s>Without them, strong stimuli could cause assemblies' recurrent weights to increase without limit, or, conversely, parts of the network to become completely disconnected.</s><s>Such pathological behaviour has been observed in previous models of balanced excitatory-inhibitory networks with STDP that lacked the homeostatic mechanisms in our study <ref type="bibr" target="#b22">23</ref> .</s></p><p><s>Previous studies have investigated whether STDP is capable of embedding trajectories in neural activity space into recurrent networks <ref type="bibr" target="#b54">55,</ref><ref type="bibr" target="#b55">56</ref> .</s><s>In these studies, STDP that depended only on spike timing was combined with homeostatic rules to produce networks that respond to inputs with stereotyped trajectories.</s><s>These networks tend to produce effectively feedforward connectivity matrices <ref type="bibr" target="#b36">37,</ref><ref type="bibr" target="#b55">56</ref> , in contrast to the the overlapping assemblies of our study.</s><s>Such assemblies, along with the concordant increase in the likelihood of strong reciprocal coupling between pyramidal neurons, are observed in experimental data <ref type="bibr" target="#b44">45,</ref><ref type="bibr" target="#b56">57</ref> .</s><s>This difference is likely due to our incorporation of firing rate-dependent STDP, which allows for the formation of Hebbian assemblies.</s><s>We also explicitly investigated the persistence of the learned connectivity during spontaneous activity, a feature that is lacking in these studies.</s><s>Future work should reconcile these prior investigations with firing rate-dependent STDP and rich spontaneous activity.</s></p><p><s>We made several assumptions on plasticity in our network.</s><s>For simplicity and due to lack of experimental studies, we did not model plasticity of synapses onto inhibitory neurons.</s><s>We also assumed feedforward inputs to neurons were fixed during training.</s><s>In development, thalamic input specificity occurs before recurrent specificity is established <ref type="bibr" target="#b14">15</ref> , supporting this assumption.</s><s>In our network, training causes a shift from responses being driven in a purely feedforward manner to one in which recurrent excitation is dominant (Fig. <ref type="figure">8a</ref>).</s><s>This is reminiscent of predictive coding theories, in which higher regions predict the activity in lower regions and feedforward connections serve primarily to transmit errors in this prediction <ref type="bibr" target="#b57">58</ref> .</s><s>We expect that plasticity of feedforward projections would also support this type of computation, with feedforward inhibitory plasticity suppressing the transmission of redundant stimuli.</s></p><p><s>Our synaptic time constants were faster than those estimated from experiments to reduce simulation time <ref type="bibr" target="#b24">25</ref> .</s><s>The time scale separation argument in our reduced model (see Methods) suggests that our results will hold for slower weight changes, as does the fact that different learning speeds led to similar results (Supplementary Fig. <ref type="figure">4</ref>).</s><s>The primary requirement for stable learning is that homeostatic mechanisms must be sufficiently fast relative to the excitatory STDP to prevent runaway dynamics in the latter.</s><s>In the limit of very slow inhibitory STDP, the network will be unable to solve the problem of winner-take-all dynamics (Fig. <ref type="figure">3</ref>).</s><s>This result is consistent with a recent study that showed fast homeostatic mechanisms are necessary to stabilize excitatory STDP in recurrent networks <ref type="bibr" target="#b33">34</ref> .</s></p><p><s>A critical aspect of our model was the dependence of potentiation and depression on the firing rate of the postsynaptic neuron (Fig. <ref type="figure" target="#fig_0">1a</ref>, bottom).</s><s>Such dependence has been shown experimentally and is a feature of multiple biophysically motivated STDP rules <ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b32">33</ref> , all of which reproduced the results of this study (Fig. <ref type="figure" target="#fig_3">5</ref>). Un</s><s>ike previous studies in which spike timing was the only determinant of synaptic changes, firing rate, not spike timing, was the most important quantity in our network.</s><s>Indeed, our reduced model captured many features of the spiking network using plasticity similar to rate-based Bienenstock-Cooper-Munro rules <ref type="bibr" target="#b58">59</ref> , and all three STDP rules had qualitatively similar rate dependences.</s><s>However, while we have shown that neuronal assemblies constitute configurations of the synaptic weights for our system, we have not shown that they are the only ones.</s><s>Other structures, such as feedforward chains, may also be stabilized by STDP.</s><s>Relating biophysically motivated plasticity rules to the stable weight configurations they can support remains an open area of inquiry.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head><p><s>Membrane potential dynamics.</s><s>The model network consisted of N E excitatory (E) and N I inhibitory (I) neurons.</s><s>Throughout, we will denote population (E or I) with superscripts and neuron index (1 through N E/I ) by subscripts.</s><s>The equation for the voltage dynamics of neuron i in population X was:</s></p><formula xml:id="formula_1">d dt V X i t ð Þ ¼ 1 t X E X L À V X i t ð Þ þ D X T exp V X i t ð Þ À V X T;i t ð Þ D X T þ g X E i t ð Þ C E E À V X i t ð Þ À Á þ g X I i t ð Þ C E I À V X i t ð Þ À Á À w X i t ð Þ C :<label>ð1Þ</label></formula><p><s>Parameter values are summarized in Table <ref type="table" target="#tab_0">1</ref>.</s><s>Dynamics are consistent with Clopath et al. <ref type="bibr" target="#b24">25</ref> Excitatory units were modelled as exponential integrate-and-fire neurons with an adaptation current and adaptive threshold <ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b31">32</ref> .</s><s>Inhibitory units were modelled as simple non-adapting integrate-and-fire neurons</s></p><formula xml:id="formula_2">D I T ; w I i t ð Þ ! 0 À Á .</formula><p><s>The dynamics of the neuronal threshold for excitatory neurons, V E T;i , were given by:</s></p><formula xml:id="formula_3">d dt V E T;i t ð Þ ¼ 1 t T V T À V E T;i t ð Þ :<label>ð2Þ</label></formula><p><s>When neuron i spiked due to its voltage diverging (in simulation, determined by voltage exceeding 20 mV), its potential was reset to V re and clamped for an absolute refractory period of t abs .</s><s>If it was excitatory, its threshold V E T;i was set to V T þ A T .</s><s>For inhibitory neurons, V I T;i ¼ V T at all times.</s><s>We denote the spike train of neuron i in population X as s X i ðtÞ ¼ P n k¼1 dðt À t X i;k Þ, where t X i;1 . . .</s><s>t X i;n are the times when the neuron spiked and d is the Dirac delta function.</s></p><p><s>The adaptation current for excitatory neuron i, w E i , was given by: d dt</s></p><formula xml:id="formula_4">w E i t ð Þ ¼ 1 t w a w V E i t ð Þ À E E L À Á À w E i t ð Þ À Á :<label>ð3Þ</label></formula><p><s>When excitatory neuron i spiked, w E i was increased by b w .</s></p><p><s>Dynamics of synaptic conductances.</s><s>Connections occurred with probability p, and the strength of a connection from neuron j in population Y to neuron i in population X was denoted J XY ij .</s><s>If a connection did not exist, J XY ij ¼ 0. Recurrent excitatory connection weights were bounded by J EE min and J EE max , while weights from inhibitory to excitatory neurons were bounded by J EI min and J EI max .</s><s>J IE and J II were fixed and constant for all connected i, j.</s></p><p><s>The total excitatory or inhibitory conductance of neuron i in population X was given by:</s></p><formula xml:id="formula_5">g XY i t ð Þ ¼ F Y t ð ÞÃ J XY ext s XY i;ext t ð Þ þ X j J XY ij s Y j t ð Þ ! ;<label>ð4Þ</label></formula><p><s>where Y A (E, I), F Y (t) is the synaptic kernel for input from population Y, and Ã denotes convolution.</s><s>Synaptic kernels were given by a difference of exponentials:</s></p><formula xml:id="formula_6">F Y t ð Þ ¼ 1 t Y d À t Y r e À t=t Y d À e À t=t Y</formula><p><s>r for t positive.</s><s>In addition to recurrent input, neurons also received external excitatory input in the form of a spike train s X E i;ext t ð Þ, which was an independent homogeneous Poisson process for each neuron with rate r XE ext .</s><s>This input may be interpreted as the sum of 1,000 independent excitatory presynaptic neurons, each with a firing rate r XE ext =1; 000.</s><s>For external excitatory input, the synaptic strength was set to the minimim recurrent synaptic strength</s></p><formula xml:id="formula_7">J XE ext ¼ J XE min À Á .</formula><p><s>Neurons did not receive external inhibitory input s XI i;ext ¼ 0 .</s></p><p><s>Parameters were chosen such that a fully potentiated excitatory or inhibitory synapse onto an excitatory neuron caused a postsynaptic potential of B2.5 mV if all other inputs were blocked.</s><s>Synapses were implemented with a delay between 0 and 1.5 ms using the techniques of Mattia and Giudice 60 with a resolution of 0.1 ms.</s><s>Parameter values can be found in Table <ref type="table" target="#tab_1">2</ref>.</s></p><p><s>Excitatory synaptic plasticity.</s><s>We implemented a voltage-based STDP rule <ref type="bibr" target="#b24">25</ref> that modified J EE ij within the bounded range J EE min ; J EE max À Á .</s><s>Furthermore, we imposed a homeostatic normalization of the total excitatory synaptic weights that a neuron received by scaling each row of J EE ij every 20 ms to maintain a constant row sum <ref type="bibr" target="#b35">36,</ref><ref type="bibr" target="#b36">37</ref> .</s><s>This was accomplished by subtracting a constant amount from each</s></p><formula xml:id="formula_8">j J EE ij t ð Þ À J EE ij 0 ð ÞÞ=N E i Þ,</formula><p><s>where N E i is the number of nonzero entries.</s></p><p><s>The dynamics of the synapse from excitatory neuron j to excitatory neuron i were given by:</s></p><formula xml:id="formula_9">d dt J EE ij ðtÞ ¼ À A LTD s E j ðtÞR u E i ðtÞ À y LTD À Á þ A LTP x E j ðtÞR V E i ðtÞ À y LTP À Á R u E i ðtÞ À y LTD À Á ;<label>ð5Þ</label></formula><p><s>where R is a linear-rectifying function</s></p><formula xml:id="formula_10">(R(x) ¼ 0 if xo0, R(x) ¼ x otherwise), u E i</formula><p><s>and u E i represent the membrane voltage V E i low-pass filtered with time constants t u and t u , respectively, and x E j represents the spike train s E j low-pass filtered with time constant t x .</s><s>Parameter values can be found in Table <ref type="table" target="#tab_3">3</ref>.</s></p><p><s>Inhibitory synaptic plasticity.</s><s>We implemented an inhibitory STDP rule <ref type="bibr" target="#b29">30</ref> that modified J EI ij within the bounded range J EI min ; J EI max À Á .</s><s>Weight changes depended on y X i , which represents the spike train s X i low-pass filtered with time constant t y .</s><s>Upon a spike from either the presynaptic or postsynaptic neuron, the weight was modified according to the following:</s></p><formula xml:id="formula_11">J EI ij 'J EI ij þ Z y E i<label>ðtÞ</label></formula><p><s>The rate r 0 represents the target firing rate to which the inhibitory plasticity attempts to balance the postsynaptic neuron.</s><s>During unstimulated conditions, neurons fired on average less frequently than their target rate due to synaptic bounds (mean of 1.7 Hz rather than 3 Hz; Supplementary Fig. <ref type="figure">3</ref>), allowing the system to exhibit a distribution of firing rates because of the variability in the connectivity matrix.</s><s>Parameter values can be found in Table <ref type="table" target="#tab_4">4</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stimulation protocols.</head><p><s>For training (Fig. <ref type="figure" target="#fig_1">2</ref>), each stimulus i ¼ 1y20 was activated sequentially for a period of 1 s, with 3-s gaps in between stimulus presentations.</s><s>This was repeated until each stimulus had been repeated 20 times.</s><s>For retraining (Fig. <ref type="figure" target="#fig_4">6</ref>), each stimulus was presented 80 times.</s><s>During training, stimuli increased r X E ext by 8 kHz.</s><s>These simulations began with a 10-s period without STDP to allow transients to die out.</s><s>To probe the dependence of Fano factor and correlation before and after training (Figs <ref type="figure">8</ref> and<ref type="figure">9</ref>), we used a weaker stimulus, with a duration of 500 ms and an increase in r X E ext of 2 kHz.</s><s>These simulations were repeated 50 times for each of the 10 stimuli to assess trial-to-trial variability.</s><s>We disabled STDP for these short protocols.</s></p><p><s>For the non-recurrent network (Fig. <ref type="figure">4a,</ref><ref type="figure">b</ref>), we chose the inhibitory STDP target firing rate for each neuron to be equal to its spontaneous firing rate in the trained system and removed synaptic bounds for inhibitory STDP.</s><s>We also increased r EE ext by 4 kHz and r I E ext by 2 kHz to compensate for the loss of recurrent excitation.</s><s>We then allowed the system to run for 200 s for firing rates to reach their target values before activating excitatory STDP.</s><s>This allowed for a matched firing rate comparison between the two networks.</s></p><p><s>Simulations were performed using code written in Python, C þ þ and Julia implementing Euler integration with a time step of 0.1 ms.</s><s>Code implementing the model written in Julia is available at http://www.ugcs.caltech.edu/~alk/code/</s><s>alk_formation_2014.zip.</s></p><p><s>Other plasticity rules.</s><s>For the triplet-based rule (Fig. <ref type="figure" target="#fig_3">5</ref>, left), the following parameters were used (following the notation of Pfister and Gerstner 24 ): t þ ¼ 16.8 ms, t_ ¼ 33.7 ms, t x ¼ 101 ms, t y ¼ 125 ms, A þ 2 ¼ 7:5Â10 À 10 , A þ 3 ¼ 9:3Â10 À 3 , A À 2 ¼ 7Â10 À 3 , A À 3 ¼ 2:3Â10 À 4 .</s><s>For the calcium-based rule (Fig. <ref type="figure" target="#fig_3">5</ref>, right), the following parameters were used (following the notation of Graupner and Brunel 26 ): g p ¼ 7.25, g d ¼ 3.31, y p ¼ 1.3, y d ¼ 1, t Ca ¼ 22.7 ms, C pre ¼ 0.56, C post ¼ 1.24.</s></p><p><s>Reduced model.</s><s>Our reduced model (Fig. <ref type="figure" target="#fig_5">7</ref>) consisted of neuronal populations defined similarly to Bressloff <ref type="bibr" target="#b60">61</ref> .</s><s>Briefly, the activity of population i was given by n i , which represented the number of neurons in an 'active' state.</s><s>Transitions from a state of n i active neurons to n i ±1 active neurons occurred with rates T AE i ðn i Þ, making n i a birth-death process.</s><s>The transition rates were given by T À i ¼ n i and T þ i ¼ Nf i ðn=NÞ, where n is the vector of active neurons for each population.</s><s>Here N is an abstract system-size parameter; we note that it is not equal to the maximum of n i , which can exceed N. We therefore define x ¼ n/N, which can have entries greater than 1.</s><s>As N-N, the dynamics of x reduce to the Wilson-Cowan equations: d dt x i ¼ À x i þ f i ðxÞ <ref type="bibr" target="#b60">61</ref> .</s><s>The activation function was given by:</s></p><formula xml:id="formula_13">f i ðxÞ ¼ 1 4 þ 2 1 þ exp À 4Â P j ðW ij À w inh ! x j À 0:8Þ ! :<label>ð7Þ</label></formula><p><s>For sufficiently large W ii , this nonlinear activation function yields bistability in the corresponding Wilson-Cowan system as N-N (Fig. <ref type="figure" target="#fig_5">7a</ref>, right).</s><s>The excitatory weight matrix W ij was constrained to have a constant row sum, P i W ij ¼ 1, in the same manner as the spiking simulations.</s><s>Entries in W ij were bounded by 0 and w max and evolved according to</s></p><formula xml:id="formula_14">d dt W ij ¼ Zx j Á x i ðx i À yÞ;<label>ð8Þ</label></formula><p><s>where Z ¼ 0.001 is the learning rate and y ¼ 1.8 is the potentiation threshold.</s><s>For the two-population model, w max ¼ 1, w inh ¼ 0.2 and N ¼ 16.</s><s>For the fourpopulation model, w max ¼ 1/2, w inh ¼ 0.1 and N ¼ 8 so that pairs of populations could form a single population identical to the two-population case.</s></p><p><s>Bressloff <ref type="bibr" target="#b60">61</ref> presented techniques to analyse the rate of transitions for a single population x i from a low activity state x i ¼ x L to a high activity state x i ¼ x H separated by a saddle point x 0 .</s><s>Defining O AE x i ð Þ ¼ T AE i n i ð Þ=N and SðxÞ ¼ R ln O À ðyÞ O x ðyÞ dy, the rate of transitions from a state x L/H is given by:</s></p><formula xml:id="formula_15">r L=H ¼ O þ x L=H À Á 2p ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi ffi S 00 x 0 ð Þ j j S 00 x L=H À Á q exp À N S x 0 ð ÞÀS x L=H À Á Â Ã À Á :<label>ð9Þ</label></formula><p><s>We extended this framework to the case of multiple populations to compute the vector field of Fig. <ref type="figure" target="#fig_5">7b</ref>.</s><s>Given a W ij , we first numerically calculated the solutions {xÃ} to the deterministic Wilson-Cowan equations and determined which were stable.</s></p><p><s>We then calculated transition rates between stable solutions using equation ( <ref type="formula" target="#formula_15">9</ref>) by assuming only one population i transitioned at a time and other populations' activities remained fixed during the transition, x j ¼ x Ã j , and then afterwards settled to their new local equilibrium values.</s><s>These transition rates yielded a Markov process over metastable states of the system with equilibrium density P(xÃ).</s><s>Assuming Z was small so a time scale separation could be performed, the expected change in W ij was calculated as:</s></p><formula xml:id="formula_16">_ W ij ¼ X fx Ã g P x Ã ð ÞZx Ã j Á x Ã i x Ã i À 1:8 À Á :<label>ð10Þ</label></formula><p><s>The vector field of Fig. <ref type="figure" target="#fig_5">7d</ref> was numerically estimated.</s><s>Simulations of the reduced system were done using the Gillespie algorithm.</s><s>Further details are given in Supplementary Methods.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 |</head><label>1</label><figDesc><div><p><s>Figure 1 | Pathological activity after training in a network without homeostasis.</s><s>(a) STDP curve for different pairing frequencies (top) and weight change as a function of firing rate assuming both neurons fire as Poisson processes with the same rate (bottom).</s><s>(b) Average excitatory firing rate as a function of time.</s><s>(c) Excitatory neuron spike rasters before training and after 200 s of training.</s><s>After B200 s, the network dynamics settle into high-frequency oscillations.</s></p></div></figDesc><graphic coords="2,317.33,535.21,109.40,113.06" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 |</head><label>2</label><figDesc><div><p><s>Figure 2 | Modification of weights and spontaneous activity by training in a network with homeostasis.</s><s>(a) Inhibitory STDP curve for different pairing frequencies (top) and weight change as a function of firing rate assuming both neurons fire as Poisson processes with the same rate (bottom).</s><s>(b) Average synaptic weight W in for synapses between neurons within an assembly (top) and W out for synapses between neurons in different assemblies (bottom).</s><s>(c) Graph showing connection strength between neuron pairs for 50 neurons sampled from three assemblies before (left) and after (right) training.</s><s>Orange lines correspond to strong excitatory connections.</s><s>Neurons in the same assembly are placed nearby one another.</s><s>Coloured nodes indicate neurons targeted by stimulus 1. Due to assembly membership overlap, some of these targeted neurons are also in the assemblies corresponding to stimuli 2 and 3. (d) Excitatory neuron spike rasters before and after training.</s><s>Adjacent rows in the raster correspond to neurons in the same assembly.</s><s>Some rows are repeated since neurons can belong to multiple assemblies.</s><s>Neurons not belonging to assemblies are not shown.</s><s>(e) Average firing rate for neurons in each assembly, corresponding to the activity in d.</s></p></div></figDesc><graphic coords="3,439.37,302.53,104.61,102.86" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 |Figure 4 |</head><label>34</label><figDesc><div><p><s>Figure 3 | Effects of inhibitory STDP.</s><s>(a) Schematic showing connections between two assemblies and inhibitory neurons.</s><s>One strongly connected and one weakly connected assembly is shown.</s><s>Orange lines correspond to strong excitatory connections and blue lines to strong inhibitory connections.</s><s>(b) Average inhibitory connection strength onto assemblies of different sizes for networks with and without iSTDP.</s><s>(c) Average connection strength within assemblies W in during training for networks with (left) and without (right) iSTDP.</s><s>(d) Spike rasters during spontaneous activity for networks with (left) and without (right) iSTDP.</s></p></div></figDesc><graphic coords="4,64.97,262.57,93.91,108.02" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 5 |</head><label>5</label><figDesc><div><p><s>Figure 5 | Assembly formation with different STDP rules.</s><s>(a) Schematic showing the average change in synaptic strength as a function of pre-and postsynaptic firing rate, assuming both neurons fire as Poisson processes.</s><s>Results are shown for the triplet STDP rule of Pfister and Gerstner 24 (left), the voltage-based STDP rule of Clopath et al. 25 (center) and the calcium-based rule of Graupner and Brunel 26 (right).</s><s>(b) Comparison between recurrent and non-recurrent networks as in Fig. 4.</s><s>Although the number of stored assemblies depends on the specific rule, structured spontaneous activity improves the stability of assemblies in all cases.</s><s>(c) Structured spontaneous activity after training using the three rules.</s></p></div></figDesc><graphic coords="5,256.01,569.05,90.39,104.06" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 6 |</head><label>6</label><figDesc><div><p><s>Figure 6 | Remapping of architecture with presentation of a new stimulus ensemble.</s><s>(a) Average synaptic weight within assemblies W in for neurons in the new set of assemblies (top) and the original set of assemblies (bottom), during repeated presentations of the new stimulus set.</s><s>(b) Plot of network activity for rows arranged according to the original assemblies (left) and new assemblies (right).</s><s>The activity is the same for both rasters, but the rows are permuted according to assembly membership.</s><s>(c) Same as b, but after training on the new stimulus set.</s></p></div></figDesc><graphic coords="6,72.89,542.89,91.35,94.34" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 7 |</head><label>7</label><figDesc><div><p><s>Figure 7 | Weight dynamics in the reduced model.</s><s>(a) Two-population model in the untrained (left) and trained (right) states.</s><s>Top: schematic illustrating weights.</s><s>Thicker lines correspond to stronger weights.</s><s>Middle: dynamics of population firing rates.</s><s>Bottom: change in synaptic weights from population 1 onto itself (DW 11 ) and population 1 to 2 (DW 21 ) due to the rate fluctuations in the middle subpanel.</s><s>(b) Vector field showing the weight dynamics for W 11 and W 12 .</s><s>The top right is stable and corresponds to the right side of a. Red trajectories correspond to individual simulations of the model.</s><s>Fluctuations correspond to switching between distinct activity states; in the limit of infinitely slow learning, the trajectories would approach their steady state smoothly.</s><s>(c) Similar to a but for the four-population model.</s><s>Left: state in which populations (1,3) and populations (2,4) form a strongly connected assembly.</s><s>Right: state in which populations (1,2) and populations (3,4) form a strongly connected assembly.</s><s>(d) Vector field for the four-population model showing the weight dynamics for W 12 and W 34 .</s><s>The bottom left corresponds to the left side of c, and the top right corresponds to the right side of c.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 8 |Figure 9 |</head><label>89</label><figDesc><div><p><s>Figure 8 | Changes in evoked spike statistics after training on a new stimulus ensemble.</s><s>(a) Average evoked firing rate in stimulated neurons as a function of stimulus strength, defined here as the change in the firing rate of the external excitatory input to stimulated neurons.</s><s>All error bars denote s.e.m. across different stimuli.</s><s>(b) Pattern completion before and after training.</s><s>Average firing rates are shown in baseline spontaneous conditions (b), for non-stimulated neurons within a stimulated assembly (NS) and for stimulated neurons (S).</s><s>(c) Fano factor as a function of time for all excitatory neurons.</s><s>Evoked stimulation interval is denoted by the orange bar.</s><s>Fano factor was computed using the mean-matching techniques presented in Churchland et al. 3 (d) Average receiver-operating characteristic (ROC) curve for detecting the presence of a stimulus using the spike count of single neurons in the first 200 ms after stimulus onset.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 |</head><label>1</label><figDesc><div><p><s>Parameters for neuronal membrane dynamics.</s></p></div></figDesc><table><row><cell>Symbol</cell><cell>Description</cell><cell>Value</cell></row><row><cell>t E</cell><cell>E neuron resting membrane time constant</cell><cell>20 ms</cell></row><row><cell>t I</cell><cell>I neuron resting membrane time constant</cell><cell>20 ms</cell></row><row><cell>E E L E I L D E T</cell><cell>E neuron resting potential I neuron resting potential E neuron EIF slope factor</cell><cell>À 70 mV À 62 mV 2 mV</cell></row><row><cell>C</cell><cell>Capacitance</cell><cell>300 pF</cell></row><row><cell>E E</cell><cell>E reversal potential</cell><cell>0 mV</cell></row><row><cell>E I</cell><cell>I reversal potential</cell><cell>À 75 mV</cell></row><row><cell>V T</cell><cell>Threshold potential</cell><cell>À 52 mV</cell></row><row><cell>A T</cell><cell>Post spike threshold potential increase</cell><cell>10 mV</cell></row><row><cell>t T</cell><cell>Adaptive threshold time scale</cell><cell>30 ms</cell></row><row><cell>V re</cell><cell>Reset potential</cell><cell>À 60 mV</cell></row><row><cell>t abs</cell><cell>Absolute refractory period</cell><cell>1 ms</cell></row><row><cell>a w</cell><cell>Subthreshold adaptation</cell><cell>4 nS</cell></row><row><cell>b w</cell><cell>Spike-triggered adaptation</cell><cell>0.805 pA</cell></row><row><cell>t w</cell><cell>Spike-triggered adaptation time scale</cell><cell>150 ms</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 |</head><label>2</label><figDesc><div><p><s>Parameters for recurrent coupling.</s></p></div></figDesc><table><row><cell>Symbol</cell><cell>Description</cell><cell>Value</cell></row><row><cell>N E</cell><cell>Number of E neurons</cell><cell>4,000</cell></row><row><cell>N I</cell><cell>Number of I neurons</cell><cell>1,000</cell></row><row><cell>p</cell><cell>Connection probability</cell><cell>0.2</cell></row><row><cell>t E r t E d t I r t I d r EE ext r IE ext J EE min J EE max J EE 0 J EI min J EI max J EI 0 J IE</cell><cell>Rise time for E synapses Decay time for E synapses Rise time for I synapses Decay time for I synapses Rate of external input to E neurons Rate of external input to I neurons Minimum E to E synaptic weight Maximum E to E synaptic weight Initial E to E synaptic weight Minimum I to E synaptic weight Maximum I to E synaptic weight Initial I to E synaptic weight Synaptic weight from E to I</cell><cell>1 ms 6 ms 0.5 ms 2 ms 4.5 kHz 2.25 kHz 1.78 pF 21.4 pF 2.76 pF 48.7 pF 243 pF 48.7 pF 1.27 pF</cell></row><row><cell>J II</cell><cell>Synaptic weight from I to I</cell><cell>16.2 pF</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 3 |</head><label>3</label><figDesc><div><p><s>Parameters for excitatory synaptic plasticity.</s></p></div></figDesc><table><row><cell cols="2">Symbol Description</cell><cell>Value</cell></row><row><cell>A LID A LIP</cell><cell>Long-term depression (LTD) strength Long-term potentiation (LTP) strength</cell><cell>0.0008 pA mV À 1 0.0014 pA mV À 2</cell></row><row><cell>y LID</cell><cell>Threshold to recruit LTD</cell><cell>À 70 mV</cell></row><row><cell>y LIP</cell><cell>Threshold to recruit LTP</cell><cell>À 49 mV</cell></row><row><cell>t u</cell><cell>Time constant of low-pass filtered</cell><cell>10 ms</cell></row><row><cell></cell><cell>membrane voltage (for LTD)</cell><cell></cell></row><row><cell>t u</cell><cell>Time constant of low-pass filtered</cell><cell>7 ms</cell></row><row><cell></cell><cell>membrane voltage (for LTP)</cell><cell></cell></row><row><cell>t x</cell><cell>Time constant low-pass filtered spike train</cell><cell>15 ms</cell></row><row><cell></cell><cell>(for LTP)</cell><cell></cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 4 |</head><label>4</label><figDesc><div><p><s>Parameters for inhibitory synaptic plasticity.</s></p></div></figDesc><table><row><cell>Symbol</cell><cell>Description</cell><cell>Value</cell></row><row><cell>t y</cell><cell>Time constant of low-pass filtered spike train</cell><cell>20 ms</cell></row><row><cell>Z</cell><cell>Synaptic plasticity learning rate</cell><cell>1 pA</cell></row><row><cell>r 0</cell><cell>Target firing rate</cell><cell>3 Hz</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>NATURE COMMUNICATIONS | 5:5319 | DOI: 10.1038/ncomms6319 | www.nature.com/naturecommunications</s><s>&amp; 2014 Macmillan Publishers Limited.</s><s>All rights reserved.</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p><s>NATURE COMMUNICATIONS | 5:5319 | DOI: 10.1038/ncomms6319 | www.nature.com/naturecommunications</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_2"><p><s>&amp; 2014 Macmillan Publishers Limited.</s><s>All rights reserved.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We are grateful to <rs type="person">Jason Middleton</rs>, <rs type="person">Anne-Marie Oswald</rs> and <rs type="person">Robert Rosenbaum</rs> for their comments on an early version of the manuscript.The research was supported by <rs type="funder">NSF</rs><rs type="grantNumber">-DMS-1313225</rs> (B.D.).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_WnfqNWk">
+					<idno type="grant-number">-DMS-1313225</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author contributions</head><p><s>A.L.-K.</s><s>and B.D. conceived the study and wrote the paper.</s><s>A.L.-K.</s><s>performed the simulations and analysis.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Additional information</head><p><s>Supplementary Information accompanies this paper at http://www.nature.com/</s><s>naturecommunications Competing financial interests: The authors declare no competing financial interests.</s></p><p><s>Reprints and permission information is available online at http://npg.nature.com/</s><s>reprintsandpermissions/ How to cite this article: Litwin-Kumar, A. and Doiron, B. Formation and maintenance of neuronal assemblies through synaptic plasticity.</s><s>Nat.</s><s>Commun.</s><s>5:5319 doi: 10.1038/ncomms6319 (2014).</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Dynamics of ongoing activity: explanation of the large variability in evoked cortical responses</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arieli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sterkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grinvald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aertsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">273</biblScope>
+			<biblScope unit="page" from="1868" to="1871" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Spontaneous events outline the realm of possible sensory responses in neocortical populations</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Luczak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bartho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="413" to="425" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Stimulus onset quenches neural variability: a widespread cortical phenomenon</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Churchland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="369" to="378" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Reverberation of recent visual experience in spontaneous cortical waves</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Caporale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="321" to="327" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Spontaneous cortical activity reveals hallmarks of an optimal internal model of the environment</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berkes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Orban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lengyel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fiser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">331</biblScope>
+			<biblScope unit="page" from="83" to="87" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Image sequence reactivation in awake V4 networks</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Eagleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dragoi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="19450" to="19455" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Activity recall in a visual cortical ensemble</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-M</forename><surname>Poo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="449" to="455" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Correlated firing in macaque visual area MT: time scales and relationship to behavior</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zohary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="1676" to="1697" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Stimulus dependence of neuronal correlation in primary visual cortex of the macaque</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="3661" to="3673" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Functional organization and population dynamics in the mouse primary auditory cortex</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rothschild</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nelken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mizrahi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="353" to="360" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Synaptic activity and the construction of cortical circuits</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C</forename><surname>Katz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Shatz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">274</biblScope>
+			<biblScope unit="page" from="1133" to="1138" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Cortical plasticity: from synapses to maps</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Buonomano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Merzenich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="149" to="186" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Long-term modification of cortical synapses improves sensory perception</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Froemke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="79" to="88" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Functional specificity of local synaptic connections in neocortical networks</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">473</biblScope>
+			<biblScope unit="page" from="87" to="91" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">The emergence of functional microcircuits in visual cortex</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">496</biblScope>
+			<biblScope unit="page" from="96" to="100" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Chaos in neuronal networks with balanced excitatory and inhibitory activity</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Van Vreeswijk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">274</biblScope>
+			<biblScope unit="page" from="1724" to="1726" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">The asynchronous state in cortical circuits</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Renart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">327</biblScope>
+			<biblScope unit="page" from="587" to="590" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Slow dynamics and high variability in balanced cortical networks with clustered connections</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Litwin-Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="1498" to="1505" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Spike-timing dynamics of neuronal groups</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Izhikevich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Gally</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Edelman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb. Cortex</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="933" to="944" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Emergence of dynamic memory traces in cortical microcircuit models through STDP</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Klampfl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Maass</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="11515" to="11529" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Model of global spontaneous activity and local structured activity during delay periods in the cerebral cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Amit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb. Cortex</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="237" to="252" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Learning in realistic networks of spiking neurons and spike-driven plastic synapses</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mongillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Curti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Romani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Amit</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Eur. J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="3143" to="3160" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Spike-timing-dependent plasticity in balanced random networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Morrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aertsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Diesmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="1437" to="1467" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Triplets of spikes in a model of spike timingdependent plasticity</title>
+		<author>
+			<persName><forename type="first">J.-P</forename><surname>Pfister</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Gerstner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="9673" to="9682" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Connectivity reflects coding: a model of voltage-based STDP with homeostasis</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Clopath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Busing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Vasilaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Gerstner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="344" to="352" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Calcium-based plasticity model explains sensitivity of synaptic changes to spike pattern, rate, and dendritic location</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Graupner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="3991" to="3996" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Modeling the spontaneous reactivation of experience-specific hippocampal cell assembles during sleep</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Mcnaughton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="685" to="692" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Off-line replay maintains declarative memories in a model of hippocampal-neocortical interactions</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Koali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dayan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="286" to="294" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Homeostatic plasticity in the developing nervous system</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Turrigiano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Nelson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="97" to="107" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Inhibitory plasticity balances excitation and inhibition in sensory pathways and memory networks</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Vogels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sprekeler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zenke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Clopath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Gerstner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">334</biblScope>
+			<biblScope unit="page" from="1569" to="1573" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Adaptive exponential integrate-and-fire model as an effective description of neuronal activity</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Brette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Gerstner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page" from="3637" to="3642" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Dynamic I-V curves are reliable predictors of naturalistic pyramidal-neuron voltage traces</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Badel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="656" to="666" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Rate, timing, and cooperativity jointly determine cortical synaptic plasticity</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Sjostrom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Turrigiano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Nelson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="1149" to="1164" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Synaptic plasticity in neural networks needs homeosta-sis with a fast rate detector</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zenke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hennequin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Gerstner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput. Biol</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">1003330</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Synaptic plasticity: taming the beast</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Nelson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1178" to="1183" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Robust spatial working memory through homeostatic synaptic scaling in heterogeneous cortical networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Renart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X.-J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="473" to="485" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Spike-time-dependent plasticity and het-erosynaptic competition organize networks to produce long scale-free sequences of neural activity</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">R</forename><surname>Fiete</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Senn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Hahnloser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="563" to="576" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Cascade models of synaptically stored memories</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fusi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Drew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Abbott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="599" to="611" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Stable learning in stochastic network states</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Boustani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Yger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Froegnac</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Destexhe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="194" to="214" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Memory trace reactivation in hippocampal and neocortical neuronal ensembles</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Sutherland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mcnaughton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="180" to="186" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">On numerical simulations of integrate-and-fire neural networks</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hansel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Meunier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Neltner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural. Comput</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="467" to="483" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Neural networks and physical systems with emergent collective computational abilities</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Hopfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="2554" to="2558" />
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Neural network mechanisms underlying stimulus driven variability reduction</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hugues</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput. Biol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">1002395</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Gating of sensory input by spontaneous cortical activity</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Luczak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bartho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="1684" to="1695" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">A synaptic organizing principle for cortical neuronal groups</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Perin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Berger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Markram</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="5419" to="5424" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Tuned thalamic excitation is amplified by visual cortical circuits</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Lien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scanziani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1315" to="1323" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Linear transformation of thalamocortical input by intracortical excitation</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>-T</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Ibrahim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B.-H</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">I</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">W</forename><surname>Tao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1324" to="1330" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Intracortical multiplication of thalamocortical signals in mouse auditory cortex</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>-Y</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">W</forename><surname>Tao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">I</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1179" to="1181" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Cortical connectivity and sensory coding</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Mrsic-Flogel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">503</biblScope>
+			<biblScope unit="page" from="51" to="58" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Variability of prefrontal neuronal discharges before and after training in a working memory task</title>
+		<author>
+			<persName><forename type="first">X.-L</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Constantinidis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">41053</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Matching recall and storage in sequence learning with spiking neural networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Brea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Senn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-P</forename><surname>Pfister</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="9565" to="9575" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Dopamine-dependent facilitation of LTP induction in hippocampal CA1 by exposure to spatial novelty</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Cullen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Anwyl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Rowan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="526" to="531" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Synaptic scaling and homeostatic plasticity in the mouse visual cortex in vivo</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Keck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="327" to="334" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Conservation of total synaptic weight through balanced synaptic depression and potentiation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Royer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Paroe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">422</biblScope>
+			<biblScope unit="page" from="518" to="522" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">SORN: a self-organizing recurrent neural network</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lazar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Comput. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">23</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Embedding multiple trajectories in simulated recurrent neu-ral networks in a self-organizing manner</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Buonomano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="13172" to="13181" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Highly nonrandom features of synaptic connectivity in local cortical circuits</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Sjostrom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Reigl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Chklovskii</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Biol</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">68</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P N</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Ballard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="79" to="87" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Theory for the development of neuron selectivity: orientation specificity and binocular interaction in visual cortex</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Bienenstock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Cooper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">W</forename><surname>Munro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="32" to="48" />
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Efficient event-driven simulation of large networks of spiking neurons and dynamical synapses</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mattia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Giudice</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="2305" to="2329" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Metastable states and quasicycles in a stochastic Wilson-Cowan model of neu-ronal population dynamics</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Bressloff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. E</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">51903</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

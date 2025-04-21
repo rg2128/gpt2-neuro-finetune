@@ -1,0 +1,1456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Whitening of odor representations by the wiring diagram of the olfactory bulb</title>
+				<funder>
+					<orgName type="full">Human Frontiers Science Program (HFSP</orgName>
+				</funder>
+				<funder ref="#_rPQwvU7">
+					<orgName type="full">Novartis Research Foundation</orgName>
+				</funder>
+				<funder ref="#_fg46JnN">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_AP6UZvu">
+					<orgName type="full">Swiss National Science Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2020-07-20">2020 July 20.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Adrian</forename><forename type="middle">A</forename><surname>Wanner</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Friedrich Miescher Institute for Biomedical Research</orgName>
+								<address>
+									<postCode>4058</postCode>
+									<settlement>Basel</settlement>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Faculty of Natural Sciences</orgName>
+								<orgName type="institution">University of Basel</orgName>
+								<address>
+									<postCode>4003</postCode>
+									<settlement>Basel</settlement>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Rainer</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+							<email>rainer.friedrich@fmi.ch.</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Friedrich Miescher Institute for Biomedical Research</orgName>
+								<address>
+									<postCode>4058</postCode>
+									<settlement>Basel</settlement>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Faculty of Natural Sciences</orgName>
+								<orgName type="institution">University of Basel</orgName>
+								<address>
+									<postCode>4003</postCode>
+									<settlement>Basel</settlement>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Friedrich</forename><surname>Miescher</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Institute for Biomedical Research</orgName>
+								<address>
+									<addrLine>Maulbeerstrasse 66</addrLine>
+									<postCode>4058</postCode>
+									<settlement>Basel</settlement>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Princeton Neuroscience Institute</orgName>
+								<orgName type="institution">Princeton University</orgName>
+								<address>
+									<settlement>Princeton</settlement>
+									<region>New Jersey</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Whitening of odor representations by the wiring diagram of the olfactory bulb</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2020-07-20">2020 July 20.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8DE6EA808E49BBDEF82E7491B52E4C85</idno>
+					<idno type="DOI">10.1038/s41593-019-0576-z.</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Neuronal computations underlying higher brain functions depend on synaptic interactions among specific neurons.</s><s>A mechanistic understanding of such computations requires wiring diagrams of neuronal networks.</s><s>We examined how the olfactory bulb (OB) performs 'whitening', a fundamental computation that decorrelates activity patterns and supports their classification by memory networks.</s><s>We measured odor-evoked activity in the OB of a zebrafish larva and subsequently reconstructed the complete wiring diagram by volumetric electron microscopy.</s><s>The resulting functional connectome revealed an overrepresentation of multisynaptic connectivity motifs that mediate reciprocal inhibition between neurons with similar tuning.</s><s>This connectivity suppressed redundant responses and was necessary and sufficient to reproduce whitening in simulations.</s><s>Whitening of odor representations is therefore mediated by higher-order structure in the wiring diagram that is adapted to natural input patterns.</s></p><p><s>Neuronal activity patterns evoked by natural stimuli are transformed in the brain to extract relevant information.</s><s>At early processing stages, activity patterns often contain correlations Users may view, print, copy, and download text and data-mine the content in such documents, for the purposes of academic research, subject always to the full Conditions of use:</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>and intensity variations that originate from the statistics of natural scenes and from the tuning of sensory receptors <ref type="bibr" target="#b0">1</ref> .</s><s>This statistical structure complicates the classification of sensory inputs because it does not usually reflect behaviorally relevant stimulus categories <ref type="bibr" target="#b1">2</ref> .</s><s>For example, visual scenes may be dominated by a large number of pixels representing sky while the biologically most important information is conveyed by a small subset of pixels representing specific objects (e.g., a hawk or a sparrow).</s><s>Hence, correlations in sensory inputs can complicate meaningful pattern classification and object recognition.</s><s>This problem can be alleviated by whitening, a fundamental transformation in signal processing that decorrelates patterns and normalizes their variance.</s><s>Whitening is therefore often used early in a pattern classification process to remove undesired correlations and to optimize the use of coding space <ref type="bibr" target="#b2">3</ref> .</s></p><p><s>In the visual and auditory systems, whitening of individual neurons' responses to natural stimuli supports efficient coding by redundancy reduction <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref> .</s><s>Efficient pattern classification, however, requires whitening of activity patterns across neuronal populations.</s><s>This form of whitening occurs in the olfactory bulb (OB) <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref> where axons of olfactory sensory neurons expressing the same odorant receptor converge onto discrete glomeruli.</s><s>Odors evoke distributed patterns of input activity across glomeruli that can overlap substantially when odorants share functional groups <ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref> .</s><s>The variance (contrast) of these glomerular activity patterns varies dramatically as a function of odor concentration.</s><s>The output of the OB is transmitted to higher brain areas by mitral cells (MCs), which receive sensory input from individual glomeruli and interact with other MCs cells via multisynaptic interneuron (IN) pathways (Fig. <ref type="figure" target="#fig_9">1a</ref>).</s><s>Unlike glomerular inputs, activity patterns across MCs become rapidly decorrelated during the initial phase of an odor response <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> and their variance depends only modestly on stimulus intensity <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b18">19</ref> .</s><s>Neuronal circuits in the OB therefore decorrelate and normalize population activity patterns, resulting in a whitening of odor representations.</s><s>Pattern decorrelation predicted learning in odor discrimination tasks <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b15">16</ref> , consistent with the assumption that whitening facilitates pattern classification.</s><s>However, it remains unclear how this transformation is achieved by interactions between neurons in the OB network.</s></p><p><s>Efficient whitening can be achieved by transformations that are adapted to the correlation structure of input patterns <ref type="bibr" target="#b0">1</ref> .</s><s>Such adaptive whitening requires prior knowledge about inputs and tuning-dependent connectivity between specific cohorts of neurons.</s><s>Hence, whitening of sensory representations is thought to depend on an evolutionary memory of stimulus space that is contained in the wiring diagram of neuronal circuits.</s><s>This hypothesis is difficult to test in the OB because tuning and functional connectivity cannot be inferred from topographical relationships between neurons <ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref> .</s><s>Moreover, because interactions between MCs are multisynaptic via INs, relevant inhibitory interactions cannot be visualized by transsynaptic tracing across a single synapse.</s></p><p><s>Adaptive whitening and other memory-based processes are likely to depend on higher-order features of neuronal connectivity that cannot be detected by sparse sampling of pairwise connections.</s><s>We therefore used a "functional connectomics" approach that combines population-wide neuronal activity measurements with dense reconstructions of wiring diagrams, taking advantage of the small size of the larval zebrafish brain.</s><s>We first measured odor responses of neurons in the OB by multiphoton calcium imaging and subsequently reconstructed the synaptic connectivity among all neurons by serial block-face scanning electron microscopy (SBEM) <ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref> .</s><s>We found that higher-order features of multisynaptic connectivity specifically suppress the activity of correlated MC ensembles in a stimulusdependent manner, resulting in a decorrelation and variance normalization.</s><s>The wiring diagram of the OB is therefore adapted to the correlation structure of its inputs and mediates a whitening operation based on contrast reduction rather than contrast enhancement.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reconstruction of the wiring diagram and mapping of neuronal activity</head><p><s>We previously reconstructed the skeletons of 1'003 neurons in an SBEM image stack of the OB from a zebrafish larva (4.5 days post fertilization), accounting for 98% of all neurons in the OB, and classified them as MCs (n = 745), INs (n = 254) and "atypical projection neurons" (n = 4) <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b25">26</ref> .</s><s>We now annotated the synaptic connections of these neurons to reconstruct the full wiring diagram of the OB.</s><s>Human annotators followed each of the reconstructed skeletons and manually labeled all input and output synapses (Fig. <ref type="figure" target="#fig_9">1b,</ref><ref type="figure">c</ref>).</s><s>Subsequently, synapses of INs were annotated again by different annotators.</s><s>Hence, each synapse involved in MC-IN-MC connectivity motifs should have been encountered at least three times.</s><s>To obtain a conservative estimate of the wiring diagram with few false positives we retained only those synapses that were annotated at least twice by independent annotators.</s></p><p><s>Each synapse was assigned a unitary weight so that the total connection strength between a pair of neurons equaled the number of synapses.</s><s>The resulting wiring diagram contained 19,874 MC→IN synapses, 17,524 MC←IN synapses (Fig. <ref type="figure" target="#fig_9">1d</ref>), and 13,610 synapses between INs.</s><s>We also observed contact sites between MCs associated with the same glomerulus where plasma membranes showed strong staining but these sites usually lacked vesicles.</s><s>We did therefore not consider synaptic connections between MCs.</s><s>Axons of sensory neurons frequently made synapses onto MCs but synapses onto INs were rare (Extended Data Fig. <ref type="figure" target="#fig_9">1a</ref>) <ref type="bibr" target="#b25">26</ref> .</s></p><p><s>On average, connected pairs of MCs and INs made 3.1 MC→IN synapses and 2.9 MC←IN synapses per pair, and pairs of connected INs made 2.6 synapses per direction.</s><s>A hallmark of synaptic connectivity in the adult OB are reciprocal dendrodendritic synaptic connections between the same MC-IN pair.</s><s>In the larval OB, 52% of MC→IN synapses and 51% of MC←IN synapses were associated with a synapse of opposite direction, usually within 2.5 μm, between the same pair of neurons (Fig. <ref type="figure" target="#fig_9">1b</ref>).</s><s>Hence, reciprocal synaptic connectivity is prominent already in the larval OB of zebrafish.</s></p><p><s>Prior to preparation of the OB sample for SBEM we measured neuronal activity by multiphoton imaging of the calcium indicator GCaMP5, which was expressed under the panneuronal elavl3 promoter <ref type="bibr" target="#b26">27</ref> .</s><s>Somata observed in electron microscopy were mapped onto the light microscopy data using an iterative landmark-based affine alignment procedure followed by manual proofreading (Fig. <ref type="figure" target="#fig_10">2a,</ref><ref type="figure">b</ref>; Extended Data Fig. <ref type="figure" target="#fig_9">1b</ref>).</s><s>Somatic calcium signals evoked by four amino acid odors (10 -4 M) and four bile acid odors (10 -5 M) were measured sequentially in six optical planes (Fig. <ref type="figure" target="#fig_10">2a-c</ref>; Extended Data Fig. <ref type="figure" target="#fig_10">2</ref>) and temporally deconvolved to estimate odor-evoked firing rate changes <ref type="bibr" target="#b27">28</ref> .</s><s>The dynamics of neuronal population activity was then represented by time series of activity vectors for each odor stimulus (232 MCs and 68 INs).</s></p><p><s>Decorrelation and contrast normalization of activity patterns across MCs have been characterized previously in the OB of adult zebrafish <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b14">15</ref> and mice <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> where &gt;90% of neurons are GABAergic INs.</s><s>In the larval OB, in contrast, INs account for only 25% of all neurons <ref type="bibr" target="#b25">26</ref> .</s><s>Most of these INs are likely to be periglomerular and short axon cells because INs with the typical morphology of granule cells appear only later in development.</s><s>We therefore asked whether the core circuitry present in the larval OB already performs computations related to whitening.</s></p><p><s>Correlations between activity patterns evoked by different bile acids were high after stimulus onset and decreased during the subsequent few hundred milliseconds (Fig. <ref type="figure" target="#fig_10">2d,</ref><ref type="figure">e</ref>).</s><s>Patterns evoked by amino acids, in contrast, were less correlated throughout the odor response, which was expected because most amino acids had dissimilar side chains.</s><s>Further analyses of pattern decorrelation therefore focused on activity patterns evoked by the four bile acids while other analyses included all eight odors.</s><s>To quantify pattern decorrelation we computed the mean difference in pairwise Pearson correlations between a time window shortly after response onset (t 1 ) and a later time window (t 2 ) that was chosen so that the mean population activity across MCs was not significantly different from t 1 (Fig. <ref type="figure" target="#fig_10">2d</ref>; p = 0.57, Wilcoxon rank-sum test).</s><s>Pattern correlations across MCs, however, were significantly lower at t 2 than at t 1 (p = 0.03, Wilcoxon rank-sum test), demonstrating that MC activity patterns were reorganized and decorrelated.</s><s>Activity across INs followed the mean MC activity with a small delay and did not exhibit an obvious decorrelation during the early phase of the odor response (Fig. <ref type="figure" target="#fig_10">2d</ref>).</s><s>These findings are consistent with observations in the adult OB <ref type="bibr" target="#b28">29</ref> .</s><s>The natural time course of olfactory input to the OB of zebrafish larvae is likely to be slow because animals live in slow waters close to the substratum <ref type="bibr" target="#b29">30</ref> and because the temporal resolution of their olfactory sensory neurons is low <ref type="bibr" target="#b30">31</ref> .</s><s>We therefore assume that the dynamics of odor-evoked population activity in the OB is fast compared to the kinetics of natural sensory inputs.</s></p><p><s>The contrast of MC activity patterns, as measured by the variance of activity across the population, increased shortly after stimulus onset and peaked slightly later than pattern correlation.</s><s>Subsequently, variance decreased and became more uniform across odors, as reflected by a significant decrease in the standard deviation (s.d.) of the variance across odors between t 2 and t 1 (Fig. <ref type="figure" target="#fig_10">2d</ref>; p = 0.003, F-test; t 1 was slightly shifted relative to the time window for correlation analysis to cover the peak of the variance).</s><s>Hence, MC activity patterns in the larval OB became decorrelated and contrast-normalized, consistent with the whitening of odor representations in the adult OB.</s></p><p><s>Whitening can facilitate pattern classification but may also introduce noise.</s><s>We therefore quantifed the reliability of odor classification using a template matching procedure based on single-trial responses and found that classification success, as well as the separation of correct and incorrect classifications, were slightly higher at t 2 than at t 1 (Extended Data Fig. <ref type="figure" target="#fig_11">3</ref>).</s><s>Hence, pattern decorrelation did not compromise the reliability of odor identification by a simple classifier but facilitated pattern separation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Computational consequences of connectivity</head><p><s>While contrast normalization can be achieved by global scaling operations such as divisive normalization <ref type="bibr" target="#b31">32</ref> , pattern decorrelation requires interactions between distinct subsets of neurons <ref type="bibr" target="#b8">9</ref> .</s><s>In theory, pattern decorrelation could be achieved by large networks with sparse and random connectivity <ref type="bibr" target="#b32">33</ref> but this architecture is inconsistent with the low number of INs in the larval OB.</s><s>Smaller networks can decorrelate specific input patterns when their connectivity is adapted to the covariance structure of these inputs, suggesting that decorrelation in the OB is an input-specific transformation of odor representations that is encoded in the wiring diagram.</s><s>In order to explore this hypothesis we first asked whether whitening can be reproduced by implementing the wiring diagram in a network of minimally complex single-neuron models (Fig. <ref type="figure" target="#fig_11">3a</ref>).</s></p><p><s>We first simulated a network of threshold-linear rate neurons with 208 MCs, representing all recorded MCs with input and output synapses, and 234 INs, representing all connected INs.</s><s>Connections between individual neurons were given by the wiring diagram.</s><s>Excitatory sensory input into MCs was defined by the odor-evoked activity pattern at t 1 .</s><s>INs received no sensory input because synapses from sensory neurons onto INs were rare (Extended Data Fig. <ref type="figure" target="#fig_9">1a</ref>).</s><s>All connections made by neurons of the same type (MC or IN) had the same weight scaling.</s><s>The time course of stimuli consisted of a fast initial rise followed by a slow decay <ref type="bibr" target="#b32">33</ref> , approximating the response time course of olfactory sensory neurons in zebrafish <ref type="bibr" target="#b7">8</ref> .</s><s>Because connectivity was fixed, the final network model had only six degrees of freedom (thresholds, synaptic weight scaling factors and time constants of each neuron type).</s></p><p><s>Correlations between simulated population responses to bile acids increased rapidly and subsequently decreased.</s><s>Consistent with experimental observations, the mean correlation decreased significantly between two time windows t 1 and t 2 that were chosen so that the mean activity was not significantly different (Fig. <ref type="figure" target="#fig_11">3b</ref>).</s><s>The variance (contrast) of activity patterns and its standard deviation across stimuli peaked slightly later than the correlation and decreased thereafter (Fig. <ref type="figure" target="#fig_11">3b</ref>).</s><s>Correlations between IN activity patterns remained higher than correlations between MC activity patterns throughout the odor response (Extended Data Fig. <ref type="figure" target="#fig_12">4a</ref>).</s><s>Hence, simulation results were in good agreement with experimental observations.</s><s><ref type="figure" target="#fig_11">3b</ref>).</s><s>IN-IN connectivity was therefore omitted in further simulations for simplicity (Fig. <ref type="figure" target="#fig_11">3c</ref>).</s></p><p><s>To exclude the possibility that pattern decorrelation by simulated networks reflects a chaotic process we examined responses to inputs with biologically realistic amounts of noise (Methods).</s><s>While activity patterns representing different odors became decorrelated, correlations between noisy representations of the same stimuli remained high (Extended Data Fig. <ref type="figure" target="#fig_12">4b</ref>), demonstrating that pattern decorrelation did not reflect an amplification of noise.</s></p><p><s>Randomizing the wiring diagram by independent shufflings of the feed-forward connectivity matrix W MC→IN and the feedback connectivity matrix W MC←IN abolished pattern decorrelation and contrast normalization (Fig. <ref type="figure" target="#fig_11">3d,</ref><ref type="figure">e</ref>).</s><s>Hence, whitening depended on the wiring diagram.</s><s>To corroborate this conclusion we examined whether the reorganization of activity patterns underlying whitening can be predicted from connectivity without an explicit simulation of network dynamics.</s><s>Activity patterns at t 1 were multiplied with the feedforward connectivity W MC→IN , normalized, and thresholded to generate a hypothetical pattern of IN activity.</s><s>This activity pattern was then multiplied with the feed-back connectivity W MC←IN to predict the pattern of feedback inhibition onto MCs.</s><s>The feedback pattern was either subtracted from the MC activity at t 1 (subtractive inhibition), or the MC activity pattern at t 1 was divided by the pattern of feedback inhibition neuron-by-neuron (divisive inhibition; Extended Data Fig. <ref type="figure" target="#fig_13">5a</ref>).</s><s>This simple algebraic procedure reproduced both pattern decorrelation and variance normalization, independent of whether inhibition was subtractive or divisive (Extended Data Fig. <ref type="figure" target="#fig_13">5b</ref>).</s><s>Whitening was again abolished when connectivity matrices were randomized.</s><s>These results confirm that the wiring diagram contains information essential for whitening.</s></p><p><s>We next performed more specific manipulations to explore how whitening depends on higher-order structure in the wiring diagram.</s><s>In simulations without IN-IN connections, we first applied the same shufflings to MC→IN connections (W MC→IN ) and to MC←IN connectivity (W MC←IN ).</s><s>This co-permutation of feed-forward and feedback connectivity shuffles the off-diagonal elements in the disynaptic connectivity matrix (lateral inhibition) but preserves the overall distribution of disynaptic MC→IN→MC connection strengths and the on-diagonal elements (self-inhibition; Fig. <ref type="figure" target="#fig_11">3f</ref>).</s><s>Similar to the independent randomization of W MC→IN and W MC←IN , co-permutation of W MC→IN and W MC←IN abolished whitening (Fig. <ref type="figure" target="#fig_11">3d,</ref><ref type="figure">e</ref>).</s><s>Moreover, whitening was abolished when input channels were permuted to produce novel input patterns with the same statistical properties and correlations (Fig. <ref type="figure" target="#fig_11">3e</ref>).</s><s>These results show that whitening is mediated by higher-order features of multisynaptic connectivity that are adapted to patterns of sensory input.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Higher-order structure of connectivity</head><p><s>The shortest synaptic path between two MCs associated with different glomeruli is a disynaptic interaction via one IN (MC-IN-MC).</s><s>To identify properties of the wiring diagram that mediate whitening we therefore analyzed MC-IN-MC triplets.</s><s>There are seven possible triplet configurations that represent four topological motifs (Fig. <ref type="figure" target="#fig_12">4a</ref>).</s><s>We found that the motif containing no reciprocal connection (motif 1) was underrepresented whereas the other motifs were overrepresented in comparison to randomized networks (Fig <ref type="figure" target="#fig_12">4b</ref>).</s><s>The strongest overrepresentation was observed for motif 4, which contains reciprocal connections between both MCs and the IN.</s><s>Hence, MC-IN-MC triplets frequently contained reciprocal connections.</s></p><p><s>To determine whether disynaptic connectivity between MCs depends on their tuning we constructed an input tuning curve for each MC from the responses to the eight odors at t 1 .</s></p><p><s>We then quantified the Pearson correlation between the input tuning curves of MC pairs and the number of disynaptic MC-IN-MC connection paths across all motifs.</s><s>The mean number of disynaptic connections increased with the input tuning correlation (Fig. <ref type="figure" target="#fig_12">4c</ref>, left).</s><s>MCs with similar tuning were more likely to be connected through motifs with reciprocal connections, particularly motifs 2 and 4 (Fig. <ref type="figure" target="#fig_12">4d</ref>; Extended Data Fig. <ref type="figure" target="#fig_14">6</ref>).</s><s>Consistent with this observation, the correlation between tuning similarity and disynaptic connectivity of MC pairs remained strong when only reciprocal connections were considered (Fig. <ref type="figure" target="#fig_12">4c</ref>, right).</s><s>Hence, triplets mediate interactions preferentially between MCs with similar tuning, and these interactions frequently contain reciprocal connections.</s></p><p><s>As for MC-IN-MC connections, motifs with one or two reciprocal connections were also overrepresented in IN-MC-IN triplets but no simple relationship was apparent between input tuning and disynaptic IN-MC-IN connectivity (Extended Data Fig. <ref type="figure">7a-c</ref>).</s><s>In addition, we found that the tuning of synaptic inputs and outputs of individual INs was significantly correlated and that large sets of fully reciprocally connected neurons ("maximal cliques") were strongly overrepresented in the wiring diagram (Extended Data Fig. <ref type="figure">7d-g</ref>).</s><s>These observations further demonstrate that the connectivity among OB neurons is not random but governed, at least in part, by functional response properties.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Mechanism of whitening</head><p><s>Unidirectional lateral inhibition between functionally related neurons sharpens tuning curves and enhances pattern contrast in the retina <ref type="bibr" target="#b33">34</ref> and elsewhere (Fig. <ref type="figure" target="#fig_13">5a</ref>, left).</s><s>In idealized networks with reciprocal connectivity, in contrast, inhibition does not amplify asymmetries in inputs and self-inhibition is usually stronger than lateral inhibition (assuming equal synaptic strength; Fig. <ref type="figure" target="#fig_13">5a,</ref><ref type="figure">right</ref>).</s><s>Hence, reciprocal triplet connectivity should primarily down-regulate, rather than sharpen, the activity of neurons in connected cohorts.</s><s>As illustrated in Extended Data Fig. <ref type="figure" target="#fig_7">8</ref>, computational effects of contrast enhancement (by unidirectional connectivity) or suppression of cohorts (by partially reciprocal connectivity) depend on the properties of input patterns.</s><s>Contrast enhancement can decorrelate inputs when stimulus-specific information is contained in strong responses because strong responses are emphasized while weak responses are suppressed <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b33">34</ref> .</s><s>However, when strong responses are non-specific, contrast enhancement fails to decorrelate patterns because it enhances non-informative responses while suppressing weaker, potentially informative responses.</s><s>Under these conditions, patterns may be decorrelated by the selective suppression of strongly active cohorts, which can, in principle, be achieved by cohort-specific reciprocal inhibition (Extended Data Fig. <ref type="figure" target="#fig_7">8</ref>).</s></p><p><s>To examine the basis of pattern correlations in the OB we analyzed population activity patterns evoked by bile acids at t 1 .</s><s>For each pair of patterns, we quantified the contribution r i,t1 of MC i to the Pearson correlation r and ranked MCs by their r i,t1 (see example in Fig. <ref type="figure" target="#fig_13">5b</ref>; rankings differed between odor pairs).</s><s>Ranked measurements of correlation contribution, activity and variance contribution of individual MCs were then averaged over odor pairs (Fig. <ref type="figure" target="#fig_13">5c</ref>).</s><s>For each odor pair, pattern correlations at t 1 were dominated by high contributions from a small fraction of MCs that were also strongly active (Fig. <ref type="figure" target="#fig_13">5c</ref>, center and left).</s><s>Hence, correlated odor representations overlapped primarily in strongly responsive MCs at t 1 , consistent with observations in the adult OB <ref type="bibr" target="#b8">9</ref> .</s></p><p><s>We then examined the changes in the activity of individual neurons underlying the decorrelation and contrast normalization between t 1 and t 2 .</s><s>The activity of MCs with large r i,t1 was significantly lower at t 2 than at t 1 (Fig. <ref type="figure" target="#fig_13">5b,</ref><ref type="figure">c</ref>).</s><s>The mean activity of MCs that did not strongly contribute to the initial correlation, in contrast, remained similar.</s><s>As a consequence, the contribution of MCs with large r i,t1 to the overall correlation decreased, resulting in a substantial decorrelation of population activity patterns between t 1 and t 2 .</s><s>Pattern decorrelation can therefore be attributed, at least in part, to the selective inhibition of MC cohorts that dominated the initial pattern correlations.</s><s>MCs with high r i,t1 also made strong contributions to pattern variance at t 1 (Fig. <ref type="figure" target="#fig_13">5c</ref>) because their activity was substantially higher than the population mean.</s><s>Because the selective inhibition of these cohorts between t 1 and t 2 changed the activity of these MCs towards the population mean, the inhibition of these MCs also decreased pattern variance and its s.d.</s><s>across odors.</s><s>Pattern decorrelation and contrast normalization can therefore be attributed to a common mechanism that targets inhibition to specific MC cohorts and results in contrast reduction rather than contrast enhancement.</s></p><p><s>The selective suppression of activity in cohorts of co-responsive MCs cannot be achieved by global changes in subtractive or divisive inhibition because inhibition within cohorts needs to be stronger than the mean inhibition across the population in response to defined sets of odors.</s><s>To explore how such stimulus-and ensemble-specific inhibition is generated by specific wiring we defined functional cohorts of MCs for each pair of bile acid stimuli as the 10 MCs with the highest r i,t1 (Extended Data Fig. <ref type="figure">9a</ref>).</s><s>We then determined the disynaptic MC inputs to these cohorts by retrograde tracing through the wiring diagram across two synapses.</s><s>Inputs to MCs within a cohort were strongly biased towards MCs of the same cohort (Fig. <ref type="figure" target="#fig_13">5d,</ref><ref type="figure">e</ref>).</s><s>Consistent with this finding, the density of MC-IN-MC triplets, particularly motifs 2 and 4, was significantly higher within cohorts than among randomly chosen MC subsets (Extended Data Fig. <ref type="figure">9b</ref>).</s><s>Hence, cohorts of MCs are not only functional ensembles defined by similar initial responses but also anatomical ensembles with a high density of disynaptic MC-IN-MC connections.</s></p><p><s>The dense disynaptic connectivity implies that MCs in a cohort will be strongly inhibited when the cohort is activated as a whole.</s><s>Indeed, the activity of MC and the associated presynaptic INs in a cohort evolved in opposite directions during an odor response (Extended Data Fig. <ref type="figure">9c</ref>).</s><s>As a consequence of cohort-specific connectivity, inhibition of MCs within a cohort will be stronger than the mean level of inhibition.</s><s>The specific suppression of activity underlying whitening can thus be attributed to dense reciprocal connectivity within cohorts that are activated by specific sets of odors.</s><s>Cohorts therefore function as "feature detectors", where a "feature" is a molecular stimulus property that efficiently activates many MCs in the ensemble.</s><s>When a feature is present, the activity of the corresponding MC cohort is down-regulated by feedback inhibition and the representation of the feature in population activity patterns is suppressed, which reduces correlations between related patterns.</s><s>Pattern decorrelation can therefore be explained by a mechanism that involves "feature suppression" through specific connectivity.</s><s>Features may correspond to functional groups that promote high correlations of afferent activity patterns because they activate overlapping sets of odorant receptors.</s><s>This hypothesis predicts that MCs within functional cohorts exhibit similar input tuning to suppress the representation of such features.</s><s>Indeed, the mean correlation between tuning curves of MCs at t 1 was significantly higher within cohorts (r = 0.56 ± 0.40; mean ± s.d.) than across all MCs (r = 0.01 ± 0.38; p &lt; 10 -84 ; Wilcoxon rank-sum test).</s></p><p><s>Feature suppression decreases pattern correlations by the selective inhibition of MCs with high activity and large contributions to initial correlations.</s><s>To confirm that this mechanism can account for whitening in the OB we set the activity of MCs in functional cohorts (10 MCs with the highest r i,t1 pair at t 1 ) to the population mean for each odor pair.</s><s>As predicted, this "targeted suppression" of functional cohorts resulted in decorrelation and variance normalization (Extended Data Fig. <ref type="figure" target="#fig_13">5b</ref>).</s><s>To further dissect the mechanism of feature suppression we took advantage of simulations.</s><s>We first ranked simulated MCs by their r i,t1</s></p><p><s>for bile acid-evoked activity patterns in experiments (same ranking as in Fig. <ref type="figure" target="#fig_13">5c</ref>).</s><s>As observed experimentally, simulated MCs with large r i,t1 were strongly inhibited between t 1 and t 2 while the mean activity of other MCs remained unchanged (Fig. <ref type="figure" target="#fig_14">6a</ref>).</s><s>Direct analysis of inhibitory inputs to individual MCs confirmed that MCs with large r i,t1 received substantially more inhibition than other MCs.</s><s>This specific targeting of inhibition to MCs with large r i,t1 was abolished when connectivity was randomized (Fig. <ref type="figure" target="#fig_14">6b</ref>).</s><s>Simulations therefore precisely reproduced the activity changes in individual neurons that resulted in whitening, implying that simulations recapitulated the underlying mechanism.</s><s>Moreover, these results further show that decorrelation and whitening of inputs cannot be achieved by global inhibition but rely on interactions among specific subsets of neurons.</s></p><p><s>We next performed selective manipulations of the wiring diagram.</s><s>We first selected the MCs with the highest r i,t1 for each pair of bile acid stimuli (MC cohorts; 19 MCs in total; Extended Data Fig. <ref type="figure">9a</ref>) and deleted their connections onto INs (11% of all MC→IN connections; Fig. <ref type="figure" target="#fig_14">6c</ref>, "selective deletion").</s><s>As a control, we deleted the same fraction of feedforward connections of random subsets of MCs.</s><s>While random deletions had almost no effect, the selective deletion of feed-forward connections from MC cohorts abolished pattern decorrelation and variance normalization (Fig. <ref type="figure" target="#fig_14">6d,</ref><ref type="figure">e</ref>).</s><s>Ranking of MCs by their r i,t1 in experimental data demonstrated that the activity of MCs with high r i,t1 was not substantially reduced between t 1 and t 2 when MC→IN connections originating from cohorts were deleted.</s><s>As a consequence, these MCs continued to make large positive contributions to pattern correlation and variance at t 2 (Fig. <ref type="figure" target="#fig_14">6f</ref>).</s><s>The selective deletion of MC→IN connections from functional cohorts therefore abolished whitening because it disrupted feature suppression.</s><s>To corroborate this result we redirected feed-forward connections of MCs within cohorts to randomly selected IN targets, which perturbs the connectivity of cohorts without changing the total number of connections in the network.</s><s>This manipulation (Fig. <ref type="figure" target="#fig_14">6c</ref> "selective permutation") also abolished whitening (Fig. <ref type="figure" target="#fig_14">6d,</ref><ref type="figure">e</ref>) and eliminated the specific inhibition of MCs with high r i,t1 at t 2 (Fig. <ref type="figure" target="#fig_14">6f</ref>), as observed for the "selective deletion" of connections.</s></p><p><s>Finally, we randomized all connections except for those between the 19 cohort MCs and their IN partners ("selective preservation"; Fig. <ref type="figure" target="#fig_14">6c</ref>).</s><s>We found that pattern decorrelation remained intact (Fig. <ref type="figure" target="#fig_14">6d,</ref><ref type="figure">e</ref>), contrary to the loss of decorrelation after full randomization of the wiring diagram (Fig. <ref type="figure" target="#fig_11">3d,</ref><ref type="figure">e</ref>).</s><s>Variance normalization was partially reduced, as expected because cohorts were selected based on bile acid but not amino acid patterns.</s><s>The activity of MCs with high r i,t1 was strongly reduced at t 2 (Fig. <ref type="figure" target="#fig_14">6f</ref>), demonstrating that pattern decorrelation and partial variance normalization were generated by feature suppression.</s><s>Specific manipulations of the wiring diagram therefore demonstrate that whitening is mediated by disynaptic interactions that suppress the activity of correlation-promoting MC cohorts.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>We used a functional connectomics approach in a small vertebrate to explore the mechanism of whitening in the OB.</s><s>Whitening is a computation related to object classification and associative memory that requires specific transformations of neuronal activity patterns.</s><s>Such computations are thought to rely on specific wiring diagrams that are adapted to relevant inputs.</s><s>Consistent with this notion, we found that whitening is achieved by specific multisynaptic interactions that cannot be described by general topographic principles or by the first-order statistics of connectivity between neuron types.</s><s>Functional connectomics is therefore a promising approach to dissect distributed, memory-based computations underlying higher brain functions.</s></p><p><s>Correlations between input patterns in the OB were dominated by distinct subsets of strongly active input channels.</s><s>This correlation structure is likely to reflect the co-activation of different odorant receptors by discrete functional groups <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b12">13</ref> and implies that input correlations cannot be removed efficiently by contrast enhancement <ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref> .</s><s>Pattern decorrelation can also not be explained by the amplification of specific responses through disinhibition because it persisted when IN-IN connections were eliminated.</s><s>Rather, patterns are decorrelated by the selective inhibition of strongly active, correlation-promoting MC cohorts.</s><s>Pattern decorrelation is therefore achieved by a mechanism that results in contrast reduction, rather than contrast enhancement, which also supports contrast normalization.</s></p><p><s>The tuning-dependent MC-IN-MC connectivity required for whitening may be established by molecular or by activity-dependent mechanisms.</s><s>We reconstructed the wiring diagram of a larva at a stage before activity-dependent effects were detected on the morphological development of glomeruli <ref type="bibr" target="#b37">38</ref> , suggesting that the initial assembly of neuronal connections may rely primarily on molecular cues.</s><s>Projections of INs are enriched between glomeruli that receive input from odorant receptors of the same families <ref type="bibr" target="#b25">26</ref> , raising the possibility that glomerular targeting of sensory neurons <ref type="bibr" target="#b38">39</ref> and INs involve related mechanisms.</s><s>However, the development of specific connectivity among OB neurons remains to be explored.</s></p><p><s>Lateral inhibition between neurons with similar tuning is often assumed to sharpen tuning curves by amplifying asymmetries in the input.</s><s>In the OB, however, triplet connections between related MCs are enriched in reciprocal connectivity.</s><s>Such connectivity results in feedback inhibition that is independent of the precise input pattern and down-scales activity without amplifying asymmetries (Fig. <ref type="figure" target="#fig_13">5a</ref>, right).</s><s>Reciprocally connected MC↔IN↔MC cohorts therefore mediate feature suppression because the inhibitory feedback gain within the cohort is larger than the mean feedback gain when an appropriate feature is present.</s><s>This mechanism can explain the selective and odor-dependent inhibition of correlation-promoting MC cohorts.</s></p><p><s>Functional connectomics permitted us to test the significance of this mechanism by implementing the wiring diagram in a network of minimally complex model neurons.</s><s>Simulations included only ~30% of the MC population and did not quantitatively reproduce all details of the measured population activity.</s><s>Nevertheless, the dynamics that resulted in whitening by feature suppression was preserved, demonstrating that the computational function of the circuit is determined to a large extent by its connectivity.</s><s>Whitening was robust against input noise and parameter variations, presumably because the essential connectivity exhibits substantial redundancy.</s><s>Precisely targeted manipulations of the wiring diagram confirmed that feedback inhibition among correlation-promoting MC cohorts was necessary and sufficient to achieve whitening.</s><s>Hence, whitening in the OB depends on higher-order features of connectivity and is produced by a network mechanism that differs from canonical computations in the retina and other sensory systems, presumably because the statistical properties of sensory inputs differ between sensory modalities.</s></p><p><s>In visual cortex, functionally related principal neurons make stronger excitatory connections than random subsets of neurons <ref type="bibr" target="#b39">40</ref> .</s><s>Such connectivity can arise from Hebbian plasticity mechanisms, enhance representations of sensory features, and amplify specific inputs in memory networks after learning.</s><s>The connectivity observed in the OB, in contrast, results in disynaptic inhibitory interactions between functionally related principal neurons.</s><s>Functional connectivity in the OB is therefore similar in structure, but opposite in sign, to excitatory connectivity motifs in visual cortex.</s><s>As a consequence, the connectivity in the OB suppresses, rather than amplifies, specific features in the input.</s><s>Such a mechanism appears useful to attenuate the impact of irrelevant sensory inputs and to reduce undesired correlations.</s><s>The mechanism of feature suppression is consistent with networks that have been optimized for whitening in a theoretical framework with biologically plausible constraints <ref type="bibr" target="#b40">[41]</ref><ref type="bibr" target="#b41">[42]</ref><ref type="bibr" target="#b42">[43]</ref> , and inhibitory functional interactions between neurons with related tuning have also been observed in the rodent neocortex <ref type="bibr" target="#b43">44</ref> .</s><s>The elementary microcircuit that mediates whitening in the OB may therefore contribute to similar computations also in other brain areas.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Animals and preparation</head><p><s>Adult zebrafish (Danio rerio) were maintained and bred under standard conditions at 26.5°C.</s><s>Embryos and larvae of a double-transgenic line (elavl3:GCaMP5 x vglut:DsRed) <ref type="bibr" target="#b44">45,</ref><ref type="bibr" target="#b45">46</ref> in nacre background were raised at 28.5°C in standard E3 medium <ref type="bibr" target="#b46">47</ref> .</s></p><p><s>Imaging experiments were performed as described previously <ref type="bibr" target="#b47">48,</ref><ref type="bibr" target="#b48">49</ref> .</s><s>In brief, larvae 4 -5 days post fertilization were contained in a small drop of aerated E3 without methylene blue or Nphenylthiourea.</s><s>Larvae were then paralyzed by addition of 20 μl of fresh mivacurium chloride (Mivacron, GlaxoSmithKline, Munich, Germany) <ref type="bibr" target="#b49">50</ref> and embedded in 2% lowmelting agarose (type VII; Sigma, St Louis, MO, USA) in a perfusion chamber that was inclined by 30° to improve dorsal optical access to the OBs.</s><s>Agarose covering the noses was carefully removed.</s><s>A constant stream of E3 (2 ml/min) was delivered through a tube in front of the nose and removed by continuous suction.</s><s>Throughout the experiment it was ensured that larvae showed normal heartbeat.</s><s>Larvae that were not fixed for EM recovered from paralysis after a few hours and continued to develop without obvious defects.</s><s>All animal procedures were performed in accordance with official animal care guidelines and approved by the Veterinary Department of the Canton of Basel-Stadt (Switzerland).</s><s>The sex of zebrafish larvae is not yet determined at the age used in this study.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Odor stimulation</head><p><s>Odor application was performed as described <ref type="bibr" target="#b47">48</ref> .</s><s>In brief, odors were delivered to the nose through the E3 medium using a computer-controlled, pneumatically actuated HPLC injection valve (Rheodyne, Rohnert Park, CA, USA).</s><s>The rise time of stimuli was approximately 500 ms <ref type="bibr" target="#b50">51</ref> .</s><s>All experiments were carried out at room temperature (~22°C).</s><s>The odor set comprised one food odor <ref type="bibr" target="#b50">51</ref></s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Multiphoton calcium imaging</head><p><s>Multiphoton imaging was performed using a microscope equipped with a mode-locked Ti:sapphire laser (SpectraPhysics) and a 20× objective (NA 1.0, Zeiss) as described <ref type="bibr" target="#b51">52</ref> .</s></p><p><s>GCaMP5 was excited at 910 nm and emission was detected through green (535 ± 25 nm) and red (610 ± 37.5 nm) emission filters in separate channels.</s><s>Images (256 × 256 pixels) were acquired at 128 ms per frame using SCANIMAGE and EPHUS software <ref type="bibr" target="#b52">53,</ref><ref type="bibr" target="#b53">54</ref> for a total of 2 min in each trial.</s><s>Trials were performed sequentially in six focal planes that were separated by approximately 10 μm along the dorso-ventral axis of the OB.</s><s>The field of view covered the entire cross-section of the OB and parts of the adjacent telencephalon.</s><s>Ten stimulus trials (nine odors and one E3 control), each including two odor applications, were performed in each focal plane.</s><s>The order of stimuli was E3, food, GCDCA, TCA, TDCA, GCA, Trp, Lys, Phe, Val.</s><s>In addition, 2 min of spontaneous activity were recorded in each focal plane.</s><s>After completion of all trials a stack of images covering the whole olfactory bulb was acquired with a z-step interval of 0.5 μm.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Automated drift correction</head><p><s>Slow mechanical drift, which may be caused by capillary forces acting on the agarose matrix <ref type="bibr" target="#b54">55</ref> , was corrected between trials by an automated routine.</s><s>This routine acquired a small stack (± 3 μm around the focus; 0.5 μm steps) and compared images to a reference acquired previously by cross-correlation after standardizing image columns and rows.</s><s>The field of view was then automatically translated in X,Y and Z to maximize the crosscorrelation to the reference.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electron microscopy</head><p><s>Preparation and imaging of this sample have been described previously <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b25">26</ref> .</s><s>Briefly, tissue was stained en bloc with osmium, uranyl acetate and lead aspartate using an established protocol <ref type="bibr" target="#b55">56,</ref><ref type="bibr" target="#b56">57</ref> with minor modifications and embedded in Epon resin with silver particles to minimize charging <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b25">26</ref> .</s><s>Multi-tile images were acquired in high vacuum using a scanning electron microscope (QuantaFEG 200; FEI) equipped with an automated ultramicrotome inside the vacuum chamber (3View; Gatan).</s><s>Section thickness was 25 nm, pixel size was 9.25 × 9.25 nm 2 , and the electron dose was 17.5 e -nm -2 .</s><s>The dataset comprised 4,746 successive sections of which one section was lost due to technical problems.</s><s>The final stack was cropped to a size of 72.2 × 107.8 × 118.6 μm <ref type="bibr" target="#b2">3</ref> .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Neuron reconstruction and synapse annotation</head><p><s>Skeletons of all neurons in the OB were reconstructed previously as described <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b25">26</ref> .</s><s>Briefly, three independent skeletons of each neuron were generated manually from seed points at somata.</s><s>Skeletons were converged and mismatches were corrected as described, and high accuracy was verified by measures of precision and recall <ref type="bibr" target="#b25">26</ref> .</s><s>Tracing was performed using KNOSSOS (www.knossostool.org)</s><s>or PyKNOSSOS (https://github.com/adwanner/</s><s>PyKNOSSOS).</s><s>Most skeletons were generated by a professional high-throughput image annotation service (www.ariadne.ai).</s></p><p><s>Synapses were annotated manually using PyKNOSSOS in "flight" mode <ref type="bibr" target="#b24">25</ref> .</s><s>In the default configuration, PyKNOSSOS displays image data in four viewports: the YX viewport (imaging plane) and three mutually orthogonal viewports of arbitrary orientation.</s><s>In "flight" mode, the latter is perpendicular to the direction of the current neurite.</s><s>We found that this "auto-orthogonal" view increases tracing speed and facilitates the identification of branch points and synapses.</s><s>Annotators followed skeletonized reference neurons along precalculated paths to ensure that all neurites were annotated.</s><s>Most synapses were annotated by a professional image annotation service (www.ariadne.ai).</s></p><p><s>Synapses were identified by a cloud of vesicles that touched the plasma membrane, often at a site of intense staining.</s><s>Annotators defined synapses by placing three nodes: (1) a node in the presynapse, (2) a node in the synaptic cleft, and (3) a node in the postsynapse.</s><s>Nodes in the presynapse and postsynapse are skeleton nodes of the pre-and postsynaptic neurons if these skeletons are available.</s><s>In addition, annotators assigned a confidence level c to each synapse.</s><s>This confidence level was introduced because synapse identification is not unambiguous; rather, human experts can disagree whether a given structure is a synapse or not even when image quality is high.</s></p><p><s>Synapses were then classified as either "input synapse", "output synapse", "sensory synapse" or "unknown".</s><s>Input and output synapses are synapses of the reference neuron with the corresponding directions, excluding synapses with sensory neurons.</s><s>Sensory synapses are input synapses received by the reference neuron from axons of sensory neurons, which were identified by their dark cytoplasm <ref type="bibr" target="#b57">58</ref> .</s><s>Unknown structures resemble synapses but do not display all characteristic features.</s><s>These structures often included an intense staining of the membrane but no clearly associated vesicle cloud.</s><s>We therefore speculate that some of these structures may be gap junctions.</s></p><p><s>We first annotated input and output synapses of all MCs and INs independently of each other.</s><s>Hence, each synapse should have been encountered twice, once from the presynaptic side and once from the postsynaptic side.</s><s>Synapses of INs were then annotated again by different individuals, resulting in a 3-fold redundancy for each MC-IN synapse.</s><s>In order to minimize the number of false positives the final wiring diagram retained only those MC-IN synapses that were annotated on the MC and at least once on the IN.</s><s>As a control, we also repeated connectivity analyses and simulations with a wiring diagram that included only those synapses that were annotated at least three times.</s><s>This wiring diagram produced very similar results (not shown).</s></p><p><s>Each synapse was assigned a unitary weight.</s><s>As a consequence, the strength of the connection between two neurons in each direction was given by the number of synapses between this pair of neurons.</s><s>In addition, we tested two other methods to determine synaptic strength.</s><s>First, connection strength was binarized such that all connections had strengths 0 or 1, independent of the number of synapses.</s><s>Second, we defined the weight of a synapse as its mean confidence level c, and the total weight of a connection as the sum of the confidence levels of all synapses.</s><s>In addition, we tested various confidence thresholds to discard synapses with low confidence before determining the weights.</s><s>Similar results were obtained with all methods and a wide range of confidence thresholds, implying that results are highly robust.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Correlation between multiphoton and SBEM image stacks</head><p><s>Mapping of multiphoton to SBEM image data may be complicated by (1) mechanical distortions introduced by the sample preparation procedure, (2) shrinkage due to loss of extracellular space induced by chemical fixation <ref type="bibr" target="#b58">59</ref> , and (3) developmental changes occurring during the approximately three hours between the first calcium imaging trial and the final fixation of the tissue.</s><s>Initial observations indicated that distortions between image datasets were mostly linear (rotation, translation, shrinkage) while non-linear distortions appeared minimal and developmental changes were negligible.</s><s>We therefore used an affine transformation to map multiphoton images into the SBEM stack, followed by manual fine adjustment of regions of interest (ROIs) for the extraction of calcium signals.</s></p><p><s>An initial affine transformation matrix was fitted to a set of corresponding points that were selected manually in both datasets.</s><s>The EM volume was then transformed onto the twophoton images, the position of existing points were optimized manually, and additional pairs of corresponding points were selected.</s><s>The transform was then re-calculated based on the updated set of landmarks and this procedure was iterated until asymptotic behavior was observed.</s></p><p><s>All somata of the OB were outlined manually in the SBEM dataset and mapped onto the time-averaged multiphoton fluorescence images of each trial, resulting in 7280 mappings of somatic outlines in the SBEM dataset to regions of interest (ROIs) in 66 multiphoton images (11 trials at each of six optical planes).</s><s>The position of all ROIs was then manually adjusted to optimize the mapping in each trial.</s><s>The average displacement of ROIs during manual adjustment was small (593 ± 833 nm; mean ± s.d.; Extended Data Fig. <ref type="figure" target="#fig_9">1b</ref>), demonstrating that the accuracy of the initial affine mapping was already high.</s></p><p><s>INs in the larval zebrafish OB were previously divided into three classes based on morphological criteria <ref type="bibr" target="#b25">26</ref></s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Analysis of calcium signals</head><p><s>Individual frames of multiphoton image time series were low-pass spatially filtered with a mild 2D Gaussian kernel (σ = 1.2 pixels).</s><s>Baseline fluorescence F was calculated as the average fluorescence during a 2 s window before response onset.</s><s>Traces representing relative changes in fluorescence (ΔF/F) in each ROI were averaged over the two successive odor applications in each trial and band-pass filtered in time using a Butterworth filter with a cutoff frequency of 0.2 times the frame rate.</s><s>The average population response onset (t = 0) was determined manually from all raw ΔF/F traces and fixed for all trials.</s><s>Firing rate changes of neurons represented by individual ROIs were estimated by temporal deconvolution of calcium signals as described <ref type="bibr" target="#b27">28</ref> using standard parameters (τ decay = 3 s, thr noise = 0).</s></p><p><s>Analyses of population activity were restricted to neurons represented by ROIs with a radius ≥2 pixels in all trials (corresponding to an area of 3.14 μm 2 ; 232 MCs and 68 INs).</s><s>For network simulations and mechanistic analyses of whitening we considered only the 208 MCs that were pre-and post-synaptic to at least one IN and excluded 24 presumably premature MCs.</s><s>Population responses to different odors were compared by calculating the Pearson correlation coefficient between the population activity vectors of MCs for the different stimuli at a given time point after response onset.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Network modeling</head><p><s>MCs are glutamatergic while most or all INs in the developing zebrafish OB express GABA <ref type="bibr" target="#b47">48</ref> .</s><s>We therefore consider MCs to be excitatory and INs to be inhibitory.</s><s>MCs and INs were simulated as threshold-linear units with a state variable representing firing rate.</s><s>The r i (t) and u j (t) representing firing rates of MC i and IN j, respectively, followed the equations of motion The time course of sensory input S i (t) was modelled as difference of exponentials as described previously <ref type="bibr" target="#b32">33</ref> : To model S i (t), the individual sensory input of MC i, we used its experimentally measured activity a i during t 1 and modulated the time course according to s(t):</s></p><formula xml:id="formula_0">τ MC i ⋅ dr i (t) dt = -r i (t) + G sen i S i (t) -G inℎ i W MC IN i ⋅ [ u (t) -θ IN ] + τ IN j ⋅ du j (t) dt = -u j (t) + G exc j W IN MC j ⋅ [ r (t) -θ MC ] +</formula><formula xml:id="formula_1">s(t) = -a j, ∞ + a j, ∞ 1 -α (1 -e -τ</formula><p><s>S i (t) = a i s(t) s max , where s max = max t ≥ 0 (s(t))</s></p><p><s>The differential equations were solved in MATLAB with a fixed step size of 1 millisecond using a first degree Newton-Cotes integration scheme or using an adaptive step size embedded Runge-Kutta-Fehlberg (4, 5) scheme.</s><s>Both integration schemes lead to qualitatively very similar results, and therefore the former method was used for simplicity for the simulated data shown here.</s></p><p><s>In an iterative, semi-automated parameter search, we identified a suitable parameter range that fulfilled the following criteria:</s></p><p><s>(1)</s></p><p><s>The peak firing rates of individual neurons does not exceed a physiologically realistic range (&lt; 200 Hz).</s></p><p><s>(</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>2)</head><p><s>The strength of inhibition is appropriate to reproduce the time course of the average population activity, correlation and variance.</s></p><p><s>(3)</s></p><p><s>The activity, correlation contribution and variance contribution of individual MCs at t 1 and t 2 is in good correspondence to experimental measurements.</s></p><p><s>Parameters for which these criteria were fulfilled were found by parameter variations in pilot studies.</s><s>Results were usually robust against variations of each parameter by ±50% around the values reported above.</s></p><p><s>To simulate responses to noisy inputs we assumed that a MC receives convergent input from 40 olfactory sensory neurons of the same type, each spiking with Poisson statistics.</s><s>Simulated firing rates of sensory neurons were calculated in 25 ms windows, averaged over convergent sensory neurons, and scaled to obtain a total input to each MC with the same mean as in the noiseless case.</s><s>Assuming that each sensory neuron makes 10 synapses onto MCs, the total number of sensory neurons would be approximately 3'000 per epithelium.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Analysis of triplet motifs</head><p><s>Occurrences of disynaptic MC-IN-MC and IN-MC-IN motifs were counted after binarizing connections.</s><s>We enumerated all neuron triplet combinations in the reconstructed wiring diagram and tested for graph isomorphism against all 4 disynaptic motif types.</s><s>The obtained motif counts were compared against a reference model where the forward and backward connectivity of the MCs were permuted independently while maintaining the node count and edge density (n = 10,000 permutations).</s><s>The z-scores and p-values were obtained by computing the mean and standard deviation of each motif type in the permuted networks.</s></p><p><s>To compare the motif frequency as a function of the pairwise tuning similarity, we divided the MC pairs into two groups, one with tuning correlation higher than a threshold (e.g., r &gt; 0.5) and one with tuning correlation lower than the threshold (r ≤ 0.5), and counted the occurrences of MC-IN-MC and IN-MC-IN motifs in each group.</s><s>We then compared the motif counts against a reference model where we permuted the pairwise tuning similarity between MCs and regrouped them by tuning correlation while maintaining the same network topology (n = 10,000 permutations).</s><s>The z-scores and p-values were then obtained by computing the mean and standard deviation of each motif type in the permuted groups.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Additional analyses</head><p><s>The contribution of individual MCs to the Pearson correlation coefficient</s></p><formula xml:id="formula_2">r = 1 n -1 ∑ i = 1 n x i -x sd x y i -y sd y</formula><p><s>between population activity patterns was calculated by determining the summand</s></p><p><s>x i -x sd x y i -y sd y</s></p><p><s>for each MC.</s><s>Similarly, the contribution of individual MCs to the variance</s></p><formula xml:id="formula_3">sd x 2 = 1 n -1 ∑ i = 1 n (x i -x) 2</formula><p><s>of the population activity patterns was calculated by determining the summand (x i -x) 2 for each MC.</s><s>Here, x i and y i are responses of MCs to odors x and y, sd x and sd y are the standard deviations of population responses to odors x and y, and n is the total number of MCs in the population.</s></p><p><s>The analysis of disynaptic connectivity as a function of tuning correlation (Fig. <ref type="figure" target="#fig_12">4c</ref>; Extended Data Fig. <ref type="figure">7c</ref>) included only neurons that showed an obvious response because correlation measurements are sensitive to noise.</s><s>A neuron was classified as responsive when the average of the two largest responses exceeded the mean across all neuron-odor pairs by 0.6 standard deviations.</s><s>When applied to the matrix representing all MCs and odors, approximately 30% of MCs were classified as responsive by this criterion.</s><s>Weights of input synapses were normalized for each neuron to the sum of all inputs to that neuron and final plots were normalized to the mean.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistical analysis</head><p><s>No statistical methods were used to pre-determine sample sizes but our sample sizes are similar to those reported in previous publications <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b14">15</ref> or larger.</s><s>Reconstruction of the wiring diagram required no sampling because all neurons and synapses were annotated.</s></p><p><s>Neurons were randomly assigned to annotators for reconstruction.</s><s>The study included only one animal.</s><s>Stimulus presentation was not randomized.</s><s>Annotators were blind to the identity of neurons.</s><s>Otherwise, data collection and analysis were not performed blind to the conditions of the experiments.</s><s>No animals or datapoints were excluded from analyses.</s><s>Statistical comparisons were performed using a two-sided Wilcoxon rank-sum test, a twotailed t-test, a permutation test, or an F-test.</s><s>Normality and equal variance were tested when statistical tests were used that make these assumptions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Extended Data</head><p><s>Extended Data Fig.</s><s>The average fraction of synaptic inputs onto INs that came from sensory neurons was 5.9 ± 4.6% (mean ± s.d.).</s><s>This is an upper-bound estimate because structures in EM images were classified as sensory synapses even when they were small and when synaptic features such as postsynaptic densities and vesicle clusters were ambiguous.</s><s>No obvious synaptic connections were observed from OB neurons onto axon terminals of sensory neurons.</s><s>b, Displacement of regions of interest (ROIs) during manual proofreading.</s><s>ROIs representing somata were mapped from the EM dataset to optical image planes in each trial by an affine transformation that was determined by an iterative landmark-based procedure (Methods).</s><s>Subsequently, the position of each ROI was adjusted manually on the optical image (n = 7,280 ROIs; six image planes with 11 trials each).</s><s>The mean displacement (± s.d.) during manual adjustment (proofreading) was small (593 ± 833 nm), implying that automated mapping was highly reliable.</s><s>(1,000 repetitions; n = 414,000; number per bin: 3,000, 19,000, 22,000, 44,000, 96,000, 99,000, 75,000, 29,000, 24,000, 3,000).</s><s>Black curve shows mean of original data (left).</s><s>decorrelated by selective inhibition of strongly active neurons, which results in contrast reduction.</s><s>Decorrelation occurs because the relative contribution of moderately or weakly active neurons is enhanced as the activity of strongly active neurons is suppressed.</s><s>Selective inhibition of strongly active units is generated by reciprocal inhibition that is stronger or denser within cohorts of co-tuned neurons.</s><s>Inhibitory feedback gain is therefore higher than the average inhibitory feedback gain within a co-tuned cohort when the stimulus feature that activates the cohort is present (feature suppression).</s></p><p><s>Extended Data Fig. <ref type="figure">9</ref>.</s><s>Further characterization of functional cohorts.</s></p><p><s>a, Composition of functional MC cohorts.</s><s>For each pair of bile acid odors (X-axis), a functional MC cohort was defined as the 10 MCs that contribute most to the correlation between odor-evoked activity patterns at t 1 (highest r i,t1 ).</s><s>Gray pixels denote membership of each MC (Y-axis) in each cohort.</s><s>Cohorts for different odor pairs overlapped substantially.</s><s>Consistent with this observation, the mean Pearson correlation between tuning curves of MCs at t 1 was significantly higher within cohorts (r = 0.56 ± 0.40; mean ± s.d.) than across all MCs (r = 0.01 ± 0.38; p = 10 -84 ; two-sided Wilcoxon rank-sum test).</s><s>Furthermore, we analyzed the mean tuning correlation at t 1 among the 16 MCs that were not part of cohorts themselves but provided the highest number of disynaptic input connections to neurons inside cohorts (r = 0.23 ± 0.52; mean ± s.d.).</s><s>This tuning correlation was lower than the tuning correlation within the cohort but still significantly higher than the mean tuning correlation across all MCs (p = 10 -40 ; two-sided Wilcoxon rank-sum test).</s><s>Similarly, the mean tuning correlation at t 1 among the 16 MCs that received the most disynaptic output connections from neurons inside cohorts (r = 0.17 ± 0.53; mean ± s.d.) was lower than the tuning correlation within the cohort but significantly higher than the mean tuning correlation across all MCs (p = 10      were selected as starter cells.</s><s>Disynaptic inputs from all MCs were then represented in a vector and averaged over odor pairs.</s><s>Note strong overrepresentation of disynaptic connectivity within the cohort of starter cells (gray shading).</s><s>observed in experimental data as in a and in Fig. <ref type="figure" target="#fig_13">5c</ref> (same ranking under all conditions).</s><s>Gray: t 1 ; Colored: t 2 (mean over 50 repetitions for all permutations).</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc><div><p><s>To examine the contribution of IN-IN connections to the observed pattern transformations we modified the strength of IN-IN synapses from 100% (same strength as MC←IN connections) to 0% (no IN-IN connections).</s><s>Reducing IN-IN connection weights slightly decreased the mean activity, consistent with a disinhibitory effect of IN-IN connections, and slightly decreased pattern variance and its s.d.. Pattern decorrelation, however, remained almost unaffected (Fig.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head></head><label></label><figDesc><div><p><s>, four bile acids (glycochenodeoxycholic acid [GCDCA], taurocholic acid [TCA], taurodeoxycholic acid [TDCA] and glycocholic acid [GCA]; Sigma Aldrich, Munich, Germany) and four amino acids (Trp, Lys, Phe, and Val; Fluka, Neu-Ulm, Germany).</s><s>Stock solutions of GCDCA, TCA, TDCA, Trp, Lys, Phe and Val at 5 × 10 -3 M in E3 were kept refrigerated and diluted 1:500 (GCDCA, TCA, TDCA) or 1 : 50 (Trp, Lys, Phe, Val) in aerated E3 medium immediately before the experiment.</s><s>A stock solution of GCA was prepared in 50% ethanol/50% E3 at 2.5×10 -3 M, refrigerated, and diluted 1:250 immediately before the experiment.</s><s>In a given trial, an odor was applied twice for a duration of ~3 s with an inter-stimulus interval of 60 s.</s><s>Successive trials with different odors were separated by at least 2 min.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head></head><label></label><figDesc><div><p><s>. The 68 INs included in the activity dataset included neurons from all three without an obvious bias (13/53 INs of class 1, 20/78 INs of class 2, 31/123 INs of class 3).</s><s>Moreover, they included 4/4 neurons that were previously classified as atypical projection neurons 26 .</s><s>We did not observe an obvious bias of IN classes for specific connectivity motifs.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head></head><label></label><figDesc><div><p><s>where the vectors θ MC and θ IN are firing thresholds, W IN MC j and W MC IN i correspond to the reconstructed IN-to-MC and MC-to-IN connectivity weight matrices of the j th IN and of the i th MC, respectively, and the vectors r (t) and u (t) represent the firing rates of the MC and IN, respectively.</s><s>[] + denotes half-wave rectification: [x(t)] + = 0, x(t) &lt; 0 x(t), x(t) ≥ 0 τ MC i and τ IN j are the time constants for the individual MCs and INs, respectively.</s><s>G sen i , G inℎ i and G exc j are the individual scaling factor for sensory, inhibitory and excitatory input, respectively.</s><s>To account for the natural variability in biological systems, the parameter values for each of the cells in each of the individual simulation runs were drawn from a Gaussian distribution with a standard deviation of 1% of the distribution mean.</s><s>The distribution means of the different parameters were: G sen = 6, G exc = 0.7, G inh = 3.5, θ MC = 2, θ IN = 50, τ MC = 1, τ IN = 80;</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head></head><label></label><figDesc><div><p><s>r t -α + αe -τ d t ) with α = 0.8, τ r = 1 150 , τ d = 1 600 , a j, ∞ = 1 150</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>1 .</head><label>1</label><figDesc><div><p><s>Sensory input to INs and mapping of datasets.</s><s>a, Distribution of the fraction of synaptic inputs onto INs that originated from sensory axons.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Extended Data Fig. 2 .Extended Data Fig. 7 .</head><label>27</label><figDesc><div><p><s>Calcium imaging of odor responses.</s><s>a, Raw calcium signals (ΔF/F) evoked by eight odors in neurons that were present in all trials and included in simulations (208 MCs and 68 INs; average of two trials).</s><s>Gray bars indicate odor stimulation.</s><s>b, Raw calcium signals (ΔF/F) evoked by eight odors and E3 medium in neurons that were present in all trials and included in simulations (176 MCs and 50 INs; average of two trials; sorted by response to E3 medium).</s><s>c, Correlation matrices of MC activity patterns at t 1 and t 2 after excluding 10 MCs with highest responses to E3 medium (all MCs in b except for the first 10; n = 166 MCs in total).</s><s>Calcium signals weredeconvolved to estimate firing rate changes as in Fig.2.</s><s>As observed in the full dataset (Fig.2e), MC activity patterns evoked by similar odors were correlated at t 1 and became decorrelated at t 2 .</s><s>The main results were therefore not affected by possible responses to E3 medium.</s><s>Wanner and Friedrich Page 21 Nat Neurosci.</s><s>Author manuscript; available in PMC 2020 July 20.</s><s>Europe PMC Funders Author Manuscripts Europe PMC Funders Author Manuscripts Extended Data Fig. 3. Decoding of odor identity from MC activity patterns.</s><s>a, Pearson correlation matrices showing similarities of activity patterns across odors and trials at t 1 and t 2 (average over 100 repetitions).</s><s>In each repetition, two activity patterns (trials) were generated for each odor by randomly assigning the first or second response of each neuron to each trial.</s><s>Note the high correlations between activity patterns representing the same odor in different trials, particularly at t 2 .</s><s>b, Success rates of odor identification by template matching.</s><s>For each odor, the vector representing the odor in one trial (test vector) was correlated to vectors representing all odors in the other trial (templates) and assigned to the odor represented by the template with the highest correlation.</s><s>Dots show the mean fraction of correct identifications, error bars show s.d., boxes show median, 25 th percentile and 75 th percentile (n = 100 repetitions each).</s><s>Dashed gray line shows chance level.</s><s>Top: identification based on patterns averaged over time windows t 1 and t 2 (see text).</s><s>Bottom: identification based on single frames within t 1 and t 2 .</s><s>Left: tests and templates included all MCs.</s><s>Center, right: the 10 or 100 MCs with the highest contribution to the initial pattern correlation (highest r i,t1 ) were omitted for each odor pair.</s><s>Omitting the 10 MCs with the highest r i,t1 (cohorts) had almost no consequence on odor identification, confirming that information about precise odor identity is conveyed predominantly by other MCs.</s><s>Wanner and Friedrich Page 23 Nat Neurosci.</s><s>Author manuscript; available in PMC 2020 July 20.</s><s>Europe PMC Funders Author Manuscripts Europe PMC Funders Author Manuscripts Extended Data Fig. 4. Additional simulation results.</s><s>a, Mean Pearson correlation between IN activity patterns (blue) and the corresponding MC activity patterns (black) evoked by different bile acid inputs in simulations (n = 6 bile acid pairs each).</s><s>Correlations between IN activity patterns remain higher than correlations between MC activity patterns.</s><s>b, Mean Pearson correlation between simulated MC activity patterns evoked by inputs representing different odors (blue; all bile acid pairs) and between activity patterns evoked by inputs representing the same odors in trials with input noise (purple; all bile acids).</s><s>Shading shows s.d.. Noise was modeled based on conservative estimates of the number and firing rates of olfactory sensory neurons in zebrafish larvae (Methods).</s><s>Three noisy trials were simulated for each odor, resulting in n = 12 correlations between same-odor trials and n = 54 correlations between different-odor trials.</s><s>Patterns evoked by different inputs were decorrelated whereas noisy versions of the same inputs were not decorrelated.</s><s>Extended Data Fig. 5. Algebraic transformations of sensory inputs.</s><s>a, Schematic: simple algebraic approach to approximate transformations of MC activity patterns by feedback inhibition.</s><s>Input activity patterns (MC activity at t 1 ) were multiplied by the feed-forward connectivity matrix W MC→IN , normalized and thresholded.</s><s>Normalization and thresholding are basic operations performed by the neuronal circuits of the OB 10 and by individual neurons, respectively.</s><s>The resulting IN activity patterns were multiplied with the feedback connectivity matrix W MC←IN , resulting in odor-specific patterns of feedback inhibition onto MCs.</s><s>Feedback inhibition was either subtracted from the MC activation patterns (subtractive inhibition), or MC activation patterns were divided by the feedback inhibition patterns (divisive inhibition), followed by thresholding.</s><s>Scaling factors and thresholds were adjusted so that effects on the mean activity were small.</s><s>b, Mean activity, Pearson pattern correlation and s.d. of pattern variance at t 2 after algebraic transformations of input patterns as described in a ("Experiment": experimental results).</s><s>Horizontal black lines show mean experimental values at t 1 ; activity and s.d. of pattern variance is normalized to the experimental value at t 1 .</s><s>Dots show means, error bars show s.d., filled bars show difference to corresponding values at t 1 .</s><s>Box plots show median, 25% percentile, and 75 th percentile.</s><s>For experimental results and simulations using the reconstructed wiring diagram, variability was measured across odor pairs (correlation; bile acids only; n = 6) or individual odors (s.d. of variance; n = 8).</s><s>Significance tests compare values at t 2 to experimental values at t 1 (correlation: two-sided Wilcoxon rank-sum test; s.d. of variance: F-test with df1 = df2 = 7 degrees of freedom).</s><s>For results obtained with randomized wiring diagrams (W random), variability was measured across n = 50 permutations of the wiring diagram.</s><s>Significance tests compare repetitions to the mean value observed experimentally at t 1 (two-sided Wilcoxon rank-sum test).</s><s>*, p &lt; 0.05; **, p &lt; 0.01; ***, p &lt; 0.001; n.s., not significant.</s><s>In "targeted suppression", the activity of the 10 MCs that contributed most strongly to the pattern correlation at t 1 for each odor pair ("functional cohort") was set to the population mean.</s><s>No other manipulations or algebraic operations were performed.</s><s>P-values: activity: 0.57, 0.57, 0.25, 0.23 0.17; Pearson correlation: 0.03, 0.04, 0.98, 0.04, 0.008; s.d. of variance: 0.003, 10 -23 , 10 -26 , 10 -21 , 10 -16 .</s><s>Extended Data Fig. 6.</s><s>Occurrence of connectivity motifs as a function of tuning correlation.</s><s>Z-scores quantify the over-representation of motifs among MC pairs with signal correlations greater than a threshold between -0.8 and 0.8.</s><s>For each motif, color-coded bars show zscores for different signal correlation thresholds.</s><s>Z-scores were determined by comparison against 10,000 shufflings of the tuning correlation matrix as in Fig. 4d.</s><s>Functional connectivity between interneurons.</s><s>a, IN-MC-IN triplets included in the analysis.</s><s>Connections between INs were analyzed separately (see below and main text) to facilitate the comparison to MC-IN-MC triplets (Fig. 4).</s><s>b, Left: number of IN-MC-IN motifs found in the wiring diagram (considering only INs with activity measurements and at least one MC→IN and MC←IN connection; n = 66).</s><s>Right: z-score quantifying over-or under-representation of motifs as compared to 10,000 independent randomizations.</s><s>c, Top: disynaptic connections between responsive INs as a function of tuning similarity (Pearson correlation), normalized to the mean (n = 992 neuron pairs; neurons were included only when their activity exceeded a threshold; see Methods; number of neuron pairs per bin: 192, 218, 178, 228, 176).</s><s>Dots and error bars show mean ± s.e.m. when tuning curves were determined using all eight odor stimuli.</s><s>Box plots show median, 25 th percentile and 75 th percentile across results when tuning curves were determined by all possible combinations of four odors.</s><s>Bottom: result of the same analysis including only reciprocal connections (motif 4; n = 992 neuron pairs).</s><s>d, Left: Pearson correlations between the mean tuning curves of MC inputs to INs (n = 57 INs).</s><s>INs were ordered by optimal leaf ordering for hierarchical clustering.</s><s>Right: Pearson correlations between the mean tuning curves of the MC targets of INs (same ordering of INs).</s><s>INs were included in the analysis when their activity was measured, when they received input from at least 1 MC and 1 IN for which activity measurements were available, and when they targeted at least 1 MC and 1 IN for which activity measurements were available.</s><s>e, X-axis: Pearson correlation between the tuning curves of each IN and the mean tuning curves of MC inputs to the same IN (r IN-inputs ).</s><s>Y-axis: Pearson correlation between the tuning curves of each IN and the mean tuning curves of its MC targets (r IN-targets ).</s><s>r, correlation coefficient; ***, p = 10 -8 (two-tailed t-test, n = 63 INs).</s><s>INs were included in the analysis when their activity was measured, when they received input from at least 1 MC for which activity measurements were available, and when they targeted at least 1 MC for which activity measurements were available.</s><s>f, Black: number of maximal IN cliques in the wiring diagram as a function of clique size.</s><s>Gray curve shows expectation based on randomized wiring diagrams (10,000 permutations).</s><s>A maximal clique is a complete set of INs that are all reciprocally connected to each other.</s><s>Top and bottom plots show distributions for cliques without a MC and cliques with one reciprocally connected MC, respectively.</s><s>Maximal cliques with more than one MC do not exist because the wiring diagram contained no connections between MCs. g, Left: Mean Pearson correlation of tuning curves between neurons in maximal cliques as a function of clique size (n = 414; number per bin: 3, 19, 22, 44, 96, 99, 75, 29, 24, 3).</s><s>Dots and error bars show mean ± s.e.m.; box plots show median, 25 th percentile and 75 th percentile.</s><s>Gray curve shows mean after shuffling of tuning correlation matrix (right).</s><s>Right: same analysis after shuffling of tuning correlation matrix</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Extended Data Fig. 8 .</head><label>8</label><figDesc><div><p><s>Effects of different transformations on pattern correlation.</s><s>a, Schematic: effect of contrast enhancement on the correlation between displaced Gaussian patterns.</s><s>The X-axis represents neurons while the Y-axis represents their activity.</s><s>Blue and orange bars represent overlapping activity patterns evoked by two different stimuli.</s><s>The similarity of activity patterns is quantified by the Pearson correlation coefficient, r.</s><s>Note that many neurons respond to both stimuli but neurons showing maximal responses differ between stimuli.</s><s>Hence, strongly active neurons convey stimulus-specific information.</s><s>Contrast enhancement therefore decorrelates patterns because it emphasizes strongly active neurons and suppresses weakly active neurons.</s><s>b, Effect of contrast enhancement on the Pearson correlation between activity pattern that overlap in strongly active neurons.</s><s>Activity patterns have the same Pearson correlation as in a but their shape is slightly different: maximal responses to the two stimuli occur in the same neuron, and tails of moderately or weakly active neurons extend in opposite directions.</s><s>Hence, stimulus-specific information is conveyed primarily by moderately or weakly active neurons while strong responses are nonspecific.</s><s>As a consequence, contrast enhancement fails to decorrelate these patterns.</s><s>c, Patterns that overlap in strongly active neurons (same as in b; r: Pearson correlation) are</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head></head><label></label><figDesc><div><p><s>-17  ; two-sided Wilcoxon rank-sum test).</s><s>b, Black: frequency of each MC-IN-MC triplet motif in MC cohorts (n = 6 cohorts for each motif).</s><s>Dots show means, error bars show s.d., box plots show median, 25% percentile, and 75 th percentile.</s><s>Gray: frequency of MC-IN-MC triplet motifs among randomly selected MC subsets of the same size (n = 10 MCs; n = 600 repetitions for each motif).</s><s>Frequency of occurrence is normalized to the mean frequency in random subsets for each motif.</s><s>**, p &lt; 0.01; ***, p &lt; 0.001 (two-sided Wilcoxon rank-sum test).</s><s>P-values: 0.002, 10 -5 , 0.0008, 0.0001.</s><s>We also observed that the 10 INs receiving the largest number of MC inputs from each cohort were 1.7 times more likely to make direct connections than random subsets of INs (p = 0.007; two-sided Wilcoxon rank-sum test).</s><s>c, Blue: mean activity of the 10 MCs in the functional cohort defined by responses to TCA and GCDCA (example odors in Fig.5b).</s><s>Green: mean activity of the 10 INs that were included in activity measurements and provided the highest synaptic input to the MC cohort.</s><s>As expected, IN activity increased while MC activity decreased during odor application.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Fig. 1 .</head><label>1</label><figDesc><div><p><s>Fig. 1.</s><s>Neuronal organization and computations in the OB.</s><s>a, Schematic illustration of whitening in the OB.</s><s>Top: correlated input patterns with different variance.</s><s>Bottom: decorrelated output patterns with similar variance.</s><s>Center: Highly simplified illustration of the OB circuit.</s><s>MCs receive excitatory input from a single glomerulus and interact via inhibitory INs.</s><s>Whitening requires multisynaptic interactions between specific subsets of MCs that are mediated by INs and defined by the wiring diagram.</s><s>Interactions between INs and top-down inputs to the OB are not shown.</s><s>b, Example of a reciprocal synapse between a MC and an IN.</s><s>c, Reconstructions of a MC (left)</s></p></div></figDesc><graphic coords="36,132.24,62.00,407.52,503.56" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Fig. 2 .</head><label>2</label><figDesc><div><p><s>Fig. 2. Odor-evoked population activity in the OB.</s><s>a, Mapping of the six optical image planes selected for calcium imaging onto the EM-based reconstructions of neurons.</s><s>Thickness of planes shows range of drift between trials.</s><s>b, One optical image plane showing raw GCaMP5 fluorescence (left) and the corresponding oblique slice through the EM image stack (right).</s><s>Dashed line outlines ipsilateral brain hemisphere; continuous white outlines show glomerular neuropil.</s><s>Tel, telencephalon; OB, olfactory bulb.</s><s>Region outlined by the red square is enlarged; white dots depict somata in corresponding locations.</s><s>Bottom left: fluorescence change evoked by an odor stimulus in the same field of view.</s><s>Arrowheads depict locations of two responsive somata in different images.</s><s>The alignment of EM images with optical images was repeated in all n = 6 image planes with</s></p></div></figDesc><graphic coords="38,84.19,62.00,503.62,478.08" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Fig. 3 .</head><label>3</label><figDesc><div><p><s>Fig. 3. Whitening depends on connectivity.</s><s>a, Architecture of the simulated network.</s><s>Sensory input was targeted to MCs but not to INs. b, Time courses of simulated odor-evoked activity, pattern correlation (Pearson) and the s.d. of pattern variance obtained with different IN-IN connection strengths (100%, 20%, 0%).</s><s>100% corresponds to the same strength as MC←IN connections.</s><s>Measures were calculated across all n = 208 MCs.</s><s>c, Simulated network without IN-IN connections.</s><s>d, Time courses of simulated activity, pattern correlation (Pearson) and s.d. of pattern variance obtained with different wiring diagrams (no IN-IN connections).</s><s>Measures were calculated across all n =</s></p></div></figDesc><graphic coords="40,84.84,62.00,502.32,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Fig. 4 .</head><label>4</label><figDesc><div><p><s>Fig. 4. Tuning-dependent disynaptic connectivity in the OB.</s><s>a, Classes of triplet connectivity motifs between MCs and INs.</s><s>b, Left: number of connectivity motifs found in the wiring diagram (considering only MCs with activity measurements; n = 232).</s><s>Right: z-score quantifying over-or under-representation of motifs as compared to 10,000 independent randomizations of the wiring diagram.</s><s>c, Left: disynaptic connections between responsive MCs as a function of tuning similarity, normalized to the mean (n = 2,162 neuron pairs; Methods; number of neuron pairs per bin: 298, 368, 416, 502, 578).</s><s>Dots and error bars show mean ± s.e.m. when tuning curves were determined using all eight odor stimuli.</s><s>Box plots show median, 25 th percentile and 75 th percentile across results when tuning curves were determined by all possible combinations of four odors.</s><s>Right: same analysis including only reciprocal connections (motif 4; n = 2,162</s></p></div></figDesc><graphic coords="42,84.00,62.00,504.00,461.52" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Fig. 5 .</head><label>5</label><figDesc><div><p><s>Fig. 5. Disynaptic connectivity underlying feature suppression.</s><s>a, Schematic illustration of contrast enhancement by unidirectional lateral inhibition (left) and down-scaling of cohort activity by reciprocal inhibition (right; feature suppression).</s><s>Arrow length and grayscale indicate activity.</s><s>b, Example of MC activity patterns evoked by two bile acids (TCA, GCDCA) that were decorrelated between t 1 and t 2 .</s><s>MCs are ranked from top to bottom by their individual contribution to the pattern correlation r at t 1 (r i,t1 ;Pearson correlation).</s><s>c, Left: average contribution of MCs to all pairwise correlations between activity patterns evoked by bile acids at t 1 and t 2 .</s><s>MCs were ranked by r i,t1 for each</s></p></div></figDesc><graphic coords="44,205.68,62.00,260.64,503.77" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Fig. 6 .</head><label>6</label><figDesc><div><p><s>Fig. 6.</s><s>Mechanism of whitening analyzed by targeted manipulations of the wiring diagram.</s><s>a, Mean correlation contribution, activity, and variance contribution of MCs responding to bile acids at t 1 (light blue) and t 2 (dark blue) in simulations (correlation contribution: n = 6 bile acid pairs; activity and variance contribution: n = 8 odors).</s><s>MCs were ranked by the correlation contribution r i,t1 observed in experimental data as in Fig. 5c.</s><s>Insets enlarge the top parts of the curves (20 MCs with highest r i,t1 ) and compare simulation results to experimental data (gray, black) for the same 20 MCs.</s><s>b, Simulated synaptic inputs as a function of time during stimulus presentation for all MCs.</s><s>For each odor pair, MCs were</s></p></div></figDesc><graphic coords="46,170.94,62.00,330.12,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="24,84.00,62.00,504.00,142.56" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nat Neurosci.</s><s>Author manuscript; available in PMC 2020 July 20.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank <rs type="person">B. Hu</rs>, <rs type="person">A. Lüthi</rs>, <rs type="person">P. Rupprecht</rs> and <rs type="person">N. Temiz</rs> for comments on the manuscript and the <rs type="institution">Friedrich group</rs> for valuable discussions.C. Genoud made outstanding contributions to the acquisition of electron microscopy data.We thank <rs type="person">J. Li</rs>, <rs type="person">D. Robson</rs>, <rs type="person">F. Engert</rs> and <rs type="person">A. Schier</rs> (<rs type="affiliation">Harvard University</rs>) for elavl3:GCaMP5 fish.This work was Wanner and <rs type="institution">Friedrich Page 32 Nat Neurosci</rs>.Author manuscript; available in PMC 2020 July 20.Europe <rs type="grantName">PMC Funders Author Manuscripts Europe PMC Funders Author Manuscripts</rs> supported by the <rs type="funder">Novartis Research Foundation</rs>, the <rs type="funder">Human Frontiers Science Program (HFSP</rs>; rgp0015/2010; R.W.F.), and the <rs type="funder">Swiss National Science Foundation</rs> (SNF; <rs type="grantNumber">CRSII3_130470/1</rs>, <rs type="grantNumber">310030B_152833</rs>; R.W.F.).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_rPQwvU7">
+					<orgName type="grant-name">PMC Funders Author Manuscripts Europe PMC Funders Author Manuscripts</orgName>
+				</org>
+				<org type="funding" xml:id="_AP6UZvu">
+					<idno type="grant-number">CRSII3_130470/1</idno>
+				</org>
+				<org type="funding" xml:id="_fg46JnN">
+					<idno type="grant-number">310030B_152833</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Image data is available under http://doi.org/10.7281/T1MS3QN7</s><s>and can be accessed through the neurodata web services (NeuroData; http://neurodata.io/wanner16) 25 .</s><s>It can also be viewed interactively using PyKNOSSOS (https://github.com/adwanner/</s><s>PyKNOSSOS) 25 .</s><s>The skeleton reconstructions and soma outlines of the 1,022 neurons can be downloaded from http://dx.doi.org/</s><s>10.5281/zenodo.58985</s><s>as described 25 .</s><s>All other data that support the findings of this study are available from the corresponding authors upon reasonable request.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code availability</head><p><s>PyKNOSSOS is available at https://github.com/adwanner/PyKNOSSOS. Detailed instructions to access and analyze image data using PyKNOSSOS have been published previously 25 .</s><s>All other code used in this study is available from the corresponding authors upon reasonable request.</s></p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Natural image statistics and neural representation</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Simoncelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Olshausen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="1193" to="1216" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11520932</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">How does the brain solve visual object recognition?</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Dicarlo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zoccolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Rust</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="415" to="434" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22325196</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Neural networks for pattern recognition</title>
+		<author>
+			<persName><surname>Bishop</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<publisher>Clarendon Press</publisher>
+			<pubPlace>Oxford</pubPlace>
+		</imprint>
+	</monogr>
+	<note>CM</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">HB. Sensory communication</title>
+		<author>
+			<persName><surname>Barlow</surname></persName>
+		</author>
+		<editor>Rosenblith, WA</editor>
+		<imprint>
+			<date type="published" when="1961">1961</date>
+			<publisher>MIT Press</publisher>
+			<biblScope unit="page" from="217" to="234" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Convergent algorithm for sensory receptive-field development</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Atick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Redlich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="45" to="60" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Emergence of simple-cell receptive field properties by learning a sparse code for natural images</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Olshausen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Field</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">381</biblScope>
+			<biblScope unit="page" from="607" to="609" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8637596</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Efficient auditory coding</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Lewicki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">439</biblScope>
+			<biblScope unit="page" from="978" to="982" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16495999</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Dynamic optimization of odor representations in the olfactory bulb by slow temporal patterning of mitral cell activity</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Laurent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="page" from="889" to="894" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11157170</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Neuronal circuits and computations: pattern decorrelation in the olfactory bulb</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Wiechert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">FEBS Letters</title>
+		<imprint>
+			<biblScope unit="volume">588</biblScope>
+			<biblScope unit="page" from="2504" to="2513" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24911205</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Equalization of odor representations by a network of electrically coupled inhibitory interneurons</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1678" to="1686" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24077563</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Combinatorial and chemotopic odorant coding in the zebrafish olfactory bulb visualized by optical imaging</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">I</forename><surname>Korsching</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="737" to="752" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9182799</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">The molecular receptive range of an odorant receptor</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Araneda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Kini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Firestein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1248" to="1255" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11100145</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Maps of odorant molecular features in the mammalian olfactory bulb</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">K</forename><surname>Takahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Igarashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yamaguchi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol Rev</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="409" to="433" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16601265</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Multiplexing using synchrony in the zebrafish olfactory bulb</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Habermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Laurent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="862" to="871" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15273692</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Olfactory pattern classification by discrete neuronal network states</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Niessing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">465</biblScope>
+			<biblScope unit="page" from="47" to="52" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20393466</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Neuronal pattern separation in the olfactory bulb improves odor discrimination learning</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Gschwend</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1474" to="1482" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26301325</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Balancing the Robustness and Efficiency of Odor Representations during Learning</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Komiyama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="174" to="186" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27667005</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Context-and Output Layer-Dependent Long-Term Ensemble Plasticity in a Sensory Circuit</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yamada</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="1198" to="1212" />
+			<date type="published" when="1195">2017. 1195</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28238548</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">An Interglomerular Circuit Gates Glomerular Output and Implements Gain Control in the Mouse Olfactory Bulb</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Banerjee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="193" to="207" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26139373</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Viral tracing identifies distributed columnar organization in the olfactory bulb</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Willhite</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci USA</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page" from="12592" to="12597" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16895993</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Rat olfactory bulb mitral cells receive sparse glomerular inputs</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Fantana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Soucy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meister</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="802" to="814" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18786363</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Precision and diversity in an odor map on the olfactory bulb</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Soucy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Albeanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Fantana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">N</forename><surname>Murthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meister</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="210" to="220" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19151709</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Serial block-face scanning electron microscopy to reconstruct threedimensional tissue nanostructure</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Denk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Horstmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Biol</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15514700</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Structural neurobiology: missing link to a mechanistic understanding of neural computation</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Denk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Briggman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Helmstaedter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="351" to="358" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22353782</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">3-dimensional electron microscopic imaging of the zebrafish olfactory bulb and dense reconstruction of neurons</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Wanner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Genoud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Data</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Dense EM-based reconstruction of the interglomerular projectome in the zebrafish olfactory bulb</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Wanner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Genoud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Masudi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Siksou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="816" to="825" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27089019</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Genetically encoded calcium indicators for multi-color neural activity imaging and combination with optogenetics</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Akerboom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Mol Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23459413</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Reconstruction of firing rate changes across neuronal populations by temporally deconvolved Ca 2+ imaging</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Yaksi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="377" to="383" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16628208</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Topological reorganization of odor representations in the olfactory bulb</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Yaksi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Judkewitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Biol</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17608564</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Advancing biology through a deeper understanding of zebrafish ecology and evolution</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Parichy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">eLife</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Motile-cilia-mediated flow improves sensitivity and temporal resolution of olfactory computations</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Reiten</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Biol</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="166" to="174" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28041793</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Normalization as a canonical neural computation</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Heeger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="51" to="62" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22108672</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Mechanisms of pattern decorrelation by recurrent neuronal circuits</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Wiechert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Judkewitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Riecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1003" to="1010" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20581841</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Inhibitory interaction of receptor units in the eye of Limulus</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Hartline</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ratliff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Gen Physiol</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="357" to="376" />
+			<date type="published" when="1957">1957</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 13398569</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Refinement of odor molecule tuning by dendrodendritic synaptic inhibition in the olfactory bulb</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yokoi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nakanishi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci USA</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="3371" to="3375" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7724568</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Non-topographical contrast enhancement in the olfactory bulb</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Cleland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sethupathy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16433921</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Activity-dependent gating of lateral inhibition in the mouse olfactory bulb</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Arevian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kapoor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">N</forename><surname>Urban</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="80" to="87" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18084286</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Experience-dependent versus experience-independent postembryonic development of distinct groups of zebrafish olfactory glomeruli</title>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">R</forename><surname>Braubach</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="6905" to="6916" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23595749</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Developmental regulation of neural map formation in the mouse olfactory system</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nishizumi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sakano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Dev Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page" from="594" to="607" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25649346</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Functional specificity of local synaptic connections in neocortical networks</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">473</biblScope>
+			<biblScope unit="page" from="87" to="91" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21478872</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><surname>Pehlevan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chklovskii</surname></persName>
+		</author>
+		<title level="m">Advances in Neural Information Processing Systems 28. NIPS</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page">1350</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title level="m" type="main">53rd Annual Allerton Conference on Communication, Control, and Computing; Allerton</title>
+		<author>
+			<persName><forename type="first">C;</forename><surname>Pehlevan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Chklovskii</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="1458" to="1465" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<title level="m" type="main">A correlation game for unsupervised learning yields computational interpretations of Hebbian excitation, anti-Hebbian inhibition, and synapse elimination</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Seung</surname></persName>
+		</author>
+		<idno>arXiv. 2017</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Single-neuron perturbations reveal feature-specific competition in V1</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Chettih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Harvey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">567</biblScope>
+			<biblScope unit="page" from="334" to="340" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 30842660</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">A structural and functional ground plan for neurons in the hindbrain of zebrafish</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kinkhabwala</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci USA</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="1164" to="1169" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21199947</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Optimization of a GCaMP calcium indicator for neural activity imaging</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Akerboom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="13819" to="13840" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23035093</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">The zebrafish book. A guide for the laboratory use of zebrafish (Danio rerio)</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Westerfield</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<publisher>University of Oregon Press</publisher>
+		</imprint>
+	</monogr>
+	<note>4th Edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Early development of functional spatial maps in the zebrafish olfactory bulb</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="5784" to="5795" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15958745</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Methods for Mapping Neuronal Activity to Synaptic Connectivity: Lessons From Larval Zebrafish</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Wanner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vishwanathan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Neural Circuits</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">89</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 30410437</note>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">monitoring of neuronal network activity in zebrafish by two-photon Ca 2+ imaging</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Brustein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Marandi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kovalchuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Drapeau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Konnerth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Pflügers Arch</title>
+		<imprint>
+			<biblScope unit="volume">446</biblScope>
+			<biblScope unit="page" from="766" to="773" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12883893</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Processing of odor mixtures in the zebrafish olfactory bulb</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tabor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Yaksi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Weislogel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="6611" to="6620" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15269273</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">High-resolution optical control of spatiotemporal neuronal activity patterns in zebrafish using a digital micromirror device</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Fajardo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Shum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhang</forename><surname>Schärer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y-P</forename><surname>Friedrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Protoc</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1410" to="1425" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22743832</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">ScanImage: flexible software for operating laser scanning microscopes</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Pologruto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Sabatini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BioMed Eng OnLine</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12801419</note>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Ephus: multipurpose data acquisition software for neuroscience experiments</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Suter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Neural Circuits</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">100</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21960959</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Digital scanned laser light-sheet fluorescence microscopy (DSLM) of zebrafish and Drosophila embryonic development</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Keller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wittbrodt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Stelzer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cold Spring Harbor Protocols</title>
+		<imprint>
+			<biblScope unit="volume">2011</biblScope>
+			<biblScope unit="page" from="1235" to="1243" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21969622</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Enhancing serial block-face scanning electron microscopy to enable high resolution 3D nanohistology of cells and tissues</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Deerinck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Microsc Microanal</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1138" to="1139" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">High-contrast en bloc staining of neuronal tissue for field emission scanning electron microscopy</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Tapia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Protoc</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="193" to="206" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22240582</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">The neuropil of the glomeruli of the olfactory bulb</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Pinching</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Powell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Cell Sci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="347" to="377" />
+			<date type="published" when="1971">1971</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 4108057</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Ultrastructural analysis of adult mouse neocortex comparing aldehyde perfusion with cryo fixation</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Korogod</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Petersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Knott</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.05793</idno>
+	</analytic>
+	<monogr>
+		<title level="j">eLife</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Light blue: mean measures across INs. Correlation was measured only between activity patterns evoked by bile acids because patterns evoked by amino acids were dissimilar already at response onset. Right: Mean measures for MCs during t 1 and t 2 (activity, correlation, mean variance: two-sided Wilcoxon rank-sum test; s.d. of variance: F-test with df1 = df2 = 7 degrees of freedom; F = 14.0). Black markers and error bars show mean ± s.d.; gray lines show individual datapoints. e, Matrices showing Pearson correlations between activity patterns across</title>
+	</analytic>
+	<monogr>
+		<title level="m">response to four bile acids (BAs) and four amino acids (AAs) during two time windows</title>
+		<imprint/>
+	</monogr>
+	<note>INs. right; n = 68. at t 1 and t 2 . Odors: TCA, taurocholic acid; GCA, glycocholic acid; GCDCA, glycochenodeoxycholic acid; TDCA, taurodeoxycholic acid; Trp, tryptophan; Phe, phenylalanine; Val, valine; Lys, lysine</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

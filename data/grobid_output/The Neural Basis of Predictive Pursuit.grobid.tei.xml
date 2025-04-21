@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The neural basis of predictive pursuit</title>
+				<funder ref="#_bCDZWMs">
+					<orgName type="full">Templeton Foundation</orgName>
+				</funder>
+				<funder ref="#_wgv7vB3">
+					<orgName type="full">NIDA</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2020-07-06">2020 July 06.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Seng</forename><forename type="middle">Bum Michael</forename><surname>Yoo</surname></persName>
+							<idno type="ORCID">0000-0003-0625-1874</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jiaxin</forename><forename type="middle">Cindy</forename><surname>Tu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Neuroscience</orgName>
+								<orgName type="department" key="dep2">Center for Magnetic Resonance Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Steven</forename><forename type="middle">T</forename><surname>Piantadosi</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Psychology</orgName>
+								<orgName type="institution">University of California Berkeley</orgName>
+								<address>
+									<postCode>94720</postCode>
+									<settlement>Berkeley</settlement>
+									<region>CA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Benjamin</forename><forename type="middle">Yost</forename><surname>Hayden</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Neuroscience</orgName>
+								<orgName type="institution">Washington University at St.Louis</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Neuroscience</orgName>
+								<orgName type="institution">University of Minnesota</orgName>
+								<address>
+									<postCode>55455</postCode>
+									<settlement>Minneapolis</settlement>
+									<region>MN</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The neural basis of predictive pursuit</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Neuroscience</title>
+						<title level="j" type="abbrev">Nat Neurosci</title>
+						<idno type="ISSN">1097-6256</idno>
+						<idno type="eISSN">1546-1726</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">23</biblScope>
+							<biblScope unit="issue">2</biblScope>
+							<biblScope unit="page" from="252" to="259"/>
+							<date type="published" when="2020-07-06">2020 July 06.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CADD384F9B9F897E378054E97C546711</idno>
+					<idno type="DOI">10.1038/s41593-019-0561-6</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Newtonian physics</term>
+					<term>prediction</term>
+					<term>dorsal anterior cingulate cortex</term>
+					<term>generalized linear model</term>
+					<term>physics module</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>It remains unclear whether and, if so, how non-human animals make on-the-fly predictions during pursuit.</s><s>Here, we used a novel laboratory pursuit task that incentivizes prediction of future prey positions.</s><s>We trained three macaques to perform a joystick-controlled pursuit task in which prey follow intelligent escape algorithms.</s><s>Subjects aimed towards the prey's likely future positions, indicating that they generate internal predictions and use them to guide behavior.</s><s>We then developed a generative model that explains real-time pursuit trajectories and showed that our subjects use prey position, velocity, and acceleration to make predictions.</s><s>We identified neurons in the dorsal anterior cingulate cortex (dACC) whose responses track these three variables.</s><s>These neurons multiplexed prediction-related variables with a distinct and explicit representation of the prey's future position.</s><s>Our results provide a clear demonstration that the brain can explicitly represent future predictions and highlight the critical role of anterior cingulate cortex for futureoriented cognition.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p><s>Many foragers pursue fleeing prey.</s><s>The ability to effectively pursue prey is thus a critical element in our behavioral repertoires <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2</ref> .</s><s>To pursue effectively, a forager needs to perform a series of computations: it must maintain a representation of its current position relative to that of the prey, then compute a best path to capture the prey, then execute that path.</s><s>Because the ability to perform such computations can determine foraging success, pursuit has likely been an important driver of our cognition and its underlying brain systems <ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref> .</s></p><p><s>One way to improve pursuit effectiveness is to predict the future position of the prey and head towards the predicted position <ref type="bibr" target="#b5">6</ref> .</s><s>Estimating future positions can be done using the prey's basic Newtonian variables (most importantly, its current position, velocity, and acceleration) and can be improved using additional (potentially even recursive) variables, such as predictions about the likely evasive strategy of the prey in response to the predator's own future path.</s><s>By using such information, the forager may be able to formulate a representation of the predicted future position of the prey.</s><s>The ability of non-human animals to actively predict positions of prey during pursuit is poorly understood.</s><s>Nonetheless, predictive pursuit is an important part of the repertoire of many species.</s></p><p><s>Prediction is important for many cognitive and behavioral processes, not just foraging.</s><s>These include motor control, economic decision-making, and abstract long-term planning <ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref> .</s><s>There is some evidence that foraging animals can predict the long-term future -that is, they may be able to travel mentally in time and see themselves in the future <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b12">13</ref> .</s><s>However, observations about animal prediction tend to be limited to a small number of highly adapted species in unique contexts.</s><s>And, while future planning of movements is relatively wellstudied, the ability to predict future positions of prey during dynamic behavior with rapidly changing goals -which feed into but are distinct from motor plans -is not.</s><s>In the context of pursuit, a critical question is whether future-predicting foragers maintain a specific representation of potential future prey positions and whether those representations (assuming they exist) make use of specialized processes.</s></p><p><s>Although the neural bases of predictive pursuit remain unclear, we can draw some inferences about its likely neuroanatomy.</s><s>In particular, the dorsal anterior cingulate cortex (dACC) has been implicated in prediction, prospection, and related processes <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref> .</s><s>For example, neuroimaging studies indicate that human dACC is a key region for economic prediction <ref type="bibr" target="#b17">18</ref> , for prospective reasoning <ref type="bibr" target="#b7">8</ref> and for more open-ended prospective processes <ref type="bibr" target="#b17">18</ref> .</s><s>The dACC is well-positioned for this role: it receives broad inputs from limbic and cognitive systems, integrates these, and generates high-level control signals that regulate behavior in an abstract and high-level way <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref> .</s></p><p><s>Here, we examined the future predicting abilities of rhesus macaques using a novel virtual pursuit task.</s><s>Subjects used a joystick to move an avatar in an open two-dimensional field displayed on a computer screen.</s><s>Subjects, controlling the avatar, pursued a fleeing prey item that used an artificially intelligent (AI) algorithm to avoid predation.</s><s>By examining the properties of a generative model fit to our data, we found that our subjects moved towards extrapolated future positions of prey rather than just pointing towards the preys' present positions.</s><s>Our subjects' made their predictions based on three Newtonian variables associated with the current state, but not other factors that could further improve predictions (such as the effect of the subject's movements on the future position of the prey).</s><s>We also found that neurons in dACC were selective for those three Newtonian variables (and not others), indicating that responses in this region provide sufficient information to generate the types of predictions our subjects made.</s><s>Finally, we found that dACC neurons used a spatial code to explicitly represent the predicted future position of the prey, and that this future representation is multiplexed with the representation of current Newtonian variables.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral results</head><p><s>Three macaques (Macaca mulatta, subjects K, H, and C) used a joystick to control the position of an avatar (a yellow or purple circle) moving continuously and smoothly in a rectangular field on a computer screen (Figure <ref type="figure" target="#fig_0">1</ref>, Supplementary Video 1 and Methods).</s><s>On each trial, subjects had up to 20 seconds to capture a prey item (a fleeing colored square) to obtain a juice reward.</s><s>Prey avoided the avatar with a deterministic strategy that combined repulsion from the subject's current position with repulsion from the walls of the field.</s><s>The prey item was drawn randomly from a set of five, identified by color, that differed in maximum velocity and associated reward size.</s></p><p><s>All subjects showed stable behavior within twelve 2-hour training sessions that followed a longer training period on joystick use (Supplementary Figure <ref type="figure" target="#fig_0">1</ref> and Supplementary Figure <ref type="figure" target="#fig_1">2</ref>).</s><s>All data presented here were collected after the training sessions (number of trials, K: 3229; H: 3890; C: 2512).</s><s>Subjects successfully captured the prey in over 95% of trials and, on successful trials, did so in an average of 5.04 seconds (K: 4.26 sec; H: 5.32 sec; C: 5.54 sec) and median of 3.62 seconds (K: 3.36sec; H: 3.73 sec; C: 3.93 sec).</s><s>Subjects' performance varied lawfully with prey type, indicating sensitivity to manipulation of reward and/or difficulty (Supplementary Figure <ref type="figure" target="#fig_0">1</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral evidence of future state prediction</head><p><s>For analysis purposes, we split all data into one-second segments (Supplementary Figure <ref type="figure" target="#fig_2">3</ref>).</s><s>Within each segment, we calculated the error (sum of squares) between the model (see below) and the behavior at each frame (i.e., each 16.67 ms).</s><s>For each segment, we computed the minimum point on a 201×201 matrix of intensities for each parameter pair (force by time, Figure <ref type="figure" target="#fig_1">2</ref>, see below).</s><s>We then averaged over all segments and all trials, separately for the three subjects.</s></p><p><s>We developed a generative model of behavior (see Methods).</s><s>We used the variable τ (tau) to refer to the prediction parameter for each subject.</s><s>The variable τ comes from the model and refers to a fit scalar variable, which is multiplied by future position (see the equations in Methods section "Behavioral Model").</s><s>In practice, it can be interpreted as the distance into the future that the subject prospects to guide his behavior (Figure <ref type="figure" target="#fig_1">2A</ref>).</s><s>The variable τ can have positive, negative, or zero values.</s><s>A positive value for τ indicates that the subject points towards the expected future position of the prey -that is, the strategy reflects prediction.</s><s>A zero τ indicates that the subject points the joystick directly at the current position of the prey.</s><s>A negative value for τ indicates that the subject points the joystick towards where the prey was in the recent past.</s><s>Note that all of these strategies (within limits) are capable of eventually catching all prey, since the subject's avatar is, by design, faster than the prey.</s><s>The scalar parameter κ (kappa) reflects the amount of force applied toward the direction of the predicted position.</s><s>Thus, a negative value indicates that force is exerted away from (180 degrees opposite) the prey's position, whereas a positive value indicates that force is exerted towards it.</s></p><p><s>We also added an inertia term to the model.</s><s>Specifically, we computed an inertially biased path for each 16.67 ms frame.</s><s>The biased path is a vector sum of the computed best predicted direction and the previous direction (P subject (t) -P subject (t-1)).</s><s>In our implementation, these two terms have equal weighting.</s><s>Note that in practice, their relative weighting may nonetheless vary because the force term (κ, which is fit in the model), affects the weight of the new direction relative to the past direction.</s><s>This approach for implementing inertia is designed to align intuitively with how inertia works (see Methods, Supplementary Figure <ref type="figure" target="#fig_1">2</ref>, and Supplementary 4).</s></p><p><s>We called our first model the physics variable based prediction model (PVBP).</s><s>It assumes that subjects' prediction derives from the prey's current position, velocity (i.e. both speed and direction), and acceleration (which includes both direction and magnitude of acceleration), as well as further derivatives, see Supplementary Figure <ref type="figure" target="#fig_4">5</ref>).</s><s>For all three subjects, the best fitting τ is positive, indicating that they point the joystick towards the prey's future position.</s><s>For ease of interpretation, we translated τ into time units by calculating the distance between the current position and estimated position, then divided that quantity by the average velocity of the prey across the session.</s><s>The results of this calculation indicate that subjects K, H and C pointed the joystick towards the position that the prey would occupy in an average of 800 ms, 767 ms, and 733 ms in the future, respectively.</s><s>In the context of the task, these numbers are substantial: they reflect 18.78%, 14.42%, and 13.23% of the average trial duration for K, H, and C, respectively.</s></p><p><s>To determine whether the positive prediction parameter τ is significantly greater than zero, we performed a bootstrap (randomization test making use of resampling with replacement) of heatmap slices from each segment (individual heatmap from 500 segments).</s><s>This resampling was performed 500 times and resulting heatmaps were added.</s><s>Then the τ and κ that best explain each segment (that is, the one resulting in the lowest cost) were selected in each resampling.</s><s>We confirmed that the estimated value τ and κ are both greater than zero more than 99% of the time (i.e., p&lt;0.01).</s></p><p><s>The distance into the future that our subjects predicted did not detectably depend on the speed of the prey (linear regression between reward/speed and mean τ, K: β=3.0316, p=0.1110;</s><s>H: β=4.5798, p=0.1791;</s><s>C: β=7.1007, p=0.0957; the term β refers to the regression coefficient for speed against neural activity).</s><s>We next asked whether taking more complex paths (ones with more turns vs. more straight paths) affected prediction span.</s><s>Prey path complexity (as measured by path curvature estimated by average angle method) affected prediction.</s><s>Specifically, subjects predicted less far into the future when the prey path had more curves (K: β=-0.0687;</s><s>H: β=-0.0567;</s><s>C: β=-0.0898,</s><s>p&lt;0.0001 for each).</s><s>Thus, subjects had the ability to dynamically adjust their own prediction in light of changing circumstances.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Alternative models do not predict trajectories as well as physics-based prediction</head><p><s>We next compared the physics-based model to two other models implementing different prediction algorithms (Figure <ref type="figure" target="#fig_1">2B</ref>).</s><s>First, the veridical prediction (VP) model assumes that the subjects will make perfect predictions that incorporate all game dynamics, including preys' repulsion from the walls and the subject's avatar.</s><s>This means that a subject that makes a veridical prediction takes into account the effect his own movements will have on the prey's strategy.</s><s>Second, the cost contour map prediction (CCMP) model is the same as VP but excludes repulsion from the avatar, meaning that the subject's prediction model for the prey would not take into account their own motion.</s><s>We compared the performance of each model by computing the sum of squares error between the prediction trajectory and the observed trajectories over all time bins.</s></p><p><s>Using the Akaike Information Criterion (AIC), we found that the PVBP fit better than the other two models in our well-trained subjects (K: 7.529×10 6 , for subject K, second best was VP: 7.542×10 6 ; H, PVBP: 8.923×10 <ref type="bibr" target="#b5">6</ref> ; for subject H, second best was CMPP: 8.950×10 <ref type="bibr" target="#b5">6</ref> , Figure <ref type="figure" target="#fig_1">2D</ref>).</s><s>We fit each segment with distinct τ and κ parameters, and we fit these same two parameters for each of our three models.</s><s>As a consequence, the comparison of models can be done directly without concern of potential bias toward any specific model.</s><s>In other words, by fitting each of the three models subject to identical constraints, we ensured a fair comparison across models.</s><s>For the less well-trained subject, C, the CCMP model explained trajectories most accurately (7.955×10 6 ).</s></p><p><s>We speculated that one factor that may influence strategy is the speed of the prey.</s><s>Indeed, we found that all three subjects used PVBP more frequently when the speed of the prey was faster (Supplementary Figure <ref type="figure" target="#fig_5">6</ref>).</s><s>Note that this observed link between speed and the fit of the PVBP occurs even in our third (less fully trained) subject (p &lt; 0.001, logistic regression, Supplementary Figure <ref type="figure" target="#fig_5">6</ref>).</s><s>In any case, our model's classification of strategies appears to be robust: the same results were obtained using a different method.</s><s>Specifically, we fit all individual segments to the best model and computed the model that fits the most overall number of segments (Figure <ref type="figure" target="#fig_1">2D</ref> and Methods).</s></p><p><s>Doing the fitting this way may seem excessively flexible.</s><s>That is, using two times the number of segments might allow us to fit only noise.</s><s>(Consider, for example, the case of fitting 9 data points with 9th-order polynomial curve).</s><s>On the other hand, the extra freedom may allow us to better fit signal -or, of course, it may fit both noise and signal.</s><s>The key question, then, is whether using a large number of parameters makes the fit better despite the possibility of fitting noise.</s><s>To answer this question, we directly compared the two approaches (Supplementary Figure <ref type="figure" target="#fig_2">3</ref>).</s><s>Specifically, we compared a model assigning two parameters globally versus one applying two parameters for each one-second segment (i.e., Monkey K: 28,164; Monkey H: 35,308; Monkey C: 20,720 parameters, Supplementary Figure <ref type="figure" target="#fig_2">3</ref>).</s><s>We then used AIC to compare models.</s><s>We found that the second-by-second fitting resulted in lower AIC values, implying a better fit, than the 2-parameter counterpart.</s><s>Specifically, in this figure, for all individual subjects, the change in AIC (AIC for global parameter model minus AIC for second-by-second model) was positive -implying the model fit by second-by-second model explains the data better than the counterpart -for the best physics-based model explaining the subject's behavior.</s></p><p><s>Overall, the model comparison results showed that subjects predict the upcoming position of the prey using Newtonian physics but ignore the walls and their own influence on the prey.</s><s>That is, subjects use a simplified approximation of the structure of the game to make future predictions; presumably this simplified one is sufficient to generate good predictions with lower mental effort costs.</s><s>Indeed, the correlation between speed of prey and subjects' reliance on physics based prediction (a result confirmed with two different analytical approaches) suggests that prediction might have a computational cost.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Prediction-related information encoded in dorsal anterior cingulate cortex</head><p><s>Based on its role as a nexus for motivational, cognitive, and motor information <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b19">20</ref> , and its demonstrated role in human prospection <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b21">22</ref> , we hypothesized that dACC would be critical for predictive pursuit (Figure <ref type="figure" target="#fig_2">3A</ref>).</s><s>We fit a statistically unbiased Linear-Nonlinear Generalized Linear Model (GLM <ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b23">24</ref> ) to responses of 150 well-isolated dACC neurons (K: n=31; H: n=119).</s><s>For this analysis, we focused on the entire trial period rather than preselecting epochs.</s></p><p><s>Position, velocity, and acceleration of the prey were all encoded by significant proportions of neurons (Figure <ref type="figure" target="#fig_2">3</ref>; position: 62.00%, n=93/150; speed: 35.33%, n=53/150; 36.67%;</s><s>direction: n=55/150, acceleration: 24.67%, n=37/150, p&lt;0.001 in all cases, two-way binomial test).</s><s>The model fit shown in magenta is the shape of reconstructed filter (examples, Figure <ref type="figure" target="#fig_2">3C,</ref><ref type="figure">D</ref>).</s><s>According to the GLM, jerk, the derivative of acceleration, is not encoded (see Supplementary Figure <ref type="figure" target="#fig_4">5</ref>).</s><s>Jerk also did not measurably affect the subject's neural responses (it only modulated 2.00% of cells, n=3/150, p=0.1288, two-way binomial test).</s><s>Together, these results indicate that dACC ensembles carry the major raw ingredients that our subjects use to predict prey positions.</s></p><p><s>We wondered whether ostensible coding for prey variables could be the byproduct of coding for self-position, since self-position and prey position do tend to be somewhat correlated.</s><s>We therefore repeated our GLM analyses but included self-position, self-direction, and selfspeed as explanatory factors and considered variance explained by prey parameters only after accounting for these variables.</s><s>Doing this, the proportion of neurons selective for the prey's position information remained significant (n=108/167, 64.50%; p &lt; 0.001, two-way binomial test), as did neurons selective for prey speed (n=31/167, 22.16%; p&lt;0.001, twoway binomial test), and direction (n=20/167, 11.98%, p &lt; 0.001, two-way binomial test).</s><s>Note, for this analysis, we included a small subset of neurons, n=17, that were excluded from the previous analysis.</s><s>Results do not differ if we use the same slightly smaller set of neurons.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Neurons in dACC encode future position</head><p><s>We next asked whether dACC neurons encode the future position of the prey.</s><s>For each neuron, we refit the GLM using an additional parameter, the position of the prey at time t in the future.</s><s>We selected the time t (t=833ms) that was most similar to the value of τ resulting from our generative model, that is, the one indicating the most likely time span of prediction (733, 766, and 800 for the three subjects, respectively) subject to the additional constraint of being a multiple of 166.67 (i.e. 10 frames).</s><s>Note that although this value was chosen in advance, it aligns with the empirically derived measure of peak future position coding (Figure <ref type="figure" target="#fig_3">4D</ref>, see below).</s></p><p><s>Our analysis approach deals with the problem of correlation between the set of current Newtonian variables (including current position) and future position by assigning all explanatory power to the set of current variables first, and only counting as significant any additional variance explained by future position (see Methods).</s><s>Despite this conservative criterion, we found that responses of 24.67% of dACC neurons are selective for the prey's future position at time t (n=37/150).</s></p><p><s>Visual inspection of the neurons' filters shows that their selectivity is complex (examples are shown in Figure <ref type="figure" target="#fig_3">4C</ref>).</s><s>That is, they are positionally tuned, but, unlike place cells, have nonpoint-like shapes.</s><s>They contain multiple peaks.</s><s>They do not appear to be smooth gradients.</s><s>Instead, they appeared to be heterogeneously spatially tuned.</s><s>In this manner, they resemble recently identified non-grid-like space-selective cells in entorhinal cortex <ref type="bibr" target="#b22">23</ref> .</s><s>Notably, conventional methods for detecting place/grid-like cells will greatly underestimate the proportion of such tuning.</s></p><p><s>We next asked how strongly dACC neurons encode the future position of the prey.</s><s>We calculated the proportion of log likelihood increase (LLi) between the current position model and the current plus future model (Figure <ref type="figure" target="#fig_3">4A</ref>).</s><s>Our neurons showed a wide range of marginal variance explained.</s><s>On average, adding the future position term improved variance explained by 6.89% (the mean of this proportion is significantly different from zero, p&lt;0.001,</s><s>Wilcoxon sign-rank test, Figure <ref type="figure" target="#fig_3">4A inset</ref>).</s></p><p><s>We then asked whether these newly discovered future position cells constitute a separate class of neurons from the cells that tracked the current position of the prey.</s><s>To do this, we computed the explanatory variance accounted for by future position (variance explained by the combined model minus variance explained by current position) and current position, as defined by log likelihood improvement (LLi) in fitting.</s><s>We found a positive correlation between these variables (Figure <ref type="figure" target="#fig_3">4B</ref>), indicating current and future position were multiplexed in the same population of cells (r = 0.7394, p &lt; 0.001, cf. <ref type="bibr" target="#b24">25</ref> ).</s></p><p><s>To quantify the difference between current and future position coding, we fit separate models: one incorporated current position plus current Newtonian variables; the other was the same but used future position (assuming t=833 ms) instead of current position.</s><s>For the 36 neurons with significant tuning for both current and future position, we calculated the similarity between the filters, using a technique known as spatial efficiency, SPAEF <ref type="bibr" target="#b25">26</ref> (Figure <ref type="figure" target="#fig_3">4C</ref>).</s><s>A zero SPAEF indicates orthogonal filters; positive SPAEF indicates similar filters; negative SPAEF indicates anticorrelated filters.</s><s>Although the mean of the spatial efficiency for our neurons was positive, it was not significantly so, and spanned a large range of values from negative to positive (mean of population spatial efficiency=0.0440,</s><s>Wilcoxon sign-rank test, p=0.3790).</s></p><p><s>Finally, we assessed future encoding by examining the accuracy of model fitting to each of several possible future times, ranging from 0 to 1333 ms in the future.</s><s>We ran a type of sliding window analysis that involved sampling one frame (16.67 ms) every ten frames (166.67 ms) and ignoring the intervening nine frames.</s><s>We found that the value of 833 ms fits the largest number of neurons.</s><s>(Values around it fit many neurons too).</s><s>Specifically, the plurality, 24.67% of neurons, were tuned for prey position at 833 ms (Figure <ref type="figure" target="#fig_3">4D</ref>).</s><s>The roughly equivalent value of the neural and the behaviorally fit prospective distance (733 and 800 ms for those two subjects) suggests that these neurons encode the future position of prey on the same approximate timescale as the subject actively predicts.</s></p><p><s>We considered the possibility that this peak at 833 ms was due to some unanticipated correlation between positions in the future and at the present.</s><s>If this were so, then the average distance of the self and/or prey would show a local minimum at a point in the future corresponding to the peak.</s><s>However, we did not see this.</s><s>On the contrary, we found that the distance increases monotonically for both subjects (Figure <ref type="figure" target="#fig_3">4E</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>State information is not confounded with gaze information</head><p><s>Activity in dACC is selective for saccadic direction, and may therefore also correlate with gaze direction (although this has not, to our knowledge, been shown <ref type="bibr" target="#b26">27</ref> ).</s><s>Consequently, it is possible that our spatial kernels may reflect not task state but gaze information.</s><s>Specifically, what appears to be tuning for future position may instead be attributable to the fact that monkeys looked towards the predicted future prey position.</s><s>We tested this possibility by calculating the Euclidean distance between eye position and prey position in a range from -80 to +80 frames (Figure <ref type="figure" target="#fig_4">5A</ref>).</s><s>The distance between eye and prey position was the closest at -5 frames (77.09 pixels), indicating that eye position lagged prey position.</s><s>Thus, if gaze direction were a major confound, it would show up as increased selectivity for past positions, not prediction of future positions.</s><s>Likewise, the chance that prey velocity encoding is a by-product of eye velocity encoding was belied by the stark differences between gaze speed and prey speed (p &lt;0.001, Wilcoxon sign rank test, but also clear from visual inspection of Figure <ref type="figure" target="#fig_4">5B</ref>).</s><s>Finally, we repeated our GLM analyses (see above) but included eye position (only for the one subject from which we collected gaze data).</s><s>We found that that the number of tuned neurons for the prey did not substantially change; that is, that adding in gaze position as a regressor did not qualitatively change our results (Figure <ref type="figure" target="#fig_4">5C</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Encoding of reward and reward proximity in dACC</head><p><s>Research based on conventional choice tasks indicates that dACC neurons track values of potential rewards <ref type="bibr" target="#b27">28</ref> .</s><s>We next asked how dACC encodes anticipated rewards in our more complex task.</s><s>We found that, averaging over all other variables, the value of the pursued reward modulates activity of 8.67% of neurons (n=13/150, using a simple linear regression of firing rate against value; this proportion is greater than chance, p=0.038, one-way binomial test).</s><s>Note that this analysis ignores the potential encoding of prey speed, which is perfectly correlated with static reward in our task design.</s><s>We hypothesized that reward/speed would be encoded in a modulatory manner <ref type="bibr" target="#b28">29</ref> , that is, that the pursued reward/speed would alter the shape of the tuning for other task variables, rather than be multiplexed (Figure <ref type="figure" target="#fig_5">6A</ref>).</s><s>To test this hypothesis, we split our dataset by reward size and, as a control, split it randomly.</s><s>We found that for several variables (prey position, prey direction, and prey speed), value splits produced greater differences than random ones (purple bar, p = 0.0221 for prey speed, and p &lt; 0.001 for other prey variables, Figure <ref type="figure" target="#fig_5">6B</ref>).</s><s>This result indicates that the reward information encoded in dACC interacts mathematically with encoding of other variables.</s><s>In other words, selectivity is mixed.</s></p><p><s>A good deal of research suggests that dACC neurons also signal the approach in time of impending rewards <ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref><ref type="bibr" target="#b31">[32]</ref> , even in continuous tasks <ref type="bibr" target="#b32">33</ref> .</s><s>We thus asked whether it does so here.</s><s>We repeated our GLM, including relative (self-to-prey) distance as an explanatory variable.</s><s>We found that 38.67% of neurons (n=58/150) were tuned for self-prey distance.</s><s>Interestingly, this relationship is heterogeneous -of these 58 neurons, 31.03%</s><s>(n=18/58) showed a positive slope and 18.97 % (n=11/58) showed a negative slope.</s><s>This bias is not itself significant (p=0.2649 for rise and fall bias, n = 18/29; p = 1.000 for monotonic bias, n = 29/59, binomial test in all cases).</s><s>This result indicates that while dACC neurons do track the approach to reward, they do not show an overall rise or fall in activity as they do so.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DISCUSSION</head><p><s>Pursuit is an important element of the behavioral repertoire of many foragers <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b33">34</ref> .</s><s>The algorithmic bases of pursuit have recently attracted the interest of scholars in ecology, engineering, psychology, and other disciplines <ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref> .</s><s>Nonetheless, we know very little about how pursuit decisions occur in real time, and we know even less about their neuronal underpinnings.</s><s>Here, we examined how macaques pursue virtual prey in a continuous, timevarying task.</s><s>We developed a generative model based on a large dataset.</s><s>The result of this model suggests that our subjects follow a predictive strategy.</s><s>That is, instead of pointing towards the position of the prey, they extrapolate the future positions of prey and use this prediction to adjust their heading.</s><s>This strategy is more efficient (yields more reward per unit time) but may be more computationally demanding than a simpler one that would involve pointing at and tracking the current position of the prey.</s><s>These results demonstrate that pursuing animals can adopt complex future-predicting strategies that improve performance.</s></p><p><s>We found that dACC neurons track the elemental physical variables our subjects use to predict the future and explicitly encode the prediction.</s><s>Specifically, we found that firing rate responses of neurons in dACC encode three Newtonian variables (position, velocity, and acceleration) that our subjects used to track the prey and predict future prey positions.</s><s>The same neurons carry an additional representation of the future position of the prey that is multiplexed with the Newtonian variables rather than maintained in a separate pool of specialized neurons.</s><s>Both representations make use of a two-dimensional response field, akin to place fields in hippocampus, but not localized to a single position.</s><s>Specifically, spatial representation in dACC is qualitatively similar to place representations of non-grid cells in entorhinal cortex <ref type="bibr" target="#b22">23</ref> .</s><s>It is notable that dACC uses partially distinct spatial tuning functions to track the present and future positions of the prey, thus in principle allowing unambiguous decoding for a given population response.</s></p><p><s>Our work is directly inspired by important studies identifying mechanisms underlying pursuit in other animals <ref type="bibr" target="#b35">36,</ref><ref type="bibr" target="#b36">37,</ref><ref type="bibr" target="#b39">40</ref> .</s><s>Our work goes beyond these studies by developing a generative model, that is, a model that seeks to understand how the data are generated <ref type="bibr" target="#b40">41</ref> .</s><s>One benefit of the generative model is that it lets us probe how the decision is made at every time step and make guesses about the underlying mental process leading to decision.</s><s>The generative model in turn is vital for extending our understanding of mechanism to the neuronal level.</s></p><p><s>This model allows us to generate results that provide novel insight into the role of dACC in cognition.</s><s>First, our results emphasize the core role of dACC in prediction, a role that is central to other theories, albeit not ones that directly involve pursuit <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b42">43</ref> .</s><s>One recent study is particularly relevant to these results <ref type="bibr" target="#b16">17</ref> .</s><s>The authors examined hemodynamic activity in human dACC during a complex decision-making task in which subjects had to track previous rewards and use a reinforcement learning-like mechanism to formulate a future prediction and make the best choice.</s><s>They found that dACC tracks multiple variables, but was particularly selective for long-term estimates of expected prediction errors.</s><s>These results highlight the key role of dACC in prediction in general and suggest its role is conserved across species (see also <ref type="bibr" target="#b16">17</ref> ).</s><s>Second, our findings highlight the importance of dACC to navigation.</s><s>While studies of navigation typically focus on the medial temporal lobe, a growing body of work has begun to explore the role of cingulate cortex, which receives direct projections from medial temporal regions <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b43">44</ref> .</s></p><p><s>There are several important limitations to the present work.</s><s>First, and most obviously, our subjects were not performing a truly naturalistic task; they were performing a laboratory task that required specialized training.</s><s>Future studies will be needed to ascertain whether these results relate to natural pursuit contexts that are ostensibly similar, such as pursuit of insects in the peripersonal space <ref type="bibr" target="#b44">45,</ref><ref type="bibr" target="#b45">46</ref> .</s><s>Second, and relatedly, the task space we used was greatly constrained -both agents were restricted to a small rectangular space and had strict speed limits.</s><s>Subjects had full information about the position of the prey at all times.</s><s>To understand prediction more fully, it will be critical to extend to contexts in which some information is hidden.</s></p><p><s>Traditional laboratory tasks that study topics of interest to cognitive neuroscience -decisionmaking and executive control -have discrete steps and force the brain to adjust to that structure <ref type="bibr" target="#b46">47</ref> .</s><s>One reason we developed the prey pursuit task is that it embeds those cognitive processes in a continuous time-varying task.</s><s>Doing so allows us to study one of the brain's greatest strengths -its ability to adjust and change its mind on the fly as new evidence comes in <ref type="bibr" target="#b46">[47]</ref><ref type="bibr" target="#b47">[48]</ref><ref type="bibr" target="#b48">[49]</ref><ref type="bibr" target="#b49">[50]</ref> , and to incorporate that into future plans.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Material and Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Subjects.</head><p><s>All animal procedures were approved by the University Committee on Animal Resources at the University of Rochester and/or the University of Minnesota and were designed and conducted in compliance with the Public Health Service's Guide for the Care and Use of Animals.</s><s>Three male rhesus macaques (Macaca mulatta) served as subjects for the behavior; two of them also served as subjects for the physiology.</s><s>Age of subjects was 9 (subject K), 10 (subject C), and 10 (subject H), Subjects had never previously been exposed to decisionmaking tasks in which they could use a joystick to pursue a moving prey.</s><s>Previous training history for these subjects included two types of foraging tasks <ref type="bibr" target="#b50">51,</ref><ref type="bibr" target="#b51">52</ref> , intertemporal choice tasks <ref type="bibr" target="#b52">53</ref> , several types of gambling tasks <ref type="bibr" target="#b53">[54]</ref><ref type="bibr" target="#b54">[55]</ref><ref type="bibr" target="#b55">[56]</ref> , attentional tasks (similar to those in ref <ref type="bibr" target="#b56">57</ref> ), and two types of reward-based decision tasks <ref type="bibr" target="#b57">58,</ref><ref type="bibr" target="#b58">59</ref> .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimental apparatus.</head><p><s>The joystick was a modified version of commercially available joysticks with a built-in potentiometer (Logitech Extreme Pro 3D).</s><s>The control bar was removed and replaced with a control stick (a 15 cm plastic dowel) topped with a 3 cm diameter plastic sphere designed to be easy for macaques to manipulate.</s><s>The joystick position was read out by a custom coded program in Matlab running on the stimulus-control computer.</s><s>The joystick was controlled by an algorithm that detected the positional change of the joystick and limited the maximum pixel movement to within 23 pixels in 16.67 ms.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Task design.</head><p><s>At the beginning of each trial, two shapes appeared on a gray computer monitor placed directly in front of the subject.</s><s>The yellow (subject K) or purple (subjects H and C) circle (15-pixel diameter) represented the subject.</s><s>Subject position was determined by the joystick and was limited by the screen boundaries.</s><s>A square shape (30-pixel length) represented the prey.</s><s>The movement of the prey was determined by a simple AI (see below).</s><s>Each trial ended with either the successful capture of the prey or after 20 seconds, whichever came first.</s><s>Successful capture was defined as any spatial overlap between the avatar circle and the prey square.</s><s>Capture resulted in immediate juice reward; juice amount corresponded to prey color: orange (0.3 mL), blue (0.4 mL), green (0.5 mL), violet (0.6 mL), and cyan (0.7 mL).</s></p><p><s>The path of the prey was generated interactively using A-star pathfinding methods, which are commonly used in video gaming <ref type="bibr" target="#b59">60</ref> .</s><s>For every frame (16.67 ms), we computed the cost of 15 possible future positions the prey could move to in the next time-step.</s><s>These 15 positions were spaced equally on the circumference of a circle centered on the prey's current position, with a radius equal to the maximum distance the prey could travel within one time-step.</s><s>The cost in turn was based on two factors: the position in the field and the position of the subject's avatar.</s><s>The field that the prey moved in had a built-in bias for cost, which made the prey more likely to move towards the center (Figure <ref type="figure" target="#fig_0">1B</ref>).</s><s>The cost due to distance from the subject's avatar was transformed using a sigmoidal function: the cost became zero beyond a certain distance so that the prey did not move, and it became greater as distance from the subject's avatar decreased.</s><s>Eventually, the costs from these 15 positions were calculated and the position with the lowest cost was selected for the next movement.</s><s>If the next movement was beyond the screen range (1920×1080 resolution), then the position with the second lowest cost was selected, and so on.</s><s>The maximum speed of the subject was 23 pixels per frame (and each frame was 16.67 ms).</s><s>The maximum and minimum speeds of the prey varied across subjects and were set by the experimenter to obtain a large number of trials (Figure <ref type="figure" target="#fig_0">1</ref>).</s><s>Specifically, speeds were selected so that subjects could capture prey on &lt;85% of trials; these values were modified using a staircase method.</s><s>If subjects missed the prey three times consecutively, then the speed of the prey was reduced.</s><s>Once the subject intercepted the prey in a trial where the staircase method was used, then the selection of prey speed was randomized again.</s><s>To ensure sufficient time of pursuit, the minimum distance between the initial position of each subject avatar and prey was 400 pixels.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Training level estimation.</head><p><s>Three subjects were trained for the same amount of time (8 weeks).</s><s>As training progressed, each subject was exposed to a progressively more difficult (faster) suite of prey, up to a fixed maximum.</s><s>Subject K and subject H reached a similar range for maximum speed of prey during the training period (K:15 pixels per frame; H: 14 pixels per frame).</s><s>However, subject C only attained a maximum speed of 8 pixels per frame (Supplementary Figure <ref type="figure" target="#fig_5">6</ref>).</s><s>It is for this reason we refer to him as the less well-trained subject.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral model.</head><p><s>To fit each subject's movement, each trial was divided into 1-second-long segment.</s><s>Each segment included 61 data points (because we used 16.67 ms resolution).</s><s>We modeled these trajectories using a single prediction and a single force parameter for the entire trial, as a simplifying assumption.</s><s>Nonetheless, it is reasonable to assume that throughout a long, 20second period, there would be an active adjustment of prediction and force.</s><s>Actual comparison by AIC supported our intuition, and we used segment as the unit of analysis throughout (values of 'AIC of segment/AIC of trial' was 0.9328, 0.9214, 0.9227, for subjects K, H, and C (or whatever) respectively.</s></p><p><s>Overall, the position of the subject was generated according to the following:</s></p><formula xml:id="formula_0">P subject (t + 1) = κ f (P subject (t)) + m</formula><p><s>where P subject (t) is position of the subject at time t, m is the inertia of subject as calculated from the joystick, and κ is the force parameter.</s><s>The vector κf(P subject (t)) was then summed with the inertia m that was defined as following:</s></p><formula xml:id="formula_1">m = P subject (t) -P subject (t -1)</formula><p><s>P prey (t) indicates the position of the prey at time t.</s><s>The function with respect to subject position at time t was defined as:</s></p><formula xml:id="formula_2">f (P subject (t)) = P prey (t + 1) -P subject (t)</formula><p><s>Then the position of the prey at time t+1 was:</s></p><formula xml:id="formula_3">P prey (t + 1) = P prey (t) + τ∑ n = 0 k d n P prey (t) dt n</formula><p><s>Where the n indicates the order of derivation with respect to the time.</s><s>Thus, n=1 indicates velocity, and n = 2 indicates acceleration.</s></p><p><s>The Physics Variable-Based Prediction (PVBP) model incorporates one previous time step to predict the prey's next position.</s><s>This approach is similar to a Kalman filter <ref type="bibr" target="#b60">61</ref> .</s><s>The other two models we tested do not utilize any past information.</s><s>The model assuming prediction using the cost contour map (CCMP model) considers only the lowest cost location at the next time step.</s><s>The model assuming veridical prediction (VP) automatically finds the exact position of the prey at the next time step.</s><s>Once the prey's position on the next time step is predicted, the model computes how far this predicted position is from the agent's current position.</s><s>A prediction value of 1 indicates that the future position will be as far as from the agent's current position as the prey's current position.</s><s>The best-fitting parameter pairs were determined by performing a grid search across the ranges of both parameters.</s></p><p><s>During this search, we tested the range of the prediction parameter between -400 to 400 subjects H and C, and -200 to 200 for subject K. (Units for this range correspond to the distance the prey moved in the previous timestep).</s><s>Subjects H and C had a larger range, because over 5% of their trajectories resulted either in -200 or 200 in prediction parameter value.</s><s>Representative parameters for explaining each segment were selected based on the value of the sum of squared error between the actual segment and the segment generated by the model.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Significance testing for estimating parameters of behavioral model.</head><p><s>To determine whether the positive prediction parameter was significantly greater than zero, we performed a bootstrap of heatmap slices from each segment.</s><s>This resampling was performed 500 times, and selected heatmaps were added.</s><s>Then, the parameter set resulting in the lowest cost was selected in each resampling.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Model evaluation.</head><p><s>To evaluate model performance and compare among models, we computed the Akaike Information Criteria (AIC) using the likelihood of each model (Figure <ref type="figure" target="#fig_1">2</ref>, and Supplementary Figures 4 and Supplementary Figures 5).</s><s>We first calculated the mean and variance of all the sum-of-squared errors across trajectories.</s><s>Then we estimated the likelihood assuming a normal distribution centered on the mean of the sum-of-squared errors with a variance equivalent to the variance of the sum-of-squared errors across all trajectories.</s><s>To validate whether subjects used a single prediction and force across the all the trials or adaptively changed their prediction method, we compared the AIC value between cases where the parameter pair varied across all trajectories, using only the single best parameter pair.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electrophysiological recording.</head><p><s>One subject (H) was implanted with multiple floating microelectrode arrays (FMAs, Microprobes for Life Sciences, Gaithersburg, MD) in the dorsal anterior cingulate cortex (dACC).</s><s>This is the region that we define as Area 24 <ref type="bibr" target="#b14">15</ref> and that corresponds to dACC in most other primate studies, including those from our lab <ref type="bibr" target="#b51">52,</ref><ref type="bibr" target="#b53">54,</ref><ref type="bibr" target="#b61">62</ref> .</s><s>Each FMA had 32 electrodes (impedance 0.5 MOhm, 70% Pt, 30% Ir) of various lengths to reach multiple layers within dACC.</s><s>Neurons from subject K were recorded with laminar V-probes (Plexon, Inc, Dallas, TX) that had 24 contact points with 150 μm inter-contact distance.</s><s>Continuous, wideband neural signals were amplified, digitized at 40 kHz and stored using the Grapevine Data Acquisition System (Ripple, Inc., Salt Lake City, UT).</s><s>Spike sorting was done manually offline (Plexon Offline Sorter).</s><s>Spike sorting was performed blind to any experimental conditions to avoid bias.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Details of LN model.</head><p><s>To test the selectivity of neurons for various experimental variables, we constructed Generalized Linear Models with navigational variables (GLM <ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b23">24</ref> ).</s><s>The GLM models estimated the spike rate (r i ) of one neuron during time bin t as an exponential function of the weighted sum of the relevant value of each variable at time t, which the weights are determined by set of coefficients (w i ).</s><s>The estimated firing rates from the GLM models can be expressed as:</s></p><formula xml:id="formula_4">r = exp(∑ i X i T w i )/dt</formula><p><s>Where r denotes a vector of firing rates for one neuron over T time points across the session, and i indexes the variables of interest, e.g.</s><s>position of avatar on screen.</s><s>The vector of firing rates over T time points provide the benefit for modeling the neural activity without specific time-locking to behavioral event.</s><s>X i is a matrix in which each column represents a set of "state variables" of the animal (e.g. one of twelve speeds, determined by post-hoc binning) obtained from binning the continuous variable so that all the columns for a particular row are 0, except for one column.</s><s>Unlike conventional tuning curve analysis, GLM analysis does not assume the parametric shape of the tuning curve a priori.</s><s>Instead, the weights, which define the shape of tuning for each neuron, were optimized by maximizing the Poisson loglikelihood of the observed spike train given the model-expected spike number, with additional regularization for the smoothness of parameters in a continuous variable, and a lasso regularization for parameters in a discrete variable.</s><s>Position parameters were smoothed across rows and columns separately.</s><s>The regularization hyperparameter was chosen by maximizing the cross-validation log-likelihood based on several randomly selected neurons.</s><s>The unconstrained optimization with gradient and Hessian was performed (MATLAB fminunc function).</s><s>Model performance of each neuron was quantified by the log-likelihood of held out data under the model.</s><s>This cross-validation procedure was repeated 10 times (10fold cross-validation), and overfitting was penalized.</s><s>Through multiple levels of penalties, we can compare performance of models with varying complexity.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Forward model selection.</head><p><s>Model selection was based on the cross-validated log-likelihood value for each model.</s><s>We first fit n models with a single variable, where n is the total number of variables.</s><s>The best single model was determined by the largest increase in spike-normalized log-likelihood from the null model (i.e., the model with a single parameter representing the mean firing rate).</s><s>Then, additional variables (n-1 in total) were added to the best single variable model.</s><s>The best two-variable model was preferred over the single variable model only if it significantly improved the cross-validation log-likelihood (Wilcoxon Signed Rank Test, α = 0.05).</s><s>Likewise, the procedure was continued for the three-variable model and beyond if adding more variables significantly improved model performance, and the best, simplest model was selected.</s><s>The cell was categorized as not tuned to any of the variables considered if the loglikelihood increase was not significantly higher than baseline, which was mean firing rate of fitted neurons across the session.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Future position models.</head><p><s>We examined the effect of future position by fitting a GLM having 'future position' and 'current position' together as the input variable.</s><s>Then we compared to the GLM model with the only current position.</s><s>Difference between the two models was evidence that additional variance was explained by including future position.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Comparison between current and future position filters.</head><p><s>For this purpose, we constructed two GLMs: one with current position and current Newtonian variables (velocity and acceleration), and another with future position and current Newtonian variables.</s><s>Then we selected the neurons that showed significant tuning for both models.</s><s>To compare the similarity between two positional filters, we used the SPAtial EFficiency metric (SPAEF) that prior literature suggests to be more robust than the 2D spatial correlation <ref type="bibr" target="#b25">26</ref> .</s><s>It quantifies the similarity between two maps:</s></p><formula xml:id="formula_5">SPAEFF = 1 -(A -1) 2 + (B -1) 2 -(C -1)<label>2</label></formula><p><s>A is the Pearson correlation between two maps, B is the ratio between the coefficients of variation for each map, and C is the activity similarity measured by histogram profiles.</s></p><p><s>Values near -1 indicate anticorrelated maps (one tends to be high when the other is low); 0 indicates uncorrelated maps; 1 indicates perfect matching between the two.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Velocity dependent Physics Variable-Based Model (PVMP) prediction bias.</head><p><s>We examined whether PVBP is preferred when the velocity of prey is high (Supplementary Figure <ref type="figure" target="#fig_5">6</ref>).</s><s>We first obtained the average velocity of the prey at each segment, and then categorized each segment as belonging to either the physics or non-physics variable-based prediction based on which fit result was best.</s><s>With the prey velocity and segment category, we performed logistic regression with velocity as a predictor and category as the dependent variable (glmfit in MATLAB).</s><s>The distance between current prey position and future prey position at time t rises roughly linearly with time.</s><s>This finding indicates that the peaks found in panel D are not likely to be an artifact of some unforeseen periodicity in the relative paths of the subject and prey.</s><s>Dashed line: maximum distance of 1 grid, which is diagonal distance.</s><s>This provides a reference for the units on the y-axis.</s><s>The measure of center is mean value 50 bootstrapping, and error bars are the standard deviation.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Experimental paradigm and behavioral results.</s><s>(A) Cartoon of virtual pursuit task.</s><s>Subject uses a joystick to control an avatar (circle) and pursue prey (square) on a computer screen.</s><s>(B) Raincloud plot showing each subject's capture times in an example session (limit was 20 seconds).</s><s>The box plot indicates 2nd and 3rd quartile of the data; midline indicates the median of the data (K: 3.36 sec, H: 3.73 sec, C: 3.93 sec).</s><s>The dots under the probability density functions indicate individual data points.</s><s>(C) Avatar and prey trajectories on example trials.</s><s>Grey: path of avatar; red/blue: path of prey.</s><s>Color gradient indicates the time progression through the trial.</s></p></div></figDesc><graphic coords="20,126.12,62.00,419.76,344.12" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Model description and fitting results.</s><s>(A) Cartoon of model for generating future position based on prediction.</s><s>Solid black arrow indicates movement from previous time frame to the current one.</s><s>The resulting movement (red/blue dashed arrow) vectors are constrained to a maximum speed and inertia (black dashed arrow).</s><s>(B) Fitting results: Akaike Information Criterion (AIC, left) across all the trajectories and percentage of trials best explained by each model (right).</s><s>For calculating the AIC, we summed the log-likelihood across the whole data set from each subject individually and used the quantity (2 × number of the segments) as the number of free parameters.</s><s>This quantity was: subject K, 28,164; subject H, 35,308; subject C, 20,720 parameters.</s><s>Predictive models provide better fits than zero prediction ones.</s><s>(C) Example trajectories and corresponding fit trajectories generated by predictive and nonpredictive models.</s><s>(D) Heatmap plots of model performance explaining subject's pursuit segment across parameter space from a single subject (Subject K) for physics based model (left), cost model (center), and veridical (right).</s><s>The small gray circle at the peak indicates the best parameter combination explaining that subject's behavior, that is, the one that generates the smallest distance between the actual segment and model-predicted segment.</s></p></div></figDesc><graphic coords="21,124.08,62.00,423.84,339.12" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Basic neural results.</s><s>(A) Cartoon showing location of recorded brain areas in dACC; sagittal and coronal views.</s><s>(B) Filters (tuning surfaces) of two example neurons showing selectivity for current position of the prey.</s><s>(C) Example neuron showing tuning for speed (black line) and the corresponding model fit (magenta line).</s><s>(D) Example neuron showing tuning for prey direction (black line) and the corresponding model fit (blue line).</s><s>(E) Preponderance of tuning for the Newtonian physics variables tested.</s><s>Tuning for future position is counted only if the neuron is selectively tuned for future position above and beyond current position.</s></p></div></figDesc><graphic coords="22,125.88,62.00,420.24,213.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Properties of future position selectivity.</s><s>(A) The proportion of variance explained by including a future position as a regressor for spatial tuning for each neuron.</s><s>Only neurons that are selective for the current position are shown.</s><s>Neurons are sorted according to the amount of additional variance explained by future position.</s><s>Inset: histogram of loglikelihood increase (LLi, a measure of explanatory power) observed after adding the future position of the prey to the GLM.</s><s>(B) LLi for current and future position are correlated on a cell-by-cell basis.</s><s>Red solid line indicates the linear regression line; n=150 neurons; significance: two-tailed t-test.</s><s>(C) Example filters from neurons that are significantly tuned for both current and future prey position.</s><s>Y-axis of the central plot indicates SPAtial EFficiency (SPAEF), a measure of the similarity of two-dimensional filter (see Results) 26 .</s><s>Higher SPAEF indicates that the matrices are more similar to each other.</s><s>Only significant neurons are shown; cells are sorted by spatial efficiency.</s><s>(D) Sliding window analysis for future position encoding strength.</s><s>Plot shows the proportion of neurons significantly selective for a future position at several possible future delays.</s><s>This curve peaks at around 700-800 ms, which corresponds to the average prediction distance for all three subjects.</s><s>(E) The distance between current prey position and future prey position at time t rises roughly</s></p></div></figDesc><graphic coords="23,129.10,62.00,413.80,223.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5.Analyses that control for potential gaze confounds.</s><s>(A) The Euclidean distance between the eye position at t=0 and prey position (orange solid line) / self position (blue solid line).</s><s>Error shading: standard error of the mean.</s><s>Only data from subject K are shown (n=147280 frames).</s><s>(B) Speed distribution of prey movement and smooth eye pursuit.</s><s>(C) Proportion of neurons whose responses are selective for three key variables using our GLM procedure (red) and in an analysis in which all variance is assigned to eye position first (green).</s><s>All three variables are still significant in the population when including gaze position (total number of neurons in the analysis is 31).</s><s>The measure of center is mean value computed by a 50x bootstrap; error bars: standard deviation.</s></p></div></figDesc><graphic coords="24,139.44,62.00,393.12,115.75" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.Modulatory effect of reward size on tuning for prey variables.</s><s>(A) Responses of an example neuron selective for the angle between self and prey; changes in the reward size of prey (divided into three bins post-hoc) appear to change the gain and not the offset of the neurons; that is, reward interacts multiplicatively with angle.</s><s>Shading: standard deviation.</s><s>(B) This pattern is also observed in the population.</s><s>The proportion of neurons significantly tuned for prey variables (prey position, prey direction, and prey speed) when splitting data randomly (grey bar) or according to the value of pursued prey (purple bar).</s><s>The difference of value split was significant (p = 0.0221 for prey speed, and p &lt; 0.001 for other prey variables).</s><s>Precise p-value was p = 0.1887 (prey position), p=0.1516 (prey direction), p = 0.7039 (prey velocity).</s><s>Significance test: two-tailed t-test.</s><s>The measure of center is mean value computed by a 50x bootstrap; error bars: standard deviation.</s><s>Each filled circle indicates a single bootstrap sample.</s></p></div></figDesc><graphic coords="25,143.68,62.00,384.63,162.72" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nat Neurosci.</s><s>Author manuscript; available in PMC 2020 July 06.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank <rs type="person">Alex Thomé</rs> for his critical role in designing the task, for devising the training protocols, and for developing our joysticks.We thank <rs type="person">Marc Mancarella</rs> for his critical help with joystick training.We appreciate invaluable help from <rs type="person">Marc Schieber</rs>, <rs type="person">Adam Rouse</rs>, and <rs type="person">Sarah Heilbronner</rs>.</p></div>
+<div><head>Funding statement</head><p>This work was supported by an award from the <rs type="funder">Templeton Foundation</rs> to BYH and by an <rs type="grantNumber">R01</rs> from <rs type="funder">NIDA</rs> (<rs type="grantNumber">DA038615</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_bCDZWMs">
+					<idno type="grant-number">R01</idno>
+				</org>
+				<org type="funding" xml:id="_wgv7vB3">
+					<idno type="grant-number">DA038615</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability.</head><p><s>A portion of the data is available on Github (https://github.com/sbyoo/prospectpursuit/).</s><s>Full data are available from the corresponding author upon request.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code availability.</head><p><s>Code is available at https://github.com/sbyoo/prospectpursuit/.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistics.</head><p><s>Error bars of log-likelihood fit increase in neural analysis are obtained by a bootstrapping cross-validation procedure (50x, (Figure <ref type="figure">4A</ref>).</s><s>Error bars in percent tuned neuron are obtained by calculating mean for 50-time bootstrapping (Figure <ref type="figure">4D</ref>, Figure <ref type="figure">5C</ref>, Figure <ref type="figure">6B</ref>).</s><s>Other error bars are the standard error of the mean (SEM) (Figure <ref type="figure">5E</ref>, Figure <ref type="figure">6A</ref>, Supplementary Figure <ref type="figure">1</ref>).</s><s>No statistical methods were used to pre-determine sample sizes, but our sample sizes are similar to those reported in previous publications both from our lab and other labs (ref 41 for the behavioral model, ref 51 and 52 for the neural data).</s><s>Data were assumed to be normally distributed, but this was not formally tested.</s><s>Trial conditions were generated randomly.</s><s>Selection of subjects was arbitrary.</s><s>Data collection and analysis were not performed blind to the conditions of the experiments.</s><s>No data points were excluded.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Stephens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Foraging</forename><surname>Krebs</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Theory</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1986">1986</date>
+			<publisher>Princeton University Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Ydenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Dill</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Economics of Fleeing from Predator. Adv. Study Behav</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="229" to="249" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Ruxton GD Evolutionarily stable stealing: Game theory applied to kleptoparasitism</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Broom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav. Ecol</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="397" to="403" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Optimal flight initiation distance</title>
+		<author>
+			<persName><forename type="first">We &amp;</forename><surname>Cooper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">G</forename><surname>Frederick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Theor. Biol</title>
+		<imprint>
+			<biblScope unit="volume">244</biblScope>
+			<biblScope unit="page" from="59" to="67" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16949619</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Helfman GS Threat-sensitive predator avoidance in damselfish-trumpetfish interactions</title>
+	</analytic>
+	<monogr>
+		<title level="j">Behav. Ecol</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="47" to="58" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Echolocating bats use future-target information for optimal foraging</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Fujioka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Aihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sumiya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Aihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hiryu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="4848" to="4852" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27071082</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Can animals recall the past and plan for the future?</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">S</forename><surname>Clayton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Bussey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dickinson</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Opinion</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="685" to="691" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12894243</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Rushworth Correspondence MFS Prospection, Perseverance, and Insight in Sequential Behavior</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kolling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Scholl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chekroud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Trier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="1069" to="1082" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 30189202</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Georgopoulos AP Neurophysiology of Perceptual and Motor Aspects of Interception</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Merchant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="1" to="13" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16339504</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Baumeister RF &amp; Sripada C Navigating Into the Future or Driven by the Past</title>
+		<author>
+			<persName><forename type="first">Mep</forename><surname>Seligman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Railton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Perspect. Psychol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="119" to="141" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26172493</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Corballis MC The Evolution of Foresight What Is Mental Time Travel and Is It Unique To Humans</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suddendorf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Pdf. Behav. Brain Sci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="299" to="351" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17963565</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Planning for the future by western scrub-jays</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Raby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Alexis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dickinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">S</forename><surname>Clayton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">445</biblScope>
+			<biblScope unit="page" from="919" to="921" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17314979</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Making decisions with the future in mind: Developmental and comparative identification of mental time travel</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suddendorf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Busby</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Learn. Motiv</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="110" to="125" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Brown JW Medial prefrontal cortex as an action-outcome predictor</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Alexander</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1338" to="1344" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21926982</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Dorsal anterior cingulate cortex: A bottom-up view</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Heilbronner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Hayden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="149" to="170" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27090954</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Walton ME &amp; Behrens TE Frontal Cortex and Reward-Guided Learning and Decision-Making</title>
+		<author>
+			<persName><forename type="first">Mfs</forename><surname>Rushworth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Map</forename><surname>Noonan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Boorman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="1054" to="1069" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21689594</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Predictive decision making driven by multiple time-linked reward representations in the anterior cingulate cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Wittmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">12327</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27477632</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Braver T Risk prediction and aversion by anterior cingulate cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Brown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cogn. Affect. Behav. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="266" to="277" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18189000</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Cognitive and emotional influences in anterior cingulate cortex</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bush</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Luu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Posner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends.Cogn Sci</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="215" to="222" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10827444</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Anterior Cinculate Cortex: Wher Motor Control, Drive and Cognition Interface</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Paus</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Primate</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="417" to="424" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11389475</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Review The Expected Value of Control : An Integrative Theory of Anterior Cingulate Cortex Function</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Shenhav</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Botvinick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="217" to="240" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23889930</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">The Neural Representation of Prospective Choice during Spatial Planning and Decisions</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kaplan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS Biol</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">1002588</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28081125</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Adaptive Code for Navigation in Medial Entorhinal Cortex</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hardcastle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Maheswaranathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ganguli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lm A</forename><surname>Giocomo</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Multiplexed</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page" from="375" to="387" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28392071</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Spatio-temporal correlations and visual signalling in a complete neuronal population</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Pillow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">454</biblScope>
+			<biblScope unit="page" from="995" to="999" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18650810</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Robust mixture modeling reveals category-free selectivity in reward region neuronal ensembles</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Blanchard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Piantadosi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Hayden</surname></persName>
+		</author>
+		<idno>jn.00808.2017</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">The SPAtial EFficiency metric (SPAEF): Multiple-component evaluation of spatial patterns for optimization of hydrological models</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Demirel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stisen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Geosci. Model Dev</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="1873" to="1886" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Platt ML Neurons in anterior cingulate cortex multiplex information about reward and action</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Hayden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="3339" to="3346" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20203193</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Hayden BY Correlates of economic decisions in the dorsal and subgenual anterior cingulate cortices</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Azab</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Eur. J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="979" to="993" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29431892</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Economic Choice as an Untangling of Options into Actions</title>
+		<author>
+			<persName><forename type="first">Sbm</forename><surname>Yoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Hayden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="434" to="447" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 30092213</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Role for cingulate motor area cells in voluntary movement selection based on reward</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tanji</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="1335" to="1338" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Platt ML Neuronal basis of sequential foraging decisions in a patchy environment</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Hayden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Pearson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="933" to="939" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21642973</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Single Neuronal Signals Related to Degree of Reward Expectancy</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shidara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B Anterior</forename><surname>Richmond</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cingulate</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">296</biblScope>
+			<biblScope unit="page" from="1709" to="1711" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">How cognitive and reactive fear circuits optimize escape decisions in humans</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Qi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="3186" to="3191" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29507207</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Stephens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ydenberg</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Foraging</surname></persName>
+		</author>
+		<title level="m">Behavior and ecology</title>
+		<imprint>
+			<publisher>University of Chicago Press</publisher>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Tracking the Red Queen: Methods for Measuring Co-Evolutionary Progress in Open-Ended Simulations</title>
+		<author>
+			<persName><forename type="first">D &amp;</forename><surname>Cliff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">European Conference on Artificial Life</title>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<biblScope unit="page" from="200" to="218" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Tentacled snakes turn C-starts to their advantage and predict future prey behavior</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Catania</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U. S. A</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="11183" to="11187" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19549832</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Internal models direct dragonfly interception steering</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mischiati</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">517</biblScope>
+			<biblScope unit="page" from="1" to="13" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Murphey TD &amp; Mobley CD Massive increase in visual range preceded the origin of terrestrial vertebrates</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Maciver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Schmitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Mugan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="2375" to="E2384" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28270619</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">U</forename><surname>Mugan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Maciver</surname></persName>
+		</author>
+		<author>
+			<persName><surname>The</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/585760</idno>
+	</analytic>
+	<monogr>
+		<title level="j">bioRxiv</title>
+		<imprint>
+			<biblScope unit="volume">585760</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Rules Underlying Dragonfly Prey Selection and Interception Article Heuristic Rules Underlying Dragonfly Prey Selection and Interception</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Leonardo</forename><forename type="middle">A</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Leonardo</forename><forename type="middle">A</forename><surname>Heuristic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="1124" to="1137" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28366742</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Latent goal models for dynamic strategic interaction</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Iqbal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput. Biol</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="1" to="21" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Holroyd CB &amp; Coles MGH The Neural Basis of Human Error Processing : Reinforcement Learning, Dopamine, and the Error-Related Negativity</title>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol. Rev</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="679" to="709" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12374324</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Medial prefrontal cell activity signaling prediction errors of action values</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Matsumoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Matsumoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H &amp;</forename><surname>Abe</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Tanaka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="647" to="656" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Euston DR &amp; Gruber AJ Rat anterior cingulate cortex recalls features of remote reward locations after disfavoured reinforcements</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mashhoori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hashemnia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Mcnaughton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">29793</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29664400</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Nutritional contributions of insects to primate diets : Implications for primate evolution</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Rothman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raubenheimer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mah</forename><surname>Bryer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Takahashi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gilbert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Hum. Evol</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page" from="59" to="69" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24742878</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Tab Rasmussen D &amp; Raven PH Rethinking Primate Origins Again</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Sussman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Primatol</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page" from="95" to="106" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23184701</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Making decisions through a distributed consensus</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cisek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="927" to="936" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22683275</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Shadlen MN The Neural Basis of Decision Making</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Gold</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="535" to="574" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17600525</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pezzulo</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cisek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Navigating the Affordance Landscape : Feedback Control as a Process Model of Behavior and Cognition</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="414" to="424" />
+		</imprint>
+	</monogr>
+	<note>PubMed: 27118642</note>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Wolpert DM &amp; Shadlen MN Changes of mind in decision-making</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Resulaj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kiani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">461</biblScope>
+			<biblScope unit="page" from="263" to="266" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19693010</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">BY Monkeys are more patient in a foraging task than in a standard intertemporal choice task</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Blanchard</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hayden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS One</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1" to="11" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Strait CE &amp; Hayden BY Ramping ensemble activity in dorsal anterior cingulate neurons during persistent commitment to a decision</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Blanchard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="2439" to="2449" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26334016</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Hayden BY Postreward delays and systematic biases in measures of animal temporal discounting</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Blanchard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Pearson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="15491" to="15496" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24003113</note>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Hayden BY Correlates of decisional dynamics in the dorsal anterior cingulate cortex</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Azab</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Biol</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">2003091</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29141002</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Neuronal selectivity for spatial position of offers and choices in five reward regions</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Strait</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">01</biblScope>
+			<biblScope unit="page" from="1098" to="1111" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Hayden BY The description-experience gap in risky choice in nonhuman primates</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Heilbronner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychon. Bull. Rev</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="593" to="600" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26286883</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Gallant JL Working memory and decision processes in visual area V4</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Hayden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1" to="10" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23386807</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Differential contributions of ventral and dorsal striatum to early and late phases of cognitive set reconfiguration</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Sleezer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">Y</forename><surname>Hayden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cogn. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="1" to="16" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Hayden BY Reactivation of associative structure specific outcome responses during prospective evaluation in reward-based choices</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Z</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">15821</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28598438</note>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Nils J Formal Basis for the Heuristic Determination of Minumum Cost Path</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Hart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Syst. Sci. Cybern</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="100" to="107" />
+			<date type="published" when="1968">1968</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">New Approach to Linear Filtering and Prediction Problems</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Kalman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Basic Eng</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">35</biblScope>
+			<date type="published" when="1960">1960</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Hayden BY Neurons in Dorsal Anterior Cingulate Cortex Signal Postdecisional Variables in a Foraging Task</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Blanchard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="646" to="655" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24403162</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

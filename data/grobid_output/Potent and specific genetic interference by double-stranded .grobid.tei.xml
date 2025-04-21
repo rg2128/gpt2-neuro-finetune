@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Spreading silence with Sid</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2004-01-30">30 January 2004</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Peter</forename><surname>Van Roessel</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">The Wellcome Trust/Cancer Research</orgName>
+								<orgName type="department" key="dep2">Department of Genetics</orgName>
+								<orgName type="institution">Gurdon Institute</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Cambridge</orgName>
+								<address>
+									<addrLine>Tennis Court Road</addrLine>
+									<postCode>CB2 1QR</postCode>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Andrea</forename><forename type="middle">H</forename><surname>Brand</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">The Wellcome Trust/Cancer Research</orgName>
+								<orgName type="department" key="dep2">Department of Genetics</orgName>
+								<orgName type="institution">Gurdon Institute</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Cambridge</orgName>
+								<address>
+									<addrLine>Tennis Court Road</addrLine>
+									<postCode>CB2 1QR</postCode>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Stanford University School of Medicine</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Spreading silence with Sid</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2004-01-30">30 January 2004</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">897BF8021F033675EBF4668AE6A29E2A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>RNA interference (RNAi) has been shown to spread from cell to cell in plants and in Caenorhabditis elegans, but it does not spread in other organisms, such as Drosophila.</s><s>A recent report demonstrates that a membrane channel, encoded by the gene sid-1, is responsible for the spreading of RNAi between cells.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>RNA interference (RNAi) is the phenomenon by which double-stranded RNA (dsRNA) sequences trigger the sequence-specific degradation of homologous endogenous mRNAs.</s><s>RNAi was discovered serendipitously in 1998, when Andrew Fire and colleagues <ref type="bibr" target="#b0">[1]</ref> were attempting to block gene expression by injection of antisense RNA into adult Caenorhabditis elegans.</s><s>They discovered that the doublestranded RNA side-products of their RNA synthesis reactions were more effective inhibitors than single-stranded antisense RNA.</s><s>Concentrated solutions of dsRNA have since become a potent experimental tool for inhibiting gene expression in C. elegans and other model organisms, including Drosophila.</s></p><p><s>RNAi in C. elegans has two striking characteristics.</s><s>First, it is extremely specific and only targets mRNA sequences that are identical, not those that are closely related or highly homologous.</s><s>Second, it is systemic: injection of dsRNA into the gut of a hermaphrodite individual allows gene suppression in most tissues of the animal, as well as effective suppression in most tissues of the animal's progeny.</s><s>This 'spreading' characteristic underlies some of the most surprising observations in the short history of RNAi: namely that simply soaking worms in a solution of dsRNA <ref type="bibr" target="#b1">[2]</ref>, or feeding them transformed bacteria expressing dsRNA encoding a gene of choice <ref type="bibr" target="#b2">[3]</ref>, selectively suppresses the function of that gene in all of the individual's progeny.</s><s>The latter 'feeding' induction technique has enabled successful large-scale genome-wide screens, in which banks of transgenic strains of Escherichia coli, each engineered to produce dsRNA for a single gene of the C. elegans genome, have been used to screen C. elegans genes for roles in embryonic development, genome stability, fat metabolism, longevity, and other biological processes <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref>.</s></p><p><s>As befits a pathway with such basic biological significance and such tremendous experimental potential, a great deal of recent work has gone into understanding the molecular mechanisms of RNAi.</s><s>In the last five years great strides have been made in understanding the mechanisms by which dsRNA targets mRNA transcripts.</s><s>The current picture (reviewed in <ref type="bibr" target="#b8">[9,</ref><ref type="bibr" target="#b9">10]</ref>) is that dsRNA is cleaved into fragments of 21-23 nucleotides by the Dicer family of RNAse III enzymes.</s><s>These short dsRNA fragments are then incorporated into another enzyme complex, called the RNA-induced silencing complex (RISC).</s><s>The antisense strand of the dsRNA fragment targets the homologous mRNA for cleavage.</s><s>In contrast, however, surprisingly little is known about the mechanisms that allow the spreading of RNAi from cell to cell; for instance, it is not known what kind of molecule conveys the systemic RNAi signal, nor why some tissue types in C. elegans, such as the nervous system, are more resistant to systemic RNAi than others.</s><s>Two recent publications from the Hunter lab <ref type="bibr" target="#b10">[11,</ref><ref type="bibr" target="#b11">12]</ref> have now made significant progress in this direction.</s><s>The first contribution, from 2002 <ref type="bibr" target="#b10">[11]</ref>, describes a successful screening strategy for identifying genes involved in this non-autonomous spreading of RNAi.</s><s>The second, appearing in September 2003 <ref type="bibr" target="#b11">[12]</ref>, characterizes one of these genes and shows that it encodes a putative channel protein that functions in the uptake of dsRNA across cell membranes.</s></p><p><s>Hunter and colleagues took a clever approach to identify genes supporting the non-autonomous effects of RNAi.</s><s>They constructed a strain of C. elegans that visibly demonstrates both cell-autonomous and non-autonomous RNAi and screened for mutants in which non-autonomous RNAi fails but cell-autonomous RNAi persists.</s><s>The strain, described by Winston et al. <ref type="bibr" target="#b10">[11]</ref>, is one in which expression of green fluorescent protein (GFP) is driven in the muscles of both the pharynx and the body wall.</s><s>Expression of a dsRNA that targets and silences the GFP gene is then driven by a transgene construct that expresses a hairpin (double-stranded) RNA only in pharyngeal muscles.</s><s>This dsRNA triggers suppression of GFP in pharyngeal muscles, demonstrating that cell-autonomous RNAi is still functional, but it also triggers partial suppression of GFP expression in body-wall muscles, demonstrating systemic spreading of RNAi.</s><s>The authors <ref type="bibr" target="#b10">[11]</ref> completely silenced all GFP expression in this strain by additionally feeding these worms on transformed E. coli expressing GFP dsRNA, further demonstrating non-autonomous RNAi.</s><s>They then mutagenized the strain to identify progeny in which GFP expression was suppressed in pharyngeal muscles but retained body-wall muscles.</s><s>In such strains, the loss of GFP in pharyngeal muscles should confirm that cellautonomous RNAi mechanisms remain intact, while the persistent expression of GFP in body-wall muscles suggests that the RNAi no longer spreads systemically to neighboring cells.</s><s>Three complementation groups of 'systemic RNAi-deficient' animals were identified using this approach, and the mutations were mapped to genetic loci called sid-1, sid-2, and sid-3.</s></p><p><s>The sid-1 gene encodes a 776-amino-acid protein with multiple stretches of hydrophobic amino acids, and Sid1-GFP fusion proteins concentrate at cell membranes <ref type="bibr" target="#b10">[11]</ref>.</s><s>Together, these data suggest that the Sid-1 gene product functions as a membrane channel for an RNAi-inducing signal.</s><s>Using a ␤galactosidase protein-fusion assay, Feinberg and Hunter <ref type="bibr" target="#b11">[12]</ref> have now shown that the amino terminus of Sid-1 is extracellular and that multiple hydrophobic sequences in Sid-1 indeed span the plasma membrane of expressing cells.</s><s>A membrane channel for RNAi could conceivably function either in the export and/or in the import of an RNAi signal: demonstration that sid-1 is required cell-autonomously would indicate a function for the protein in the import of an RNAi signal, whereas demonstration that the protein functions non-cell-autonomously would be consistent with a role in export of RNAi.</s><s>Hunter and colleagues addressed this issue in the original report describing the identification of sid-1 <ref type="bibr" target="#b10">[11]</ref>.</s><s>Using an extrachromosomal transgene array driving mosaic expression of a sid-1-rescue transgene and a reporter construct encoding the red fluorescent protein DsRed in sid-1 mutants, they tested the ability of GFP expression in body-wall muscles to be repressed by exogenous GFP dsRNA.</s><s>In these sid-1 mosaic animals, cells that were observed to have silenced GFP expression (indicating effective systemic RNAi) were found to be marked by DsRed, indicating that they also expressed functional Sid-1 from the extrachromosomal array, whereas neighboring cells in which GFP was not silenced (those resistant to systemic RNAi) all lacked Sid-1 expression <ref type="bibr" target="#b10">[11]</ref>.</s><s>Thus, Hunter and colleagues <ref type="bibr" target="#b10">[11]</ref> inferred that sid-1 is required for import of an RNAi signal.</s><s>(The authors do not, however, exclude the possibility that sid-1 may also be required for export of an RNAi signal.)</s></p><p><s>In their more recent work, Feinberg and Hunter <ref type="bibr" target="#b11">[12]</ref> have shown that sid-1 is not only required for systemic RNAi but is also sufficient when ectopically expressed to promote uptake of dsRNA in cultured cells of Drosophila.</s><s>Flies lack an endogenous sid-1 ortholog, but despite this, Drosophila cells (such as the S2 cell line) are known to be susceptible to RNAi induced by dsRNA in their culture medium <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b13">14]</ref>.</s><s>Feinberg and Hunter <ref type="bibr" target="#b11">[12]</ref> have shown, however, that S2 cells expressing Sid-1 showed equivalently effective RNAi of a luciferase transgene at dsRNA concentrations 10,000 times less than those required by cells lacking Sid-1 function.</s><s>This effect appeared to be dependent on dsRNA length, as Sid-1 facilitated RNAi much more when cells were soaked in a solution of 500 base-pair (bp) dsRNAs than when they were soaked with 50 bp dsRNAs or 21 bp small interfering RNAs (siRNAs).</s><s>Using a similar cell-culture assay, the authors <ref type="bibr" target="#b11">[12]</ref> went on to show that Sid-1-mediated uptake of dsRNA probably takes place by a passive-diffusion mechanism: if transport were active it would be reduced in cold or energydepleted conditions, but in fact the uptake of radiolabeled dsRNA by Sid-1-expressing S2 cells was affected by cold or ATP depletion less than the uptake of dsRNA by cells lacking functional Sid-1.</s><s>Thus, the authors arrived at a model by which Sid-1 functions as a transmembrane channel protein, allowing passive diffusion of dsRNA into cells.</s></p><p><s>If RNAi functions as a primitive adaptive immune response, as has been postulated (discussed in <ref type="bibr" target="#b14">[15]</ref>), then Sid-1 may clearly have a function in supplying cells with the dsRNA trigger for such a response.</s><s>Consistent with such a role, endogenous Sid-1 in C. elegans appears to be expressed maximally in the cells that are exposed to the environment, such as those of the gut <ref type="bibr" target="#b10">[11]</ref>.</s><s>Beyond natural roles for the protein, however, as Feinberg and Hunter <ref type="bibr" target="#b11">[12]</ref> concluded, Sid-1-mediated dsRNA uptake may have numerous therapeutic and experimental applications.</s><s>Experimentally, highthroughput dsRNA 'soaking' screens of cell lines <ref type="bibr" target="#b15">[16]</ref> may be made more efficient by transgenic expression of Sid-1.</s><s>Cell lines that are otherwise refractory to such a soaking approach may be made responsive by expression of Sid-1.</s></p><p><s>Although RNAi induced by dsRNA transgenes in Drosophila is cell-autonomous and non-systemic <ref type="bibr" target="#b16">[17]</ref>, there is some evidence for the susceptibility of fly larvae to RNAi by soaking or ingesting dsRNA solutions <ref type="bibr" target="#b17">[18]</ref> and for the susceptibility of adults to intra-abdominal dsRNA injection <ref type="bibr" target="#b18">[19]</ref>.</s><s>Soaking or injection screens in Drosophila or other organisms that lack effective systemic RNAi, such as vertebrates, may be dramatically improved by creation of strains ubiquitously expressing exogenous Sid-1.</s><s>Feinberg and Hunter <ref type="bibr" target="#b11">[12]</ref> postulate that manipulating levels of Sid-1 in vertebrates may facilitate the future therapeutic use of RNAi to modulate gene expression in vivo.</s><s>Such applications may depend on the size-dependence of dsRNA transport mediated by Sid-1, however, as longer dsRNA sequences provoke non-specific responses in vertebrate cells.</s><s>Potential RNAi-based therapies have focused on the application of short siRNA sequences <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b20">21]</ref>.</s><s>Nonetheless, the description of sid-1 makes an extremely important contribution to our understanding of the systemic nature of RNAi in C. elegans, an under-researched aspect of this fundamentally important biological phenomenon.</s><s>Characterization of Sid-2 and Sid-3 is eagerly awaited.</s></p></div>		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Potent and specific genetic interference by double-stranded RNA in Caenorhabditis elegans</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Montgomery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Kostas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Driver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Mello</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">391</biblScope>
+			<biblScope unit="page" from="806" to="811" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">CC: RNAi in C. elegans: soaking in the genome sequence</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tabara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grishok</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mello</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">282</biblScope>
+			<biblScope unit="page" from="430" to="431" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Fire A: Ingestion of bacterially expressed dsRNAs can produce specific and potent genetic interference in Caenorhabditis elegans</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Timmons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Court</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Gene</title>
+		<imprint>
+			<biblScope unit="volume">263</biblScope>
+			<biblScope unit="page" from="103" to="112" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Functional genomic analysis of C. elegans chromosome I by systematic RNA interference</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Fraser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Kamath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zipperlen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Martinez-Campos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sohrmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ahringer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">408</biblScope>
+			<biblScope unit="page" from="325" to="330" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Identification of genes that protect the C. elegans genome against mutations by genome-wide RNAi</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pothof</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Van Haaften</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Thijssen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Kamath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Fraser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ahringer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Plasterk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tijsterman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genes Dev</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="443" to="448" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Genome-wide RNAi analysis of Caenorhabditis elegans fat regulatory genes</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ashrafi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">Y</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Watts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Fraser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Kamath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ahringer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ruvkun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">421</biblScope>
+			<biblScope unit="page" from="268" to="272" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">A systematic RNAi screen identifies a critical role for mitochondria in C. elegans longevity</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Fraser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Kamath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ahringer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ruvkun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Genet</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="40" to="48" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Systematic functional analysis of the Caenorhabditis elegans genome using RNAi</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Kamath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Fraser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Poulin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Durbin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gotta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kanapin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Le</forename><surname>Bot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Moreno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sohrmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">421</biblScope>
+			<biblScope unit="page" from="231" to="237" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">RNAi: nature abhors a doublestrand</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hutvagner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Zamore</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Genet Dev</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="225" to="232" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">RNA interference</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>Hannon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">418</biblScope>
+			<biblScope unit="page" from="244" to="251" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Systemic RNAi in C. elegans requires the putative transmembrane protein SID-1</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Winston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Molodowitch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Hunter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">295</biblScope>
+			<biblScope unit="page" from="2456" to="2459" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Transport of dsRNA into cells by the transmembrane protein SID-1</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Feinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Hunter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">301</biblScope>
+			<biblScope unit="page" from="1545" to="1547" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">dsRNA-mediated gene silencing in cultured Drosophila cells: a tissue culture model for the analysis of RNA interference</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Caplen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fleenor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Morgan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Gene</title>
+		<imprint>
+			<biblScope unit="volume">252</biblScope>
+			<biblScope unit="page" from="95" to="105" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Use of double-stranded RNA interference in Drosophila cell lines to dissect signal transduction pathways</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Clemens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Worby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Simonson-Leff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Muda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Maehama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Hemmings</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Dixon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="6499" to="6503" />
+			<date type="published" when="2000">2000</date>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Nucleic acid-based immune system: the antiviral potential of mammalian RNA silencing</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gitlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Andino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Virol</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="7159" to="7165" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Perrimon N: A functional genomic analysis of cell morphology using RNA interference</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kiger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Baum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Coulson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Echeverri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">27</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Two-color GFP imaging demonstrates cell-autonomy of GAL4-driven RNA interference in Drosophila</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Van Roessel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Hayward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Barros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Brand</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genesis</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="170" to="173" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Dynactin is necessary for synapse stabilization</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Eaton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Fetter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Davis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="729" to="741" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Intra-abdominal injection of double-stranded RNA into anesthetized adult Drosophila triggers RNA interference in the central nervous system</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dzitoyeva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Dimitrijevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Manev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="665" to="670" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Gene regulation: RNA to the rescue?</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Check</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">425</biblScope>
+			<biblScope unit="page" from="10" to="12" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Small RNA: can RNA interference be exploited for therapy?</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Wall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Lancet</title>
+		<imprint>
+			<biblScope unit="volume">362</biblScope>
+			<biblScope unit="page" from="1401" to="1403" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

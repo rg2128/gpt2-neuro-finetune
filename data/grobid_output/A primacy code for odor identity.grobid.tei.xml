@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A primacy code for odor identity</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2017-11-14">2017-11-14</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Wilson</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">NYU Neuroscience Institute</orgName>
+								<orgName type="institution" key="instit2">New York University Langone Medical Center</orgName>
+								<address>
+									<postCode>10016</postCode>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gabriela</forename><forename type="middle">O</forename><surname>Serrano</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">NYU Neuroscience Institute</orgName>
+								<orgName type="institution" key="instit2">New York University Langone Medical Center</orgName>
+								<address>
+									<postCode>10016</postCode>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexei</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Cold Spring Harbor Laboratory</orgName>
+								<address>
+									<addrLine>Cold Spring Harbor</addrLine>
+									<postCode>11724</postCode>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Dmitry</forename><surname>Rinberg</surname></persName>
+							<email>rinberg@nyu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">NYU Neuroscience Institute</orgName>
+								<orgName type="institution" key="instit2">New York University Langone Medical Center</orgName>
+								<address>
+									<postCode>10016</postCode>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Center for Neural Science</orgName>
+								<orgName type="institution">New York University</orgName>
+								<address>
+									<postCode>10003</postCode>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A primacy code for odor identity</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Communications</title>
+						<title level="j" type="abbrev">Nat Commun</title>
+						<idno type="eISSN">2041-1723</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">8</biblScope>
+							<biblScope unit="issue">1</biblScope>
+							<date type="published" when="2017-11-14" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">3F989CC4C5A841B6BA1AFC0FA39EF894</idno>
+					<idno type="DOI">10.1038/s41467-017-01432-4</idno>
+					<note type="submission">Received: 3 July 2017 Accepted: 15 September 2017</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:03+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Humans can identify visual objects independently of view angle and lighting, words independently of volume and pitch, and smells independently of concentration.</s><s>The computational principles underlying invariant object recognition remain mostly unknown.</s><s>Here we propose that, in olfaction, a small and relatively stable set comprised of the earliest activated receptors forms a code for concentration-invariant odor identity.</s><s>One prediction of this "primacy coding" scheme is that decisions based on odor identity can be made solely using early odor-evoked neural activity.</s><s>Using an optogenetic masking paradigm, we define the sensory integration time necessary for odor identification and demonstrate that animals can use information occurring &lt;100 ms after inhalation onset to identify odors.</s><s>Using multielectrode array recordings of odor responses in the olfactory bulb, we find that concentrationinvariant units respond earliest and at latencies that are within this behaviorally-defined time window.</s><s>We propose a computational model demonstrating how such a code can be read by neural circuits of the olfactory system.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>A substantial computational challenge for the olfactory system lies in resolving odorant identities despite fluctuations in odor concentration arising from proximity to odorant source, air turbulence, and natural breathing <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref> .</s><s>Odorants are sensed by olfactory sensory neurons (OSNs), each expressing one out of a large family of olfactory receptor (OR) genes <ref type="bibr" target="#b3">4</ref> .</s><s>Axon terminals from OSNs expressing the same OR gene converge in a few discrete structures in the olfactory bulb (OB) called glomeruli.</s><s>Odorants evoke responses in an ensemble of glomeruli to create a combinatorial representation of odor identity <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b5">6</ref> .</s><s>This representation varies not only across odorants, but also across concentrations of a single odorant (Fig. <ref type="figure">1a</ref>) <ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref> .</s><s>Low concentrations of odorant evoke activity in only the most sensitive glomeruli, while increases in concentration result in recruitment additional less sensitive glomeruli.</s><s>Despite this variability, odors' qualitative identities are preserved across a range of concentrations <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> .</s></p><p><s>In several sensory systems, including olfaction, neurons have been shown to convert the strength of excitatory input into latency of response <ref type="bibr" target="#b11">12</ref> , and it has been hypothesized that ORs with high affinity will depolarize OSNs earlier than those with low affinity <ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref> .</s><s>This emerges as a result of multiple processes, including intracellular signal integration <ref type="bibr" target="#b15">16</ref> and temporal dynamics of odorant concentration <ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref> .</s><s>For air breathing animals, sniffing determines the temporal dynamics of odorant concentration in the nose, resulting in an affinity-defined sequence of OSN recruitment.</s><s>While these sequences of recruitment vary across odorants, they have been shown to be mostly concentration invariant, as changes in concentration preserve temporal rankings of ORs with different affinities and these latencies are proposed to encode information about odor identity <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b20">21</ref> .</s></p><p><s>Here we propose a strategy for concentration-invariant odor identification which uses a few earliest activated glomeruli in a coding scheme we call "Primacy Coding".</s><s>We assume that the first few glomeruli activated during a sniff are those receiving input from the most sensitive ORs for a given odorant.</s><s>We propose that solely the members of this small set of early glomeruli encode odor identity.</s><s>While this primary set varies between odorants, we assume that it is mostly preserved across concentrations of the same odorant.</s><s>As concentration is increased, responses of less sensitive glomeruli are recruited later than the primary set, thereby maintaining the members of the early set and preserving encoded odor identity information (Fig. <ref type="figure">1b,</ref><ref type="figure">c</ref>).</s></p><p><s>One of the central predictions of primacy coding is that animals use early "slices" of odor-evoked neural activity to define odor identity independently of the remainder of the pattern of evoked activity.</s><s>To test this hypothesis, we developed an optogenetic masking paradigm in which we could create a temporally controlled masking stimulus during an odor discrimination task (Fig. <ref type="figure">1d</ref>).</s><s>Through delayed triggering of this optogenetic masking stimulus relative to inhalation onset, we could preserve early epochs of odor-evoked information while making the overall combinatorial code unreliable through the activation of a large, heterogeneous subset of OSNs.</s><s>We reasoned that if odor identity can be defined using only a small subset of early-responding primary glomeruli, our mask should not impair odor identification as long as it is initiated after this identity-defining subset.</s><s>Conversely, activation of the mask before this initial subset of glomeruli is active should impair odor discrimination.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p><s>Optogenetic masking of late odor-evoked activity.</s><s>To produce the mask stimulus, we delivered 2 light pulses (25 mW, 2 ms duration, 10 ms inter-pulse interval) to the olfactory epithelium in both nostrils of the transgenic mouse expressing channel rhodopsin-2 (ChR2) in all OSNs <ref type="bibr" target="#b21">22</ref> .</s><s>The light was delivered via optical fiber stubs implanted above the olfactory epithelium.</s><s>To characterize the neural response to the mask stimulus, we recorded light and odor-evoked activity of mitral-tufted (MT) cells (n = 119: 39 single-unit, 80 multi-unit) in the OB, which are the first recipient of input from OSNs (Fig. <ref type="figure" target="#fig_1">2a</ref>, Supplementary Fig. <ref type="figure" target="#fig_1">2A-D</ref>).</s><s>The masking stimulus generated responses occurring after a short delay following light onset (mean = 11.5 ms, mode = 8 ms) (Fig. <ref type="figure" target="#fig_1">2c</ref>).</s><s>The overall mask excitatory response lasts approximately 50 ms, followed by prolonged inhibitory response until approximately 200 ms (Fig. <ref type="figure" target="#fig_1">2b</ref>, Supplementary Fig. <ref type="figure" target="#fig_1">2E</ref>).</s></p><p><s>How effective is the mask in eliminating odorant responses?</s><s>Out of 119 recorded units, 29 responded to one of two odorants (pinene, limonene).</s><s>The mask, presented at 20 ms latency post inhalation onset, modified most of the odor responses, even though odor responses typically occur later than the mask stimulus (Fig. <ref type="figure" target="#fig_1">2a</ref>).</s><s>To characterize the effect of mask on information available for discrimination, a support vector machine (SVM) was trained to classify MT cell responses to two odorants (limonene vs. pinene) with and without masking stimulus.</s></p><p><s>Only on the basis of the odor responses of 29 units, classification performance on an individual trial raised from chance level to 100% in the first 260 ms from the inhalation onset.</s><s>On the masked trials, performance of the classifier stayed at chance level until ~180 ms post inhalation onset, and never exceeded 68% (Fig. <ref type="figure" target="#fig_1">2d</ref>).</s><s>We may assume that the mask is efficient in eliminating odor information for at least 100 ms following the mask.</s></p><p><s>To test the effect of the mask on behavior, mice (n = 3) were trained in a head-fixed 2-alternative choice paradigm to discriminate between two odorants (eugenol and 2-hydroxyacetophenone) for a water reward (Fig. <ref type="figure" target="#fig_2">3a</ref>).</s><s>To ensure that decisions  <ref type="figure">1</ref> Primacy coding of odor identity.</s><s>a Schematic presentation of the patterns of glomerulus (OSN) activation for three concentrations of the same odor.</s><s>The total number of active glomeruli increases with an increase of odor concentration.</s><s>b The temporal profiles of the odor concentration in the nose during inhalation for three concentrations of the presented stimuli.</s><s>Dashed lines represent concentration thresholds for representative glomeruli (horizontal) and corresponding response latencies (vertical).</s><s>c Temporal sequence of glomeruli activation for three different odor concentrations.</s><s>d Optogenetic mask schematic demonstrating the effect of the optogenetic mask on temporal sequences when presented late and early relative to odor-evoked temporal pattern were based on odor identity and not intensity, we scrambled the odorant concentrations by presenting five concentrations within a two order of magnitude range.</s><s>On probe trials within the session, the optogenetic mask was presented with target odor.</s><s>The probe trial structure was used to prevent animals from adopting a novel strategy to overcome the effect of the mask.</s><s>The animals' performance was strongly affected by the masking stimulus when it was initiated between 0 and 50 ms after inhalation onset (Fig. <ref type="figure" target="#fig_2">3b</ref> and Supplementary Fig. <ref type="figure">1E</ref>).</s><s>The presence of the mask lowered the mean performance at these early latencies to almost chance level of 56% compared with the unmasked performance of 92% (at odorant concentration 1 μM).</s><s>As the onset latency of the mask is increased to latencies greater than 50 ms, performance in the odor identification task recovers and approximates the unmasked asymptotic performance at ~100 ms.</s></p><formula xml:id="formula_0">Q B C E F G H J K L M N O P R I D Q A B C D E F G H I J K L M N O P Q R I D Q A P F A B C D E F G H I J K L M N O P Q R I D Q A J P F N B c Mask I D Q A P F I D Q A P F I D Q A P F d Fig.</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Scaling of integration time with odorant concentration.</head><p><s>Changes in odorant concentration should change the absolute timing of OSN recruitment and, thus, affect the timing of odor percept formation in our task.</s><s>We tested this prediction by fitting a Weibull generalized linear model (see "Methods" section) to masking data for two concentrations of odorant and comparing the thresholds of these fits.</s><s>A 10-fold decrease in concentration delays the recovery of performance in masking trials by 13.3 ms (100.3 vs. 87.0</s><s>ms, bootstrapped 95% confidence intervals [94.2, 105.9] and (81.8, 91.5), p = 0.048 (one-tailed Monte Carlo test, R = 50,000).</s><s>As expected, odor percepts are formed later for lower odorant concentrations, likely due to delayed recruitment of OSN activity <ref type="bibr" target="#b11">12</ref> .</s><s>Very similar dependencies have been observed for other odor pairs and 5 other mice (Supplementary Fig. <ref type="figure">1D</ref>).</s></p><p><s>Reaction time (RT) has been used extensively to determine the timing of sensory processing and decision-making based on sensory stimuli.</s><s>The dependence of performance on both mask latency and RT are qualitatively similar, except that the reaction time curve is shifted by ~66 ms.</s><s>This relationship is similar for both concentrations tested here (65.5 and 66.2 ms, Fig. <ref type="figure" target="#fig_2">3c,</ref><ref type="figure">Insert</ref>).</s><s>The concentration-dependent shift in RT vs. performance can be wholly explained by the shift observed in our masking paradigm, indicating that peripheral encoding of odor information limits the timing of olfactory decision making.</s><s>The observed delay between the RT and mask can be ascribed to a motor delay that is constant across concentrations.</s><s>Mask trials may promote the use of a novel strategy to utilize early information.</s><s>To address this issue, we performed two analyses.</s><s>First, we compared reaction time in unmasked trials and trials where the mask was presented late (t ≥ 100 ms) and had minimal effect on performance (Fig. <ref type="figure" target="#fig_2">3d</ref> and Supplementary Fig. <ref type="figure">1G</ref>).</s><s>The Weibull fits to the dependencies of performance on reaction time in both cases are nearly identical.</s><s>Second, we see no effect of learning on mask trials between early and late behavioral sessions, comparing the performance on the first and last 20 masked trials across all sessions (Fisher-Exact test p &gt; 0.05).</s><s>(Supplementary Fig. <ref type="figure">1F</ref>).</s><s>Together, these results provide evidence that randomly presented masking trials do not change the animal decision strategy and that animals typically use early evoked information in the odor discrimination tasks.</s></p><p><s>Scaling of integration time with odor contrast.</s><s>Does primacy coding strategy apply only to simple tasks?</s><s>To make the behavioral task more difficult, we trained animals to discriminate between mixtures of carvone enantiomers (60:40 vs. 40:60).</s><s>Using mixtures to reduce the contrast between stimuli decreases discrimination performance relative to pure carvones (83.3 vs. 90.8%)</s><s>and delays the mask threshold time (118 ms vs. 101 ms) (Fig. <ref type="figure" target="#fig_2">3e</ref>).</s><s>As with the latency shift between concentrations of odorant, the shift due to decreased contrast is consistent with the measure of reaction time vs. performance (Supplementary Fig. <ref type="figure">1H</ref>).</s><s>To generate an equivalent level of performance in the more difficult mixture discrimination task, sensory information must be integrated by the subject over a longer period of time.</s><s>However, the extension in integration time is relatively small on the scale of the length of a sniff, demonstrating that animals are still using early information to make this more difficult discrimination.</s></p><p><s>Neural correlates of concentration-invariant primacy code.</s><s>Our behavioral results define the temporal window in which odor information is integrated.</s><s>To determine if primacy codes exist in the OB at timescales consistent with our behavior, we recorded responses of 338 MT cells to 3 odorant concentrations spanning a range of 2 order of magnitude.</s><s>The primacy coding model predicts the existence of MT neurons that display excitatory responses to odor across a wide range of concentrations in a narrow temporal window at the beginning of the sniff.</s><s>Among 119 units which exhibit excitatory responses to odorant α-pinene, 15 responded to all three concentrations, a subset that we called "concentration-stable" (Fig. <ref type="figure" target="#fig_3">4a</ref>).</s><s>The remaining 104 units responded only to subset of concentrations, which we called "concentration-unstable" (Fig. <ref type="figure" target="#fig_3">4b</ref>).</s><s>As expected, a number of responsive units grew as concentration increased (Fig. <ref type="figure" target="#fig_3">4c</ref>).</s><s>While the population response at low concentration was dominated by concentration-stable units, unstable units were 3.7 times more numerous at the highest concentration tested.</s><s>According to our primacy coding model, the identity of early, stable units that are responsive across concentrations represent odor identity.</s><s>The stable population's mean response latency was shorter than the unstable population at all concentrations (conc 10 -3 : 86.8 ms vs. 177.2</s><s>ms, p = 0.0003; conc 10 -2 : 82.7 ms vs. 148.2</s><s>ms, p = 0.0071; and conc 10 -1 : 85.7 ms vs. 149.0</s><s>ms, p = 0.0249; one-sided KS test).</s><s>While the latencies of the unstable and stable populations overlapped, a subset of stable units responded earlier than all unstable units at the highest concentration, which is consistent with the primacy coding model (Fig. <ref type="figure" target="#fig_3">4d</ref>).</s><s>The latencies of these stable units scaled with concentration, as predicted by the model and behavioral result.</s><s>The mean latency shift between concentrations for this early, concentration-stable subset was 15.5 ms, (σ: 5.5 ms).</s><s>This is comparable to the timing shifts in behavioral identification across concentration (13.3 ms).</s><s>The stable population's activity encoded odor-identity information and was not representative of non-specific odor responses; only one of these concentration-stable units was responsive to another odorant tested, α-limonene.</s></p><p><s>Importantly, we find that latencies and even latency relationships are not preserved across concentrations in awake animals, although this has been observed in anesthetized animals (Fig. <ref type="figure" target="#fig_3">4d</ref>) <ref type="bibr" target="#b19">20</ref> .</s><s>Instead, both absolute and relative latencies of stable units' responses shift dramatically as concentration increases, clustering into early and late subsets at the highest concentrations.</s><s>We observed that the excitatory responses of the late set of stable cells was preceded by transient inhibition at high concentrations (Fig. <ref type="figure" target="#fig_3">4a lower panel,</ref><ref type="figure" target="#fig_3">4e</ref>).</s><s>This transient odor-evoked inhibition was observed widely in our recorded population (Supplementary Fig. <ref type="figure" target="#fig_2">3F,</ref><ref type="figure">H</ref>), and we hypothesize that it is due to lateral and feedback inhibition in the OB.</s><s>For late stable units, we predict that earlier members of the MT population drive inhibition arriving earlier than or in coincidence with feedforward excitation.</s><s>This shunts the neuron's initial excitatory response, causing an apparent increase in response latency.</s><s>As a result, we conclude that these units are not in the primary set, as it is obvious that earlier members of the population must precede them to generate the network activity responsible for this inhibition.</s><s>So, while short latency is predictive of concentration-invariance, the relationships of response latencies within our recorded population as a whole are not conserved across concentrations and are unlikely to encode odor identity.</s><s>Read out of primacy code by a model neural network.</s><s>What elements of olfactory networks are sufficient to process primacy information?</s><s>How does mask affect odor recognition?</s><s>Our behavioral data show an incomplete suppression of animal performance at small masking delays (Fig. <ref type="figure" target="#fig_2">3b</ref>).</s><s>In a more difficult discrimination task, the effect of mask is slightly delayed compared to easier tasks (Fig. <ref type="figure" target="#fig_2">3e</ref>).</s><s>Are these features expected within the primacy coding mechanism?</s><s>To address these questions, we developed a computational primacy decoding model based on known features of the OB and piriform cortical (PC) circuits.</s><s>First, our model includes random feedforward connectivity between the OB and PC which provides the basis for coincidence detection of MT cell activity arriving early in the sniff cycle.</s><s>Second, our model includes random recurrent inhibitory circuits in the PC (blue in Fig. <ref type="figure" target="#fig_4">5a</ref>).</s><s>The role of this connectivity is to suppress late arriving, "non-primary" input to PC neurons.</s><s>This architecture is consistent with observed global and broadly tuned inhibition in the PC <ref type="bibr" target="#b22">23</ref> and has been used as a feature of network models for the processing of fine temporal information in the PC, including the proposed mechanism for coincidence detection <ref type="bibr" target="#b23">24</ref> .</s><s>Finally, we assumed that PC neurons have a memory property such that once activated, they can maintain the persistent activity in order to retain the odorant representation in the network until the initiation of action.</s><s>Although our computational model does not explicitly specify the mechanism of persistency, it has been hypothesized to emerge from voltage dependent synaptic channels, such as NMDAR or GABA B activating KIR channels <ref type="bibr" target="#b23">24</ref> .</s><s>Overall, our network included randomly connected 300 MC and 1000 PC neurons.</s></p><p><s>Our model provides insights into the mechanism of optogenetic suppression of the animal's performance for early delivered masks.</s><s>We simulated odor-evoked activity in MT cells as a random spatiotemporal pattern and the mask as synchronous activity independent of odor (Fig. <ref type="figure" target="#fig_4">5b,</ref><ref type="figure">c</ref>).</s><s>When the mask follows initial odor-evoked activity, it does not affect odorant-dependent activity patterns in PC (Fig. <ref type="figure" target="#fig_4">5b</ref>), due to the broad inhibitory network, which suppresses excitatory inputs from the late mask or odorant-dependent inputs.</s><s>In contrast, when the mask precedes odor activation, a pattern of activity emerging in the PC is not odorant-dependent and is different from those of the odorants alone (Fig. <ref type="figure" target="#fig_4">5c</ref>).</s><s>This light-evoked pattern can be viewed as a new percept that is unrelated to the original odors.</s></p><p><s>Our model qualitatively explains an incomplete suppression of discrimination for early masks (t &lt; 0.2) (Figs.</s><s><ref type="figure" target="#fig_2">3b</ref> and<ref type="figure" target="#fig_4">5d</ref>, black and gray lines).</s><s>This occurs due to the presence of noise: on certain trials, odor-dependent OB responses are more robust than on average, causing failure of the mask on these trials (Supplementary Fig. <ref type="figure" target="#fig_3">4</ref>).</s><s>In case of complex mixture, the behavioral response is delayed compared to an easy stimulus (Fig. <ref type="figure" target="#fig_4">5d</ref>, blue vs. black lines), which is consistent with experimental results (Fig. <ref type="figure" target="#fig_2">3e</ref>).</s><s>This occurs because the differences in pools of primary glomeruli emerge slightly later in the sniff cycle, as both of the stimuli have similar sets of initially activated glomeruli.</s><s>This result implies that primacy read out mechanism does not take the sequence of glomerular activation into account, since such differences are expected to occur early.</s><s>In a version of the model sensitive to the activation sequence, the delay in performance for complex tasks is strongly reduced (Supplementary Fig. <ref type="figure" target="#fig_4">5</ref>).</s><s>Overall, our computational model confirms that the experimental data is consistent with the identity of primary MT cells rather their recruitment order being important for the coding of odor identity.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>We demonstrate here that the earliest evoked neural activity can be used to make olfactory decisions and demonstrate that neural activity in this time window may encode odor identity across concentrations through primacy coding.</s><s>Previous behavioral studies demonstrate that early epochs of odor-evoked activity are sufficient for the detection of odorants <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b25">26</ref> and concentration discrimination <ref type="bibr" target="#b26">27</ref> in rodents.</s><s>However, while these studies allude to fast coding of olfactory stimuli, it is impossible to rule out subjects' use of intensity cues that are external to odor identity.</s><s>By scrambling concentrations of odorant, we make intensity cues unreliable and encourage the use of odor identity in these experiments.</s><s>Studies using activity-dependent imaging have proposed that the most sensitive glomeruli may encode individual odors <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b27">28</ref> ; however, to our knowledge, our work provides the first behavioral evidence and computational support for this hypothesis.</s></p><p><s>Primacy coding and latency coding both attempt to solve the "analog match" problem odor identification through the use of timing, although they each make unique predictions.</s><s>Central to both models is the expression of input strength to individual sensory neurons into spike latency relative to theta rhythm <ref type="bibr" target="#b13">14</ref> or to inhalation.</s><s>Apart from the synthesis of these temporal patterns, primacy coding and latency coding differ significantly in the mechanisms by which these spatiotemporal patterns are read out.</s><s>In general, latency coding describes a family of models that match a vector of response latencies evoked by an unknown stimulus with a prototype latency vector.</s><s>This comparison has been modeled through a combination of a "delay line" architecture with coincidence detection <ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b29">30</ref> .</s><s>In these models, a decoder cell receives inputs from several glomeruli, each of which is delayed such that their signals arrive coincidentally at the decoder neuron only when a specific odor is encountered.</s><s>These models imply that relative latencies of different glomeruli must scale equally with concentration to preserve coincidence, while in our data we find that both absolute and relative latencies within the population of odor-responsive MT units are not maintained across concentrations in awake animals (Fig. <ref type="figure" target="#fig_3">4e</ref>).</s></p><p><s>As predicted by Hopfield, computational models of the OB based on the experimental data demonstrate that similarity of these latency vectors across concentrations of the same odorant are more similar than latency vectors generated by different odorants <ref type="bibr" target="#b30">31</ref> .</s><s>If latency vectors for different odors are evaluated in snap-shots that evolve after inhalation, divergence is predicted at short timescales ( &lt; 100 ms) for dissimilar odorants.</s><s>However, the mechanisms by which these vectors are evaluated on these short timescales has not been fully explored <ref type="bibr" target="#b23">24</ref> .</s></p><p><s>Primacy coding extends latency encoding models by making the assumption that solely the earliest members of the set are representative of odors across concentrations.</s><s>It proposes that temporal relationships are important only insofar as they help in identifying these early members, and predicts a basic network architecture that can decode this early information to create stable patterns in piriform cortex <ref type="bibr" target="#b43">44</ref> .</s><s>These patterns, by definition, are formed fast and through the use of early divergence of the spatiotemporal pattern of glomerular activity.</s><s>The primacy model emphasizes the role of the set membership of early-responding neurons rather than the sequence of glomerular activation.</s><s>Our experiments with mixtures in combination with computational modeling provide indirect evidence towards this prediction.</s><s>Further experiments with precise temporal control of early activated glomeruli may confirm this prediction.</s></p><p><s>The primacy model sets limits for information capacity of the olfactory code.</s><s>The upper bound estimate for the number of odorant identities represented by the primacy code is ~Np =p! , where N is the number of different OR types and p is size of the subset used to define identity.</s><s>With p = 5-6 and the N = 350 OR genes found in the human genome, the coding scheme can represent ~10 10 -10 12 different odors.</s></p><p><s>The primacy model emphasizes the role of individual glomeruli for odor coding.</s><s>In mice, a deletion of a single receptor TAAR4 is sufficient to abolish aversive behavior to a specific odor <ref type="bibr" target="#b31">32</ref> .</s><s>Studies of human genetic variability lends evidence that only highly sensitive receptors predominate in defining odor quality.</s><s>Subjects with different alleles of a single OR report differences in perceptual qualities for strong ligands of the OR, while they are likely to report similar qualities for weaker ligands <ref type="bibr" target="#b32">33</ref> .</s></p><p><s>The primacy model also makes specific predictions about mixtures of odorants because the earliest activity should dominate perceptual qualities of the mixture.</s><s>Perceptual masking of slowly perceived odors by fast odors (temporal suppression) has been observed in human psychophysics, but warrants more attention <ref type="bibr" target="#b33">34</ref> .</s><s>If both odorants evoke early activity within the primary set, we predict that this combination will cooperate to synthesize a new odor percept.</s><s>Finally, primacy coding does not make explicit provision for parallel processing of components in mixtures, a task where humans demonstrate poor performance <ref type="bibr" target="#b34">35</ref> .</s></p><p><s>Primacy coding suggests a relatively simple solution to the complex computational problem of robust concentrationinvariant representation of odorant identity in olfaction.</s><s>It provides inherently rapid odor identification, a vast coding capacity and can be implemented by the architecture of the olfactory system.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head><p><s>Mice.</s><s>The behavioral concentration series data were collected in 4 OMP-ChR2-YFP heterozygous mice (2 female, 2 male).</s><s>The mixture data were collected in a separate cohort of 5 OMP-ChR2-YFP heterozygous mice (2 female, 3 male).</s><s>Electrophysiological data to characterize masking were collected from a separate cohort of mice (n = 2).</s><s>Five male C57B/6 mice (Jackson Labs) were used for concentration series electrophysiology.</s><s>Subjects were 8-12 weeks old at implantation and were maintained on 12hr light-dark cycle in isolated cages after implantation.</s><s>All procedures were approved by the IACUC of NYULMC in compliance with the NIH guidelines for the care and use of laboratory animals.</s></p><p><s>Sniff recording.</s><s>Sniff was monitored via intra-nasal pressure.</s><s>An 8 mm long, 21gauge cannula was implanted into the anterior dorsal recess.</s><s>Total insertion depth from the surface of the nasal bone was 1.5 mm.</s><s>Pressure change relative to atmospheric pressure was measured using a pressure sensor (24PCEFJ6G, Honeywell) and amplified (AD620, Analog Devices).</s><s>A Schmitt (dual-threshold) trigger was used to define inhalation and exhalation onsets in real time on an Arduino microcontroller.</s><s>For concentration series electrophysiology, respiration was measured using an externally mounted pressure sensor placed in front of the subjects' nares.</s></p><p><s>Surgery.</s><s>Mice were anesthetized using isofluorane gas during surgery.</s><s>The head bar, pressure cannula and optical fibers were implanted in a single surgery.</s><s>The nasal cannula was implanted in a small hole in the anterior nasal bone and affixed with glue and dental cement.</s><s>The optical fibers were implanted bilaterally in two holes drilled in the posterior nasal bones and affixed using the same technique.</s><s>Two small screws (size #000-120 × 0.0625", Small Parts, Inc.) used to stabilize the implant and provide electrical connection for lick detection were implanted in the skull at a location approximately corresponding with S1 cortex.</s><s>Animals were allowed to recover for at least 3 days before water deprivation.</s></p><p><s>Stimulus delivery and behavioral control.</s><s>Behavioral control and data acquisition was computer-controlled using the custom Voyeur software <ref type="bibr" target="#b35">36</ref> .</s><s>For odor stimulus delivery, we used an 8-odor olfactometer (Supplementary Fig. <ref type="figure">1A</ref>).</s><s>Odorants were diluted in mineral oil and stored in amber volatile organic analysis vials.</s><s>Olfactometery manifolds, valves, and tubing contacting odorized air consisted entirely of PTFE to minimize cross-contamination of odorant.</s><s>During odor presentation, nitrogen carrier gas is diverted through a single vial and enters the main air stream, resulting in an adjustable dilution in a range between 10× and 100×.</s><s>Airflow rates for carrier and main flow rates were controlled using two mass flow controllers (Bronkhorst).</s><s>During periods between stimuli, animals were presented with 1 L/min background air and olfactometer air was directed to exhaust using a four-way PTFE final valve (NResearch).</s></p><p><s>Odorant concentrations were controlled using a combination of gas-and liquidphase dilution.</s><s>Through manipulation of the ratio of odorized and clean air flow rates, we were able to achieve a dilution range of 10-1% odorized air (10×).</s><s>In experiments where more that 10-fold dilution was required, we used liquid dilution to increase our range.</s><s>Because liquid dilution ratios do not accurately predict headspace (gas-phase) concentrations, liquid dilutions were assayed using a photo ionization detector (Aurora Scientific) to determine relative concentrations of odorant in gas-phase.</s><s>For concentration-series electrophysiology, all dilutions were made in air-phase by diluting odorized air with unodorized air.</s></p><p><s>Mixtures of carvone enantiomers were made in liquid phase.</s><s>Enantiomers have identical vapor pressures and solvent interactions, thereby allowing accurate prediction of component ratios in gas phase from liquid mixture ratios.</s></p><p><s>Light masking stimulus was provided by two 473-nm, 105 um ID fiber coupled diode laser (Blue Sky Research, PN: FTEC2471) terminated in a ceramic ferrule.</s><s>During behavioral sessions, the laser source ferrule was mated to a ferrule permanently implanted on the mouse.</s><s>Implanted ferrules (MM-FER2007-304-4050, Precision Fiber Products, Milpitas, CA) were fabricated with 400 um ID, 0.39 NA fiber (FT400UMT, Thorlabs, Newton, NJ) and etched using hydrofluoric acid to provide diffuse light within the nasal cavity.</s><s>Laser power was calibrated using a light power meter (Thorlabs) prior to behavioral sessions at the ferrule tip.</s></p><p><s>Water reward stimulus was delivered through two 21-gauge stainless steel lick tubes (Small Parts) and controlled using pinch valves (BioChem Fluidics).</s></p><p><s>Licks were detected by measuring change in resistance at the lick port when animals made contact with the lick tube using custom lick detectors (Janelia, HHMI).</s></p><p><s>Behavioral procedure and training.</s><s>Animals were water deprived for at least 5 days prior to start of behavioral training.</s><s>Animals were housed on a 12:12 light-dark cycle were tested between 1500 and 2400 ZT (where ZT 0 corresponds to beginning of light period).</s><s>To acclimatize animal to head-fixation and behavioral apparatus, animals were shaped by given water through a single lick tube until animals received their entire 1 ml water ration during a session.</s><s>In subsequent sessions, a second lick tube was introduced.</s><s>To encourage exploratory behavior in subsequent training, animals were rewarded for alternating licks between left and right lick tubes.</s><s>Two-lick shaping sessions persisted until animals successfully received entire 1 ml water ration in a session.</s></p><p><s>Odor discrimination was trained on subsequent sessions with only slight modifications to the paradigm used in testing sessions (Supplementary Fig. <ref type="figure">1C</ref>).</s><s>After a variable inter-trial interval (12-15 s) and with the condition that 1 s had elapsed since the last licking activity was recorded.</s><s>Odor stimulus was delivered for 500 ms and was initiated on the start of exhalation so that odor stimulus was stable prior to inhalation (Supplementary Fig. <ref type="figure">1B</ref>).</s><s>For each trial, odor concentration was drawn randomly.</s><s>After stimulus onset, a "grace" period was enforced where licks were not scored to reduce impulsive licking prior to odor sampling.</s><s>To eliminate stereotypic response bias, trials were chosen using a bias correction algorithm during training and testing <ref type="bibr" target="#b36">37</ref> .</s><s>For initial training, this grace period included time point until 500 ms after the first inhalation of odorant.</s><s>After criterion performance was met, this grace period was shorted in the following session to 300, then to 150 ms for testing.</s><s>Randomization was preformed using Mersenne Twister RNG (NumPy).</s></p><p><s>Testing sessions were conducted only after animals reached criterion performance (&gt;80%) on the odor discrimination task.</s><s>Mask trials was randomly interleaved in sessions for only 2 of the 5 concentrations presented (Fig. <ref type="figure" target="#fig_1">2a</ref>).</s><s>Trial ordering within a session was computer-controlled and the investigator was blind to the conditions of each trial.</s><s>For masking data at multiple concentrations, masking trials was presented in every other session with both concentrations masked in the same sessions at rate of 17% of total trials.</s><s>For the masking data for carvone mixtures, masking trials were interleaved throughout each session at a rate of 8.3% of total trials.</s><s>The data were excluded from animals that did not complete training and testing due to loss of sniff signal, illness, or loss of implant.</s><s>Two animals were excluded from mixture experiment due to faulty fiber implantation.</s><s>The data from experiments represented in Fig. <ref type="figure" target="#fig_2">3b</ref> and Supplementary Fig. <ref type="figure">1D</ref> were collected from the same animals.</s></p><p><s>Behavioral analysis.</s><s>All behavioral analysis was conducted using custom scripts on the Anaconda Python distribution (NumPy 1.9.2,</s><s>SciPy 0.15.1) <ref type="bibr" target="#b37">38</ref></s><s>.</s><s>Binomial proportion confidence intervals were calculated using the Clopper-Pearson "exact" method.</s><s>Trials from sessions in which animals preformed a level of &lt;80% correct responses were excluded from analysis.</s><s>The data were fit with the Weibull psychometric function using maximum likelihood estimation method:</s></p><formula xml:id="formula_1">p x ¼ γ þ 1 À λ ð Þ 1 þ e Àβ xÀα ð Þ</formula><p><s>For the masking data, γ (guess rate: the asymptotic performance at short latencies) was fixed using the average from masking at time points &lt; 60 ms and λ (lapse rate: the asymptotic performance at long latencies) was fixed based on the data obtained in unmasked trials within these sessions.</s><s>For reaction time analysis, all parameters were fit.</s><s>Confidence intervals for fit parameters (thresholds) were estimated using the 2.5th and 97.5th percentile of distributions created by fitting each of 10,000 bootstrap simulations for each experimental condition.</s><s>To bootstrap, trials were randomly drawn with replacement using Mersenne Twister RNG (Numpy).</s></p><p><s>The reaction time data were taken only from trials in which no mask stimuli were presented.</s><s>These sessions were interleaved with mask sessions.</s><s>The reaction time performance data and timing were taken using the first responses following odor stimulus onset irrespective of grace period.</s><s>These data were fit using the same techniques as above, but with all parameters free.</s><s>Trials with very long reaction times ( &gt; = 300 ms) were truncated from this analysis, as performance was not monotonic after ~300 ms.</s></p><p><s>Masking electrophysiology.</s><s>Electrophysiology was conducted in awake animals during using acute recording techniques.</s><s>Six-shank, 64-ch silicone probes (Buzsaki 64sp, NeuroNexus) were used to record neural activity.</s><s>The neural data were acquired using "Whisper" acquisition system (Janelia, HHMI) at 20,833 Hz using SpikeGL software (Janelia, HHMI).</s><s>Action potentials were detected and clustered using SpikeDetekt2 and KlustaKwik with manual clustering preformed using KlustaViewa <ref type="bibr" target="#b38">39</ref> .</s></p><p><s>All basic analysis was done using the Anaconda Python distribution.</s><s>Mask response latency was determined by comparing baseline (no mask) activity distribution to mask response.</s><s>To construct baseline sample distribution, PSTHs for 7 sniffs prior to every mask trial were sampled.</s><s>From these baseline samples, 100,000 samples of the same size as the number of mask trial were drawn with replacement to create a simulated PSTH from the same number of trials as the masked PSTH.</s><s>Finally, the PSTH from masked trials was compared with the baseline PSTH distribution.</s><s>Latency to mask response was defined as the first bin where firing rate was &gt; 3 fold greater than the baseline PSTH and the bin was at the 0.0001th percentile of the bootstrapped baseline distribution.</s></p><p><s>Linear SVM classifier.</s><s>Population vectors were assembled from spike trains of recorded unit (n = 29) that responded to one of the odors presented.</s><s>For each cell and for each trial, a 35-dimensional vector was created by binning action potential events into 10 ms bins from the 0-350 ms after the first inhalation onset of the odorant.</s><s>Activity vectors from cells were concatenated and standardized to make a population vector for training and testing.</s><s>Linear classifiers were created using the Scikit-learn v0.16.1 LinearSVC class <ref type="bibr" target="#b39">40</ref> .</s><s>To assess performance of the classifiers on unmasked trials, a leave-one-out cross validation strategy was used.</s><s>To classify masked trials, classifiers were built using all available unmasked trials (N = 19), and the classifier was scored on its performance at classifying all masked trials.</s><s>Concentration series electrophysiology.</s><s>NeuroNexus A64 Poly5 2 × 32 probes were used to record acutely from awake animals.</s><s>Units were detected using Spyking Circus software (v0.3.0) <ref type="bibr" target="#b40">41</ref></s><s>.</s><s>Significant odor responses were defined by comparing inhalation-aligned blank odor response distributions with responses to odor presentations (Supplementary Fig. <ref type="figure" target="#fig_2">3A-D</ref>).</s><s>To establish these distributions, blank and odor responses were bootstrapped across trials, summed across trials, and smoothed with a 3-sigma Gaussian kernel of width 30 ms.</s><s>For each time point, the bootstrapped firing rates were fitted with a Gaussian and the Cohen's D (discriminability) score was calculated for each time bin.</s><s>Response latencies were defined as the first time-bin in with a D-score above 5, where overlap is &lt; 0.01 (Supplementary Fig. <ref type="figure" target="#fig_2">3E,</ref><ref type="figure">G</ref>).</s></p><p><s>Computational model.</s><s>Our model was based on random and sparse connectivity between the MT cells and the PC cells, as well as within the cortex as detailed below.</s><s>Our simulation included 300 MT cells and 1000 cells in the PC.</s><s>Neurons in PC formed random sparse inhibitory recurrent connections to other cells in PC with 50% probability.</s><s>Non-zero inhibitory recurrent connection weights within PC were W inPP ij ¼ 3. MT cells also formed random excitatory connections with the PC cells with 13% probability (each PC cell received inputs from 40 MT cells).</s><s>Non-zero projections from MT cells to a PC cell were W inPB ij ¼ 0:15.</s><s>In the case of order dependent model, we used W inPB ij ¼ 0:30.</s><s>The state of each PC neuron was defined by the input that this neuron receives u i that satisfied the equation</s></p><formula xml:id="formula_2">τdu i =dt ¼ Àu i þ X j W PP ij f j þ X j W PB ij m j</formula><p><s>Here τ = 0.05 is the time constant measured in the fraction of sniffing cycle.</s><s>The activation state for each PC neuron had a hysteretic dependence on its inputs f i = F ± (u i ).</s><s>The activation function F ± was single valued for values of input variable u satisfying u &gt; u + = 0.2 and u &lt; u -= -150.</s><s>For these values of parameters, the activation function F ± was equal to 1 and 0, respectively.</s><s>Within the bistable range, i.e., for u -≤ u ≤ u + , F ± was bistable and remained constant depending on prior history.</s><s>Therefore, if a neuron was activated, the activation function within the bistable range remained equal to 1, whereas for an inactivated neuron, the activation function was 0. Activation occurred when inputs exceeded u + , and inactivation happened when inputs fell below u -.</s></p><p><s>Each simulation was carried out over the period of 700 time units using Runge-Kutta method with time step Δt = 0.002.</s><s>The simulation started at t = -0.2 and lasted until t = 1.2.</s><s>t = 0 corresponds to the onset of inhalation, and t = 1 is the end of the early stage of the sniff cycle.</s><s>The masking stimulus was presented between t = 0 and t = 1.</s><s>This time interval was expected to reproduce the early part of the sniff cycle during which odorant identity is established.</s></p><p><s>To model MT cell responses to odorants, we generated random spatiotemporal patterns of MT cell activity.</s><s>For the case of pure odorants (black and gray in Fig. <ref type="figure" target="#fig_4">5d</ref>), we used two different random patterns for each of the two odorants.</s><s>The response of each responsive MT cell was represented by a transient that lasted 0.5 time units (in fractions of the early part of the sniff cycle).</s><s>The transient response consisted of an increase of the output of a mitral cell m j from 0 to 1 and reset back to 0. For low/high concentration conditions, the earliest transients began at t = 0.4/ 0.25, respectively and the following MT cell transients were distributed at random times with the time step of 0.02 (every 0.02 a MT cell was recruited).</s><s>This feature was intended to replicate the tendency of MT cells to respond later in the sniff cycle to lower odorant concentrations <ref type="bibr" target="#b41">42</ref> .</s><s>For the mixture case (Fig. <ref type="figure" target="#fig_4">5d</ref>), we generated two sets of random recruitment orders for each of the pure binary compounds within the mixture and combined them into a single sequence by offsetting one of them by 2 positions, depending on which component concentration was bigger (60 + 40% vs. 40 + 60% composition).</s><s>Following the earliest transient onset at t = 0.25, as in high concentration case, one MT cell was recruited every time interval of 0.02 with the recruitment order as described above.</s><s>In each trial, MT cell transients had a finite probability to be emitted to mimic the experimentally observed transient event reliability <ref type="bibr" target="#b42">43</ref> .</s><s>The probability was p = 0.8/0.9 for low/high concentration conditions.</s><s>To simulate the ChR2 stimulation, we added a pulse that began at the time indicated in Fig. <ref type="figure" target="#fig_3">4</ref> and lasted 0.1.</s><s>The amplitude of the pulse was 0.18.</s><s>The pulse was present in 75% of MT cells chosen randomly.</s><s>We added normally distributed white noise with the standard deviation of 0.1 to the activity of MT cells.</s><s>This was done to reproduce observed features of psychophysical performance.</s><s>We tested our simulations for a range of parameters and verified that the qualitative conclusions are not sensitive to the exact set of parameters chosen.</s><s>We ran 500 trials for each of the two odorants and each concentration.</s><s>After each set of 10 trials, we reset the randomly selected weights and parameters in the model to mimic trials performed by different animals.</s></p><p><s>The perceived identity of the stimulus in each trial was inferred from the activity of PC cells at the end of the simulation (t = 1.2) from the template pattern of PC response that maximally overlapped the evoked response.</s><s>To obtain the template, we ran the simulation once without noise for every condition.</s><s>critical discussions and for sharing the design of apparatus used for electrophysiological recordings.</s><s>This work was supported by NIDCD (R01DC013797, R01DC014366) and the Whitehall Foundation.</s><s>C.D.W. is funded by N.S.F.</s><s>GFRP.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2</head><label>2</label><figDesc><div><p><s>Fig. 2 Neural response to optogenetic mask and effect on odor information.</s><s>a Example raster and PSTH for two example MT cells.</s><s>Inhalation onset corresponds to t = 0. Top: Example MT cell responses to optogenetic mask (25 mW, ON:2 ms-OFF:8 ms-ON:2 ms), light stimulation at 20 ms postinhalation onset.</s><s>Middle: Odor response (left: 2-hydroxyacetophenone, right: alpha-pinene).</s><s>Bottom: Odor plus laser mask.</s><s>b Baseline-subtracted mean of PSTHs for laser-responsive units (n = 113).</s><s>c Cumulative distribution function (black line) and histogram of units' response latencies to masking light stimulus.</s><s>d Linear classifier cross-validation results for unmasked data for two odor presentations (limonene, pinene).Responses to unmasked odor presentations were time-binned (10 ms bins) and used to train support vector machine (SVM) classifiers.</s><s>For each time point, SVMs were trained using the response vector inclusive of bins from t = 0 to that time.</s><s>Each classifier's performance is described by cross-validation on unmasked trials (blue) and testing on masked trials (green).</s><s>Shaded areas indicate 95% confidence interval (Clopper-Pearson method)</s></p></div></figDesc><graphic coords="3,140.26,303.62,166.12,84.76" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3</head><label>3</label><figDesc><div><p><s>Fig. 3 Optogenetic masking behavioral paradigm.</s><s>a Behavioral task schematic: Mice were trained to respond to 2 odors "A" and "B" at 5 different concentrations to lick left or right water spout.</s><s>Mask timed to the onset of the first inhalation after odor delivery was presented during subset of trials for two concentrations (asterisks).</s><s>b Discrimination performance vs. mask latency for odors (2-hydroxyacetophenone and eugenol) at two concentrations.</s><s>Mask stimulus presentation was initiated on the first inhalation of odorant and after the mask onset latency, t mask , had elapsed.</s><s>High concentration annotated in black markers, low concentration in grey.</s><s>Error bars indicate 95% confidence interval estimates.</s><s>Weibull fit to the data indicated with thick lines.</s><s>Markers above performance curves indicate Weibull threshold latency values for each fit with 95% confidence interval estimates.</s><s>c Mouse reaction time vs. performance in unmasked stimuli of two concentrations (as above).</s><s>Dots indicate the data binned into bins of 125 trials.</s><s>Lines indicate Weibull fit.</s><s>Inset: difference between mask and reaction time threshold latencies.</s><s>d Mouse reaction time vs. performance for unmasked trials (gray) compared with late masked trials with t mask &gt; = 100 ms (blue) for the same data set.</s><s>Points represent bins of 50 trials each.</s><s>e Performance vs. mask latency for discrimination of pure (blue) carvone enantiomers vs. mixtures made with those odorants (green)</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4</head><label>4</label><figDesc><div><p><s>Fig. 4 Concentration invariant MT cell response latencies correspond with behavior.</s><s>a Example raster and PSTH of two MT cells, which were responsive to odorant across 3 orders of magnitude concentration.</s><s>t = 0 corresponds to inhalation onset.</s><s>b Same plots for MT cells which respond to only a subset of concentrations.</s><s>Dashed PSTH lines represent responses that did not cross the threshold for significance (see methods).</s><s>c Cumulative distributions of MT cell response latencies.</s><s>d Response latencies of MT cell-odor pairs across concentrations for concentration-stable and unstable units.</s><s>Units' responses across concentrations are connected.</s><s>Area of each point in the plot is proportional to the Cohen's D-score of the response over non-odor response (see "methods" section).</s><s>Point positions are randomly jittered on the concentration axis for visibility.</s><s>e Odor responses sorted by units' response latencies at the highest concentration of odorant.</s><s>Responses are represented as D-scores, where positive and negative scores are excitation and inhibition relative to blank inhalation responses</s></p></div></figDesc><graphic coords="5,75.67,295.61,172.12,80.44" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 5</head><label>5</label><figDesc><div><p><s>Fig.5Computational model of primacy decoder can explain behavioral effects of mask.</s><s>a The schematic of the network included in the computational model.</s><s>Pyramidal neurons in PC receive random excitatory connections from MT cells (black lines) and connected to a random subset of other pyramidal neurons via inhibitory connections (blue lines).</s><s>The inhibitory connections are responsible for blocking of the inputs to PC after the initial (primary) representation is formed.</s><s>b, c Responses of MCs (100 out of 300) and PC cells for late (b) and early (c) masks.</s><s>MCs respond to Odor A, Odor B, and ChR2 (green, red, cyan).</s><s>PC responses at the end of sniff cycle (gray squares) are shown for two odors in the same panel.</s><s>For the early mask (c), PC responses are indistinguishable for two smells (yellow).</s><s>d Discrimination success rate as a function of mask latency for three conditions: odors A vs. B-high concentrations (black line), odors A vs. B-low concentrations (gray line), odor mixtures 60% A + 40% B vs. 40% A + 60% B (blue line).</s><s>Low/high concentration conditions were introduced by expanding/compressing the timing of MC odorant-related inputs within the sniff cycle.</s><s>Mixtures were introduced by combining together high conc.</s><s>sequences of inputs corresponding to odors A and B. The temporal dependencies reproduce the basic qualitative features of data (Fig.2b, e), including concentration-dependence of the error rate at different ChR2 timings</s></p></div></figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We acknowledge <rs type="person">Thomas Bozza</rs>, <rs type="person">Matt Wachowiak</rs>, <rs type="person">Kevin Franks</rs> and <rs type="person">Andreas Schaefer</rs> for commenting on this manuscript; <rs type="person">Admir Resulaj</rs> for his technical assistance in engineering the behavioral apparatus; and <rs type="person">Ezequiel Arneodo</rs> and <rs type="person">Kristina Penikis</rs> for</p></div>
+			</div>
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Code availability.</s><s>The code used for data acquisition is available at https://github.</s><s>com/olfa-lab.</s><s>MATLAB code of the computational model is available in ModelDB at http://modeldb.yale.edu/231814</s><s>Data availability.</s><s>The behavioral data set is available at https://doi.org/10.6084/</s><s>m9.figshare.5325310.</s><s>Concentration-series electrophysiological (spike times) data set is available at https://doi.org/10.6084/m9.figshare.5325340.</s><s>Raw binary electrophysiological data will be made available on request to corresponding author.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Additional information</head><p><s>Supplementary Information accompanies this paper at doi:10.1038/s41467-017-01432-4.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing interests:</head><p><s>The authors declare no competing financial interests.</s></p><p><s>Reprints and permission information is available online at http://npg.nature.com/</s><s>reprintsandpermissions/ Publisher's note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Sequential mechanisms underlying concentration invariance in biological olfaction</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Cleland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Neuroeng</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">21</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Odor concentration invariance by chemical ratio coding</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Syst. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">3</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Qualitative and quantitative olfactometric evaluation of different concentrations of ethanol peppermint oil solutions</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Krone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mannel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Pauli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hummel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phytother. Res</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="135" to="138" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Allelic inactivation regulates olfactory receptor gene expression</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Simon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cedar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Axel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="823" to="834" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Combinatorial receptor codes for odors</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Malnic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hirono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">B</forename><surname>Buck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="713" to="723" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Odor coding by a Mammalian receptor repertoire</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Saito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Chi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Matsunami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Mainland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Signal</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">9</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Tuning and topography in an odor map on the rat olfactory bulb</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meister</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bonhoeffer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="1351" to="1360" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">In vivo imaging of neuronal activity by targeted expression of a genetically encoded probe in the mouse</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bozza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Mcgann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mombaerts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wachowiak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="9" to="21" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Olfactory pattern classification by discrete neuronal network states</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O R</forename><surname>Niessing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">465</biblScope>
+			<biblScope unit="page" from="47" to="52" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Olfactory conditioning in the honey bee, Apis mellifera: effects of odor intensity</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bhagavan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">H</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol. Behav</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="107" to="117" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Concentration-dependent changes of perceived odor quality</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gross-Isseroff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lancet</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Senses</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="191" to="204" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Odor response properties of rat olfactory receptor neurons</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Duchamp-Viret</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Chaput</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Duchamp</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">284</biblScope>
+			<biblScope unit="page" from="2171" to="2174" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Schaefer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Margrie</surname></persName>
+		</author>
+		<title level="m">Spatiotemporal representations in the olfactory system. Trends Neurosci</title>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="92" to="100" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Pattern recognition computation using action potential timing for stimulus representation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Hopfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">376</biblScope>
+			<biblScope unit="page" from="33" to="36" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Spatio-temporal dynamics of odor representations in the mammalian olfactory bulb</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Spors</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grinvald</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="301" to="315" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Olfactory receptor neuron responses coding for rapid odour sampling</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Ghatpande</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Reisert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">589</biblScope>
+			<biblScope unit="page" from="2261" to="2273" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">The interaction of imposed and inherent olfactory mucosal activity patterns and their composite representation in a mammalian species using voltage-sensitive dyes</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">F</forename><surname>Kent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Mozell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Murphy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Hornung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="345" to="353" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Evidence for a chromatographic model of olfaction</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Mozell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Gen. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="46" to="63" />
+			<date type="published" when="1970">1970</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Airflow and nanoparticle deposition in rat nose under various breathing and sniffing conditions: a computational evaluation of the unsteady effect</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Aerosol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="1030" to="1043" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Theta oscillation coupled spike latencies yield computational vigour in a mammalian sensory system</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Margrie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Schaefer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">546</biblScope>
+			<biblScope unit="page" from="363" to="374" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Olfactory coding with patterns of response latencies</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Junek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kludt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Wolf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Schild</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="872" to="884" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Perception of sniff phase in mouse olfaction</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Smear</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shusterman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>O'connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bozza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">479</biblScope>
+			<biblScope unit="page" from="397" to="400" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Odor representations in olfactory cortex: &apos;sparse&apos; coding, global inhibition, and oscillations</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Poo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Isaacson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="850" to="861" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">A network that performs brute-force conversion of a temporal sequence to a spatial pattern: relevance to odor recognition</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sanders</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Comput. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">108</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Rapid encoding and perception of novel odors in the rat</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Wesson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Carey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Verhagen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wachowiak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Biol</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="82" to="e729" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Maintaining accuracy at the expense of speed: Stimulus similarity defines odor discrimination time in mice</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Abraham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="865" to="876" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Novel Behavioral Paradigm Reveals Lower Temporal Limits on Mouse Olfactory Decisions</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Resulaj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="11667" to="11673" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Supersensitive detection and discrimination of enantiomers by dorsal olfactory receptors: evidence for hierarchical odour coding</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sato</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">14073</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Computing with action potentials</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Hopfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Roweis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv Neural Inf Processing</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="166" to="172" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Simple networks for spike-timing-based computation, with application to olfactory processing</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Hopfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="843" to="852" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Psychophysical properties of odor processing can be quantitatively described by relative action potential latency patterns in mitral and tufted cells</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Schaefer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Margrie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Syst. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">30</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Non-redundant coding of aversive odours in the main olfactory pathway</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dewan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pacifico</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bozza</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">497</biblScope>
+			<biblScope unit="page" from="486" to="489" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">The missense of smell: functional variability in the human odorant receptor repertoire</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Mainland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="114" to="120" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Evidence for the temporal processing of odor mixtures in humans</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Laing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Eddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Francis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Stephens</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain. Res</title>
+		<imprint>
+			<biblScope unit="volume">651</biblScope>
+			<biblScope unit="page" from="317" to="328" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">The analysis of odor mixtures by humans: Evidence for a configurational process</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jinks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Laing</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol. Behav</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="51" to="63" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Multiple perceptible signals from a single olfactory glomerulus</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Smear</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Resulaj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bozza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1687" to="1691" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Haptic object localization in the vibrissal system: behavior and performance</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Knutsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pietr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ahissar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="8451" to="8464" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">The NumPy Array: A Structure for Efficient Numerical Computation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Van Der Walt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Colbert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Varoquaux</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Comput. Sci. Eng</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="22" to="30" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Spike sorting for large, dense electrode arrays</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rossant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="634" to="641" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Scikit-learn: Machine Learning in Python</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pedregosa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mach. Learn. Res</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="2825" to="2830" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<title level="m" type="main">Fast and accurate spike sorting in vitro and in vivo for up to thousands of electrodes</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Yger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Spampinato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Esposito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lefebvre</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/067843</idno>
+		<ptr target="https://doi.org/10.1101/067843" />
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title level="m" type="main">Neural Coding of Perceived Odor Intensity</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">B</forename><surname>Sirotin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shusterman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Precise olfactory responses tile the sniff cycle</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shusterman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Smear</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1039" to="1044" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title level="m" type="main">Complementary codes for odor identity and intensity in olfactory cortex</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Bolding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Franks</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">22630</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

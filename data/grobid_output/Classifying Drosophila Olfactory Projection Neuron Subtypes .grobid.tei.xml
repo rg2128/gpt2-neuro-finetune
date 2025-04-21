@@ -1,0 +1,1922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Classifying Drosophila Olfactory Projection Neuron Subtypes by Single-Cell RNA Sequencing</title>
+				<funder ref="#_84zu8J9">
+					<orgName type="full">National Institutes of Health</orgName>
+					<orgName type="abbreviated">NIH</orgName>
+				</funder>
+				<funder ref="#_rATDt5T">
+					<orgName type="full">National Science Foundation Graduate Research Fellowship</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Elsevier BV</publisher>
+				<availability status="unknown"><p>Copyright Elsevier BV</p>
+				</availability>
+				<date type="published" when="2018-11-16">2018 November 16.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hongjie</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Felix</forename><surname>Horns</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Biophysics Graduate Program</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bing</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qijing</forename><surname>Xie</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Neurosciences Graduate Program</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiefu</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tongchao</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><forename type="middle">J</forename><surname>Luginbuhl</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Stephen</forename><forename type="middle">R</forename><surname>Quake</surname></persName>
+							<email>quake@stanford.edu</email>
+							<affiliation key="aff3">
+								<orgName type="department">Departments of Bioengineering and Applied Physics</orgName>
+								<orgName type="institution">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">Chan Zuckerberg Biohub</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liqun</forename><surname>Luo</surname></persName>
+							<email>lluo@stanford.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Stanford University</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Classifying Drosophila Olfactory Projection Neuron Subtypes by Single-Cell RNA Sequencing</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Cell</title>
+						<title level="j" type="abbrev">Cell</title>
+						<idno type="ISSN">0092-8674</idno>
+						<imprint>
+							<publisher>Elsevier BV</publisher>
+							<biblScope unit="volume">171</biblScope>
+							<biblScope unit="issue">5</biblScope>
+							<biblScope unit="page" from="1206" to="1220.e22"/>
+							<date type="published" when="2018-11-16">2018 November 16.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">23AABB09021FAE9A3C68354FFB3CC11C</idno>
+					<idno type="DOI">10.1016/j.cell.2017.10.019</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>The definition of neuronal type and how this relates to the transcriptome are open questions.</s><s>Drosophila olfactory projection neurons (PNs) are among the best-characterized neuronal types: different PN classes target dendrites to distinct olfactory glomeruli, while PNs of the same class exhibit indistinguishable anatomical and physiological properties.</s><s>Using single-cell RNAsequencing, we comprehensively characterized the transcriptomes of most PN classes and unequivocally mapped transcriptomes to specific olfactory function for 6 classes.</s><s>Transcriptomes of closely related PN classes exhibit the largest differences during circuit assembly but become indistinguishable in adults, suggesting that neuronal subtype diversity peaks during development.</s><s>Transcription factors and cell-surface molecules are the most differentially expressed genes between classes and are highly informative in encoding cell identity, enabling us to identify a new lineage-specific transcription factor that instructs PN dendrite targeting.</s><s>These findings establish that neuronal transcriptomic identity corresponds with anatomical and physiological identity defined by connectivity and function.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>The nervous system comprises many neuronal types with varied locations, input and output connections, neurotransmitters, intrinsic properties, and physiological and behavioral functions.</s><s>Recent transcriptome analyses, especially from single cells, have provided important criteria to define a cell type.</s><s>Indeed, single-cell RNA-sequencing (RNA-seq) has been used to classify neurons in various parts of the mammalian nervous system (e.g., <ref type="bibr" target="#b4">Darmanis et al., 2015;</ref><ref type="bibr" target="#b22">Johnson et al., 2015;</ref><ref type="bibr" target="#b46">Usoskin et al., 2015;</ref><ref type="bibr" target="#b53">Zeisel et al., 2015;</ref><ref type="bibr" target="#b9">Foldy et al., 2016;</ref><ref type="bibr" target="#b10">Fuzik et al., 2016;</ref><ref type="bibr" target="#b12">Gokce et al., 2016;</ref><ref type="bibr" target="#b38">Shekhar et al., 2016;</ref><ref type="bibr" target="#b44">Tasic et al., 2016)</ref>, but the extent to which it is useful to define subtypes of neurons and the relationship between cell type and connectivity is unclear in most cases.</s><s>Indeed, what constitutes a neuronal type in many parts of the nervous system remains an open question <ref type="bibr" target="#b21">(Johnson and Walsh, 2017)</ref>.</s></p><p><s>The Drosophila olfactory circuit offers an excellent system to investigate the relationship between transcriptomes and neuronal cell types.</s><s>50 classes of olfactory receptor neurons (ORNs) form one-to-one connections with 50 classes of second-order projection neurons (PNs) in the antennal lobe in discrete glomeruli, forming 50 parallel information processing channels (Figure <ref type="figure" target="#fig_0">1A</ref>; <ref type="bibr" target="#b48">Vosshall and Stocker, 2007;</ref><ref type="bibr" target="#b50">Wilson, 2013)</ref>.</s><s>Each ORN class is defined by expression of 1-2 unique olfactory receptor gene(s) and by the glomerulus to which their axons converge.</s><s>Correspondingly, each PN class is also defined by the glomerulus within which their dendrites elaborate, which correlates strongly with the axonal arborization patterns at a higher olfactory center <ref type="bibr" target="#b32">(Marin et al., 2002;</ref><ref type="bibr" target="#b17">Jefferis et al., 2007)</ref>.</s><s>Furthermore, while on average ~60 ORNs and ~3 PNs form many hundreds of synapses within a single glomerulus <ref type="bibr" target="#b34">(Mosca and Luo, 2014)</ref>, every ORN forms synapses with every PN to convey the same type of olfactory information <ref type="bibr" target="#b23">(Kazama and Wilson, 2009;</ref><ref type="bibr" target="#b45">Tobin et al., 2017)</ref>.</s><s>Indeed, PNs that project to the same glomerulus exhibit indistinguishable electrophysiological properties and olfactory responses <ref type="bibr" target="#b23">(Kazama and Wilson, 2009</ref>).</s><s>Thus, one can define each PN class as a specific neuronal type (or subtype, if all PNs are collectively considered a cell type) with confidence that each class has unique connectivity, physiological properties, and function, whereas PNs of the same class most likely do not differ.</s><s>In other words, the ground truth of cell types for fly PNs is one of the best defined in the nervous system.</s><s>We describe here a robust single-cell RNA-seq protocol for neurons and glia in the Drosophila brain, and its application to Drosophila PN to establish the relationship between transcriptome, neuronal cell identity, and development.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A Robust Single-cell RNA-seq Protocol for the Drosophila Pupal Brain</head><p><s>Brains containing cells labeled by mCD8GFP driven from specific GAL4 lines were manually dissected, single-cell suspensions were prepared following a method modified after <ref type="bibr" target="#b43">Tan et al. (2015)</ref>, and cDNA were sequenced using a modified SMART-seq2 protocol <ref type="bibr" target="#b35">(Picelli et al., 2014)</ref> (Figure <ref type="figure" target="#fig_0">1B</ref>; Figure <ref type="figure" target="#fig_0">S1A</ref>; STAR Methods).</s><s>We sequenced cells from Drosophila pupal brains that were labeled by the astrocyte driver alrm-GAL4 <ref type="bibr" target="#b8">(Doherty et al., 2009)</ref> and olfactory projection neurons (PNs) labeled by the GH146-GAL4 driver, which is expressed in 40 of 50 PN classes <ref type="bibr" target="#b40">(Stocker et al., 1997;</ref><ref type="bibr" target="#b16">Jefferis et al., 2001)</ref> (Figure <ref type="figure" target="#fig_0">1C</ref>).</s><s>About 5% of GFP-labeled cells within the brain were recovered as single cells, and 90% of PNs yielded high-quality cDNA after reverse transcription (Figure <ref type="figure" target="#fig_0">S1B,</ref><ref type="figure">C</ref>).</s><s>Cells were sequenced to a depth of ~1 million reads per cell and 1000-4000 genes were detected per cell (Figure <ref type="figure" target="#fig_0">S1D</ref>).</s><s>Data quality was evaluated by examining expression of 5 neuronal markers <ref type="bibr">(brp,</ref><ref type="bibr">nSyb,</ref><ref type="bibr">elav,</ref><ref type="bibr">Syt1,</ref><ref type="bibr">and CadN)</ref> and 4 astrocyte markers (alrm, Eaat1, Gat, and Gs2) <ref type="bibr" target="#b8">(Doherty et al., 2009;</ref><ref type="bibr" target="#b39">Sinakevitch et al., 2010;</ref><ref type="bibr" target="#b41">Stork et al., 2014)</ref>; they were specifically expressed in the corresponding cell types (Figure <ref type="figure" target="#fig_0">1D</ref>).</s><s>We also identified 5 new genes <ref type="bibr">tre1,</ref><ref type="bibr">Cyp4g15,</ref><ref type="bibr">mfas,</ref><ref type="bibr">Obp44a)</ref> that were expressed in pupal astrocytes but not in PNs (Figure <ref type="figure" target="#fig_0">1D</ref>).</s><s>Unbiased clustering based on transcriptome profiles readily distinguished PNs and astrocytes (Figure <ref type="figure" target="#fig_0">1E</ref>).</s><s>Among PNs, housekeeping genes (e.g., Act5C and α-Tub84B) were reliably detected in all cells, and stress-related genes (e.g., Hsp70 family genes) were not widely induced (Figure <ref type="figure" target="#fig_0">S1E</ref>).</s><s>~50% of cells co-expressed two malespecific RNAs <ref type="bibr" target="#b33">(Meller et al., 1997)</ref> (Figure <ref type="figure" target="#fig_0">S1F</ref>), as expected given that we did not discriminate sex.</s><s>These data demonstrate the reliability of our single-cell RNA-seq protocol for analyzing cell types and transcriptomes in Drosophila pupal brain.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Clustering GH146-GAL4+ Projection Neurons (PNs) Based on Single-cell Transcriptomes</head><p><s>GH146-GAL4+ (GH146+ hereafter) PNs are derived from three neuroblast lineages whose cell bodies are located anterodorsal, lateral, or ventral to the antennal lobe neuropil (Figure <ref type="figure" target="#fig_1">2A</ref>; <ref type="bibr" target="#b16">Jefferis et al., 2001)</ref>.</s><s>The anterodorsal and lateral lineages produce uniglomerular, cholinergic, and excitatory PNs (adPNs and lPNs), whereas the ventral lineage produces GABAergic inhibitory PNs (vPNs), some of which target dendrites to multiple glomeruli <ref type="bibr" target="#b16">(Jefferis et al., 2001;</ref><ref type="bibr" target="#b30">Liang et al., 2013)</ref>.</s><s>We sequenced 1046 single GH146+ cells at 24-30 hours after puparium formation (h APF).</s><s>At this stage, PNs are refining their dendrite targeting in the antennal lobe; these dendrites also serve as targets for ORN axons that will invade the antennal lobe and establish one-to-one connections in the following 24 hours <ref type="bibr" target="#b18">(Jefferis et al., 2004)</ref>.</s><s>We analyzed 946 cells that passed quality filtering (STAR Methods).</s></p><p><s>Conventional dimensionality reduction and clustering methods based on Principal Component Analysis (PCA) and t-distributed Stochastic Neighbor Embedding (tSNE) (van der <ref type="bibr" target="#b47">Maaten and Hinton, 2008)</ref> identified only ~12 distinct PN clusters (Figure <ref type="figure" target="#fig_1">2B</ref>).</s><s>The inability to resolve more distinct clusters is likely due to the limited sensitivity of these methods to distinguish cell types with highly similar transcriptomes, as we expect for the PN classes.</s><s>To address this challenge, we developed an unsupervised machine-learning algorithm, Iterative Clustering for Identifying Markers (ICIM), to identify genes that distinguish PN classes.</s><s>ICIM searches for genes having the highest expression variability within a cell population, partitions the cells into two subpopulations using clustering based on these genes, then iteratively repeats the search on each subpopulation.</s><s>Iteration continues until distinct subpopulations cannot be separated because gene expression patterns within the population are homogeneous (Figure <ref type="figure" target="#fig_1">2C</ref>).</s><s>Stopping criteria are defined in an unbiased manner without supervision.</s><s>Genes identified using ICIM were then used for further dimensionality reduction using tSNE and clustering using HDBSCAN, a hierarchical density-based clustering algorithm <ref type="bibr" target="#b2">(Campello et al., 2013)</ref>, on the tSNE space.</s><s>Applying ICIM to the transcriptomes of GH146+ PNs, we identified 561 genes that segregate the 946 GH146+ cells into 35 distinct clusters (Figure <ref type="figure" target="#fig_1">S2A,</ref><ref type="figure">B</ref>).</s></p><p><s>Two of the 35 clusters expressed known markers for vPNs (Figure <ref type="figure" target="#fig_1">S2A</ref>): Gad1+, a GABA biosynthetic enzyme, and Lim1+, a transcription factor expressed in vPNs but not adPNs or lPNs <ref type="bibr" target="#b25">(Komiyama and Luo, 2007)</ref>, suggesting that they correspond to vPNs.</s><s>Besides PNs, the only other cells that GH146-GAL4 also consistently labeled at a high level at 24h APF were the anterior paired lateral (APL) neurons (Figure <ref type="figure" target="#fig_1">S2C</ref>).</s><s>Three other clusters expressed VGlut (Figure <ref type="figure" target="#fig_1">S2B</ref>), which specifically marked GH146+ APL neurons but not PNs (Figure <ref type="figure" target="#fig_1">S2D</ref>), suggesting that this VGlut+ population consists of APL neurons.</s><s>Because we were interested primarily in excitatory adPNs and lPNs, we removed inhibitory vPNs and APL neurons from subsequent analysis.</s><s>Nearly all of the remaining 902 GH146+ cells should be adPNs and lPNs, which collectively target 40 glomeruli.</s><s>Clustering analysis using ICIM and tSNE identified 30 distinct clusters (Figure <ref type="figure" target="#fig_1">2D</ref>).</s><s>Library complexity and sequencing depth did not drive clustering (Figure <ref type="figure" target="#fig_1">S2E</ref>).</s><s>The number of cells belonging to each cluster varied from 5 to 108, likely reflecting the fact that different PN classes contain different cell numbers ranging from 1 to 7 cells per antennal lobe <ref type="bibr" target="#b52">(Yu et al., 2010;</ref><ref type="bibr" target="#b31">Lin et al., 2012)</ref>.</s><s>It is likely that we did not sample a sufficient number of cells to detect rare PN classes.</s></p><p><s>We previously showed that two transcription factors, Abnormal chemosensory jump 6 (Acj6) and Ventral veins lacking (Vvl; also known as Drifter), are expressed in adPNs and lPNs, respectively (Figure <ref type="figure" target="#fig_1">2A</ref>), and instruct lineage-specific dendrite targeting <ref type="bibr" target="#b24">(Komiyama et al., 2003)</ref>.</s><s>Indeed, our single-cell RNA-seq analysis revealed that acj6 and vvl were expressed in a mutually exclusive manner (Figure <ref type="figure" target="#fig_1">2E</ref> and S2F).</s><s>Among the 30 clusters of adPNs and lPNs, 18 clusters (60%) expressed acj6 but not vvl, and thus represent adPNs.</s></p><p><s>The remaining 12 clusters were likely lPNs.</s></p><p><s>In summary, single-cell RNA-seq analysis revealed distinct clusters of GH146+ adPNs and lPNs expressing lineage markers in a manner consistent with prior knowledge.</s><s>Transcription factor transcripts, whose protein levels are generally low <ref type="bibr" target="#b11">(Ghaemmaghami et al., 2003)</ref>, were reliably detected within PNs and could be used to assign lineage identity, supporting the specificity and sensitivity of this method.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Matching Clusters to PN Classes Using Known Markers</head><p><s>We next attempted to map the correspondence between transcriptome-based PN clusters and glomerular-target-based PN classes by leveraging drivers that label specific PN classes.</s><s>We found that 91G04-GAL4 <ref type="bibr" target="#b19">(Jenett et al., 2012)</ref> was robustly expressed in PNs at 24h APF.</s><s>To limit expression only to PNs, we utilized an intersectional strategy by combining 91G04-GAL4 with GH146-Flp <ref type="bibr" target="#b36">(Potter et al., 2010)</ref> and UAS-FRT-STOP-FRT-mCD8GFP <ref type="bibr" target="#b15">(Hong et al., 2009)</ref>, such that only cells that express both 91G04-GAL4 and GH146-Flp would express mCD8GFP (hereafter referred to as "intersecting with GH146-Flp").</s><s>This resulted in expression of mCD8GFP in just two adPNs per hemisphere, both of which project dendrites to the DC2 glomerulus (Figure <ref type="figure" target="#fig_2">3A</ref>).</s><s>We sequenced 23 91G04+ PNs at 24-30h APF and performed clustering analysis using ICIM and tSNE together with the GH146+ cells.</s><s>We found that all 91G04+ PNs mapped to one GH146+ cluster (Figure <ref type="figure" target="#fig_2">3C</ref>; Cluster #1).</s><s>All 91G04+ cells could also be unambiguously mapped to this GH146+ cluster using a random forest classifier (data not shown).</s><s>Thus, Cluster #1 corresponds to DC2 PNs.</s></p><p><s>Mz19-GAL4 is expressed from 24h APF to adulthood (Figure <ref type="figure" target="#fig_2">3B</ref>; <ref type="bibr" target="#b18">Jefferis et al., 2004)</ref>.</s><s>After intersecting with GH146-Flp, Mz19-GAL4 labels three PN classes: adPNs that project to VA1d and DC3 (acj6+), and lPNs that project to DA1 (acj6-).</s><s>We sequenced 123 Mz19+ cells at 24-30h APF, and mapped them to four clusters of GH146+ cells (Figure <ref type="figure" target="#fig_2">3C</ref>).</s><s>The Mz19+/acj6-cells, corresponding to DA1 PNs, mapped to two clusters (#2 and #2'), suggesting that both correspond to DA1 PNs, a notion that we explore further below.</s><s>The Mz19+/acj6+ cells, corresponding to VA1d and DC3 PNs, mapped to two clusters of GH146+ cells (#3 and #4; Figure <ref type="figure" target="#fig_2">3C</ref>).</s><s>Thus, Clusters #3 and #4 correspond to VA1d and DC3 PNs.</s><s>We establish a one-to-one correspondence between these clusters and PN classes below.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Matching Clusters to PN Classes Using Newly Identified Markers</head><p><s>To map additional PN transcriptome clusters to glomerular classes, we searched the singlecell transcriptome data for new markers.</s><s>We identified terribly reduced optic lobes (trol) as predominantly expressed in a single cluster (Figure <ref type="figure" target="#fig_3">4A</ref>).</s><s>Intersecting an existing trol-GAL4 (NP5103-GAL4, inserted into an intron of trol) with GH146-Flp labeled 2-3 adPNs at both 24h and 72h APF, with dendrites projecting to the VM2 glomerulus at 72 h APF (Figure <ref type="figure" target="#fig_3">4B</ref>).</s><s>28 sequenced trol-GAL4+ PNs (after intersecting with GH146-Flp) mapped to the original trol+ Cluster #5 (Figure <ref type="figure" target="#fig_3">4C</ref>).</s><s>These data indicate that trol-GAL4 mimics endogenous trol expression and that Cluster #5 corresponds to VM2 PNs.</s></p><p><s>Using Mz19-GAL4, we mapped Mz19+/acj6+ VA1d and DC3 PNs to Clusters #3 and #4 (Figure <ref type="figure" target="#fig_2">3C</ref>), but could not resolve which cluster belonged to which PN class.</s><s>VA1d and DC3 PNs are closely related: VA1d PNs are born immediately after DC3 PNs from the same lineage and target dendrites to neighboring glomeruli.</s><s>To establish a one-to-one mapping, we identified CG31676 to have the strongest differential expression between the two clusters (Figure <ref type="figure" target="#fig_3">4D</ref>; compare Clusters #3 and #4).</s><s>We generated CG31676-GAL4 by inserting into the first intron of CG31676 a cassette containing a splice acceptor (SA) sequence followed by T2A peptide sequence and the GAL4 coding sequence (Figure <ref type="figure" target="#fig_3">4E</ref>).</s><s>After intersecting with GH146-Flp, CG31676-GAL4 labeled a similar number of PNs at 24h, 48h, and 72h APF, which targeted dendrites to VA1d but not DC3 (Figure <ref type="figure" target="#fig_3">4F</ref>).</s><s>Thus, Mz19+/acj6+/ CG31676+ Cluster #3 corresponds to VA1d PNs; the Mz19+/acj6+/CG31676-Cluster #4 corresponds to DC3 PNs.</s></p><p><s>In addition to DA1 (#2 and #2') and VA1d (#3), CG31676-GAL4 also strongly labeled DL3, which is targeted by acj6-lPNs (Figure <ref type="figure" target="#fig_3">4F</ref> and S3A) <ref type="bibr" target="#b16">(Jefferis et al., 2001)</ref>.</s><s>Among the 30 clusters, only two clusters (#6 and #6') were CG31676+/acj6-(Figure <ref type="figure" target="#fig_3">4D</ref> and S3B); these two clusters displayed highly similar transcriptomes as reflected in their close proximity in the tSNE plot.</s><s>We therefore mapped Clusters #6 and #6' to DL3 PNs.</s><s>CG31676-GAL4 transiently labeled two other glomeruli targeted by acj6+ adPNs (Figure <ref type="figure" target="#fig_2">S3A</ref>), but we could not unambiguously assign them to corresponding clusters.</s></p><p><s>Among the 6 glomerular classes we have mapped, four corresponded to a single transcriptome cluster each, but DA1 and DL3 PNs each corresponded to two clusters <ref type="bibr">(Figure 4D,</ref><ref type="bibr">4G)</ref>.</s><s>All PN classes are born in a stereotyped order within a specific lineage, and most PN classes are born consecutively within a single time window <ref type="bibr" target="#b16">(Jefferis et al., 2001;</ref><ref type="bibr" target="#b52">Yu et al., 2010;</ref><ref type="bibr" target="#b31">Lin et al., 2012)</ref>.</s><s>DA1 and DL3 PNs are the only two exceptions: they are born in two time windows separated by more than 24 and 12 hours, respectively (Figure <ref type="figure" target="#fig_2">S3D</ref>; <ref type="bibr" target="#b31">Lin et al., 2012)</ref>.</s><s>This birth timing difference may contribute to the transcriptome heterogeneity of DA1 and DL3 PNs.</s><s>For DA1 PNs, we found that fruitless (fru), encoding a transcription factor and a key regulator of male sexual behavior <ref type="bibr" target="#b6">(Dickson, 2008)</ref>, was expressed only in the large cluster (#2).</s><s>This is consistent with a previous finding that NP21-GAL4 (inserted into a fru intron near the sexually dimorphic splicing site) only labels DA1 PNs after intersecting with GH146-Flp <ref type="bibr" target="#b36">(Potter et al., 2010)</ref>.</s><s>On the other hand, CG45263 was only expressed in the small cluster (#2') (Figure <ref type="figure" target="#fig_2">S3C</ref>).</s><s>We also identified genes that were expressed only in one of the two DL3 clusters (Figure <ref type="figure" target="#fig_2">S3B</ref>).</s><s>It remains to be determined whether the transcriptional differences between Clusters #2 and #2' and between Clusters #6 and #6' reflect only differences in birth timing, or potential differences in biological functions.</s></p><p><s>In summary, by using a combination of existing markers and new markers discovered using single-cell RNA-seq, we have unambiguously mapped 6 PN classes to corresponding transcriptome clusters (Figure <ref type="figure" target="#fig_3">4G</ref>).</s><s>Our results indicate that the combination of genetic drivers and single-cell RNA-seq offers a simple strategy for mapping transcriptome clusters to cell types.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A New Lineage-specific Transcription Factor Regulates Dendrite Targeting</head><p><s>Our single-cell transcriptome analysis identified many transcription factors (TFs) that were differentially expressed in separate clusters.</s><s>For example, prospero mRNA was expressed in a majority of PNs including all Mz19+ PNs, whereas cut mRNA was expressed in a few PNs, all of which were Mz19-(Figure <ref type="figure" target="#fig_3">S4A</ref>).</s><s>Indeed, antibody staining validated these observations (Figure <ref type="figure" target="#fig_3">S4B</ref>), and the expression of Cut is consistent with our previous finding <ref type="bibr" target="#b25">(Komiyama and Luo, 2007)</ref>.</s></p><p><s>Our analysis also identified new lineage-specific expression for several TFs.</s><s>Specifically, C15 and knot mRNAs were observed only in adPNs and unplugged (unpg) was observed only in lPNs (Figure <ref type="figure" target="#fig_5">5A</ref>).</s><s>We confirmed these results by immunostaining using antibodies against C15 and Knot, and a lacZ reporter for unpg (Figure <ref type="figure" target="#fig_5">5B</ref>).</s><s>knot plays a critical role in controlling dendrite development of Drosophila sensory neurons <ref type="bibr" target="#b20">(Jinushi-Nakao et al., 2007)</ref>, and unpg is a marker for specific neuroblast sublineages in the Drosophila embryonic ventral nerve cord <ref type="bibr" target="#b3">(Cui and Doe, 1995)</ref>.</s><s>C15, encoding a homeobox-containing protein, is a homolog of human Hox11 critical in regulating a gene network in the developing Drosophila leg <ref type="bibr" target="#b1">(Campbell, 2005)</ref>, but its neural function is unknown.</s><s>We tested whether C15 plays a role in PN dendrite targeting.</s></p><p><s>In a loss-of-function experiment, we used elav-GAL4 to knockdown C15 in all neurons, Mz19-QF-driven QUAS-mCD8GFP to monitor dendrite targeting of VA1d and DA1 PNs [Mz19-QF labels DA1 and VA1d, but not DC3 PNs in wild type <ref type="bibr" target="#b14">(Hong et al., 2012)</ref>], and Or88a promoter driven myristolated tdTomato (Or88a-mtdT) to monitor axon targeting of VA1d ORNs <ref type="bibr" target="#b49">(Ward et al., 2015)</ref>.</s><s>Pan-neuronal knockdown of C15 using a strong RNAi line (Figure <ref type="figure" target="#fig_3">S4C</ref>) caused a highly penetrant dorsal shift of the VA1d glomerulus without affecting DA1 dendrite targeting (Figure <ref type="figure" target="#fig_5">5C</ref>, 5D, and S4D), concomitant with a loss of dendrites in the VA1d glomerulus.</s><s>This loss could be because: (1) C15 controls the expression of Mz19-QF in VA1d PNs, (2) VA1d neurons die or are not born, or (3) VA1d dendrites mistarget to the DA1 glomerulus.</s></p><p><s>In a gain-of-function experiment, we used the Mz19-GAL4-based MARCM system to misexpress C15.</s><s>Control Mz19+ adPNs target to the VA1d and DC3 glomeruli and lPNs target to the DA1 glomerulus (Figure <ref type="figure" target="#fig_5">5E</ref>, left panels; Figure <ref type="figure" target="#fig_2">3B</ref>).</s><s>However, when C15 was misexpressed, Mz19+ lPNs (DA1 PNs only) sent dendrites to regions outside the DA1 glomerulus, including VA1d, DC3, DA3, and DA4l that are all normally targeted by adPNs, while Mz19+ adPNs targeted dendrites correctly (Figure <ref type="figure" target="#fig_5">5E</ref>, right panels; S4E and S4F).</s></p><p><s>These data suggest that the transcription factor C15, as with Acj6 and Vvl <ref type="bibr" target="#b24">(Komiyama et al., 2003)</ref>, instructs lineage-specific PN dendrite targeting.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Transcriptomes of Closely Related PN Classes Exhibit the Largest Differences during Circuit Assembly</head><p><s>How do neuronal transcriptomes change as development proceeds?</s><s>By mapping clusters from single-cell RNA-seq data to specific PN classes at different developmental stages, we can address this key question at the resolution of single PN classes.</s><s>We focused on the three classes of Mz19+ adPNs and lPNs, which have been unequivocally mapped to specific transcriptome clusters (Figure <ref type="figure" target="#fig_3">4G</ref>).</s></p><p><s>Following the coarse patterning of PN dendrites at 24h APF, ORN axons invade the antennal lobe beginning ~30h APF to identify their PN partners, until they match with cognate PNs and establish discrete glomerular compartments first visible ~48h APF <ref type="bibr" target="#b18">(Jefferis et al., 2004)</ref>.</s><s>Following further expansion of terminal branches of ORN axons, PN dendrites, and synaptogenesis, pupae become adults at ~100h APF.</s><s>Using the intersection of Mz19-GAL4 and GH146-Flp, we sequenced and analyzed 485 single cells from five time points (~100 cells each): 24-30h, 36-42h, 48-54h, 72-78h APF, and 1-2d adult (Figure <ref type="figure" target="#fig_6">6A</ref>).</s></p><p><s>Clustering analysis using ICIM and tSNE revealed that Mz19+/acj6+ (VA1d and DC3) and Mz19+/acj6-(DA1) PNs were clearly separable at all times (Figure <ref type="figure" target="#fig_6">6B</ref>).</s><s>Interestingly, VA1d and DC3 PNs formed distinct clusters at the four pupal stages, but merged into a single cluster in the adult (Figure <ref type="figure" target="#fig_6">6B</ref> and Figure <ref type="figure" target="#fig_6">6C</ref>).</s><s>To confirm this observation quantitatively, we calculated cell type identity scores using the 22 most differentially expressed genes (P &lt; 10 -5 ) between VA1d and DC3 PNs across all pupal stages, and found that the difference between the transcriptional states of these two PN classes was maintained from 24h to 48h APF, but began to shrink at 72h APF, and were indistinguishable in the adult (Figure <ref type="figure" target="#fig_6">6D</ref>).</s><s>Using an alternative, unbiased genome-wide method, we calculated the Pearson correlation between the expression profiles of all pairs of cells based on 497 genes identified by ICIM.</s><s>This analysis confirmed that transcriptome differences between VA1d and DC3 PNs disappeared in the adult (Figure <ref type="figure" target="#fig_6">6E</ref>).</s><s>Indeed, clustering analyses using only adult VA1d and DC3 PNs failed to find distinct populations (data not shown).</s><s>Collectively, these data indicate that VA1d and DC3 PNs exhibit peak transcriptome differences during early pupal stages (24-48h APF) when PNs are refining their dendrite targeting and presenting cues for ORN axon targeting.</s><s>These differences progressively diminish in late pupal and adult stages (Figure <ref type="figure" target="#fig_6">6F</ref>).</s></p><p><s>These observations suggest that PN subtype identity genes, which distinguish VA1d and DC3 during the wiring stages, are down-regulated once wiring specificity is established.</s><s>To test this, we systematically identified differentially expressed genes at different stages in all Mz19+ PNs.</s><s>Gene ontology (GO) analysis indeed revealed that down-regulated genes consisted of factors associated with development and differentiation, whereas most upregulated genes were associated with metabolic processes (Figure <ref type="figure" target="#fig_5">S5A</ref>).</s><s>Clustering of genes based on their dynamic expression pattern revealed transcriptional waves consisting of genes that are coordinately turned down or up at different developmental stages (Figure <ref type="figure" target="#fig_5">S5B</ref>).</s><s>Notably, many more TFs and cell-surface and secreted molecules (CSMs) were down-than up-regulated (Figure <ref type="figure" target="#fig_5">S5B</ref>); CSMs were drawn from a database curated for relevancy to cell recognition and wiring specificity but excluding ion channels, transporters, and secreted enzymes <ref type="bibr" target="#b26">(Kurusu et al., 2008)</ref>.</s><s>CG31676, which was expressed in VA1d but not DC3 PNs at 24h APF (Figure <ref type="figure" target="#fig_3">4D</ref>, G), was turned off in both PN classes in the adult while its expression in DA1 persisted (Figure <ref type="figure" target="#fig_5">S5C</ref>); this was validated with CG31676-GAL4 expression analysis across developmental stages (Figure <ref type="figure" target="#fig_5">S5D</ref>).</s></p><p><s>Next we asked if transcriptomes of PN classes from the same neuroblast lineage are more similar than those from different lineages.</s><s>We found that the transcriptome differences between VA1d and DC3 PNs (both adPNs) were consistently smaller than that between VA1d and DA1 PNs (adPNs and lPNs, respectively) across developmental stages (Figure <ref type="figure" target="#fig_6">6G</ref>).</s><s>Similarly, the transcriptome differences at 24h APF between DA1 and DL3 lPNs were similar to those between VA1d and DC3 but smaller than those between VA1d and DA1 PNs.</s><s>All four PN classes target to adjacent glomeruli in the dorsolateral antennal lobe (Figure <ref type="figure" target="#fig_6">6A</ref>, right).</s><s>Thus, lineage origin correlates more to transcriptome similarities than does dendrite targeting position, highlighting the important contribution of cellular ancestry to transcriptome state.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>PN Subtype Identity Is Encoded by a Combinatorial Molecular Code</head><p><s>How is cell type identity encoded in the transcriptome?</s><s>It is possible that: (1) each cell type expresses at least one unique gene, or (2) each cell type expresses a unique subset of a shared pool of genes.</s><s>The strategy used for encoding cell type identity in the nervous system remains an unresolved question.</s><s>To comprehensively address how neuronal subtype identity is encoded in 24h APF pupal PNs, we approximated the 30 GH146+ transcriptome clusters as 30 subtypes, and searched for marker genes that were uniquely expressed in a single subtype.</s><s>We designed two criteria: 1) the gene must be robustly expressed within a cluster [&gt;7 counts per million (CPM), or log 2 (CPM+1) &gt; 3, in &gt;50% of the cells of a cluster]; 2) the gene must not be expressed in any other cluster (&gt;7 CPM in &lt;10% of the cells of any other cluster).</s><s>Only 6 genes fulfilled these criteria (Figure <ref type="figure" target="#fig_6">S6A</ref>), sufficient to encode 5 of the 30 clusters.</s><s>With relaxed criteria, we quickly entered a regime where identified genes were expressed in multiple clusters and hence not unique (Figure <ref type="figure" target="#fig_6">S6B</ref>).</s><s>The inability to detect unique markers in most cell types was not due to transcript dropouts (Figure <ref type="figure" target="#fig_6">S6C</ref>).</s><s>Thus, with few exceptions, GH146+ PNs lack marker genes that uniquely encode subtypes.</s></p><p><s>Next, we sought to identify combinatorial molecular codes for cell type identity.</s><s>We searched for a minimal set of genes that could uniquely encode PN subtypes using an information theoretic approach.</s><s>We calculated the information content of each gene with respect to PN subtype identity, formally defined as the mutual information between the binarized expression state of the gene (ON/OFF) and PN cluster identity (STAR Methods).</s><s>We ranked genes by their information content, and then selected a minimal set of genes by greedy search, iteratively drafting the gene carrying the most non-redundant information about identity into the set until 95% of the uncertainty of subtype identity was explained.</s><s>The result of this search is a set of genes for which knowledge of their expression states (ON/OFF) alone is sufficient to classify subtype identity with high accuracy.</s><s>We first applied this strategy to the three Mz19+ PN classes.</s><s>Only two genes, C15 and CG31676, were sufficient to distinguish these three subtypes (Figure <ref type="figure" target="#fig_7">7A</ref>), explaining 92% of the uncertainty of classification of individual Mz19+ PN cells into subtypes.</s><s>Both C15 and CG31676 were independently identified and characterized earlier in our study (Figure <ref type="figure" target="#fig_3">4D</ref> and Figure <ref type="figure" target="#fig_5">5</ref>).</s><s>This finding demonstrates that this approach can identify gene sets that robustly encode cell type identity in a combinatorial manner.</s></p><p><s>Applying this strategy to the 30 GH146+ PN subtypes, we identified 11 genes whose expression states uniquely identified every PN subtype (Figure <ref type="figure" target="#fig_7">7C</ref> and Figure <ref type="figure" target="#fig_7">S7A</ref>).</s><s>Knowledge of the expression states of these genes alone is sufficient to resolve 95% of the uncertainty in classification of individual GH146+ PN cells into subtypes (Figure <ref type="figure" target="#fig_7">7B</ref>, pink line).</s><s>Similar results were obtained using a range of different thresholds for binarization of expression state (Figure <ref type="figure" target="#fig_7">S7B,</ref><ref type="figure">C</ref>), or when we examined combinatorial codes based on gene expression levels after discretization into four states (Off, Low, Medium, High) instead of binary states (ON/OFF) (data not shown).</s><s>Indeed, a multinomial classifier using these 11 genes correctly classified 82% of individual GH146+ PN cells into subtypes despite measurement noise (Figure <ref type="figure" target="#fig_7">S7D</ref>).</s><s>Together, these analyses indicate that GH146+ PN subtype identity can be distinguished using a combinatorial code composed of expression states of only 11 genes.</s><s>This code is more compact than a code distinguishing each subtype using a unique marker (30 genes required), but substantially above the theoretical minimum of 5 genes (which can encode 2 5 or 32 binary states).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>TFs and CSMs Are Highly Informative in Encoding PN Identity and Enriched Among Differentially Expressed Genes</head><p><s>What types of genes distinguish neuronal subtypes?</s><s>It is widely thought that transcription factors (TFs) establish and maintain cell type identity, while cell-surface and secreted molecules (CSMs) determine wiring specificity.</s><s>But there has not been, to our knowledge, genome-wide analysis to show this in an unbiased manner.</s><s>Strikingly, 8 of the 11 genes in the minimal combinatorial code identified by our information theoretic analysis above were TFs (Figure <ref type="figure" target="#fig_7">7C</ref>), supporting a central role for TFs in specifying cell type identity.</s><s>To further explore the roles of TFs and CSMs in class identity, we searched for minimal codes for cell type identity consisting only of TFs or CSMs using our information theoretic approach along with previously annotated lists of TFs (FlyTF database) and CSMs <ref type="bibr" target="#b26">(Kurusu et al., 2008)</ref>, each containing ~1000 genes.</s><s>Minimal codes consisting of 13 TFs (Figure <ref type="figure" target="#fig_7">7D</ref> and Figure <ref type="figure" target="#fig_7">S7A</ref>) or 12 CSMs (Figure <ref type="figure" target="#fig_7">7E</ref> and Figure <ref type="figure" target="#fig_7">S7A</ref>) was sufficient to resolve 95% of the uncertainty in classifying GH146+ cells into PN subtypes (Figure <ref type="figure" target="#fig_7">7B</ref>).</s><s>That is, GH146+ PNs can be reliably classified into 30 subtypes based on the expression states of either 13 TFs alone or 12 CSMs alone.</s><s>The compactness of these minimal codes was similar to that of the most compact code obtained in our genome-wide search (Figure <ref type="figure" target="#fig_7">7C</ref>).</s></p><p><s>To evaluate whether TFs and CSMs are particularly informative with respect to subtype identity, we measured the amount of information contained within minimal combinatorial codes built from other genes (not TFs or CSMs) chosen at random from the genome (sampling 1,000 genes at random with 100 replicates).</s><s>Randomly chosen genes carried significantly less information than TFs or CSMs (Figure <ref type="figure" target="#fig_7">7B</ref>), despite having similar expression level distributions (Figure <ref type="figure" target="#fig_7">S7E</ref>).</s><s>These findings indicate that, on average, TFs and CSMs carry more information about GH146+ subtype identity than other genes.</s></p><p><s>To test this idea further, we asked whether TFs and CSMs were enriched in differentially expressed genes among PN subtypes.</s><s>Among Mz19+ adPNs and lPNs, TFs and CSMs accounted for a large proportion of differentially expressed genes (Figure <ref type="figure" target="#fig_7">7F</ref>).</s><s>Representation of CSMs peaked during the circuit assembly state (24-48h APF), consistent with a role for differential expression of CSMs in determining wiring specificity.</s><s>We also analyzed differentially expressed genes separating every pair of 30 clusters, comprising 435 (30 × 29 / 2) pairs altogether.</s><s>TFs and CSMs were highly enriched among differentially expressed genes, with the strongest enrichment found among the most significantly differentially expressed genes (Figure <ref type="figure" target="#fig_7">7G</ref>).</s><s>These findings support the notion that expression of TFs and CSMs plays key roles in determining PN subtype identity and wiring specificity.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>Single-cell RNA-seq has recently emerged as a powerful technique to investigate cellular heterogeneity, discover new cell types, and identify cell type-specific markers.</s><s>We established a robust single-cell RNA-seq protocol for Drosophila neurons and glia.</s><s>By focusing on olfactory projection neurons (PNs), among the best characterized cell types in all nervous systems, we established unequivocally that transcriptomic identity corresponds with the anatomical and physiological neuronal subtypes defined by connectivity and function.</s></p><p><s>Several lines of evidence support the sensitivity and reliability of our single-cell RNA-seq protocol.</s><s>First, differential gene expression identified by single-cell RNA-seq is highly consistent with previous literature.</s><s>First, we found highly correlated expression of two malespecific RNAs at the level of individual cells (Figure <ref type="figure" target="#fig_0">S1E</ref>), and mutually exclusive expression of two lineage-specific transcription factors (Figure <ref type="figure" target="#fig_1">S2F</ref>) as previously reported.</s><s>Second, we validated five differentially expressed transcription factors derived from singlecell RNA-seq data (Figure <ref type="figure" target="#fig_5">5A</ref>, B; Figure <ref type="figure" target="#fig_3">S4A,</ref><ref type="figure">B</ref>).</s><s>Third, sequencing of cells marked by known or newly identified PN class-specific markers matched well with specific transcriptome clusters (Figures <ref type="figure" target="#fig_2">3,</ref><ref type="figure" target="#fig_3">4</ref>), enabling us to unequivocally match transcriptome clusters with glomerular classes.</s><s>We expect that this approach can be generally applied to single-cell transcriptome analysis of many tissues and developmental stages in Drosophila and other organisms with small cell size, thus expanding the use of single-cell transcriptomics for addressing diverse biological questions.</s></p><p><s>We have developed a machine-learning algorithm called ICIM for unbiased identification of genes that distinguish subtypes.</s><s>Because this algorithm recursively examines finer-grained subpopulations, it is capable of detecting genes that distinguish small subpopulations.</s><s>ICIM is conceptually similar to previously described iterative analysis methods <ref type="bibr" target="#b46">(Usoskin et al., 2015;</ref><ref type="bibr" target="#b53">Zeisel et al., 2015;</ref><ref type="bibr" target="#b12">Gokce et al., 2016;</ref><ref type="bibr" target="#b44">Tasic et al., 2016)</ref>.</s><s>However, ICIM may discriminate highly similar cell types with greater sensitivity than methods based on PCA because it reduces the feature space to only those genes that are informative for distinguishing cell types.</s><s>ICIM allowed us to distinguish 30 clusters for 40 GH146+ PN classes.</s><s>Our classification is limited by sampling depth because 17 classes contain only 1 cell per hemisphere <ref type="bibr" target="#b52">(Yu et al., 2010)</ref>.</s><s>Sequencing of many more cells may resolve these classes into distinct clusters, resulting in a more complete description of PN transcriptome diversity.</s></p><p><s>Our analyses of transcriptome changes of identified PN classes across developmental stages demonstrate that transcriptomes of neuronal subtypes exhibit the largest difference during development, coincident with circuit assembly (Figure <ref type="figure" target="#fig_6">6</ref>).</s><s>This could be because key features of different PN classes are their input and output partners.</s><s>Once PNs establish differential connectivity during development, they may use largely the same signaling machineries to convey different olfactory information in adults.</s><s>This finding has important implications for using single-cell RNA-seq to classify neuronal types, since most studies have focused on adults (see Introduction).</s><s>While these studies have been highly successful in classifying major neuronal types, functionally distinct subtypes may have been overlooked, resulting in an underestimate of neuronal type diversity.</s></p><p><s>Transcription factors (TFs) and cell-surface and secreted molecules (CSMs) are widely considered to be key determinants of cell fate and wiring specificity, respectively.</s><s>Our single-cell transcriptome analyses provided objective data to support these notions.</s><s>First, TFs and CSMs together account for more than 50% of the top 30 differentially expressed genes (Figure <ref type="figure" target="#fig_7">7F</ref>, Figure <ref type="figure" target="#fig_7">7G</ref>).</s><s>Second, information theoretic analyses revealed that among the top 11 information-rich genes for distinguishing different PN subtypes, 8 are TFs.</s><s>Third, TFs or CSMs alone contain nearly as much information in distinguishing different PN subtypes as all genes (Figure <ref type="figure" target="#fig_7">7B</ref>).</s><s>A key readout of TFs in determining neuronal subtype may be to control differential expression of CSMs, such that different subtypes differentially respond to a common extracellular environment to achieve their wiring specificity.</s><s>However, we did not find a simple relationship between TFs and CSMs (Figure <ref type="figure" target="#fig_7">S7F</ref>).</s><s>Supporting a role for TFs in regulating wiring specificity, we show that a newly identified lineage-specific homeobox-containing C15 can instruct lineage-specific dendrite targeting (Figure <ref type="figure" target="#fig_5">5</ref>).</s><s>Finally, our analyses of PN transcriptomes shed light on the nature of the coding strategies that distinguish closely related neuronal subtypes.</s><s>PN subtype identity is largely determined by a combinatorial code that utilizes a number of genes between the number of subtypes and the theoretical minimum for a maximally compact code, suggesting redundancy.</s><s>The transcriptomes of closely related PN classes differed substantially during development (Figure <ref type="figure" target="#fig_7">7F</ref>; Table <ref type="table">S1</ref>), consistent with a recent report that closely related retinal cells have dozens of differentially expressed CSMs <ref type="bibr" target="#b43">(Tan et al., 2015)</ref>.</s><s>A certain degree of redundancy can provide robustness to wiring precision <ref type="bibr" target="#b13">(Hong and Luo, 2014)</ref>, but creates challenges for dissecting genetic control of wiring specificity using single gene manipulation.</s><s>The transcriptomes of identified PN classes can inform design of more precise experiments in which simultaneous manipulation of multiple genes through loss-and gain-of-function approaches allows experimental testing of the combinatorial TF and CSM codes.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>STAR Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Contact For Reagent And Resource Sharing</head><p><s>Further information and requests for resources and reagents should be directed to and will be fulfilled by the lead contact, Liqun Luo (lluo@stanford.edu).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimental Model And Subject Details Fly stocks</head><p><s>In all experiments, both male and female flies were used.</s><s>The following fly lines were used in this study: Mz19-GAL4 (BL#34497) <ref type="bibr" target="#b18">(Jefferis et al., 2004)</ref>, C15-RNAi (line1, BL#27649), C15-RNAi (line2, BL#35018), Alrm-GAL4 (BL# 67032).</s><s>Mz19-QF <ref type="bibr" target="#b14">(Hong et al., 2012)</ref>, GH146-GAL4 <ref type="bibr" target="#b40">(Stocker et al., 1997)</ref>, UAS-STOP-mCD8GFP <ref type="bibr" target="#b15">(Hong et al., 2009)</ref>, GH146-Flp (Potter et al., 2010), unpg-lacZ <ref type="bibr" target="#b3">(Cui and Doe, 1995)</ref>, trol-GAL4 (NP5103-GAL4, Kyoto Stock Center #113584), UAS-C15 (gift from Dr. Gerard Campbell) <ref type="bibr" target="#b1">(Campbell, 2005)</ref>, and 91G04-GAL4 (gift from Gerry Rubin) <ref type="bibr" target="#b19">(Jenett et al., 2012)</ref>.</s><s>CG31676-GAL4 was generated using CRISPR/Cas9 based insertion of SA-T2A-GAL4 into the first intron of CG31676 gene following the method described by <ref type="bibr" target="#b5">Diao et al. (2015)</ref>.</s><s>In brief, a 2.5kb DNA fragment, containing a PAM site in the middle within the first intron of the CG31676 gene, was PCR amplified from wild-type genomic DNA, and inserted into Blunt TOPO vector (Invitrogen).</s><s>Then, SA-T2A-GAL4 was PCR amplified from the pT-GEM(1) plasmid (Addgene #62893) and was inserted (NEBuilder HiFi DNA assemble kit) into the TOPO-CG31676-intron construct three-nucleotide before the PAM site of the intron.</s><s>This construct and a gRNA plasmid (pU6-BbsI-ChiRNA, Addgene #45946) containing a 20nt target sequence upstream of the PAM inserted into the BbsI site were co-injected to nos-Cas9 (gift from Dr. Ben White) <ref type="bibr" target="#b5">(Diao et al., 2015)</ref> embryos to obtain transgenic flies.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Method Details</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MARCM analysis</head><p><s>hsFlp based MARCM analyses were performed as previously described <ref type="bibr" target="#b29">(Lee and Luo, 1999;</ref><ref type="bibr" target="#b16">Jefferis et al., 2001)</ref>.</s><s>Briefly, transgenic flies linked with a FRT chromosome were crossed with MARCM-ready flies (containing hsFlp, UAS-CD8GFP, Mz19-GAL4, TubP-GAL80 and desired FRT).</s><s>Mz19-GAL4 was used to label VA1d, DC3 and DA1 PNs.</s><s>Larvae (24h to 48h after hatching) from the cross were heat shocked for 1h in a 37°C water bath.</s><s>Both single-cell and neuroblast clones could be observed in this fashion.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Immunostaining</head><p><s>Tissue dissection and immunostaining were performed following previously described methods <ref type="bibr" target="#b51">(Wu and Luo, 2006)</ref>.</s><s>Briefly, fly pupal and adult brains were dissected in 1x PBS and then fixed in 4% paraformaldehyde (20% paraformaldehyde diluted in PBS with 0.015% Triton X-100) for 20 min at room temperature.</s><s>Fixed brains were washed three times with PBST (PBS with 0.3% Triton X-100) and incubated in PBST twice for 20 min.</s><s>The samples were incubated in blocking buffer (5% normal goat serum in PBST) for 30 min at room temperature or overnight at 4°C.</s><s>Then, primary antibodies diluted in blocking buffer were applied and samples were incubated for 24-48 h at 4°C.</s><s>Then, samples were washed using PBST for 20 min twice, and secondary antibodies diluted in blocking buffer were applied and samples were incubated in dark for more than 24 h at 4°C.</s><s>Samples were washed in PBST for 20 min twice and mounting solution (Slow Fade Gold) was added.</s><s>Samples were left in mounting solution for at least 1 h before mounting them onto glass slides.</s><s>All wash steps were performed at room temperature.</s><s>Primary antibodies used in this study include rat anti-DNcad (DN-Ex #8; 1:40; DSHB), mouse anti-Prospero (1:200; DSHB), mouse anti-Cut (2B10; 1:50; DSHB), mouse anti-β-gal (1:500; Promega), chicken anti-GFP (1:1000; Aves Labs), rabbit anti-DsRed (1:250; Clontech), mouse anti-ratCD2 (OX-34; 1:200; AbD Serotec), rat anti-C15 (1:200; gift from Dr. Gerard Campbell) <ref type="bibr" target="#b1">(Campbell, 2005)</ref>, and guinea pig anti-knot (1:200; gift from Dr. Adrian Moore) <ref type="bibr" target="#b20">(Jinushi-Nakao et al., 2007)</ref>.</s><s>Secondary antibodies were raised in goat or donkey against rabbit, mouse, rat, and chicken antisera (Jackson Immunoresearch), conjugated to Alexa 405, 488, FITC, Cy3, Cy5, or Alexa 647.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Quantitative PCR (qPCR)</head><p><s>Total RNA from 3-5 day old adult fly heads was extracted using MiniPrep kit (Zymo Research, R1054).</s><s>Complementary DNA was synthesized using an oligo-dT primer.</s><s>qPCR was performed on a Bio-Rad CFX96 detection system.</s><s>Relative expression was normalized to Actin5C.</s><s>Primer sequences used for qPCR were: Actin5C (F): 5'-CTCGCCACTTGCGTTTACAGT-3' Actin5C (R): 5'-TCCATATCGTCCCAGTTGGTC-3' C15 (F): 5'-AGCGCTTCCACAAGCAAAAG-3' C15 (R): 5'-CCGTCTGTCGTCTCCACTTG-3'</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Imaging and quantification procedure</head><p><s>Confocal images were collected with a Zeiss LSM 780 and processed with ImageJ and Adobe Illustrator.</s><s>For quantification of the angles in Figure <ref type="figure" target="#fig_5">5C</ref>, the vertical line was drawn based on the position of two antennal lobes and the intersecting line was drawn through the centers of gravity of the VA1d and DA1 glomeruli, then the intervening angle was measured using ImageJ.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Single-cell RNA-sequencing</head><p><s>Drosophila brains with mCD8GFP-labeled cells using specific GAL4 drivers were manually dissected, and optic lobes were removed.</s><s>Single-cell suspensions were prepared following <ref type="bibr" target="#b43">Tan et al. (2015)</ref> with several modifications (see detailed procedure below).</s><s>Single labeled cells were sorted via Fluorescence Activated Cell Sorting (FACS) into individual wells of 96-well plates containing lysis buffer using an SH800 instrument (Sony Biotechnology).</s><s>Full-length poly(A)-tailed RNA was reverse-transcribed and amplified by PCR following the SMART-seq2 protocol <ref type="bibr" target="#b35">(Picelli et al., 2014)</ref> with several modifications.</s><s>To increase cDNA yield and detection efficiency, we increased the number of PCR cycles to 25.</s><s>To reduce the amount of primer dimer PCR artifacts, we digested the reverse-transcribed first-strand cDNA using lambda exonuclease (New England Biolabs) (37°C for 30 min) prior to PCR amplification.</s><s>Sequencing libraries were prepared from amplified cDNA using tagmentation (Nextera XT).</s><s>Sequencing was performed using the Illumina Nextseq 500 platform with paired-end 75 bp reads.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fly brain dissociation</head><p><s>Before the fly brain dissociation, make sure following essential reagents and supplies are readily available: Schneider's medium (Thermo Fisher, 21720024), papain (Worthington PAP2, LK003178), liberase TM (Roche, 5401119001; reconstitute liberase TM with 1x sterile PBS on ice to get final concentration 2.5mg/ml, make aliquots of 20ul into PCR tubes, and store them at -20°C), falcon tubes with cell strainer (35um), microfuge tube shaker, and syringes with 25G 5/8 needles.</s></p><p><s>Make fresh papain solution for every dissociation experiment.</s><s>Get 1 vial of papain (Worthington PAP2, LK003178), dissolve the powder using 1x sterile PBS (final concentration 100 units/ml), and re-suspend papain by gently shaking the vial (if use pipet, avoid bubbles which will decrease the enzyme activity).</s><s>Then make aliquots of 300μl papain solution for each EP tubes, and activate it in 37°C water bath for 10-30 min.</s><s>Add 4.1μl of liberase TM solution (2.5mg/ml) into 300μl papain solution to obtain a final concentration of about 0.18 units/ml.</s><s>Cool down the solution to room temperature before adding it to brain samples.</s><s>Since it takes 10-30 min to activate the papain solution, coordinate this step with fly brain dissection.</s></p><p><s>To estimate how many brains are required during sample preparation, please refer to recovery rates in Figure <ref type="figure" target="#fig_0">S1C</ref> for calculation.</s><s>In our current study, we dissected about 120 pupal brains from GH146-GAL4,UAS-mCD8GFP flies to collect about 10 plates of cells (10*96).</s><s>For the rare population labeled by 91G04-GAL4 or trol-GAL4 (2-3 cells each hemisphere), we dissected about 200 pupal brains to get half plate of cells (~50).</s></p><p><s>Following next steps to prepare single cell suspension:</s></p><p><s>-Dissect pupal/adult fly brains in ice-cold Schneider's medium.</s><s>Remove the optical lobes if all desired cells are in the central brain (e.g., GH146+ PNs).</s></p><p><s>Transfer every brain using P20 pipet into the EP tube containing 500ul Schneider's medium and keep the tube on ice.</s><s>The brains can be in the cold Schneider's medium for up to 2 hours before the next step.</s></p><p><s>-After dissecting enough number of brains, spin them down using bench-top microfuge for 10s and remove Schneider's medium.</s><s>Wash brains for 3 times at room temperature with 1x sterile PBS to completely remove Schneider's medium.</s></p><p><s>-Add 300μl papain solution (37°C activated and 4.1ul liberase added) to each sample and incubate it in a microfuge tube shaker (25°C, 1,000rpm) for 20 min in total.</s><s>At 5 and 10 min time points, pipet the solution up and down (avoid any bubble) for 30 times, and then continue shaking.</s><s>At 15 min time point, pass solution through 25G 5/8 needles for 7X (avoid any bubble).</s><s>Shake the tube for another 5 min.</s><s>To increase yield, use spare papain solution to coat the tips/ needles before passing the brain sample.</s></p><p><s>-Inactivate the enzyme by adding 400μl cold Schneider's medium (total 700ul).</s></p><p><s>Filter solution through cell strainer (35μm) into a 5ml falcon tube (keep tapping the tube until the solution go through the filter).</s><s>Wash the EP tube with 800μl cold Schneider's medium and filter through cell strainer (total 1,500μl).</s></p><p><s>-Transfer the 1,500μl solution to an EP tube and centrifuge for 7min at 4°C, 600xg.</s><s>Discard supernatant, re-suspend cells with 1,000μl (or desired volume depending on cell density) Schneider's medium, and transfer it to 5ml FACS tube.</s><s>Add desired florescent dye (e.g., Ethidium homodimer-1, Initrogen L3224, as a dead cell marker) and keep the tube on ice until FACS sorting.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Quantification And Statistical Analysis</head><p><s>For RNA-seq data analysis, we first provide an overview of our methods, then describe how these methods were applied to create each figure.</s><s>All analysis was performed in Python using Numpy, Scipy, Pandas, scikit-learn, and a custom single-cell RNA-seq module.</s></p><p><s>Sequencing reads and preprocessed sequence data are freely available from the Gene Expression Omnibus (accession number GSE100058).</s><s>Code is freely available from Github (https://github.com/felixhorns/FlyPN).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Sequence alignment and preprocessing</head><p><s>Reads were aligned to the Drosophila melanogaster genome (r6.10) using STAR (2.4.2a) <ref type="bibr" target="#b7">(Dobin et al., 2013)</ref> with the ENCODE standard options, except "--outFilterScoreMinOverLread 0.4 --outFilterMatchNminOverLread 0.4 --outFilterMismatchNmax 999 --outFilterMismatchNoverLmax 0.04".</s><s>Uniquely mapped reads that overlap with genes were counted using HTSeq-count (0.7.1) <ref type="bibr" target="#b0">(Anders et al., 2015)</ref> with default settings except "-m intersection-strict". Cells having fewer than 300,000 uniquely mapped reads were removed.</s><s>To normalize for differences in sequencing depth across individual cells, we rescaled gene counts to counts per million (CPM).</s><s>All analyses were performed after converting gene counts to logarithmic space via the transformation Log 2 (CPM+1).</s><s>Cells that were labeled with neuron-specific GAL4 drivers (C155+, GH146+, Mz19+, 91G04+, Trol+, and CG31676+ cells) were filtered for expression of canonical neuronal genes (elav, brp, Syt1, nSyb, CadN, and mCD8GFP), retaining only those cells that expressed at least 4/6 genes at &gt;15 CPM.</s><s>After filtering, 97.3% of GH146+ PN cells express mCD8GFP (at &gt;15 CPM).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Dimensionality reduction and clustering</head><p><s>Single-cell RNA-seq yields high dimensional gene expression data.</s><s>To visualize and interpret these data, we obtained two-dimensional projections of the cell population by first reducing the dimensionality of the gene expression matrix using principal component analysis (PCA), then further reducing the dimensionality of these components using tdistributed Stochastic Neighbor Embedding (tSNE) (van der <ref type="bibr" target="#b47">Maaten and Hinton, 2008)</ref>.</s><s>We note that tSNE is a nonlinear embedding that does not preserve distances, so one cannot interpret the distances in the projected space directly as distances between gene expression profiles (i.e., the pre-transformation space).</s></p><p><s>We performed PCA on a reduced gene expression matrix composed of the top 500 overdispersed genes (as described below).</s><s>To identify significant principal components (PCs), we examined the distribution of eigenvalues obtained by performing PCA after shuffling the gene expression matrix (with 100 replicates).</s><s>A PC was considered significant if the magnitude of its associated eigenvalue exceeded the maximum magnitude of eigenvalues observed in the shuffled data.</s><s>Significant components (typically 7-12 PCs) were used for further analysis.</s><s>We further reduced these components using tSNE to project them into a two-dimensional space.</s></p><p><s>ICIM (see detailed description of ICIM below) is an unsupervised machine learning algorithm that identifies a set of genes which distinguishes transcriptome clusters, which may correspond to cell types (described below).</s><s>In our analysis of GH146+ PNs, this set typically includes ~500 genes.</s><s>To visualize and interpret the single-cell gene expression data, we further reduced its dimensionality using tSNE to project the reduced gene expression matrix (consisting of only the genes identified by ICIM) into a two-dimensional space.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Overdispersion analysis</head><p><s>Genes that are highly variable within a population often carry important information for distinguishing cell types.</s><s>We were interested in identifying such genes and using them for dimensionality reduction and clustering analyses.</s><s>Variability of gene expression depends strongly on the mean expression level of a gene.</s><s>This motivates the use of a metric called dispersion, which measures the variability of a gene's expression level in comparison with other genes that are expressed at a similar level.</s><s>Overdispersed genes are those that display higher variability than expected based on their mean expression level.</s></p><p><s>To identify overdispersed genes, we binned genes into 20 bins based on their mean expression across all cells.</s><s>We then calculated a log-transformed Fano factor D(x) of each gene x</s></p><formula xml:id="formula_0">D(x) = log 10 [σ 2 (x)/μ(x)]</formula><p><s>where σ 2 (x) is the variance and μ(x) is the mean of the expression level of the gene across cells.</s><s>Finally, we calculated the dispersion d(x) as the Z-score of the Fano factor within its bin</s></p><formula xml:id="formula_1">d(x) = D(x) -Mean[D(x)]/Std[D(x)]</formula><p><s>where Mean <ref type="bibr">[D(x)</ref>] is the mean log-transformed Fano factor within the bin and Std <ref type="bibr">[D(x)</ref>] is the standard deviation of the log-transformed Fano factor within the bin.</s><s>We then rank genes by their dispersion and select the top genes for downstream analysis.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Iterative Clustering for Identifying Markers (ICIM)</head><p><s>To identify subpopulations of cells corresponding to PN subtypes, we developed an unsupervised machine-learning algorithm, Iterative Clustering for Identifying Markers, which we call ICIM.</s><s>We observed that standard dimensionality reduction and clustering methods using PCA and tSNE failed to discriminate subpopulations that corresponded to known PN lineages and molecular features.</s><s>We attributed the failure of these methods to the high degree of similarity of transcriptional states among PN subtypes, which represent closely-related neurons having similar functions.</s><s>All PN subtypes are born from one of the two common progenitor cells (neuroblasts) and have similar functional roles in the adult fly.</s><s>Thus, PN subtypes may be distinguished by a small number of genes.</s></p><p><s>In the language of machine learning, the performance of dimensionality reduction and clustering methods depends critically on feature selection.</s><s>Selection of informative genes that vary among cell types can improve discrimination in dimensionality reduction and clustering analysis.</s></p><p><s>We developed ICIM as a strategy to identify the most informative genes for distinguishing subpopulations within a population of closely-related cells in an unbiased way.</s><s>Starting with a population of cells, we first identify the top 100 overdispersed genes within this population.</s><s>Next we expand this set of genes by finding genes whose expression profiles are strongly correlated with the overdispersed genes (Pearson correlation &gt; 0.5).</s><s>We also filter this set of genes by (1) removing those having fewer than 2 correlated partners, and (2) those that are expressed in &gt;80% of cells.</s><s>Filter (1) removes noisy genes based on the idea that genes that carry information about cell type are expressed within gene modules and therefore have expression profiles that are correlated with at least one other gene.</s><s>Filter (2) removes housekeeping genes that are detected in nearly all cells, and have variation in expression levels due to biological and technical noise, but this variation is not informative for purposes of distinguishing cell types.</s><s>Cells are then clustered based on their expression profiles of these genes (average-linkage clustering using correlation metric).</s><s>We cut the dendrogram at the deepest branch and partition the population into two subpopulations.</s><s>The same steps are then performed iteratively on each subpopulation.</s><s>Iteration continues until a population cannot be split into subpopulations because it is "homogeneous".</s><s>The termination condition is defined as the minimum terminal branch length (the most similar nearest-neighbor correlation distance between the expression profiles of cells) being larger than 0.2.</s><s>This condition arises when the algorithm attempts to discover genes within a homogeneous population and finds a very large number of genes (typically &gt;1000 genes) that vary in an incoherent manner between cells.</s><s>When the algorithm terminates, we collect all genes that were identified at any stage.</s><s>The result of this analysis is a set of genes that discriminate subpopulations within a population, which can be used for dimensionality reduction (as described above).</s><s>We note that this algorithm identifies informative genes in an unbiased manner without knowledge of the ground truth of the number of cell types and their differences.</s><s>The results of the algorithm were robust across a wide range of parameters.</s></p><p><s>Why does ICIM outperform previously used approaches, such as PCA? PCA reduces the feature space in a manner that assigns weights to genes based on their information content.</s><s>This has two consequences: (1) downstream analysis uses the weighted gene expression information, which imposes assumptions about the statistical relationships between genes, and (2) while less informative genes are assigned smaller weights, they nevertheless can contribute to downstream analysis.</s><s>In contrast, ICIM explicitly removes genes that are deemed uninformative from further consideration and assigns equal weights to those that are kept.</s><s>These attributes make ICIM a more effective feature selection strategy for analysis of highly similar cellular subtypes.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Differential expression analyses</head><p><s>To find differentially expressed genes, we used the Mann-Whitney U test, a non-parametric test that detects differences in the level of gene expression between two populations.</s><s>The Mann-Whitney U test is advantageous for this application because it makes very general assumptions: (1) observations from both groups are independent and (2) the gene expression levels are ordinal (i.e., can be ranked).</s><s>Thus the test applies to distributions of gene expression levels across cells, which rarely follow a normal distribution.</s><s>Using the Mann-Whitney U test, we compared the distributions of expression levels of every gene separately.</s><s>P values were adjusted using the Bonferroni correction for multiple testing.</s><s>Different significance thresholds for determining whether a gene is differentially expressed were used for various analyses in this work.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>TF and CSM lists</head><p><s>To identify genes that are transcription factors (TFs) or cell surface molecules (CSMs), we used manually curated lists.</s><s>We obtained a list of Drosophila TFs from the FlyTF v1 database, (http://www.mrc-lmb.cam.ac.uk/genomes/FlyTF) and CSMs from <ref type="bibr" target="#b26">(Kurusu et al., 2008)</ref>.</s><s>These lists were manually curated to remove spurious annotations and redundancies according to Flybase annotation, resulting in 1045 TFs and 955 CSMs.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Analysis methods for figures</head><p><s>Single-cell transcriptome analyses of neurons and glia in Figure <ref type="figure" target="#fig_0">1</ref>.-We formed a population consisting of 946 GH146-GAL4+ cells and 67 alrm-GAL4+ cells.</s><s>We performed dimensionality reduction and clustering analysis using PCA and tSNE as described above.</s><s>We identified the top 500 overdispersed genes in the population.</s><s>We used PCA to reduce dimensionality, retaining 7 significant PCs.</s><s>Then we projected the population into a two-dimensional space using tSNE with perplexity 30 and learning rate 500 (Figure <ref type="figure" target="#fig_0">1E</ref>).</s><s>We also performed hierarchical clustering using complete linkage and a Euclidean metric based on manually selected neuronal and glial marker genes (Figure <ref type="figure" target="#fig_0">1D</ref>).</s></p><p><s>Removal of GH146+ vPNs and APL neurons in Figure <ref type="figure" target="#fig_1">2</ref>.-We initially formed a population consisting of 946 GH146+ cells.</s><s>Using ICIM, we identified 158 genes that distinguish subtypes.</s><s>We then projected the population into a two-dimensional space using tSNE.</s><s>We observed several distinct subpopulations corresponding to GH146+ neuronal types that do not belong to the adPN or lPN lineages.</s><s>Specifically, two clusters were composed of ventral PNs (vPNs), which robustly express several specific markers (Gad1, Lim1, and toy).</s><s>Three other clusters were composed of APL neurons, which robustly express other specific markers (Wnt4, VGlut, and fd102C), and are arranged adjacent to one another by tSNE, reflecting the similarity of expression profiles among these cells.</s><s>For subsequent analyses of GH146+ adPNs and lPNs, we removed these cells by excluding cells expressing 2/3 of these marker genes at &gt;15 CPM.</s></p><p><s>Single-cell transcriptome analyses of GH146+ cells in Figure <ref type="figure" target="#fig_1">2</ref>.-We initially attempted to identify distinct subpopulations representing PN subtypes using PCA and tSNE for the 946 GH146+ PNs (including vPNs and APL neurons).</s><s>We began by identifying the top 500 overdispersed genes and performing PCA to reduce the gene expression data to 10 significant PCs.</s><s>Then we projected the population into a two-dimensional space using tSNE with perplexity 30 and learning rate 500.</s><s>We observed that this analysis fails to separate distinct subpopulations (Figure <ref type="figure" target="#fig_1">2B</ref>).</s></p><p><s>We next attempted to distinguish subpopulations corresponding to PN subtypes using ICIM and tSNE.</s><s>Using ICIM (Figure <ref type="figure" target="#fig_1">2C</ref>), we identified 561 genes for the 902 GH146+ PNs (representing adPNs and lPNs, after removing vPNs and APL neurons as described above).</s></p><p><s>We projected these cells into a two-dimensional space using tSNE using as a distance matrix the pairwise Pearson correlation of the expression profiles of these genes, and perplexity 10, learning rate 250, and early exaggeration 4.0 (Figure <ref type="figure" target="#fig_1">2D</ref>).</s><s>Because tSNE computes a nonlinear embedding that does not preserve distances in the original space, the distances between cells cannot be directly interpreted in terms of similarity of expression profiles.</s><s>As a consequence, there are cases where cells belonging to the same cluster are separated by larger distances than cells belonging to different clusters.</s><s>We classified cells into clusters in an unbiased manner using HDBSCAN with min_cluster_size=5 and min_samples=3 on coordinates after tSNE projection.</s></p><p><s>Mapping clusters to PN classes in Figure <ref type="figure" target="#fig_2">3</ref>.-We formed a population consisting of 902 GH146+ cells, 123 Mz19+ cells (at 24h APF), and 23 91G04+ cells.</s><s>Using the 561 genes identified using ICIM on GH146+ cells, we projected this population into a twodimensional space using tSNE with perplexity 15 and learning rate 1000.</s><s>For visualization, we colored the cells according to their genotype, revealing that the Mz19+ and 91G04+ cells belong exclusively to 5 clusters (Figure <ref type="figure" target="#fig_2">3C</ref>).</s><s><ref type="figure" target="#fig_3">4</ref>.-We formed a population consisting of 902 GH146+ cells and 41 trol-GAL4+ cells.</s><s>trol-GAL4+ cells that were not expressing trol (CPM &lt; 7) were removed, leaving 28 cells for further analysis.</s><s>Using the 561 genes identified using ICIM on GH146+ cells, we projected this population into a two-dimensional space using tSNE with perplexity 15 and learning rate 1000.</s><s>For visualization, we colored the cells according to their genotype, revealing that the vast majority of trol+ cells belong exclusively to 1 cluster (Figure <ref type="figure" target="#fig_3">4C</ref>).</s><s><ref type="figure" target="#fig_6">6</ref>.-To understand how transcriptional state changes during development and maturation of PN subtypes, we collected Mz19+ cells from flies at 5 stages of development: 24h, 36h, 48h, and 72h after puparium formation (APF), and 1-2 day adults.</s><s>We formed a population consisting of 485 cells <ref type="bibr">(123,</ref><ref type="bibr">83,</ref><ref type="bibr">92,</ref><ref type="bibr">92</ref>, and 95 cells at each stage, respectively), after filtering to remove low quality cells and those not expressing neuronal markers (as described above).</s><s>Using ICIM, we identified 497 genes that distinguish cell subtypes and developmental stages.</s><s>We projected this population into a two-dimensional space based on these genes using tSNE with perplexity 10 and learning rate 500.</s><s>Cells formed several distinct subpopulations corresponding to different PN subtypes and developmental stages <ref type="bibr">(Figures 6B and Figures 6C)</ref>.</s><s>We assigned subpopulations to subtypes (DA1, VA1d, and DC3) based on the expression of key lineage factors (Figure <ref type="figure" target="#fig_6">6B</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Mapping clusters to PN classes in Figure</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Analysis of transcriptome changes during development in Figure</head><p><s>To quantify transcriptome changes in the closely related PN subtypes VA1d and DC3 during development, we devised a metric called the type identity score, which is the scaled sum of expression levels of genes that distinguish VA1d and DC3 cells.</s><s>We identified these genes using differential expression analysis comparing VA1d and DC3 populations at all times that the two populations are distinct as determined by <ref type="bibr">ICIM and tSNE (24h,</ref><ref type="bibr">36h,</ref><ref type="bibr">48h,</ref><ref type="bibr">and 72h APF)</ref>.</s><s>78 cells were included in the VA1d group and 64 cells were included in the DC3 group.</s><s>This analysis yielded 22 genes of which 13 are highly expressed in VA1d and 9 are highly expressed in DC3 cells at a significance level of P &lt; 10 -5 after the Bonferroni adjustment for multiple testing.</s><s>We rescaled expression levels of these genes to the range 0 to 1 (by dividing each expression level by the maximum among the population), then calculated the type identity score I of each cell as the mean normalized expression level,</s></p><formula xml:id="formula_2">I = 1 XV A1d x ∈ XV A1dx -1 XDC3 x ∈ XDC3x</formula><p><s>where XVA1d is the set of genes that are highly expressed in VA1d and XDC3 is the set of genes that are highly expressed in DC3, and |X| is the cardinality of set X. We then plotted the type identity scores of each cell at each developmental stage (Figure <ref type="figure" target="#fig_6">6D</ref>).</s></p><p><s>As an alternative method to analyze transcriptome differences, we also examined correlations in transcriptome states in an unbiased genome-wide manner.</s><s>This method has the advantage that it does not require the choice of a P value cutoff for determining significance.</s><s>We formed a population consisting of Mz19+ adPNs (belonging to both subtypes VA1d and DC3) at each stage of development.</s><s>Then we calculated the Pearson correlation of the expression profiles of the 497 genes identified by ICIM for every pair of cells (Figure <ref type="figure" target="#fig_6">6E</ref>).</s><s>These plots revealed a bimodal distribution containing two distinct peaks, corresponding to pairs of cells that both belong to the same subtype (more similar peak) and pairs of cells which belong to different subtypes (less similar peak).</s><s>As development proceeds, the transcriptome similarity of these two subtypes diminishes until vanishing, as reflected in the merging of these two distinct peaks and the emergence of a unimodal distribution in adulthood.</s></p><p><s>To compare transcriptome differences between neuroblast lineages, we performed differential expression analysis comparing VA1d and DC3, VA1d and DA1, and DL3 and DA1 PNs across developmental stages.</s><s>Because the P values of a differential expression test depend strongly on the number of cells involved in the test, we sampled cells so that all populations had the same number of cells.</s><s>Specifically, for each comparison, we sampled 12 cells from each population without replacement and performed differential expression analysis, then repeated this procedure (100 replicates) and calculated the median P value across the replicates for each gene.</s><s>We then counted the number of differentially expressed genes at P &lt; 0.001 based on the median P value (Figure <ref type="figure" target="#fig_6">6G</ref>).</s><s>All cells used for this analysis were Mz19+ PNs, except DL3 cells were GH146+ PNs.</s></p><p><s>To characterize transcriptome changes distinguishing PNs in the wiring stages of development from PNs in adulthood, we performed differential expression analysis comparing the population of Mz19+ PNs at 24h APF to the population of Mz19+ PNs in adults.</s><s>We found 1097 differentially expressed genes at significance level of P &lt; 10 -5 after the Bonferroni adjustment for multiple testing.</s><s>This included 592 genes that were highly expressed in 24h APF cells, and 478 genes that were highly expressed in adult cells.</s><s>We performed Gene Ontology (GO) analysis on these genes using Flymine and removed the redundant GO terms using REVIGO <ref type="bibr" target="#b42">(Supek et al., 2011)</ref>.</s><s>We report the number of genes corresponding to and the P value of enrichment of each term (Figure <ref type="figure" target="#fig_5">S5A</ref>).</s></p><p><s>To identify transcriptional waves during Mz19+ PN development, we considered the 1097 genes that were differentially expressed between 24h APF and adult cells.</s><s>We calculated the median expression of each gene at each time point.</s><s>We normalized these median expression values by dividing by the maximum value across time points, such that each expression value became a relative expression level between 0 and 1.</s><s>We then performed dimensional reduction on the expression profiles of the genes using TSNE with perplexity 20, learning rate 1000, and early exaggeration 6.0.</s><s>We identified clusters among the genes using HDBSCAN with min_cluster_size 25 and min_samples 5 on the projected coordinates.</s><s>This resulted in the identification of 13 distinct waves, of which 6 involved up-regulation and 7 involved down-regulation from 24h APF to adult cells (Figure <ref type="figure" target="#fig_5">S5B</ref>).</s><s>We plotted the mean relative expression level of each gene at each time point (black dots connected by black lines).</s><s>The relative expression profile of each individual gene belonging to each wave was also plotted (gray lines).</s><s>We calculated the fraction of genes within each wave that are transcription factors (TFs) or cell surface molecules (CSMs) using the lists of TFs and CSMs that were obtained as described above.</s></p><p><s>Characterizing genes that distinguish PN subtypes in Figure <ref type="figure" target="#fig_7">7</ref>.-To identify genes that distinguish closely related PN subtypes, we performed differential expression analysis comparing the Mz19+ VA1d and DA1 populations and the Mz19+ VA1d and DC3 populations at each developmental stage.</s><s>These genes are presented in Table <ref type="table">S1</ref>.</s><s>Because the significance level of expression level differences depends on the number of cells involved in the comparison and the number of cells varies across developmental stages, we analyzed the top 30 differentially expressed genes regardless of their significance level.</s><s>We note that the significance values of these genes were nearly all P &lt; 10 -4 .</s><s>We calculated the fraction of genes within each wave that are transcription factors (TFs) or cell surface molecules (CSMs) using the lists of TFs and CSMs that were obtained as described above (Figure <ref type="figure" target="#fig_7">7F</ref>).</s></p><p><s>We next performed a similar differential expression analysis comparing all pairs of subtypes.</s></p><p><s>For each subtype, we formed a population consisting of GH146+ cells belonging to that subtype at 24h APF.</s><s>For each pair of subtypes we calculated differential expression for each gene and ranked the genes by their significance level (P value).</s><s>We then calculated the fraction of TFs or CSMs among the top N genes for varying N from 30 to 1000.</s><s>We calculated the enrichment of TFs or CSMs compared to their genomic representation by dividing the fraction of TFs or CSMs by the genomic fraction of TFs (6.7%) or CSMs (6.2%).</s><s>We plotted the distribution of these enrichment values for various values of N (Figures 7G).</s></p><p><s>Searching for unique marker genes for PN subtypes in Figure <ref type="figure" target="#fig_7">7</ref>.-We sought to identify unique markers for each GH146+ PN subtype.</s><s>We formed populations each consisting of GH146+ cells belonging to a cluster identified using ICIM and tSNE (Figure <ref type="figure" target="#fig_1">2D</ref>).</s><s>We then performed differential expression analysis comparing each cluster to all other GH146+ cells.</s><s>We selected genes that were differentially expressed at a significance level of P &lt; 0.05 after the Bonferroni adjustment for multiple testing and having median expression within the cluster of interest of &gt;7 CPM, resulting in 1103 genes.</s><s>We then filtered for genes that were identified as significantly enriched in only one cluster, resulting in 257 genes.</s><s>This step was necessary because some genes were identified as significantly enriched in multiple clusters, which is consistent with reuse of genes as identity factors within a combinatorial code.</s><s>Finally, we identified genes that were robust and unique markers for a single cluster.</s></p><p><s>To do this, we calculated the fraction of cells within each cluster expressing a given gene at &gt;7 CPM.</s><s>We then filtered for genes that were expressed in &gt;50% of the cells within a given cluster and in &lt;10% of the cells in any other cluster.</s><s>We plotted the distribution of expression levels of these genes in each cluster (Figure <ref type="figure" target="#fig_6">S6A</ref>).</s><s>We also attempted to search using less criteria.</s><s>For example, Figure <ref type="figure" target="#fig_6">S6B</ref> shows the result when we required that the gene is expressed in &gt;50% of the cells (&gt;7 CPM) within a given cluster and in &lt;25% of the cells in any other cluster.</s></p><p><s>Technical artifacts such as dropouts can hinder the identification of unique markers.</s><s>We therefore estimated the probability that our failure to identify unique markers can be accounted for by dropout.</s><s>To do so, we assumed that each of the 30 molecularly distinct GH146+ PN subtypes expresses a single unique marker gene at a low level of expression ( <ref type="formula">7</ref>CPM) in a ubiquitous fashion (i.e. in all the individual cells belonging to that subtype).</s><s>In our data, genes expressed at an average level of 7 CPM are not detected in ~60% of cells.</s><s>We can fail to detect a gene because (1) the cell is not expressing the gene, or (2) because of noise in gene expression (biological noise) or technical dropout (measurement noise).</s><s>We therefore can estimate an upper bound at 60% on the probability of dropout of a gene that is expressed at 7 CPM on average.</s><s>Our approach for identifying unique markers requires that the gene is detected in 80% of cells within a cluster.</s><s>The probability of failure to detect the marker gene for a given cluster due to dropout is therefore given by the probability of dropouts in 20% of the cells in a cluster.</s><s>This probability is:</s></p><formula xml:id="formula_3">P failure = P dropout ^Ndropouts</formula><p><s>where P dropout is estimated to be 60% and N dropouts = 0.2 * N cells is the number of cells in which the gene must drop out.</s><s>We calculated this probability based on the number of cells N cells in every cluster, ranging from 5 to 108.</s><s>Then we calculated the probability that 25 out of 30 clusters do not have a unique marker gene by multiplying the probabilities of failure in 25 randomly sampled clusters.</s><s>We performed this sampling 10,000 times and report the average (P = 10 -62 ).</s><s>This value represents the probability of failing to detect a unique marker gene for 25 out of 30 clusters given that each cluster is expressing a single unique marker at 7 CPM.</s></p><p><s>These calculations are conservative in several ways.</s><s>First, we assumed that each cluster expresses a single marker gene.</s><s>Realistically, each subtype may express multiple unique markers.</s><s>This would increase the probability of detecting at least one of them.</s><s>Second, unique markers may be expressed at levels higher than 7 CPM.</s><s>We observed that the unique marker genes that we discovered are expressed at levels well above 7 CPM (Figure <ref type="figure" target="#fig_6">S6A</ref>) and biologically it is unlikely that a type identity factor would be expressed at extremely low levels.</s><s>Thus, we estimate that the likelihood that our failure to detect marker genes can be explained by dropouts alone is very small.</s></p><p><s>Information theory-based analyses in Figure <ref type="figure" target="#fig_7">7</ref>.-We sought to identify minimal sets of genes that can encode the subtype identity of GH146+ PNs in a combinatorial fashion.</s></p><p><s>Our motivation was to determine by direct search whether such molecular combinatorial codes exist.</s></p><p><s>To address this, we devised an algorithm that finds a minimal set of genes that is sufficient to encode the subtype identity of cells in a combinatorial manner drawing upon ideas from information theory.</s><s>An introduction to information theory is outside the scope of this work.</s><s>Nevertheless, we provide a brief description of the basic concepts.</s><s>Then we describe the algorithm and how it was applied in this work.</s></p><p><s>Entropy measures the uncertainty of a random variable <ref type="bibr" target="#b37">(Shannon, 1948;</ref><ref type="bibr">Cover and Thomas 2006)</ref>.</s><s>Conditional entropy measures the uncertainty of a random variable given the knowledge of another variable (i.e., after conditioning on another variable).</s><s>Conditioning on data never increases uncertainty (on average), which agrees with our intuition that additional information never hurts.</s></p><p><s>We use the notion of entropy H(C) to describe the uncertainty of cell type classification C. We use conditional entropy to describe the reduced uncertainty in classification due to knowledge of the expression state of a gene, H(C|G).</s><s>The information gain due to knowledge of the expression state of the gene is the mutual information between the gene and the classification I(G;C), which can be defined as</s></p><formula xml:id="formula_4">I(G; C) = H(C) -H(C G),</formula><p><s>where H(C) is the entropy of cell type classification (without knowledge of the expression states of any genes) and H(C|G) is the entropy of cell type classification after conditioning on the expression state of gene G.</s><s>Mutual information I(G;C) describes how much our uncertainty about classification C decreases when we observe the gene G.</s></p><p><s>Mutual information I(G;C) can also be calculated directly from the probability distributions of cell type classes and expression states.</s><s>For two discrete random variables G and C with their joint probability density function (pdf) p(x,y), the mutual information of G and C is defined as</s></p><formula xml:id="formula_5">IG; C = gcpg, clogpg, cpcpg = H(C) -H(C G),</formula><p><s>We often calculate the information content of a gene G with respect to the cell type classification C using this equation.</s><s>Throughout this work, the base of the logarithm is 2 and so the unit of entropy and information is bit.</s></p><p><s>We now describe the algorithm for finding a minimal combinatorial code.</s><s>This problem is closely related to the Feature Reduction n-k (FRn-k) problem in machine learning <ref type="bibr">(Battiti 1994)</ref>.</s><s>To solve this problem, we employ a greedy algorithm using mutual information similar to that described in <ref type="bibr" target="#b27">(Kwak and Choi, 2002)</ref>.</s><s>The problem is formulated as follows:</s></p><p><s>Given an initial set F with n features and set C of all output classes, find the subset S ⊆ F with k features that minimizes H(C|S), which is equivalent to maximizing the mutual information I(C;S).</s></p><p><s>Our algorithm is as follows:</s></p><p><s>(1) Initialize S as the empty set and F as the initial set of n features.</s></p><p><s>(2) For all f i in F, compute I(C;f i ).</s></p><p><s>(3) Find the feature f i that maximizes I(C; f i ).</s><s>Add f i to set S. Remove f i from set F.</s></p><p><s>(4) Repeat until the desired number of features k is selected:</s></p><p><s>(1) For all f i in F, compute I(C;f i |S).</s></p><p><s>(2) Find the feature f i that maximizes I(C; f i |S).</s><s>Add f i to set S. Remove f i from set F.</s></p><p><s>(5) Return the set S containing the selected features.</s></p><p><s>We repeat this computation with increasing k until the output set S explains a chosen amount of uncertainty in the classification C. Typically, we choose this termination condition as 99% of the entropy H(C) of classification C.</s></p><p><s>We note that the computation of mutual information is dramatically more efficient when G and C are discrete.</s><s>We therefore binarized expression levels using a cutoff of log 2 (CPM+1) = 3.</s><s>This cutoff was chosen based on the minimum in the distribution of expression levels across all genes and all cells (Figure <ref type="figure" target="#fig_7">S7A</ref>).</s><s>We varied the cutoff value between 2 and 6 and found that our results were essentially unchanged.</s><s>The compactness of the minimal codes for GH146+ PN subtype identity and the genes included in the code were nearly identical to that obtained using the cutoff of 3 (data not shown).</s><s>We also calculated the correlation between the information carried by each gene under different values of the cutoff with the information carried under the cutoff of 3 (Figure <ref type="figure" target="#fig_7">S7B</ref>).</s><s>This analysis revealed that the information content of genes is not very sensitive to the precise choice of cutoff for binarization across the range of 2 to 6.</s><s>We also found that other discretization schemes, such as a different number of levels of expression (e.g.</s><s>Off, Low, Medium, High), yielded similar results (data not shown).</s></p><p><s>Combinatorial coding of PN subtype identity in Figure <ref type="figure" target="#fig_7">7</ref>.-We initially applied the information theory-based algorithm to Mz19+ PN cells to test whether it is capable of identifying a set of genes that is sufficient for a combinatorial code of cell type identity.</s><s>We formed a population consisting of the 175 GH146+ cells that belong to the classes labeled by <ref type="bibr">35 VA1d,</ref><ref type="bibr">and 32 DC3 cells)</ref>.</s><s>We created a binary expression matrix consisting of the ON/OFF states of all 15,522 genes that remained after removing genes that were not detected in any cells.</s><s>We calculated the mutual information of each gene with respect to the GH146+ subtype classification.</s><s>We then used the greedy algorithm described above to find a minimal set of genes for encoding GH146+ subtype identity (Figure <ref type="figure" target="#fig_7">7A</ref>).</s></p><p><s>The initial set of features F was the top 30 most informative genes among the 15,522 genes in the expression matrix.</s></p><p><s>We next applied this approach to all GH146+ PNs.</s><s>We formed a population consisting of the 902 GH146+ cells belonging to the adPN and lPN lineages (Figure <ref type="figure" target="#fig_1">2D</ref>).</s><s>We created a binary expression matrix consisting of the ON/OFF states of all 15,522 genes that remain after removing genes that are not detected in any cells.</s><s>We calculated the mutual information of each gene with respect to the GH146+ subtype classification (Figure <ref type="figure" target="#fig_1">2D</ref>).</s><s>We used the greedy algorithm described above to find minimal sets of genes for encoding GH146+ subtype identity with k varying from 1 to 20.</s><s>The initial set of features F was the top 30 most informative genes among all 15,522 genes (genome-wide), among the 1045 TFs, or among the 955 CSMs.</s><s>We plotted the uncertainty explained by the minimal codes obtained with each value of k (Figure <ref type="figure" target="#fig_7">7B</ref>).</s><s>We then chose minimal codes that explained 95% of the uncertainty of GH146+ subtype classification (Figures <ref type="figure" target="#fig_7">7C-E</ref>).</s><s>For plotting, we binarized the mean expression level of each gene in each cluster using the cutoff of log 2 (CPM+1) = 3 (Figures <ref type="figure" target="#fig_7">7C-E</ref>).</s></p><p><s>To evaluate the performance of classifiers using these minimal codes, we performed leaveone-out cross-validation.</s><s>We formed a training set consisting of 901 GH146+ cells, after leaving out a single cell.</s><s>We then searched for a minimal combinatorial code for subtype identity using these cells and chose a minimal code that explained 95% of the uncertainty in subtype classification.</s><s>We then performed multinomial classification of the test cell based on its expression states of the genes in the code.</s><s>Specifically, the predicted class of the test cell was the class having the minimum Hamming distance to the expression state of the cell.</s><s>In the event of a tie, we assumed that the classifier would make a random, uniformly weighted choice between the tied classes.</s><s>Performance was plotted as a confusion matrix (Figure <ref type="figure" target="#fig_7">S7D</ref>), which depicts the fraction of cases having each true label that are classified as each predicted label.</s></p><p><s>To evaluate whether TFs and CSMs carry more information than other genes, we found minimal sets of genes using an initial set of features F consisting of 1,000 genes chosen at random from among the 13,631 expressed in the genome after excluding the genes annotated as TFs and CSMs.</s><s>We performed this search with 100 replicates.</s><s>We plotted the mean uncertainty explained at various values of k and the standard deviation across the replicates (Figure <ref type="figure" target="#fig_7">7B</ref>).</s><s>We evaluated the distribution of expression levels of TFs, CSMs, and other genes by calculating the median expression of each gene in all GH146+ PN cells, and plotting the distribution across all genes in each category (Figure <ref type="figure" target="#fig_7">S7E</ref>).</s></p><p><s>To identify regulatory relationships between TFs and CSMs, we performed clustering of the expression state profiles of TFs and CSMs across the clusters of GH146+ cells.</s><s>The top 30</s></p><p><s>TFs and CSMs ranked by mutual information with cell type identity were selected.</s><s>The binary expression state of each gene in each cluster was calculated using the cutoff of log 2 (CPM+1) = 3 based on the mean expression level in the cluster.</s><s>We performed average linkage clustering using the Hamming distance metric on these expression states (Figure <ref type="figure" target="#fig_7">S7F</ref>).</s><s>(C) Schematic of Iterative Clustering for Identifying Markers (ICIM), an unsupervised machine-learning algorithm for identifying genes that distinguish cell types.</s><s>(D) Visualization of GH146+ PNs using tSNE based on 561 genes identified using ICIM.</s><s>GH146+ adPNs and lPNs form 30 distinct clusters (differentially colored).</s><s>Black dots are cells that could not be assigned to any cluster.</s><s>(E) Visualization of GH146+ PNs as in Figure <ref type="figure" target="#fig_1">2D</ref>, colored according to acj6 and vvl expression level.</s><s>acj6 and vvl are expressed in GH146+ PNs in a mutually exclusive manner.</s></p><p><s>See also Figure <ref type="figure" target="#fig_1">S2</ref>.</s><s>(D) Visualization of GH146+ PNs using tSNE as in Figure <ref type="figure" target="#fig_3">4A</ref> showing expression of CG31676 (color bar in Figure <ref type="figure" target="#fig_3">4A</ref>).</s><s>Among two Mz19+/acj6+ clusters, CG31676 is highly expressed in Cluster #3, but not #4.</s><s>Several acj6-(see Figure <ref type="figure" target="#fig_2">S3B</ref>) clusters also express CG31676, including #2 and #2' (DA1) and #6 and #6'.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>(Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Single-cell RNA-seq Protocol for the Drosophila Pupal Brain (A) Schematic of fly olfactory system organization.</s><s>Olfactory receptor neurons (ORNs) expressing the same odorant receptor (same color) target their axons to the same glomerulus in the antennal lobe.</s><s>Projection neuron (PN) dendrites also target single glomeruli, and their axons project to the mushroom body (MB) and lateral horn (LH).</s><s>(B) Schematic of single-cell RNA-seq protocol.</s><s>(C) Representative confocal images of Drosophila central brains labeled by UAS-mCD8GFP crossed with PN driver GH146-GAL4 (24h APF) or astrocyte driver alrm-GAL4 (72h APF).N-cadherin (Ncad, red) staining labels neuropil.</s><s>Scale, 50 μm.(D)</s><s>Heat map showing expression levels of genes that are specific for neurons or astrocytes.</s><s>Each column is an individual cell.</s><s>67 alrm-GAL4+ and 946 GH146-GAL4+ cells are shown, with driver indicated by the color above.</s><s>Cell type-specific genes are enriched in astrocytes (top 9) and PNs (bottom 5).</s><s>Expression levels are indicated by the color bar (CPM, counts per million).</s><s>Cells and genes were ordered using hierarchical clustering.</s><s>(E) Visualization of astrocyte and PN populations using t-distributed Stochastic Neighbor Embedding (tSNE).</s><s>Each dot is a cell.See also FigureS1.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Single-cell RNA-seq Analysis of GH146+ PNs (A) Representative confocal projection and schematic of GH146+ PNs, which include (per antennal lobe) 50 adPNs (acj6+), 35 lPNs (vvl expression begins to decrease from 18h APF;<ref type="bibr" target="#b24">Komiyama et al., 2003)</ref>, and 6 vPNs (Lim1+).</s><s>The cell bodies of adPNs, lPNs, and vPNs are located respectively anterodorsal, lateral, and ventral to the antennal lobe neuropil (circled; stained by Ncad).</s><s>All GH146+ adPNs and lPNs send dendrites to a single glomerulus.</s><s>The schematic shows the stereotyped locations of a large subset of glomeruli (named according to their locations;<ref type="bibr" target="#b28">Laissue et al., 1999)</ref>, color-coded according to adPNs or lPNs.</s><s>Scale, 20 μm.</s><s>D, dorsal; L, lateral.</s><s>(B) Visualization of GH146+ PNs using dimensionality reduction by PCA followed by tSNE.</s><s>Each dot is a cell.</s><s>Cells are arranged according to transcriptome similarity.</s></p></div></figDesc><graphic coords="33,155.64,62.00,360.72,468.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Mapping Clusters to PN Classes Using Known Markers (A and B) Intersecting GH146-Flp with 91G04-GAL4 (A) or with Mz19-GAL4 (B) labels only one PN class (DC2) or 3 PN classes (acj6+ VA1d and DC3; acj6-DA1), respectively, at 24h APF and in adults.</s><s>Driver schematics are shown on the right.</s><s>Scale for (A), 20 μm; for (B), 50, 50, and 20 μm.</s><s>(C) Visualization of GH146+, 91G04+, and Mz19+ PNs using tSNE as in Figure 2D.</s><s>Cells are colored according to driver (left) or by expression level of acj6 (right).</s><s>91G04+ cells (green) map to a single cluster (#1) of GH146+ cells (orange); thus Cluster #1 corresponds to DC2 PNs.</s><s>DA1 PNs (Mz19+/acj6-) map to two clusters, #2 and #2'.</s><s>VA1d and DC3 PNs (Mz19+/acj6+) map to two clusters, #3 and #4.</s></p></div></figDesc><graphic coords="35,122.28,62.00,427.44,468.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Mapping Clusters to PN Classes Using Newly Identified Markers (A) Visualization of GH146+ PN cells using tSNE as in Figure 2D, showing expression of trol enriched in one cluster (#5).</s><s>Clusters #1-4 from Figure 3 are also indicated.</s><s>(B) After intersecting with GH146-Flp, trol-GAL4 labels 2-3 PNs in each hemisphere at 24h and 72h APF, which project dendrites to the VM2 glomerulus.(C)</s><s>Visualization of GH146+ and trol+ PNs using tSNE based on 561 genes previously identified using ICIM (Figure2D).</s><s>Cells are colored according to driver (left) or by expression level of trol (right; color bar in Figure4A).</s><s>trol-GAL4+ PNs map to one GH146+ PN cluster (left), which expresses high levels of trol (right).</s><s>Thus, Cluster #5 corresponds to VM2 PNs.</s></p></div></figDesc><graphic coords="36,93.00,62.00,486.00,468.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head></head><label></label><figDesc><div><p><s>(E)  Schematic of CRISPR/Cas9 mediated insertion of T2A-GAL4 into the first intron of CG31676.</s><s>(F) CG31676-GAL4 expression in PNs after intersecting with GH146-Flp.</s><s>Similar numbers of PNs are labeled at 24h, 48h, and 72h APF.</s><s>VA1d, but not DC3, is labeled, enabling us to map Cluster #3 to VA1d (CG31676+) and Cluster #4 to DC3 (CG31676-).</s><s>In addition, DA1 and DL3 are labeled.</s><s>Thus, the remaining acj6-/CG31676+ cells (Clusters #6 and #6') correspond to DL3 PNs.</s><s>(G) Summary of the mapping of 6 PN classes to corresponding transcriptome clusters.</s><s>Markers used for unambiguous mapping (Figures3, 4A-D, and S3B, C) are listed.Ncad is used as a neuropil marker.</s><s>Scale, 20 μm.See also FigureS3.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Identification of New Lineage-specific Transcription Factors using Single-cell RNA-seq (A) Visualization of GH146+ PNs using tSNE as in Figure 2E showing expression of acj6, C15, knot, and unpg.</s><s>adPNs are outlined (based on acj6 expression) and remaining cells are lPNs.</s><s>(B) Consistent with RNA-seq data in (A), 24h APF expression of C15 and Knot (antibody staining) in GH146+ PNs (green) is restricted to adPNs, while unpg (anti-β-gal staining) is restricted to lPNs.(C)</s><s>Loss-of-function analysis of C15 using elav-GAL4 driven UAS-C15-RNAi (line #2; see FigureS4C).</s><s>Wild type (WT) control: elav-GAL4 × w 1118 .</s><s>When C15 is knocked down, the VA1d glomerulus (visualized by VA1d ORN axons labeled by Or88a-mtdT) displays a</s></p></div></figDesc><graphic coords="38,138.00,62.00,396.00,468.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>Transcriptome Analysis of Mz19+ PNs across Developmental Stages (A) Representative confocal projections of Mz19+ PNs from 5 stages.</s><s>Schematic (right) shows cell body and glomerular targets of Mz19+ PNs.</s><s>Ncad, red.</s><s>D, dorsal; L, lateral.</s><s>Scale, 20 μm.</s><s>(B) Visualization of Mz19+ PNs from all developmental stages using tSNE based on 497 genes identified using ICIM.</s><s>Color shows expression of acj6 and CG31676 (CPM, counts per million).</s><s>acj6+ cells are adPNs (VA1d and DC3, outlined), and acj6cells are lPNs (DA1).</s><s>Within adPNs, CG31676+ cells are VA1d PNs, and CG31676cells are DC3 PNs.</s><s>CG31676 is turned off in all adult adPNs (see also C). (C) Visualization of Mz19+ PNs as in (B), with color indicating developmental stages.</s><s>Expression patterns of acj6 and CG31676 (B) enabled unambiguous identification of three</s></p></div></figDesc><graphic coords="40,142.08,62.00,387.84,468.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 7 .</head><label>7</label><figDesc><div><p><s>Figure 7. Combinatorial Molecular Codes of PN Subtype Identity (A) Minimal combinatorial code for subtype identity among Mz19+ PNs identified using an information theoretic approach.</s><s>Left, mean expression level of each gene among cells belonging to each Mz19+ class.</s><s>Right, binarized expression levels of the same genes [cutoff: log 2 (CPM+1) = 3].</s><s>Each Mz19+ PN class expresses a distinct combination of these two genes.(B)</s><s>Information contained in minimal combinatorial codes for GH146+ subtype identity.</s><s>Xaxis is the number of genes included in the code.</s><s>Y-axis is the amount of uncertainty (entropy) of cell type classification that is explained by the code.</s><s>Colors denote codes constructed from different sets of genes.</s><s>The genome-wide code (pink) is constructed from all genes, while the TF (green) or CSM (orange) codes use only 1045 TF or 955 CSM genes.</s></p></div></figDesc><graphic coords="42,117.12,62.00,437.76,467.74" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Cell.</s><s>Author manuscript; available in PMC 2018 November 16.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We thank <rs type="person">L. Tan</rs> and <rs type="person">S.L. Zipursky</rs> for sharing detailed protocols of cell dissociation; <rs type="person">G. Rubin</rs>, <rs type="person">G. Campbell</rs>, <rs type="person">A. Moore</rs>, <rs type="person">B. White, Bloomington</rs> and <rs type="institution">Kyoto Stock Centers</rs> for reagents; <rs type="person">S. Darmanis</rs> and <rs type="person">J. Lui</rs> for discussions; <rs type="person">N. Neff</rs> and <rs type="person">J. Okamoto</rs> for assistance with sequencing; and <rs type="person">T. Clandinin</rs>, <rs type="person">J. Lui</rs>, <rs type="person">D. Pederick</rs>, <rs type="person">K. Shen</rs>, and <rs type="person">A. Shuster</rs> for comments on the manuscript.H.L. is a <rs type="grantName">Stanford Neuroscience Institute Interdisciplinary Postdoctoral Scholar</rs>, F.H. acknowledges support from the <rs type="funder">National Science Foundation Graduate Research Fellowship</rs>, S.R.Q. is a Chan Zuckerberg Investigator, and L.L. is an HHMI Investigator.This work was supported by <rs type="funder">NIH</rs> grant <rs type="grantNumber">R01-DC005982</rs> (to L.L.).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_rATDt5T">
+					<orgName type="grant-name">Stanford Neuroscience Institute Interdisciplinary Postdoctoral Scholar</orgName>
+				</org>
+				<org type="funding" xml:id="_84zu8J9">
+					<idno type="grant-number">R01-DC005982</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data And Software Availability</head><p><s>Sequencing reads and preprocessed sequence data are freely available from the Gene Expression Omnibus (accession number GSE100058).</s><s>Code is freely available from Github (https://github.com/felixhorns/FlyPN).</s><s>Software and Algorithms Custom analysis software This paper https://github.com/felixhorns/FlyPN</s><s>Iterative Clustering for Identifying Markers This paper https://github.com/felixhorns/FlyPN</s><s>Other</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author Manuscript</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">HTSeq--a Python framework to work with high-throughput sequencing data</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Anders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">T</forename><surname>Pyl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Huber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="166" to="169" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25260700</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Regulation of gene expression in the distal region of the Drosophila leg by the Hox11 homolog, C15</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Campbell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Dev Biol</title>
+		<imprint>
+			<biblScope unit="volume">278</biblScope>
+			<biblScope unit="page" from="607" to="618" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15680373</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A framework for semi-supervised and unsupervised optimal extraction of clusters from hierarchies</title>
+		<author>
+			<persName><forename type="first">Rjgb</forename><surname>Campello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Moulavi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zimek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sander</forename><forename type="middle">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Data Mining and Knowledge Discovery</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="344" to="371" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The role of the cell cycle and cytokinesis in regulating neuroblast sublineage gene expression in the Drosophila CNS</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Doe</forename><surname>Cq</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Development</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="3233" to="3243" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">A survey of human brain transcriptome diversity at the single cell level</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Darmanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Sloan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Enge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Caneda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Shuer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hayden</forename><surname>Gephart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Barres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quake</forename><surname>Sr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="7285" to="7290" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26060301</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Plug-and-play genetic access to drosophila cell types using exchangeable exon cassettes</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Diao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ironfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Luan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Diao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Shropshire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ewer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Marr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Potter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Landgraf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">H</forename><surname>White</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell Rep</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1410" to="1421" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25732830</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Wired for sex: the neurobiology of Drosophila mating decisions</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Dickson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">322</biblScope>
+			<biblScope unit="page" from="904" to="909" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18988843</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">STAR: ultrafast universal RNA-seq aligner</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dobin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schlesinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Drenkow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zaleski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Batut</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chaisson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gingeras</forename><surname>Tr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="15" to="21" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23104886</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Ensheathing glia function as phagocytes in the adult Drosophila brain</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Doherty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Logan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">E</forename><surname>Tasdemir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Freeman</forename><surname>Mr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="4768" to="4781" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19369546</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Single-cell RNAseq reveals cell adhesion molecule profiles in electrophysiologically defined neurons</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Foldy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Darmanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Aoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Malenka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Quake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Sudhof</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="5222" to="5231" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27531958</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Integration of electrophysiological recordings with single-cell RNA-seq data identifies neuronal subtypes</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fuzik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zeisel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Mate</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Calvigioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yanagawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Szabo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Linnarsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Harkany</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="175" to="183" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26689544</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Global analysis of protein expression in yeast</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ghaemmaghami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Huh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Bower</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Howson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Belle</forename><forename type="middle">A</forename><surname>Dephoure</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O'</forename><surname>Shea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">K</forename><surname>Weissman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">425</biblScope>
+			<biblScope unit="page" from="737" to="741" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14562106</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Cellular Taxonomy of the Mouse Striatum as Revealed by Single-Cell RNA-Seq</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Gokce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Stanley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Treutlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">F</forename><surname>Neff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>Camp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Malenka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Rothwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Fuccillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Sudhof</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quake</forename><surname>Sr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell Rep</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1126" to="1137" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27425622</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Genetic control of wiring specificity in the fly olfactory system</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genetics</title>
+		<imprint>
+			<biblScope unit="volume">196</biblScope>
+			<biblScope unit="page" from="17" to="29" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24395823</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Teneurins instruct synaptic partner matching in an olfactory map</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Mosca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">484</biblScope>
+			<biblScope unit="page" from="201" to="207" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22425994</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Leucine-rich repeat transmembrane proteins instruct discrete dendrite targeting in an olfactory map</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Potter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Barsh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kurusu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1542" to="1550" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19915565</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Target neuron prespecification in the olfactory map of Drosophila</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Jefferis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Marin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Stocker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">414</biblScope>
+			<biblScope unit="page" from="204" to="208" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11719930</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Comprehensive maps of Drosophila higher olfactory centers: spatially segregated fruit and pheromone representation</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Jefferis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Potter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Marin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Rohlfing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Maurer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">128</biblScope>
+			<biblScope unit="page" from="1187" to="1203" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17382886</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Developmental origin of wiring specificity in the olfactory system of Drosophila</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Jefferis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Vyas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Berdnik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ramaekers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Stocker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Development</title>
+		<imprint>
+			<biblScope unit="volume">131</biblScope>
+			<biblScope unit="page" from="117" to="130" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14645123</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">A GAL4-driver line resource for Drosophila neurobiology</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jenett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">T</forename><surname>Ngo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Shepherd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Murphy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Dionne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Pfeiffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cavallaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jeter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell Rep</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="991" to="1001" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23063364</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Knot/Collier and cut control different aspects of dendrite cytoskeleton and synergize to define final arbor shape</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jinushi-Nakao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arvind</forename><forename type="middle">R</forename><surname>Amikura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kinameri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Moore</forename><surname>Aw</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="963" to="978" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18093520</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Cerebral cortical neuron diversity and development at single-cell resolution</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Walsh</forename><surname>Ca</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="9" to="16" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27888678</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Single-cell analysis reveals transcriptional heterogeneity of neural progenitors in human cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Atabay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Murphy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N</forename><surname>Doan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Hecht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Walsh</forename><surname>Ca</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="637" to="646" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25734491</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Origins of correlated activity in an olfactory circuit</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kazama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wilson</forename><surname>Ri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1136" to="1144" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19684589</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">From lineage to wiring specificity. POU domain transcription factors control precise connections of Drosophila olfactory projection neurons</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Komiyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Johnson</forename><forename type="middle">Wa</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jefferis</forename><surname>Gs</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="157" to="167" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12553905</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Intrinsic control of precise dendritic targeting by an ensemble of transcription factors</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Komiyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Biol</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">17276922</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">A screen of cellsurface molecules identifies leucine-rich repeat proteins as key mediators of synaptic target selection</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kurusu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cording</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Taniguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Menon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Suzuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zinn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="972" to="985" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18817735</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Input feature selection for classification problems</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kwak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Choi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Neural Netw</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="143" to="159" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18244416</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Threedimensional reconstruction of the antennal lobe in Drosophila melanogaster</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Laissue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Reiter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Hiesinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Halter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Fischbach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Stocker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Comp Neurol</title>
+		<imprint>
+			<biblScope unit="volume">405</biblScope>
+			<biblScope unit="page" from="543" to="552" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10098944</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Mosaic analysis with a repressible cell marker for studies of gene function in neuronal morphogenesis</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="451" to="461" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10197526</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">GABAergic projection neurons route selective olfactory inputs to specific higher-order neurons</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Potter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yizhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Tsien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="917" to="931" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24012005</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Lineage analysis of Drosophila lateral antennal lobe neurons reveals notch-dependent binary temporal fate decisions</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Kao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lee</forename><forename type="middle">T</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Biol</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<date type="published" when="2012">2012. 1001425</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23185131</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Representation of the glomerular olfactory map in the Drosophila brain</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Marin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Jefferis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Komiyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="243" to="255" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12007410</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">roX1 RNA paints the X chromosome of male Drosophila and is regulated by the dosage compensation system</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">H</forename><surname>Meller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Roman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Kuroda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Davis</forename><surname>Rl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="445" to="457" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9038336</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<title level="m" type="main">Synaptic organization of the Drosophila antennal lobe and its regulation by the Teneurins</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Mosca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>Elife 3, e03726. PubMed: 25310239</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Full-length RNA-seq from single cells using Smart-seq2</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Picelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">R</forename><surname>Faridani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Bjorklund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Winberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sagasser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sandberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Protoc</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="171" to="181" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24385147</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">The Q system: a repressible binary system for transgene expression, lineage tracing, and mosaic analysis</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Potter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Tasic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">V</forename><surname>Russler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page" from="536" to="548" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20434990</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">A Mathematical Theory of Communication</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Shannon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bell System Technical Journal</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="623" to="656" />
+			<date type="published" when="1948">1948</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Comprehensive Classification of Retinal Bipolar Neurons by Single-Cell Transcriptomics</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shekhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Lapan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">E</forename><surname>Whitney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">Z</forename><surname>Macosko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kowalczyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Adiconis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Levin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Nemesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Goldman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">166</biblScope>
+			<date type="published" when="1308">2016. 1308-1323 e1330</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27565351</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Dynamics of glutamatergic signaling in the mushroom body of young adult Drosophila</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sinakevitch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Grau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Strausfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Birman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Dev</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20370889</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Neuroblast ablation in Drosophila P[GAL4] lines reveals origins of olfactory interneurons</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Stocker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Heimbeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Gendre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>De Belle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="443" to="456" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9110257</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Neuron-glia interactions through the Heartless FGF receptor signaling pathway mediate morphogenesis of Drosophila astrocytes</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Stork</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sheehan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">E</forename><surname>Tasdemir-Yilmaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Freeman</forename><surname>Mr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="388" to="403" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25033182</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">REVIGO summarizes and visualizes long lists of gene ontology terms</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Supek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bosnjak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Skunca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Smuc</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS One</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<date type="published" when="2011">2011. 21800</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21789182</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Ig Superfamily Ligand and Receptor Pairs Expressed in Synaptic Partners in Drosophila</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Pecot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nagarkar-Jaiswal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">T</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Takemura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Mcewen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Tadros</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">163</biblScope>
+			<biblScope unit="page" from="1756" to="1769" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26687360</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Adult mouse cortical cell taxonomy revealed by single cell transcriptomics</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Tasic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Menon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Jarsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Levi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">T</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Sorensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Dolbeare</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="335" to="346" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26727548</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Wiring variations that enable and constrain neural computation in a sensory microcircuit</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Tobin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lee</forename><forename type="middle">Wa</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Unbiased classification of sensory neuron types by large-scale single-cell RNA sequencing</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Usoskin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Furlan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Islam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Abdo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lonnerberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hjerling-Leffler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Haeggstrom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kharchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V</forename><surname>Kharchenko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="145" to="153" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25420068</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Visualizing Data using t-SNE</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Van Der Maaten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Machine Learning Research</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="2579" to="2605" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Molecular architecture of smell and taste in Drosophila</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">B</forename><surname>Vosshall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Stocker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">17506643</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Toll receptors instruct axon and dendrite targeting and participate in synaptic partner matching in a Drosophila olfactory circuit</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Favaloro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="1013" to="1028" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25741726</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Early olfactory processing in Drosophila: mechanisms and principles</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Wilson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="217" to="241" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23841839</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">A protocol for dissecting Drosophila melanogaster brains for live imaging or immunostaining</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Protoc</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">17487202</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">A complete developmental sequence of a Drosophila neuronal lineage as revealed by twin-spot MARCM</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Kao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Kao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lee</forename><forename type="middle">T</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Biol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Brain structure. Cell types in the mouse cortex and hippocampus revealed by single-cell RNA-seq</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zeisel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Munoz-Manchado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Codeluppi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lonnerberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">La</forename><surname>Manno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Jureus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Marques</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Munguba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Betsholtz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">GFP signal in VA1d PN dendrites</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">347</biblScope>
+			<biblScope unit="page" from="1138" to="1142" />
+		</imprint>
+	</monogr>
+	<note>PubMed: 25700174] dorsal shift. In addition. visualized by Mz19-QF driven QUAS-mCD8GFP) is undetectable</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<monogr>
+		<title level="m" type="main">Quantification of position shift of the VA1d glomerulus due to C15 knockdown in (C). θ is the angle between the dorsoventral axis and a line drawn through the centers of the VA1d and DC3 glomeruli. Error bars are SEM</title>
+		<imprint/>
+	</monogr>
+	<note>***, P &lt; 0.001 (t test</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<title level="m" type="main">Gain-of-function analysis of C15 in Mz19-GAL4+ MARCM misexpression clones. In WT, dendrites of adPN neuroblast (adNB) clones target VA1d and DC3 and lPN neuroblast (lNB) clones target DA1. When C15 is misexpressed, dendrite targeting of adNB clones is not affected, while dendrite targeting of lNB clones is affected with 100% penetrance</title>
+		<imprint/>
+	</monogr>
+	<note>Ncad is used as a neuropil marker. Scale, 20 μm.See also Figure S4</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,1699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Errors in Action Timing and Inhibition Facilitate Learning by Tuning Distinct Mechanisms in the Underlying Decision Process</title>
+				<funder>
+					<orgName type="full">Army Research Laboratory</orgName>
+				</funder>
+				<funder ref="#_sGsuAeJ">
+					<orgName type="full">National Science Foundation Career Award 1351748 and Army Research Laboratory Cooperative Agreement</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Society for Neuroscience</publisher>
+				<availability status="unknown"><p>Copyright Society for Neuroscience</p>
+				</availability>
+				<date type="published" when="2019-01-17">2019-01-17</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Kyle</forename><surname>Dunovan</surname></persName>
+							<idno type="ORCID">0000-0002-7857-5133</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Timothy</forename><surname>Verstynen</surname></persName>
+							<idno type="ORCID">0000-0003-4720-0336</idno>
+						</author>
+						<title level="a" type="main">Errors in Action Timing and Inhibition Facilitate Learning by Tuning Distinct Mechanisms in the Underlying Decision Process</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">The Journal of Neuroscience</title>
+						<title level="j" type="abbrev">J. Neurosci.</title>
+						<idno type="ISSN">0270-6474</idno>
+						<idno type="eISSN">1529-2401</idno>
+						<imprint>
+							<publisher>Society for Neuroscience</publisher>
+							<biblScope unit="volume">39</biblScope>
+							<biblScope unit="issue">12</biblScope>
+							<biblScope unit="page" from="2251" to="2264"/>
+							<date type="published" when="2019-01-17" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">E87C7CA437CAB32C87D223AF4FA5F39B</idno>
+					<idno type="DOI">10.1523/jneurosci.1924-18.2019</idno>
+					<note type="submission">Received July 26, 2018; revised Nov. 6, 2018; accepted Jan. 6, 2019.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>accumulator model</term>
+					<term>basal ganglia</term>
+					<term>inhibitory control</term>
+					<term>reinforcement learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Goal</head><p><s>-directed behavior requires integrating action selection processes with learning systems that adapt control using environmental feedback.</s><s>These functions are known to intersect at a common neural substrate with multiple known targets of plasticity (the corticobasal ganglia-thalamic network), suggesting that feedback signals have a multifaceted impact on future decisions.</s><s>Using a hybrid of accumulation-to-bound decision models and reinforcement learning, we modeled the performance of humans in a stop signal task where participants (N 75: 37 males, 38 females) learned the prior distribution of the timing of a stop signal through trial-and-error feedback.</s><s>Changes in the drift rate of the action execution process were driven by errors in action timing, whereas adaptation in the boundary height served to increase caution following failed stops.</s><s>These findings highlight two interactive learning mechanisms for adapting the control of goal-directed actions based on dissociable dimensions of feedback error.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Environmental uncertainty demands that goal-directed actions be executed with a certain degree of caution, requiring agents to strike the appropriate balance between speed and control based on internal goals and contextual constraints.</s><s>Because of the pervasive and dynamic nature of uncertainty in the real world, the degree to which behavioral control is exercised must be learned through trial and error.</s><s>Indeed, decision processes <ref type="bibr" target="#b49">(Verbruggen and Logan, 2009;</ref><ref type="bibr" target="#b39">Schall et al., 2017)</ref> and postdecision feedback learning <ref type="bibr" target="#b45">(Sutton and Barto, 1998;</ref><ref type="bibr" target="#b18">Frank and Badre, 2012)</ref> are thought to rely on overlapping subcomponents of cortico-basal ganglia (BG)-thalamus networks, providing a possible neural locus for adaptive control <ref type="bibr" target="#b3">(Bogacz and Larsen, 2011;</ref><ref type="bibr" target="#b32">Pedersen et al., 2017)</ref>.</s></p><p><s>We previously proposed a novel dependent process model (DPM) of cortico-BG-thalamic-dependent inhibitory control that was inspired by the architecture of these pathways <ref type="bibr" target="#b15">(Dunovan et al., 2015)</ref>.</s><s>In the DPM, reactive cancellation signals from the hyperdirect pathway depend on the current state of a proactive execution process, reflecting the instantaneous competition between the direct (i.e., Believer) and indirect (i.e., Skeptic) pathways (Fig. <ref type="figure">1 A,</ref><ref type="figure">B</ref>) <ref type="bibr" target="#b14">(Dunovan and Verstynen, 2016)</ref>.</s><s>Increasing the strength of the Skeptic results in a slower accumulation of evidence toward the execution threshold, promoting fast, reactive cancellation in the context of greater uncertainty (see also <ref type="bibr" target="#b1">(Bariselli et al., 2018)</ref>.</s></p><p><s>The question of adaptation of decision processes in BG pathways is complicated by the fact that these circuits have multiple targets of plasticity.</s><s>Converging lines of physiological <ref type="bibr" target="#b41">(Schmidt et al., 2013;</ref><ref type="bibr" target="#b61">Yttri and Dudman, 2016</ref>) and computational <ref type="bibr" target="#b34">(Ratcliff and Frank, 2012;</ref><ref type="bibr" target="#b54">Wei and Wang, 2016)</ref> evidence suggest that both of the primary input structures to the BG, the striatum and subthalamic nucleus (STN), are critical for guiding adaptive behavior, but in response to different sources of environmental feedback.</s><s>In the striatum, <ref type="bibr" target="#b61">Yttri and Dudman (2016)</ref> found that optogenetic reinforcement of cortical input to direct and indirect pathways led to opposing changes in movement velocity, paralleling theoretical models that striatal learning would sculpt the drift rate of a decision process over time <ref type="bibr" target="#b14">(Dunovan and Verstynen, 2016)</ref>.</s><s>In contrast, the STN is also seen as a major source of behavioral adaptation in the BG <ref type="bibr" target="#b5">(Brittain et al., 2012;</ref><ref type="bibr" target="#b9">Cavanagh et al., 2014;</ref><ref type="bibr" target="#b19">Frank et al., 2015;</ref><ref type="bibr" target="#b20">Herz et al., 2016)</ref>.</s><s>For instance, <ref type="bibr" target="#b9">Cavanagh et al. (2014)</ref> found that activity in the STN tracked the degree to which subjects slowed responding after committing an error and that this behavioral phenomenon was described by a diffusion model in which errors led to an increase in threshold on subsequent trials.</s></p><p><s>Having multiple neural targets of plasticity suggests that inhibitory control processes may adapt differently in response to different learning signals.</s><s>For example, learning may adapt the balance of direct and indirect pathway competition, changing the drift rate of the execution process on each trial.</s><s>Based on previous optogenetics work <ref type="bibr" target="#b61">(Yttri and Dudman, 2016)</ref>, we predict that this process will adapt based on errors in the timing or speed of an action (Fig. <ref type="figure">1C</ref>, left).</s><s>In contrast, errors in selection (e.g., failing to stop an inappropriate action) may impact future decisions by either increasing the speed of future cancelation processes (Fig. <ref type="figure">1C</ref>, middle) or elevating the threshold for evidence for the execution process, thereby delaying action execution in the context of uncertainty (Fig. <ref type="figure">1C</ref>, right) <ref type="bibr" target="#b20">(Herz et al., 2016)</ref>.</s></p><p><s>Here we examine how trial-to-trial feedback is incorporated into future decisions as subjects learn to proactively control responses in an adaptive version of the stop signal task, where subjects are scored according to the precision of their response time (RT) on Go trials and their accuracy on stop signal trials.</s><s>This adaptive DPM reliably captures feedback-dependent changes in RT and stop accuracy through targeted changes in specific decision parameters, showing how simple plasticity mechanisms can allow for cognitive systems to effectively implement internal priors about environmental states <ref type="bibr" target="#b60">(Wu et al., 2002;</ref><ref type="bibr" target="#b50">Verstynen and Sabes, 2011)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and Methods</head><p><s>Participants.</s><s>Neurologically healthy adult participants (N ϭ 75, 37 males, 38 females, mean age 22 years) were recruited from the Psychology Research Experiment System at Carnegie Mellon University and compensated for their participation through course credit toward fulfillment of their semester course requirements.</s><s>All experimental and analytical protocols described in this study were approved by the local Institutional Review Board at Carnegie Mellon University.</s><s>Experimenters obtained informed, written consent from all subjects in compliance with Institutional Review Board guidelines.</s></p><p><s>Experimental design and statistical analysis.</s><s>The primary experimental condition of interest, the mean and variance of contextual stop signal delay (SSD) distributions, were manipulated between participant groups (N ϭ 25 per group).</s><s>The effect of context on behavioral measures (e.g., correct go RTs, stop accuracy, and posterror slowing) was assessed using separate one-way ANOVAs.</s><s>Computational models were fit to individual subject-and subject-averaged data, and compared based on two complexity-penalized goodness-of fit statistics: Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC).</s><s>A difference of 7-10 in the information criteria (IC) values for two models provides strong support for the model with the lower value.</s><s>All modeling code has been made available on GitHub (https://github.com/CoAxLab/radd),</s><s>along with a demo for replicating several of the manuscript figures (https://github.com/CoAxLab/radd/blob/master/demos/AdaptiveDPM_</s><s>Demo_2018.ipynb).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Figure 1.</head><p><s>Adaptation mechanisms in the DPM.</s><s>A, The DPM assumes that the state of an accumulating execution process at the time a stop cue is registered determines initial state of the braking process, making it more difficult to cancel actions closer to the execution boundary.</s><s>B, Competition between direct and indirect pathways represented by mutually inhibiting "believer" (green; direct pathway) and "skeptic" (blue; indirect pathway) populations.</s><s>Circuit-level dynamics of this competition modulate the rate of evidence accumulation leading up to action execution, leading to faster actions when competition is dominated by the "believer."</s><s>C, Alternative control mechanisms that could be altered by feedback to adapt future performance.</s><s>A, Adapted with permission from <ref type="bibr" target="#b15">Dunovan et al. (2015)</ref>.</s><s>B, Adapted with permission from <ref type="bibr" target="#b14">Dunovan and Verstynen (2016)</ref>.</s></p><p><s>Adaptive stop signal task.</s><s>All subjects completed a stop signal task (N trials ϭ 880) in which a vertically moving bar approached a white horizontal target line at the top of the screen (Fig. <ref type="figure" target="#fig_1">2A</ref>).</s><s>On Go trials (N GO ϭ 600), the subject was instructed to make a key press as soon as the bar crossed the target.</s><s>The bar always intersected the target line at 520 ms after trial onset.</s><s>On each trial, the bar continued filling upward until a key press was registered or until reaching the top of the screen, allowing a 680 ms window for the subject to make a response.</s><s>If no response was registered, the subject received a penalty of Ϫ100 points.</s><s>On Go trials where a response was recorded before the 680 ms trial deadline, the subject received a score reflecting the precision of their RT relative to the target intersection time, resulting in maximal points when RT ϭ 520 ms.</s><s>On Stop trials, the bar would stop and turn red before intersecting the target line, prompting the subject to withhold their response.</s><s>Successful and unsuccessful Stop trials yielded a reward of 200 points and penalty of Ϫ100 points, respectively.</s><s>The subsequent trial would begin after a 1.5 s intertrial interval.</s><s>After batches of 110 trials, participants were given a break with feedback of their current point total.</s><s>Participants could initiate the next trial block by pressing the spacebar.</s><s>All participants completed the experiment in Ͻ1 h.</s></p><p><s>On the majority of Stop trials, the SSD, the delay between trial onset and when the bar stopped, was sampled from a specific probability distribution (Fig. <ref type="figure" target="#fig_1">2B</ref>).</s><s>We refer to these trials as context Stop trials (N Context ϭ 200).</s><s>Context SSDs in the Early and Late groups were sampled from Gaussian distributions with equal variance ( ϭ 35 ms), centered at E ϭ 250 ms and L ϭ 350 ms, respectively.</s><s>Context SSDs in the Uniform group were sampled from a uniform distribution spanning a 10 -520 ms window.</s><s>In Figure <ref type="figure" target="#fig_1">2B</ref>, the sampled SSD times are plotted for a single subject in each context, shown as dashes on a timeline ranging from 0 to 520 ms.</s><s>Computational models: DPM.</s><s>The DPM (Fig. <ref type="figure">1A</ref>) <ref type="bibr" target="#b15">(Dunovan et al., 2015)</ref> assumes that the execution process ( e ) begins to accumulate evidence after a delay (tr) until reaching an upper decision threshold (a), yielding a go decision and corresponding RT.</s><s>The dynamics of e are described by the stochastic differential equation in Equation <ref type="formula">1</ref>, accumulating with a mean rate of v e (i.e., execution drift rate) and an SD described by the dynamics of a white noise process (dW ) with diffusion constant as follows:</s></p><formula xml:id="formula_0">d e ϭ v e dt ϩ dW</formula><p><s>A response is recorded if e reaches the execution boundary (a) before the end of the trial window (680 ms) and before the braking process reaches the lower (0) boundary (see below).</s><s>In the event of a stop cue, the braking process ( b ) is initiated at the current state of e with a negative drift rate (v b ).</s><s>If b reaches the 0 boundary before e reaches the execution boundary, then no response or RT is recorded from the model.</s><s>The change in b over time is given by Equation <ref type="formula">2</ref>, expressing the same temporal dynamics of e but with a negative drift.</s><s>The dependency between b and e in the model is described by the conditional statement in Equation 3, declaring that the initial state of b (occurring at t ϭ SSD) is equal to the state of e (SSD) as follows:</s></p><formula xml:id="formula_1">d b ϭ v b dt ϩ dW b ͑SSD͒ ϭ e ͑SSD͒</formula><p><s>To determine which of the model parameter(s) best accounted for the observed behavioral effects across contexts, we first fit the model to the average data in the Uniform group, leaving all parameters free (Table <ref type="table" target="#tab_0">1</ref>).</s></p><p><s>Using the optimized Uniform parameter estimates to initialize the model, we then fit different versions of the model to data in the Early and Late groups, allowing only one or two select parameters to vary between conditions.</s><s>This form of model comparison provides a straightforward means of testing alternative hypotheses about the mechanism underlying context-specific adaptation.</s><s>The fitting procedure used a combination of global and local optimization techniques <ref type="bibr" target="#b2">(Bogacz and Cohen, 2004;</ref><ref type="bibr" target="#b15">Dunovan et al., 2015)</ref>.</s><s>All fits were initialized from multiple starting values in steps to avoid biasing model selection to unfair advantages in the initial settings.</s><s>Given a set of initial parameter values, all model parameters, execution drift rate (v e ), braking drift rate (v b ), execution onset delay (tr), and boundary height (a), were optimized by minimizing a weighted cost function 2 static (see Eq. 4) equal to the summed and squared error between an observed and simulated (denoted by ^symbols) vector of the following statistics: probability ( P) of responding on Go trials (g), probability of stopping at each Probe SSD (d ϭ {200, 250, 300, 350, 400 ms}), and RT quantiles (q ϭ {0.1, 0.2, 0.3, . . .</s><s>, 0.9}) on correct (RT C ) and error (RT E ) trials as follows:</s></p><formula xml:id="formula_2">static 2 ϭ w g ͑P g Ϫ P ˆg͒ 2 ϩ d 5 w d ͑P d Ϫ P ˆd͒ 2 ϩ q 9 w q C ͑RT q C Ϫ RT ˆq C ͒ 2 ϩ q 9 w q E ͑RT q E Ϫ RT ˆq E ͒ 2</formula><p><s>The cost-function weights (w) were derived by first taking the variance of each summary measure included in the observed vector (across subjects), then dividing the mean variance by the full vector of variance scores.</s><s>This approach represents the variability of each value in the vector as a ratio <ref type="bibr" target="#b35">(Ratcliff and Tuerlinckx, 2002)</ref>, where values closer to the mean are assigned a weight close to 1 and values associated with higher variability a weight Ͻ1, lower variability a weight Ͼ1 <ref type="bibr" target="#b4">(Bogacz et al., 2006;</ref><ref type="bibr" target="#b15">Dunovan et al., 2015)</ref>.</s><s>Weights applied to the RT quantiles were calculated by estimating the variance for each of the RT quantiles <ref type="bibr" target="#b25">(Maritz and Jarrett, 1978)</ref> and then dividing the mean variance by that of each quantile.</s><s>Stop accuracy weights were calculated by taking the variance in stop accuracy at each Probe SSD (across subjects) and then dividing the mean variance by that of each condition.</s></p><p><s>To obtain an estimate of fit reliability for each model, we restarted the fitting procedure from 20 randomly sampled sets of initial parameter values.</s><s>Each initial set was then optimized to average data in the Uniform condition using the basinhopping algorithm <ref type="bibr" target="#b53">(Wales and Doye, 1997)</ref> to find the region of global minimum followed by a Nelder-Mead simplex optimization <ref type="bibr" target="#b30">(Nelder and Mead, 1965)</ref> for fine-tuning globally optimized parameter values.</s><s>The simplex-optimized parameter estimates were then held constant, except for one or two designated contextdependent parameter(s) that were submitted to a second Simplex run to find the best fitting values in the Early and Late conditions.</s></p><p><s>Parameter recovery of static DPM.</s><s>Parameters were initially sampled from the following distributions:</s></p><formula xml:id="formula_3">␣ ϳ N͑0.3, 0.15͒ v e ϳ N͑0.75, 0.25͒ v b ϳ N͑Ϫ 0.75, 0.25͒ tr ϳ N͑0.3, 0.075͒</formula><p><s>where N͑, 2 ͒ represents a normal distribution with mean () and SD ().</s><s>A total of 2000 parameter sets were initially sampled and used to simulate vectors of stopping accuracy and RT quantiles that were compared with those of the average subject in each context by means of Equation <ref type="formula">4</ref>. For each of the three context conditions, the corresponding sampled set of parameters associated with the lowest error value was then selected as a "group-level" parameter set.</s><s>For each of the three "group-level" parameter sets, 20 synthetic datasets were generated, each comprised of 25 subjects with 1000 simulated trials per subject.</s><s>Each subject-level dataset was simulated using a single parameter set sampled from the distributions described in Table <ref type="table" target="#tab_1">2</ref> to generate 1000 trials from the DPM.</s><s>Finally, the static DPM was fit to each of these three datasets using the same optimization procedure described for fitting the DPM to the trialaveraged stop accuracy and RT quantiles for correct and error trials with the goal of recovering similar parameter values as those used to generate each simulated dataset.</s></p><p><s>Adaptive DPM.</s><s>Because standard parameter optimization for accumulator models requires information about the variance of RTs across trials, these approaches are poorly suited for investigating how decision parameters respond to error on a trialwise basis.</s><s>To overcome this issue, cost function was modified ( 2 adapt ) to identify the values for ␣, ␤, and p that minimized the sum of the weighted difference between the average observed and model-predicted stop accuracy ( acc ) and go RT ( rt ) over a moving window of ϳ30 trials (30 bins total; Eq. 5).</s><s>The weights applied to the model-predicted error in stop accuracy ( acc ) and RT ( rt ) were calculated using the same method as for the static model cost function, assigning less weight to estimates in bins (i) with higher observed variance across subjects.</s><s>By averaging the behavioral measures in 30 trial bins, this ensured that multiple Stop trials were included in each bin while still allowing relatively high-frequency behavioral changes to be expressed in the cost function as follows:</s></p><formula xml:id="formula_4">adapt 2 ϭ i 30 ͑ acc,i Ϫ ˆacc,i ͒ 2 ϩ i 30 ͑ rt,i Ϫ ˆrt,i ͒ 2</formula><p><s>These fits were performed by iteratively simulating the same trial sequence as observed for each individual subject, and fitting the average simulated subject to the average observed subject.</s><s>This ensures that direct comparisons can be made between the trajectory of learning in the model and actual behavior.</s></p><p><s>Parameter recovery of adaptive DPM.</s><s>To assess the identifiability of parameters in the adaptive DPM, we conducted a similar parameter recovery analysis to that performed for the static model.</s><s>Three different "group-level" parameter sets (Table <ref type="table" target="#tab_1">2</ref>) were randomly sampled from the following adaptive parameter distributions:</s></p><formula xml:id="formula_5">␣ ϳ U͑0.0, 0.3͒ ␤ ϳ U͑0.0, 0.2͒ p ϳ U͑0.0, 0.005͒</formula><p><s>where U(a,b) represents a uniform distribution between values a and b.</s><s>Datasets were generated by sampling ␣, ␤, and p for 25 simulated and using the adaptive DPM to simulate 880 trials in the Uniform context for each simulated subject.</s><s>Subject-level samples for ␣, ␤, and p were drawn from one of three sets of generative parameter distributions shown in Table <ref type="table" target="#tab_1">2</ref>. Using these subject-level parameters, the adaptive DPM was then used to simulate 880 trials using the trial structure as one of the real subjects in the Uniform context.</s><s>This procedure produced three artificial datasets with the same number of observations as in the experimental dataset (e.g., N ϭ 25, 880 trials/subject).</s><s>Finally, the adaptive DPM was fit to each of these three datasets using the same optimization procedure described for fitting the adaptive DPM to the empirical data.</s><s>With the goal of recovering similar values of ␣, ␤, and p as those used to generate each simulated dataset.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Inhibitory control adapts to contextual statistics</head><p><s>Subjects performed an anticipatory version of the stop signal task (Fig. <ref type="figure" target="#fig_1">2A</ref>; see Adaptive stop signal task) similar to that reported previously <ref type="bibr" target="#b15">(Dunovan et al., 2015)</ref>, with the exception of how contextual information was conveyed to the subject.</s><s>Rather than explicitly cuing the subject as to the probability of seeing a stop signal on each trial, as was used in our previous study, subjects in the current experiment had to rely on performance feedback to learn the temporal distribution of stop signals in one of three contexts.</s></p><p><s>To assess behavioral differences across contexts, we compared accuracy on stop signal trials at each Probe SSD across groups as well as the mean RTs on correct (response on Go trial) and error (i.e., response on Stop trial) responses.</s><s>Separate one-way ANOVAs revealed a significant main effect of context across groups on both correct RTs, F (2,72) ϭ 10.07, p Ͻ 0.001, and error RT (responses on stop signal trials), F (2,72) ϭ 21.72, p Ͻ 0.00001.</s><s>Consistent with our hypothesis, we found a significant interaction between context condition and Probe SSD, F (2.23,80.15)</s><s>ϭ 3.60, p ϭ 0.027 (Fig. <ref type="figure" target="#fig_2">3A</ref>).</s><s>Shifting the mean of the context SSD distribution later into the trial led to delayed responding on Go trials (Fig. <ref type="figure" target="#fig_2">3A</ref>, middle, right) as well as greater stopping accuracy on probe trials (Fig. <ref type="figure" target="#fig_2">3A</ref>, left) in the Uniform and Late groups relative to the Early group.</s><s>Thus, as predicted, participants could reliably learn to modulate their inhibitory control efficiency based on the probabilistic structure of prior stop signal timing <ref type="bibr" target="#b43">(Shenoy and Yu, 2011)</ref>.</s><s>We next examined whether failed Stop trials elicited any systematic changes in RT on subsequent trials.</s><s>Figure <ref type="figure" target="#fig_2">3B</ref> shows the immediate slowing and subsequent decay in RTs following a stop error (probe trials only), calculated with respect to the average RT on the five trials that preceded the error.</s><s>A one-way ANOVA revealed a significant effect of context on the degree to which subjects slowed responses immediately following stop errors, F (2,72) ϭ 4.27, p ϭ 0.018.</s><s>Unlike the observed effects on RT and accuracy, which scaled with differences in the mean SSD in each context, group differences in posterror slowing appeared to be driven by the variance of SSDs, with stop errors eliciting greater slowing in the Uniform context than in the Early and Late contexts (Fig. <ref type="figure" target="#fig_2">3C</ref>).</s><s>Collectively, these findings suggest that adaptive control is sensitive to multiple task dimensions and that these dimensions manifest in dissociable behavioral profiles.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Static DPM parameter identifiability</head><p><s>The DPM <ref type="bibr" target="#b15">(Dunovan et al., 2015)</ref> assumes that an execution decision is made when an accumulating execution process, with onset time tr and drift rate v e , crosses an upper decision boundary a (see Computational models).</s><s>On Stop trials, a nested braking process, with negative drift rate v b , is initiated at the current state of the execution process at the time of the SSD and accumulates back toward the lower boundary (always set equal to 0; Fig. <ref type="figure">1A</ref>).</s><s>The model successfully cancels an action when the braking process reaches the lower bound before execution process terminates at the upper execution threshold.</s></p><p><s>For a cognitive model to be informative, it is important to verify that its parameters are identifiable, or able to be reliably estimated from observable measures of the target behavior.</s><s>The issue of model identifiability is particularly relevant to novel variants of sequential sampling models, as several recently proposed models within this class have been found to exhibit poor identifiability despite providing convincing fits to experimental data <ref type="bibr" target="#b26">(Miletic ´et al., 2017;</ref><ref type="bibr" target="#b58">White et al., 2018)</ref>.</s><s>More common variants, however, such as the drift-diffusion model and linear ballistic accumulator, are reasonably identifiable with sufficient trial counts and the application of appropriate optimization proce-dures <ref type="bibr" target="#b35">(Ratcliff and Tuerlinckx, 2002;</ref><ref type="bibr" target="#b48">van Ravenzwaaij and Oberauer, 2009;</ref><ref type="bibr" target="#b52">Visser and Poesse ´, 2017)</ref>.</s></p><p><s>In practice, the identifiability of a model can be assessed by performing fits to simulated data, for which the true parameters are known, and comparing the recovered estimates.</s><s>To evaluate the identifiability of parameters in the DPM, we adopted the following procedure.</s><s>First, we identified three generative parameter sets that approximated the average stopping accuracy curve and RT distributions observed in each context condition, ensuring that the generative parameter sets yielded plausible behavioral patterns.</s><s>Each of these three generative parameter sets served as hyperparameters describing the mean of a normally distributed population from which 25 "subject-level" parameter sets were sampled and used to simulate 1000 trials (for sampling details, see Computational models).</s><s>This produced a simulated dataset similar in size and dimension to that of the empirical data while capturing the assumption that subject parameter values in each context vary around a shared mean.</s><s>Each of the three grouplevel parameter sets was used to generate 20 simulated datasets (each comprised of 25 randomly sampled subjects with 1000 trials per subject).</s><s>The DPM was then fit to the subject-averaged stop accuracy and RT quantiles for each of the simulated datasets following the optimization routine outlined in Materials and Methods (i.e., here, "subject-averaged" data were calculated by first estimating the stop accuracy curve over probe SSDs, correct RT quantiles, and error RT quantiles for each subject then calculating the mean for each of these values across subjects).</s></p><p><s>Parameter estimates recovered from the fits are summarized in Figure <ref type="figure" target="#fig_3">4A-D</ref>, with the recovered values for each parameter plotted against the respective generative value for each of the three sets.</s><s>All parameters were recovered with a high degree of accuracy.</s><s>In addition to accurately recovering generative parameter values, the DPM provided high-quality fits to the datasets generated from all three parameter sets, as shown by the positively skewed distribution of 2 values in Figure <ref type="figure" target="#fig_3">4E</ref>.</s><s>The results of this simulation and recovery analysis suggest that parameters of the DPM are identifiable when fitting group-level data and are robust to variability in the parameter values of individual subjects.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Individual subject DPM fits</head><p><s>To better understand the cognitive mechanisms underlying the observed effects of feedback on timing and control behavior across contexts, we fit RT and stop accuracy data to the DPM.</s><s>To isolate the parameters that were influenced by the experimental manipulations, the model fits were performed in multiple consecutive stages.</s><s>To reduce the combinatorial space of possible model configurations, we adopted a forward stepwise model selection approach where we began by comparing models in which a single parameter was free to vary across conditions (Table <ref type="table" target="#tab_2">3</ref>), execution drift (v e ), braking drift (v b ), onset delay (tr), or boundary height (a).</s></p><p><s>Because the behavioral effects of interest were driven by trialby-trial feedback (i.e., at the subject level) as well as differences in the sampling distributions of SSDs across contexts (i.e., at the group level), single parameter models were fit to behavioral data for individual subjects, allowing select parameters to vary between the first and second half of trials in the experiment, and to data at the group level, allowing parameters to vary across contexts.</s></p><p><s>Consistent with our previous study in which subjects proactively modulated the drift rate of the execution process (v e ) in a probabilistic cueing paradigm <ref type="bibr" target="#b15">(Dunovan et al., 2015)</ref>, we found that allowing v e to vary between the first and second half of trials provided the best average fit across subjects in the current experiment (AIC v ϭ Ϫ206.5, BIC v ϭ Ϫ202.2,</s><s>SD ϭ 23.47; Fig. <ref type="figure" target="#fig_4">5A</ref>).</s><s>Comparable IC scores were provided by alternative models (e.g., AIC tr ϭ Ϫ201.70,</s><s>BIC tr ϭ Ϫ199.34,</s><s>SD ϭ 21.86).</s><s>Thus, we also inspected the number of subjects for which each model outperformed the rest and found that the v e model was the best fitting model for more subjects (N ϭ 33) than any alternative models (see Fig. <ref type="figure" target="#fig_4">5B</ref>).</s><s>Parameter estimates (Fig. <ref type="figure" target="#fig_4">5C</ref>) showed that the v e values tended to increase over the course of the experiment, higher in the second compared with the first half of trials.</s><s>Notably, this effect was most pronounced in the Early context, followed by the Uniform and Late contexts, respectively, suggesting that subjects in the Early context were more sensitive to timing errors than those in the Uniform and Late contexts.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Contextual modulation of DPM parameters</head><p><s>Next, we investigated whether the same mechanism was able to account for the observed differences in RT and stop accuracy at the group level, by first optimizing parameters to the average data in the Uniform context, where the timing of the stop signal is unpredictable, and then to the average data in the Early and Late contexts, holding all parameters constant at the best fitting Uniform values, except for one or two parameters of interest.</s><s>The model that best accounted for differences in the stop accuracy and RT quantiles across the three context conditions was selected for further investigation of feedback-dependent learning mechanisms.</s><s>The fitting routine (for details, see Materials and Methods) was repeated a total of 20 times using different initialization values for all parameters at the start of each run to avoid biases in the optimization process.</s><s>The summary of fits to the Uniform context data is provided in Table <ref type="table" target="#tab_0">1</ref>.</s><s>In line with our previous findings <ref type="bibr" target="#b15">(Dunovan et al., 2015)</ref>, as well as the outcome of singlesubject fits in the current study, leaving the execution drift rate free provided a better account of context-dependent changes in behavior compared with alternative single-parameter models (Best-Fit AICv e ϭ Ϫ363.02;</s><s>Fig. <ref type="figure" target="#fig_5">6A</ref>).</s></p><p><s>To further test the relationship between execution drift rate and context, we performed another round of fits to test for possible interactions between the execution drift rate and a second free parameter, boundary height (a), braking drift rate (v b ), or onset delay (tr).</s><s>The AIC and BIC scores from these fits showed that a combination of boundary height and execution drift rate (v e and a) provided the best overall fit to the data (Best Fit AICa,v e ϭ Ϫ372.26), reasonably exceeding that of the drift-only model (͉AICv e ϪAICa,v e ͉ ϭ 9.24) to justify the added complexity of the dual-parameter model.</s><s>Figure <ref type="figure" target="#fig_5">6C</ref> shows a qualitative assessment of the a and v E model's goodness of fit, revealing a high degree of overlap between the simulated and observed stop accuracy and RT data in both Early and Late conditions.</s><s>These results suggest that there may be two targets of learning in the decision process: a strong modulation of the execution drift rate and a subtler modulation of the boundary height.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Adaptive DPM with dual-learning mechanisms</head><p><s>It is not clear from the preceding analysis whether error-driven changes in the drift rate and boundary height are able to capture trial-to-trial adjustments of response speed and stop accuracy as statistics of the environment are learned experientially.</s><s>Here we explore how drift rate and boundary height mechanisms adapt on a trialwise basis to different sources of feedback to drive contextdependent control and decision-making.</s></p><p><s>We implemented two forms of corrective learning (Fig. <ref type="figure" target="#fig_6">7A</ref>): one targeting the execution drift rate v and another targeting the height of the execution boundary a.</s><s>We hereafter denote execution drift rate as v rather than v e to avoid multiple subscripts in the adaptive model equations.</s><s>On correct Go trials (Fig. <ref type="figure" target="#fig_6">7A</ref>, left, middle), the current drift rate (v t ) was updated (v tϩ1 ; Eq. 6) to reflect the signed difference between the model's RT on the current trial and the target time (T G ϭ 520 ms), increasing the drift rate following "slow" responses (i.e., RT t Ͼ T G ) and decreasing the drift rate following "fast" responses (i.e., RT t Ͻ T G ). On failed Stop trials, v t was updated according to the same equation but with the error term reflecting the difference between RT t and the trial response deadline (T S ϭ 680 ms), thus slowing the drift rate to reduce the probability of failed stops in the future.</s><s>This form of RT-dependent modulation in the drift rate is motivated by recent findings demonstrating adaptation of action velocity by dopaminergic prediction error signaling in the striatum <ref type="bibr" target="#b61">(Yttri and Dudman, 2016)</ref>.</s><s>In the context of the "believer-skeptic" framework <ref type="bibr" target="#b14">(Dunovan and Verstynen, 2016)</ref>, fast RT errors could reinforce the "skeptic" (i.e., indirect pathway) and suppress the "believer" (i.e., direct pathway) by decreasing dopaminergic tone in the striatum as follows:</s></p><formula xml:id="formula_6">v tϩ1 ϭ v t ⅐ e ␣͑RTtϪT G/S ͒</formula><p><s>In addition to receiving feedback about errors in action timing, subjects also received penalties for failing to suppress responses on Stop trials.</s><s>In the adaptive DPM, failed stops (Fig. <ref type="figure" target="#fig_6">7A,</ref><ref type="figure">right</ref>) caused an increase in the boundary height (a 0 ) according to a ␦ function with height ␤ t and decayed exponentially on each sub- sequent trial (a t͕err͖ ) until reaching its baseline value a 0 or until another stop error occurred (Eq.</s><s>7) as follows:</s></p><formula xml:id="formula_7">a terr ϭ a 0 ϩ ␤ t e Ϫterr</formula><p><s>This form of adaptation in boundary height is motivated by physiological evidence that the STN plays a critical role in setting threshold for action execution and that this relationship is modulated by error commissions <ref type="bibr" target="#b9">(Cavanagh et al., 2014)</ref>.</s><s>On all correct Go trials and the first failed Stop trial, the timing errors were scaled by the same learning rate (␣ 0 ).</s><s>An additional parameter was included to modulate the sensitivity () to stop errors over time (Eq.</s><s>8), allowing the model to capture an observed decrease in the stop accuracy over time in each of context groups (Fig. <ref type="figure" target="#fig_8">8C</ref>).</s><s>According to Equation 8, dropped exponentially over time at a rate p, acting as a scalar on ␣ t (Eq.</s><s>9) and ␤ t (Eq.</s><s>10) before updating values of drift rate (Eq.</s><s>6) and boundary height (Eq.</s><s>8) after a failed stop.</s><s>Higher values of p led to more rapid decay of toward zero and, thus, a more rapid desensitization to Stop trial errors as follows:</s></p><formula xml:id="formula_8">t ϭ ͭ e p͑Ϫt͒ if stop trial 1 i fgo trial ␣ t ϭ t ␣ 0 ␤ t ϭ t ␤ 0</formula><p><s>Adaptive DPM parameter identifiability Before fitting the adaptive DPM to observed subject data, we first performed a parameter recovery analysis, similar to that conducted for the static DPM, to ensure that the learning rate and decay parameters introduced in the adaptive model could be reliably identified (for procedural details, see Materials and Methods).</s><s>The parameter recovery results are displayed in Figure <ref type="figure" target="#fig_6">7B</ref>, showing the recovered estimates for ␣, ␤, and p overlaid on the true values.</s><s>For all three generative parameter sets, the optimization procedure for fitting the adaptive DPM accurately recovered the true values of ␣, ␤, and p.</s><s>In one case (recovery estimates of ␣ for parameter set 2), the 95% CI of recovered parameter estimates failed to overlap with the range of generative values; however, the trend of recovered ␣ estimates followed the trend of the true values across parameter sets 1 (highest ␣), 2 (medium ␣), and 3 (lowest ␣).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Adaptive fits in the uniform context</head><p><s>After confirming the identifiability of learning parameters in the adaptive DPM, we next sought to confirm that the trial-averaged behavior of the adaptive model was preserved after fitting the learning rates (e.g., stop accuracy curve on probe trials and RT quantiles on correct and error trials).</s><s>The adaptive DPM's predictions are indeed closely aligned with the empirical statistics used to fit the static model (adaptive DPM 2 static ϭ 0.005, static DPM 2 static ϭ 0.011; Table <ref type="table" target="#tab_3">4</ref>).</s><s>Although this is not necessarily surprising, it is promising to confirm that introducing feedbackdependent adaptation in the drift rate and boundary height parameters does not compromise the model's fit to trial-averaged statistics.</s><s>Next, we inspected the degree to which this model captured changes in Go trial RT and Stop trial accuracy in the Uniform context.</s><s>Indeed, the predicted time course of both behavioral measures showed a high degree of correspondence with the observed behavioral patterns (Fig. <ref type="figure" target="#fig_6">7C,</ref><ref type="figure">D</ref>).</s><s>These qualitative fits show that it is indeed possible to capture feedbackdependent changes in RT and stop accuracy with the specific types of error learning in v e (Eq.</s><s>6) and a (Eq.</s><s>7) parameters.</s><s>Without an alternative model with which to compare, however, it is impossible to conclude anything about the specificity of these particular learning rules (e.g., the hypothesized dependencies of v e and a on timing and control errors, respectively).</s><s>Therefore, we compared the fits afforded by the primary version of the adaptive DPM with an alternative version in which a was modulated by timing errors and v e was modulated by failed stops.</s><s>In the alternative version of the model, Equation <ref type="formula">6</ref>becomes a tϩ1 ϭ a t ⅐ 1 e ␣͑RTtϪT G/S ͒ , increasing and decreasing a following fast (RT t Ͻ 520 ms) and slow (RT t Ͼ 520 ms) responses on Go trials, and increasing a on failed Stop trials in proportion to the speed of response speed.</s><s>Additionally, Equation <ref type="formula">7</ref>becomes terr ϭ 0 Ϫ ␤ t e Ϫterr , slowing v e by a magnitude of ␤ t .</s><s>Indeed, this alternate version of the adaptive model afforded an improvement over the static model fits to trial-averaged statistics (adaptive DPM alt 2 static ϭ 0.007, static model 2 static ϭ 0.011; Table <ref type="table" target="#tab_3">4</ref>); however, compared with the adaptive DPM in which v e was modulated by timing errors and a was increased following failed stops ( 2 adapt ϭ 0.235, AIC ϭ Ϫ326.4,</s><s>BIC ϭ Ϫ320.1), fits of the alternative adaptive model ( 2 adapt ϭ 0.861, AIC ϭ Ϫ248.6,</s><s>BIC ϭ Ϫ242.3) provided a worse fit to feedback-dependent changes in RT and stop accuracy over time in the Uniform context (Table <ref type="table" target="#tab_3">4</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Adaptive predictions in early and late contexts</head><p><s>Consistent with our original hypotheses, fits of the primary version of the adaptive DPM to behavior in the Uniform context highlight two possible mechanisms for acquiring the prior on the SSD: adaptive modulation of response speed by the drift rate and cautionary increases in boundary height following control errors.</s><s>To confirm that these mechanisms work together to adaptively learn based only on the statistics of previous input signals, we took the average parameter scheme from the Uniform context fits and simulated each subject in the Early and Late contexts.</s><s>If the context-dependent changes in the RT distributions and stop accuracy are indeed a reflection of the proposed learning mechanisms, then the model simulations should reveal similar RT and accuracy time courses as in the observed behavior.</s></p><p><s>Figure <ref type="figure" target="#fig_8">8A</ref> shows the simulated stop-curve and RT distributions generated by the adaptive model based on feedback in the Early and Late conditions.</s><s>As in the observed data (Fig. <ref type="figure" target="#fig_2">3A</ref>), adaptation to Early SSDs led to impaired stopping accuracy, but faster RTs relative to simulated predictions in the Late condition.</s><s>In Figure <ref type="figure" target="#fig_8">8B</ref>, C, the middle panels show the same trial-binned RT and stop accuracy means as in Figure <ref type="figure" target="#fig_6">7C</ref>, D (Uniform condition), flanked by corresponding time courses from simulations to Early (left) and Late (right) conditions.</s><s>The adaptive model predictions show a high degree of flexibility, conforming to idiosyncratic changes in the trialwise behavioral dynamics within each context SSD condition.</s><s>For instance, the RTs in the Early condition exhibit a relatively minor and gradual decay over the course of the experiment (Fig. <ref type="figure" target="#fig_8">8B</ref>, left), contrasting markedly from the early increase and general volatility of RTs in the Late condition (Fig. <ref type="figure" target="#fig_8">8B</ref>, right).</s><s>The adaptive DPM largely captures both patterns, underscoring feedback-driven adaptation in the drift rate as a powerful and flexible tool for commanding inhibitory control across a variety of settings.</s><s>In addition to predicting group differences in the time course of RTs, the simulations in Figure <ref type="figure" target="#fig_8">8C</ref> show a striking degree of precision in the model-estimated changes in stop accuracy, both over time and between groups.</s></p><p><s>Because the static model fits revealed marginal evidence for the drift-only model (Fig. <ref type="figure" target="#fig_5">6A</ref>), we next asked whether this simpler model was able to account for the learning-related behavioral changes with the same precision as the dual-learning (i.e., drift and boundary) model.</s><s>To test this hypothesis, we ran simulations in which the boundary learning rate was set to zero, thereby leaving only the drift rate free to vary in response to feedback.</s><s>Figure <ref type="figure" target="#fig_9">9A</ref> shows the error between observed and model-predicted estimates for each of the behavioral measures in Figure <ref type="figure" target="#fig_2">3</ref> (e.g., RT, stop accuracy, and posterror slowing) based on 20 simulations of the drift-only and dual-learning models.</s><s>Compared with the drift-only model, the dual-learning model showed no significant benefits in terms of fit to the trialwise RT (t (24) ϭ 1.09, p ϭ 0.28) or accuracy (t (24) ϭ 0.23, p ϭ 0.82) but showed a marked improvement in the fit to posterror slowing (t (24) ϭ Ϫ6.91, p Ͻ 0.00001) (Fig. <ref type="figure" target="#fig_9">9A</ref>).</s><s>Importantly, the interaction of drift rate and boundary adaptation in the dual-learning model not only reduced the error in the model fit, but recovered the same qualitative pattern of posterror slowing across contexts observed in the data (Fig. <ref type="figure" target="#fig_9">9B</ref>).</s><s>In contrast, the drift-only model predicted the largest posterror slowing effect in the Early condition (Fig. <ref type="figure" target="#fig_9">9B</ref>, left).</s><s>This is particularly revealing because no information about the observed posterror slowing was included in the adaptive cost function when fitting the learningrate parameters.</s><s>Collectively, these results suggest that goaldirected tuning of movement timing (i.e., RT) and control (i.e., stop accuracy) is best described by feedback-driven changes in the drift rate and boundary-height parameters of accumulation-to-bound decisions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>Here we demonstrate the existence of two separable, yet interacting, learning mechanisms for inhibitory control that allow for adapting to statistical regularities in environmental signals.</s><s>Adaptation to errors in the timing of action execution was mediated by adjustments in the drift rate that progressively improved the precision of RTs with respect to the target RT.</s><s>Inhibition errors (i.e., executed responses on trials requiring a stop) had a posterror slowing effect, mediated by an increase in the execution threshold that decayed over subsequent trials <ref type="bibr" target="#b16">(Fischer et al., 2018)</ref>.</s><s>These two mechanisms allowed for principled, contextspecific adjustments in behavioral control to conflicting sources of task error (i.e., go timing and stop accuracy).</s><s>Relative to the Uniform condition, subjects in the Early condition exhibited faster RTs at the expense of accuracy on probe Stop trials (Fig. <ref type="figure" target="#fig_2">3B</ref>).</s><s>Subjects in the Early condition benefited from predictably short SSDs, making it easier to reactively cancel actions on Stop trials without sacrificing the precision of Go trial RTs.</s><s>In contrast, subjects in the Late condition slowed their RT on Go trials to accommodate the higher probability of a stop cue late in the trial.</s><s>Thus, due to incurring more stop errors, subjects in the Late context delayed responding on Go trials to improve inhibition accuracy.</s><s>This principled adaptation in both action timing and  These findings shed a critical light on the nature of inhibitory control processes measured using accumulation-to-bound models.</s><s>In standard accumulation-to-bound models of decisionmaking, the drift rate and boundary height parameters are functionally dissociated as representing the strength of evidence and response caution, respectively <ref type="bibr" target="#b7">(Brown and Heathcote, 2008;</ref><ref type="bibr" target="#b36">Ratcliff et al., 2016)</ref>.</s><s>This dissociation, however, is only useful insofar as evidence is clearly defined and can be manipulated independently of the additional factors bearing on behavior (e.g., caution, expectation, attention).</s><s>With the exception of perceptual decision-making tasks <ref type="bibr" target="#b37">(Roitman and Shadlen, 2002)</ref>, where evidence can be interpreted with respect to the strength of sensory information provided by the stimulus, it is often unclear which sources of information should be treated as evidence in the deliberation process and which are used to set the boundary height.</s><s>Understanding which learning signals these parameters rely on provides critical insights into the sources of information that drive the different decision At the computational level, the drift rate parameter reflects the log-likelihood ratio of evidence for alternative hypotheses.</s><s>In the context of the current task, the execution drift rate can be interpreted as representing the relative evidence for go and no-go decisions encoded by the circuit-level competition between the direct and indirect pathways <ref type="bibr" target="#b0">(Bahuguna et al., 2015)</ref>.</s><s>Indeed, studies combining behavioral modeling with single-unit recordings <ref type="bibr" target="#b12">(Ding and Gold, 2010)</ref>, optogenetics in animals <ref type="bibr" target="#b61">(Yttri and Dudman, 2016)</ref>, and neuroimaging in humans (van Maanen et   <ref type="bibr" target="#b6">(Brody and Hanks, 2016)</ref>.</s><s>Crucially, the dynamics of competition between direct and indirect pathways are sensitive to dopaminergic signals that provide important feedback about the environmental consequences of recent actions to drive behavior in the direction of the agent's current goal <ref type="bibr" target="#b23">(Kravitz et al., 2012;</ref><ref type="bibr" target="#b42">Shan et al., 2014;</ref><ref type="bibr" target="#b11">Cox et al., 2015;</ref><ref type="bibr" target="#b51">Vicente et al., 2016)</ref>.</s><s>Feedback-dependent reweighting of corticostriatal connections has primarily been studied in the context of action-value learning; however, new evidence suggests a more nuanced role in tuning task-relevant movement parameters (Rueda-Orozco and Robbe, 2015; <ref type="bibr" target="#b13">Dudman and Krakauer, 2016;</ref><ref type="bibr" target="#b61">Yttri and Dudman, 2016)</ref>.</s><s><ref type="bibr" target="#b61">Yttri and Dudman (2016)</ref> demonstrated this by stimulating direct or indirect pathway neurons in the mouse striatum based on the velocity of a recently executed lever press and measuring the effects on future movements.</s><s>Similar to the opponent effects of dopaminergic error signals that mediate action-value associations <ref type="bibr" target="#b23">(Kravitz et al., 2012;</ref><ref type="bibr" target="#b10">Collins and Frank, 2014)</ref>, they found that stimulation of the direct pathway following high-velocity presses further increased the velocity of future movements, whereas stimulation of indirect pathway neurons decreased velocity.</s><s>While the current study was not concerned with action velocity per se, the adaptation of the drift rate parameter to errors in action timing resembles a similar behavioral dynamic to that observed by <ref type="bibr" target="#b61">Yttri and Dudman (2016)</ref>.</s><s>Indeed, a recent study by <ref type="bibr" target="#b44">Soares et al. (2016)</ref> found that dopaminergic neurons in the mouse midbrain were not only necessary for accurate temporal perception but that the perception of time could be systematically sped up or slowed down through optogenetic suppression and stimulation of these neurons.</s><s>Future studies will be needed to confirm the proposed dependency of the drift rate on striatum in which model fits to behavior are performed in the presence of dopaminergic weighting at direct and indirect synapses.</s></p><p><s>Based on previous evidence that proactive control is mediated by the striatum <ref type="bibr" target="#b24">(Majid et al., 2013;</ref><ref type="bibr" target="#b31">Pas et al., 2017)</ref>, we have argued that the feedback-dependent modulation of execution drift rate is, at least in part, dopaminergic modulation of the competition between the direct and indirect pathways <ref type="bibr" target="#b14">(Dunovan and Verstynen, 2016)</ref>.</s><s>In addition to the dopamine hypothesis, an alternative possibility is that adaptation of the drift rate stems from top-down changes in the background excitability of the striatum, driven by diffuse inputs from premotor regions, such as supplementary motor area and pre-supplementary motor area <ref type="bibr" target="#b17">(Forstmann et al., 2008;</ref><ref type="bibr" target="#b27">Murakami et al., 2014</ref><ref type="bibr" target="#b28">Murakami et al., , 2017;;</ref><ref type="bibr" target="#b47">van Maanen et al., 2016)</ref>.</s><s>It remains unclear what functional differences may exist between premotor and dopaminergic representations of time or how they might differentially influence the encoding of action timing within the striatum.</s><s>Integrating the behavioral and modeling techniques defined here with electrophysiological and optogenetic manipulations can better distinguish the nature of the training signal that modulates striatal activity during action control.</s></p><p><s>Outside of the striatum, recent links have been identified between activity fluctuations in the STN and adaptive changes in behavior <ref type="bibr" target="#b9">(Cavanagh et al., 2014;</ref><ref type="bibr" target="#b20">Herz et al., 2016;</ref><ref type="bibr" target="#b57">Wessel et al., 2016;</ref><ref type="bibr" target="#b22">Justin Rossi et al., 2017)</ref>, raising new and interesting questions about the extent to which striatal and subthalamic learning signals independently influence behavior and how they might interact <ref type="bibr" target="#b46">(Tewari et al., 2016)</ref>.</s><s>Numerous studies have implicated the STN in setting the height of the decision threshold <ref type="bibr" target="#b8">(Cavanagh et al., 2011;</ref><ref type="bibr" target="#b34">Ratcliff and Frank, 2012;</ref><ref type="bibr" target="#b19">Frank et al., 2015;</ref><ref type="bibr" target="#b20">Herz et al., 2016</ref><ref type="bibr" target="#b21">Herz et al., , 2017;;</ref><ref type="bibr" target="#b62">Zavala et al., 2016)</ref>, controlled by diffuse excitatory inputs to the output nucleus of the BG and further suppressing motor thalamus to delay action execution.</s><s>Due to the monosynaptic connections between cortex and the STN that make up the hyperdirect pathway <ref type="bibr" target="#b29">(Nambu et al., 2002)</ref>, unexpected sensory events (e.g., stop signals) can be quickly relayed through the STN to raise the decision threshold for ongoing action plans to prevent execution <ref type="bibr" target="#b59">(Wiecki and Frank, 2013;</ref><ref type="bibr" target="#b56">Wessel and Aron, 2017)</ref>.</s><s>In addition to this rapid cortically mediated form of adaptation, evidence suggests that strategic adjustments in decision threshold are achieved by more gradual forms of plasticity in the indirect pathway <ref type="bibr" target="#b55">(Wei et al., 2015;</ref><ref type="bibr" target="#b40">Schechtman et al., 2016)</ref>.</s><s>In the current study, adaptive changes in the boundary height accounted for the observed posterror slowing in responses following failed Stop trials, motivated by neuroimaging and electrophysiological evidence of STN-mediated slowing of responses <ref type="bibr" target="#b9">(Cavanagh et al., 2014;</ref><ref type="bibr" target="#b19">Frank et al., 2015;</ref><ref type="bibr" target="#b20">Herz et al., 2016)</ref>.</s><s>For simplicity, boundary adaption was restricted to being unidirectional, increasing after a stop error and decaying back to, but never below, its original value.</s><s>However, some evidence suggests that STN exerts bidirectional control over decision threshold, capable of promoting the adoption of both speed and accuracy policies <ref type="bibr" target="#b21">(Herz et al., 2017)</ref>.</s><s>Thus, relating the adaptive threshold in the DPM to recordings in the STN will likely require a more nuanced approach to generalize beyond the current task.</s><s>Future studies will be needed to examine how these BG-mediated adaptation mechanisms are recruited to modify behavior, the relevant task dimensions they are sensitive to, and the extent to which they differ from cortical sources of feedback learning <ref type="bibr" target="#b33">(Purcell and Kiani, 2016)</ref>.</s></p><p><s>Considered in the context of the emerging literature on BG pathways, the current study highlights two distinct feedbackdependent learning mechanisms: (1) a gradual tuning of the execution drift rate that corrects for timing errors; and (2) a cautionary increase in the execution threshold following failed action inhibition.</s><s>While cognitive models, such as the adaptive DPM, are unable to capture the complexity of neural information processing that underlies adaptive action control, they do provide a rich description of the component operations, helping to guide study design and interpretation in experimental neuroscience.</s><s>Using a straightforward hybridization of accumulation-tobound dynamics and reinforcement learning, the current study provides evidence for a dual-mechanism account of feedbackdependent learning in inhibitory control.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc><div><p><s>Finally, additional probe Stop trials (N Probe ϭ 80) were included in which the bar stopped at 200, 250, 300, 350, or 400 ms after trial onset (16 trials per probe SSD), shown in the Figure 2B timeline (bottom, red dashes).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Adaptive stop signal task and contextual SSD statistics.</s><s>A, Anticipatory stop signal task.</s><s>Top, On Go trials, subjects were instructed to press a key when the ascending bar crossed a target line, always occurring on 520 ms after trial onset.</s><s>Feedback was given informing the subject if their response was earlier or later than the Go target (maximum 100 points).</s><s>Bottom, On Stop trials, the bar stopped and turned red before reaching the target line.</s><s>If no response was made (correct), the subject received a bonus of 200 points.</s><s>Failure to inhibit the key press resulted in a Ϫ100 point penalty.</s><s>B, Stop signal statistics across contexts.</s><s>Distributions show the sampling distributions for SSDs on context trials in the Early (blue), Uniform (gray), and Late (purple) groups.</s><s>Early and Late SSDs were normally distributed (parameters stated as in-figure text, N(, )).</s><s>Below the distributions, each row of tick marks indicates the context SSDs for a single example subject in each group.</s><s>Bottom row of red tick marks indicates the five probe SSDs included for all subjects regardless of context.</s></p></div></figDesc><graphic coords="3,107.00,63.82,372.00,448.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Effects of context on stop accuracy and RTs.</s><s>A, Subject-averaged stop accuracy (left) and cumulative RT distributions for correct (Go trials; middle) and error (Stop trials; right) responses in the Early (blue), Uniform (gray), and Late (purple) contexts.</s><s>B, Posterror slowing following failed Stop trials in each context and subsequent decay over five trials.</s><s>C, The posterror slowing observed immediately after a failed stop (t err ϩ 1) in each context (e.g., first data point in B).</s><s>Error bars and shaded area represent the 95% CI calculated across subjects.</s></p></div></figDesc><graphic coords="5,83.00,149.88,420.00,273.12" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Simulation and parameter recovery analysis of DPM.</s><s>A, True and estimated boundary height (a; blue), (B) braking drift rate (v b ; red), (C) onset time (tr; purple), and (D) execution drift rate (v e ; green) for three generative parameter sets.</s><s>Lines indicate true generative parameter means.</s><s>Lighter colors represent the range of sampled subject-level estimates.</s><s>Squares represent estimated parameter means.</s><s>Error bars represent Ϯ1 SD.</s><s>E, Distribution of 2 values for fits to all 60 simulated datasets (gray).</s></p></div></figDesc><graphic coords="6,101.00,63.98,384.00,200.52" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Single-subject DPM fits and model comparison.</s><s>Variants of the DPM were fit to all individual subject datasets with different parameters left free to vary between the first and second half of trials.</s><s>A, Mean subject BIC and AIC scores for boundary height (a; blue), execution drift rate (v e ; green), braking drift rate (v b ; red), and onset delay (tr; yellow) (dark circles).</s><s>Lighter circles represent an individual subject.</s><s>Error bars represent 95% CI.</s><s>B, Same mean values as in A, but with size of the dots scaled to reflect the number of subjects for which each model had the lowest AIC/BIC score.</s><s>White text indicates the number of subjects best described by each model (e.g., factor used to scale the size of the dots).</s><s>C, Observed increase in v e values estimated for the first (v 1 ) and second half (v 2 ) of trials in each context.</s><s>Error bars represent 95% CI.</s><s>Schematic represents the relative increase in v e in Early (cyan), Uniform (gray), and Late (purple) contexts, compared with a shared initial drift rate (i.e., before learning; black dotted line).</s></p></div></figDesc><graphic coords="8,45.00,63.90,495.60,276.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>Group-level model comparison and best fit predictions across context.</s><s>A, AIC (dark) and BIC (light) scores for all single-parameter models, allowing execution boundary height (a; blue), execution drift rate (v e ; green), braking drift rate (v b ; red), or onset delay (tr; yellow) to vary across contexts.</s><s>Three dual-parameter models were also included to test for possible benefits of allowing v e (best fitting single parameter model) to vary along with a (teal), v b (purple), or tr (dark green).</s><s>Error bars indicate the 95% CI.</s><s>B, Qualitative effects of context on a (top) and v e parameter estimates (bottom) in the Early and Late contexts.</s><s>C, Model predicted data (lines and larger transparent circles) simulated with best fit parameters from the v e , a model, corresponding to dotted circle in A overlaid on the average empirical data for Early (cyan), Uniform (gray), and Late (purple) contexts.</s><s>Error bars represent 95% CI.</s></p></div></figDesc><graphic coords="9,83.00,63.06,420.00,337.44" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 7 .</head><label>7</label><figDesc><div><p><s>Figure 7. Adaptive DPM parameter recovery and learning predictions in Uniform context.</s><s>A, Schematic showing how the execution drift rate is modulated following timing errors on Go trials (left) and how the boundary height is modulated following failed inhibitions on Stop trials.</s><s>B, Parameter recovery results for ␣ (left, teal), ␤ (middle, purple), and p (right, orange) parameters in the primary version of the adaptive DPM.</s><s>Horizontal lines indicate true generative parameter means.</s><s>Light colors represent the range of sampled subject-level estimates.</s><s>Squares represent estimated parameter means.</s><s>Error bars represent Ϯ1 SD.</s><s>Subject-averaged timeseries (dark line) and 95% CI (gray area) showing the (C) RT on Go trials and (D) accuracy on Stop trials.</s><s>Each point in the timeseries (n ϭ 30) represents the windowed average RT/accuracy over ϳ30 trials.</s><s>The corresponding adaptive model predictions are overlaid (dotted line), averaged over simulations to each individual subject's data.</s></p></div></figDesc><graphic coords="10,45.00,63.10,495.60,206.40" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head></head><label></label><figDesc><div><p><s>inhibition was best described by an adaptive version of the DPM in the current study, linking different kinds of task-relevant feedback signals to adaptation in dissociable control parameters.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 8 .</head><label>8</label><figDesc><div><p><s>Figure 8. Adaptive DPM modulates behavior according to context-specific control demands.</s><s>A, Average stop accuracy curves (left) and correct (middle) and error (right) RT distributions predicted by adaptive model simulations in the Early (blue) and Late (purple) contexts (initialized with the optimal parameters of the Uniform context).</s><s>B, Empirical timeseries of go RTs with model predictions overlaid for Early (left), Uniform (middle), and Late (right) contexts.</s><s>C, Empirical and model predicted timeseries of stop accuracy for the same conditions as in B.</s></p></div></figDesc><graphic coords="11,45.00,63.26,495.60,438.24" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 9 .</head><label>9</label><figDesc><div><p><s>Figure 9. Utility of including boundary adaptation compared with drift-only model.</s><s>A, Relative error of simulated compared with observed RT, accuracy, and posterror slowing on probe trial measures based on 20 simulated datasets for the drift-only and drift and bound adaptive models.</s><s>Posterror slowing in each context condition as predicted by the (B) drift-only and (C) drift and bound models.</s><s>For comparison with patterns observed in empirical data, see Figure 3C.</s><s>Error bars indicate the 95% CI around the mean.</s></p></div></figDesc><graphic coords="12,45.00,63.14,495.60,135.36" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="2,83.00,63.26,420.00,240.24" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 . Average uniform parameters and static DPM fit statistics</head><label>1</label><figDesc></figDesc><table><row><cell></cell><cell>a</cell><cell>v e</cell><cell>v b</cell><cell>tr</cell><cell>2</cell><cell>AIC</cell><cell>BIC</cell></row><row><cell>Mean</cell><cell>0.347</cell><cell>0.91</cell><cell>Ϫ0.49</cell><cell>0.152</cell><cell>0.011</cell><cell>Ϫ176.97</cell><cell>Ϫ172.26</cell></row><row><cell>95% CI</cell><cell>0.022</cell><cell>0.065</cell><cell>0.046</cell><cell>0.009</cell><cell>8e-4</cell><cell>1.06</cell><cell>1.06</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 . Generative parameters used in parameter recovery analysis</head><label>2</label><figDesc></figDesc><table><row><cell>Static model</cell></row></table><note><p><s>a ( ϭ 0.01) ve ( ϭ 0.01) vb ( ϭ 0.01) tr ( ϭ 0.005) ( ϭ 0.01) ( ϭ 0.005) p ( ϭ 0.000075)</s></p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 . Static fit statistics for early and late contexts</head><label>3</label><figDesc></figDesc><table><row><cell cols="2">Context</cell><cell>2 , best</cell><cell>AIC, best</cell><cell>BIC, best</cell></row><row><cell cols="2">parameter</cell><cell>(mean, 95% CI)</cell><cell>(mean, 95% CI)</cell><cell>(mean, 95% CI)</cell></row><row><cell cols="5">Execution drift (v e ) 0.023 (0.035, 0.0042) Ϫ363.02 (Ϫ343.49, 6.27) Ϫ343.49 (Ϫ339.75, 6.27)</cell></row><row><cell cols="2">Bound height (a)</cell><cell cols="3">0.041 (0.061, 0.0066) Ϫ334.90 (Ϫ316.72, 5.35) Ϫ316.72 (Ϫ312.98, 5.35)</cell></row><row><cell cols="2">Braking drift (v b )</cell><cell cols="3">0.045 (0.055, 0.0044) Ϫ330.11 (Ϫ321.57, 3.90) Ϫ337.10 (Ϫ317.83, 3.90)</cell></row><row><cell cols="2">Onset delay (tr)</cell><cell cols="3">0.031 (0.044, 0.0055) Ϫ348.01 (Ϫ332.44, 5.97) Ϫ33.69 (Ϫ328.69, 5.97)</cell></row><row><cell cols="2">a and v e *</cell><cell cols="3">0.017 (0.023, 0.0025) Ϫ372.25 (Ϫ359.87, 5.24) Ϫ374.04 (Ϫ352.35, 5.24)</cell></row><row><cell cols="2">v b and v e</cell><cell cols="3">0.023 (0.032, 0.0035) Ϫ358.42 (Ϫ344.51, 5.41) Ϫ356.63 (Ϫ337.18, 5.41)</cell></row><row><cell>tr and v</cell><cell>e</cell><cell cols="3">0.024 (0.032, 0.0031) Ϫ356.41 (Ϫ342.96, 4.48) Ϫ363.54 (Ϫ335.29, 4.48)</cell></row><row><cell cols="3">*The best-fitting model.</cell><cell></cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4 . Adaptive dependent process model fit statistics</head><label>4</label><figDesc></figDesc><table><row><cell cols="2">Model version ␣</cell><cell>␤</cell><cell>p</cell><cell>2 adapt (static)</cell><cell>AIC adapt (static)</cell><cell>BIC adapt (static)</cell></row><row><cell>Primary</cell><cell cols="6">0.309 0.032 0.002 0.235 (0.005) Ϫ326.4 (Ϫ198.6) Ϫ320.1 (Ϫ195.1)</cell></row><row><cell>Alternative</cell><cell cols="6">0.005 0.199 0.004 0.861 (0.007) Ϫ248.6 (Ϫ189.1) Ϫ242.3 (Ϫ185.5)</cell></row></table><note><p><s>al., 2016)have found reliable links between behaviorally derived estimates of drift rate and activity in the striatum</s></p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>The Journal ofNeuroscience, March 20, 2019 • 39(12):2251-2264 • 2251</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2252" xml:id="foot_1"><p><s>• J. Neurosci., March 20, 2019 • 39(12):2251-2264 Dunovan and Verstynen • Tuning Distinct Mechanisms in the Underlying Decision Process</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2254" xml:id="foot_2"><p><s>• J. Neurosci., March 20, 2019 • 39(12):2251-2264 Dunovan and Verstynen • Tuning Distinct Mechanisms in the Underlying Decision Process</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2256" xml:id="foot_3"><p><s>• J. Neurosci., March 20, 2019 • 39(12):2251-2264 Dunovan and Verstynen • Tuning Distinct Mechanisms in the Underlying Decision Process</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2258" xml:id="foot_4"><p><s>• J. Neurosci., March 20, 2019 • 39(12):2251-2264 Dunovan and Verstynen • Tuning Distinct Mechanisms in the Underlying Decision Process</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2260" xml:id="foot_5"><p><s>• J. Neurosci., March 20, 2019 • 39(12):2251-2264 Dunovan and Verstynen • Tuning Distinct Mechanisms in the Underlying Decision Process</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_6"><p><s>J. Neurosci., March 20, 2019 • 39(12):2251-2264 • 2261</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2262" xml:id="foot_7"><p><s>• J. Neurosci., March 20, 2019 • 39(12):2251-2264 Dunovan and Verstynen • Tuning Distinct Mechanisms in the Underlying Decision Process</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2264" xml:id="foot_8"><p><s>• J. Neurosci., March 20, 2019 • 39(12):2251-2264 Dunovan and Verstynen • Tuning Distinct Mechanisms in the Underlying Decision Process</s></p></note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>This work was supported in part by <rs type="funder">National Science Foundation Career Award 1351748 and Army Research Laboratory Cooperative Agreement</rs> <rs type="grantNumber">W911NF-10-2-0022</rs>.The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the official policies, either expressed or implied, of the <rs type="funder">Army Research Laboratory</rs> or the U.S. government.We thank <rs type="person">Patrick Beukema</rs> and <rs type="person">Kevin Jarbo</rs> for helpful comments on drafts of this manuscript; and <rs type="person">Leo Scholl</rs> and <rs type="person">Tara Molesworth</rs> for assistance with data collection.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_sGsuAeJ">
+					<idno type="grant-number">W911NF-10-2-0022</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Existence and control of Go/ No-Go decision transition threshold in the striatum</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bahuguna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aertsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">1004233</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A competitive model for striatal action selection</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bariselli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Fobbs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Creed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Kravitz</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.brainres.2018.10.009</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Res. Advance online publication. Retrieved October</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Parameterization of connectionist models</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bogacz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav Res Methods Instrum Comput</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="732" to="741" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Integration of reinforcement learning and optimal decision-making theories of the basal ganglia</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bogacz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Larsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="817" to="851" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The physics of optimal decision making: a formal analysis of models of performance in two-alternative forced-choice tasks</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bogacz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Moehlis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Holmes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol Rev</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="700" to="765" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">A role for the subthalamic nucleus in response inhibition during conflict</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Brittain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Watkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Joundi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Ray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Holland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">Z</forename><surname>Aziz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Jenkinson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="13396" to="13401" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Neural underpinnings of the evidence accumulator</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Hanks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="149" to="157" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">The simplest complete model of choice response time: linear ballistic accumulation</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Heathcote</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cogn Psychol</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="153" to="178" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Subthalamic nucleus stimulation reverses mediofrontal influence over decision threshold</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">V</forename><surname>Wiecki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">X</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Figueroa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Samanta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Sherman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1462" to="1467" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">The subthalamic nucleus contributes to posterror slowing</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Sanguinetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Allen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Sherman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Cogn Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="2637" to="2644" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Opponent actor learning (OpAL): modeling interactive effects of striatal dopamine on reinforcement learning and choice incentive</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol Rev</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="337" to="366" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Striatal D1 and D2 signaling differentially predict learning from positive and negative outcomes</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Cox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Larcher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">K</forename><surname>Fellows</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leyton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dagher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="95" to="101" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Caudate encodes multiple computations for perceptual decisions</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Gold</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="15747" to="15759" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">The basal ganglia: from motor commands to the control of vigor</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Dudman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Krakauer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="158" to="166" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Believer-skeptic meets actor-critic: rethinking the role of basal ganglia pathways during decision-making and reinforcement learning</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Dunovan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Verstynen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">106</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">Competing basalganglia pathways determine the difference between stopping and deciding not to go</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Dunovan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lynch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Molesworth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Verstynen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>Elife 4:e08723</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Cortical beta power reflects decision dynamics and uncovers multiple facets of posterror adaptation</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Nigbur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Klein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Danielmeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ullsperger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">5038</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Striatum and pre-SMA facilitate decision-making under time pressure</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">U</forename><surname>Forstmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dutilh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Neumann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">Y</forename><surname>Von Cramon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Ridderinkhof</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Wagenmakers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="17538" to="17542" />
+			<date type="published" when="2008">2008</date>
+			<pubPlace>U S A</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Mechanisms of hierarchical reinforcement learn-ing in corticostriatal circuits: 1. Computational analysis</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Badre</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cereb Cortex</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="509" to="526" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">fMRI and EEG predictors of dynamic decision parameters during human reinforcement learning</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gagne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Nyhus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Masters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">V</forename><surname>Wiecki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Badre</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="485" to="494" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Neural correlates of decision thresholds in the human subthalamic nucleus</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Herz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Zavala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bogacz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Brown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Biol</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="916" to="920" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Distinct mechanisms mediate speed-accuracy adjustments in cortico-subthalamic networks</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Herz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Brittain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Cheeran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fitzgerald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">Z</forename><surname>Aziz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ashkan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Little</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Foltynie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Limousin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zrinzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bogacz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Brown</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">21481</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">The human subthalamic nucleus and globus pallidus internus differentially encode reward during action control</title>
+		<author>
+			<persName><forename type="first">Justin</forename><surname>Rossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Peden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Castellanos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Foote</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Gunduz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Okun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hum Brain Mapp</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="1952" to="1964" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Distinct roles for direct and indirect pathway striatal neurons in reinforcement</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Kravitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">D</forename><surname>Tye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Kreitzer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="816" to="818" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Proactive selective response suppression is implemented via the basal ganglia</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Majid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Corey-Bloom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aron</forename><forename type="middle">Ar</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="13259" to="13269" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">A Note on Estimating the Variance of the Sample Median</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Maritz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Jarrett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Statistical Association</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="194" to="196" />
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Parameter recovery for the leaky competing accumulator model</title>
+		<author>
+			<persName><forename type="first">´s</forename><surname>Miletic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Turner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">U</forename><surname>Forstmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Van Maanen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Math Psychol</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="25" to="50" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Neural antecedents of self-initiated actions in secondary motor cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Murakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Vicente</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Costa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1574" to="1582" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Distinct sources of deterministic and stochastic components of action timing decisions in rodent frontal cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Murakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Shteingart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Loewenstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page" from="908" to="919" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>e7</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Functional significance of the cortico-subthalamo-pallidal &quot;hyperdirect&quot; pathway</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nambu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tokuno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Takada</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurosci Res</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="111" to="117" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">A simplex method for function minimization</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Nelder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mead</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The computer journal</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="308" to="313" />
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Striatal activity during reactive inhibition is related to the expectation of stop signals</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Pas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Van Den Munkhof</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Du Plessis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vink</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">361</biblScope>
+			<biblScope unit="page" from="192" to="198" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">The drift diffusion model as the choice rule in reinforcement learning</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Pedersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Biele</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychon Bull Rev</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="1234" to="1251" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Neural mechanisms of posterror adjustments of decision policy in parietal cortex</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Purcell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kiani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="658" to="671" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Reinforcement-based decision making in corticostriatal circuits: mutual constraints by neurocomputational and diffusion models</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ratcliff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="1186" to="1229" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Estimating parameters of the diffusion model: approaches to dealing with contaminant reaction times and parameter variability</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ratcliff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tuerlinckx</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychon Bull Rev</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="438" to="481" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Diffusion decision model: current issues and history</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ratcliff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mckoon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Cogn Sci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="260" to="281" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Response of neurons in the lateral intraparietal area during a combined visual discrimination reaction time task</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Roitman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="9475" to="9489" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">The striatum multiplexes contextual and kinematic information to constrain motor habits execution</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Rueda-Orozco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Robbe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="453" to="460" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Models of inhibitory control</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Schall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Palmeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Logan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Philos Trans R Soc Lond B Biol Sci</title>
+		<imprint>
+			<biblScope unit="volume">372</biblScope>
+			<date type="published" when="2017">2017. 20160193</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Pallidal spiking activity reflects learning dynamics and predicts performance</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Schechtman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Noblejas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Mizrahi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Dauber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bergman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="page" from="6281" to="E6289" />
+			<date type="published" when="2016">2016</date>
+			<pubPlace>U S A 113</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Canceling actions involves a race between basal ganglia pathways</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Leventhal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mallet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Berke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1118" to="1124" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">The acquisition of goaldirected actions generates opposing plasticity in direct and indirect pathways in dorsomedial striatum</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Shan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Christie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Balleine</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="9196" to="9201" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Rational decision-making in inhibitory control</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Shenoy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Hum Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">48</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Midbrain dopamine neurons control judgment of time</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Soares</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">V</forename><surname>Atallah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Paton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">354</biblScope>
+			<biblScope unit="page" from="1273" to="1277" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">Introduction to reinforcement learning</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Sutton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Barto</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<publisher>Massachusetts Institute of Technology</publisher>
+			<pubPlace>Cambridge, MA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">The striatum and subthalamic nucleus as independent and collaborative structures in motor control</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tewari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jog</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Jog</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front Syst Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">17</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Striatal activation reflects urgency in perceptual decision making</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Van Maanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Fontanesi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Hawkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">U</forename><surname>Forstmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">139</biblScope>
+			<biblScope unit="page" from="294" to="303" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">How to use the diffusion model: parameter recovery of three methods: EZ, fast-dm, and DMAT</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Van Ravenzwaaij</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Oberauer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Math Psychol</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="463" to="473" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Models of response inhibition in the stop signal and stop-change paradigms</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Verbruggen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Logan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurosci Biobehav Rev</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="647" to="661" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">How each movement changes the next: an experimental and theoretical study of fast adaptive priors in reaching</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Verstynen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">N</forename><surname>Sabes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="10050" to="10059" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Direct and indirect dorsolateral striatum pathways reinforce different action strategies</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Vicente</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Galva ˜o-Ferreira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tecuapetla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Costa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Biol</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="267" to="R269" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Parameter recovery, bias and standard errors in the linear ballistic accumulator model</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Visser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">´r</forename><surname>Poesse</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Br J Math Stat Psychol</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="280" to="296" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Global optimization by basin-hopping and the lowest energy structures of Lennard-Jones clusters containing up to 110 atoms</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Doye</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Phys Chem A</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="5111" to="5116" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Inhibitory control in the cortico-basal gangliathalamocortical loop: complex regulation and interplay with memory and decision processes</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="1093" to="1105" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Role of the indirect pathway of the basal ganglia in perceptual decision making</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="4052" to="4064" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">On the globality of motor suppression: unexpected events and their influence on behavior and cognition</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Wessel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Aron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="259" to="280" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Surprise disrupts cognition via a fronto-basal ganglia suppressive mechanism</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Wessel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Jenkinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Brittain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Voets</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">Z</forename><surname>Aziz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Aron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">11195</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Testing the validity of conflict drift-diffusion models for use in estimating cognitive processes: a parameter-recovery study</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">N</forename><surname>White</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Servant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Logan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychon Bull Rev</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="286" to="301" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">A computational model of inhibitory control in frontal cortex and basal ganglia</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">V</forename><surname>Wiecki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychol Rev</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="329" to="355" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Population coding and decoding in a neural field: a computational study</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Amari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nakahara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="999" to="1026" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Opponent and bidirectional control of movement velocity in the basal ganglia</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Yttri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Dudman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">533</biblScope>
+			<biblScope unit="page" from="402" to="406" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Decisions made with less evidence involve higher levels of corticosubthalamic nucleus theta band synchrony</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zavala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Little</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ashkan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Aziz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Foltynie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zrinzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zaghloul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Brown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Cogn Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="811" to="825" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

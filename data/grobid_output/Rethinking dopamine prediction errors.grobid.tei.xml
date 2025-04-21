@@ -1,0 +1,2560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rethinking dopamine as generalized prediction error</title>
+				<funder ref="#_n6VUFAb">
+					<orgName type="full">National Institutes of Health</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">NIH/DHHS</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Cold Spring Harbor Laboratory</publisher>
+				<availability status="unknown"><p>Copyright Cold Spring Harbor Laboratory</p>
+				</availability>
+				<date type="published" when="2017-12-25">2017-12-25</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Matthew</forename><forename type="middle">P H</forename><surname>Gardner</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Intramural Research Program of the National Institute on Drug Abuse</orgName>
+								<address>
+									<country>NIH</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="institution">Intramural Research Program of the National Institute on Drug Abuse</orgName>
+								<address>
+									<country>NIH</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="institution">Intramural Research Program of the National Institute on Drug Abuse</orgName>
+								<address>
+									<country>NIH</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="institution">Intramural Research Program of the National Institute on Drug Abuse</orgName>
+								<address>
+									<country>NIH</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Geoffrey</forename><surname>Schoenbaum</surname></persName>
+							<idno type="ORCID">0000-0002-6546-3298</idno>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Samuel</forename><forename type="middle">J</forename><surname>Gershman</surname></persName>
+							<email>gershman@fas.harvard.edu</email>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Psychology and Center for Brain Science</orgName>
+								<orgName type="institution">Harvard University</orgName>
+							</affiliation>
+							<affiliation key="aff8">
+								<orgName type="department">Department of Psychology and Center for Brain Science</orgName>
+								<orgName type="institution">Harvard University</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Psychology and Center for Brain Science</orgName>
+								<orgName type="institution">Harvard University</orgName>
+							</affiliation>
+							<affiliation key="aff8">
+								<orgName type="department">Department of Psychology and Center for Brain Science</orgName>
+								<orgName type="institution">Harvard University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Psychology</orgName>
+								<orgName type="institution">Harvard University</orgName>
+								<address>
+									<addrLine>52 Oxford St</addrLine>
+									<postCode>295.05, 02138</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rethinking dopamine as generalized prediction error</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<publisher>Cold Spring Harbor Laboratory</publisher>
+							<date type="published" when="2017-12-25" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">9E7962CAD8D177E07D2356D6A18966E9</idno>
+					<idno type="DOI">10.1101/239731</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Midbrain dopamine neurons are commonly thought to report a reward prediction error, as hypothesized by reinforcement learning theory.</s><s>While this theory has been highly successful, several lines of evidence suggest that dopamine activity also encodes sensory prediction errors unrelated to reward.</s><s>Here we develop a new theory of dopamine function that embraces a broader conceptualization of prediction errors.</s><s>By signaling errors in both sensory and reward predictions, dopamine supports a form of reinforcement learning that lies between model-based and model-free algorithms.</s><s>This account remains consistent with current canon regarding the correspondence between dopamine transients and reward prediction errors, while also accounting for new data suggesting a role for these signals in phenomena such as sensory preconditioning and identity unblocking, which ostensibly draw upon knowledge beyond reward predictions.</s><s>2 made available for use under a CC0 license.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>The hypothesis that midbrain dopamine neurons report a reward prediction error (RPE, the discrepancy between observed and expected reward) enjoys a seemingly unassailable accumulation of support from electrophysiology <ref type="bibr">[1,</ref><ref type="bibr">2,</ref><ref type="bibr">3,</ref><ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5]</ref>, calcium imaging <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b6">7]</ref>, optogenetics <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b9">10]</ref>, voltammetry <ref type="bibr" target="#b10">[11,</ref><ref type="bibr" target="#b11">12]</ref>, and human brain imaging <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b13">14]</ref>.</s><s>The success of the RPE hypothesis is exciting because the RPE is precisely the signal a reinforcement learning (RL) system would need to update reward expectations <ref type="bibr" target="#b14">[15,</ref><ref type="bibr" target="#b15">16]</ref>.</s><s>Support for this RL interpretation of dopamine comes from findings that dopamine complies with basic postulates of RL theory <ref type="bibr">[1]</ref>, shapes the activity of downstream reward-predictive neurons in the striatum <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b10">11]</ref>, and plays a causal role in the control of learning <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b12">13]</ref>.</s></p><p><s>Despite these successes, however, there are a number of signs that this is not the whole story.</s><s>First, it has long been known that dopamine neurons respond to novel or unexpected stimuli, even in the absence of changes in value <ref type="bibr" target="#b17">[18,</ref><ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b6">7]</ref>.</s><s>While some theorists have tried to reconcile this observation with the RPE hypothesis by positing that value is a↵ected by novelty <ref type="bibr" target="#b20">[21]</ref> or uncertainty <ref type="bibr" target="#b21">[22]</ref>, others have argued that this response constitutes a distinct function of dopamine <ref type="bibr" target="#b22">[23,</ref><ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b24">25]</ref>, possibly mediated by an anatomically segregated projection from midbrain to striatum <ref type="bibr" target="#b6">[7]</ref>.</s><s>A second challenge is that some dopamine neurons respond to aversive stimuli.</s><s>If dopamine responses reflect RPEs, then one would expect aversive stimuli to reduce responses (as observed in some studies; <ref type="bibr" target="#b25">[26,</ref><ref type="bibr" target="#b26">27]</ref>).</s><s>A third challenge is that dopamine activity is sensitive to movement-related variables such as action initiation and termination <ref type="bibr" target="#b27">[28,</ref><ref type="bibr" target="#b28">29]</ref>.</s><s>A fourth challenge is that dopamine activity <ref type="bibr" target="#b29">[30]</ref> and its putative hemodynamic correlates <ref type="bibr" target="#b30">[31]</ref> are influenced by information, such as changes in stimulus contingencies, that should in principle be invisible to a pure "model-free" RL system that updates reward expectations using RPEs.</s><s>This has led to elaborations of the RPE hypothesis according to which dopamine has access to some "model-based" information, for examples in terms of probabilistic beliefs or samples from a model-based simulator <ref type="bibr" target="#b31">[32,</ref><ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b34">35,</ref><ref type="bibr" target="#b35">36]</ref>.</s></p><p><s>While some of these puzzles can be resolved within the RPE framework by modifying assumptions about the inputs to and modulators of the RPE signal, recent findings have proven more unyielding.</s><s>In this paper we focus on three of these findings: (1) dopamine transients are necessary for learning induced by unexpected changes in the sensory features of expected rewards <ref type="bibr" target="#b36">[37]</ref>; <ref type="bibr">(2)</ref> dopamine neurons respond to unexpected changes in sensory features of expected rewards <ref type="bibr" target="#b37">[38]</ref>; and (3) dopamine transients are both su cient and necessary for learning stimulus-stimulus associations <ref type="bibr" target="#b38">[39]</ref>.</s><s>Taken together, these findings seem to contradict the RPE framework supported by so much other data.</s></p><p><s>Here we will suggest one possible way to reconcile the new and old findings, based on the idea that dopamine computes prediction errors over sensory features, much as was previously hypothesized for rewards.</s><s>This sensory prediction error (SPE) hypothesis is motivated by normative considerations: SPEs can be used to estimate a predictive feature map known as the successor representation (SR; <ref type="bibr" target="#b39">[40,</ref><ref type="bibr" target="#b40">41]</ref>).</s><s>The key advantage of the SR is that it simplifies the computation of future rewards, combining the e ciency of model-free RL with some of the flexibility of model-based RL.</s><s>Neural and behavioral evidence suggests that the SR is part of the brain's computational repertoire <ref type="bibr" target="#b41">[42,</ref><ref type="bibr" target="#b42">43]</ref>, possibly subserved by the hippocampus <ref type="bibr" target="#b43">[44,</ref><ref type="bibr" target="#b44">45]</ref>.</s><s>Here, building on the pioneering work of Suri <ref type="bibr" target="#b45">[46]</ref>, we argue that dopamine transients previously understood to signal RPEs may instead constitute the SPE signal used to update the SR.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Theoretical framework</head><p><s>The reinforcement learning problem RL theories posit an environment in which an animal accumulates rewards as it traverses a sequence of "states" governed by a transition function T (s 0 |s), the probability of moving from state s to state s 0 , and a reward function R(s), the expected reward in state s.</s><s>The RL problem is to predict and optimize value, defined as the expected discounted future return (cumulative reward):</s></p><formula xml:id="formula_0">V (s t ) = E " 1 X k=0 k r t+k # ,<label>(1)</label></formula><p><s>where r t is the reward received at time t in state s t , and 2 [0, 1] is a discount factor that determines the weight of temporally distal rewards.</s><s>Because the environment is assumed to obey the Markov property (transitions and rewards depend only on the current state), the value function can be written in a recursive form known as the Bellman equation <ref type="bibr" target="#b46">[47]</ref>:</s></p><formula xml:id="formula_1">V (s t ) = E[r t + V (s t+1 )].<label>(2)</label></formula><p><s>The Bellman equation allows us to define e cient RL algorithms for estimating values, as we explain next.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Model-free and model-based learning</head><p><s>Model-free algorithms solve the RL problem by directly estimating V from interactions with the environment.</s><s>The Bellman equation specifies a recursive consistency condition that the value estimate V (s t ) must satisfy in order to be accurate.</s><s>By taking the di↵erence between the two sides of the Bellman equation, E[r t + V (s t+1 )] V (s t ), we can obtain a measure of expected error; the direction and degree of the error is informative about how to correct V (s t ).</s></p><p><s>Because model-free algorithms do not have access to the underlying environment model (R and T ) necessary to compute the expected error analytically, they typically rely on a stochastic sample of the error based on experienced transitions and rewards:</s></p><formula xml:id="formula_2">t = r t + V (s t+1 ) V (s t ).<label>(3)</label></formula><p><s>This quantity, commonly known as the temporal di↵erence (TD) error, will on average be 0 when the value function has been perfectly estimated.</s><s>The TD error is the basis of the classic TD learning algorithm <ref type="bibr" target="#b46">[47]</ref>, which in its simplest form updates the value estimate according to V (s t ) / t .</s><s>The RPE hypothesis states that dopamine reports the TD error <ref type="bibr" target="#b14">[15,</ref><ref type="bibr" target="#b15">16]</ref>.</s></p><p><s>Model-free algorithms like TD learning are e cient because they cache value estimates, which means that state evaluation (and by extension action selection) can be accomplished by simply inspecting the values cached in the relevant states.</s><s>This e ciency comes at the cost of flexibility: if the reward function changes at a particular state, the entire value function must be re-estimated, since the Bellman equation implies a coupling of values between di↵erent states.</s><s>For this reason, it has been proposed that the brain also makes use of model-based algorithms <ref type="bibr" target="#b47">[48,</ref><ref type="bibr" target="#b48">49]</ref>, which occupy the opposite end of the e ciency-flexibility spectrum.</s><s>Model-based algorithms learn a model of the environment (R and T ) and use this model to evaluate states, typically through some form of forward simulation or dynamic programming.</s><s>This approach is flexible, because local changes in the reward or transition functions will instantly propagate across the entire value function, but at the cost of relying on comparatively ine cient simulation.</s></p><p><s>Some of the phenomena that we discuss in the Results have been ascribed to model-based computations supported by dopamine <ref type="bibr" target="#b49">[50]</ref>, thus transgressing the clean boundary between the model-free function of dopamine To make this concrete, a simple learning algorithm (guaranteed to converge to the maximum likelihood solution under some assumptions about the learning rate) is to update the model parameters according to:</s></p><formula xml:id="formula_3">R(s) / r t R(s t ) ( 4 ) T (s 0 |s t ) / I(s t+1 = s 0 ) T (s 0 |s t ),<label>(5)</label></formula><p><s>where I(•) = 1 if its argument is true, and 0 otherwise <ref type="bibr" target="#b50">[51]</ref>.</s><s>These updates can be understood in terms of prediction errors, but not TD errors (they do not bootstrap future value estimates).</s><s>The TD interpretation is important for explaining phenomena like the shift in signaling to earlier reward-predicting cues <ref type="bibr" target="#b15">[16]</ref>, the temporal specificity of dopamine responses <ref type="bibr" target="#b51">[52,</ref><ref type="bibr" target="#b52">53]</ref>, and the sensitivity to long-term values <ref type="bibr" target="#b53">[54]</ref>.</s><s>Thus, it remains mysterious how to retain the TD error interpretation of dopamine, which has been highly successful as an empirical hypothesis, while simultaneously accounting for the sensitivity of dopamine to SPEs.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The successor representation</head><p><s>To reconcile these data, we will develop the argument that dopamine reflects sensory TD errors, encompassing both reward and non-reward features of a stimulus.</s><s>In order to introduce some context to this idea, let us revisit the fundamental e ciency-flexibility trade-o↵.</s></p><p><s>One way to find a middle-ground between the extremes occupied by model-free and modelbased algorithms is to think about di↵erent ways to compile a model of the environment.</s><s>By analogy with programming, a compiled program gains e ciency (in terms of runtime) at the expense of flexibility (the internal structure of the program is no longer directly accessible).</s></p><p><s>Model-based algorithms are maximally uncompiled: they explicitly represent the parameters of the model, thus providing a representation that can be flexibly altered for new tasks.</s><s>Model-free algorithms are maximally compiled: they only represent the summary statistics (state values) that are needed for reward prediction, bypassing a flexible representation of the environment in favor of computational e ciency.</s></p><p><s>A third possibility is a partially compiled model.</s><s><ref type="bibr" target="#b39">[40]</ref> presented one such scheme, based on the following mathematical identity:</s></p><formula xml:id="formula_4">V (s t ) = X s 0 M (s t , s 0 )R(s 0 ),<label>(6)</label></formula><p><s>where M denotes the successor representation (SR), the expected discounted future state occupancy:</s></p><formula xml:id="formula_5">M (s t , s 0 ) = E " 1 X k=0 k I(s t+k = s 0 ) # .<label>(7)</label></formula><p><s>Intuitively, the SR represents states in terms of the frequency of their successor states.</s><s>From a computational perspective, the SR is appealing for two reasons.</s><s>First, it renders value computation a linear operation, yielding e ciency comparable to model-free evaluation.</s><s>Second, it retains some of the flexibility of model-based evaluation.</s><s>Specifically, changes in rewards will instantly a↵ect values because the reward function is represented separately from the SR.</s><s>On the other hand, the SR will be relatively insensitive to changes in transition structure, because it does not explicitly represent transitions-these have been compiled into a convenient but inflexible format.</s><s>Behavior reliant upon such a partially-compiled model of the environment should be more sensitive to reward changes than transition changes, a prediction recently confirmed in humans <ref type="bibr" target="#b41">[42]</ref>.</s></p><p><s>The SR obeys a recursion analogous to the Bellman equation:</s></p><formula xml:id="formula_6">M (s t , s 0 ) = E[I(s t = s 0 ) + M (s t+1 , s 0 )].<label>(8)</label></formula><p><s>Following the logic of the previous section, this implies that a TD learning algorithm can be used to estimate the SR:</s></p><formula xml:id="formula_7">M (s t , s 0 ) / M t (s 0 ) = I(s t = s 0 ) + M (s t+1 , s 0 ) M (s t , s 0 ),<label>(9)</label></formula><p><s>where M denotes the approximation of M .</s></p><p><s>One challenge facing this formulation is the curse of dimensionality: in large state spaces it is impossible to accurately estimate the SR for all states.</s><s>Generalization across states can be achieved by defining the SR over state features (indexed by j) and modeling this feature-based SR with linear function approximation:</s></p><formula xml:id="formula_8">M (s t , j) = X i f i (s t )W ij ,<label>(10)</label></formula><p><s>where f i (s) denotes the ith feature of state s and W is a weight matrix that parametrizes the approximation.</s><s>In general the features can be arbitrary, but for the purposes of this paper, we will assume that the features correspond to distinct stimulus identities; thus f i (s) = 1 if stimulus i is present in state s, and 0 otherwise.</s><s>Linear function approximation leads to the following learning rule for the weights:</s></p><formula xml:id="formula_9">W ij / M t (j)f i (s t ),<label>(11)</label></formula><p><s>where</s></p><formula xml:id="formula_10">M t (j) = f j (s t ) + M (s t+1 , j) M (s t , j) (<label>1 2 )</label></formula><p><s>is the TD error under linear function approximation.</s><s>We will argue that dopamine encodes this TD error.</s></p><p><s>One issue with comparing this vector-valued TD error to experimental data is that we don't yet know how particular dopamine neurons map onto particular features.</s><s>In order to make minimal assumptions, we will assume that each neuron has a uniform prior probability of encoding any given feature.</s><s>Under ignorance about feature tuning, the expected TD error is then proportional to the superposition of feature-specific TD errors, P j M t (j).</s><s>In our simulations of dopamine, we take this superposition to be the "dopamine signal" (see also <ref type="bibr" target="#b31">[32]</ref>), but we wish to make clear that this is a provisional assumption that we ultimately hope to replace once the feature tuning of dopamine neurons is better understood.</s></p><p><s>There are several notable aspects of this new model of dopamine.</s><s>First, it naturally captures SPEs, as we will illustrate shortly.</s><s>Second, it also captures RPEs if reward is one of the features.</s><s>Specifically, if f j (s t ) = r t , then the correspond column of the SR is equivalent to the value function, M (s, j) = V (s), and the corresponding TD error is the classical RPE, M t (j) = t .</s><s>Third, the TD error is now vector-valued, which means that dopamine neurons may be heterogeneously tuned to particular features (as hypothesized by some authors; <ref type="bibr" target="#b54">[55]</ref>), or they multiplex several features <ref type="bibr" target="#b55">[56]</ref>, or both.</s><s>Notably, although the RPE correlate has famously been evident in single-units, representation of these more complex or subtle prediction errors may be an ensemble property.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Simulations</head><p><s>Some of the most direct evidence for our hypothesis comes from a recent study by Chang et al. <ref type="bibr" target="#b36">[37]</ref>, who examined whether dopamine is necessary for learning about changes in reward identity (Figure <ref type="figure" target="#fig_1">1A</ref>).</s><s>Animals first learned to associate two stimuli (X B and X UB ) with di↵erent reward flavors.</s><s>These stimuli were then reinforced in compound with other stimuli (A B and A UB ).</s><s>Critically, the X UB A UB trials were accompanied by a change in reward flavor, a procedure known as "identity unblocking" that attenuates the blocking e↵ect <ref type="bibr" target="#b56">[57,</ref><ref type="bibr" target="#b57">58,</ref><ref type="bibr" target="#b58">59]</ref>.</s><s>This e↵ect eludes explanation in terms of model-free mechanisms, but is naturally accommodated by the SR since changes in reward identity induce sensory prediction errors.</s><s>Chang et al. <ref type="bibr" target="#b36">[37]</ref> showed that optogenetic inhibition of dopamine at the time of the flavor change prevents this unblocking e↵ect (Figure <ref type="figure" target="#fig_1">1B</ref>).</s><s>Our model accounts for this finding (Figure <ref type="figure" target="#fig_1">1C</ref>), because inhibition suppresses SPEs that are necessary for driving learning.</s></p><p><s>One discrepant observation is a simulated increase in V in the ITI condition relative to the Exp condition for A B , which does not appear in the experimental data.</s><s>During the second stage of learning, X UB , A UB , and the sensory features of both pellet types are presented together.</s><s>Because of the co-occurrence of these features, associations develop between them such that the sensory features of the pellets now have slight associations with one another as well as the cues that predict them.</s><s>This causes A B and X B to have a slight association with the sensory features of the pellet that it never predicted since both pellets now have mild associations with one another.</s></p><p><s>Electrophysiological experiments have confirmed that dopamine neurons respond to changes in identity, demonstrating a neural signal that is capable of explaining the data from Chang et al. <ref type="bibr" target="#b36">[37]</ref>.</s><s>We have already mentioned the sizable literature on novelty responses, but the significance of this activity is open to question, because the animal's prior value expectation is typically unclear.</s><s>A study reported by Takahashi et al. <ref type="bibr" target="#b37">[38]</ref> provides more direct evidence for an SPE signal, using a task (Figure <ref type="figure" target="#fig_2">2A</ref>) in which animals experience both shifts in value (amount of reward) and identity (reward flavor).</s><s>Takahashi and colleagues found that individual dopamine neurons exhibited the expected changes in firing to shifts in value (Figure <ref type="figure" target="#fig_2">2B</ref>, reward addition and omission) and also showed a stronger response following a value-neutral change in reward identity (Figure <ref type="figure" target="#fig_2">2B</ref>, identity switch), changes in firing similar to those predicted by the model under these conditions (Figure <ref type="figure" target="#fig_2">2C</ref>).</s><s>A strong form of our proposal is that dopamine transients are both su cient and necessary for learning stimulus-stimulus associations.</s><s>Recent experiments using a sensory preconditioning paradigm <ref type="bibr" target="#b38">[39]</ref> have tested this using sensory preconditioning.</s><s>In this paradigm (Figure <ref type="figure" target="#fig_9">3A</ref>), various stimuli and stimulus compounds (denoted A, EF, AD, AC) are associated with another stimulus X through repeated pairing in an initial preconditioning phase.</s><s>In a subsequent conditioning phase, X is associated with reward (sucrose pellets).</s><s>In a final probe test, conditioned responding to a subset of the individual stimuli (F, D, C) is measured in terms of the number of food cup entries elicited by the presentation of the stimuli.</s><s>During the preconditioning phase, one group of animals received optogenetic activation of dopamine neurons via channelrhodopsin (ChR2) expressed in the ventral tegmental area of the midbrain.</s><s>In particular, optogenetic activation was applied either coincident with the onset of X on AC!X trials, or (as a temporal control) 120-180 seconds after X on AD!X trials.</s><s>Another control group of animals received the same training and optogenetic activation, but expressed light-insensitive enhanced yellow fluorescent protein (eYFP).</s><s>At the start of each session, one well was randomly designated as short (a .5-s</s><s>delay before the reward) and the other, long (a 1-to 7-s delay before the reward; see Block 1).</s><s>In Block 2, these contingencies were switched.</s><s>In Block 3, the delay was held constant, while the number of rewards was manipulated; one well was designated a big reward, in which a second bolus of reward was delivered (big reward), and a small (single bolus) reward was delivered in the other well.</s><s>In Block 4, these contingencies were switched again.(B ) Firing rate of dopamine neurons on trials that occurred early (first 5 trials) or late (last 5 trials) during an identity shift block.</s><s>Error bars show standard error of the mean.</s><s>Data replotted from <ref type="bibr" target="#b37">[38]</ref>.</s><s>(C ) Model simulation of TD error.</s></p><p><s>A blocking e↵ect was discernible in the control (eYFP) group, whereby A reduced acquisition of conditioned responding to C and D, compared to F, which was trained in compound with a novel stimulus (Figure <ref type="figure" target="#fig_9">3B</ref>).</s><s>The blocking e↵ect was eliminated by optogenetic activation in the experimental (ChR2) group, specifically for C, which received activation coincident with X.</s><s>Thus, activation of dopamine neurons was su cient to drive stimulus-stimulus learning in a temporally specific manner.</s></p><p><s>These findings raise a number of questions.</s><s>First, how does one explain blocking of stimulusstimulus associations?</s><s>Second, how does one explain why dopamine a↵ects this learning in the apparent absence of new reward information?</s></p><p><s>In answer to the first question, we can appeal to an analogy with blocking of stimulusreward associations.</s><s>The classic approach to modeling this phenomenon is to assume that each stimulus acquires an independent association and that these associations summate when the stimuli are presented in compound <ref type="bibr" target="#b59">[60]</ref>.</s><s>While there are boundary conditions on this assumption <ref type="bibr" target="#b60">[61]</ref>, it has proven remarkably successful at capturing a broad range of learning phenomenon, and is inherited by TD models with linear function approximation (e.g., <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b61">62]</ref>).</s><s>Summation implies that if one stimulus (A) perfectly predicts reward, then a second stimulus (C) with no pre-existing association will fail to acquire an association when presented in compound with A, because the sum of the two associations will perfectly predict reward and hence generate an RPE of 0. The same logic can be applied to stimulusstimulus learning by using linear function approximation of the successor representation, which implies that stimulus-stimulus associations will summate and hence produce blocking, as observed in Sharpe et al. <ref type="bibr" target="#b38">[39]</ref>.</s></p><p><s>In answer to the second question, we argue that dopamine is involved in stimulus-stimulus  learning because it reflects a multifaceted SPE, as described in the previous section.</s><s>By assuming that optogenetic activation adds a constant to the SPE (see Methods), we can capture the unblocking findings reported by Sharpe and colleagues (Figure <ref type="figure" target="#fig_9">3C</ref>).</s><s>The mechanism by which optogenetic activation induces unblocking is essentially the same as the one suggested by the results of Steinberg et al. <ref type="bibr" target="#b8">[9]</ref> for conventional stimulus-reward blocking: by elevating the prediction error, a learning signal is engendered where none would exist otherwise.</s><s>However, while the results of Steinberg and colleagues are consistent with the original RPE hypothesis of dopamine, the results of Sharpe et al. <ref type="bibr" target="#b38">[39]</ref> cannot be explained by this model and instead require the analogous dopamine-mediated mechanism for driving learning with SPEs.</s></p><p><s>In addition to establishing the su ciency of dopamine transients for learning, <ref type="bibr" target="#b38">[39]</ref> also established their necessity, using optogenetic inactivation.</s><s>In a variation of the sensory preconditioning paradigm (Figure <ref type="figure" target="#fig_5">4A</ref>), two pairs of stimulus-stimulus associations were learned (A!X and B!Y). Subsequently, X and Y were paired with di↵erent reward flavors, and finally conditioned responding to A and B was evaluated in a probe test.</s><s>In one group of animals expressing halorhodopsin in dopamine neurons (NpHR), optogenetic inhibition was applied coincident with the transition between the stimuli on B!Y trials.</s><s>A control group expressing light-insensitive eYFP was exposed to the same stimulation protocol.</s><s>Sharpe and colleagues found that inhibition of dopamine selectively reduced responding to B (Figure <ref type="figure" target="#fig_5">4B</ref>), consistent with our model prediction that disrupting dopamine transients (a negative prediction error signal) should attenuate stimulus-stimulus learning (Figure <ref type="figure" target="#fig_5">4C</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Limitations and extensions</head><p><s>One way to drive a wedge between model-based and model-free algorithms is to devalue rewards (e.g., through pairing the reward with illness or selective satiation) and show e↵ects on previously acquired conditioned responses to stimuli that predict those rewards.</s><s>Because model-free algorithms like TD learning need to experience unbroken stimulus-reward sequences to update stimulus values, the behaviors they support are insensitive to such reward devaluation.</s><s>Model-based algorithms, in contrast, are able to propagate the devaluation to the stimulus without direct experience, and hence allow behavior to be devaluation-sensitive.</s></p><p><s>Because of this, devaluation-sensitivity has frequently been viewed as an assay of model-based RL <ref type="bibr" target="#b47">[48]</ref>.</s></p><p><s>However, such sensitivity can also be a property of SR-based RL, since the SR represents the association between the stimulus and food and is also able to update the reward function of the food as a result of devaluation.</s><s>Thus, like model-based accounts, an SR model can account for changes in previously learned behavior to reward-predicting stimuli after devaluation, both in normal situations <ref type="bibr" target="#b42">[43,</ref><ref type="bibr" target="#b41">42]</ref> and when learning about those stimuli is unblocked by dopamine activation <ref type="bibr" target="#b62">[63]</ref>.</s><s>However, the SR model cannot spontaneously acquire transitions between states that are not directly experienced <ref type="bibr" target="#b42">[43,</ref><ref type="bibr" target="#b41">42]</ref>.</s><s>With this in mind, we consider the finding that reward devaluation alters the learning induced by activation of dopamine neurons in the sensory preconditioning paradigm of Sharpe et al. <ref type="bibr" target="#b38">[39]</ref>.</s></p><p><s>A key aspect of the reward devaluation procedure is that the food was paired with illness after the end of the entire preconditioning procedure and in the absence of any of the stimuli (and in fact not in the training chamber).</s><s>In the SR model, only stimuli already predictive of the food can change their values after devaluation.</s><s>In the paradigm of Sharpe and colleagues, X was associated with food but C was not.</s><s>Moreover, C was associated with X before any association with food was established.</s><s>Because of this, C is not updated in the SR model to incorporate an association with food.</s><s>It follows that, unlike the animals in Sharpe et al. <ref type="bibr" target="#b38">[39]</ref>, the model will not be devaluation-sensitive when probed with C (Figure <ref type="figure" target="#fig_6">5B</ref>).</s></p><p><s>It is possible to address this failure within our theoretical framework in a number of di↵erent ways.</s><s>One way we considered was to allow optogenetic activation to increment predictions for all possible features, instead of being restricted to recently active features by a feature eligibility trace (see Methods), as in the simulations thus far.</s><s>With such a promiscuous artificial error signal, the model can recapitulate the devaluation e↵ect, because C would Behavior to preconditioned cue that is unblocked by activation of dopamine neurons is sensitive to devaluation of the predicted reward.</s><s>Data (A, replotted from <ref type="bibr" target="#b38">[39]</ref>) and model simulation (B) for conditioned responding to stimulus C in the probe test.</s><s>Animals in the devalued group were injected with lithium chloride in conjunction with ingestion of the reward (sucrose pellets), causing a strong aversion to the reward.</s><s>Animals in the nondevalued group were injected with lithium chloride approximately 6 hours after ingestion of the reward.</s><s>Error bars show standard error of the mean.</s><s>(C) A version of the model with rehearsal of stimulus X during reward devaluation was able to capture the devaluation-sensitivity of animals.</s><s>then become associated with food (along with everything else) in the preconditioning phase itself.</s><s>The problem with this work-around is that it also predicts that animals should develop a conditioned response to the food cup for all the cues during preconditioning, since food cup shaping prior to preconditioning seeds the food state with reward value.</s><s>As a result, any cue paired with the food state immediately begins to induce responding at the food cup.</s><s>Such behavior is not observed, suggesting that the artificial update caused by optogenetic activation of the dopamine neurons is locally restricted.</s></p><p><s>A second more conventional way to address this failure within our theoretical framework is to assume that there is some form of o✏ine rehearsal or simulation that is used to update cached predictions <ref type="bibr" target="#b32">[33,</ref><ref type="bibr" target="#b63">64,</ref><ref type="bibr" target="#b64">65]</ref>.</s><s>Russek et al. <ref type="bibr" target="#b42">[43]</ref> have shown that such a mechanism is able to endow SR-based learning with the ability to retrospectively update predictions even in the absence of direct experience.</s><s>A minimal implementation of such a mechanism in our model, simply by "confabulating" the presence of X during reward devaluation, is su cient to capture the e↵ects of devaluation following optogenetic activation of dopamine neurons (Figure <ref type="figure" target="#fig_6">5C</ref>).</s><s>This solution makes the experimental prediction that the devaluation-sensitivity of this artificially unblocked cue should be time-dependent, under the assumption that the amount of o✏ine rehearsal is proportional to the retention interval.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>The RPE hypothesis of dopamine has been one of theoretical neuroscience's signature success stories.</s><s>This paper has set forth a significant generalization of the RPE hypothesis that enables it to account for a number of anomalous phenomena, without discarding the core ideas that motivated the original hypothesis.</s><s>The proposal that dopamine reports a SPE is grounded in a normative theory of reinforcement learning <ref type="bibr" target="#b39">[40]</ref>, motivated independently by a number of computational <ref type="bibr" target="#b42">[43,</ref><ref type="bibr" target="#b65">66]</ref>, behavioral <ref type="bibr" target="#b41">[42,</ref><ref type="bibr" target="#b66">67,</ref><ref type="bibr" target="#b67">68]</ref> and neural <ref type="bibr" target="#b43">[44,</ref><ref type="bibr" target="#b44">45,</ref><ref type="bibr" target="#b68">69,</ref><ref type="bibr" target="#b69">70]</ref> considerations.</s></p><p><s>An important strength of the proposal is that it extends the functional role of dopamine beyond RPEs, while still accounting for the data that motivated the original RPE hypothesis.</s><s>This is because, if reward is treated as a sensory feature, then one dimension of the vectorvalued SPE will be the RPE.</s><s>Indeed, dopamine SPEs should behave systematically like RPEs, except that they respond to features: they should pause when expected features are unexpectedly omitted, they should shift back to the earliest feature-predicting cue, and they should exhibit signatures of cue competition, such as overexpectation.</s><s>SPEs are used to update cached predictions, analogous to the RPE in model-free algorithms.</s><s>However these cached predictions extend beyond value to include information about the occupancy of future states (the SR).</s><s>The SR can be used in a semi-flexible manner that allows behavior to be sensitive to changes in the reward structure, such as devaluation by pairing a reward with illness.</s><s>As a result, even if dopamine is constrained by the model proposed here, it would support significantly more flexible behavior than supposed by classical model-free accounts <ref type="bibr" target="#b14">[15,</ref><ref type="bibr" target="#b15">16]</ref>, even without moving completely to an account of model-based computation in the dopamine system <ref type="bibr" target="#b49">[50]</ref>.</s></p><p><s>Nevertheless, the theory proposed here-particularly if it incorporates o✏ine rehearsal in order to fully explain the results of Sharpe et al. <ref type="bibr" target="#b38">[39]</ref>-does strain the dichotomy between model-based and model-free algorithms that has been at the heart of modern RL theories <ref type="bibr" target="#b47">[48]</ref>.</s><s>However, as noted earlier, SR requires o✏ine rehearsal to incorporate the e↵ects of devaluation after preconditioning in Sharpe et al or manipulations of the transition structures of tasks <ref type="bibr" target="#b41">[42]</ref>.</s><s>If these e↵ects, and particularly dopamine's involvement in them, are mediated by an SR mechanism, then we should be able to interfere with it by manipulating retention intervals or attention <ref type="bibr" target="#b32">[33]</ref>.</s><s>For example, the strength of devaluation sensitivity in Sharpe et al should be diminished by a very short retention interval prior to the probe test, since this would reduce time available for rehearsal.</s><s>If these e↵ects do not show any dependence on the length of the retention interval, then this would be more consistent with model-based algorithms, which do not require any rehearsal.</s></p><p><s>Another testable prediction of the theory is that we should see heterogeneity in the dopamine response, reflecting the vector-valued nature of the SPE.</s><s>Importantly, such tuning need not be statistically evident in the spiking of an individual neuron.</s><s>It might show up in the pattern of response across the entire population or even in subpopulations determined by target or other criteria.</s><s>Indeed, target-based heterogeneity is already evident in some studies of dopamine release or function in downstream regions <ref type="bibr" target="#b62">[63,</ref><ref type="bibr" target="#b70">71,</ref><ref type="bibr" target="#b71">72]</ref>.</s><s>Related to this, the theory also predicts the existence of a negative SPE to allow reductions in the strength of weights in the SR.</s><s>In its simplest form, the omission of an expected stimulus could result in suppression of firing, analogous to reward omission responses <ref type="bibr" target="#b15">[16]</ref>.</s><s>However, this e↵ect might be subtle if SPEs are population-coded by the dopamine signal, as suggested above; the negative SPE may simply reflect a particular pattern across the population rather than overt suppression at the level of single neurons.</s><s>Distinctive patterns of activity identifying the source of the error and di↵erentiating the addition of information versus its omission sets our proposal apart from explanations based on salience signals, which are typically thought to be both non-specific and unsigned <ref type="bibr" target="#b72">[73]</ref>.</s><s>These predictions set an exciting new agenda for dopamine research by embracing a broader conception of dopamine function.</s></p><p><s>While we have focused on dopamine in this paper, a complete account will obviously need to integrate the computational functions of other brain regions.</s><s>Where does information relevant to computing SPE's come from?</s><s>One obvious possibility is from sensory regions.</s><s>Sensory areas respond both to and in expectation of external events [?, ?, ?], and these areas send input to brainstem, thus they are positioned to feed information to the dopaminergic system.</s><s>Beyond this, the hippocampus and orbitofrontal cortex seem likely to be particularly important.</s><s>Many lines of evidence are consistent with the idea that the hippocampus encodes a "predictive map" resembling the SR <ref type="bibr" target="#b43">[44]</ref>.</s><s>For example, hippocampal place cells alter their tuning with repeated experience to fire in anticipation of future locations <ref type="bibr" target="#b73">[74]</ref>, and fMRI studies have found predictive coding of non-spatial states <ref type="bibr" target="#b44">[45,</ref><ref type="bibr" target="#b74">75]</ref>.</s><s>The orbitofrontal cortex has also been repeatedly implicated in predictive coding, particularly of reward outcomes <ref type="bibr" target="#b75">[76,</ref><ref type="bibr" target="#b76">77]</ref>, but also of sensory events <ref type="bibr">[78, ?]</ref>, and the orbitofrontal cortex is critical for sensory-specific outcome expectations in Pavlovian conditioning <ref type="bibr" target="#b78">[79]</ref>.</s><s>Wilson et al. <ref type="bibr" target="#b79">[80]</ref> have proposed that the orbitofrontal cortex encodes a "cognitive map" of state space, which presumably underpins this diversity of stimulus expectations.</s><s>Thus, evidence suggests that both hippocampus and orbitofrontal cortex encode some form of predictive representation <ref type="bibr" target="#b80">[81]</ref>.</s><s>Further, dopaminergic modulation of these regions is well-established <ref type="bibr" target="#b81">[82,</ref><ref type="bibr" target="#b82">83]</ref>.</s><s>It is tempting to speculate that a↵erent input from and dopaminergic modulation of the hippocampus and orbitofrontal cortex may be especially critical to the SPE function proposed here.</s></p><p><s>The influence of these representations may be filtered through interactions with more basic value representations in striatum.</s><s>This proposal fits with the observation that the hippocampus and orbitofrontal cortex appear to confer stimulus specificity on value-sensitive neurons in the striatum <ref type="bibr" target="#b83">[84,</ref><ref type="bibr" target="#b84">85]</ref>.</s><s>Striatal value representations are already proposed to influ-ence activity in VTA <ref type="bibr" target="#b85">[86]</ref>.</s><s>By this model, dopamine would still provide the RPE signal that drives striatal plasticity related to actions or "value", as in most contemporary accounts, but in addition it would provide an SPE signal to update associative representations, perhaps in striatum but also in upstream orbitofrontal and hippocampal areas, which feed into the striatum.</s><s>While speculative, this idea is consistent with findings showing heterogeneity of dopamine function based on projection target, at least within striatum <ref type="bibr" target="#b62">[63,</ref><ref type="bibr" target="#b70">71]</ref>.</s><s>It is also consistent with recent human imaging work, confirming the presence of an SPE-like signal in human VTA, and reporting that the strength of this signal during learning is correlated with the strength of new sensory-sensory correlates developed in the orbitofrontal cortex <ref type="bibr" target="#b69">[70]</ref>.</s></p><p><s>The view that dopamine reports the SR prediction error provides a bridge between sensory and reward prediction error accounts of dopamine function.</s><s>The tension between these views has long vexed computational theories, and has posed particular problems for pure RPE accounts of dopamine.</s><s>We see our model as the first step towards resolving this tension.</s><s>While we have shown that the notion of a generalized prediction error is consistent with a wealth of empirical data, this is just the beginning of the empirical enterprise.</s><s>Armed with a quantitative framework, we can now pursue evidence for such prediction errors with greater precision and clarity.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Linear value function approximation</head><p><s>Under the linear function approximation scheme described in the Results, the value function estimate is given by:</s></p><formula xml:id="formula_11">V (s t ) = X i f i (s t ) X j U (j)W ij ,<label>(13)</label></formula><p><s>where U (j) is the reward expectation for feature j, updated according to a delta rule:</s></p><formula xml:id="formula_12">U (j) = ↵ U f j (s t )[r t V (s t )]<label>(14)</label></formula><p><s>with learning rate ↵ U .</s></p><p><s>In the supplementary figures, we report simulations of the value-based TD learning algorithm, TD(0), which approximates the value function using linear function approximation:</s></p><formula xml:id="formula_13">V (s t ) ⇡ X j w j f j (s t ),<label>(15)</label></formula><p><s>and updates the weights according to:</s></p><formula xml:id="formula_14">w j = ↵f j (s t )[r t + V (s t+1 ) V (s t )].<label>(16)</label></formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Excitatory and inhibitory asymmetry in the TD error term</head><p><s>There is a large body of evidence in associative learning suggesting an imbalance between excitatory and inhibitory learning <ref type="bibr" target="#b86">[87,</ref><ref type="bibr" target="#b87">88]</ref>.</s><s>Mirroring this imbalance is an asymmetry in the dynamic range of the firing rate of single dopaminergic neurons in the midbrain <ref type="bibr">[2]</ref>.</s><s>In accordance with these observations, we assume that the error terms ( W ij and U j ) are rescaled by a factor of 1/4 for negative prediction errors.</s><s>This is equivalent to assuming separate learning rates for positive and negative prediction errors <ref type="bibr" target="#b88">[89]</ref>.</s><s>Note that, following prior theoretical work (e.g., <ref type="bibr" target="#b15">[16]</ref>), we consider negative prediction errors to be coded by real neurons relative to a baseline firing rate, acknowledging the fact that neurons cannot produce negative firing rates.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Simulation parameters</head><p><s>We used the following parameters in the simulations of SR: = 0.95, ↵ W = 0.06, ↵ U = 0.03, where ↵ W is the learning rate for the weight matrix W , ↵ U is the learning rate for the reward function, and is the discount rate.</s><s>For the model-free TD learning algorithm simulations, we used the following parameters: = 0.95, ↵ = 0.05.</s><s>We used the same set of parameters across all simulations.</s><s>However, our results are largely robust to variations in these parameters.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Modeling optogenetic activation and inhibition</head><p><s>Optogenetic intervention was modeled by modifying the TD error as follows:</s></p><formula xml:id="formula_15">M t (j) = ( (1 + ⌘) M t (j) ⌘ &lt; 0 [f j (s t )⌘ + M t (j) ⌘ &gt; 0<label>(17)</label></formula><p><s>where ⌘ = 1.0 for optogenetic activation and 0.8 for inhibition.</s><s>The asymmetry between the functions for activation and inactivation was chosen to better match the the hypothesized function of optogenetic stimulation based on empirical findings.</s><s>For positive stimulation of dopamine, it is thought that the increased dopamine activity should enhance learning with the currently active features, which in the SR model is the f j (s t ) term.</s><s>For optogenetic inhibition of dopamine, we have found that punctate versus prolonged inhibition causes di↵erential e↵ects, with punctate inhibition resulting in negative prediction errors and prolonged inhibition resulting in shunting of the error signal <ref type="bibr" target="#b9">[10]</ref>.</s><s>Our inhibition in the experiments included in this paper were prolonged, necessitating a di↵erent model of the inhibitory optogenetic manipulation.</s></p><p><s>Rethinking dopamine as generalized prediction error: supplementary figures   (Left) Number of food cup entries occurring during the probe test for experimental (ChR2) and control (eYFP) groups in the sensory preconditioning paradigm.</s><s>Data replotted from <ref type="bibr">[3]</ref>. (RIght) Model simulation, using the value estimate as a proxy for conditioned responding.</s><s>Note that V attached to the critical cue, C, is high in the simulation, much like the food cup responding in the probe test to this cue.</s><s>This occurs because dopamine is paired with the cue, so it directly acquires a significant value.</s><s>However, in this paradigm there is no direct link between C and the policy of going to the food cup.</s><s>Thus, the success of TD(0) in this context in matching the empirical data is somewhat misleading.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Model: TD(0)</head><note type="other">NpHR eYFP</note></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 :</head><label>1</label><figDesc><div><p><s>Figure 1: Inhibition of dopamine neurons prevents learning induced by changes in reward identity.</s><s>(A) Identity unblocking paradigm.</s><s>Circles and squares denote distinct reward flavors.</s><s>Orange light symbol indicates when dopamine neurons were suppressed optogenetically to disrupt any positive SPE; this spanned a 5s period beginning 500ms prior to delivery of the second reward.</s><s>(B ) Conditioned responding on the probe test.</s><s>Exp: experimental group, receiving inhibition during reward outcome.</s><s>ITI: control group, receiving inhibition during the intertrial interval.</s><s>Asterisk indicates significant di↵erence (p &lt; 0.05).</s><s>Error bars show standard error of the mean.</s><s>Data replotted from [37].</s><s>(C ) Model simulation of the value function.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 :</head><label>2</label><figDesc><div><p><s>Figure 2: Dopamine neurons respond to changes in reward identity.</s><s>(A) Time course of stimuli presented to the animal on each trial.</s><s>Dashed indicate reward omission, solid lines indicate reward delivery.At the start of each session, one well was randomly designated as short (a .5-s</s><s>delay before the reward) and the other, long (a 1-to 7-s delay before the reward; see Block 1).</s><s>In Block 2, these contingencies were switched.</s><s>In Block 3, the delay was held constant, while the number of rewards was manipulated; one well was designated a big reward, in which a second bolus of reward was delivered (big reward), and a small (single bolus) reward was delivered in the other well.</s><s>In Block 4, these contingencies were switched again.(B ) Firing rate of dopamine neurons on trials that occurred early (first 5 trials) or late (last 5 trials) during an identity shift block.</s><s>Error bars show standard error of the mean.</s><s>Data replotted from<ref type="bibr" target="#b37">[38]</ref>.</s><s>(C ) Model simulation of TD error.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 :</head><label>3</label><figDesc><div><p><s>Figure 3: Dopamine transients are su cient for learning stimulus-stimulus associations.</s><s>(A) Sensory preconditioning paradigm.</s><s>The initial preconditioning phase is broken down into two sub-phases.</s><s>Letters denote stimuli, arrows denote temporal contingencies, and circles denote rewards.</s><s>Blue light symbol indicates when dopamine neurons were activated optogenetically to mimic a positive SPE; this spanned a 1s period beginning at the start of X. (B ) Number of food cup entries occurring during the probe test for experimental (ChR2) and control (eYFP) groups.</s><s>Error bars show standard error of the mean.</s><s>Data replotted from [39].</s><s>(C ) Model simulation, using the value estimate as a proxy for conditioned responding.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 4 :</head><label>4</label><figDesc><div><p><s>Figure 4: Dopamine transients are necessary for learning stimulus-stimulus associations.</s><s>(A) Sensory preconditioning paradigm.</s><s>Circles and squares denote distinct reward flavors.</s><s>Orange light symbol indicates when dopamine neurons were suppressed optogenetically to disrupt any positive SPE; this spanned a 2.5s period beginning 500ms prior to the end of B. (B ) Number of food cup entries occurring during the probe test for experimental (NpHR) and control (eYFP) groups.</s><s>Error bars show standard error of the mean.</s><s>Data replotted from [39].</s><s>(C ) Model simulation.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 5 :</head><label>5</label><figDesc><div><p><s>Figure 5: Behavior to preconditioned cue that is unblocked by activation of</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 1 :Figure 2 :</head><label>12</label><figDesc><div><p><s>Figure 1: Inhibition of dopamine neurons prevents learning induced by changes in reward identity.</s><s>(Left) Conditioned responding on the probe test in the identity unblocking paradigm.</s><s>Exp: experimental group, receiving inhibition during reward outcome.</s><s>ITI: control group, receiving inhibition during the intertrial interval.</s><s>Asterisk indicates significant di↵erence (p &lt; 0.05).</s><s>Data replotted from [1].</s><s>(Right) Model simulation of the value function.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 3 :</head><label>3</label><figDesc><div><p><s>Figure 3: Dopamine transients are su cient for learning stimulus-stimulus associations.(Left)</s><s>Number of food cup entries occurring during the probe test for experimental (ChR2) and control (eYFP) groups in the sensory preconditioning paradigm.</s><s>Data replotted from[3].</s><s>(RIght) Model simulation, using the value estimate as a proxy for conditioned responding.</s><s>Note that V attached to the critical cue, C, is high in the simulation, much like the food cup responding in the probe test to this cue.</s><s>This occurs because dopamine is paired with the cue, so it directly acquires a significant value.</s><s>However, in this paradigm there is no direct link between C and the policy of going to the food cup.</s><s>Thus, the success of TD(0) in this context in matching the empirical data is somewhat misleading.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 4 : 3 VFigure 5 :</head><label>435</label><figDesc><div><p><s>Figure 4: Dopamine transients are necessary for learning stimulus-stimulus associations.</s><s>(Left) Number of food cup entries occurring during the probe test for experimental (NpHR) and control (eYFP) groups in the sensory preconditioning paradigm.</s><s>Data replotted from [3]. (Right) Model simulation.</s></p></div></figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We are grateful to <rs type="person">Yael Niv</rs>, <rs type="person">Mingyu Song</rs>, <rs type="person">Brian Sadacca</rs> and <rs type="person">Andrew Wikenheiser</rs> for helpful discussions.</p></div>
+			</div>
+			<div type="funding">
+<div><head>Funding statement</head><p>This work was supported by the <rs type="funder">National Institutes of Health</rs> (<rs type="grantNumber">CRCNS 1R01MH109177</rs> to S.J.G.) and the <rs type="programName">Intramural Research Program at NIDA ZIA-DA000587</rs> (to G.S.).The opinions expressed in this article are the authors' own and do not reflect the view of the <rs type="funder">NIH/DHHS</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_n6VUFAb">
+					<idno type="grant-number">CRCNS 1R01MH109177</idno>
+					<orgName type="program" subtype="full">Intramural Research Program at NIDA ZIA-DA000587</orgName>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data accessibility statement</head><p><s>All simulation code is available at https://github.com/mphgardner/TDSR.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Ethics statement</head><p><s>Not applicable.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing interests statement</head><p><s>We have no competing interests.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Authors' contribution statement</head><p><s>MPHG, SJG and GS conceived the ideas and wrote the manuscript.</s><s>MPHG and SJG carried out the model simulations and created the figures.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Dopamine responses comply with basic assumptions of formal learning theory</title>
+		<author>
+			<persName><forename type="first">Pascale</forename><surname>Waelti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anthony</forename><surname>Dickinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wolfram</forename><surname>Schultz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">412</biblScope>
+			<biblScope unit="page" from="43" to="48" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Midbrain dopamine neurons encode a quantitative reward prediction error signal</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hannah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><forename type="middle">W</forename><surname>Bayer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Glimcher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="129" to="141" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons encode the better option in rats deciding between di↵erently delayed or sized rewards</title>
+		<author>
+			<persName><forename type="first">Donna</forename><forename type="middle">J</forename><surname>Matthew R Roesch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Calu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1615" to="1624" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Arithmetic and local circuitry underlying dopamine prediction errors</title>
+		<author>
+			<persName><forename type="first">Neir</forename><surname>Eshel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Bukwich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vinod</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vivian</forename><surname>Hemmelder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ju</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naoshige</forename><surname>Uchida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">525</biblScope>
+			<biblScope unit="page" from="243" to="246" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons share common response function for reward prediction error</title>
+		<author>
+			<persName><forename type="first">Neir</forename><surname>Eshel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ju</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Bukwich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naoshige</forename><surname>Uchida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="479" to="486" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Reward and choice encoding in terminals of midbrain dopamine neurons depends on striatal target</title>
+		<author>
+			<persName><surname>Nathan F Parker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joshua</forename><forename type="middle">P</forename><surname>Courtney M Cameron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junuk</forename><surname>Taliaferro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jung</forename><forename type="middle">Yoon</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">J</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nathaniel</forename><forename type="middle">D</forename><surname>Davidson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilana</forename><forename type="middle">B</forename><surname>Daw</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Witten</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="845" to="854" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Opposite initialization to novel cues in dopamine signaling in ventral and posterior striatum in mice</title>
+		<author>
+			<persName><forename type="first">William</forename><surname>Menegas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naoshige</forename><surname>Benedicte M Babayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mitsuko</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Watabe-Uchida</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">21886. 2017</date>
+			<biblScope unit="volume">6</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Phasic firing in dopaminergic neurons is su cient for behavioral conditioning</title>
+		<author>
+			<persName><forename type="first">Hsing-Chen</forename><surname>Tsai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Feng</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Antoine</forename><surname>Adamantidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Garret</forename><forename type="middle">D</forename><surname>Stuber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Antonello</forename><surname>Bonci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luis</forename><surname>De Lecea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karl</forename><surname>Deisseroth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="page" from="1080" to="1084" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">A causal link between prediction errors, dopamine neurons and learning</title>
+		<author>
+			<persName><forename type="first">Elizabeth</forename><forename type="middle">E</forename><surname>Steinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ronald</forename><surname>Keiflin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilana</forename><forename type="middle">B</forename><surname>Josiah R Boivin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karl</forename><surname>Witten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patricia</forename><forename type="middle">H</forename><surname>Deisseroth</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Janak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="966" to="973" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Brief optogenetic inhibition of dopamine neurons mimics endogenous negative reward prediction errors</title>
+		<author>
+			<persName><forename type="first">Chun</forename><surname>Yun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chang</forename><surname>Guillem R Esber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yasmin</forename><surname>Marrero-Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hau-Jie</forename><surname>Yau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Antonello</forename><surname>Bonci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="111" to="116" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Associative learning mediates dynamic shifts in dopamine signaling in the nucleus accumbens</title>
+		<author>
+			<persName><forename type="first">Jeremy</forename><forename type="middle">J</forename><surname>Day</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mitchell F Roitman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Regina</forename><forename type="middle">M</forename><surname>Mark Wightman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Carelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1020" to="1028" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Phasic dopamine release in the rat nucleus accumbens symmetrically encodes a reward prediction error term</title>
+		<author>
+			<persName><forename type="first">Robb</forename><forename type="middle">B</forename><surname>Andrew S Hart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><forename type="middle">W</forename><surname>Rutledge</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Glimcher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Paul</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Phillips</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="698" to="704" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Dopamine-dependent prediction errors underpin reward-seeking behaviour in humans</title>
+		<author>
+			<persName><forename type="first">Mathias</forename><surname>Pessiglione</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Seymour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guillaume</forename><surname>Flandin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raymond</forename><forename type="middle">J</forename><surname>Dolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><forename type="middle">D</forename><surname>Frith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">442</biblScope>
+			<biblScope unit="page" from="1042" to="1045" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">BOLD responses reflecting dopaminergic signals in the human ventral tegmental area</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kimberlee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Leigh</forename><forename type="middle">E</forename><surname>Samuel M Mcclure</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><forename type="middle">D</forename><surname>Nystrom</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">319</biblScope>
+			<biblScope unit="page" from="1264" to="1267" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">A framework for mesencephalic dopamine systems based on predictive hebbian learning</title>
+		<author>
+			<persName><forename type="first">Montague</forename><surname>Read</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Dayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Terrence</forename><forename type="middle">J</forename><surname>Sejnowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<date type="published" when="1936">1936-1947, 1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">A neural substrate of prediction and reward</title>
+		<author>
+			<persName><forename type="first">Wolfram</forename><surname>Schultz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Dayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Read</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Montague</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">275</biblScope>
+			<biblScope unit="page" from="1593" to="1599" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Coordinated accumbal dopamine release and neural activity drive goal-directed behavior</title>
+		<author>
+			<persName><forename type="first">Brandon</forename><forename type="middle">J</forename><surname>Joseph F Cheer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Aragona</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">T</forename><surname>Michael Lav Heien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Regina</forename><forename type="middle">M</forename><surname>Seipel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Carelli</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mark Wightman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="237" to="244" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Substantia nigra dopaminergic unit activity in behaving cats: e↵ect of arousal on spontaneous discharge and sensory evoked activity</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Robert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Barry</forename><forename type="middle">L</forename><surname>Strecker</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jacobs</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Research</title>
+		<imprint>
+			<biblScope unit="volume">361</biblScope>
+			<biblScope unit="page" from="339" to="350" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Responses of monkey dopamine neurons during learning of behavioral reactions</title>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Ljungberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Apicella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wolfram</forename><surname>Schultz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="145" to="163" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Mesolimbocortical and nigrostriatal dopamine responses to salient nonreward events</title>
+		<author>
+			<persName><forename type="first">Jon</forename><forename type="middle">C</forename><surname>Horvitz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="651" to="656" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Dopamine: generalization and bonuses</title>
+		<author>
+			<persName><forename type="first">Sham</forename><surname>Kakade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Dayan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Networks</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="549" to="559" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<author>
+			<persName><surname>Samuel J Gershman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Dopamine, inference, and uncertainty</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="3311" to="3326" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">What is reinforced by phasic dopamine signals?</title>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Redgrave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Gurney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><surname>Reynolds</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Research Reviews</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page" from="322" to="339" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Dopamine in motivational control: rewarding, aversive, and alerting</title>
+		<author>
+			<persName><forename type="first">Ethan</forename><forename type="middle">S</forename><surname>Bromberg-Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Masayuki</forename><surname>Matsumoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Okihide</forename><surname>Hikosaka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="815" to="834" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Dopamine reward prediction-error signalling: a two-component response</title>
+		<author>
+			<persName><forename type="first">Wolfram</forename><surname>Schultz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="183" to="195" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Preferential activation of midbrain dopamine neurons by appetitive rather than aversive stimuli</title>
+		<author>
+			<persName><forename type="first">Jacques</forename><surname>Mirenowicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wolfram</forename><surname>Schultz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">379</biblScope>
+			<biblScope unit="page" from="449" to="451" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Uniform inhibition of dopamine neurons in the ventral tegmental area by aversive stimuli</title>
+		<author>
+			<persName><forename type="first">Peter</forename><forename type="middle">J</forename><surname>Mark A Ungless</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Magill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bolam</forename><surname>Paul</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">303</biblScope>
+			<biblScope unit="page" from="2040" to="2042" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Action initiation shapes mesolimbic dopamine encoding of future rewards</title>
+		<author>
+			<persName><forename type="first">Emilie Cj</forename><surname>Syed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Laura</forename><forename type="middle">L</forename><surname>Grima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><forename type="middle">J</forename><surname>Magill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafal</forename><surname>Bogacz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><forename type="middle">E</forename><surname>Walton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page">34</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Start/stop signals emerge in nigrostriatal circuits during sequence learning</title>
+		<author>
+			<persName><forename type="first">Xin</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rui</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Costa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">466</biblScope>
+			<biblScope unit="page" from="457" to="462" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">A pallidus-habenula-dopamine pathway signals inferred stimulus values</title>
+		<author>
+			<persName><forename type="first">Ethan</forename><forename type="middle">S</forename><surname>Bromberg-Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Masayuki</forename><surname>Matsumoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Simon</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Okihide</forename><surname>Hikosaka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="1068" to="1076" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Model-based influences on humans&apos; choices and striatal prediction errors</title>
+		<author>
+			<persName><surname>Nathaniel D Daw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Samuel J Gershman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Seymour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raymond</forename><forename type="middle">J</forename><surname>Dayan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dolan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page" from="1204" to="1215" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Representation and timing in theories of the dopamine system</title>
+		<author>
+			<persName><forename type="first">Aaron</forename><forename type="middle">C</forename><surname>Nathaniel D Daw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">S</forename><surname>Courville</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Touretzky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1637" to="1677" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Retrospective revaluation in sequential decision making: A tale of two systems</title>
+		<author>
+			<persName><forename type="first">Arthur</forename><forename type="middle">B</forename><surname>Samuel J Gershman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ross</forename><surname>Markman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Otto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Experimental Psychology: General</title>
+		<imprint>
+			<biblScope unit="volume">143</biblScope>
+			<biblScope unit="page" from="182" to="194" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Dopamine reward prediction errors reflect hidden-state inference across time</title>
+		<author>
+			<persName><forename type="first">Clara</forename><surname>Kwon Starkweather</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naoshige</forename><surname>Benedicte M Babayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samuel</forename><forename type="middle">J</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gershman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="581" to="589" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons can represent context-dependent prediction error</title>
+		<author>
+			<persName><forename type="first">Hiroyuki</forename><surname>Nakahara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hideaki</forename><surname>Itoh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Reiko</forename><surname>Kawagoe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoriko</forename><surname>Takikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Okihide</forename><surname>Hikosaka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="269" to="280" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Learning to represent reward structure: A key to adapting to complex environments</title>
+		<author>
+			<persName><forename type="first">Hiroyuki</forename><surname>Nakahara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Okihide</forename><surname>Hikosaka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience Research</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="177" to="183" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Optogenetic blockade of dopamine transients prevents learning induced by changes in reward features</title>
+		<author>
+			<persName><forename type="first">Chun</forename><surname>Yun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chang</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><surname>Gardner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Di</forename><surname>Tillio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="3480" to="3486" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons respond to errors in the prediction of sensory features of expected rewards</title>
+		<author>
+			<persName><forename type="first">Hannah</forename><forename type="middle">M</forename><surname>Yuji K Takahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Batchelor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Akash</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marisela</forename><surname>Khanna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Morales</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="1395" to="1405" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Dopamine transients are su cient and necessary for acquisition of model-based associations</title>
+		<author>
+			<persName><forename type="first">Melissa</forename><forename type="middle">J</forename><surname>Sharpe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chun</forename><forename type="middle">Yun</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Melissa</forename><forename type="middle">A</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hannah</forename><forename type="middle">M</forename><surname>Batchelor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lauren</forename><forename type="middle">E</forename><surname>Mueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joshua</forename><forename type="middle">L</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yael</forename><surname>Niv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Improving generalization for temporal di↵erence learning: The successor representation</title>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Dayan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="613" to="624" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">The successor representation: its computational logic and neural substrates</title>
+		<author>
+			<persName><surname>Samuel J Gershman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="7193" to="7200" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">The successor representation in human reinforcement learning</title>
+		<author>
+			<persName><forename type="first">Ida</forename><surname>Momennejad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Evan</forename><forename type="middle">M</forename><surname>Russek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jin</forename><forename type="middle">H</forename><surname>Cheong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">M</forename><surname>Botvinick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nathaniel</forename><surname>Daw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samuel</forename><forename type="middle">J</forename><surname>Gershman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Human Behaviour</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="680" to="692" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Predictive representations can link model-based reinforcement learning to model-free mechanisms</title>
+		<author>
+			<persName><forename type="first">Evan</forename><forename type="middle">M</forename><surname>Russek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ida</forename><surname>Momennejad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">M</forename><surname>Botvinick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nathaniel</forename><forename type="middle">D</forename><surname>Samuel J Gershman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Daw</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">1005768</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">The hippocampus as a predictive map</title>
+		<author>
+			<persName><forename type="first">Lauren</forename><surname>Kimberly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">M</forename><surname>Stachenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samuel</forename><forename type="middle">J</forename><surname>Botvinick</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gershman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1643" to="1653" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title level="m" type="main">A map of abstract relational knowledge in the human hippocampal-entorhinal cortex</title>
+		<author>
+			<persName><forename type="first">Mona</forename><forename type="middle">M</forename><surname>Garvert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raymond</forename><forename type="middle">J</forename><surname>Dolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timothy</forename><forename type="middle">Ej</forename><surname>Behrens</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">17086. 2017</date>
+			<biblScope unit="volume">6</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Anticipatory responses of dopamine neurons and cortical neurons reproduced by internal model</title>
+		<author>
+			<persName><forename type="first">Roland</forename><forename type="middle">E</forename><surname>Suri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Experimental Brain Research</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="page" from="234" to="240" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Reinforcement Learning: An Introduction</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Richard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">G</forename><surname>Sutton</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Barto</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<publisher>MIT Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Uncertainty-based competition between prefrontal and dorsolateral striatal systems for behavioral control</title>
+		<author>
+			<persName><forename type="first">Yael</forename><surname>Nathaniel D Daw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Niv</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dayan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="1704" to="1711" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">The algorithmic anatomy of model-based evaluation</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Nathaniel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Daw</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dayan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phil. Trans. R. Soc. B</title>
+		<imprint>
+			<biblScope unit="volume">369</biblScope>
+			<date type="published" when="2014">20130478. 2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Model-based predictions for dopamine</title>
+		<author>
+			<persName><forename type="first">Angela</forename><forename type="middle">J</forename><surname>Langdon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Melissa</forename><forename type="middle">J</forename><surname>Sharpe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Schoenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yael</forename><surname>Niv</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Opinion in Neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="1" to="7" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">States versus rewards: dissociable neural prediction error signals underlying model-based and modelfree reinforcement learning</title>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Gläscher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nathaniel</forename><surname>Daw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Dayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John P O'</forename><surname>Doherty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="585" to="595" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Temporal specificity of reward prediction errors signaled by putative dopamine neurons in rat vta depends on ventral striatum</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yuji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Angela</forename><forename type="middle">J</forename><surname>Takahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yael</forename><surname>Langdon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Niv</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="182" to="193" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons report an error in the temporal prediction of reward during learning</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Je↵rey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wolfram</forename><surname>Hollerman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schultz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="304" to="309" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons learn to encode the long-term value of multiple future rewards</title>
+		<author>
+			<persName><forename type="first">Kazuki</forename><surname>Enomoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naoyuki</forename><surname>Matsumoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sadamu</forename><surname>Nakai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Takemasa</forename><surname>Satoh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tatsuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yasumasa</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hitoshi</forename><surname>Ueda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Masahiko</forename><surname>Inokawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Minoru</forename><surname>Haruno</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kimura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="15462" to="15467" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">The many worlds hypothesis of dopamine prediction error: implications of a parallel circuit architecture in the basal ganglia</title>
+		<author>
+			<persName><forename type="first">Brian</forename><surname>Lau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tiago</forename><surname>Monteiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><forename type="middle">J</forename><surname>Paton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Opinion in Neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="241" to="247" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Distributed and mixed information in monosynaptic inputs to dopamine neurons</title>
+		<author>
+			<persName><forename type="first">Ju</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeremiah</forename><forename type="middle">Y</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fumitaka</forename><surname>Osakada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dmitry</forename><surname>Kobak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christian</forename><forename type="middle">K</forename><surname>Machens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><forename type="middle">M</forename><surname>Callaway</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naoshige</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mitsuko</forename><surname>Watabe-Uchida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="1374" to="1389" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Ventral striatum and orbitofrontal cortex are both required for modelbased, but not model-free, reinforcement learning</title>
+		<author>
+			<persName><forename type="first">Federica</forename><surname>Michael A Mcdannald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kathryn</forename><forename type="middle">A</forename><surname>Lucantonio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yael</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Niv</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="2700" to="2705" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Learning about qualitatively di↵erent outcomes during a blocking procedure</title>
+		<author>
+			<persName><surname>Robert A Rescorla</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Learning &amp; Behavior</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="140" to="151" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Unblocking with qualitative change of unconditioned stimulus</title>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">C</forename><surname>Aaron P Blaisdell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ralph</forename><forename type="middle">R</forename><surname>Denniston</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Learning and Motivation</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="268" to="279" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">A theory of of Pavlovian conditioning: variations in the e↵ectiveness of reinforcement and nonreinforcement</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Rescorla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Wagner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Classical Conditioning II: Current Research and theory</title>
+		<editor>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Black</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Prokasy</surname></persName>
+		</editor>
+		<meeting><address><addrLine>New York, NY</addrLine></address></meeting>
+		<imprint>
+			<publisher>Appleton-Century-Crofts</publisher>
+			<date type="published" when="1972">1972</date>
+			<biblScope unit="page" from="64" to="99" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Explaining compound generalization in associative and causal learning through rational principles of dimensional generalization</title>
+		<author>
+			<persName><forename type="first">Fabian</forename><forename type="middle">A</forename><surname>Soto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samuel</forename><forename type="middle">J</forename><surname>Gershman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yael</forename><surname>Niv</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychological Review</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="526" to="558" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Stimulus representation and the timing of reward-prediction errors in models of the dopamine system</title>
+		<author>
+			<persName><forename type="first">Richard</forename><forename type="middle">S</forename><surname>Elliot A Ludvig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Sutton</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kehoe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Neural Computation</title>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="3034" to="3054" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Phasic activation of ventral tegmental, but not substantia nigra, dopamine neurons promotes model-based pavlovian reward learning</title>
+		<author>
+			<persName><forename type="first">Ronald</forename><surname>Keiflin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Heather</forename><forename type="middle">J</forename><surname>Pribut</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nisha</forename><forename type="middle">B</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patricia</forename><forename type="middle">H</forename><surname>Janak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">bioRxiv</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Hippocampal replay contributes to within session learning in a temporal di↵erence reinforcement learning model</title>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Redish</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Networks</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1163" to="1171" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Internally generated sequences in learning and executing goal-directed behavior</title>
+		<author>
+			<persName><forename type="first">Giovanni</forename><surname>Pezzulo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Matthijs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carien</forename><forename type="middle">S</forename><surname>Van Der Meer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lansink</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Cyriel</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pennartz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends in Cognitive Sciences</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="647" to="657" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Successor features for transfer in reinforcement learning</title>
+		<author>
+			<persName><forename type="first">André</forename><surname>Barreto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Will</forename><surname>Dabney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rémi</forename><surname>Munos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><forename type="middle">J</forename><surname>Hunt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Schaul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Silver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hado P</forename><surname>Van Hasselt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="4056" to="4066" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">The successor representation and temporal context</title>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Samuel J Gershman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">T</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenneth</forename><forename type="middle">A</forename><surname>Todd</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Norman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Per</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sederberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="1553" to="1568" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">The context repetition e↵ect: Predicted events are remembered better, even when they dont happen</title>
+		<author>
+			<persName><forename type="first">Troy A</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><forename type="middle">E</forename><surname>Hasinski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Per</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sederberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Experimental Psychology: General</title>
+		<imprint>
+			<biblScope unit="volume">142</biblScope>
+			<biblScope unit="page" from="1298" to="1308" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Prospective coding by spiking neurons</title>
+		<author>
+			<persName><forename type="first">Johanni</forename><surname>Brea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexisz</forename><forename type="middle">Tamás</forename><surname>Gaál</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Urbanczik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Walter</forename><surname>Senn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">1005003</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Identity prediction errors in the human midbrain update reward-identity expectations in the orbitofrontal cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thorsten</forename><surname>Howard</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kahnt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Communications</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">1611</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons create pavlovian conditioned stimuli with circuit-defined motivational properties</title>
+		<author>
+			<persName><forename type="first">Jocelyn</forename><forename type="middle">M</forename><surname>Benjamin T Saunders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Elyssa</forename><forename type="middle">B</forename><surname>Richard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patricia</forename><forename type="middle">H</forename><surname>Margolis</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Janak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="1072" to="1083" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Nathaniel Daw, David Tank, and Ilana Witten. Specialized and spatially organized coding of sensory, motor, and cognitive variables in midbrain dopamine neurons</title>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Engelhard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joel</forename><surname>Finkelstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julia</forename><surname>Cox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weston</forename><surname>Fleming</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hee</forename><forename type="middle">Jae</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sharon</forename><surname>Ornelas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sue</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ann</forename><surname>Koay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephan</forename><surname>Thiberge</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">bioRxiv</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Surprise! neural correlates of pearce-hall and rescorla-wagner coexist within the brain</title>
+		<author>
+			<persName><surname>Matthew R Roesch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jian</forename><surname>Guillem R Esber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nathaniel</forename><forename type="middle">D</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Daw</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="1190" to="1200" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Experience-dependent asymmetric shape of hippocampal receptive fields</title>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">C</forename><surname>Mayank R Mehta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">A</forename><surname>Quirk</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wilson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="707" to="715" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Statistical learning of temporal community structure in the hippocampus</title>
+		<author>
+			<persName><forename type="first">Anna</forename><forename type="middle">C</forename><surname>Schapiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicholas</forename><forename type="middle">B</forename><surname>Turk-Browne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenneth</forename><forename type="middle">A</forename><surname>Norman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">M</forename><surname>Botvinick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="3" to="8" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Orbitofrontal cortex and basolateral amygdala encode expected outcomes during learning</title>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Schoenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrea</forename><forename type="middle">A</forename><surname>Chiba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michela</forename><surname>Gallagher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="155" to="159" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Encoding predictive reward value in human amygdala and orbitofrontal cortex</title>
+		<author>
+			<persName><surname>Jay A Gottfried</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O'</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raymond</forename><forename type="middle">J</forename><surname>Doherty</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dolan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">301</biblScope>
+			<biblScope unit="page" from="1104" to="1107" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Visual predictions in the orbitofrontal cortex rely on associative content</title>
+		<author>
+			<persName><forename type="first">Maximilien</forename><surname>Chaumon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kestutis</forename><surname>Kveraga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lisa</forename><forename type="middle">Feldman</forename><surname>Barrett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Moshe</forename><surname>Bar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cerebral Cortex</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="2899" to="2907" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">Orbitofrontal cortex mediates outcome encoding in pavlovian but not instrumental conditioning</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bernard</forename><forename type="middle">W</forename><surname>Ostlund</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Balleine</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="4819" to="4825" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">Orbitofrontal cortex as a cognitive map of task space</title>
+		<author>
+			<persName><forename type="first">Yuji</forename><forename type="middle">K</forename><surname>Robert C Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Takahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yael</forename><surname>Schoenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Niv</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page" from="267" to="279" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Over the river, through the woods: cognitive maps in the hippocampus and orbitofrontal cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Andrew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Wikenheiser</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="513" to="523" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Influence of catecholamines on reward-related neuronal activity in monkey orbitofrontal cortex</title>
+		<author>
+			<persName><forename type="first">Shuji</forename><surname>Aou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yutaka</forename><surname>Oomura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hitoo</forename><surname>Nishino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Akira</forename><surname>Inokuchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yujo</forename><surname>Mizuno</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Research</title>
+		<imprint>
+			<biblScope unit="volume">267</biblScope>
+			<biblScope unit="page" from="165" to="170" />
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">The hippocampal-VTA loop: controlling the entry of information into long-term memory</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Lisman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Grace</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="703" to="713" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title level="a" type="main">Integrating hippocampus and striatum in decision-making</title>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Matthijs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Van Der Meer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Redish</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Opinion in Neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="692" to="697" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title level="a" type="main">Orbitofrontal lesions eliminate signalling of biological significance in cue-responsive ventral striatal neurons</title>
+		<author>
+			<persName><forename type="first">Nisha</forename><forename type="middle">K</forename><surname>Cooch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">A</forename><surname>Stalnaker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Heather</forename><forename type="middle">M</forename><surname>Wied</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sheena</forename><surname>Bali-Chaudhary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">A</forename><surname>Mcdannald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tzu-Lan</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Communications</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">7195</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<analytic>
+		<title level="a" type="main">Actor-critic models of the basal ganglia: New anatomical and computational perspectives</title>
+		<author>
+			<persName><forename type="first">Daphna</forename><surname>Joel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yael</forename><surname>Niv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eytan</forename><surname>Ruppin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Networks</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="535" to="547" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<monogr>
+		<title level="m" type="main">Conditioned reflexes and neuron organization</title>
+		<author>
+			<persName><forename type="first">Jerzy</forename><surname>Konorski</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1948">1948</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">A multiplicative reinforcement learning model capturing learning dynamics and interindividual variability in mice</title>
+		<author>
+			<persName><forename type="first">Brice</forename><surname>Bathellier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sui</forename><surname>Poh Tee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christina</forename><surname>Hrovat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Simon</forename><surname>Rumpel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<date type="published" when="2013">19950-19955, 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title level="a" type="main">Opponent actor learning (OpAL): Modeling interactive e↵ects of striatal dopamine on reinforcement learning and choice incentive</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Anne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">J</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Frank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychological Review</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="337" to="366" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<title level="a" type="main">Optogenetic blockade of dopamine transients prevents learning induced by changes in reward features</title>
+		<author>
+			<persName><forename type="first">Chun</forename><surname>Yun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chang</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><surname>Gardner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Di</forename><surname>Tillio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="3480" to="3486" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">Dopamine neurons respond to errors in the prediction of sensory features of expected rewards</title>
+		<author>
+			<persName><forename type="first">Hannah</forename><forename type="middle">M</forename><surname>Yuji K Takahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Batchelor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Akash</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marisela</forename><surname>Khanna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Morales</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="1395" to="1405" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<analytic>
+		<title level="a" type="main">Dopamine transients are su cient and necessary for acquisition of model-based associations</title>
+		<author>
+			<persName><forename type="first">Melissa</forename><forename type="middle">J</forename><surname>Sharpe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chun</forename><forename type="middle">Yun</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Melissa</forename><forename type="middle">A</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hannah</forename><forename type="middle">M</forename><surname>Batchelor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lauren</forename><forename type="middle">E</forename><surname>Mueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joshua</forename><forename type="middle">L</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yael</forename><surname>Niv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geo↵rey</forename><surname>Schoenbaum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,2089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Identification of small ORFs in vertebrates using ribosome footprinting and evolutionary conservation</title>
+				<funder ref="#_fMJdqzx #_z5S98Ek #_ue6y2QN #_eZqzWhp">
+					<orgName type="full">Swiss National Science Foundation (CEV)</orgName>
+				</funder>
+				<funder ref="#_Xw44WP8">
+					<orgName type="full">March of Dimes (AJG)</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">T32GM007499 (TGJ)</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Helmholtz Alliance on Systems Biology (MDC Systems Biology Network)</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">MDC (BO)</orgName>
+				</funder>
+				<funder ref="#_58RnH56">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Pew Fellows Program in Biomedical Sciences (AAB)</orgName>
+				</funder>
+				<funder ref="#_MBtWSj3">
+					<orgName type="full">Pew Scholars Program in the Biomedical Sciences (AJG)</orgName>
+				</funder>
+				<funder ref="#_vJy86um">
+					<orgName type="full">MDC funding (SDM)</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2014-04-04">4 April 2014</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ariel</forename><forename type="middle">A</forename><surname>Bazzini</surname></persName>
+							<email>ariel.bazzini@yale.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genetics</orgName>
+								<orgName type="institution">Yale University School of Medicine</orgName>
+								<address>
+									<settlement>New Haven</settlement>
+									<region>CT</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Timothy</forename><forename type="middle">G</forename><surname>Johnstone</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genetics</orgName>
+								<orgName type="institution">Yale University School of Medicine</orgName>
+								<address>
+									<settlement>New Haven</settlement>
+									<region>CT</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Romain</forename><surname>Christiano</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Cell Biology</orgName>
+								<orgName type="institution">Yale University School of Medicine</orgName>
+								<address>
+									<settlement>New Haven</settlement>
+									<region>CT</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sebastian</forename><forename type="middle">D</forename><surname>Mackowiak</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Systems Biology of Gene Regulatory Elements</orgName>
+								<orgName type="department" key="dep2">Max-Delbrück-Center for Molecular Medicine</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Benedikt</forename><surname>Obermayer</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Systems Biology of Gene Regulatory Elements</orgName>
+								<orgName type="department" key="dep2">Max-Delbrück-Center for Molecular Medicine</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Elizabeth</forename><forename type="middle">S</forename><surname>Fleming</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genetics</orgName>
+								<orgName type="institution">Yale University School of Medicine</orgName>
+								<address>
+									<settlement>New Haven</settlement>
+									<region>CT</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Charles</forename><forename type="middle">E</forename><surname>Vejnar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genetics</orgName>
+								<orgName type="institution">Yale University School of Medicine</orgName>
+								<address>
+									<settlement>New Haven</settlement>
+									<region>CT</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Miler</forename><forename type="middle">T</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genetics</orgName>
+								<orgName type="institution">Yale University School of Medicine</orgName>
+								<address>
+									<settlement>New Haven</settlement>
+									<region>CT</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nikolaus</forename><surname>Rajewsky</surname></persName>
+							<email>rajewsky@mdc-berlin.de</email>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Systems Biology of Gene Regulatory Elements</orgName>
+								<orgName type="department" key="dep2">Max-Delbrück-Center for Molecular Medicine</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tobias</forename><forename type="middle">C</forename><surname>Walther</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Cell Biology</orgName>
+								<orgName type="institution">Yale University School of Medicine</orgName>
+								<address>
+									<settlement>New Haven</settlement>
+									<region>CT</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Antonio</forename><forename type="middle">J</forename><surname>Giraldez</surname></persName>
+							<email>antonio.giraldez@yale.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genetics</orgName>
+								<orgName type="institution">Yale University School of Medicine</orgName>
+								<address>
+									<settlement>New Haven</settlement>
+									<region>CT</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Yale Stem Cell Center</orgName>
+								<orgName type="institution" key="instit2">Yale University School of Medicine</orgName>
+								<address>
+									<settlement>New Haven</settlement>
+									<region>CT</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Identification of small ORFs in vertebrates using ribosome footprinting and evolutionary conservation</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">The EMBO Journal</title>
+						<title level="j" type="abbrev">The EMBO Journal</title>
+						<idno type="ISSN">0261-4189</idno>
+						<idno type="eISSN">1460-2075</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">33</biblScope>
+							<biblScope unit="issue">9</biblScope>
+							<biblScope unit="page" from="981" to="993"/>
+							<date type="published" when="2014-04-04">4 April 2014</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">90917EEB909E6C09B674CB916494F592</idno>
+					<idno type="DOI">10.1002/embj.201488411</idno>
+					<note type="submission">Received 6 March 2014 | Revised 13 March 2014 | Accepted 14 March 2014 |</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>micropeptides</term>
+					<term>non-coding RNA</term>
+					<term>ribosome profiling</term>
+					<term>small ORFs</term>
+					<term>translation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Identification of the coding elements in the genome is a fundamental step to understanding the building blocks of living systems.</s><s>Short peptides (&lt; 100 aa) have emerged as important regulators of development and physiology, but their identification has been limited by their size.</s><s>We have leveraged the periodicity of ribosome movement on the mRNA to define actively translated ORFs by ribosome footprinting.</s><s>This approach identifies several hundred translated small ORFs in zebrafish and human.</s><s>Computational prediction of small ORFs from codon conservation patterns corroborates and extends these findings and identifies conserved sequences in zebrafish and human, suggesting functional peptide products (micropeptides).</s><s>These results identify micropeptide-encoding genes in vertebrates, providing an entry point to define their function in vivo.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Analysis of the genome has identified many putative transcripts that lack the classical hallmark of eukaryotic protein-coding genes: a single, long, conserved coding sequence (CDS) encoding a protein of more than 100 amino acids <ref type="bibr" target="#b5">(Carninci et al, 2005;</ref><ref type="bibr" target="#b2">Birney et al, 2007;</ref><ref type="bibr" target="#b43">Tautz, 2009;</ref><ref type="bibr" target="#b44">Ulitsky et al, 2011;</ref><ref type="bibr" target="#b11">Derrien et al, 2012;</ref><ref type="bibr" target="#b34">Pauli et al, 2012)</ref>.</s><s>However, many of these transcripts (including lincRNAs) <ref type="bibr" target="#b23">(Khalil et al, 2009;</ref><ref type="bibr" target="#b18">Guttman et al, 2010;</ref><ref type="bibr" target="#b22">Ingolia et al, 2011)</ref> contain multiple putative small open reading frames (smORFs, ≤ 100 aa) that can potentially be translated and thus might have a coding function <ref type="bibr" target="#b22">(Ingolia et al, 2011;</ref><ref type="bibr" target="#b7">Chew et al, 2013;</ref><ref type="bibr" target="#b39">Slavoff et al, 2013)</ref>.</s><s>Recent examples have revealed functional, protein-coding smORFs across various genomes in RNAs previously thought to be non-coding <ref type="bibr" target="#b37">(Savard et al, 2006;</ref><ref type="bibr" target="#b15">Galindo et al, 2007;</ref><ref type="bibr" target="#b25">Kondo et al, 2007</ref><ref type="bibr" target="#b26">Kondo et al, , 2010;;</ref><ref type="bibr" target="#b36">Pueyo &amp; Couso, 2008;</ref><ref type="bibr" target="#b29">Magny et al, 2013)</ref>.</s><s>mille-pattes and tarsal-less/polished-rice were found to encode several micropeptides required during development in Tribolium and Drosophila, respectively <ref type="bibr" target="#b37">(Savard et al, 2006;</ref><ref type="bibr" target="#b25">Kondo et al, 2007;</ref><ref type="bibr" target="#b36">Pueyo &amp; Couso, 2008)</ref>.</s><s>Similarly, the predicted non-coding pncr003:2L gene encodes two micropeptides, each smaller than 30 aa, that regulate cardiac contraction in Drosophila <ref type="bibr" target="#b29">(Magny et al, 2013)</ref>.</s></p><p><s>Comprehensive identification of smORFs has been challenging and has mainly relied on evolutionary conservation <ref type="bibr" target="#b41">(Stark et al, 2007;</ref><ref type="bibr" target="#b28">Lin et al, 2011)</ref>, known patterns of codon occurrence and mass spectrometry <ref type="bibr" target="#b38">(Schwaid et al, 2013;</ref><ref type="bibr" target="#b39">Slavoff et al, 2013)</ref>.</s><s>However, these approaches can be limited by the size, abundance and amino acid composition of the polypeptide.</s><s>Ribosome footprinting measures translation by direct quantification of mRNA fragments protected by the 80S ribosome (ribosome-protected fragments, RPFs) after nuclease digestion (Fig <ref type="figure" target="#fig_0">1A</ref>) <ref type="bibr" target="#b46">(Wolin &amp; Walter, 1988;</ref><ref type="bibr" target="#b21">Ingolia et al, 2009)</ref>.</s><s>Recent studies have used ribosome footprinting <ref type="bibr" target="#b21">(Ingolia et al, 2009;</ref><ref type="bibr" target="#b1">Bazzini et al, 2012)</ref> to characterize the coding potential of different transcripts <ref type="bibr" target="#b7">(Chew et al, 2013;</ref><ref type="bibr" target="#b19">Guttman et al, 2013)</ref> and identify translated protein-coding sequences <ref type="bibr" target="#b22">(Ingolia et al, 2011;</ref><ref type="bibr" target="#b3">Brar et al, 2012;</ref><ref type="bibr" target="#b32">Michel et al, 2012;</ref><ref type="bibr" target="#b42">Stern-Ginossar et al, 2012;</ref><ref type="bibr" target="#b7">Chew et al, 2013;</ref><ref type="bibr" target="#b10">Crappe et al, 2013;</ref><ref type="bibr" target="#b31">Menschaert et al, 2013;</ref><ref type="bibr" target="#b35">Pauli et al, 2014)</ref>.</s><s>However, it has been questioned whether fragments recovered from ribosome profiling libraries always reflect a translating ribosome as opposed to regions protected by other RNA-binding proteins, or spurious binding to the ribosome <ref type="bibr" target="#b19">(Guttman et al, 2013)</ref>, and therefore, it is unclear how well these methods perform to identify individual smORFs.</s><s>Unlike other interactions between mRNA, proteins, or scanning ribosomes, actively translating ribosomes have a unique property: the discrete movement along the message in three-nucleotide steps (phasing) <ref type="bibr" target="#b21">(Ingolia et al, 2009;</ref><ref type="bibr" target="#b17">Guo et al, 2010;</ref><ref type="bibr" target="#b32">Michel et al, 2012)</ref>, a feature that has been used to identify frame shifts and dually decoded regions in the genome <ref type="bibr" target="#b32">(Michel et al, 2012)</ref>.</s><s>Since phased ribosome binding is a direct consequence of active translation, we reasoned that using phased binding as a criterion would reduce the noise in conventional ribosome profiling analyses and would allow us to identify smORFs undergoing translation in vivo.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Ribosome footprinting in zebrafish with subcodon resolution</head><p><s>To define the coding potential of the transcriptome and identify translated smORFs, we analyzed the positional distribution of active ribosomes during zebrafish development.</s><s>To this end, we generated high-depth ribosome footprinting with subcodon resolution across embryogenesis (at 2, 5, 12, 24 and 48 h postfertilization, hpf) <ref type="bibr">(Fig 1B)</ref>.</s><s>This resulted in approximately 200 million mapped reads after filtering for ribosomal RNAs, tRNAs and snoRNAs (Supplementary Table <ref type="table">S1</ref>).</s><s>95% of reads within RefSeq protein-coding genes overlapped the CDS.</s><s>Because phasing of the ribosome footprints can vary with fragment size, we first analyzed the distribution of RPFs within a composite RefSeq transcript <ref type="bibr">(Supplementary Fig S1)</ref>.</s><s>Metagene analysis of the reads mapping to the annotated CDS revealed that 84.6% of the 28 and 29 nt RPFs were in-frame relative to their 5 0 ends (position 1 in the codon of the P-site, offset +12 nt), whereas A Schematic representation of ribosome profiling: 28 to 29-nt-long ribosome-protected fragments (RPFs) are generated from nuclease digestion, where the P-site of the ribosome is in position 13.</s><s>B Developmental stages at which ribosome profiling was performed.</s><s>C Subcodon position of the ribosome footprints (position 13) for the RPF and input reads.</s><s>Plot shows the proportion of RPFs or input reads aligned to the coding sequence of RefSeq genes at each position relative to the codon.</s><s>Input reads were obtained after poly-(A) fractionation and random fragmentation of the naked RNA.</s><s>D RPFs and input reads mapped to a composite RefSeq transcript.</s><s>RPFs mainly map to the CDS with a 3-nucleotide periodicity.</s><s>RPF reads are colored as in <ref type="bibr">(C)</ref> based on the position with respect to the frame of the CDS.</s><s>Input reads map to both the UTRs and CDS (gray).</s><s>E Subcodon profile plot showing RPF and input reads aligned to actinb1.</s><s>Reads are colored based on the frame (1, 2 or 3) position relative to the transcript <ref type="bibr" target="#b32">(Michel et al, 2012)</ref>.</s><s>All putative ORFs (distal AUG-Stop) were also colored for each respective frame (blue, pink and green boxes).</s><s>Note that most of the RPFs from the annotated ORF match the color of the box, consistent with a strong in-frame distribution of reads within individual transcripts.</s></p><p><s>The reflects the stepwise translocation of active ribosomes <ref type="bibr" target="#b21">(Ingolia et al, 2009)</ref>.</s><s>We reasoned that this pattern should derive from a biased in-frame distribution of RPFs within each individual CDS <ref type="bibr">(Fig 1E)</ref>.</s><s>Thus, we hypothesized that this pattern could be used to define actively translated regions and distinguish them from background signal.</s></p><p><s>ORFscore, a method to identify actively translated smORFs</s></p><p><s>Guided by this hypothesis, we developed a method (ORFscore) that quantifies the biased distribution of RPFs toward the first frame of a given CDS (Fig <ref type="figure" target="#fig_3">2</ref>).</s><s>Given a putative ORF in the transcriptome (AUG to stop), we quantified the number of RPFs in each frame and determined whether RPFs were uniformly distributed or preferentially accumulated in one frame.</s><s>We assigned a negative value to RPF distributions inconsistent with the frame of the ORF (Fig 2A  <ref type="bibr">C)</ref>.</s><s>In contrast, scores for most ORFs in the 5 0 UTR, the 3 0 UTR or overlapping the annotated CDS out of frame fell below these levels, reflecting their lack of coding potential <ref type="bibr">(Fig 3A)</ref>.</s><s>Selecting the ORF with the highest ORFscore per transcript correctly identified the annotated CDS in 99% of the expressed coding transcripts, clearly distinguishing them from other possible ORFs in each transcript (P &lt; 2.2e-16, Chi-squared test) (Fig <ref type="figure" target="#fig_4">3B</ref>).</s><s>Annotated CDSs are usually longer than ORFs in the 5 0 -and 3 0 -UTRs <ref type="bibr">(Supplementary Fig S2)</ref>.</s><s>To ensure that the correct identification of annotated CDSs is not simply due to this bias in size, we restricted the analysis to transcripts containing known coding regions ≤ 100 aa, using the same parameters <ref type="bibr">(Fig 3D)</ref>.</s><s>This analysis identified 86% (208 out of 241) of short annotated CDSs, distinguishing them from 74,669 other putative short ORFs in expressed RefSeq coding transcripts (20-to-100 aa, P &lt; 2.2e-16, Chi-squared test) (Fig <ref type="figure" target="#fig_4">3E</ref>).</s><s>Thus, combining frame bias and coverage provides a measure of coding potential that can be used to confidently identify small translated ORFs.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Identification of novel smORFs by ORFscore</head><p><s>To identify novel translated ORFs, we applied the ORFscore method to transcripts without defined coding sequences, including previously annotated long non-coding RNAs <ref type="bibr" target="#b44">(Ulitsky et al, 2011;</ref><ref type="bibr" target="#b34">Pauli et al, 2012;</ref><ref type="bibr" target="#b20">Howe et al, 2013)</ref> and uncharacterized processed transcripts from Ensembl <ref type="bibr">(Howe et al, 2013) (Fig 4A)</ref>.</s><s>In this analysis, Ensembl-annotated smORFs were used as a positive control <ref type="bibr">(Fig 4A)</ref>.</s><s>Out of 2450 genes without previously defined coding sequences, many of which are thought to be non-coding, our analysis found experimentally supported coding ORFs in 303 genes.</s><s>Of these, 214 (71%) encode smORFs between 20 and 100 aa long corresponding to 190 non-redundant smORF loci <ref type="bibr">(Fig 4C and E,</ref><ref type="bibr">Supplementary Fig S3,</ref><ref type="bibr">Supplementary Table</ref>  <ref type="table">S2</ref> and Supplementary File S1) and 89 (29%) encode for proteins longer than 100 aa.</s><s>The majority of defined smORFs do not share significant amino acid sequence homology with known proteins in zebrafish <ref type="bibr">(Fig 4D)</ref>.</s><s>An additional set of 53 non-redundant smORFs <ref type="bibr">(Fig 4E)</ref> was identified after relaxing the coverage requirements while maintaining requirement for phasing of the ribosomes through the ORFscore.</s><s>In contrast, 959 expression-matched transcripts lacked evidence for coding ORFs, including the known non-coding RNAs cyrano and megamind <ref type="bibr" target="#b44">(Ulitsky et al, 2011;</ref><ref type="bibr" target="#b7">Chew et al, 2013)</ref>  <ref type="bibr">(Fig 4B,</ref><ref type="bibr">Supplementary Fig S4)</ref>.</s><s>Our analysis also provided experimental support for translation of 302 (52%) of the smORFs that were previously predicted by Ensembl and RefSeq <ref type="bibr" target="#b20">(Howe et al, 2013)</ref>  <ref type="bibr">(Fig 4E)</ref> and distinguished them from size-matched ORFs in the 3 0 UTR that were used as control for non-coding regions <ref type="bibr">(Fig 4A)</ref>.</s><s>Gene expression analysis revealed developmental regulation of mRNA levels for both smORF-containing and non-coding RNAs during embryogenesis <ref type="bibr">(Fig 4K,</ref><ref type="bibr">Supplementary Fig S4)</ref>.</s><s>As an independent analysis, we    <ref type="bibr" target="#b39">(Slavoff et al, 2013)</ref>, which may explain why novel smORFs appear to be underrepresented in our recovered set, since they are shorter than previously annotated peptides (P = 1.6e-43,</s><s>Wilcoxon test) <ref type="bibr">(Fig 4G)</ref>.</s><s>Translated smORFs are also present in canonical protein-coding transcripts.</s><s>Using ORFscore, we identify 311 (5 0 UTR) and 93 (3 0 UTR) translated ORFs, of which 17 and 10, respectively, were also identified by mass spectrometry <ref type="bibr">(Fig 4H,</ref><ref type="bibr">Supplementary Fig S3)</ref>.</s><s>Future studies will be needed to further characterize the function of this large set of upstream and downstream ORFs, as they may regulate mRNA stability or translation of the main CDS <ref type="bibr" target="#b0">(Barbosa et al, 2013)</ref>.</s><s>Taken together, these results reveal expression of several hundred smORFs present in transcripts with previously undefined coding sequences.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Computational prediction of smORFs from codon conservation patterns</head><p><s>Translation by ribosomes per se does not imply that a smORF encodes a functional peptide.</s><s>For example, the peptide could be unstable or translation could function to regulate transcript stability.</s><s>Moreover, a fraction of smORFs may have been missed using ribosome footprinting if they were not sufficiently expressed in the stages analyzed.</s></p><p><s>Alternatively, conservation analysis can reveal evolutionary pressure to maintain the amino acid sequence of functional peptides.</s><s>Thus, as an independent and complementary approach, we developed a computational pipeline (micropeptide detection pipeline, micPDP) to search for smORFs and evaluate the evidence for negative selection on the encoded amino acid sequence from codon substitutions observed in whole-genome alignments.</s><s>We filtered candidate alignments by coverage and reading frame conservation and then used phyloCSF <ref type="bibr" target="#b28">(Lin et al, 2011)</ref> to score the coding potential from codon substitutions observed in whole-genome multiple alignments.</s><s>We also used a simple parameter-free method (Ka/Ks) as control, which yields comparable results (Supplementary Fig S6  <ref type="table">S2</ref> and Supplementary File S2) and a small overlap of seven candidates out of 95,780 smORFs with the computational results (P &lt; 6.3e-9, Fisher's exact test) (Fig <ref type="figure" target="#fig_7">5C</ref> and<ref type="figure">E</ref>).</s><s>Taken together, we identify hundreds of translated smORFs in human and fish and define an overlapping set of smORFs encoding evolutionarily conserved peptides.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>Our analysis of the zebrafish transcriptome using ribosome profiling provides two key insights into the genome-wide expression of smORFs in vertebrates.</s><s>First, smORFs are widely distributed and are translated from a large body of transcripts, many of which were thought to lack coding potential.</s><s>We experimentally identified hundreds of translated smORF regions that encode small proteins (micropeptides), defining 190 smORFs, 311 ORFs in the 5 0 UTR and 93 in the 3 0 UTR, and validated a portion of these by mass spectrometry.</s><s>Previous studies have used ribosome footprinting to define classes of transcripts within non-coding RNAs based on the pattern of ribosome footprints when compared to known coding genes <ref type="bibr">(Chew et</ref>   <ref type="bibr">S6)</ref>.</s><s>The ORFscore strongly depends on the phasing of the ribosomes, therefore overlapping ORFs that are translated on different reading frames <ref type="bibr" target="#b32">(Michel et al, 2012)</ref> can be missed by this method depending on the region of overlap for these ORFs; thus, future refinement will be necessary to define overlapping translated ORFs in zebrafish (Supplementary Fig <ref type="figure" target="#fig_4">S3</ref>).</s><s>Applying the ORFscore analysis to previously published ribosome footprinting data in human cell lines <ref type="bibr" target="#b17">(Guo et al, 2010)</ref> provides evidence for translation of smORFs present in human RNAs previously classified as non-coding (Supplementary Table <ref type="table">S2</ref>).</s><s>The presence of these small translated regions does not rule out a direct function of the mRNA transcript independent of the encoded peptide.</s><s>Translation of small regions in these transcripts may be necessary for RNA function through localization, folding or triggering non-sense-mediated decay <ref type="bibr" target="#b30">(Medenbach et al, 2011;</ref><ref type="bibr" target="#b7">Chew et al, 2013;</ref><ref type="bibr" target="#b19">Guttman et al, 2013;</ref><ref type="bibr" target="#b40">Somers et al, 2013)</ref>.</s><s>Indeed, we have observed in lincRNAs a class of tiny ORFs (&lt; 20 aa) supported by in-frame RPFs: For example, cyrano contains a 2aa ORF in zebrafish that displays high in-frame translation <ref type="bibr">(Fig 4B)</ref>.</s><s>Due to the small size of these ORFs, further work will be needed to characterize their functions in vivo.</s><s>Our method also defines a subset of transcripts with no evidence of translation, supporting a non-coding function for these transcripts.</s><s>Second, independent of the ribosomal footprint analyses, we developed a computational pipeline (micPDP) that identified a set of micropeptides which are likely under natural selection by computationally analyzing codon conservation patterns in multiple species alignments of annotated human lincRNAs and fish transcripts without previously defined coding sequences, including lincRNAs.</s><s>Half of the translated micropeptides analyzed by ribosome footprinting with sequence alignment across species (23 out of 45) present strong patterns of evolutionary conservation (Fig <ref type="figure" target="#fig_7">5B</ref> and<ref type="figure">C</ref>), supporting a functional role of these coding sequences.</s><s>A small group of the identified smORFs (25%) have predicted homologs (e.g.</s><s>RPL41) (Fig 4D ), complementing current genome annotations <ref type="bibr" target="#b20">(Howe et al, 2013)</ref>.</s><s>We note that in human, the number of micropeptides with good conservation scores, but low ORFscore was much higher than in zebrafish.</s><s>This could be explained by lower depth and phasing of the human ribosomal profiling data used or by micropeptides expressed specifically in developmental stages and not in the human cell line.</s><s>Further, the larger number of species in the human genome alignment allowed us to score smORF coding potential more comprehensively than in zebrafish.</s><s>Still, smORFs might have different codon usage and conservation patterns compared to canonical protein-coding genes and may therefore be only incompletely captured by our computational pipeline.</s><s>Also, smORFs encoding for lineage-specific or fast-evolving peptides, or smORFs with purely regulatory function, will be missed since our comparative method is tailored toward the identification of smORFs with conservation of their encoded amino acid sequence over larger The EMBO Journal Identification of small ORFs in vertebrates Ariel A Bazzini et al evolutionary distances.</s><s>The conceptual differences between experimental and computational approaches lend strong support to jointly identified smORFs but translate into an inability to use one method to estimate false-positive or false-negative rate of the other.</s><s>In sum, the computational results reported here reveal numerous smORFs in zebrafish and human and suggest that they have evolutionarily conserved sequence and function.</s><s>Central roles of small peptides have been known for decades based on the importance of neuropeptides, peptide hormones (such as secretin or insulin) and secreted signaling molecules (such as FGF1).</s><s>However, the majority of these small peptides are encoded as large pre-proteins that undergo post-translational cleavage and modification.</s><s>By contrast, similar functional small peptides such as ELABELA/toddler <ref type="bibr" target="#b8">(Chng et al, 2013;</ref><ref type="bibr" target="#b35">Pauli et al, 2014)</ref> (also identified in our set of smORFs; Supplementary Fig <ref type="figure" target="#fig_4">S3</ref>) are directly translated from small ORFs.</s><s>Indeed, <ref type="bibr" target="#b35">Pauli et al (2014)</ref> recently reported the independent identification of more than 300 previously unannotated zebrafish proteins.</s><s>Small proteins are also found in viral genomes, where transmembrane proteins (often shorter than 50 aa) have been shown to play vital roles in virus replication and virulence <ref type="bibr" target="#b12">(Dimaio, 2014)</ref>.</s><s>It remains unclear how many of the peptides encoded by our in silico or in vivo identified smORFs are biologically relevant.</s><s>However, ELABELA/toddler <ref type="bibr" target="#b8">(Chng et al, 2013;</ref><ref type="bibr" target="#b35">Pauli et al, 2014)</ref>, together with small peptides from other organisms and viruses <ref type="bibr" target="#b37">(Savard et al, 2006;</ref><ref type="bibr" target="#b15">Galindo et al, 2007;</ref><ref type="bibr" target="#b25">Kondo et al, 2007</ref><ref type="bibr" target="#b26">Kondo et al, , 2010;;</ref><ref type="bibr" target="#b36">Pueyo &amp; Couso, 2008;</ref><ref type="bibr" target="#b29">Magny et al, 2013)</ref>, show that smORFs can play important roles across development and physiology.</s><s>In sum, our identification of hundreds of translated smORFs significantly expands the set of micropeptide-encoding vertebrate genes providing an entry point to investigate their function in vivo.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RPF Library/Prep/SEQ</head><p><s>Ribosome-protected fragments: 50 embryos were collected for each time point and immediately frozen in liquid nitrogen.</s><s>Each sample was lysed in 800 ll of Lysis buffer (1× Polysome Buffer, 1% Triton X-100, 1 mM DTT, 25 U/ml DNaseI and 100 lg/ml cycloheximide) according to manufacturer specifications (Epicentre, Artseq Ribosome Profiling Kit Mammalian, HRPHMR12126).</s><s>The mix was clarified for 10 minutes (min.) at 10,000 g at 4°C.</s><s>Three microliters of ARTseq Nuclease (Epicentre, HRPHMR12126) was added to 400 ll of the lysed supernatant and incubated at room temperature for 45 min with gentle mixing.</s><s>Nuclease digestion was stopped with 15 ll of SUPERaseÁIn TM RNase Inhibitor (Life Technologies, cat. no.</s><s>AM2696) and chilled on ice.</s><s>Ribosomes were purified by Sephacryl S400 spin column chromatography (GE Healthcare, cat.</s><s>no.</s><s>27-5140-01) or sucrose cushion ultracentrifugation according to manufacturer specifications (Epicentre, Artseq Ribosome Profiling Kit).</s><s>The 400 ll of treated lysate was divided into four S400 spin columns (1 min/735 g).</s><s>One hundred microliters of 1× Polysome Buffer was added to the same columns and spin again (1 min/735 g).</s><s>RNA from the 400 ll samples was extracted with Trizol, and rRNA was subtracted using RiboZero (Ribo-Zero TM Magnetic Kit (Human/ Mouse/Rat)) (Epicentre; cat no.</s><s>MRZH11124), following the manufacturer's protocol, omitting the 50°C incubation step.</s><s>Ribosomeprotected fragments (RPFs) were separated in a 15% Urea gel, and the region from 28-to-30 nucleotides was excised.</s><s>RNA was eluted overnight in 300 mM NaOAc pH 5.5; 1 mM EDTA; 0.1 U/ll SUPERase In (Ambion #AM2694), followed by Ethanol precipitation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RNA input</head><p><s>Total RNA was isolated from 400 ll of the 800 ll of clarified extract before ARTseq Nuclease treatment.</s><s>Poly-A selection was done according to the manufacturer guidelines (Dynabeads mRNA Purification Kit, Cat no.610.06),</s><s>and RNA was fragmented using the ARTseq Ribosome Profiling Kit Mammalian protocol.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Library preparation</head><p><s>Both RPF and RNA input fragments were cloned according to the ARTseq Ribosome Profiling Kit, Mammalian.</s><s>The final PCR was carried out with an initial 15-s denaturation at 98°C, followed by 9-12 cycles of 15 s at 98°C, 5 s at 55°C and extension at 72°C for 10 s.</s><s>Reactions were separated on a non-denaturing 8% polyacrylamide TBE gel, and DNA fragments of the correct size (113 + 28 $ 29 nt) were extracted and sequenced using an Illumina HiSeq 2000 sequencer.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Filtering and alignment of ribosome profiling reads</head><p><s>Base calling was performed using CASAVA-1.8.2.</s><s>The Illumina TruSeq index adaptor sequence was then trimmed from raw reads by aligning its sequence, requiring 100% match of the first five base pairs and a minimum global alignment score of 60 (Matches: 5, Mismatches: À4, Gap opening: À7, Gap extension: À7, Cost-free ends gaps).</s><s>Trimmed reads were then depleted of rRNA, tRNA, snRNA, snoRNA and misc_RNA from Ensembl and RepeatMasker annotations using strand-specific alignment performed with Bowtie2 v2.1.0</s><s><ref type="bibr" target="#b13">(Flicek et al, 2013)</ref> with default parameters.</s><s>Filtered reads were finally aligned strand-specifically to the Zebrafish Zv9 (danRer7) genome assembly using Tophat v2.0.8 <ref type="bibr" target="#b24">(Kim et al, 2013)</ref> with default parameters and the exon-junction coordinates from Ensembl r70.</s><s>The same procedure was applied to the "input" reads.</s></p><p><s>The GEO GSE22004 filtered sequence set (Guo et al, 2010) was analyzed with the same procedure and the following modifications.</s></p><p><s>The trimming required only five base pairs of the adaptor matching more than 80%.</s><s>The filtering step used the tRNA from the Genomic tRNA database <ref type="bibr" target="#b6">(Chan &amp; Lowe, 2009)</ref> and Mt_rRNA, Mt_tRNA, rRNA, snoRNA, snRNA from Ensembl r73 non-coding RNAs.</s><s>Sequencing reads were combined for the 12 and 32 h time points.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Defining transcript sets</head><p><s>To define annotated zebrafish transcripts, Ensembl transcripts (release 73) were downloaded from the Ensembl FTP repository and imported into R using the GenomicFeatures package.</s><s>RefSeq transcripts were retrieved from UCSC and imported using the R Geno-micFeatures package <ref type="bibr" target="#b16">(Gentleman et al, 2004)</ref>.</s><s>To assemble a set of published lincRNA transcripts, supplemental data were downloaded from <ref type="bibr" target="#b44">(Ulitsky et al, 2011)</ref> and <ref type="bibr" target="#b34">(Pauli et al, 2012)</ref> and loaded into R using the RTrackLayer package.</s><s>To define annotated human transcripts, the GenomicFeatures package was used to retrieve Ensembl (r73) transcript sets, and scaffolds were filtered out leaving</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A</head><p><s>Number of smORFs detected within putative non-coding RNA transcripts in zebrafish and human.</s><s>B, C Scatterplot of ORFscore and phyloCSF score for 686 zebrafish and 45,079 human smORFs with sufficient alignment coverage.</s><s>The predictions of the two methods have small but significant overlap (light blue dots; P &lt; 2e-22 and P &lt; 6.3e-9 respectively, Fisher's exact test), and zebrafish experimental and computational results are correlated (Spearman's q = 0.49, P &lt; 4e-42).</s><s>D Scatterplot of ORFscore and coverage for 2,000 randomly selected human Ensembl-annotated coding ORFs (green), 2,000 ORFs in the 3 0 UTR and the set of coding ORFs from human lincRNAs as defined by ORFscore (blue, best ORFscore per unique genomic locus).</s><s>E Subcodon profile plot, showing a smORF in the human predicted non-coding RNA ENST00000426713 (LINC00116-002) that presented high phyloCSF score and ORFscore.</s></p><p><s>The EMBO Journal Vol 33 | No 9 | 2014 ª 2014 The Authors transcripts on chromosomes 1-22, X and Y. Zebrafish transcript sequences were retrieved using genome assembly version danRer7/ Zv9, and human sequences were retrieved from assembly version hg19.</s><s>Each gene and each transcript were assigned a unique ID so that transcript variants could be analyzed individually.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Defining ORFs</head><p><s>Using the spliced version of each transcript, all possible stop codons in each of the three reading frames were defined.</s><s>Each stop codon was paired with the most distal in-frame AUG codon without an intervening stop.</s><s>Each region from most distal AUG to stop was thus defined as an ORF.</s><s>ORFs were stored in both genomic and transcript-relative coordinates for further analyses.</s><s>For position-related calculation of ORFscore and coverage of position 1, only reads within the ORF (defined as the region excluding the reads aligning to the start and stop (À1) codons) were counted.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Processing alignments/reads</head><p><s>Aligned reads were imported into R using the GenomicFeatures package.</s><s>For downstream analysis, all sequencing experiment replicates were combined per time point.</s><s>For "global" values, all time points were combined.</s><s>RPF reads were filtered by size (28 &amp; 29 nt).</s><s>RNA expression was calculated in RPKM using corresponding input samples, using reads mapped to each transcript set as a total.</s><s>For each transcript, all reads aligning to that transcript were mapped to transcript coordinates.</s><s>For a given open reading frame, the position of each RPF read was designated as the +12 offset position of the read, corresponding to the P-site of the ribosome <ref type="bibr" target="#b27">(Lawrence et al, 2009)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Calculating ORFscore</head><p><s>To calculate the ORFscore, reads were counted at each position within the ORF, excluding the first and last coding codons.</s><s>To filter out putative artifactual peaks, the most abundant read position was masked if reads aligning to that position comprised more than 70% of the total reads in the ORF.</s><s>This filter was determined empirically by applying a variable filter and minimizing 3 0 UTR ORFs that were misclassified as coding based on such peaks (Supplementary Fig <ref type="figure" target="#fig_0">S1</ref>).</s><s>The ORFscore was then calculated as:</s></p><formula xml:id="formula_0">ORFscore ¼ log 2 X 3 i¼1 F i À F ð Þ 2 F ! þ 1 ! Â À1; if ðF 1 \F 2 Þ [ ðF 1 \F 3 Þ 1; otherwise</formula><p><s>where F n is the number of reads in reading frame n, F is the total number of reads across all three frames divided by 3.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Calculating coverage</head><p><s>To calculate coverage in position 1, each position was considered covered if the P-site of at least one RPF read aligned to that position.</s><s>For a given ORF, the coverage in position 1 is the resulting ratio of first frame positions covered versus all possible first frame positions in the ORF.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Calculating RRS</head><p><s>RRS (Ribosome Release Score) values for the 5 h time point were calculated to compare with ORFscore values.</s><s>The RRS calculation and FindORF programs were provided by <ref type="bibr" target="#b19">Guttman et al (2013)</ref>.</s><s>To calculate the RRS score of annotated CDSs, a raw bed file was provided to the calculation program; to calculate the scores of other ORFs, the FindORF program was used to generate an input file.</s><s>For coding genes, the program was run using various 3 0 UTR options (using either the whole 3 0 UTR or the minimal 3 0 UTR until next ORF start), resulting in a slight improvement in RRS score of CDS ORFs when using the whole 3 0 UTR, but similar clustering of results with both methods.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Calculating translation efficiency</head><p><s>Translation efficiency (TE) was calculated as the base 2 logarithmic ratio of normalized RPFs over the normalized input for each ORF <ref type="bibr" target="#b22">(Ingolia et al, 2011;</ref><ref type="bibr" target="#b1">Bazzini et al, 2012)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Metagene analysis</head><p><s>Metagene plots were generated using R, taking read sets and CDS boundaries in transcript coordinates as input.</s><s>For each RefSeq transcript with an annotated CDS, reads were counted at each position within two windows (surrounding the start and stop codons).</s><s>These counts were normalized per transcript by dividing each position's count by the sum of all reads in that window.</s><s>These normalized counts were summed across all genes.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Defining coding ORFs</head><p><s>Translated ORFs were defined using the following parameters, in order to capture 85% of non-genome duplicated RefSeq annotated coding genes (N = 9,559): minimum size of 20 aa, ORFscore &gt; 6.044, coverage of position 1 &gt; 10% and expression greater than 1 RPKM at any time point.</s><s>The less stringent criteria to define the relaxed set of translated ORFs used only ORFscore &gt; 6.044.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Defining alternative (altORFs)</head><p><s>To define altORFs in 5 0 and 3 0 UTR, ORFs were excluded for which the genomic position of the start or stop codon overlapped any coding regions annotated by RefSeq or Ensembl.</s><s>To define translated ORFs, see parameters above.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Defining Non-coding RNA</head><p><s>To define all the genes with no coding region (non-coding RNA), several filters were imposed to the transcript set described above.</s><s>First, transcripts overlapping a coding exon were excluded.</s><s>Second, all the transcripts from a genes with at least one ORF defined as coding (strict or relaxed) were excluded.</s><s>Third, transcripts with coding potential predicted by Chew et al, 2013 were removed.</s><s>Fourth, genes with RNA level lower than the first quartile of the genes encoding for defined smORFs (20-100 aa) were discarded.</s><s>Finally, genes with any ORF that could encode for a protein larger than 100 aa were also excluded.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Defining translated small ORFs (smORFs)</head><p><s>Annotated smORFs were defined as all protein-coding ORFs annotated in RefSeq and Ensembl sized 20-100 aa that passed the same ORFscore and position 1 coverage thresholds (6.044, 10%) mentioned previously.</s><s>To define smORFs, these thresholds were applied to "processed transcripts" and lincRNAs from Ensembl in addition to the lincRNAs previously described in <ref type="bibr" target="#b44">(Ulitsky et al, 2011)</ref> and <ref type="bibr" target="#b34">(Pauli et al, 2012)</ref>.</s><s>Any ORFs that overlapped an annotated coding exon were excluded.</s><s>smORFs residing in the same gene as an ORF &gt; 100 aa defined as coding were also excluded.</s><s>To avoid multiply counting isoforms/variants that encode for the same peptide, only one of these transcripts was selected when more than one ORF shared the same genomic start and stop coordinates and coding length.</s><s>For final smORF counts, only one transcript per gene was counted.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Embryo preparation for MSMS detection</head><p><s>About 2,500 embryos were collected at 5 h and deyolked.</s><s>Groups of 100 embryos were transferred from an agar coated dish to a 1.5-ml tube filled with 1 ml of deyolking buffer (55 mM NaCl, 1.8 mM KCl, 1.25 mM NaHCO3), the yolk sac was disrupted by pipetting with a 200 ll narrow tip, and the embryos were shaken for 5 min at 1,100 rpm to dissolve the yolk (Thermomixer, Eppendorf) at 4°C.</s><s>Cells were pelleted at 300 g for 30 s and the supernatant was discarded.</s><s>Subsequently, two additional washes were performed with 1 ml of wash buffer (110 mM NaCl, 3.5 mM KCl, 2.7 CaCl2, 10 mM Tris/Cl pH 8.5) shaking for 2 min at 1100 rpm and centrifugation.</s><s>Cell pellets were frozen in liquid nitrogen.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MS sample preparation</head><p><s>To optimize detection of small proteins, unfractionated samples and small-protein-enriched fractions were prepared from embryo extracts <ref type="bibr">(Supplementary Fig S5)</ref>.</s><s>Fractions were either digested or not using different enzymes (LysC, trypsin or GluC) to increase sequence coverage.</s><s>Unfractionated samples were prepared following two different protocols: filter-aided sample preparation (FASP) <ref type="bibr" target="#b45">(Wisniewski et al, 2009)</ref> and in-solution protein digestion.</s><s>For FASP, approximately 300 frozen cells were boiled at 95°C in 5% (w/v) SDS, 100 mM DTT in 100 mM Tris/Cl pH 7.6 for 15 min and then submitted to FASP protocol as previously described <ref type="bibr" target="#b14">(Frohlich et al, 2013)</ref>.</s><s>For this fraction only, trypsin (Promega) digestion and 4 h chromatographic runs were used.</s></p><p><s>For in-solution digestion, approximately 700 frozen cells were boiled at 95°C in lysis buffer 100 mM Tris/Cl (300 ll, pH 7.6).</s><s>After cooling to room temperature, urea powder (160 mg) was directly added to the boiled embryos solution and cells were lysed using a Dounce homogenizer on ice.</s><s>Samples were prepared for standard in-solution digestion protocol using LysC (Wako), trypsin (Promega) and GluC (Promega) according to the manufacturers' recommendations.</s></p><p><s>The small-protein-enriched fractions were prepared from the rest of the embryos (~1,500) by acid extraction <ref type="bibr" target="#b33">(Oyama et al, 2004)</ref>.</s><s>Briefly, frozen cells were boiled in water (600 ll) at 95°C for 15 min.</s><s>After cooling to room temperature, cells were lysed in 1 M acetic acid using a Dounce homogenizer on ice.</s><s>Precipitates and cell debris were pelleted by centrifugation at 17,000 g for 10 min.</s><s>The extracted peptides were adjusted to pH 8 with NH 4 OH and then subjected to standard reduction/alkylation steps.</s><s>Peptides were incubated for 30 min with DTT (1 mM) at room temperature and alkylated with iodoacetamide (55 mM) in the dark for 20 min.</s><s>Peptides were submitted to size exclusion centrifugation using a 10-kDa filter unit (Millipore) at 14,000 g for 10 min.</s><s>Resulting fractions "&lt; 10 kDa" and "&gt; 10 kDa" were dried in a Speedvac and resolubilized in NH 4 HCO 3 (100 ll).</s><s>One-fourth of each fraction was kept for direct MS analysis without further treatment and the remainder of the fractions was submitted to three proteolytic digestions using LysC (Wako), trypsin (Promega) and GluC (Promega) according to the manufacturers' recommendations.</s></p><p><s>Each peptide fraction was acidified by trifluoroacidic acid (TFA) and cleared of precipitates by centrifugation at 17,000 g for 5 min.</s><s>Two micrograms of peptides was desalted following the protocol for StageTip purification (47).</s><s>Prior to MS injection, samples were eluted with 70 ll buffer B (80% ACN, 0.1% formic acid in H 2 O) and reduced to a final volume of 5 ll in a Speedvac.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Chromatography and mass spectrometry</head><p><s>Each peptide fraction was separated by reversed-phase chromatography on a Thermo Easy nLC 1000 system connected to a Q Exactive mass spectrometer (Thermo) through a nano-electrospray ion source.</s><s>Peptides were separated on 50-cm columns (New Objective) with an inner diameter of 75 lm packed in house with 1.9 lm C18 resin (Dr.</s><s>Maisch GmbH).</s><s>For FASP samples, 265-min chromatographic runs were used and peptides were eluted with a linear gradient of acetonitrile from 5 to 30% in 0.1% formic acid for 240 min at a constant flow rate of 250 nl/min For the rest of the samples, 120-min chromatographic runs were used and peptides were eluted with a linear gradient of acetonitrile from 5 to 30% in 0.1% formic acid for 95 min at a constant flow rate of 250 nl/min.</s><s>The column temperature was kept at 45°C.</s><s>Eluted peptides were directly electrosprayed into the mass spectrometer.</s><s>Mass spectra were acquired on the Q Exactive in a data-dependent mode to automatically switch between full scan MS and up to 5 (10 for FASP samples) data-dependent MS/MS scans.</s><s>The maximum injection time for full scans was 10 ms (20 ms for FASP samples) with a target value of 3,000,000 at a resolution of 70,000 at m/z = 200.</s><s>The five or ten most intense multiple charged ions (z ≥ 2) from the survey scan were selected with an isolation width of 2Th (3Th for FASP samples) and fragmented with higher energy collision dissociation (HCD) with normalized collision energies of 25.</s><s>Target values for MS/MS were set to 10,000 with a maximum injection time of 120 ms at a resolution of 17,500 at m/z = 200.</s><s>To avoid repetitive sequencing, the dynamic exclusion of sequenced peptides was set to 45 s for 265 min runs and to 35 s for 120 min runs.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MS data analysis</head><p><s>MS and MS/MS spectra were analyzed using MaxQuant (version 1.4.0.5), utilizing its integrated ANDROMEDA search algorithms <ref type="bibr" target="#b9">(Cox et al, 2011)</ref>.</s><s>Scoring of peptides for identification was carried out with an initial allowed mass deviation of the precursor ion of up to 4.5 ppm for the search for peptides with a minimum length of five amino acids.</s><s>The allowed fragment mass deviation was 20 ppm.</s><s>The false discovery rate (FDR) was set to 0.01 for proteins and peptides.</s><s>Peak lists were searched against manually curated databases corresponding to all annotated RefSeq proteins as well as all smORF and altORF putative peptides encoded from all isoforms predicted by ribosome profiling combined with 262 common contaminants.</s><s>Maximum missed cleavages were set to 4. The search included carbamidomethylation of cysteine as fixed modification, methionine oxidation, N-terminal acetylation and phosphorylation as variable modifications.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ORF similarity analysis</head><p><s>To analyze the similarity of newly detected smORFs to existing proteins, the amino acid sequences of all smORFs defined as coding by ORFscore and coverage were collapsed and input to NCBI BLASTp with start (Met) and stop codon not included.</s><s>Default parameters were used, with species restricted to a number of model and studied organisms: Danio rerio, Homo sapiens, Mus musculus, Xenopus tropicalis, Drosophila melanogaster, Rattus norvegicus, Strongylocentrotus purpuratus, Caenorhabditis elegans and Arabidopsis thaliana.</s><s>Results were manually curated and classified into one of the following categories:</s></p><p><s>• High similarity: 90% or more of the smORF aligns with score &gt; 50 to known protein.</s></p><p><s>• High similarity; predicted: 90% or more of the smORF aligns with score &gt; 50 to predicted protein.</s></p><p><s>• Partial similarity: &lt; 90% of the smORF aligns with score &gt; 50 to known protein.</s></p><p><s>• Partial similarity: predicted: &lt; 90% of the smORF aligns with score &gt; 50 to predicted protein.</s></p><p><s>• Non-significant: no part aligns with an alignment score &gt; 50, but some hits are returned.</s></p><p><s>• None: no hits.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Analysis of smORF coding signatures across species</head><p><s>Computational prediction of conserved smORFs was based on published catalogs of lincRNAs together with whole-genome alignments from the UCSC browser (human: alignment of 45 vertebrates to hg19; zebrafish: alignment of seven vertebrates to danRer7).</s><s>lincRNAs for human were taken from Gencode v18 <ref type="bibr" target="#b11">(Derrien et al, 2012)</ref> and from Cabili and colleagues <ref type="bibr" target="#b4">(Cabili et al, 2011)</ref>.</s><s>For zebrafish, lincRNAs from Ensembl (v73), as well as catalogs from <ref type="bibr" target="#b44">Ulitsky et al, (2011)</ref> and <ref type="bibr" target="#b34">Pauli et al, (2012)</ref>, were used.</s><s>The spliced sequence of lincRNAs was then scanned for the longest putative open reading frame longer than 63 nt (≥ 20 aa), with a canonical ATG start codon closest to the next upstream stop.</s><s>ORFs in human and zebrafish which overlapped (sense or antisense) with coding exons from annotated genes from Refseq <ref type="bibr">(downloaded Nov. 14, 2013)</ref> or Ensembl (v73) were filtered out.</s><s>For each smORF, the corresponding multiple alignment block ("stitched") was then extracted from the whole-genome alignment.</s><s>Sequences from species where less than 50% could be aligned, or with frameshift inducing insertions or deletions, were discarded, using an index for nucleotide insertions prepared from the original unstitched alignment blocks.</s><s>Only smORFs where at least 50% of species with enough alignable sequence have no frameshift inducing indels were considered.</s><s>These species were then used to calculate the phyloCSF score using the omega test (with -strategy = omega) <ref type="bibr" target="#b34">(Pauli et al, 2012)</ref>.</s><s>A cutoff of 50 on the phyloCSF score was used <ref type="bibr" target="#b34">(Pauli et al, 2012;</ref><ref type="bibr" target="#b19">Guttman et al, 2013)</ref>.</s><s>For ORF counts used in calculations, ORFs were filtered by unique genomic location.</s></p><p><s>As a control, the coding potential of smORFs was scored with a method that had not been previously used to annotate lincRNAs.</s><s>A simple parameter-free empirical Ka/Ks calculation was implemented: Ka was defined as the number of non-synonymous mutations per non-synonymous site (adding pseudocounts equal to the fraction of non-synonymous sites in the sequence to numerator and denominator), and Ks similarly as the number of synonymous mutations per synonymous site (where pseudocounts equal to the fraction of synonymous sites are added).</s><s>Ka/Ks ratios for pairs of species were summarized by taking the median.</s><s>For significance estimation, the columns of the multiple species alignment of each putative smORF were permuted 1000 times.</s><s>For each shuffled smORF, median Ka/Ks values were calculated as before.</s><s>The empirical P-value was then defined as the percentage of shuffles with same or better median Ka/Ks value than the original smORF.</s><s>Only smORFs with median Ka/Ks &lt; 1 and P-value smaller than 0.05 were kept.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data deposition</head><p><s>Sequencing data are deposited in GEO with accession number GSE53693.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Ribosome profiling in zebrafish.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head></head><label></label><figDesc><div><p><s>EMBO Journal Vol 33 | No 9 | 2014 ª 2014 The Authors The EMBO Journal Identification of small ORFs in vertebrates Ariel A Bazzini et al the RNA input fragments did not present any bias in their distribution (Fig 1C).</s><s>The periodic distribution of RPFs observed along the CDS within each codon (Fig 1D, Supplementary Fig S1)</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Defining actively translated regions by ribosome profiling.</s><s>A Workflow to define the ORFscore: Top diagram represents a transcript, below solid bars represent all possible ORFs (Distal AUG-Stop) identified in each frame (+1, +2, +3).</s><s>The RPF distribution in each frame is compared to an equally sized uniform distribution using a modified chi-squared statistic (see Materials and Methods).</s><s>The resulting ORFscore is assigned a negative value when the distribution of RPFs is inconsistent with the frame of the CDS.</s><s>B Coverage is determined by measuring the proportion of in-frame CDS positions with ≥ 1 reads.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. ORFscore discriminates translated from non-translated regions.</s><s>A-D Scatterplot of the ORFscore and coverage for all ORFs (A), the subset of ORFs with the highest ORFscore per transcript (B) and short (20-100 aa) annotated CDS (D).</s><s>Relative density plots (scaled to the maximum value for each group) of the ORFscore and coverage are shown for each ORF type.</s><s>Note the separation between annotated ORFs from the rest of the ORFs, even for short (20-100 aa) annotated CDSs.</s><s>(C) Color code used to label different ORF types found in RefSeq proteincoding transcripts: annotated CDS (green), 5 0 UTR ORFs (purple), 3 0 UTR ORFs (red) and ORFs overlapping the annotated CDS (orange).</s><s>E Bar plots representing the number of ORFs identified on the basis of their ORFscore and coverage and defined as translated for each ORF type as in (C).</s><s>Among all putative ORFs, the distribution of annotated ORFs was significantly different from the overall set (P = 2.2e-16, chi-squared test) with long and short CDS showing the highest fold-change enrichment in translated ORFs compared to other ORF types.</s></p></div></figDesc><graphic coords="4,136.39,329.69,147.20,147.76" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head></head><label></label><figDesc><div><p><s>Vol 33 | No 9 | 2014 ª 2014 The Authors</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>◀Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Identification of small coding ORFs (smORFs) in non-coding RNAs.</s><s>A Scatterplot of ORFscore and coverage for the ORF with highest ORFscore per transcript.</s><s>Shown are annotated short ORF (20-100 aa) (green), annotated lincRNA and "processed transcripts" from Ensembl (orange), non-coding RNAs described by Ulitsky et al (2011) (set 1, dark blue) and by Pauli et al (2012) (set 2, light blue) and ORFs in annotated 3 0 UTR used as negative control (red).</s><s>Note that several ORFs in non-coding annotated transcripts score at comparable levels to annotated CDSs.</s><s>Inset shows the scatter plot for annotated smORFs and 3 0 UTR ORFs.</s><s>Relative density plots (scaled to the maximum value for each group) of the ORFscore and coverage are shown for each ORF type.</s><s>B Subcodon profile plot showing a known non-coding RNA, cyrano, depleted of ribosome footprints.</s><s>C Stacked plot showing the proportion of genes in which a translated ORF was defined by ORFscore and 10% coverage (*, stringent) or only ORFscore (**, permissive) and transcripts with low ORFscore (undetermined).</s><s>The number of transcripts in each fraction is indicated.</s><s>D Pie chart of BLASTp results against several organisms for the 241 newly defined translated regions, collapsed on amino acid sequence.</s><s>E Bar plot showing the number of unique novel smORFs and Ensembl-predicted smORFs (≤ 100 aa), defined by ORFscore and 10% coverage (*, stringent and predicted) or only ORFscore (**, permissive).</s><s>F Bar plot displaying the number of novel and Ensembl-predicted smORFs identified by tandem mass spectrometry (MS-MS).</s><s>G Box plot representing the size distribution of the ORFs defined by ORFscore and MS-MS.</s><s>H Bar plot showing the number of genes with translated ORFs in the 5 0 or 3 0 UTR defined by ORFscore or detected by MS-MS.</s><s>I, J Subcodon profile plots showing individual examples of identified smORFs: Ribosome profiling data show the translated ORF and fragmentation spectra identifying the encoded peptides.</s><s>K Heat-map showing dynamic expression of novel smORF-containing genes during zebrafish embryogenesis (n = 190).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Computational identification of evolutionarily conserved smORFs (MicPDP).</s></p></div></figDesc><graphic coords="8,66.04,316.76,92.47,70.87" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head></head><label></label><figDesc><div><p><s>Chew et al (2013)013)Michel et al, 2012;Chew et al, 2013;Guttman et al, 2013)7)(Ingolia et al, 2011;Michel et al, 2012;Chew et al, 2013;Guttman et al, 2013), the ORFscore leverages the periodicity of high-quality ribosome-protected fragments to define small translated ORFs (Supplementary Fig S7) independent of the surrounding sequence context in zebrafish and humans (Supplementary FigS7)(Guttman et al, 2013).While our method provides strong support for translation of individual ORFs using the parameters defined, we observe that relaxing the coverage cutoff recovers an additional set of ORFs that are defined with lower confidence but maintain strong phasing of the ribosome, suggesting active translation(Fig 4E; Supplementary Fig S6).Indeed, the Translated ORF Classifier designed byChew et al (2013)identifies a fraction of these transcripts as coding, providing a complementary method to define the coding potential of RNA (Supplementary Fig</s></p></div></figDesc><table /><note><p><s>al, 2013; Guttman et al, 2013), but in most cases this classification does not</s></p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>ª 2014 The Authors The EMBO Journal Vol 33 | No 9 | 2014</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank <rs type="person">J. Weissman</rs>, <rs type="person">N. Ingolia</rs>, <rs type="person">M. Guttman</rs> and <rs type="person">S. Kuersten</rs> for reagents, scripts and discussion, <rs type="person">D. Cifuentes</rs>, <rs type="person">C. Takacs</rs> and all the members of the <rs type="institution">Giraldez laboratory</rs> for intellectual and technical support and <rs type="person">M. Hammarlund</rs> and <rs type="person">A.F. Schier</rs> for comments on the manuscript.NR and SDM thank <rs type="person">F. Payre</rs> for initial discussions and support as well as all members of the <rs type="institution">Rajewsky laboratory</rs> for stimulating feedback.This work was supported by <rs type="funder">T32GM007499 (TGJ)</rs>, <rs type="funder">Pew Fellows Program in Biomedical Sciences (AAB)</rs>, the <rs type="funder">Helmholtz Alliance on Systems Biology (MDC Systems Biology Network)</rs> and <rs type="funder">MDC funding (SDM)</rs>, the <rs type="programName">Delbrück Fellows program</rs> of the <rs type="funder">MDC (BO)</rs>, the <rs type="funder">Swiss National Science Foundation (CEV)</rs>, <rs type="grantNumber">R01GM081602-06</rs> (AJG), <rs type="grantNumber">R01GM103789-01</rs> (AJG), <rs type="grantNumber">R01HD074078-02</rs> (AJG), <rs type="grantNumber">F32HD071697-02</rs> (MTL), <rs type="grantNumber">R01GM095982</rs> (TCW), <rs type="grantNumber">R01GM097194</rs> (TCW), the <rs type="funder">Pew Scholars Program in the Biomedical Sciences (AJG)</rs>, the <rs type="funder">March of Dimes (AJG)</rs> and the <rs type="programName">Yale Scholars Program (AJG, TCW</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_vJy86um">
+					<orgName type="program" subtype="full">Delbrück Fellows program</orgName>
+				</org>
+				<org type="funding" xml:id="_fMJdqzx">
+					<idno type="grant-number">R01GM081602-06</idno>
+				</org>
+				<org type="funding" xml:id="_z5S98Ek">
+					<idno type="grant-number">R01GM103789-01</idno>
+				</org>
+				<org type="funding" xml:id="_ue6y2QN">
+					<idno type="grant-number">R01HD074078-02</idno>
+				</org>
+				<org type="funding" xml:id="_eZqzWhp">
+					<idno type="grant-number">F32HD071697-02</idno>
+				</org>
+				<org type="funding" xml:id="_58RnH56">
+					<idno type="grant-number">R01GM095982</idno>
+				</org>
+				<org type="funding" xml:id="_MBtWSj3">
+					<idno type="grant-number">R01GM097194</idno>
+				</org>
+				<org type="funding" xml:id="_Xw44WP8">
+					<orgName type="program" subtype="full">Yale Scholars Program (AJG, TCW</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Supplementary information for this article is available online: http://emboj.embopress.org</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author contributions</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflict of interest</head><p><s>The authors declare that they have no conflict of interest.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Gene expression regulation by upstream open reading frames and human disease</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Barbosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Peixeiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Romao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Genet</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">1003529</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Ribosome profiling shows that miR-430 reduces translation before causing mRNA decay in zebrafish</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Bazzini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Giraldez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">336</biblScope>
+			<biblScope unit="page" from="233" to="237" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Identification and analysis of functional elements in 1% of the human genome by the ENCODE pilot project</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Birney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Stamatoyannopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dutta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Guigo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Gingeras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Margulies</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Weng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Snyder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">T</forename><surname>Dermitzakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Thurman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Kuehn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Taylor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Neph</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Asthana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Malhotra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Adzhubei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Greenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Andrews</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Flicek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">447</biblScope>
+			<biblScope unit="page" from="799" to="816" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">High-resolution view of the yeast meiotic program revealed by ribosome profiling</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Brar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yassour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Friedman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Regev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Ingolia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Weissman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">335</biblScope>
+			<biblScope unit="page" from="552" to="557" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Integrative annotation of human large intergenic noncoding RNAs reveals global properties and specific subclasses</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Cabili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Trapnell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Goff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Koziol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tazon-</forename><surname>Vega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Regev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genes Dev</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="1915" to="1927" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">The transcriptional landscape of the mammalian genome</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Carninci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kasukawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Katayama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gough</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Frith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Maeda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Oyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ravasi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lenhard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wells</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kodzius</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shimokawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">B</forename><surname>Bajic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Brenner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Batalov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Forrest</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zavolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Wilming</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Aidinis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">309</biblScope>
+			<biblScope unit="page" from="1559" to="1563" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">GtRNAdb: a database of transfer RNA genes detected in genomic sequence</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Lowe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="93" to="D97" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Ribosome profiling reveals resemblance between long non-coding RNAs and 5 0 leaders of coding RNAs</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Chew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pauli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Rinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Regev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Schier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Valen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Development</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="page" from="2828" to="2834" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">ELABELA: a hormone essential for heart development signals via the apelin receptor</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Chng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Reversade</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Dev Cell</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="672" to="680" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Andromeda: a peptide search engine integrated into the MaxQuant environment</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Neuhauser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Michalski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Scheltema</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Olsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Proteome Res</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1794" to="1805" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Combining in silico prediction and ribosome profiling in a genome-wide search for novel putatively coding sORFs</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Crappe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Van Criekinge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Trooskens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hayakawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Luyten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Baggerman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Menschaert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Genomics</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">648</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">The GENCODE v7 catalog of human long noncoding RNAs: analysis of their gene structure, evolution, and expression</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Derrien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bussotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tanzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Djebali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tilgner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Guernec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Merkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Knowles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lagarde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Veeravalli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ruan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ruan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lassmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Carninci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Lipovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Thomas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Res</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="1775" to="1789" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Viral miniproteins</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dimaio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Microbiol</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Flicek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Amode</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Barrell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Beal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Brent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Carvalho-Silva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Clapham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Coates</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fairley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fitzgerald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>García-Girón</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hourlier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hunt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Juettemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Kähäri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Keenan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Komorowska</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="48" to="D55" />
+			<date type="published" when="2013">2013. 2013</date>
+			<publisher>Ensembl</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Native SILAC: metabolic labeling of proteins in prototroph microorganisms based on lysine synthesis regulation</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Frohlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christiano</forename><forename type="middle">R</forename><surname>Walther</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Cell Proteomics</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1995" to="2005" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Peptides encoded by short ORFs control development and define a new eukaryotic gene family</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Galindo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Pueyo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fouix</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Bishop</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Couso</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Biol</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">106</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Gentleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">J</forename><surname>Carey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Bates</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Bolstad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dettling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dudoit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ellis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gautier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gentry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hornik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hothorn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Iacus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Irizarry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Leisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Maechler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Rossini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sawitzki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Bioconductor: open software development for computational biology and bioinformatics</title>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">80</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Mammalian microRNAs predominantly act to decrease target mRNA levels</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Ingolia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Weissman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Bartel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">466</biblScope>
+			<biblScope unit="page" from="835" to="840" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Ab initio reconstruction of cell type-specific transcriptomes in mouse reveals the conserved multi-exonic structure of lincRNAs</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Guttman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Garber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Levin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Donaghey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Adiconis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Koziol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gnirke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Nusbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Rinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Lander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Regev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="503" to="510" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Ribosome profiling provides evidence that large noncoding RNAs do not encode proteins</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Guttman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Russell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Ingolia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Weissman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Lander</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">154</biblScope>
+			<biblScope unit="page" from="240" to="251" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">The zebrafish reference genome sequence and its relationship to the human genome</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Howe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Torroja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Torrance</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Berthelot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Muffato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Humphray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mclaren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Matthews</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mclaren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sealy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Caccamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Churcher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Scott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Barrett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>Rauch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>White</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">496</biblScope>
+			<biblScope unit="page" from="498" to="503" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Genome-wide analysis in vivo of translation with nucleotide resolution using ribosome profiling</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Ingolia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ghaemmaghami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Newman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Weissman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="page" from="218" to="223" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Ribosome profiling of mouse embryonic stem cells reveals the complexity and dynamics of mammalian proteomes</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Ingolia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Lareau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Weissman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">147</biblScope>
+			<biblScope unit="page" from="789" to="802" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Many human large intergenic noncoding RNAs associate with chromatin-modifying complexes and affect gene expression</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Khalil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Guttman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huarte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Garber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raj</forename><forename type="middle">A</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rivea</forename><surname>Morales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Thomas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Presser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bernstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Van Oudenaarden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Regev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Rinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="11667" to="11672" />
+			<date type="published" when="2009">2009</date>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">TopHat2: accurate alignment of transcriptomes in the presence of insertions, deletions and gene fusions</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pertea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Trapnell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pimentel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kelley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Salzberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Biol</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">36</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Small peptide regulators of actin-based cell morphogenesis encoded by a polycistronic mRNA</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kondo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hashimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Inagaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kageyama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="660" to="665" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Small peptides switch the transcriptional activity of Shavenbaby during Drosophila embryogenesis</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kondo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Plaza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zanet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Benrabah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Valenti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hashimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Payre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kageyama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">329</biblScope>
+			<biblScope unit="page" from="336" to="339" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">rtracklayer: an R package for interfacing with genome browsers</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lawrence</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gentleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Carey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="1841" to="1842" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">PhyloCSF: a comparative genomics method to distinguish protein coding and non-coding regions</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Jungreis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kellis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="275" to="282" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Conserved regulation of cardiac calcium uptake by peptides encoded in small open reading frames</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Magny</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Pueyo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Pearl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Cespedes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Niven</forename><forename type="middle">Je</forename><surname>Bishop</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Couso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">341</biblScope>
+			<biblScope unit="page" from="1116" to="1120" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Translational control via protein-regulated upstream open reading frames</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Medenbach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Seiler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Hentze</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">145</biblScope>
+			<biblScope unit="page" from="902" to="913" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Deep proteome coverage based on ribosome profiling aids mass spectrometry-based protein and peptide discovery and provides evidence of alternative translation products and near-cognate translation initiation events</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Menschaert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Van Criekinge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Notelaers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Crappe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gevaert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Van Damme</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Cell Proteomics</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1780" to="1790" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Observation of dually decoded regions of the human genome using ribosome profiling data</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Michel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Choudhury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Firth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Ingolia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Atkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V</forename><surname>Baranov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Res</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="2219" to="2229" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Analysis of small human proteins reveals the translation of upstream open reading frames of mRNAs</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Oyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Itagaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Suzuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Izumi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Natsume</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Isobe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sugano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Res</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="2048" to="2052" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Systematic identification of long noncoding RNAs expressed during zebrafish embryogenesis</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pauli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Valen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Garber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">L</forename><surname>Vastenhouw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Levin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sandelin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Rinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Regev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Schier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Res</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="577" to="591" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Toddler: an embryonic signal that promotes cell movement via apelin receptors</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pauli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Norris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Valen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Chew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Gagnon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zimmerman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dubrulle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Reyon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Q</forename><surname>Tsai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Joung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Saghatelian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Schier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">343</biblScope>
+			<biblScope unit="page">746</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">The 11-aminoacid long tarsal-less peptides trigger a cell signal in Drosophila leg development</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Pueyo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Couso</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Dev Biol</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="page" from="192" to="201" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">A segmentation gene in tribolium produces a polycistronic mRNA that codes for multiple conserved peptides</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Savard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Marques-Souza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Aranda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tautz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">126</biblScope>
+			<biblScope unit="page" from="559" to="569" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Chemoproteomic discovery of cysteine-containing human short open reading frames</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Schwaid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Shannon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Slavoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Levin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Weerapana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Saghatelian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Am Chem Soc</title>
+		<imprint>
+			<biblScope unit="volume">135</biblScope>
+			<biblScope unit="page" from="16750" to="16753" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Peptidomic discovery of short open reading frame-encoded peptides in human cells</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Slavoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Schwaid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Cabili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Levin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Karger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Budnik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Rinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Saghatelian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Chem Biol</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="59" to="64" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">A perspective on mammalian upstream open reading frame function</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Somers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Poyry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Willis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int J Biochem Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="1690" to="1700" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Discovery of functional elements in 12 Drosophila genomes using evolutionary signatures</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Stark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kheradpour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Pedersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Parts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Carlson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Crosby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Rasmussen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Roy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Deoras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Ruby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Brennecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hodges</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Hinrichs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Caspi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paten</forename><forename type="middle">B</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Maeder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Polansky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">450</biblScope>
+			<biblScope unit="page" from="219" to="232" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Decoding human cytomegalovirus</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Stern-Ginossar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Weisburd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Michalski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">T</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Hein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">X</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hengel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Ingolia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Weissman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">338</biblScope>
+			<biblScope unit="page" from="1088" to="1093" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Polycistronic peptide coding genes in eukaryotes-how widespread are they?</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tautz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brief Funct Genomic Proteomic</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="68" to="74" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Conserved function of lincRNAs in vertebrate embryonic development despite rapid sequence evolution</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ulitsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Shkumatava</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Jan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sive</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Bartel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">147</biblScope>
+			<biblScope unit="page" from="1537" to="1550" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Universal sample preparation method for proteome analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Wisniewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zougman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Nagaraj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Methods</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="359" to="362" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Ribosome pausing and stacking during translation of a eukaryotic mRNA</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Wolin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Walter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">EMBO J</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="3559" to="3569" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

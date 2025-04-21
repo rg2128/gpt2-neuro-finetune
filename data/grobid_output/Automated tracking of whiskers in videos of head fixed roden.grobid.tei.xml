@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Automated Tracking of Whiskers in Videos of Head Fixed Rodents</title>
+				<funder>
+					<orgName type="full">Howard Hughes Medical Institute</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Public Library of Science (PLoS)</publisher>
+				<availability status="unknown"><p>Copyright Public Library of Science (PLoS)</p>
+				</availability>
+				<date type="published" when="2012-07-05">July 5, 2012</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Nathan</forename><forename type="middle">G</forename><surname>Clack</surname></persName>
+							<email>clackn@janelia.hhmi.org</email>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><forename type="middle">H</forename><surname>O'connor</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Huber</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Leopoldo</forename><surname>Petreanu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Andrew</forename><surname>Hires</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Simon</forename><surname>Peron</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Karel</forename><surname>Svoboda</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Eugene</forename><forename type="middle">W</forename><surname>Myers</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Janelia Farm Research Campus</orgName>
+								<orgName type="institution">Howard Hughes Medical Institute</orgName>
+								<address>
+									<settlement>Ashburn</settlement>
+									<region>Virginia</region>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>San Diego</settlement>
+									<country>United States of America</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Automated Tracking of Whiskers in Videos of Head Fixed Rodents</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">PLoS Computational Biology</title>
+						<title level="j" type="abbrev">PLoS Comput Biol</title>
+						<idno type="eISSN">1553-7358</idno>
+						<imprint>
+							<publisher>Public Library of Science (PLoS)</publisher>
+							<biblScope unit="volume">8</biblScope>
+							<biblScope unit="issue">7</biblScope>
+							<biblScope unit="page">e1002591</biblScope>
+							<date type="published" when="2012-07-05">July 5, 2012</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0382B5FA9C767B794CD9BA99AD493D38</idno>
+					<idno type="DOI">10.1371/journal.pcbi.1002591</idno>
+					<note type="submission">Received January 23, 2012; Accepted May 12, 2012;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>PLoS Computational Biology Software article.&apos;&apos;</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>We have developed software for fully automated tracking of vibrissae (whiskers) in high-speed videos (.500 Hz) of headfixed, behaving rodents trimmed to a single row of whiskers.</s><s>Performance was assessed against a manually curated dataset consisting of 1.32 million video frames comprising 4.5 million whisker traces.</s><s>The current implementation detects whiskers with a recall of 99.998% and identifies individual whiskers with 99.997% accuracy.</s><s>The average processing rate for these images was 8 Mpx/s/cpu (2.6 GHz Intel Core2, 2 GB RAM).</s><s>This translates to 35 processed frames per second for a 640 px6352 px video of 4 whiskers.</s><s>The speed and accuracy achieved enables quantitative behavioral studies where the analysis of millions of video frames is required.</s><s>We used the software to analyze the evolving whisking strategies as mice learned a whisker-based detection task over the course of 6 days (8148 trials, 25 million frames) and measure the forces at the sensory follicle that most underlie haptic perception.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Rats and mice move their large whiskers (vibrissae), typically in a rhythmic pattern, to locate object features <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b1">2]</ref>, or to identify textures and objects <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b3">4]</ref>.</s><s>Whisker movements in turn are influenced by touch <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b4">5]</ref>.</s><s>The whisker system is a powerful model for studying the principles underlying sensorimotor integration and active somatosensation <ref type="bibr" target="#b5">[6]</ref>.</s><s>Critical to any mechanistic study at the level of neurons is the quantitative analysis of behavior.</s><s>Whisker movements have been measured in a variety of ways.</s><s>Electromyograms, recorded from the facial muscles, correlate with whisker movements <ref type="bibr" target="#b6">[7]</ref>.</s><s>This invasive method does not report whisker position and shape per se and is complimentary to whisker tracking.</s><s>Imaging individual labeled whiskers, for example by gluing a high-contrast particle on the whisker <ref type="bibr" target="#b7">[8]</ref>, provides the position of the marked whisker, but does not reveal whisker shape.</s><s>In addition, the particle will change the whisker mass and stiffness and thereby perturb whisker dynamics.</s><s>Monitoring a single point along the whisker using linescan imaging <ref type="bibr" target="#b8">[9]</ref>, or a linear light sheet <ref type="bibr" target="#b9">[10]</ref>, can provide high-speed information about whisker position, but only at a single line of intersection.</s></p><p><s>High-speed (.500 Hz) videography is a non-invasive method for measuring whisker movements and forces acting on whiskers and yields nearly complete information about whiskers during behavior <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref>.</s><s>The position of the whisker base with respect to the face reveals the motor programs underlying behavior.</s><s>The deformation of whisker shape by touch can be used to extract the forces felt by the mouse sensory follicles <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b16">17]</ref>.</s><s>However, highspeed videography brings its own technical challenges.</s><s>The large number of images required makes manual analysis impossible for more than a few seconds of video.</s><s>Comprehensive studies require fully automated analysis.</s><s>In addition, extraction of motions and touch forces demands accurate measurement of whisker shape, often with sub-pixel precision, and identification of rapidly moving whiskers across time.</s><s>Finally, the large volume of video data potentially places severe demands even on advanced computational infrastructures, making efficient algorithms necessary.</s></p><p><s>Tracking whiskers is challenging.</s><s>Whiskers can move at high speeds <ref type="bibr" target="#b11">[12]</ref> and in complex patterns <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b17">18]</ref>.</s><s>Adjacent whiskers can have distinct trajectories.</s><s>Moreover, whiskers are thin hairs (e.g.</s><s>mouse whiskers taper to a thickness of a few micrometers) and thus provide only limited contrast in imaging experiments.</s></p><p><s>To address these challenges, we have developed software for tracking a single row of whiskers in a fully automated fashion.</s><s>Over a manually curated database of 400 video sequences of head fixed mice (1.32610 6 cumulative images, 4.5610 6 traced whiskers, 8 mice), whiskers were correctly detected and identified with an accuracy of 99.997% (1 error per 3610 4 traced whiskers).</s><s>In other whisker tracking systems, models constraining possible motions and whisker shapes have been used to aid tracking.</s><s>In contrast, our approach uses statistics gleaned from the video itself to estimate the most likely identity of each traced object that maintains the expected order of whiskers along the face.</s><s>As a result, the shapes of highly strained whiskers (curvature.0.25/mm) can be traced with sub-pixel accuracy, and tracking is faithful despite occasional fast motion (deflections .10,000</s><s>degrees/s).</s></p><p><s>Our method consists of two steps performed in succession: tracing and linking.</s><s>Tracing produces a set of piecewise linear curves that represent whisker-like objects for each individual image in a video.</s><s>Each image is analyzed independently.</s><s>The linking algorithm is then applied to determine the identity of each traced curve.</s><s>The trajectory of a whisker is described by collecting curves with the same identity throughout the video.</s><s>Importantly, once a faithful tracing is completed, the original voluminous image data set is no longer required for downstream processing.</s></p><p><s>Once tracing is complete, a small set of features is tabulated for each curve.</s><s>Based on these features, a heuristic is used to make an initial guess as to the identity of curves in a set of images where it works well.</s><s>These initial identifications are then used to get a statistical description of the shapes and motions of whiskers.</s><s>These statistics are then used to compute a final optimal labeling for each traced curve subject to the constraint that whiskers are ordered along the face.</s></p><p><s>We validated this approach using manually curated video acquired from a head-fixed, whisker-dependant object localization task <ref type="bibr" target="#b0">[1]</ref>.</s><s>In these experiments the field of view contains a single row of partially and wholly imaged whiskers as well as the stimulus object (a thin pole, normal to the imaging plane) (Figure <ref type="figure" target="#fig_0">1A</ref>).</s><s>The camera is positioned below the whiskers and illuminated from above (Figure <ref type="figure" target="#fig_0">1B</ref>) producing silhouetted views of the whiskers (Figure <ref type="figure" target="#fig_0">1C-D</ref>).</s><s>Automated tracing is robust to occlusions introduced by the stimulus and to whisker crossings.</s><s>Tracing yields curves for both whiskers and facial hairs (Figure <ref type="figure" target="#fig_0">1C-D</ref>).</s><s>Linking is used to uniquely identify each whisker so features such as angle of deflection (Figure <ref type="figure" target="#fig_0">1F</ref>) and curvature (Figure <ref type="figure" target="#fig_0">1G</ref>) can be extracted as time-series.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Design and Implementation</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Tracing</head><p><s>The process of tracing the backbone of a whisker consists of three phases: initiation, extension, and termination.</s><s>Tracing starts by using the angle and position estimated at the highest scoring candidate initiation site.</s><s>As a curve is extended, initiation sites that fall under the traced curve are removed from consideration.</s><s>When none remain, potentially duplicate curves are resolved.</s></p><p><s>Before any analysis, images were preprocessed to remove imaging artifacts specific to particular cameras (Text S1, Figure <ref type="figure" target="#fig_0">S1</ref>).</s><s>Tracing begins by searching the image for candidate initiation sites.</s><s>These are found by performing a pixel-level segmentation isolating locally line-like features in the image.</s><s>With each segmented pixel, a score and an angle are computed.</s><s>This is an optimization step; it is possible to initiate tracing at any pixel in an image.</s><s>However, tracing is relatively expensive, and, by filtering out unproductive initiation sites, computation can be focused on the small number of relevant pixels.</s><s>On the other hand, the filtration threshold should be set conservatively so that every whisker is sure to have at least one initiation site.</s><s>Parameters were set by examining results over a small set of 10 images but worked well over the entire data set of over 1 million images.</s><s>Typically, 50-100 candidate sites were found per whisker with 10-20 false positives per image.</s></p><p><s>A variety of methods have been developed to detect interest points in natural images <ref type="bibr" target="#b18">[19]</ref>, and the Hough transform is conventionally used to find linear features.</s><s>However, given the high contrast and controlled imaging conditions used to acquire data (Text S1), we developed a linear time algorithm, summarized in Figure <ref type="figure">2</ref>, that requires only local image information and yields an estimate of salience and line orientation in a single pass.</s></p><p><s>First, a 767 square box is centered on a pixel of interest (Figure <ref type="figure">2A</ref>).</s><s>The box is divided into two partitions and the position of the intensity minima found in each subset of the two partitions is found.</s><s>These are designed to ensure that when a whisker passes through the box, one partition will preferentially collect minima along the whisker backbone, and, as a result, the position of those minima will be linearly correlated.</s><s>For each partition, principle components are computed over the covariance of the collected positions.</s><s>The principle components describe the major and minor axis of an ellipse.</s><s>The partition with the highest eccentricity is chosen, and the eccentricity is used to score how line-like the image is at the queried point (Figure <ref type="figure">2B</ref>).</s><s>The orientation of the major axis is used to estimate the direction of the line (Figure <ref type="figure">2C</ref>, Video S1).</s></p><p><s>One advantage of this approach is that the entire image need not be queried for line-like objects.</s><s>For example, in the data analyzed here, whiskers span hundreds of pixels.</s><s>A grid of lines spaced appropriately (50 px; this is an adjustable parameter) will cross each whisker at least once.</s><s>Restricting the search for line-like features to this grid greatly reduces the amount of time required for this step.</s><s>Additionally, since the algorithm relies on local minima, demands on background subtraction and other preprocessing is minimal.</s><s>The structure of the partitions ensures that lines in any orientation are detected.</s><s>Greater than 80% of the pixels that could be used to start tracing a whisker (typically 1000 per whisker over the full image) are detected using an eccentricity threshold of 0.95; only 1 is required to fully trace a whisker.</s><s>This detector systematically avoids potential starting locations near the face, near occlusions or where whiskers cross or nearly touch.</s></p><p><s>Curves are bidirectionally extended from candidate initiation sites by performing a small step (1 px) along the measured direction, and repeating until one of several criteria is met.</s><s>The sub-pixel position and tangent angle are estimated by optimizing the correlation between an oriented line detector that is parameterized as a function of sub-pixel position, angle and width (Figure <ref type="figure">3</ref>).</s></p><p><s>The line detector is designed based on modeling the intensity profile of a whisker as a rectangular valley in the image with variable position, width and angle.</s><s>The center of the whisker is estimated with sub-pixel precision by finding a position that minimizes the Laplacian of the correlation between the model and the image <ref type="bibr" target="#b19">[20]</ref>.</s><s>The line detector approximates the Laplacian of the model.</s><s>It consists of two rectangular parallel step-edge detectors (2061 px) spaced by the detector width (Figure <ref type="figure">3A</ref>).</s></p><p><s>The length was chosen to match the distance over which highly curved whiskers remain approximately linear.</s><s>The correlation at a given point is evaluated using a pixel representation of the detector that is computed by evaluating the area integral of the detector over the square domain of each pixel (Figure <ref type="figure">3B</ref>).</s><s>The value of the correlation at that position is then the dot product between pixels in the image and pixels in the evaluated detector.</s><s>For efficiency, pixel representations of the detector are pre-tabulated for discrete values of the sub-pixel position (0.1 px), width (0.2 px), and angle (2.5 degree precision).</s><s>Optimizing the width of the detector was important for reliable tracing of whiskers of different width and for reliable tracing of the very tips of whiskers.</s></p><p><s>Tracing is stopped if any one of several criteria indicates that the optimization procedure cannot be trusted to yield accurate results.</s><s>This is necessary to handle cases where whiskers were partially occluded, such as when whiskers crossed or contacted an obstructing object, such as the stimulus pole in an object localization experiment (Figure <ref type="figure">4</ref>).</s><s>The tests were for low correlation with the line detector, large left-right asymmetry in the image intensity about the detector, low mean intensity about the detector, and large angular change between steps.</s><s>A corresponding user-adjustable threshold parameterizes each test.</s></p><p><s>The tests are applied at each step as the curve is traced from the initiation point (Figure <ref type="figure">4A,</ref><ref type="figure">B</ref>).</s><s>If one of these fails (Figure <ref type="figure">4C</ref>,D), a number of single pixel steps are taken along the last trusted direction up to a user-settable maximum distance in an attempt to jump past the distrusted region (Figure <ref type="figure">4E,</ref><ref type="figure">F</ref>).</s><s>Linear extrapolation is usually a good guess.</s><s>If all tests are satisfied at one of the points, normal tracing is resumed (Figure <ref type="figure">4G,</ref><ref type="figure">H</ref>).</s><s>Otherwise, the trace is terminated at the last trusted point (Figure <ref type="figure">4G</ref>).</s></p><p><s>Occasionally, overlapping curves are generated during the tracing step.</s><s>These need to be resolved before tracking so that individual whiskers have exactly one associated curve per frame.</s><s>Searching for curves that cross the same pixel identifies pairs of potentially redundant curves.</s><s>If all the points within an interval of one of the curves is within a small distance (typically 2 px) of the other curve and that interval consists of over 50% of the total length, then it is considered redundant.</s><s>The shorter of the two curves is discarded; the shapes of shorter curves were not reliable enough to average.</s><s>This procedure is repeated until there are no redundant curves left.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Linking</head><p><s>Identifying individual whiskers is challenging.</s><s>First, the tracing algorithm generates curves (false positives) for facial hairs, trimmed whiskers, or other artifacts in the scene (Figure <ref type="figure" target="#fig_0">1C</ref>).</s><s>The linking algorithm must correctly identify true whiskers against this noise.</s><s>Second, the motion of whiskers can be difficult to reliably model <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b11">12]</ref>.</s><s>A typical trial may consist of slow, predictable motions interrupted by rapid transient motions that are occasionally too fast even for high speed (1000 fps) cameras to adequately sample <ref type="bibr" target="#b0">[1]</ref>.</s><s>Although difficult to track, these unpredictable motions may correspond to some of the most interesting data.</s></p><p><s>Our approach is based on the observation that whiskers are relatively long and maintain a consistent ordering along the face.</s><s>We use a statistical model to describe the shapes and motions that are characteristic of whiskers.</s><s>The model is then used to assign each traced whisker the most probable identity subject to the constraint that whiskers are ordered along the face.</s></p><p><s>For the majority of images, a simple length threshold can be used to remove false positives and leave exactly one traced curve per whisker.</s><s>The linking algorithm is either supplied the number, N, of whiskers on the subject mouse, or estimates it as follows: For a given length threshold t, let F t n ð Þ be the set of frames that have n curves longer than t.</s><s>If N is not supplied, then we find tÃ and nÃ such that DF tÃ nÃ ð ÞD is maximal over all possible choices.</s><s>In most of the data sets we have tested, N~nÃ, i.e. this heuristic is spot on.</s><s>But when one or more whiskers frequently leave the field of view it may fail.</s><s>If N is supplied, then we let tÃ be the value for which DF tÃ N ð ÞD is maximal because the set of long curves in each frame in F tÃ N ð Þ are always true whiskers.</s><s>For the data sets tested here, F tÃ N ð Þ represented 99.8% of a video on average (min: 90.1%, max: 100%).</s></p><p><s>The curves in the frames F tÃ N ð Þ and their heuristic classification into whisker and non-whisker based on tÃ supplies a training data set for the specific video.</s><s>From these, we can learn various characteristics to estimate the probability of a curve being one or the other.</s><s>Specifically, we build normalized histograms, n f , W and n f , FP (Figure <ref type="figure">5C</ref>), one for whiskers (W) and one for false positives (FP), for each of six features, f, using the training set.</s><s>The features used are the angle near the face, average curvature, average tracing score, length, and endpoints of a curve.</s><s>The angle and curvature are computed from a parametric third degree polynomial fit to each curve.</s><s>These histograms are then used to estimate, P cDk ð Þ, the probability that a curve c is of kind k, either W or FP, as the product,</s></p><formula xml:id="formula_0">P cDk ð Þ~P f n f ,k f c ð Þ ð Þ<label>ð1Þ</label></formula><p><s>To ensure no feature has zero likelihood, a count of one is added to each bin in a histogram before normalizing.</s></p><p><s>In (1) above, the features are assumed to be conditionally independent in order to simplify estimating feature distributions, even though this not strictly true in practice.</s><s>Moreover, errors in the heuristic may introduce a systematic sampling bias.</s><s>For example, at high deflection angles near the edge of the field of view, only a small segment of a whisker is imaged (Figure <ref type="figure" target="#fig_0">1E</ref>, purple whisker).</s><s>The traced curves from such segments might systematically fall below tÃ and be excluded from whisker feature distributions.</s><s>As a result, estimated probabilities will be biased towards longer whiskers at milder deflection angles.</s><s>Despite these caveats, the use of these feature distributions leads to a highly accurate result.</s></p><p><s>Appearance alone is not sufficient to uniquely identify individual whiskers in some cases.</s><s>To address this, we designed a naive Bayes' classifier to determine the most probable identity of each traced curve subject to ordering constraints.</s><s>The traced curves are ordered into a sequence, C, according to their time and relative anterior-posterior position.</s><s>Identifying a curve, c, involves assigning a particular label, l, from the following set of 2N+1 labels.</s><s>There is a label for each whisker, W 1 to W N , and labels, F 0 to F N , where F i identifies all false positives between whisker W i and W i+1 (Figure <ref type="figure">5A</ref>).</s><s>The kind of a label, K(l), is W if l is a whisker label, and FP if l is a false positive label.</s><s>A curve labeled W i or F i must be posterior to curves labeled W j or F j for all i,j.</s><s>For a given i, only one curve per frame may be labeled W i , but several curves may be labeled F i .</s></p><p><s>Applying Bayes' theorem, the most probable sequence of labels, L L, is given by</s></p><formula xml:id="formula_1">L L~arg max L P L ð ÞP CDL ð Þ<label>ð2Þ</label></formula><p><s>where P L ð Þ is the a priori probability of a labeling sequence, and P CDL ð Þ is the likelihood that the curves in C are generated from the sequence of items labeled by L. By design, certain labeling sequences are ruled out a priori.</s><s>Conceptually drawing a directed edge between one identity and the possible identities of the next curve yields a directed graph (Figure <ref type="figure">5B</ref>).</s><s>For a video with T frames,</s></p><formula xml:id="formula_2">P L ð Þ~P T t~1 P l t 1 À Á P N t i~2 P l t i Dl t i{1 À Á !<label>ð3Þ</label></formula><p><s>where N t is the number of curves traced in frame t, and l t i is the label of the i'th curve found in frame t.</s><s>Values for P l t 1 À Á and P l t i Dl t i{1 À Á are estimated by computing the frequency of observed label pairs that occur in the a training set, F tÃ N ð Þ.</s><s>This describes a hidden Markov model for labeling curves in a single video frame.</s><s>The optimal labeling can be computed efficiently with well-known dynamic programming techniques <ref type="bibr" target="#b20">[21]</ref>.</s></p><p><s>The likelihood, P CDL ð Þ, is computed under the simplifying assumption that the likelihood of a single curve depends only on the curves in the previous or following frame.</s><s>Using this and applying Bayes' theorem,</s></p><formula xml:id="formula_3">P CDL ð Þ! P T t~1 P c[C t P cDK l c ð Þ ð Þ P cDC t+1 ,L t+1 ,l c À Á<label>ð4Þ</label></formula><p><s>where l c is the label L assigns to the curve c, C t is the (possibly empty) set of curves found in frame t, and L t are the labels assigned to the curves in C t .</s><s>The first component, P cDK l c ð Þ ð Þ , is the likelihood that c is an object of the kind denoted by label l which we estimate with formula (1).</s></p><p><s>The second component of (4), P cDC t+1 ,L t+1 ,l À Á , is interpreted as the likelihood that a curve is part of the same trajectory as corresponding curves in the previous (or following) frame.</s><s>Similar to the approach used in equation ( <ref type="formula" target="#formula_0">1</ref>) for estimating P cDk ð Þ, we need normalized histograms n Df ,W and n Df ,FP of the changes of whiskers and false positives between successive frames for each feature f over a ''training'' data set in which the corresponding curves in successive frames is known.</s><s>While we could use the implied assignment over F tÃ N ð Þ, we first estimate a hopefully better assignment by restricting the model in (4) to use shape features alone.</s><s>That is, P cDC t+1 ,L t+1 ,l À Á is treated as a constant and thus the assignment to labels in a frame can be computed independently of other frames.</s><s>We then use this preliminary labeling over the frames of F tÃ N ð Þ as the training set over which to build n Df ,W and n Df ,FP .</s></p><p><s>Given these change histograms, one can estimate the correspondence likelihood according to the formula,</s></p><formula xml:id="formula_4">P c C t+1 ,L t+1 ,l À Á P f n Df ,K(l) f c ð Þ{f b ð Þ ð Þ K(l)~W and Ab[C t+1 s:t: l b ~l max b[C t{1 P f n Df ,K(l) f c ð Þ{f b ð Þ ð Þ otherwise 8 &gt; &lt; &gt; :<label>ð5Þ</label></formula><p><s>Note that when evaluating this likelihood, a unique corresponding curve is not always present in the previous (or following) frame.</s></p><p><s>There may be zero or many false positive curves in the previous frame with the same label.</s><s>Similarly a whisker may be missing because it exited the field of view.</s><s>Directly solving for the most probable labeling ( <ref type="formula" target="#formula_1">2</ref>) is complicated by the fact that the likelihood of a labeling in one frame depends on the labeling in neighboring frames.</s><s>Our approach is to initially score each frame by computing</s></p><formula xml:id="formula_5">P L L t DC t À Á ~P L L t À Á P C t D L L t À Á</formula><p><s>, where L L is obtained using shape features alone.</s><s>In decreasing order of this score, we 'visit' the next best frame, say t, and update the label assignment for each of the two adjacent frames that maximizes the full version of (4), provided the adjacent frame has not already been visited.</s><s>The new assignment replaces the current assignment and the frame's visitation order is updated according to the score of this new assignment (under the full model of ( <ref type="formula" target="#formula_3">4</ref>)).</s><s>In this way, we let the most confident frames influence their neighbors in a transitive fashion until every frame has been visited.</s><s>This was critical for achieving high accuracy.</s><s>Previous whisker tracking algorithms have relied on propagating the identity of a whisker frame-wise from the beginning of the video to the end, and as a result, an error in one frame is propagated throughout the rest of the video <ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results/Discussion</head><p><s>Average processing time was 8 Mpx/s/cpu (35 fps for 6406352 pixel video) measured on a 2.6 GHz Intel Core2 Duo Macbook Pro with 2 GB of RAM, and was dominated by the CPU time required to trace curves; linking time was 0.5 ms per frame.</s><s>This is faster than published speeds of similar whisker analysis packages (typically, 1-5 fps.) <ref type="bibr" target="#b10">[11,</ref><ref type="bibr" target="#b12">13,</ref><ref type="bibr" target="#b14">15]</ref>.</s><s>However, performance can be difficult to compare as implementations may improve over time.</s><s>For example, our software is equally fast as the current version of the only other publically available whisker tracker <ref type="bibr" target="#b12">[13]</ref>.</s><s>More importantly, our software can readily be run on inexpensive cluster nodes to process videos in parallel.</s><s>This is not the case for whisker trackers that require supervision <ref type="bibr" target="#b12">[13]</ref> or that depend on software with expensive licensing requirements (such as Matlab) <ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref>.</s></p><p><s>Tracing was accurate to within 0.2 px as estimated by analyzing 39 hand-traced whiskers.</s><s>Individual hand-tracings had an accuracy of 0.2360.2</s><s>pixels when compared against consensus curves.</s><s>Mouse whiskers (row C) were automatically traced in images with resolutions from 5 mm/px to 320 mm/px using default settings and in noisy, low-contrast images (Text S1).</s><s>For the best results, it is important to minimize motion blur and uniformly illuminate the scene, although illumination inhomogeneities can be partially corrected with background subtraction.</s><s>In contrast with methods that use Kalman filtering <ref type="bibr" target="#b12">[13]</ref>, traced curves are not biased by whisker dynamics.</s><s>Additionally, tracing is faithful even when curves are not well approximated by low order polynomials, in contrast to published tracing methods <ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref>.</s><s>Whiskers could be detected and traced in videos of freely behaving rats (Video S2) and mice (Video S3) with all whiskers intact.</s></p><p><s>Linking accuracy was measured against a hand-annotated set of videos selected by choosing 100 random trials from behavioral sessions of 4 mice (1.32 million frames) <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b16">17]</ref>.</s><s>The curated videos captured a range of behavior including protracted bouts (.1 s) of whisking (Video S4), multiple whiskers simultaneously contacting an object (a thin metal pole) (Video S4), and extremely fast motion (.10,000u/second) (Video S5).</s><s>Of the 4.5 million traced whiskers, 130 were incorrectly identified or not detected, less than one mistake per behavioral trial on average.</s><s>Linking is robust to whiskers that occasionally leave the field of view (Video S6), and works well even at relatively low frame rates (100 fps; see Text S1).</s><s>Lesser image quality will ultimately degrade results.</s></p><p><s>There are two principle sources of error in the linking.</s><s>First, covariance between different features is ignored.</s><s>For example, when the field of view is small, whiskers at high deflection angles might not be fully contained within the image.</s><s>Any curve tracing one of these whiskers would appear shorter than the full whisker length.</s><s>Under these conditions there is a strong correlation between angle and whisker length.</s><s>The current model penalizes the shorter length because it is rarely observed; accounting for the covariance should eliminate this problem.</s><s>Second, the estimated feature distributions are affected by systematic biases introduced from the heuristic used to initially guess whisker identity.</s><s>A heuristic relying on a length threshold, like the one used here, may systematically reject these short curves at high deflection angle.</s><s>This will result in a bias against strongly deflected whiskers.</s></p><p><s>Fundamentally, our linking method is applicable only to single rows of whiskers.</s><s>The whiskers in videos imaging multiple rows of whiskers will be traced, but, because whisker images no longer maintain a strict anterior-posterior ordering, the linking will likely fail.</s><s>Although this software was validated with images of one side of the mouse's whiskers, we have successfully tracked whiskers in images containing both whisker fields (Video S7).</s><s>Also, the whiskers of freely moving rats and mice can be traced (Videos S2,S3).</s><s>This suggests that it will be possible to use this software for two-dimensional tracking of single rows of whiskers in freely moving animals by incorporating head tracking <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b14">15]</ref>, though we have not explicitly tested this.</s></p><p><s>We analyzed data acquired during learning of an object detection task (see Text S1) <ref type="bibr" target="#b16">[17]</ref>.</s><s>We tracked whiskers from four mice during the first 6 days of training (8148 trials, 3122 frames each).</s><s>This allowed us to observe the changes in whisking behavior that emerge during learning of the task.</s><s>We looked specifically at correct rejection trials (2485 trials), which were not perturbed by contact between object and whisker, to analyze the distribution of whisking patterns during learning.</s><s>We characterized whisking by computing normalized histograms of whisker angle (1u resolution) over time (100 ms bins) for a single representative whisker (C1).</s><s>The angle and position of other whiskers were strongly correlated throughout (r 2 .0.95) in these trials.</s><s>Two patterns emerged.</s><s>After learning, two mice (JF25607 and JF25609) showed changes in whisking amplitude and mean angular position when the stimulus was present (Figure <ref type="figure" target="#fig_3">6A</ref>).</s><s>The other two mice (JF27332 and JF26706) did not show nearly as much stereotypy and appeared to rely on lower amplitude whisking (Figure <ref type="figure" target="#fig_3">6B</ref>).</s><s>All mice held their whiskers in a non-resting anterior position during most of the trial <ref type="bibr" target="#b0">[1]</ref>.</s><s>For JF25607 and JF25609, reduction in task error rate was correlated with an increase in mean deflection angle during stimulus presentation (r 2 = 0.97,0.84</s><s>respectively) (Figure <ref type="figure" target="#fig_3">6C</ref>).</s><s>This correlation was smaller for the other two mice, which also learned the task but appeared to rely on a different whisking strategy.</s></p><p><s>The forces at the base of the whisker constitute the information available to an animal for somatosensory perception.</s><s>These forces are proportional to changes in whisker curvature <ref type="bibr" target="#b15">[16]</ref>.</s><s>The instantaneous moment acting at a point on the whisker is proportional to the curvature change at that point.</s><s>In contrast to whisker tracing software that represents whiskers as line segments <ref type="bibr" target="#b13">[14,</ref><ref type="bibr" target="#b14">15]</ref> or non-parametric cubic polynomials <ref type="bibr" target="#b12">[13]</ref>, the curves produced by our tracing algorithm provide a highresolution representation of whisker shape, allowing measurement of varying curvature along the length of the whisker.</s><s>To illustrate this feature we measured curvature in the following manner: For each video frame (Figure <ref type="figure" target="#fig_4">7A</ref>), the traced whisker midline (Figure <ref type="figure" target="#fig_4">7B</ref>) was fit via least-squares to a parametric 5 th degree polynomial of the form:</s></p><formula xml:id="formula_6">x t ð Þ y t ð Þ ! ~X 5 i~0 a i x i b i y i ! ,<label>ð6Þ</label></formula><p><s>where [x(t),y(t)] are points that span the curve over the interval 0ƒtƒ1, and a i ,b i are the fit parameters (Figure <ref type="figure" target="#fig_4">7C</ref>).</s><s>Curvature was measured at a specified distance along the curve from the follicle chosen for best signal to noise.</s><s>The follicle was not imaged, and so the intersection between the curve and an arc circumscribing the face was used as a reference point instead.</s></p><p><s>The curvature was then measured as the mean curvature inside a 1-2.5 mm long region about the point of interest where it was approximately constant.</s><s>To ensure the measurement was not biased by shape outside the interval, another parametric polynomial fit (degree 2) was performed, but over the region of interest rather than the entire curve (Figure <ref type="figure" target="#fig_4">7D</ref>).</s><s>The follicle position was set by linearly extrapolating a set distance into the face.</s><s>The point of whisker-pole contact was determined as the closest point to the center of the pole on the curve or on a line extrapolated from the nearest end of the curve (Figure <ref type="figure" target="#fig_4">7E</ref>).</s><s>Time series of curvature measurement (Figure <ref type="figure" target="#fig_4">7F</ref>, measurements at 5 mm from follicle) can be used to identify most contact events.</s><s>For whisker-pole contacts first made during a protraction, the first touch tends to be followed by a series of more forceful contacts.</s><s>Contacts are correlated with relatively constant angular position of the whisker (Figure <ref type="figure" target="#fig_4">7G</ref>).</s><s>This indicates the mouse may press the whisker against the pole by translating the whisker pad rather than by rotating the whisker.</s><s>The distribution of peak curvature-change during a whiskerpole contact indicates more the bulk of contacts were made during protraction and that these were more forceful (Figure <ref type="figure" target="#fig_4">7H</ref>).</s><s>The raw curve is fit with a 5 th -degree parametric polynomial.</s><s>(D) A mask is specified to determine where the curve intersects the face.</s><s>Within a small interval (1-2.5 mm path length) about an interest point chosen for high signal to noise, the raw curve is re-fit to ensure measurements are not biased by whisker shape outside the interval.</s><s>This new fit is to a 2 nd -degree polynomial.</s><s>The curvature at the interest point is then measured as the curvature of this 2 nd fitted curve.</s><s>(E) Follicle position is estimated by extrapolating a fixed distance into the face from the mask.</s><s>Similarly, curves are extrapolated, when necessary, to contact points on the pole.</s><s>Trajectories for curvature (F) and the angle of the whisker at its base (G) are shown for the first contacting whisker in 10 trials grouped by whether the first contact was during a retraction (top 5) or protraction (bottom 5).</s><s>Trajectories are aligned to first contact.</s><s>The intervals when the whisker is in whisker-pole contact are highlighted in red.</s><s>(H) Histograms of peak contact curvature change (from resting) for the first whisker-pole contact in each trial (green) and all whisker-pole contacts prior to an answer-lick (red).</s><s>doi:10.1371/journal.pcbi.1002591.g007</s></p><p><s>Video S3 Results of automatic tracing applied to a video acquired at 100 Hz video (8 s duration) of a freely behaving mouse with its full whisker field.</s><s>Background subtraction was performed before tracing to reduce the effects of non-uniform illumination.</s><s>Because no image of the scene without the animal present was available, the background was estimated for each pixel as the maximum intensity observed at that point throughout the video.</s><s>The video was obtained with permission from the BIOTACT Whisker Tracking Benchmark <ref type="bibr" target="#b21">[22]</ref> (Clip ID: behavingMouse100, courtesy of Ehud Fonio and Ehud Ahissar).</s><s>It has been cropped, and the frame rate has been changed for presentation.</s><s>(MP4) Video S4 Results from a full trial.</s><s>The results of automated tracing and linking applied to a video (500 Hz, 9.2 s duration) of a head fixed mouse trimmed to a single row of 4 whiskers interacting with a pole.</s><s>Curves that were classified as whiskers are colored according to their identity, and otherwise they are not shown.</s><s>Multiple whiskers simultaneously interact with the pole at 1.2-1.4</s><s>sec into the trial.</s><s>Protracted bouts of whisking can be observed throughout the video.</s><s>(MP4) Video S5 Tracing and linking is robust to rapid changes in whisker angle.</s><s>The results of automated tracing and linking applied to a video (500 Hz, 150 ms) of a head fixed mouse trimmed to a single row of 3 whiskers interacting with a pole.</s><s>Curves that were classified as whiskers are colored according to their identity, and otherwise they are not shown.</s><s>One whisker (red) has been trimmed so it cannot contact the pole.</s><s>The green whisker presses against the pole, and quickly flicks past it as it is removed from the field.</s><s>This is the fastest angular motion (16u/ms) observed in the data set used to measure tracking accuracy.</s><s>(MP4) Video S6 Linking is robust to whiskers that leave the field of view.</s><s>The results of automated tracing and linking applied to a video (500 Hz, 190 ms) of a head fixed mouse trimmed to a single row of 3 whiskers interacting with a pole.</s><s>Curves that were classified as whiskers are colored according to their identity, and otherwise they are not shown.</s><s>Two whiskers (green and blue) are frequently occluded by the lick-port (black bar, lower right), but they are properly identified before and after such events.</s><s>(MP4) Video S7 Tracing and linking of whiskers bilaterally.</s><s>The results of automated tracing and linking applied to a video (500 Hz, 1 s duration) of a bilateral view to a head fixed mouse trimmed to a single row of whiskers (2 on each side).</s><s>(MP4)</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Tracking whiskers from high-speed (500 Hz) videos during an object detection task.</s><s>(A) A typical field of view.</s><s>(B) Typical imaging configuration.</s><s>(C-G) Automated results of tracing and linking.</s><s>(C) Facial hairs and whiskers are traced in each video frame and then identified by a separate tracking step.</s><s>(D) A whisker (blue) touches the pole.</s><s>(E) Two whiskers (blue &amp; green) are bent by the pole.</s><s>The most posterior whisker is strongly retracted so that only a small segment is visible.</s><s>(F) Tracking measures whisker orientation, such as the angle at base.</s><s>(G) Tracking measures whisker shape, such as mean curvature, which can be observed over time.</s><s>Changes in curvature allow the calculation of forces acting on the whisker follicle [16].</s><s>doi:10.1371/journal.pcbi.1002591.g001</s></p></div></figDesc><graphic coords="2,315.10,60.77,239.09,324.79" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .Figure 3 .</head><label>23</label><figDesc><div><p><s>Figure 2. Detecting whiskers.</s><s>(A) Lines passing through a 767 pixel box are detected by finding the location of intensity minima (black dots) in regions from two partitions.</s><s>The eccentricity of the best Gaussian fit (indicated by ellipses) to these points is used to score salience.</s><s>(B) The score computed at each point in an image.</s><s>(C) For high scoring seeds (eccentricity.0.95), the orientation of the line is indicated by the major axis of the ellipse.</s><s>Whisker tracing is initiated at these sites using the measured angle.</s><s>doi:10.1371/journal.pcbi.1002591.g002</s></p></div></figDesc><graphic coords="3,58.05,60.78,233.70,323.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 4 .Figure 5 .</head><label>45</label><figDesc><div><p><s>Figure 4. Tracing illustrated for cases with whisker crossing and pole contact.</s><s>(A,B) As a curve is extended from an initiation point, a local test region within the image is queried at each step to detect cases where the line detector may be unreliable.</s><s>This happens near (C) crossing whiskers and (D) whisker-pole contacts.</s><s>(E,F) When such a cases are encountered, the curve is linearly extended from the last trusted point, up to a threshold distance.</s><s>(G,H) If all tests are satisfied at one of the points, a line segment is used to jump the gap and normal tracing is resumed.</s><s>Otherwise, the trace is terminated at the last trusted point.</s><s>doi:10.1371/journal.pcbi.1002591.g004</s></p></div></figDesc><graphic coords="4,58.05,60.78,234.78,329.16" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>Changes in whisker behavior as mice successfully learn the object detection task.</s><s>(A-B) Normalized histograms of whisker angle (1u resolution, whisker C1, log scale, 0u lies on the lateral axis) were computed over 100 ms time bins during the first 6 training sessions over correct rejection trials.</s><s>Each histogram shows data from 21-150 trials.</s><s>(A) Some mice, such as JF25607, increase the frequency of large deflections during stimulus presentation (trial counts: 99, 150, 135, 109, 102, and 90 respectively).</s><s>(B) Others, such as JF27332, do not (trial counts: 21, 96, 90, 109, 107 and 86 respectively).</s><s>(C) During stimuluspresentation, an increase in mean deflection angle was correlated with a decrease in the false alarm (FA) rate, a measure of behavioral performance, for two mice (JF25609, JF25607).</s><s>Two mice did not exhibit this correlation (R 2 : 0.14, 0.61, 0.97, 0.84 for JF27332, JF26706, JF25609, and JF25607 respectively).</s><s>doi:10.1371/journal.pcbi.1002591.g006</s></p></div></figDesc><graphic coords="6,315.10,60.78,233.70,353.14" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 7 .</head><label>7</label><figDesc><div><p><s>Figure 7. Analysis of curvature change on contact.</s><s>(A-E) The sequence of steps used to extract detailed curvature measurements.</s><s>(A) Whiskers in raw video frames are automatically traced and linked, yielding (B) an identified set of curves for each frame.</s><s>(C)The raw curve is fit with a 5 th -degree parametric polynomial.</s><s>(D) A mask is specified to determine where the curve intersects the face.</s><s>Within a small interval (1-2.5 mm path length) about an interest point chosen for high signal to noise, the raw curve is re-fit to ensure measurements are not biased by whisker shape outside the interval.</s><s>This new fit is to a 2 nd -degree polynomial.</s><s>The curvature at the interest point is then measured as the curvature of this 2 nd fitted curve.</s><s>(E) Follicle position is estimated by extrapolating a fixed distance into the face from the mask.</s><s>Similarly, curves are extrapolated, when necessary, to contact points on the pole.</s><s>Trajectories for curvature (F) and the angle of the whisker at its base (G) are shown for the first contacting whisker in 10 trials grouped by whether the first contact was during a retraction (top 5) or protraction (bottom 5).</s><s>Trajectories are aligned to first contact.</s><s>The intervals when the whisker is in whisker-pole contact are highlighted in red.</s><s>(H) Histograms of peak contact curvature change (from resting) for the first whisker-pole contact in each trial (green) and all whisker-pole contacts prior to an answer-lick (red).</s><s>doi:10.1371/journal.pcbi.1002591.g007</s></p></div></figDesc><graphic coords="7,58.05,60.77,238.41,354.33" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>July 2012 | Volume 8 | Issue 7 | e1002591</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p><s>PLoS Computational Biology | www.ploscompbiol.org</s></p></note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>The <rs type="funder">Howard Hughes Medical Institute</rs> funded this work (www.hhmi.org).The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Availability</head><p><s>The software and documentation are freely available online (http://whiskertracking.janelia.org)</s><s>as cross-platform (Windows, OS X, Linux) source code written in C with Python and Matlab interfaces included.</s><s>Pre-built binaries are also available.</s><s>A graphical user interface is provided to aid semi-automated tracing as well as the viewing and editing of results.</s><s>The software is capable of analyzing 8-bit grayscale StreamPix (Norpix Sequence Format: SEQ), TIFF, MPEG, MOV, and AVI formatted video.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supporting Information</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Vibrissa-based object localization in head-fixed mice</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>O'connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">G</forename><surname>Clack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Komiyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">W</forename><surname>Myers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="1947" to="1967" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Haptic Object Localization in the Vibrissal System: Behavior and Performance</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Knutsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="8451" to="8464" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Biometric analyses of vibrissal tactile discrimination in the rat</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Carvell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Simons</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="2638" to="2648" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Neuronal activity in rat barrel cortex underlying texture discrimination</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Heimendahl Von</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Itskov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Arabzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plos Biol</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">305</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Feedback control in active sensing: rat exploratory whisking is modulated by environmental contact</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mitchinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Grant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Prescott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Biol Sci</title>
+		<imprint>
+			<biblScope unit="volume">274</biblScope>
+			<biblScope unit="page" from="1035" to="1041" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Where&apos; and &apos;&apos;what&apos;&apos; in the whisker sensorimotor system</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Heimendahl Von M, Knutsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kleinfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ahissar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Rev Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="601" to="612" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Biomechanics of the vibrissa motor plant in rat: rhythmic whisking consists of triphasic neuromuscular activity</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Hill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bermejo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Zeigler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kleinfeld</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="3438" to="3455" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">A system for neural recording and closed-loop intracortical microstimulation in awake rodents</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Venkatraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Elkabany</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Long</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Carmena</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Biomed Eng</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="15" to="22" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Sparse temporal coding of elementary tactile features during active whisker sensation</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Jadhav</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wolfe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Feldman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="792" to="2328" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Discriminative whisking in the headfixed rat: optoelectronic monitoring during tactile detection and discrimination tasks</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Harvey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bermejo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Zeigler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Somatosens Mot Res</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="211" to="222" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Unsupervised whisker tracking in unrestrained behaving animals</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Voigts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sakmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Celikel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophys</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="504" to="515" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Embodied information processing: Vibrissa mechanics and texture features shape micromotions in actively sensing rats</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Ritt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Andermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">I</forename><surname>Moore</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="599" to="613" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Tracking whisker and head movements in unrestrained behaving rodents</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Knutsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Derdikman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ahissar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophys</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="2294" to="2301" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">An Algorithm for Automatic Tracking of Rat Whiskers</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gyory</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rankov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Perkon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mitchinson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc Int Workshop on Visual observation and Analysis of Animal and Insect Behavior (VAIB), Istanbul, in conjunction with ICPR 2010</title>
+		<meeting>Int Workshop on Visual observation and Analysis of Animal and Insect Behavior (VAIB), Istanbul, in conjunction with ICPR 2010</meeting>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="1" to="4" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Unsupervised quantification of whisking and head movement in freely moving rodents</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Perkon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kosir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Itskov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tasic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophys</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="1950" to="1962" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Biomechanical models for radial distance determination by the rat vibrissal system</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Birdwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Solomon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Thajchayapong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Taylor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cheely</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurophys</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="2439" to="2455" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Multiple dynamic representations in the motor cortex during sensorimotor learning</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Gutnisky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Peron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O'</forename><surname>Connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Wiegert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">484</biblScope>
+			<biblScope unit="page" from="473" to="478" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Active spatial perception in the vibrissa scanning sensorimotor system</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Mehta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Whitmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Figueroa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kleinfeld</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plos Biol</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">15</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Performance evaluation of local descriptors</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mikolajczyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Schmid</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Pattern Anal Mach Intell</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="1615" to="1630" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">On Edge Detection</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Torre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Poggio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Pattern Anal Mach Intell PAMI</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="147" to="163" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">A tutorial on hidden Markov models and selected applications in speech recognition</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">R</forename><surname>Rabiner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE</title>
+		<meeting>the IEEE</meeting>
+		<imprint>
+			<date type="published" when="1989">1989</date>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="257" to="286" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mitcheson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Grant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Diamond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Prescot</surname></persName>
+		</author>
+		<ptr target="https://mushika.shef.ac.uk/benchmark" />
+		<title level="m">The BIOTACT Whisker Tracking Benchmark</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

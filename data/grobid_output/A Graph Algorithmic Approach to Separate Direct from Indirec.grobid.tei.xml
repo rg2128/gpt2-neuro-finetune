@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Graph Algorithmic Approach to Separate Direct from Indirect Neural Interactions</title>
+				<funder>
+					<orgName type="full">Landes-Offensive zur Entwicklung Wissenschaftlich-ökonomischer Exzellenz of the Land Hessen</orgName>
+					<orgName type="abbreviated">LOEWE</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">LOEWE &quot;Neuronale Koordination Forschungsschwerpunkt Frankfurt (NeFF)</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Public Library of Science (PLoS)</publisher>
+				<availability status="unknown"><p>Copyright Public Library of Science (PLoS)</p>
+				</availability>
+				<date type="published" when="2015-10-19">October 19, 2015</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Patricia</forename><surname>Wollstadt</surname></persName>
+							<email>patricia.wollstadt@stud.uni-frankfurt.de</email>
+							<affiliation key="aff0">
+								<orgName type="department">Brain Imaging Center</orgName>
+								<orgName type="institution" key="instit1">MEG Unit</orgName>
+								<orgName type="institution" key="instit2">Goethe University</orgName>
+								<address>
+									<settlement>Frankfurt/Main, Germany</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ulrich</forename><surname>Meyer</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Institute for Computer Science</orgName>
+								<orgName type="institution">Goethe University</orgName>
+								<address>
+									<settlement>Frankfurt/Main</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Wibral</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Brain Imaging Center</orgName>
+								<orgName type="institution" key="instit1">MEG Unit</orgName>
+								<orgName type="institution" key="instit2">Goethe University</orgName>
+								<address>
+									<settlement>Frankfurt/Main, Germany</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="laboratory">National Scientific and Technical Research Council (CONICET)</orgName>
+								<address>
+									<country key="AR">ARGENTINA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Johann Wolfgang Goethe University</orgName>
+								<address>
+									<settlement>Frankfurt</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Graph Algorithmic Approach to Separate Direct from Indirect Neural Interactions</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">PLOS ONE</title>
+						<title level="j" type="abbrev">PLoS ONE</title>
+						<idno type="eISSN">1932-6203</idno>
+						<imprint>
+							<publisher>Public Library of Science (PLoS)</publisher>
+							<biblScope unit="volume">10</biblScope>
+							<biblScope unit="issue">10</biblScope>
+							<biblScope unit="page">e0140530</biblScope>
+							<date type="published" when="2015-10-19">October 19, 2015</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">400D01A9376D660D50CD4C1E3FC5055D</idno>
+					<idno type="DOI">10.1371/journal.pone.0140530</idno>
+					<note type="submission">Received: March 27, 2015 Accepted: September 28, 2015</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:03+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Network graphs have become a popular tool to represent complex systems composed of many interacting subunits; especially in neuroscience, network graphs are increasingly used to represent and analyze functional interactions between multiple neural sources.</s><s>Interactions are often reconstructed using pairwise bivariate analyses, overlooking the multivariate nature of interactions: it is neglected that investigating the effect of one source on a target necessitates to take all other sources as potential nuisance variables into account; also combinations of sources may act jointly on a given target.</s><s>Bivariate analyses produce networks that may contain spurious interactions, which reduce the interpretability of the network and its graph metrics.</s><s>A truly multivariate reconstruction, however, is computationally intractable because of the combinatorial explosion in the number of potential interactions.</s><s>Thus, we have to resort to approximative methods to handle the intractability of multivariate interaction reconstruction, and thereby enable the use of networks in neuroscience.</s><s>Here, we suggest such an approximative approach in the form of an algorithm that extends fast bivariate interaction reconstruction by identifying potentially spurious interactions post-hoc: the algorithm uses interaction delays reconstructed for directed bivariate interactions to tag potentially spurious edges on the basis of their timing signatures in the context of the surrounding network.</s><s>Such tagged interactions may then be pruned, which produces a statistically conservative network approximation that is guaranteed to contain non-spurious interactions only.</s><s>We describe the algorithm and present a reference implementation in MATLAB to test the algorithm's performance on simulated networks as well as networks derived from magnetoencephalographic data.</s><s>We discuss the algorithm in relation to other approximative multivariate methods and highlight suitable application scenarios.</s><s>Our approach is a tractable and data-efficient way of reconstructing approximative networks of multivariate interactions.</s><s>It is preferable if available data are limited or if fully multivariate approaches are computationally infeasible.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Complex systems are often composed of many interacting simpler subunits.</s><s>To summarize our knowledge about such a system in an accessible format we frequently draw on its representation as a network graph, where the subunits become nodes and the identified interactions become links.</s><s>Indeed, this way of summarizing knowledge has become so successful that we witness a rapidly increasing interest in the graph-properties of such network depictions <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref>.</s><s>The use of networks as a tool to represent and analyze functional interactions has been gaining importance also in neuroscience <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref>.</s><s>In neuroscience, however, it is often overlooked that all derived graph measures are only as good as the reconstruction of the underlying interactions.</s><s>This reconstruction may suffer, because the identification of all interactions in a multi-node network is fundamentally intractable since it poses a problem in the complexity class of so called "NPhard" problems <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b10">11]</ref>.</s><s>Thus, true network graphs of interactions must be recovered using approximations if we do not want to forgo the use of network representations altogether.</s></p><p><s>To see why the identification of all interactions in a multi-node network is fundamentally intractable, we have to consider that next to the interactions from one node simply to one other node (a bivariate or pairwise interaction), there may well be interactions from a set of two (or more) source nodes to a target node.</s><s>Moreover, this multivariate nature of the interactions makes it necessary to control for a parallel influence from any other source in the network when trying to determine whether a particular set of source nodes interacts with the target node in question.</s><s>It is the enormous number of combinations of potential sources and parallel influences that makes it impossible to search all possibilities in reasonable time for any but the smallest systems (e.g.</s><s>n &lt; 20, <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b11">12]</ref>).</s><s>In fact, it can be shown formally that the problem belongs to the class of NP-hard problems, which are believed to lack algorithms that produce solutions for arbitrary input sizes in polynomial time <ref type="bibr" target="#b12">[13]</ref>.</s></p><p><s>To nevertheless apply graph theory and network models in neuroscience we need to resort to approximate representations of the true multivariate interactions.</s><s>Here, the term approximation implies that we will have to commit errors.</s><s>These errors can be of two types-falsely identifying an interaction that is physically absent, or missing an interaction that is physically present.</s><s>While both types of errors may have detrimental effects on interpretability of popular graph metrics, we may still ask which type of error to prefer, and how to build fast and efficient approximations that predominantly show the preferred type of error.</s></p><p><s>Here, we suggest that missing out on interactions instead of including spurious ones may be preferable because the nature of the obtained network becomes more 'reliable' in the sense that all the depicted links do exist.</s><s>This knowledge can then be built upon in future work.</s><s>Therefore we present an algorithm that can prune the most frequent spurious interactions from graphs obtained by a simple and efficient bivariate analysis of interactions (this idea was first proposed in <ref type="bibr" target="#b13">[14]</ref> in abstract form).</s></p><p><s>Our focus here is specifically on corrections of graphs obtained from bivariate (i.e., pairwise) analysis methods as these have most often been used to overcome the intractability of the full network reconstruction described above.</s><s>Despite their popularity, iterative bivariate analyses introduce well known methodological artifacts in the reconstructed interactions <ref type="bibr" target="#b11">[12,</ref><ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b15">16]</ref>:</s></p><p><s>(1) Bivariate analysis may detect spurious interactions (false positives) whenever the dependency between two time series is caused or mediated by one or more additional nodes in the network; (2) bivariate analysis may miss synergistic effects <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b17">18]</ref> that two or more time series have on a third.</s><s>These two problems diminish not only the reliability of individual links in a network but also compromise graph metrics of the global network.</s></p><p><s>In this study we investigate a solution to the first problem above.</s><s>Our solution builds on the possibility of reconstructing the delays of interactions (e.g.</s><s><ref type="bibr" target="#b18">[19]</ref> and similar approaches), and on specific interaction-delay based fingerprints that potentially spurious interactions must leave even in a bivariate analysis.</s><s>Our method allows to tag potentially spurious interactions for further testing (e.g. by a targeted multivariate analysis) or to remove them entirely from the graph to obtain its most reliable core.</s><s>Our method thus keeps the advantages of bivariate methods in terms of data efficiency and computational tractability over approaches that are approximately or fully multivariate.</s></p><p><s>In the following we first provide the necessary background on delay reconstruction by information theoretic methods, and on graphs.</s><s>Then we present our algorithm and a reference implementation as part of the open source toolbox TRENTOOL ( <ref type="bibr" target="#b19">[20]</ref>, www.trentool.de).</s><s>Subsequently, we characterize its properties and limitations based on theoretical considerations, simulations and application to magnetoencephalographic (MEG) data.</s><s>We discuss the relative merits of our approach and other possible approximations to a fully multivariate analysis of networks, and close by outlining possible strategies to deal with the identified potentially spurious links in the network.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Background and Implementation</head><p><s>Before we outline the algorithm in more detail, we will provide some background information by reviewing the recovery of interaction delays in an information theoretic framework.</s><s>We will also describe the coupling motifs leading to the detection of spurious interactions.</s><s>Subsequently, we will formalize the network concept in mathematical terms and complement the common undirected and unweighted network representation used for neural data <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b20">21]</ref> by introducing the weighting of network connections with their respective interaction delays (using the estimator provided in <ref type="bibr" target="#b18">[19]</ref>).</s><s>We will then describe the rationale underlying the algorithm and its implementation.</s><s>We conclude this section with the validation of the algorithm using simulated as well as experimental data.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Background</head><p><s>Interaction delay reconstruction.</s><s>Our algorithm is based on the availability of the interaction delays for bivariately reconstructed interactions.</s><s>We will systematically use the term "bivariate interaction" to indicate that in the bivariate analysis setting there is no guarantee that a reconstructed interaction is actually present in the underlying data; nevertheless, even for a spurious interaction a meaningful delay can be assigned (see examples in <ref type="bibr" target="#b18">[19]</ref>).</s><s>One possibility to obtain the delays for bivariate interactions is to use delay-sensitive measures of information transfer, i.e. transfer entropy (TE) estimators.</s><s>In <ref type="bibr" target="#b18">[19]</ref> we presented a delay-sensitive TE functional:</s></p><formula xml:id="formula_0">TE SPO X ! Y ; t; u ð Þ¼ X y t ;y tÀ1 ;x tÀu p y t ; y tÀ1 ; x tÀu ð Þ log pðy t jy tÀ1 ; x tÀu Þ pðy t jy tÀ1 Þ ;<label>ð1Þ</label></formula><p><s>which quantifies the mutual information between the past state x t -u of a source X and the present value y t of a target Y at a specific time delay u-conditional on the past state of the target, y t-1 .</s><s>This functional can be used to recover the physical interaction delay δ X,Y by scanning over possible values for u, and by taking the value of u where TE reaches a maximum as the (bivariate) interaction delay:</s></p><formula xml:id="formula_1">d X;Y ¼ arg max u ðTE SPO ðX ! Y ; t; uÞÞ:<label>ð2Þ</label></formula><p><s>A similar approach may be used for Granger causality as TE is equivalent to Granger causality for data with a jointly Gaussian distribution <ref type="bibr" target="#b21">[22]</ref>.</s></p><p><s>Note, that reconstructed interaction delays incorporate not only the mere transfer time between two neural processes, but also the time needed for local computation, if we only obtain one channel per subunit (see Fig 1 for further explanation).</s><s>Thus, interaction delay reconstruction as proposed in <ref type="bibr" target="#b18">[19]</ref>, captures the total delay between two measurement points, which in a neural system may consist of transfer time along an axonal connection but also of time needed for information transfer within the local neural microcircuit.</s></p><p><s>Spurious interactions in bivariate analysis of multivariate data sets.</s><s>Spurious interactions may arise in bivariate analysis from one of two distinct coupling motifs: In the first coupling motif (Fig <ref type="figure">2A</ref>) the dynamics of two or more nodes, representing neural sources, are simultaneously driven by processes in a third node.</s><s>A bivariate analysis may detect an interaction between the two driven nodes.</s><s>We term this a common drive (CD, also "common cause" <ref type="bibr" target="#b11">[12]</ref>).</s><s>In the second coupling motif <ref type="bibr">(Fig 2B)</ref> an interaction between two nodes is A spurious interaction due to common drive may be potentially present if the processes at vertices v s and v t are driven by v 0 with differential delays, such that the bivariate information transfer between v s and v t is a result of the common input from v 0 ; (B) Cascade effect: Spurious interaction due to cascade effects may be potentially present for all cascades of information transfer in a "chain" of sources.</s><s>In the example here, the bivariate information transfer between v s and v t (edge (s, t)) can be explained by an alternative routing of information via vertices v 1 and v 2 .</s><s>The summed weight of the alternative routing is equal to w (s,t) ; (C) "Triangle" motif: This is the most simple motif potentially giving rise to either of the above spurious interactions: (v s , v t ) could be a result of a cascade effect with respect to the path hv s , v 1 , v t i, and (v 1 , v t ) could be the result of a common drive of v 1 and v t by v s .</s><s>At most one of these interactions can be spurious.</s><s>doi:10.1371/journal.pone.0140530.g002</s><s>mediated by one or more intermediate nodes in the network and information transfer from source node to target node is routed via these intermediate nodes.</s><s>A bivariate analysis may detect an interaction between the source and target node.</s><s>We term this a cascade effect (CE, also "pathway effect" <ref type="bibr" target="#b11">[12]</ref> or "indirect causal pathways" <ref type="bibr" target="#b14">[15]</ref>).</s><s>The detection of spurious interactions by bivariate analysis have been demonstrated for simulated data as well as in neural recordings <ref type="bibr" target="#b14">[15,</ref><ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref>.</s></p><p><s>Coupling motifs leading to spurious interactions due to CD and CE exhibit a specific timing signature in the network of bivariately reconstructed interactions.</s><s>We found an example for such a timing signature in experimental data recorded from the turtle (Fig <ref type="figure" target="#fig_1">3C</ref>) <ref type="bibr" target="#b18">[19]</ref>).</s><s>Here, a spurious interaction was detected between the light source and the optic tectum.</s><s>This spurious interactions resulted from a CE, i.e., an actual routing of information from light source to tectum via an intermediate node, namely the retina.</s><s>Information transfer delays reconstructed with the TE estimator proposed in <ref type="bibr" target="#b18">[19]</ref>, revealed this CE: The summed interaction delays in the actual routing of information equaled the delay of the spurious information transfer.</s></p><p><s>Graph representation of neural data and notation.</s><s>As a last preliminary, we will present the mathematical formalization of a network to give a precise account of the algorithm and its functionality in the subsequent section.</s><s>Table <ref type="table" target="#tab_0">1</ref> lists the most important variables.</s><s>In mathematical terms, a network is described by a (directed) graph G = {V, E}, where V denotes a set of vertices or nodes and E V × V represents a set of connections between nodes, called edges <ref type="bibr" target="#b25">[26]</ref>.</s><s>In a neuroscience application, V may represent a set of individual functional units v i , e.g.</s><s>neurons, sources in MEG analysis, or voxels in functional magnetic resonance imaging data; E may represent some sort of connection between two units, for example significant functional interactions.</s><s>An edge is written as a tuple (v i , v j ), representing an edge between any two sources v i and v j .</s><s>Note, that such a tuple (v i , v j ) defines an edge as an ordered pair of two vertices and as such indicates a directed connection between these two sources (the two elements of the tuple are not interchangeable, such that (v i , v j ) 6 ¼ (v j , v i )).</s><s>We further assume that edges are weighted  5) ).</s><s>P-values for the opposite directions were not significant (n.s.).</s><s>Note, that the interaction between light source and optic tectum shows a interaction delay roughly equal to the summed interaction delay between light source and retina and retina and optic tectum (deviation 5%).</s><s>doi:10.1371/journal.pone.0140530.g003</s><s>by a weighting function w : E 7 !</s><s>N that maps the set of edges to the natural numbers.</s><s>Here, these natural numbers are chosen proportionally to the timing information as precisely and as parsimoniously as possible.</s><s>We call w (v i , vj) the weight of edge (v i , v j ).</s></p><p><s>For any edge (v i , v j ), v i is considered the predecessor of v j .</s><s>v j is called the child of v i .</s><s>A path v 0 ⇝ v l is defined as a sequence of vertices hv 0 , v 1 , . .</s><s>., v i , . .</s><s>., v l-1 , v l i, where every two consecutive vertices v i v i+1 are connected by an edge (v i , v i+1 ).</s><s>We call l the length (number of edges) of the path and we will refer to this length l as a path's graphical length, describing the number of edges used to graphically represent the path in the graph.</s><s>The total weight of a path is the sum of the weights of all individual edges comprising the path, ∑ i w (v i , vi+1) .</s></p><p><s>Fig <ref type="figure" target="#fig_2">4</ref> gives a schematic overview of the construction of a graph from time series data recorded from a set of neural sources.</s><s>Edges in the graph represent significant interactions between sources (vertices); edge weights represent reconstructed interaction delays.</s><s>We here use TE to analyze directed interactions, using the estimator proposed in <ref type="bibr" target="#b18">[19]</ref> to recover significant TE and corresponding interaction delays, but other approaches are possible.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Rationale and implementation of the algorithmic solution</head><p><s>Rationale of the algorithm.</s><s>Based on the graph representation of reconstructed directed interactions, their delays, and the theoretical preliminaries presented in the last subsection, we will now propose an algorithm that detects potentially spurious interactions by exploiting the timing signature of CE and simple CD.</s></p><p><s>As input the algorithm expects a directed, delay-weighted graph G ≔ {V, E}, represented by its connectivity matrix.</s><s>Connections are weighted with the estimated interaction delays</s></p><formula xml:id="formula_2">w ðv a ;v b Þ ¼ dðv a ;v b Þ , i.e.</formula><p><s>, the estimated physical delays between the processes represented by v a and v b .</s><s>Note that such a graph needs to be constructed from a connectivity measure, which is (a) directed and (b) allows for the reconstruction of interaction delays.</s><s>Additionally, the user has to provide a threshold θ to account for noise in empirical measurements as well as imprecision in analysis methods (described in detail below).</s><s>We furthermore assume that weights have been linearly scaled, such that they do not have any decimal places and can be represented by integer values.</s><s>As a first step, we identify potential CEs by assuming that if a CE is present in the data, the bivariate interaction represented by any edge (v a , v b ) 2 E with weight w (v a , vb) can be explained by an alternative routing of information via intermediate vertices (see an example in Fig <ref type="figure">2B</ref>).</s><s>Thus, iteratively for every edge (v a , v b ) in E the algorithm sets v a = v s as the starting and v b = v t as the target node of the current iteration.</s><s>Then the algorithm searches for an alternative path for (v s , v t ), where a path is assumed to be an alternative path if the summed delay interaction times ∑ i w (v i , vi+1) of all edges in the path are (approximatively) equal to w (v s , vt) , i.e., w (v s , vt) -θ &lt; ∑ i w (v i , vi+1) &lt; w (v s , vt) + θ.</s><s>For an example see Fig <ref type="figure">2B</ref>, where edge (v s , v t ) (dashed arrow) has a graphically longer, alternative path hv s , v 1 , v 2 , v t i with equal summed weight (solid arrows).</s><s>If the algorithm finds such an alternative path, the edge currently under investigation is tagged as potentially spurious.</s></p><formula xml:id="formula_3">(v i , v j ) edge from v i to v j w (v i , vj) weight of edge (v i , v j ) v i ⇝ v j path from v i to v j v i ⇝ k v j path from v i to v j with</formula><p><s>In a second step, the algorithm additionally identifies potential simple CD effects based on the results from the first analysis step.</s><s>Simple CD effects occur in graph motifs that form acyclic "triangles" (Fig <ref type="figure">2C</ref>).</s><s>We define an acyclic triangle as any three nodes that are acyclic, pairwise connected.</s><s>We suspect a spurious link due to simple CD if a triangle motif exhibits a suspicious timing signature; these suspicious triangles are identified from the results of the first analysis step by listing all edges with alternative paths of graphical length two.</s><s>We propose to tag two edges in each of these identified triangles: (1) the direct edge due to a CE (edge (v s , v t ) in Fig <ref type="figure">2C</ref>) and ( <ref type="formula" target="#formula_1">2</ref>) the second edge due to a simple CD (edge (v 1 , v t ) in Fig <ref type="figure">2C</ref>).</s><s>Note however, that of both tagged edges one has to be a non-spurious interaction for this rationale to hold: if the CE link (v s , v t ) is rejected, a possible driver-target relationship between nodes v s and v t is destroyed, thus nullifying the argument for the simultaneous rejection of edge (v 1 , v t ).</s><s>The same argument holds vice versa: a rejection of the tagged edge (v 1 , v t ) due to CD destroys the information cascade from v s to v t and thus cancels the CE causing the detection of (v s , v t ).</s><s>Thus, tagging both edges in a triangle motif yields a slightly too conservative approach to network representation.</s><s>For the treatment of tagged links in neuroscience we refer to the Discussion section.</s></p><p><s>A further important consideration is that once the algorithm has detected an alternative path v a ⇝ v b for an edge (v a , v b ), this alternative path stays intact, even if, at a later step, some edge in v a ⇝ v b is tagged (and probably removed).</s><s>Assume, that we have an edge (v a , v b ) with an alternative path v a ⇝ v b and that at a later step, one or more edges in this path get tagged.</s><s>Then, for each of these tagged edges, leaving a 'gap' in v a ⇝ v b , an alternative path of equal summed weight exists by definition of the algorithm.</s><s>This alternative path closes the "gap" in v a ⇝ v b , such that nodes v a and v b are still connected by a new path v a 0 ⇝ v b 0 .</s><s>This new path has the same summed delay as v a ⇝ v b , but is graphically longer.</s><s>Therefore, alternative paths identified at some step in the algorithm remain intact even if links within the paths are tagged at a later point in the algorithm's execution.</s></p><p><s>Implementation overview.</s><s>We now present the implementation of the strategy described above; more precisely, we present an algorithm that finds all alternative paths for any given edge (v a , v b ) 2 E, given a directed, weighted graph G = {V, E}.</s><s>See As a preprocessing step, we construct a graph G 0 by removing the edge (v a , v b ) from G and relabeling nodes v a , v b as starting and target nodes v s , v t of the current iteration of the algorithm.</s><s>The target weight of the alternative path is set to w crit = w (v a , vb) + θ.</s><s>Furthermore, G 0 is represented as an inverted adjacency list, i.e., a list of all nodes in V, where for every node all of its predecessors are listed.</s><s>v s is set as the first node in this list (note that we assume that v s has index 1), v t is set as the last node (has index jVj).</s><s>Therefore, for all other nodes v j in the adjacency list it now holds that 2 j jVj.</s></p><p><s>After preprocessing the input, alternative paths v s ⇝ v t with weight w (v s , vt) ± θ are detected in two steps: (1) a memoized dynamic programming approach <ref type="bibr" target="#b26">[27]</ref> is used to determine, whether any path v s ⇝ v t of a total weight w (v s , vt) ± θ exists; (2) a modified depth first search (DFS, see <ref type="bibr" target="#b26">[27]</ref> for a description) is used to reconstruct all paths with weights in the interval w (v s , vt) ± θ from the solution obtained in step <ref type="bibr" target="#b0">(1)</ref>.</s><s>The second step is necessary to reject paths that contain loops and to allow for further analysis (for example the identification of triangle motifs).</s></p><p><s>The algorithm was implemented as part of the open source toolbox TRENTOOL <ref type="bibr" target="#b19">[20]</ref>.</s><s>Dynamic programming.</s><s>We use a dynamic programming approach in step (1) to handle the inherent complexity of the problem at hand (see Discussion).</s><s>Dynamic programming allows for the solution of a complex problem by decomposing it into easily solvable subproblems.</s><s>By starting with trivial base cases, subproblems of increasing complexity are solved iteratively by taking recourse to tabulated solutions of previous (more simple) subproblems.</s><s>This reduces computational demand and is repeated until the algorithm reaches the most complex subproblem, which represents the input problem.</s><s>In the following, we will first define the Formulation and ordering of subproblems.</s><s>The overall problem of finding a path from v s to v t with weight w (v s , vt) ± θ is divided into subproblems by asking, whether a "simpler" path v s ⇝ w i v j exists; v j is any node in V and w i is any path weight w i w crit = w (v s , vt) + θ.</s><s>For example, finding a path v 1 ⇝ 5 v 3 is a subproblem to finding path v 1 ⇝ 9 v 10 where v 1 = v s and v 10 = v t .</s><s>The presented algorithm solves subproblems iteratively for increasing complexity using a dynamic programming approach.</s><s>It is thus necessary to order the subproblems by their complexity and to make their solutions immediately accessible for reuse in subsequent algorithmic steps.</s><s>This is realized by organizing solutions in a two-dimensional solution array, in which solutions are ordered by path weights and node indices, the two parameters determining complexity.</s><s>Starting with the most simple base case where w i = 0 and v s = v 1 = v j (this subproblem describes a path v s ⇝ 0 v s ), subsequent subproblems are formulated by increasing path weights and node indices in integer steps.</s><s>Thus subproblems are formulated for all combinations w i = 1, 2, . .</s><s>., w crit and v j 2 V (see for example Fig <ref type="figure" target="#fig_5">6C</ref> for the first iteration of path weights and a complete iteration over all vertices).</s><s>Individual solutions to subproblems are tabulated in the solution array of size [0; w crit ] by [1;j Vj] and are indexed by the current values for w i and v j .</s><s>This organization of subproblems allows for the easy retrieval of solutions from earlier iterations to solve the subproblem currently at hand (see below and <ref type="bibr">Fig 6)</ref>.</s></p><p><s>Finding solutions to subproblems.</s><s>For any given subproblem v s ⇝ w i v j the algorithm determines whether a path of weight w i leads into node v j .</s><s>The algorithm does this by testing whether any single edge leading into v j together with the solution to a simpler subproblem forms the path v s ⇝ w i v j .</s><s>In particular, for every edge (v p , v j ) leading into v j (where v p is a predecessor of v j ), the algorithm checks if this edges extends a path leading into v p such that the resulting path solves the current subproblem v s ⇝ w i v j (see Fig <ref type="figure" target="#fig_6">7A</ref>).</s><s>We call the treatment of one edge (v p , v j ) an algorithmic step.</s><s>In one algorithmic step, the algorithm checks (1) if there exists a path to v p and if so, (2) whether the path has length w p = w iw (v p , vj) .</s><s>If both conditions are met, the currently considered edge (v p , v j ) together with the path to predecessor v p solves the current subproblem v s ⇝ w i v j (because a path v s ⇝ w p v p exists, that together with (v p , v j ) forms a path of summed weight w i = w p + w (v p , vj) ).</s><s>The algorithm terminates once the most complex subproblem has been investigated, i.e., it has been tested if a path of length w crit , connecting node v s to v t can be found.</s><s>Note that "checking" if a path of weight w p to node v p exists corresponds to looking up whether a solution to the subproblem v s ⇝ w p v p exists in the solution array, i.e., the algorithm has to look up the entry in the solution array at row p (for node v p ) and column w iw (v p , vj) (for weight w p ).</s><s>In doing so, the algorithm solves the subproblem by reusing earlier solutions.</s><s>Note also, that relevant subproblems are guaranteed to have been solved at an earlier point in the execution of the algorithm as the algorithm treats subproblems in the order of increasing complexity: subproblems are solved by first iterating over all path weights w i = 1, 2, . .</s><s>., w crit in an outer loop, and second iterating over all nodes from v s : = v 1 to v t : = v jVj in an inner loop; a relevant subproblem v s ⇝ w p v p is guaranteed to have been solved because it always holds that w p &lt; w i per definition of w p .</s></p><p><s>To tabulate solutions to subproblems, for every edge solving the subproblem and its weight, we add a tuple (w (v p , vj) , v p ) to a set of solutions.</s><s>More specifically, when iterating over all N potential incoming edges (v p , v j ), we enter valid solutions in a sequence of sets indexed by the current algorithmic step n: L 0 w i ;v j . . .</s><s>L n w i ;v j L nþ1 w i ;v j . . .</s><s>L N w i ;v j .</s><s>Each tuple in L N w i ;v j then Formally, after initially setting L 0 w i ;v j ¼ ;, we can define each algorithmic step n as For every edge ðv p ; v j Þ leading into v j :</s></p><formula xml:id="formula_4">L nþ1 w i ;v j :¼ L n w i ;v j [ ðw ðv p ;v j Þ ; v p Þ if v j 6 ¼ v s ^LM w p ;v p 6 ¼ ; L n w i ;v j if L M w p ;v p ¼ ; ð0; v s Þ if v j ¼ v s : 8 &gt; &gt; &gt; &gt; &lt; &gt; &gt; &gt; &gt; :<label>ð3Þ</label></formula><p><s>Here, L n w i ;v j denotes the current set of tuples contributing to the solution of the subproblem v s ⇝ w i v j , i.e., a path leading from v s to v j , that has a summed weight of w i in algorithmic step n.</s></p><p><s>L M w i ;v j is a set of solutions to the subproblem v s ⇝ w p v p investigated earlier (where solutions were collected over M algorithmic steps).</s><s>Formula 3 expressed that for every edge (v p , v j ), it is tested if two conditions are met (see also Fig 7B <ref type="figure">):</ref> 1. there exists a solution to the previous subproblem L M w p ;v p , i.e., a path to the predecessor v p with weight w p = w iw (v p , vj) ; 2. the edge (v p , v j ) from predecessor to current node has a weight such that w p + w (v p , vj) = w i .</s></p><p><s>If both conditions are met, then the tuple (w (v p , vj) , v p ) is added to L n w i ;v j .</s><s>When all edges (v p , v j ) have been tested, the next subproblem v s ⇝ w i v jþ1 (inner loop) or v s ⇝ w i þ1 v j (outer loop) is considered.</s><s>The algorithm terminates once all subproblems have been investigated.</s><s>Backtracking.</s><s>In a second step, the algorithm uses backtracking to reconstruct relevant paths from the solution array returned by the dynamic programming step described in the last subsection (see Fig <ref type="figure" target="#fig_5">6F</ref>).</s><s>Paths are considered relevant, if they lead to the current target node v t and have a summed weight of w (v s , vt) ± θ.</s><s>Thus, paths are reconstructed from all entries that correspond to the solutions to subproblems v s ⇝ v t with weight w (v s , vt) ± θ (we call these relevant entries in the solution array reconstruction interval).</s></p><p><s>The backtracking algorithm uses depth first search (DFS, for a more detailed description see for example <ref type="bibr" target="#b26">[27]</ref>) to reconstruct all paths starting from one entry in the reconstruction interval at a time; it is therefore called for each entry in the reconstruction interval individually (for example, in Fig 6F, this corresponds to three calls of the backtracking algorithm for fields <ref type="bibr" target="#b4">[5,</ref><ref type="bibr" target="#b5">6]</ref>, <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b5">6]</ref> and <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b5">6]</ref>).</s><s>The backtracking is done by recursively expanding each entry in the currently considered field (i.e., visiting the next field, indicated by the currently considered solution to a subproblem).</s><s>For example, in Fig 6F , the field <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b5">6]</ref> points to the field <ref type="bibr" target="#b4">[5,</ref><ref type="bibr" target="#b3">4]</ref>, which points to <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b2">3]</ref> and so on.</s><s>While expanding one path, the algorithm checks, whether a node in the currently reconstructed path has already been visited during the recursion.</s><s>If this is the case, the path contains a loop, i.e., a node is visited twice in one path, and the respective path is discarded as it is not a valid solution to the overall problem.</s></p><p><s>All remaining reconstructed paths are considered alternative paths to the edge (v s , v t ).</s><s>If at least one such alternative path exists, (v s , v t ) is considered potentially spurious due to a CE.</s></p><p><s>Additional analysis of triangle motifs.</s><s>As laid out in the subsection Rationale of the algorithm, the algorithm identifies simple CD in an additional step.</s><s>Simple CD occurs in triangle motifs, which can be identified by listing all edges with valid alternative paths of length two.</s><s>In each triangle, the second edge of the alternative path is considered as potentially spurious due to a simple CD effect additionally to the edge considered spurious due to CE (see coupling motifs shown in Fig <ref type="figure">2C</ref>).</s></p><p><s>Output.</s><s>The algorithm returns a list of potentially spurious edges in E, and tags these spurious edges as a CE (identified by an alternative path) or a simple common drive effect (identified in a triangle motif).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Evaluation</head><p><s>To test the proposed algorithm for correctness and performance in terms of execution times, we simulated networks of different sizes and densities to serve as input graphs.</s><s>To further demonstrate the algorithm's applicability to neuroscience data, we applied it to networks derived from electrophysiological recordings during a face recognition task.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Performance of the algorithm in simulated networks</head><p><s>We simulated networks of different types: small-world networks <ref type="bibr" target="#b27">[28]</ref>, scale-free networks <ref type="bibr" target="#b28">[29]</ref> and random networks of different densities <ref type="bibr" target="#b29">[30,</ref><ref type="bibr" target="#b30">31]</ref>.</s><s>We chose these topologies because smallworldness and scale-freeness have frequently been reported to occur in functional and anatomical networks derived from neuroscience experiments <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b31">32,</ref><ref type="bibr" target="#b32">33]</ref> (for a review see also <ref type="bibr" target="#b6">[7]</ref> and <ref type="bibr" target="#b33">[34]</ref>).</s></p><p><s>The performance of the proposed algorithm on the simulated networks was tested by (1) varying the size jVj of simulated networks and (2) varying the critical path weight for alternative paths w crit .</s><s>Higher values for both parameters increased computational demand by either increasing input size directly (higher values for jVj) or by increasing the likelihood for the detection of an alternative path (higher values for w crit ).</s></p><p><s>The dependency of the likelihood of detecting an alternative path on w crit is especially relevant in random network topologies: here, the number of possible alternative paths increases exponentially in w crit , as higher values for w crit (relative to individual path weights) increase the number of possible combinations of edges that form a path of weight w crit .</s><s>More precisely, given a random graph G = {V, E} and w crit &gt; jVj, the probability for the existence of an edge is pðeÞ ¼ r ¼ jEj jVjðjVjÀ1Þ (where ρ is the density of G); furthermore, the probability of the edge having weight w is uniformly distributed with pðwÞ ¼ 1 w max .</s><s>The number of possible alternative paths can then be calculated as</s></p><formula xml:id="formula_5">X w crit w 0 ¼1 X w 0 j¼1 w 0 À 1 j À 1 Á pðwÞ j pðeÞ j " # ;<label>ð4Þ</label></formula><p><s>where P w 0 j¼1 w 0 À1 jÀ1 is the number of compositions, i.e., the number of ordered sequences of integers that sum to w 0 , the currently considered summed edge weight.</s><s>The inner sum is dominated by the growth of the number of compositions given by</s></p><formula xml:id="formula_6">P i j¼1 iÀ1 jÀ1 ¼ 2 iÀ1</formula><p><s>. Thus, the number of alternative paths grows in O(2 w crit ), i.e., it grows exponentially in the critical path weight given a sufficiently dense, random network topology.</s><s>Small-world networks.</s><s>For the simulation of small-world networks we modified the rule for network generation proposed by Watts and Strogatz in <ref type="bibr" target="#b27">[28]</ref>.</s><s>The network generation was done in two steps with parameters jVj (number of nodes), n (neighborhood coefficient) and p (rewiring probability):</s></p><p><s>1. Construct a regular ring lattice with V nodes, where every node v i 2 V is connected to its n nearest neighbors v j (such that (v i , v j ) 2 E).</s><s>Given that V = v 1 , . .</s><s>., v jVj , each node v i is connected to its neighbors v i+1 , . .</s><s>., v i+n/2 and v i-1 , . .</s><s>., v i-n/2 .</s></p><p><s>2. For every node v i all edges (v i , v j ) are rewired with probability p by replacing (v i , v j ) with (v i , v k ) where n is chosen randomly with uniform probability from Vnv i while avoiding loops and multiple edges.</s></p><p><s>3. Every edge is weighted by a random weight w (v i , vj) drawn from an interval [1;w max ] with uniform probability</s></p><p><s>Note, that we made two extensions to the original generation rule proposed in <ref type="bibr" target="#b27">[28]</ref>: we simulated network edges as directed and weighted, while the original work by Watts and Strogatz assumes undirected and unweighted edges.</s><s>We defined connections from every node v i to its n nearest neighbors as directed and weighted them with values randomly drawn from an interval [1; w max ].</s><s>We set w max to the maximum interaction delay found in an MEG data set also used as a second test case described below.</s><s>Thus, strictly speaking, only the undirected and unweighted network underlying our test cases had small-world properties (i.e., a high clustering coefficient and a short characteristic path length).</s><s>We used this approximation of smallworld properties in a weighted and directed network, as there is no agreement over how directedness and edge weights are to be incorporated into the original notion of small-worldness (as both parameters may alter the global behavior commonly observed in undirected and unweighted small-world networks) <ref type="bibr" target="#b34">[35]</ref>.</s></p><p><s>Scale-free networks.</s><s>Scale-free networks were simulated using an algorithm proposed in <ref type="bibr" target="#b35">[36]</ref>, following an implementation of the rationale by Barabási and Albert <ref type="bibr" target="#b28">[29]</ref> in <ref type="bibr" target="#b36">[37]</ref> (see also <ref type="bibr" target="#b37">[38]</ref>).</s></p><p><s>Scale-free networks resemble small-world networks in their topology, i.e., they exhibit high local clustering and low characteristic path lengths.</s><s>Both network types differ however in their degree distributions p(n), the probability that a node interacts with n other nodes in the network: in small-world networks the degrees are normally distributed, while in scale-free networks the degrees follow a power law p(n) * n -γ (where γ may vary for different networks) <ref type="bibr" target="#b28">[29]</ref>.</s></p><p><s>Random networks.</s><s>We created random networks of size jVj by independently including weighted edges with probability ρ <ref type="bibr" target="#b30">[31]</ref>, where ρ denotes the density or edge probability of a graph:</s></p><formula xml:id="formula_7">r ¼ jEj jVjðjVj À 1Þ ;<label>ð5Þ</label></formula><p><s>i.e., the the ratio of edges actually present in a graph to the number of possible edges <ref type="bibr" target="#b38">[39]</ref>.</s><s>Compared to small-world networks, a random graph typically exhibits a small average minimum path length and small average clustering coefficient <ref type="bibr" target="#b34">[35]</ref>, depending on the graph's density.</s><s>In the present study, we created two test cases with ρ = 0. for random networks and scale-free networks, where running times were least favorable for random networks.</s><s>For small-world networks on the other hand, running times did not increase dramatically for higher values jVj and w crit .</s></p><p><s>Running times for backtracking depend on the number of alternative paths to be reconstructed from the solution array.</s><s>Since the number of paths increases exponentially in w crit (given a sufficient graph size jVj), exponential running times were expected for higher values for both parameters.</s><s>We therefore defined an a priori limit of 20,000 for the number of alternative paths to be reconstructed.</s><s>If this limit was reached, the algorithm's execution was aborted.</s><s>These problem instances were considered intractable (red markers in <ref type="bibr">Fig 8)</ref>.</s><s>Intractable test cases were found for random graphs only and occurred earlier for graphs with higher densities of ρ = 0.50 (for comparison: the scale-free graphs had a density of approx.</s><s>0.15, small-world graphs of approx 0.5).</s><s>Cases of intractability were found for random graphs of sizes jVj !</s><s>65 with a density ρ = 0.50 and jVj !</s><s>130 for graphs with density ρ = 0.25 respectively.</s><s>Furthermore, intractable cases occurred for path weights w crit !</s><s>21 for random graphs with density ρ = 0.50 and for path weights w crit ! 25 for random graphs with density ρ = 0.25.</s></p><p><s>Thus, network size as well as network structure influenced the computational demand of a given input to the presented algorithm.</s><s>Note that intractable cases may well occur in a neuroscience application, where inputs can not be assumed to be bounded in any respect (e.g. in terms of graph density or graph size).</s><s>Here, the network size may be used to determine whether an input may prove intractable.</s><s>In the present simulation, network sizes smaller than 25 nodes posed no problem for the algorithm; of course, these limits are subject to moderate changes with increasing computational power.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Detection of spurious interactions in networks derived from electrophysiological time series</head><p><s>Ethics statement.</s><s>To test the algorithms applicability to biological time series, we used MEG data recorded from 15 healthy human subjects during a face recognition task as described in <ref type="bibr" target="#b39">[40]</ref>.</s><s>All subjects gave written informed consent before the experiment.</s><s>The study was approved by the local ethics committee (Johann Wolfgang Goethe University, Frankfurt, Germany).</s></p><p><s>Preparation and MEG data acquisition.</s><s>MEG data was obtained from 30 healthy subjects, recruited from the local community.</s><s>All participants had normal or corrected-to-normal vision and were right-handed (assessed by the Edinburgh Handedness Inventory <ref type="bibr" target="#b40">[41]</ref>).</s></p><p><s>MEG data were recorded using a 275-channel whole-head system (Omega 2005, VSM Med-Tech Ltd., BC, Canada) at a rate of 600 Hz in a synthetic third order axial gradiometer configuration (Data Acquisition Software Version 5.4.0,</s><s>VSM MedTech Ltd., BC, Canada).</s><s>Data were filtered with 4th order butterworth filters with 0.5 Hz high-pass and 150 Hz low-pass.</s><s>Behavioral responses were recorded using a fiber-optic response pad (Lumitouch, Photon Control Inc., Burnaby, BC, Canada).</s><s>Trials with excessive head movement (more than 5 mm) were excluded from further analysis.</s></p><p><s>Structural magnetic resonance images were obtained with a 3 T Siemens Allegra, using 3D magnetization-prepared rapid-acquisition gradient echo sequence.</s><s>Anatomical images were used to create individual head models for MEG source reconstruction.</s></p><p><s>Task.</s><s>The participants were presented with a randomized sequence of degraded two tone images of human faces (Mooney Faces, <ref type="bibr" target="#b41">[42]</ref>, see  <ref type="bibr" target="#b42">[43]</ref>), SPM2 (http://www.fil.ion.ucl.ac.uk/spm), and TRENTOOL <ref type="bibr" target="#b19">[20]</ref>.</s><s>We will briefly describe the applied analysis here, for a more in depth treatment refer to <ref type="bibr" target="#b39">[40]</ref>.</s></p><p><s>For data preprocessing, we defined experimental trials from the continuously recorded MEG data.</s><s>A trial was defined as the epoch from -1000 ms prior to stimulus presentation until 1000 ms after stimulus presentation.</s><s>Trials contaminated by artifacts (eye blinks, muscle  activity, or jump artifacts in the sensors) as well as trials with wrong responses were discarded.</s><s>Trials were baseline corrected by subtracting the mean amplitude between -500 to -100 ms before stimulus onset.</s></p><p><s>To investigate differences in source activation in the face and non-face condition, we used a frequency domain beamformer <ref type="bibr" target="#b43">[44]</ref> at frequencies of interest identified at the sensor level (80 Hz with a spectral smoothing of 20 Hz).</s><s>We computed the frequency domain beamformer filters for combined trials ("common filters") consisting of activation (multiple windows, duration, 200 ms; onsets at every 50 ms from 0 to 450 ms) and baseline data (-350 to -150 ms).</s><s>To compensate for the short duration of the data windows, we used a regularization of λ = 5% <ref type="bibr" target="#b44">[45]</ref>.</s></p><p><s>To find significant source activation in the face versus non-face condition, we first conducted a within-subject t-test for activation versus baseline effects.</s><s>Next, the t-values of this test statistic were subjected to a second-level randomization test at the group level to obtain effects of differences between face and no-face conditions; a p-value &lt; 0.01 was considered significant.</s><s>We identified 14 sources with differential spectral power between both conditions in the frequency band of interest in occipital, parietal, temporal, and frontal cortices (see Fig <ref type="figure" target="#fig_10">9D</ref> and <ref type="bibr" target="#b39">[40]</ref> for exact anatomical locations).</s><s>Namely, our network representing information flow between sources has 14 nodes.</s><s>We then reconstructed source time courses for TE analysis, this time using a broadband beamformer with a bandwidth of 10 to 150 Hz.</s></p><p><s>We estimated TE between beamformer source time courses <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b45">46]</ref> within an analysis window of 500 ms (-50-450 ms) and tested resulting TE values for their statistical significance <ref type="bibr" target="#b19">[20]</ref>.</s><s>We furthermore reconstructed information transfer delays for significant information transfer by scanning over a range of assumed interaction delays from 5 to 17 ms (resolution 2 ms), following the approach in <ref type="bibr" target="#b18">[19]</ref> and parameters used in a similar analysis in <ref type="bibr" target="#b45">[46]</ref>.</s><s>We thus obtained a delay weighted, directed network of information transfer during a face recognition task, consisting of 14 nodes and edges with weights in the range from 5 to 17.</s><s>We then applied the proposed algorithm to the resulting delay-weighted networks of directed interactions.</s><s>For two example data sets, we used bootstrapping (1000 resampled cases) to obtain an estimate of the standard error of the delay estimation <ref type="bibr" target="#b46">[47]</ref> and used this estimated standard error as input parameter θ for a more detailed example application of the algorithm.</s></p><p><s>Performance results for "empirical" networks.</s><s>For empirical data running times increased almost linearly in jVj + jEj (Fig <ref type="figure" target="#fig_10">9A</ref>).</s><s>We chose to present running times as function of the sum of the number of nodes and number of edges because a systematic variation of network size was not possible here (rather, network size was determined by previous source reconstruction).</s><s>Cases of intractability did not occur even though some data sets exhibited high network densities (ranging from 0.07 to 0.43 with a mean of 0.24 and a SD of 0.09).</s></p><p><s>The percentage of potentially spurious edges increased with higher thresholds θ up to 32% of potentially spurious edges for θ = 7ms (Fig <ref type="figure" target="#fig_10">9B</ref>).</s><s>Edges were considered potentially spurious if at least one alternative path existed or a simple CD was present.</s><s>Note, that the threshold serves to adjust the algorithm's sensitivity and may lead to the erroneous exclusion of edges if chosen too high.</s><s>Thus, the value for θ should be chosen such that imprecisions in interaction reconstruction are accounted for, while the false discovery rate is not increased.</s><s>As a rule of thumb, a user may use prior knowledge about the minimum interaction delay to be expected in the data as an upper bound for θ or use bootstrapping to obtain an error estimate for reconstructed delays.</s></p><p><s>In Fig 9E , we show results for two example MEG data sets from the validation test-set before and after analysis with the proposed algorithm.</s><s>We used bootstrapping to estimate the standard error in the reconstruction of the interaction delays.</s><s>We found an average error over channels of 2.6 ms for subject one and 2.9 ms for subject two.</s><s>Accordingly, we set θ = 3ms as this corresponded to the next integer value in ms.</s><s>The average reconstructed interaction delay was found to be 7.06 ms (SD: 3.57 ms) for subject one and 6.94 ms (SD: 3.32 ms) for subject two.</s><s>We also calculated the average path length as the average weight of the shortest path for each node to every other node in the network; the average path length was 6.84 ms for subject one and 6.81 ms for subject two.</s><s>Note that the graphs are highly connected prior to the application of the algorithm, such that the shortest path between any two nodes consists of just one edge; thus the average path length is close to the average edge weight.</s></p><p><s>After application of the algorithm, the recovered networks of information transfer consisted of 20 links for subject one and 34 links for subject two; networks showed an overlap of nine edges, which corresponds to an 45% overlap and is 20 times higher than an overlap of 2% expected purely by chance.</s><s>Thus, the network can be considered highly consistent.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Algorithmic detection of potentially spurious edges in delay weighted networks</head><p><s>We have presented an algorithm that finds potentially spurious links arising from bivariate analysis of multi-node networks based on interaction timing.</s><s>The algorithm identifies the most common motifs causing the reconstruction of spurious links, such that identified links can be subjected to further testing, or removed.</s><s>By removing all potentially spurious edges, the user obtains a sub-network that is guaranteed to contain only non-spurious edges; this improves the validity of the network representation itself as well as the validity of potential subsequent network analysis.</s><s>The algorithm thus allows the user to find an approximate representation of multivariate interactions in the data, using only bivariate interaction reconstruction and avoiding the computationally heavy problem of an approximately or even fully multivariate approach.</s></p><p><s>The presented algorithm may be used in neuroscience to post-process any network of reconstructed bivariate interactions, where interactions are directed and weighted by their estimated delays.</s><s>We demonstrated the application of the algorithm using a reference implementation in MATLAB as part of the open source toolbox TRENTOOL <ref type="bibr" target="#b19">[20]</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Application in neuroscience</head><p><s>Based on findings in <ref type="bibr" target="#b18">[19]</ref>, we propose to identify spurious links by their characteristic timing signatures in networks of reconstructed bivariate interactions <ref type="bibr" target="#b13">[14]</ref>.</s><s>In particular, we propose that a link is likely to be spurious if an alternative path with identical timing exists (Fig <ref type="figure">2)</ref>.</s></p><p><s>We assume that a bivariate information transfer between two nodes and a corresponding alternative path constitute a redundant routing of information.</s><s>Such a redundant routing conflicts with the hypothesis that the brain evolves under the objective of maximizing economy and efficacy <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b47">48]</ref> while minimizing biological costs <ref type="bibr" target="#b48">[49,</ref><ref type="bibr" target="#b49">50]</ref> (see for example the "save-wire hypothesis" in <ref type="bibr" target="#b50">[51]</ref>).</s><s>We thus argue that any redundant routing of information between two sources of neural activity -with identical timing-would be implausible, given the brain's organizational principles.</s><s>Therefore, whenever a redundant routing for a bivariate information transfer is found, our rationale implies spuriousness of either the bivariate information transfer or the alternative path.</s><s>Of the two, we consider the bivariate interaction spurious, because (1) spurious bivariate interactions are a likely artifact in bivariate analysis of multi-node networks; and (2) if a bivariate and thereby direct means of information transfer between a source and a target existed, the maintenance of a physiologically more costly alternative path of identical information transfer would be unlikely.</s></p><p><s>Note, that this rationale exclusively applies to neural systems.</s><s>Also remember, that the algorithm does not tag all alternative routings of information, but only those with a certain timing signature; alternative routings with different delays than the bivariate interaction are not considered redundant and are not tagged.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Treatment of tagged links in neuroscience applications</head><p><s>Our algorithm tags potentially spurious edges to let the user decide if a tagged edge should be ultimately excluded from the network representation.</s><s>To minimize erroneous exclusions, the user may inform the decision by additional evidence, e.g.</s><s>previous anatomical or functional findings.</s><s>If such previous findings do not exist, we recommend the exclusion of tagged edges.</s></p><p><s>We consider the erroneous rejection of links favorable over erroneous inclusion, i.e., we suggest to rather commit a false negative error if in doubt.</s><s>We favor false negative errors because in statistical terms, false negatives are considered less severe than false positives (erroneously including a spurious link), as they yield more conservative results.</s><s>If the user removes all tagged links, the resulting network is guaranteed to contain non-spurious links only, but some links may be missing from the network.</s></p><p><s>In triangle motifs, the exclusion of all tagged links will definitely lead to false negatives: Here, two links are tagged but the exclusion of both edges is mutually exclusive; more precisely, the exclusion of one of the two tagged edges destroys the motif giving rise to the second, potentially spurious link.</s><s>This is illustrated in Fig <ref type="figure">2C</ref>, where the exclusion of link (v 1 , v t ) destroys the CE leading to the tagging of edge (v s , v t ), and on the other hand, the exclusion of (v s , v t ) destroys the CD leading to the tagging of (v 1 , v t ).</s><s>In triangle motifs, the rejection of both edges thus produces a false negative error; here, prior anatomical or functional evidence are required to decide which of the two tagged edges is non-spurious.</s></p><p><s>It is further possible to use modeling approaches to test if tagged links are actually present in the network of bivariate interactions.</s><s>For example dynamic causal modeling (DCM, <ref type="bibr" target="#b51">[52]</ref><ref type="bibr" target="#b52">[53]</ref><ref type="bibr" target="#b53">[54]</ref>) may be used to test whether a model containing a certain link is favorable given the observed data over a second model missing this link.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Types of multivariate effects not identified by the algorithm</head><p><s>The correction performed by the presented algorithm is not exhaustive with respect to all types of multivariate interactions potentially occurring in neuroscience data.</s><s>The interactions not targeted by the algorithm are of two types: (1) more general cases of CD; (2) synergistic effects <ref type="bibr" target="#b16">[17]</ref>, i.e., combined effects of two or more sources on a third source.</s><s>In the following we will discuss the conceptual and practical limitations that prevent an exhaustive algorithmic correction for these two types of multivariate interactions.</s></p><p><s>Detection of general common drive effects.</s><s>The presented algorithm detects simple CD in triangle motifs by listing all links with alternative paths of length two.</s><s>Our algorithm can theoretically be extended to explicitly search for general cases of CD, where two nodes are commonly driven via arbitrarily long cascades of information transfer (Fig <ref type="figure">2A)</ref>.</s></p><p><s>General CD may be identified by searching for paths of equal summed interaction delays that have a common source and target node.</s><s>We again assume that equal summed delays hint at redundant and therefore spurious information transfer.</s><s>It can then be tested if the source node is a common driver for the last and second to last node in one of the two paths by looking at the information transfer delay between these last two nodes.</s><s>For an example, see Fig <ref type="figure">2A,</ref><ref type="figure"></ref> where the bivariate information transfer in the network forms two paths of equal delays connecting nodes v 0 and v t : The link (v s , v t ) is tagged as spurious because its weight corresponds to the difference in the summed path weights v 0 ⇝ c 0 v s and v 0 ⇝ c v t : w (v s , vt) = cc 0 .</s><s>In this scenario, v 0 is a common driver of nodes v s and v t .</s><s>This approach also allows to test for higher order CD, i.e., one source driving three or more nodes simultaneously.</s><s>A similar algorithm was proposed by Marinazzo and colleagues <ref type="bibr" target="#b54">[55]</ref> to identify spurious bivariate links using a network of multivariately reconstructed interactions (see next section).</s></p><p><s>Even though an extension to general CD is hypothetically possible, its realization is not feasible in practice: The extension requires that for each network node all originating paths of arbitrary length need to be listed.</s><s>An algorithm fulfilling this task would have an asymptotic running time many times higher than the algorithm presented in this work: For each node in V, O(jV -1j!) paths of arbitrary length and weight exist (in the first step O(jVj -1) nodes can be reached from the current starting node, in the second step O(jVj -2) nodes can be reached, and so forth).</s><s>The asymptotic running time of such an algorithm thus amounts to O(jVj Á jV -1j!).</s><s>Such a factorial running time is commonly not considered feasible in practice and would limit the application to networks of very small size.</s></p><p><s>Detection of synergistic effects.</s><s>Synergistic effects describe information that is transferred from a set of sources to a common target, whereby information is combined in a non-trivial fashion <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b55">56,</ref><ref type="bibr" target="#b56">57]</ref>.</s><s>In this case, looking at the set of sources simultaneously provides information about the target that is not obtainable from looking at each source separately.</s><s>As a toy example, one can think of three nodes implementing a logical XOR operator, where two nodes serve as binary input and the third node serves as output node.</s><s>Each state of the output node is the exclusive OR of the two previous input states.</s><s>A bivariate analysis of every pairwise interaction between the three nodes will not detect any significant interaction, because the pairwise mutual information between any two nodes is 0. Analyzing the triplet of nodes simultaneously will however detect an interaction; e.g. the conditional mutual information (TE) will be greater than zero, because it "decodes" the information in one source by conditioning on the second source.</s></p><p><s>Consequently, synergistic effects between a set of sources and a target node can only be revealed if the whole set is considered simultaneously in some multivariate reconstruction of interactions or by explicitly reconstructing synergistic interactions <ref type="bibr" target="#b17">[18,</ref><ref type="bibr" target="#b57">58]</ref>.</s><s>Such synergistic effects are not targeted by design of our algorithm as it simply post-processes results from bivariate network analyses.</s><s>To include synergistic effects, a multivariate interaction analysis would have to replace the estimation of bivariate interactions.</s><s>Note however, that any fully multivariate method for interaction reconstruction would need to identify the optimal subset of sources that exert some meaningful influence on a given target node.</s><s>The identification of such an optimal set of sources would require the exhaustive testing of the power set PðVÞ of all network sources, due to the non-additivity of information contributions from individual sources (because of redundant and synergistic effects).</s><s>The power set has size jPðVÞj ¼ 2 jVj , i.e., testing all sources brute force has a theoretical running time of O(2 jVj ).</s><s>In fact, it has been shown that optimal subset selection in regression is an NP-hard problem <ref type="bibr" target="#b9">[10]</ref>.</s><s>This proof extends to source selection for TE due to the equality of TE with Granger causality for jointly Gaussian variables <ref type="bibr" target="#b21">[22]</ref>.</s><s>Thus, the reconstruction of truly multivariate interactions in arbitrarily large networks poses a computationally intractable problem (if P 6 ¼ NP).</s><s>In the next subsection we will present approaches that try to approximate fully multivariate methods to circumvent the inherent computational complexity of the problem at hand.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Comparison to other approximative methods for multivariate network reconstruction</head><p><s>The proposed algorithm provides an approximative method for the inference of networks of multivariate interactions to handle the computational intractability of exact network reconstruction.</s><s>Methods with a similar purpose have been proposed by various authors.</s><s>In the following we will review some of these methods and list scenarios that may benefit from the application of our algorithm.</s></p><p><s>Non-uniform multivariate embedding by Faes and colleagues.</s><s>Faes and colleagues <ref type="bibr" target="#b59">[60]</ref> proposed a non-uniform embedding technique to estimate the information transfer from one source variable to a target in the presence of further potentially relevant sources of information transfer.</s><s>The authors propose to iteratively build a non-uniform embedding vector from a set of candidate time points from the past of all sources in a network up to a certain predefined limit.</s><s>Points are included in the vector if they add significant information about the next state of the target.</s><s>Information transfer between a source and a target may then be estimated while conditioning on this non-uniform embedding vector.</s></p><p><s>The iterative construction of the embedding vector follows a greedy strategy that is similar to the strategies discussed above <ref type="bibr" target="#b11">[12,</ref><ref type="bibr" target="#b54">55]</ref>.</s><s>Accordingly, the returned embedding vector is not guaranteed to yield the set of maximally informative source time points with respect to the target, as it will miss purely synergistic contributions of two or more points to the target.</s><s>As said above, an exhaustive testing of all possible subsets of source time points poses an intractable computational problem.</s><s>This is explained next.</s></p><p><s>Exhaustive brute force analysis.</s><s>A brute force analysis of interactions between all possible subsets (m-tuples) in a set of nodes would yield an exact solution to the problem of inferring the network of multivariate interactions from data.</s><s>For the example of m = 3, one would enumerate all 3-tuples or triplets in the set of nodes and for each triplet evaluate the six possible interaction motifs-three potential targets and for each target two possible combinations of source and conditioning node.</s><s>Note that here the mandatory conditioning takes care of potential synergies.</s><s>For the general case of m-tuples, this would generalize to jVj m À Á possible subsets of size m, where for each tuple m Á (m -1) possible interaction motifs exist.</s><s>As for approximative approaches, such an analysis is feasible for small numbers of m only.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Application scenarios for the proposed algorithm</head><p><s>The most basic application scenario for the proposed algorithm is as post-processing step after bivariate reconstruction of directed, delay-weighted interactions from a set of neural sources.</s><s>Here, the algorithm helps to prune potentially spurious edges to obtain an approximative, statistically conservative network representation of the physical interactions.</s><s>In this scenario, our algorithmic correction is favorable over multivariate interaction reconstruction whenever available data is limited or high-dimensional, such that data points are not sufficient to estimate highly multivariate interactions.</s><s>Here, our algorithm is more data-efficient because it relies on bivariate interaction reconstruction only.</s><s>Such data-efficiency is especially relevant for information theoretic measures, where quantities are often estimated using kernel estimators or neighbor methods (as for example proposed in <ref type="bibr" target="#b60">[61]</ref>); applying these kernel estimators to the estimation of highly multivariate data may lead to very high dimensional search spaces, which suffer from the curse of dimensionality, hindering a reliable estimation of the quantities of interest.</s></p><p><s>The application of our algorithm may prove beneficial prior to calculating graph theoretical measures from networks of reconstructed interactions.</s><s>We argue that these measures are more reliable when applied to a statistically conservative network representation.</s></p><p><s>The algorithm may further be used in conjunction with modeling approaches such as DCM, where it serves to limit the model space to be tested.</s><s>DCM may also help to identify the most plausible network representation from models, after in-and excluding individual tagged edges respectively.</s></p><p><s>The presented algorithm may further serve as a preprocessing step for trivariate estimation of information transfer: By testing only the triangle motifs identified by the algorithm, the number of necessary information transfer estimations reduces drastically compared to the brute-force approach discussed in the last subsection.</s><s>Necessary estimations include bivariate interaction reconstruction (jVj Á (jVj -1) calculations for jVj nodes) and subsequent multivariate interaction reconstruction for identified triangle motifs.</s><s>The actual number of multivariate reconstructions depends on the number of motifs: The approach is asymptotically faster if 90% or less of the possible jVj 3 À Á triangle motifs are actually present in the data (for network sizes jVj &gt; 12).</s><s>Trivariate estimation of TE has been implemented in TRENTOOL <ref type="bibr" target="#b19">[20]</ref>, which also includes the reference implementation of the proposed algorithm.</s><s>Thus, both analyses may be used in conjunction to estimate multivariate TE of order three.</s><s>An extension to higher orders is theoretically possible although not implemented as it is not deemed feasible for practical purposes.</s></p><p><s>Finally, the algorithm is especially suitable for the application in simulated networks where all information transfers have a delay of unity, such as elementary cellular automata, and spurious interactions are therefore easily found.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig 1 .Fig 2 .</head><label>12</label><figDesc><div><p><s>Fig 1. Reconstructing delay times from electrophysiological recordings.</s><s>The physiological delay between two measurement points v s , v t consists of the time needed for information transfer via axonal connections (δ s,t 0 ) and internal computation within populations of neurons (d in t 0 ;t ), such that in a network representation of reconstructed interactions we find w ðv s ;v t Þ ¼ d s;t 0 þ d in t 0 ;t .</s><s>Black arrows represent information transfer within the neural microcircuits.</s><s>doi:10.1371/journal.pone.0140530.g001</s></p></div></figDesc><graphic coords="4,200.01,78.01,257.90,154.83" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig 3 .</head><label>3</label><figDesc><div><p><s>Fig 3. Directed interactions in the turtle brain during visual stimulation with random light pulses (modified from [19], creative common attribution license CC BY).</s><s>(A) Raw traces recorded in the tectum (blue) and from the retina (green) overlaid on the light pulses (yellow).</s><s>(B) Turtle brain explant with eyes attached.</s><s>Transfer entropy was found from the retina of the right eye to the left tectum, as well as from the light source (yellow) to the retina and to the tectum (***** denotes p &lt; 10 (-5) ).</s><s>P-values for the opposite directions were not significant (n.s.).</s><s>Note, that the interaction between light source and optic tectum shows a interaction delay roughly equal to the summed interaction delay between light source and retina and retina and optic tectum (deviation 5%).</s></p></div></figDesc><graphic coords="5,200.01,78.01,362.16,182.44" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig 4 .</head><label>4</label><figDesc><div><p><s>Fig 4. Graph representation of neural data.</s><s>(A) Recorded signals from various sources in the brain; (B) Pairwise estimation of transfer entropy (TE) and reconstruction of interaction delays u between any two sources; (C) Adjacency matrix: representation of estimated delay times between all source combinations, every entry represents an information transfer from the ith row to the jth column; (D) Adjacency matrix after test for statistical significance; (E) Visualization of the graph represented by the connectivity matrix: every source is represented by a vertex, every significant information transfer is represented by an edge.</s><s>(The blue circle indicates the respective representation of an exemplary interaction between source 1 and source 3 throughout all steps of graph reconstruction.)</s><s>doi:10.1371/journal.pone.0140530.g004</s></p></div></figDesc><graphic coords="7,200.01,78.01,324.69,437.50" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head></head><label></label><figDesc><div><p><s>Fig 5 for an overview of the algorithm.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig 5 .</head><label>5</label><figDesc><div><p><s>Fig 5. Overview of the proposed algorithm.</s><s>The algorithm expects a weighted and directed graph G = {V,E} and a threshold θ as input.</s><s>In a preprocessing step, the algorithm creates graph G 0 from input G, as an input for the dynamic programming algorithm, by removing edge (v a , v b ) and by relabeling and reordering nodes.</s><s>Then, in the next step, alternative paths for (v a , v b ), are searched through dynamic programming (see also main text).</s><s>If at least one alternative path is found, paths are reconstructed using a depth first search (DFS, [27]) to ensure that alternative paths do not contain loops.</s><s>If an alternative path contains no loops, the currently investigated edge (v a , v b ) is tagged as potentially spurious.</s><s>If no alternative edge is found, (v a , v b ) is considered nonspurious.</s><s>The algorithm then enters the next iteration, in which the next edge (v a , v b ) 2 E is investigated for alternative paths.</s><s>doi:10.1371/journal.pone.0140530.g005</s></p></div></figDesc><graphic coords="9,36.00,78.01,388.02,441.75" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig 6 .</head><label>6</label><figDesc><div><p><s>Fig 6.</s><s>Visualization of the proposed algorithm.</s><s>Search for alternative paths to edge (1, 6) (dotted arrow), i.e., v s = 1 and v t = 6.</s><s>Solutions L n v s ðw i ; ⇝v j Þ to subproblems are managed in a two dimensional solution array indexed by path weight w i and vertex number v j .</s><s>Solutions are calculated iteratively over w i (rows) and v j (columns).</s><s>(A) Solution matrix after first iterative step (subproblem L 1 v s ð1; ⇝v 2 Þ): There are two edges leading to vertex 2 of which only edge (1, 2) yields a valid solution by pointing to an earlier solved subproblem (green box), whereas edge (5, 2) has a weight of 7 leading to a negative difference in</s></p></div></figDesc><graphic coords="11,36.00,78.01,466.53,585.81" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig 7 .</head><label>7</label><figDesc><div><p><s>Fig 7. Schematic example of a subproblem of the proposed algorithm.</s><s>(A) Example subproblem L nw i ;v j : At the n th algorithmic step, we search for all paths of weight w i leading to node v j ; (B) Finding a solution for the current subproblem by investigating solutions to prior subproblems: We investigate all predecessors v p of the current node v j ; if there exists a solution to L M w p ;v p , i.e., there is a solution to the prior subproblem v s ⇝ w p v p of finding a path of weight w p leading from v s to v p , and w p + w (v p , vj) = w i , we find a solution to the current subproblem L n w i ;v j .</s><s>doi:10.1371/journal.pone.0140530.g007</s></p></div></figDesc><graphic coords="12,200.01,512.05,248.61,115.03" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head></head><label></label><figDesc><div><p><s>25 and ρ = 0.50 respectively.</s><s>Performance results for simulated networks.</s><s>Running times of the algorithm increased as a function of graph size jVj and critical path weight w crit (Fig 8).</s><s>For the dynamic programming part of the algorithm, running times increased in a linear fashion in both network size jVj (Fig 8A) and critical path weight (Fig 8B).</s><s>Running times thus correspond to theoretically expected running times.</s><s>The time needed for backtracking the obtained solutions grew exponentially in jVj (Fig 8C) and critical path weight (Fig 8D)</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head></head><label></label><figDesc><div><p><s>Fig 9C for an example stimulus) and scrambled stimuli, where black and white patches were randomly rearranged to minimize the likelihood of detecting a face.</s><s>The participants had to indicate the detection of a face by button press.</s><s>Only trials in which faces were correctly identified entered further analysis.</s><s>Data analysis.</s><s>MEG data were analyzed using MathWorks MATLAB (2008b, The Math-Works, Natick, MA) and the open source MATLAB toolboxes FieldTrip (version 2008-12-08;</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Fig 8 .</head><label>8</label><figDesc><div><p><s>Fig 8. Results running time.</s><s>Running times [log(s)] for dynamic programming (A, B) and backtracking (C, D) by number of vertices jVj and maximum path weight w crit .</s><s>Running times are shown for different graph types (SW: small-world, SF: scale-free, RN: random networks with density ρ).</s><s>Red markers indicate cases of intractability (execution was aborted after a pre-defined limit of reconstructed alternative paths was reached).</s><s>doi:10.1371/journal.pone.0140530.g008</s></p></div></figDesc><graphic coords="16,200.01,78.01,306.63,228.30" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Fig 9 .</head><label>9</label><figDesc><div><p><s>Fig 9. Results empirical data sets.</s><s>(A) Running time of the complete algorithm by number of nodes plus number of edges jVj + jEj; (B) Mean percentage of tagged, potentially spurious edges by chosen threshold θ after application of the algorithm, error bars indicate 1 standard deviation (SD); the value for θ obtained from bootstrapping in two example data sets is marked in red; (C) Mooney Stimulus [42]; (D) Cortical sources after beamforming of MEG data (l.,left;</s><s>r., right: l. orbitofrontal cortex (OFC); r. middle frontal gyrus (MiFG); l. inferior frontal gyrus (IFG left); r. inferior frontal gyrus (IFG right); l. anterior inferotemporal cortex (aTL left); l. cingulate gyrus (cing); r. premotor cortex (premotor); r. superior temporal gyrus (STG); r. anterior inferotemporal cortex (aTL right); l. fusiform gyrus (FFA); l. angular/supramarginal gyrus (SMG); r. superior parietal lobule/precuneus (SPL); l. caudal ITG/LOC (cITG); r. primary visual cortex (V1)), see also [40]; (E) Example of removal of tagged edges: MEG data of a face detection task in two subjects.</s><s>First column shows transfer entropy values prior to detection of potentially spurious edges (Pre).</s><s>The second column shows color-coded tagged edges (red: Potential cascade effects, blue: potential common drive effects; θ = 3ms).</s><s>The third column shows the network of directed interactions after removal of all tagged edges (Post).doi:10.1371/journal.pone.0140530.g009</s></p></div></figDesc><graphic coords="17,36.00,78.01,385.37,537.22" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc><div><p><s>Notation.</s></p></div></figDesc><table><row><cell>Graph representation</cell><cell></cell></row><row><cell>G</cell><cell>graph, consisting of the sets V and E</cell></row><row><cell>V</cell><cell>set of vertices</cell></row><row><cell>E</cell><cell>set of edges</cell></row><row><cell>v i</cell><cell>vertex with index i</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>PLOS ONE | DOI:10.1371/journal.pone.0140530</s><s>October 19, 2015</s></p></note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>MW and PW received financial support from the grant <rs type="funder">LOEWE "Neuronale Koordination Forschungsschwerpunkt Frankfurt (NeFF)</rs>" awarded by the <rs type="funder">Landes-Offensive zur Entwicklung Wissenschaftlich-ökonomischer Exzellenz of the Land Hessen (LOEWE)</rs>, https://wissenschaft.hessen.de/loewe.The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>The reference MATLAB implementation of the algorithm described in the article is available from the GitHub repository at https://github.com/trentool/TRENTOOL3. Magnetoencephalography data are available from the authors for researchers who meet the criteria for access to confidential data imposed by the ethics committee at</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Multivariate reconstruction of effective networks by Lizier and Rubinov.</s><s>Lizier and Rubinov <ref type="bibr" target="#b11">[12]</ref> proposed a greedy algorithm which for each network node Y (the target) infers a set of influential source variables V Y .</s><s>A source is considered influential if it adds significantly to the information transfer from V Y to Y.</s><s>The set V Y is thus built by iteratively adding sources, which have significant information transfer into Y, conditional on the previously included sources.</s><s>Finally, information transfer is re-evaluated conditional on the complete set of included sources:</s></p><p><s>i.e., the mutual information between each source X 2 V Y and target Y while conditioning on all remaining relevant sources in V Y , except X.</s><s>If a source fails to provide statistically significant information about the present of Y, it is removed from V Y .</s><s>After this "pruning step", the set V Y consists of all relevant sources that contribute information about the target.</s><s>The approach is robust against the detection of spurious interactions due to CD and CE, because for each interaction reconstruction it conditions on all relevant sources in the network.</s></p><p><s>Note that the greedy strategy used by Lizier and Rubinov is approximative insofar as it does not guarantee a maximal informative set V Y over all sets PðVÞ.</s><s>For example, purely synergistic effects between two or more sources may be missed.</s><s>The authors propose to extend their greedy method by also testing tuples and higher order combinations of sources, but they note that this requires considerable computational resources, which may not be worth the gain in information.</s><s>The testing of tuples may however be feasible for small networks.</s></p><p><s>Partial conditioning of information transfer by Marinazzo and colleagues.</s><s>Marinazzo and colleagues <ref type="bibr" target="#b54">[55]</ref> proposed a greedy algorithm resembling the approach by Lizier and Rubinov.</s><s>Again, the algorithm tries to account for other relevant network sources when evaluating the information transfer from a source X to a target Y in a multivariate system.</s><s>To identify relevant sources, Marinazzo et al. propose to iteratively construct a "partial conditioning set" Z from all sources Vn{X, Y}.</s><s>In each iterative step k the algorithm includes the source Z k that maximizes the mutual information between Z k and the source X, i.e., Z k = max Z (I(X; Z k )), where</s></p><p><s>The partial conditioning approach may miss interactions if sources share a lot of redundant information about a target: If an existing source-target relationship is evaluated while conditioning on sources providing redundant information about the target, the source-target relationship under investigation is not detected.</s><s>Therefore, Stramaglia and colleagues <ref type="bibr" target="#b58">[59]</ref> extended partial conditioning with a graph algorithm that identifies these missed interactions.</s><s>The authors proposed to reconstruct interactions multivariately (e.g. with partial conditioning) and bivariately.</s><s>The multivariate network is then used to algorithmically separate bivariate links in two sets: (1) links explained by an indirect path of information transfer in the multivariate network (CE), and (2) links not explained by an indirect path.</s><s>Bivariate links in the second group, which are missing from the multivariate network, are assumed to reflect non-spurious information transfer that was missed by the multivariate approach.</s><s>These bivariate links are then merged with the multivariate network.</s></p><p><s>Note that the rationale underlying the algorithm proposed in <ref type="bibr" target="#b58">[59]</ref> resembles the rationale presented in this paper because spurious bivariate interactions are identified by alternative paths; however, the aim of both approaches differs: The algorithm presented by Stramaglia and colleagues improves multivariate interaction reconstruction, while the algorithm presented in this paper tries to approximate a multivariate approach from bivariate interaction reconstruction alone.</s><s>The approach proposed by Stramaglia thus still requires the potentially intractable reconstruction of multivariate interactions from data.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author Contributions</head><p><s>Conceived and designed the experiments: PW UM MW.</s><s>Performed the experiments: PW.</s><s>Analyzed the data: PW MW.</s><s>Contributed reagents/materials/analysis tools: PW MW UM.</s><s>Wrote the paper: PW MW.</s><s>Designed the algorithm used in analysis: MW PW UM.</s><s>Implemented the algorithm used in analysis: PW.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Complex brain networks: graph theoretical analysis of structural and functional systems</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bullmore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sporns</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nrn2575</idno>
+		<idno type="PMID">19190637</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="186" to="198" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Complex network measures of brain connectivity: uses and interpretations</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rubinov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sporns</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroimage.2009.10.003</idno>
+		<idno type="PMID">19819337</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1059" to="1069" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">The trees and the forest: characterization of complex brain networks with minimum spanning trees</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Stam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tewarie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Van Dellen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ecw</forename><surname>Van Straaten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hillebrand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Van Mieghem</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijpsycho.2014.04.001</idno>
+		<idno type="PMID">24726900</idno>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Psychophysiology</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="129" to="138" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The minimum spanning tree: An unbiased method for brain network analysis</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tewarie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Van Dellen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hillebrand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Stam</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroimage.2014.10.015</idno>
+		<idno type="PMID">25451472</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="177" to="188" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">Complex networks. The European Physical Journal B-Condensed Matter and Complex Systems</title>
+		<author>
+			<persName><forename type="first">Lan</forename><surname>Amaral</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Ottino</surname></persName>
+		</author>
+		<idno type="DOI">10.1140/epjb/e2004-00110-5</idno>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="147" to="162" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Complex networks: Structure and dynamics</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Boccaletti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Latora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Moreno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chavez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">U</forename><surname>Hwang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.physrep.2005.10.009</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physics Reports</title>
+		<imprint>
+			<biblScope unit="volume">424</biblScope>
+			<biblScope unit="page" from="175" to="308" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Graph theoretical analysis of complex networks in the brain</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Stam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Reijneveld</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/1753-4631-1-3</idno>
+		<idno type="PMID">17908336</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nonlinear Biomedical Physics</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">3</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Network science. Annual review of information science and technology</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Börner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sanyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vespignani</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="537" to="607" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">From simple graphs to the connectome: Networks in neuroimaging</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sporns</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroimage.2011.08.085</idno>
+		<idno type="PMID">21964480</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="881" to="886" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Algorithmic complexity: three NP-hard problems in computational statistics</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Welch</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/00949658208810560</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Statistical Computation and Simulation</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="17" to="25" />
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Algorithms for subset selection in linear regression</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kempe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the fortieth annual ACM symposium on Theory of computing</title>
+		<meeting>the fortieth annual ACM symposium on Theory of computing</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="45" to="54" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Multivariate construction of effective computational networks from observational data</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Lizier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rubinov</surname></persName>
+		</author>
+		<idno>25/2012</idno>
+		<ptr target="http://www.mis.mpg.de/preprints/2012/preprint2012_25.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Max Planck Institute for Mathematics in the Sciences</title>
+		<imprint>
+			<date type="published" when="2012-03-13">2012. 13 March 2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint. Technical Report</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Computers and intractability</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Garey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Johnson</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1979">1979</date>
+			<publisher>Freeman</publisher>
+			<biblScope unit="volume">174</biblScope>
+			<pubPlace>San Francisco, CA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Revisiting Wiener&apos;s principle of causality-interaction-delay reconstruction using transfer entropy and multivariate analysis on delayweighted graphs</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wibral</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wollstadt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Meyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pampu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Priesemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Vicente</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2012 Annual International Conference of the IEEE</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="3676" to="3679" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Evaluating causal relations in neural systems: Granger causality, directed transfer function and statistical assessment of significance</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kamiński</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Truccolo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Bressler</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s004220000235</idno>
+		<idno type="PMID">11508777</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biological Cybernetics</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="145" to="157" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Granger causality and information flow in multivariate processes</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Blinowska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kuś</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kamiński</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevE.70.050902</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review E</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">50902</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Nonnegative decomposition of multivariate information</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Beer</surname></persName>
+		</author>
+		<idno>arXiv Preprint. Available: arXiv:10042515</idno>
+		<imprint>
+			<date type="published" when="2010-03-13">2010. 13 March 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title level="m" type="main">Generalized measures of information transfer</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Beer</surname></persName>
+		</author>
+		<idno>arXiv:11021507</idno>
+		<imprint>
+			<date type="published" when="2011-03-13">2011. 13 March 2015</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv Preprint. Available:</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Measuring information-transfer delays</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wibral</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pampu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Priesemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Siebenhühner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Seiwert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lindner</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0055809</idno>
+		<idno type="PMID">23468850</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">55809</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">TRENTOOL: A Matlab open source toolbox to analyse information flow in time series data with transfer entropy</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lindner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Vicente</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Priesemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wibral</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/1471-2202-12-119</idno>
+		<idno type="PMID">22098775</idno>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">119</biblScope>
+			<date type="published" when="2011-11">2011 Nov</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Small-world brain networks</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Bassett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bullmore</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/1073858406293182</idno>
+		<idno type="PMID">17079517</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Neuroscientist</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="512" to="523" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Granger causality and transfer entropy are equivalent for Gaussian variables</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Barnett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Barrett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Seth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Retters</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="issue">23</biblScope>
+			<biblScope unit="page">238701</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Analyzing multiple nonlinear time series with extended Granger causality</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rangarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ding</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.physleta.2004.02.032</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physics Letters A</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="26" to="35" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Confounding effects of indirect connections on causality estimation</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">A</forename><surname>Vakorin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Krakovska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Mcintosh</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jneumeth.2009.07.014</idno>
+		<idno type="PMID">19628006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience Methods</title>
+		<imprint>
+			<biblScope unit="volume">184</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="152" to="160" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Review of the methods of determination of directed connectivity from multichannel data</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Blinowska</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11517-011-0739-x</idno>
+		<idno type="PMID">21298355</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Medical and Biological Engineering and Computing</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="521" to="529" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Graph theory</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Diestel</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<publisher>Springer</publisher>
+			<biblScope unit="volume">4</biblScope>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note>th ed</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Cormen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Leiserson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Rivest</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Stein</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<publisher>The MIT Press</publisher>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Introduction to Algorithms ( Third Edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Collective dynamics of small-world networks</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Watts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Strogatz</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/30918</idno>
+		<idno type="PMID">9623998</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">393</biblScope>
+			<biblScope unit="issue">6684</biblScope>
+			<biblScope unit="page" from="440" to="442" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Emergence of scaling in random networks</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Barabási</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Albert</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.286.5439.509</idno>
+		<idno type="PMID">10521342</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">286</biblScope>
+			<biblScope unit="issue">5439</biblScope>
+			<biblScope unit="page" from="509" to="512" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">On random graphs</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Erdős</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rényi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Publicationes Mathematicae Debrecen</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="290" to="297" />
+			<date type="published" when="1959">1959</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Random graphs</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">N</forename><surname>Gilbert</surname></persName>
+		</author>
+		<idno type="DOI">10.1214/aoms/1177706098</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Annals of Mathematical Statistics</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="1141" to="1144" />
+			<date type="published" when="1959">1959</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Organization, development and function of complex brain networks</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sporns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Chialvo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kaiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Hilgetag</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tics.2004.07.008</idno>
+		<idno type="PMID">15350243</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Trends in Cognitive Sciences</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="418" to="425" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">The development of human functional brain networks</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Power</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Fair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Schlaggar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Petersen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2010.08.017</idno>
+		<idno type="PMID">20826306</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="735" to="748" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Characterization of anatomical and functional connectivity in the brain: a complex networks perspective</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Stam</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijpsycho.2010.06.024</idno>
+		<idno type="PMID">20598763</idno>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Psychophysiology</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="186" to="194" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Statistical mechanics of complex networks</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Albert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Barabási</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/RevModPhys.74.47</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Reviews of Modern Physics</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="47" to="97" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Efficient generation of large random networks</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Batagelj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Brandes</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevE.71.036113</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review E</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">36113</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">The degree sequence of a scale-free random graph process</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Bollobás</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Riordan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Spencer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Tusnády</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/rsa.1009</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Random Structures &amp; Algorithms</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="279" to="290" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">The diameter of a scale-free random graph</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Bollobás</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Riordan</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00493-004-0002-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Combinatorica</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="5" to="34" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<title level="m" type="main">Social network analysis: Methods and applications</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wasserman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Faust</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1994">1994</date>
+			<publisher>Cambridge University Press</publisher>
+			<biblScope unit="volume">8</biblScope>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Neuroelectromagnetic correlates of perceptual closure processes</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Grützner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Uhlhaas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Genc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Singer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wibral</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.5434-09.2010</idno>
+		<idno type="PMID">20554885</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">24</biblScope>
+			<biblScope unit="page" from="8342" to="8352" />
+			<date type="published" when="2010">2010. 2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">The assessment and analysis of handedness: the Edinburgh inventory</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Oldfield</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0028-3932(71)90067-4</idno>
+		<idno type="PMID">5146491</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuropsychologia</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="97" to="113" />
+			<date type="published" when="1971">1971</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">A new closure test</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Mooney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Ferguson</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/h0083540</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Canadian Journal of Psychology/Revue canadienne de psychologie</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">129</biblScope>
+			<date type="published" when="1951">1951</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Oostenveld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fries</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maris</forename><forename type="middle">E</forename><surname>Schoffelen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename></persName>
+		</author>
+		<idno type="DOI">10.1155/2011/156869</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computational Intelligence and Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">2011</biblScope>
+			<biblScope unit="page" from="1" to="9" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Dynamic imaging of coherent sources: studying neural interactions in the human brain</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Groß</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kujala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hämäläinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Timmermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schnitzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Salmelin</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.98.2.694</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="694" to="699" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Optimising experimental design for MEG beamformer imaging</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Brookes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vrba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Stevenson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Barnes</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroimage.2007.09.050</idno>
+		<idno type="PMID">18155612</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1788" to="1802" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Efficient transfer entropy analysis of non-stationary neural time series</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wollstadt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Martínez-Zarzuela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Vicente</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Díaz-Pernas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wibral</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0102833</idno>
+		<idno type="PMID">25068489</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">102833</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Points of significance: sampling distributions and the bootstrap</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kulesa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Krzywinski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Blainey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Altman</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmeth.3414</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Methods</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="477" to="478" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Communication in neuronal networks</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Laughlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Sejnowski</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1089662</idno>
+		<idno type="PMID">14512617</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">301</biblScope>
+			<biblScope unit="issue">5641</biblScope>
+			<biblScope unit="page" from="1870" to="1874" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Global relationship between anatomical connectivity and activity propagation in the cerebral cortex</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kötter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">T</forename><surname>Sommer</surname></persName>
+		</author>
+		<idno type="DOI">10.1098/rstb.2000.0553</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Philosophical Transactions of the Royal Society B: Biological Sciences</title>
+		<imprint>
+			<biblScope unit="volume">355</biblScope>
+			<biblScope unit="page" from="127" to="134" />
+			<date type="published" when="1393">2000. 1393</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<title level="m" type="main">Maps in the brain: what can we learn from them? Annual Review of Neuroscience</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Chklovskii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<idno type="DOI">10.1146/annurev.neuro.27.070203.144226</idno>
+		<idno type="PMID">15217337</idno>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="369" to="392" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Neural component placement</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cherniak</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0166-2236(95)98373-7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Trends in Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="98373" to="98377" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Dynamic causal modelling</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Friston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Harrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Penny</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S1053-8119(03)00202-7</idno>
+		<idno type="PMID">12948688</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroimage</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1273" to="1302" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Dynamic causal modeling of evoked responses in EEG and MEG</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>David</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Kiebel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Harrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mattout</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Kilner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Friston</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroimage.2005.10.045</idno>
+		<idno type="PMID">16473023</idno>
+	</analytic>
+	<monogr>
+		<title level="j">NeuroImage</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1255" to="1272" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Dynamic causal modelling of evoked responses in EEG/MEG with lead field parameterization</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Kiebel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>David</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Friston</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroimage.2005.12.055</idno>
+		<idno type="PMID">16490364</idno>
+	</analytic>
+	<monogr>
+		<title level="j">NeuroImage</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1273" to="1284" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Causal information approach to partial conditioning in multivariate data sets</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Marinazzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pellicoro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stramaglia</surname></persName>
+		</author>
+		<idno type="DOI">10.1155/2012/303601</idno>
+		<idno type="PMID">22675400</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computational and Mathematical Methods in Medicine</title>
+		<imprint>
+			<date type="published" when="2012">2012. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Quantifying unique information</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Bertschinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rauh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Olbrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jost</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Ay</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/e16042161</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Entropy</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2161" to="2183" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Quantifying synergistic mutual information</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Griffith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Koch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Guided Self-Organization: Inception</title>
+		<meeting><address><addrLine>Berlin, Heilderberg</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="159" to="190" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Bivariate measure of redundant information</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Harder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Salge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Polani</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevE.87.012130</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review E</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">12130</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Synergy and redundancy in the Granger causal analysis of dynamical networks</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stramaglia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Cortes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Marinazzo</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1367-2630/16/10/105003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">New Journal of Physics</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">105003</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Information-based detection of nonlinear Granger causality in multivariate processes via a nonuniform embedding technique</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Faes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nollo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Porta</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevE.83.051112</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review E</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">51112</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Estimating mutual information</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kraskov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Stögbauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Grassberger</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevE.69.066138</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review E</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">66138</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

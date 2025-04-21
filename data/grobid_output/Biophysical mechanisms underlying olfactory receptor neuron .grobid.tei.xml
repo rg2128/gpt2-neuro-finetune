@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Biophysical mechanisms underlying olfactory receptor neuron dynamics</title>
+				<funder ref="#_EH4vAnR">
+					<orgName type="full">Helen Hay Whitney Foundation</orgName>
+				</funder>
+				<funder ref="#_MvKUdta">
+					<orgName type="full">National Institutes of Health</orgName>
+					<orgName type="abbreviated">NIH</orgName>
+				</funder>
+				<funder ref="#_tyQdyfW #_5u62fbN #_CmA7v6A #_gahVqrx #_HYPjYkg #_K8Nqb4S">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2011-08-01">2011 August 01.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Katherine</forename><forename type="middle">I</forename><surname>Nagel</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Neurobiology</orgName>
+								<orgName type="institution">Harvard Medical School</orgName>
+								<address>
+									<addrLine>220 Longwood Ave</addrLine>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Rachel</forename><forename type="middle">I</forename><surname>Wilson</surname></persName>
+							<email>rachel_wilson@hms.harvard.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Neurobiology</orgName>
+								<orgName type="institution">Harvard Medical School</orgName>
+								<address>
+									<addrLine>220 Longwood Ave</addrLine>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Harvard Medical School</orgName>
+								<address>
+									<addrLine>220 Longwood Ave</addrLine>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Biophysical mechanisms underlying olfactory receptor neuron dynamics</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Neuroscience</title>
+						<title level="j" type="abbrev">Nat Neurosci</title>
+						<idno type="ISSN">1097-6256</idno>
+						<idno type="eISSN">1546-1726</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">14</biblScope>
+							<biblScope unit="issue">2</biblScope>
+							<biblScope unit="page" from="208" to="216"/>
+							<date type="published" when="2011-08-01">2011 August 01.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">39A31E85DE6A735C43143CA07993E639</idno>
+					<idno type="DOI">10.1038/nn.2725</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Odor responses of olfactory receptor neurons (ORNs) exhibit complex dynamics.</s><s>Using genetics and pharmacology, we show that these dynamics in Drosophila ORNs can be separated into sequential steps, corresponding to transduction and spike generation.</s><s>Each of these steps contributes distinct dynamics.</s><s>Transduction dynamics can be largely explained by a simple kinetic model of ligand-receptor interactions, together with an adaptive feedback mechanism that slows transduction onset.</s><s>Spiking dynamics are well-described by a differentiating linear filter that is stereotyped across odors and cells.</s><s>Genetic knock-down of sodium channels reshapes this filter, implying that it arises from the regulated balance of intrinsic conductances in ORNs.</s><s>Complex responses can be understood as a consequence of how the stereotyped spike filter interacts with odor-and receptor-specific transduction dynamics.</s><s>However, in the presence of rapidly fluctuating natural stimuli, spiking simply increases the speed and sensitivity of encoding.</s></p><p><s>Users may view, print, copy, download and text and data-mine the content in such documents, for the purposes of academic research, subject always to the full Conditions of use:</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p><s>The fluctuations created by a turbulent odor plume can carry useful information about the chemical environment, and there is evidence that insects use this information to help locate odor sources1,2.</s><s>Yet olfactory systems appear to be poorly suited to encoding fluctuations, because even simple odor pulses generally elicit prolonged temporal patterns of activity in olfactory receptor neurons (ORNs).</s><s>These patterns include epochs of excitation and inhibition, and vary with ORN type, odor identity, and odor concentration3-6, often somewhat unpredictably.</s><s>A key question in olfactory coding is thus how these first-order neurons transform and encode the dynamics of fluctuating stimuli.</s></p><p><s>Many mechanisms have been proposed to shape the dynamics of ORN responses.</s><s>These include second-messenger pathways7,8, neuromodulators9, or buffering by odorant binding proteins10,11.</s><s>However, recent discoveries suggest that olfactory transduction in insects may be simpler than previously thought.</s><s>First, swapping odorant receptors between the maxillary palp.</s><s>In this study, we focused on the palp, which contains only six ORN types, arranged as stereotyped pairs in three types of sensilla4,18 (Fig. <ref type="figure" target="#fig_2">2a</ref>).</s><s>Spikes arising from the two ORNs in a sensillum can be sorted based on their size4, or by genetically ablating one type of ORN (see Methods).</s></p><p><s>In extracellular recordings from single palp sensilla, odors evoke both a change in spike rate and a deflection in the local field potential (LFP, Fig. <ref type="figure" target="#fig_2">2b</ref>).</s><s>The time course of the LFP reflects the time course of the local transmembrane current19 (see Methods) and a downward deflection in the LFP indicates a depolarization of local dendrites20.</s><s>The sensillar LFP is thought to arise mainly from transduction currents21.</s><s>To confirm this, we verified that spikes do not affect LFP dynamics.</s><s>Injecting a Na + channel antagonist (TTX, 50 μM) into the palp abolished spiking, but had no effect on LFP time course (Fig. <ref type="figure" target="#fig_2">2c,</ref><ref type="figure">e</ref>).</s><s>Control injections of saline had no effect.</s><s>These data are consistent with the idea that the LFP is a proxy for transduction currents, although we cannot exclude a contribution from conductances downstream of transduction but upstream of spiking.</s></p><p><s>Next, we asked whether under certain conditions, the LFP response can be attributed to a single ORN.</s><s>First, we chose concentrations of specific odors that drive robust responses in a particular ORN type (pb1A).</s><s>The pb1A ORN normally expresses the receptor gene Or42a.</s><s>We found that a mutation in Or42a eliminated most pb1 responses to these odors (Fig. <ref type="figure" target="#fig_2">2d,</ref><ref type="figure">e</ref>), indicating that they are due to this single receptor type.</s><s>Some of these odors also drove responses in a second sensillum type (pb3) which were unaffected by mutating Or42a (Supplementary Fig. <ref type="figure" target="#fig_2">2</ref>).</s><s>This result indicates that palp sensilla can be electrically isolated from one another, because responses arising from pb3 sensilla are either absent or strongly attenuated in intermingled pb1 sensilla.</s></p><p><s>Under other conditions, we observed that LFP responses can propagate between nearby sensilla.</s><s>In particular, LFP responses in antennal sensilla were not well-isolated (data not shown), probably because they are packed more densely than palp sensilla.</s><s>For this study, we recorded only from palp sensilla, and we used genetic ablation of one ORN in a sensillum, or careful choice of odors, to insure that the LFPs we recorded arose from single ORNs.</s><s>In each case, we confirmed that the LFP response was largely abolished when the cognate OR was mutated and/or the cognate ORN was killed genetically (Fig. <ref type="figure" target="#fig_2">2f,</ref><ref type="figure">g</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Dynamics of transduction and spike generation</head><p><s>The LFP and spike rate have distinct dynamics (Fig. <ref type="figure" target="#fig_3">3a</ref>).</s><s>The LFP time course is similar to the time course of the odor.</s><s>By contrast, the spike rate is highest when the LFP response is growing and lowest when the LFP is recovering.</s><s>This implies that the spike rate is sensitive to the slope of the LFP.</s></p><p><s>To describe these relationships quantitatively, we calculated the linear filters that best summarizes each transformation.</s><s>To calculate the linear filter relating the odor to the LFP, we presented a fluctuating odor waveform while recording the LFP, then cross-correlated the odor waveform with the LFP waveform, and finally corrected for correlations in the odor waveform.</s><s>Similarly, we also calculated the linear filter that relates the LFP to the spike rate.</s><s>We did this by cross-correlating the LFP with the spike rate, and then correcting for correlations in the LFP.</s></p><p><s>We found that the filter describing the transformation from odor to LFP had a single lobe (Fig. <ref type="figure" target="#fig_3">3b</ref>), indicating that the LFP tends to smooth odor fluctuations.</s><s>The lobe is negative because odor increases elicit downward deflections in the LFP.</s><s>The width of this lobe (105 ms half-width) indicates that the LFP faithfully tracks odor fluctuations up to ~6Hz (20 dB attenuation).</s><s>The interval between the lobe and zero indicates the absolute latency of the response, which is less than 10 ms.</s></p><p><s>To test the filter model, we used it to predict the response to a novel odor waveform (Fig. <ref type="figure" target="#fig_3">3c</ref>).</s><s>The prediction was made by convolving the filter with the odor time course.</s><s>It accurately captured the coarse features of the LFP response (correlation coefficient 0.94 ± 0.006).</s><s>However, plotting the predicted versus the actual LFP revealed two separate curves (Fig. <ref type="figure" target="#fig_3">3d</ref>), indicating that LFP onset and offset are asymmetric in a way that cannot be captured by a linear model.</s><s>We investigate these asymmetries in a later section.</s></p><p><s>The filter relating the LFP to the spike rate was biphasic (Fig. <ref type="figure" target="#fig_3">3e</ref>), indicating that the spike rate is sensitive to the LFP slope.</s><s>The order of the lobes (positive followed by negative) indicates that spiking is promoted by downward deflections in the LFP, and inhibited by upward deflections.</s><s>The slightly larger negative lobe indicates that the spike rate remains above baseline as long as a steady negative LFP deflection persists.</s><s>Convolving the spike filter with the LFP produced an excellent prediction of the actual spike response (correlation coefficient 0.97 ± 0.003; Fig. <ref type="figure" target="#fig_3">3f</ref>).</s><s>The spike filter was equally good at predicting responses to fast and slow LFP events, and to short and long odor pulses (data not shown).</s><s>Plotting the predicted versus actual spike rate revealed a small nonlinearity which is typical of neural responses: the curve flattens near zero because the actual spike rate cannot be negative, and saturates at high values (Fig. <ref type="figure" target="#fig_3">3g</ref>).</s></p><p><s>We note that this filter has structure to the right of the zero time point, whereas the true filter should not, because spikes are caused by the LFP.</s><s>This is an artifact of the slow time course of the LFP, which limits how narrow the calculated filter can be (see Methods).</s><s>An idealized filter that is realistically narrow and has no structure to the right of zero can perform as well as the recovered filter, whereas a monophasic filter cannot (Supplementary Fig. <ref type="figure" target="#fig_3">3</ref>).</s><s>This implies that the general biphasic shape of the filter is correct, but that its width is overestimated.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Odor-and cell-dependent transduction and spiking dynamics</head><p><s>We next asked how the dynamics of these two transformations-transduction and spikingdepend on the odor and the receptor.</s><s>We recorded LFPs and spikes for several different ligand/receptor combinations.</s><s>For each combination, we calculated filters describing transduction and spiking.</s></p><p><s>Filters describing transduction were generally monophasic (Fig. <ref type="figure" target="#fig_4">4a</ref>), but their width and polarity depended on both the stimulus and the receptor (compare Fig. <ref type="figure" target="#fig_4">4</ref>, rows 1-3), corresponding to differences in the speed and polarity of the LFP responses (Fig. <ref type="figure" target="#fig_4">4b</ref>).</s></p><p><s>Overall, these filters predicted the shape of the LFP well (Fig. <ref type="figure" target="#fig_4">4b</ref>), implying that transduction can be approximately described as a low-pass filter with a stimulus-and receptor-dependent width and polarity.</s><s>As in the example above, there were systematic discrepancies at odor onset and offset.</s></p><p><s>By contrast, filters describing the LFP-to-spiking transformation had a biphasic shape that was relatively similar across stimuli and receptors (Fig. <ref type="figure" target="#fig_4">4c</ref>).</s><s>The magnitude of the filter was generally smaller for larger LFP fluctuations, consistent with the idea that neurons adapt to the scale of their inputs22-24.</s><s>This filter accurately predicted many details of the spike response (Fig. <ref type="figure" target="#fig_4">4d</ref>).</s><s>For example, this filter predicts which responses show onset transients and offset inhibition (Fig. <ref type="figure" target="#fig_4">4</ref> first two rows).</s><s>It also predicts that when the LFP decays with multiple slopes (Supplementary Fig. <ref type="figure" target="#fig_4">4</ref>), there will be distinct phases of inhibited and elevated spiking during odor offset (Fig. <ref type="figure" target="#fig_4">4</ref>, fourth row).</s><s>Finally, it predicts elevated spiking after offset of an inhibitory odor (Fig. <ref type="figure" target="#fig_4">4</ref> bottom row).</s><s>The success of this model implies that the transformation of transduction currents into spike rates can be described by a universal biphasic filter.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Genetic manipulation of the differentiating spike filter</head><p><s>What accounts for the biphasic shape of the filter relating LFP to spike rate?</s><s>Hodgkin-Huxley models predict that the relationship between input current and spike rate depends on the balance of voltage-dependent Na + and K + conductances25.</s><s>When the Na + /K + ratio is high, the spike rate reflects a running average of recent input ("integrator" behavior).</s><s>When this ratio is low, the spike rate responds preferentially to the slope of the input ("differentiator" behavior).</s><s>To test whether the differentiating shape of the ORN spike filter reflects a specific balance of intrinsic conductances, we asked whether we could reshape the filter by genetically manipulating Na + conductances.</s><s>We chose Na + conductances as our target because there is only one Na + channel α-subunit in the Drosophila genome (DmNa v ).</s></p><p><s>We knocked down DmNa v in ORNs using transgenic RNA interference (RNAi).</s><s>This produced a general decrease in spike rate (Fig. <ref type="figure" target="#fig_5">5a,</ref><ref type="figure">b</ref>) and a change in spike rate dynamics.</s><s>Specifically, the spiking response became more transient (Fig. <ref type="figure" target="#fig_5">5c,</ref><ref type="figure">d</ref>).</s><s>DmNa v knockdown did not affect LFP dynamics, although it slightly reduced LFP magnitude (Fig. <ref type="figure" target="#fig_5">5e</ref>).</s></p><p><s>The more transient spiking response suggests that the spike filter has become more differentiating.</s><s>To examine this directly, we calculated LFP-to-spike filters for a small number of neurons showing a knockdown phenotype (peak to steady-state firing rate ratio = 1.7-2.3).</s><s>In these ORNs, the positive and negative lobes of the spike filter were more symmetric-and thus more purely differentiating-than in controls (Fig. <ref type="figure" target="#fig_5">5f</ref>), while the filter describing transduction was not significantly altered (Fig. <ref type="figure" target="#fig_5">5g</ref>).</s><s>Together these data suggest that the differentiating spike transformation in ORNs is specified by the regulated expression of voltage-dependent channels in these cells.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A kinetic model can explain asymmetry in transduction</head><p><s>We observed that linear filters approximately describe the time course of transduction.</s><s>However, filter predictions consistently underestimated the speed of transduction onset and overestimated the speed of offset (Figs.</s><s><ref type="figure" target="#fig_3">3c</ref> and<ref type="figure" target="#fig_4">4b</ref>).</s><s>This is because transduction onset was always faster than offset.</s><s>A filter, having a single time scale, predicts an average of these two rates.</s></p><p><s>One model that can account for both of these phenomena is a kinetic model of ligand receptor interactions.</s><s>In the simplest case, the level of transduction current is related to the number of activated receptors (OR*), described by <ref type="bibr" target="#b0">(1)</ref> where O is the ligand, R is the receptor, and R* is activated receptor.</s><s>This model accounts for odor-specific transduction rates because the binding and activation constants depend on the identity of both the receptor and the ligand.</s><s>This model also accounts for the asymmetry we observed between onset and offset rates, because the forward reaction rate depends on the concentration of odorant available, while the reverse reaction rate depends only on the amount of bound receptor.</s></p><p><s>One prediction of this model is that onset rates should grow with concentration, while offset rates should not.</s><s>To test this prediction, we recorded LFP responses to several concentrations of two odors.</s><s>For both odors, we found that the onset rate grew with increasing concentration, whereas the offset rate was much less sensitive to concentration (Fig. <ref type="figure" target="#fig_6">6a,</ref><ref type="figure">b</ref>).</s><s>These data imply that some of the nonlinear features of transduction dynamics arise from elementary properties of receptor binding and activation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Adaptation slows response kinetics</head><p><s>Another prominent nonlinearity in some responses was a slow decrease in LFP amplitude during the odor pulse (adaptation) which was most prevalent when responses were strong (Fig. <ref type="figure" target="#fig_6">6a,</ref><ref type="figure">b</ref>).</s><s>Adaptation was often followed by an overshoot after odor offset (Fig. <ref type="figure" target="#fig_6">6a</ref>, see also Supplementary Fig. <ref type="figure" target="#fig_4">4</ref>).</s><s>This type of adaptation persisted in TTX (Fig. <ref type="figure" target="#fig_2">2b,</ref><ref type="figure">c</ref>), and so arises upstream from spiking.</s></p><p><s>To probe the mechanisms underlying adaptation, we compared the response to two short test pulses, before and after a long adapting pulse (Fig. <ref type="figure" target="#fig_6">6c</ref>).</s><s>Adaptation reduced the amplitude of the test pulse response.</s><s>This effect was reduced as the test pulse concentration increased (Fig. <ref type="figure" target="#fig_6">6c,</ref><ref type="figure">d</ref>).</s><s>Thus, adaptation produces a rightward shift in the concentration-response function (Fig. <ref type="figure" target="#fig_6">6e</ref>).</s><s>Similarly, adaptation reduced the onset rate of the test pulse (Fig. <ref type="figure" target="#fig_6">6d,</ref><ref type="figure">f</ref>), and this was also mitigated by high test pulse concentrations.</s><s>This suggests that adaptation acts on the activation of transduction, for example by reducing the affinity of the receptor for ligand or making it more difficult to open the transduction channel (see Discussion).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Adaptation is not intrinsic to the receptor</head><p><s>In a simple scenario, adaptation might reflect inactivation of the odorant receptors themselves.</s><s>If so, then responses mediated by two receptors in the same ORN should not cross-adapt.</s><s>To test whether adaptation is intrinsic to the receptor, we ectopically expressed a second receptor (Or47a) in one palp ORN type (pb1A, which natively expresses Or42a).</s></p><p><s>To drive the two receptors independently, we found two stimuli (2-butanone &lt;0.1× and pentyl acetate &lt;0.02×) that were specific to each receptor (see Supplementary Fig. <ref type="figure" target="#fig_5">5</ref>).</s></p><p><s>Next, we asked whether transduction cross-adapts.</s><s>We found that responses of either receptor type could be adapted by driving the other receptor for a prolonged period (Fig. <ref type="figure" target="#fig_7">7a,</ref><ref type="figure">b</ref>).</s><s>Cross-adaptation was similar to self-adaptation, in that adapted responses were smaller and had slower onset rates.</s><s>Similar to self-adaptation, we found that crossadaptation could be overcome by using a high test pulse concentration (data not shown).</s><s>These results imply the self-and cross-adaptation are due to the same phenomenon.</s><s>Thus, adaptation must involve processes that are shared between receptors, either up-or downstream from the receptor.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Adaptation is induced as a consequence of transduction</head><p><s>If adaptation is initiated by events upstream from ligand binding (for example, if adaptation is caused by depletion of a chaperone that delivers ligand to the receptor) then it should be triggered equally well by odors that inhibit transduction.</s><s>In contrast, if adaptation is initiated downstream of transduction, then an inhibitory odor should not produce adaptation.</s><s>To ask whether adaptation is initiated up-or downstream of ligand binding, we ectopically expressed a receptor that produces an inhibitory response in pb1A ORNs (OR47b).</s><s>As before, we used stimuli that act specifically on the native receptor (2-butanone 0.1×) and the ectopic receptor (1-octanol 0.1×, Supplementary Fig. <ref type="figure" target="#fig_5">5</ref>).</s></p><p><s>In these ORNs, we observed that the inhibitory response did not produce adaptation of the excitatory response.</s><s>To the contrary, a prolonged inhibitory response appeared to de-adapt the cell: the response to the excitatory test pulse became larger and had a faster onset rate (Fig. <ref type="figure" target="#fig_7">7c</ref>).</s><s>This implies that adaptation does not depend on odor merely binding to the receptor.</s><s>Rather, adaptation depends on transduction.</s><s>In the same ORNs, we observed that the excitatory response reduced the inhibitory response (Fig. <ref type="figure" target="#fig_7">7d</ref>).</s><s>(Any effects on onset rate were unclear in this case, because the test pulse coincided with the overshoot produced by the adapting pulse.)</s><s>ORNs ectopically expressing OR47b had significantly higher rates of spontaneous activity than normal ORNs of the same type (36.4 ± 17.9 versus 12.8 ± 2.6 spikes/s s.d., p&lt;0.01, ttest, n=6-9, see Methods), consistent with a previous report that OR47b confers high spontaneous firing rates when mis-expressed30.</s><s>Interestingly, ORNs with the ectopic receptor also had significantly smaller initial responses to 2-butanone (0.1×) (11.0 ± 5.2 versus 20.3 ± 2.5 mV s.d., p&lt;0.01), consistent with the idea that a high basal level of transduction places the cell in a more adapted initial state.</s><s>These results further support the idea that adaptation is induced as a result of the transduction channel opening, or something downstream.</s><s>The finding that adaptation alters onset kinetics implies that adaptation targets the pathway leading up to transduction channel opening.</s><s>Because the target of adaptation is upstream of where adaptation is induced, adaptation likely requires a negative feedback signal.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Responses to natural odor plumes</head><p><s>Our results demonstrate that ORN response dynamics arise from the interaction of two dynamical steps, transduction and spike generation.</s><s>How do natural plumes engage these two distinct steps?</s><s>To create plumes, we used a fan to produce an air current, and we placed a vial of odor upwind from the fly (Fig. <ref type="figure" target="#fig_8">8a</ref>).</s><s>Plumes reaching the fly were monitored using a photoionization detector.</s><s>Consistent with previous reports1,2, wind-borne odor signals were intermittent.</s><s>Odor fluctuations were rapid at high windspeeds and slower at low windspeeds (Fig. <ref type="figure" target="#fig_8">8a</ref>).</s><s>When the odor source was displaced laterally, the frequency of odor encounters decreased, and when the source was moved away, encounters became less discrete (Fig. <ref type="figure" target="#fig_8">8a</ref>).</s><s>Thus, odor fluctuations provide information about odor source location.</s><s>Because fluctuations are slowest at low windspeeds, adaptation is likely to be most relevant in this regime.</s></p><p><s>Consistent with our filter calculations, transduction filtered plumes in a ligand-and receptordependent manner.</s><s>For some ligand-receptor combinations, the LFP faithfully tracked every plume, even at high wind speeds (Fig. <ref type="figure" target="#fig_8">8b</ref>).</s><s>For other ligand-receptor combinations, LFP signals were much slower (Fig. <ref type="figure" target="#fig_8">8c</ref>).</s><s>To quantify this, we compared the power spectra of these signals.</s><s>While the power spectra of plume fluctuations (as reported by the photoionization detector) were similar across ligands, LFP signals were low-pass filtered with a cutoff frequency that depended on the odor-receptor combination (Fig. <ref type="figure" target="#fig_8">8d</ref>).</s></p><p><s>To examine how LFP dynamics depend on LFP amplitude, we identified isolated LFP events, and we binned and averaged these events by amplitude (Fig. <ref type="figure" target="#fig_8">8e</ref>).</s><s>This analysis was performed under conditions that increased the incidence of discrete odor encounters (close odor source, high windspeed).</s><s>We found that the shape of these LFP events was similar for small and large amplitudes, indicating that complex transduction dynamics (like adaptation and overshoot) are not strongly engaged in these conditions.</s><s>Rather, every plume hit generates an LFP response with similar dynamics.</s></p><p><s>Finally, we asked how spike generation shapes the response to natural plumes.</s><s>For each LFP event, we identified the associated spike train, and computed the average spike rate associated with each average LFP amplitude.</s><s>Small LFP events produced disproportionately large spike rates (Fig. <ref type="figure" target="#fig_8">8f,</ref><ref type="figure">g</ref>), meaning that spike generation tends to emphasize encounters with weak stimuli.</s><s>The spike response consistently peaked before the LFP response (Fig. <ref type="figure" target="#fig_8">8f</ref>), indicating that spike generation increases the speed of encoding.</s><s>Accordingly, we found that the power spectrum of the spike rate contained comparatively more power at high frequencies than the power spectrum of the associated LFP (Fig. <ref type="figure" target="#fig_8">8h</ref>).</s><s>Thus, the transformation from transduction to spiking promotes rapid and sensitive encoding of natural stimuli.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DISCUSSION</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Input currents and spiking as distinct dynamical processes</head><p><s>Many studies have described the early stages of neural encoding in terms of linear filters, sometimes followed by a static nonlinearity22,23.</s><s>Recently, these techniques have been applied to olfactory systems as well16,24,26.</s><s>The general approach of these studies is to summarize all the dynamical steps between the stimulus and spiking in a single filter.</s></p><p><s>Here we have adopted a different approach, motivated by the observation that input currents and spikes have different dynamics.</s><s>After separating input currents from spiking using genetic and pharmacological tools, we characterized their dynamics independently.</s><s>We found that transduction was described by an integrating filter.</s><s>In contrast, spiking was described by a differentiating filter.</s><s>Thus, transduction smoothes the input signal, while spike generation differentiates the transduction response, thereby emphasizing some of the high-frequency fluctuations that were diminished during transduction.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Transduction dynamics depend on the odor and receptor</head><p><s>Olfaction differs from vision in that the dynamics of the primary transduction event depend on the quality of the stimulus.</s><s>A photoreceptor's response depends only on the number of absorbed photons and the state of the cell, not the wavelength of those photons27.</s><s>In contrast, ORN responses depend on both the receptor the neuron expresses and the identity of the ligand.</s><s>Explaining why this is true required us to move from a linear model to a kinetic model.</s><s>Because different ligand-receptor combinations involve different rate constants, a kinetic model accounts for the odor-and receptor dependence of transduction rates.</s><s>Because forward rates increase with odor concentration and reverse rates do not, a kinetic model also correctly predicts that transduction onset, but not offset, depends on odor concentration.</s></p><p><s>Like ORNs, central neurons in the insect brain also exhibit cell-and odor-dependent dynamics26,28-30.</s><s>In particular, changes in odor concentration affects the on-and offset portions of these responses in different ways31.</s><s>The finding that qualitatively similar dynamics are observed in ORNs4,6 suggests that these dynamics are partly inherited from the periphery32.</s><s>Our results demonstrate that these dynamics arise at the level of transduction and are a necessary consequence of the most basic kinetic features of chemosensory transduction.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Slow transduction dynamics</head><p><s>In response to strong and prolonged stimuli, odor responses adapt and show overshoot after odor offset.</s><s>Our results show that these slow dynamics originate at the level of transduction, not spiking.</s><s>Our results also pinpoint where these dynamics arise.</s></p><p><s>First, we find that adaptation depends on transduction channel opening.</s><s>Whereas an excitatory odor response increased adaptation, an inhibitory response decreased adaptation.</s><s>Because the effect of an odor on the adaptation state of a cell depends on how the odor affects transduction, adaptation cannot be induced prior to transduction.</s></p><p><s>Second, we find that adapted responses look like unadapted responses to a lower odor concentration. .</s><s>Specifically, onset rates are slowed.</s><s>This result rules out a mechanism where adaptation increases the rate of transduction shut-off, because this would produce faster rather than slower kinetics33.</s><s>It also rules out a mechanism where adaptation targets an intrinsic conductance downstream of transduction, because this would not slow the rate of transduction onset.</s><s>Finally, adaptation is unlikely to be due to a change in the driving force for transduction currents, because adaptation outlasts the LFP response to the adapting pulse by several seconds.</s><s>Adaptation is most likely to involve a decrease in ligand binding affinity, and/or a decrease in the efficacy of channel gating, both of which slow onset kinetics.</s></p><p><s>Third, adaptation likely involves a diffusible factor.</s><s>Adaptation is induced as a consequence of transduction channel opening, but targets the activation of transduction, implying a negative feedback signal.</s><s>What might this signal be?</s><s>Previous studies reported that mutations in either IP 3 receptors or the TRP channel can reduce adaptation in Drosophila ORNs7,34, suggesting a role for cytoplasmic calcium.</s><s>Furthermore, odors induce calcium influx in heterologous cells expressing Drosophila odorant receptors12.</s><s>Resting calcium in these cells is decreased by an extracellular chelator, consistent with our conclusion that transduction and adaptation can occur spontaneously.</s><s>Thus, calcium is a good candidate for a diffusible adaptation factor.</s></p><p><s>The transduction channel in Drosophila ORNs probably contains the Or83b gene product, because a mutation in the putative pore domain of this gene changes the ionic selectivity of the channel15.</s><s>Odorant receptors are thought to form heteromeric complexes with OR83b12,13,35.</s><s>Alternatively, odorant receptors may gate OR83b through a direct but transient association15.</s><s>Our results are broadly consistent with either alternative.</s></p><p><s>If the receptor forms a stable heteromer with OR83b (Supplementary Figure <ref type="figure" target="#fig_6">6</ref>, Model 1), then adaptation likely involves changes in both affinity and efficacy.</s><s>Decreasing affinity is necessary to explain the rightward shift in the concentration-response function (Fig. <ref type="figure" target="#fig_6">6e</ref>), while decreasing efficacy is necessary to explain the overshoot after odor offset (Figure <ref type="figure" target="#fig_6">6a</ref>).</s><s>Alternatively, if the activated receptor gates OR83b through an additional step (Supplementary Figure <ref type="figure" target="#fig_6">6</ref>, Model 2), both overshoot and the rightward shift can be explained by a decrease in the efficacy of channel gating.</s><s>In this model, overshoot arises because both spontaneously-active receptors (R*) and odor-activated receptors (OR*) have a diminished ability to open the channel.</s><s>A rightward shift in the concentration-response function occurs so long as the pool of activated receptors can fully activate most of the available transduction channels at high odor concentrations (see Supplementary Figure <ref type="figure" target="#fig_6">6</ref>).</s></p><p><s>In mammalian ORNs, adaptation is due to calcium-calmodulin acting as an allosteric inhibitor which reduces channel gating.</s><s>This process reduces the apparent affinity of the transduction channel for ligand36.</s><s>Although olfactory transduction is fundamentally different in Drosophila versus mammals, olfactory adaptation is qualitatively similar: in both cases, adapted responses resemble responses to lower odor concentrations.</s><s>Similar observations have been reported in moth ORNs37.</s></p><p><s>In most sensory systems, adaptation helps extend the dynamic range of encoding by adjusting the range of neural responses to the current range of stimulus intensities.</s><s>This idea is consistent with our finding that adaptation in Drosophila ORNs represents a negative feedback loop which adjusts the apparent affinity of the receptor for the odor.</s><s>Because adaptation strongly reduces weak responses but weakly reduces strong responses, it should make ORNs relatively insensitive to small fluctuations in the level of background odor, without compromising the ability of ORNs to encode large fluctuations.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The shape of the differentiating spike filter</head><p><s>A recent study has shown that ORN spikes encode both the concentration of an odor stimulus and its rate of change24.</s><s>Our results indicate that sensitivity to the rate of change arises mostly at the level of spiking, rather than transduction.</s><s>Moreover we found that the same differentiating spike filter described the transformation between input current and spiking in different ORN types, and when the same ORN was presented with different odors.</s></p><p><s>The shape of this filter explains many of the distinctive features of ORN responses.</s><s>It can account for why some odors produce transient responses while others do not, and for why inhibitory stimuli produce excitation after odor offset (Supplementary Figure <ref type="figure" target="#fig_7">7</ref>).</s><s>Finally, it helps explain the results of receptor swap experiments.</s><s>Namely, if all ORNs impose the same differentiating spiking transformation on their input currents, then receptor swap will recapitulate not only the simpler dynamics of transduction, but also the more complex dynamics of spiking.</s></p><p><s>ORN spiking dynamics fall on a continuum of behaviors observed in other neurons.</s><s>Some neurons in the early auditory system behave as nearly pure differentiators38, while cortical pyramidal neurons behave as nearly pure integrators39.</s><s>A Hodgkin-Huxley neuron can produce behaviors ranging from differentiation to integration, depending on the Na + /K + conductance ratio25.</s><s>As predicted by this model, we were able to shift the spike response of ORNs from mixed differentiation-integration toward pure differentiation by reducing Na + conductance genetically.</s><s>This result implies that the ORN spike filter is specified by the regulated expression of voltage-dependent conductances, and does not require any additional biophysical mechanisms.</s></p><p><s>Although the shapes of the spike filters we measured were similar across odors and ORNs, we did observe that filter size was inversely related to the magnitude of fluctuations in the transduction current.</s><s>This type of adaptive rescaling occurs in simulated integrate-and-fire neurons simply as consequence of the nonlinearities inherent in voltage-dependent conductances40.</s><s>This result is thus consistent with the idea that the spike filter reflects the balance of intrinsic conductances in the cell.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Transduction and spiking shape responses to odor plumes</head><p><s>Consistent with previous findings1, we observed that the time course of odor encounters in a wind-borne plume provides information about the location of the odor source.</s><s>Here we demonstrate that both transduction and spike generation shape the way these turbulent stimuli are encoded.</s></p><p><s>First, we found that transduction low-pass filters responses to turbulent stimuli with a different time constant for each ligand-receptor pair.</s><s>ORNs thus act as a set of temporal filters which collectively analyze an odor filament on many time scales.</s><s>However, unlike neurons in the auditory system, which are dedicated to encoding information about a specific frequency range, a single ORN encodes temporal information on different time scales depending on the ligand.</s><s>Second, we found that the spike transformation increases the speed and sensitivity with which odor fluctuations are encoded.</s><s>A similar transformation occurs between ORN spike rates and the spike rates of their postsynaptic targets in the brain41.</s><s>This suggests that one function of the ascending olfactory system may be to make neural responses as fast as possible, given the limits of transduction.</s><s>A similar iterative speeding has been observed in successive layers of the retina42 and may be a general feature of many sensory systems.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Comparisons with olfactory dynamics in vertebrates</head><p><s>Our results support the idea that the diverse dynamics of olfactory transduction reflect diverse kinetic rate constants for different receptor-ligand pairs.</s><s>This concept should generalize to vertebrates, even though vertebrate transduction is mediated by G-proteins.</s><s>Consistent with this idea, recent imaging studies in the rodent olfactory bulb show that the time course of ORN activity is ligand-, receptor-and concentration-dependent43,44.</s></p><p><s>However, vertebrate transduction is much slower than insect transduction.</s><s>For example, in dissociated frog ORNs, the response to a brief pulse of odor (25 ms) requires about 400 ms to peak and almost 1000 ms to terminate45.</s><s>By contrast, we found that the fastest responses could peak in &lt;30 ms and terminate in &lt;200 ms (Fig. <ref type="figure" target="#fig_8">8e</ref>).</s><s>Our results are consistent with other measurements in Drosophila16 and moth46.</s><s>The difference in speed between vertebrate and insect transduction may reflect the slower speed of metabotropic as compared to ionotropic signaling.</s></p><p><s>It is also worth noting that the "natural temporal statistics" of odors are probably different for different organisms.</s><s>In terrestrial vertebrates, olfaction is linked to respiration, which imposes a slow oscillation on olfactory signals44.</s><s>Respiration may also tend to enforce laminar flow and disperse odor filaments prior to odorant receptor binding.</s><s>By contrast, insect odorant receptors encounter odor filaments more directly.</s><s>It is tempting to speculate that this difference in the natural temporal statistics of odors might have driven the divergence between ionotropic and metabotropic transduction.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ONLINE METHODS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fly Stocks and Genetic Strategies</head><p><s>Flies were reared at 25°C on conventional cornmeal agar medium.</s><s>All experiments were performed on adult female flies 2-7 days post-eclosion.</s><s>Stocks are described elsewhere as follows: Or42a f04305 ).</s><s>We used the following genotypes to produce flies with one active neuron in a sensillum, and to verify that LFP responses from this sensillum type were due to a single type of OR: Sensillum pb1-To record from pb1A, we primarily used a strain (w 1118 ) where the pb1B neuron is silent because this strain harbors a mutation in Or71a <ref type="bibr" target="#b17">(Goldman et al., 2005)</ref>.</s><s>(Some pilot recordings were performed in the genotype NP3481-Gal4;UAS-CD8:GFP, where pb1B is functional; we found that pb1 recordings in this genotype were not different from w 1118 , due to the fact that pb1B is narrowly selective for an odor that we did not use.)</s><s>To silence pb1A, we used a mutation in Or42a (Or42a f04305 ).</s><s>Some pilot experiments were performed in the genotype Or42a f04305 ; TM3/TM6b; here TM3 supplies a functional copy of Or71a <ref type="bibr" target="#b17">(Goldman et al., 2005)</ref> which was useful in helping us identify the pb1 sensillum.</s><s>These data were not included in the manuscript.</s></p><p><s>Sensillum pb2-To record from pb2A, we killed pb2B by expressing diphtheria toxin light chain under Gal4/UAS control (Or46a-Gal4/UAS-DTl;UAS-DTl/+).</s><s>To record from pb2B, we killed pb2A (Or33c-Gal4/UAS-DTl;UAS-DTl/+).</s><s>To silence both pb2 neurons, we killed them both (Or46a-Gal4/Or33c-Gal4;UAS-DTl/+), or else we killed pb2B and silenced pb2A by mutating Or85e (Or46a-Gal4/UAS-DTl;Or85e -/-).</s></p><p><s>Sensillum pb3-To record from pb3B, we killed pb3A (Or59c-Gal4/+,UAS-DTl/+;UAS-DTl/+).</s><s>To silence both pb3 neurons, we killed pb3A and silenced pb3B by mutating Or85d (Or59c-Gal4/+;UAS-DTl/+;Or85d -/-).</s></p><p><s>The lines designated Or85d -/-and Or85e -/-in this study represent the same genotype, which is called Δ85 in <ref type="bibr" target="#b46">Olsen et al., 2007</ref>.</s><s>This mutation abolishes odor responses in both pb2A and pb3B, and likely represents a genetic lesion that eliminates both of these receptors.</s></p><p><s>To knock down Na + channel expression in ORNs, we used flies of the following genotype: pebbled-Gal4/+;;UAS-DmNa v -IR/+.</s><s>Control flies lacked the inverted-repeat transgene (pebbled-Gal4/+;;TM3/+).</s><s>The two UAS-DmNa v -IR stocks produced similar results, and so data from both genotypes was combined.</s></p><p><s>Self-adaptation experiments in Figure <ref type="figure" target="#fig_6">6c</ref>,d and cross-adaptation experiments in Figure <ref type="figure" target="#fig_7">7a,</ref><ref type="figure">b</ref> were performed in the same genotype (Or42a-Gal4/+;UAS-Or47a/+).</s><s>Similar results for self-adaptation were obtained in two control genotypes (w 1118 and pebbled-Gal4, data not shown).</s><s>Cross-adaptation experiments in Figure <ref type="figure" target="#fig_7">7c</ref>,d were performed in the genotype UAS-Or47b/+;Or42-Gal4/+.</s><s>Control experiments to verify that each cross-adaptation stimulus was specific to just one of the two odorant receptors are described in Supplementary Figure <ref type="figure" target="#fig_5">5</ref>.</s><s>The self-adaptation experiment used a higher concentration of 2-butanone than any of our other experiments (0.2×), so we also did additional control experiments to verify that this stimulus produced very little LFP deflection in Or42a mutants (genotype Or42a f04305 , mean LFP response = -0.5 5± 0.30 mV).</s><s>Spontaneous firing rates in pb1A neurons mis-expressing OR47b (UAS-Or47b/+;Or42-Gal4/+) were significantly higher than spontaneous firing rates in normal pb1A neurons (Or42a-Gal4/CyO, p&lt;0.01) or pb1A neurons mis-expressing OR47a (Or42a-Gal4/+;UAS-Or47a/+, p&lt;0.01).</s><s>The comparison of spontaneous firing rates and initial response amplitudes to 2-butanone in pb1A neurons in the text refers to a comparison between UAS-Or47b/+;Or42-Gal4/+ and Or42a-Gal4/+;UAS-OR47a/+.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electrophysiology</head><p><s>The fly was cold-anesthetized and wedged into the tip of a modified plastic pipette with the body, head, and proboscis waxed into place.</s><s>The fly was then fixed under an upright compound microscope with a 50× air objective (Olympus BX51).</s><s>The palp was stabilized between a glass pipette and a glass coverslip.</s><s>A reference electrode filled with saline was placed in the eye while a silver chloride electrode inside a saline-filled sharp glass micropipette was inserted into the sensillum lymph.</s></p><p><s>Within the sensillum lymph, the resting potential was higher than within the surrounding hemolymph20, and odor-induced LFPs were larger, presumably because the path between recording and reference electrodes has higher resistance within versus outside the sensillum.</s><s>Spike waveforms recorded inside the sensillum had the shape characteristic of extracellular recordings, indicating that our electrodes did not penetrate ORN dendrites.</s><s>Sensillum types were identified by their characteristic responses to a panel of odors4 or as described in the text.</s><s>Electrical signals were acquired using a Model 2400 amplifier (A-M Systems) and lowpass filtered at 2 kHz with a LPF202A signal conditioner (Warner Instruments) before digitization at 10 kHz.</s><s>Where filters for multiple odors were calculated for the same neuron type, each recorded individual neuron was generally tested with all these odors.</s><s>Spikes were identified using custom routines written in MATLAB that filtered, differentiated, and thresholded the raw signal.</s><s>For pb1 and ab5 recordings, the two spike types were easily identified on the basis of spike size.</s><s>For the other sensilla, we recorded from flies where one neuron was killed so only a single spike type remained.</s><s>LFP signals were extracted from the raw trace by low-pass filtering at 15 Hz with a digital 2-pole Butterworth filter implemented in MATLAB.</s><s>Spike times and LFPs were down-sampled to 1 kHz for display and analysis.</s><s>For the experiments in Figure <ref type="figure" target="#fig_2">2</ref> using TTX, the drug was dissolved in saline (50 μM) and injected into the body of the palp using a syringe-driven glass micropipette.</s><s>After 2-3 pulses of pressure we observed the injected liquid move into the palp.</s><s>Recordings were made starting 5 minutes after injection.</s><s>TTX and saline injections were randomly interleaved and in most experiments the experimenter was blind to the contents of the injection.</s><s>Post-hoc analysis revealed that spiking was completely abolished after all TTX injections and no saline injections.</s></p><p><s>Note that all recordings (except for ab5 and trichoid recordings shown in Supplementary Figure <ref type="figure" target="#fig_5">5</ref>) were performed from palp sensilla.</s><s>This is because sensilla are less denselypacked on the palp as compared to the antenna, which permits better isolation of LFP signals arising from single sensilla.</s><s>However, we observed that the time course of ORN spiking responses was not systematically different in antennal versus palp sensilla (data not shown).</s><s>Thus, our major conclusions are likely to generalize to these ORNs as well.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Odor Delivery</head><p><s>In Figures <ref type="figure" target="#fig_1">1</ref><ref type="figure" target="#fig_2">2</ref><ref type="figure" target="#fig_3">3</ref><ref type="figure" target="#fig_4">4</ref><ref type="figure" target="#fig_5">5</ref><ref type="figure" target="#fig_6">6</ref><ref type="figure" target="#fig_7">7</ref><ref type="figure" target="#fig_8">8</ref>, odors were delivered using a custom-built device designed to allow stable and repeated presentation of long-duration odor stimuli (Supplementary Figure <ref type="figure" target="#fig_1">1</ref>).</s><s>The design of this device means that odors were delivered at an effective concentration which is substantially lower than what would be delivered using a more conventional device and the same nominal odor dilutions in solvent.</s><s>A 1-mL vial was filled with 900 μL of pure odorant or odorant diluted in paraffin oil (J.T. Baker, VWR #JTS894).</s><s>A continuous stream of air (100 mL/min) passed over the vial and was diluted in a second air stream (100 mL/min) before venting into a vacuum tube.</s><s>In order to allow the head space of the vial to equilibrate with the air flowing over it, an odor vial was placed in the device at least 20 min before odor was first delivered to the fly, during which time the odor concentration in the air stream reached a steady state (Supplementary Figure <ref type="figure" target="#fig_1">1</ref>).</s><s>For experiments where several odors were presented briefly (test pulse odors in Figures <ref type="figure" target="#fig_6">6</ref><ref type="figure" target="#fig_7">7</ref>and control experiments to verify the privacy of these odors in Supplementary Figure <ref type="figure" target="#fig_5">5</ref>), odor vials were placed in the device for only 5 minutes before presentation.</s><s>In general, experiments using a single odor were completed before switching to a different odor.</s><s>During an experiment, a three-way solenoid valve allowed us to rapidly switch the odor stream from the vacuum tube into a delivery air stream (1 L/min) directed at the fly.</s><s>The air flow rates in the vacuum and delivery tubes were equalized to minimize transients during switching.</s><s>In some of the LFP traces displayed in the paper, a brief electrical artifact caused by the solenoid was deleted for display purposes and the trace was mended by linear extrapolation between the cut ends; the maximum time blanked was 200 msec.</s><s>Adaptation experiments (Figures <ref type="figure" target="#fig_6">6</ref><ref type="figure" target="#fig_7">7</ref>) were performed using a modified olfactometer with two parallel sets of valves, mixing tubes, and odor vials.</s><s>We used a photoionization detector to verify that each channel could deliver odor independently.</s></p><p><s>In Figure <ref type="figure" target="#fig_8">8</ref>, an open vial of odor was placed 5-35 cm downwind of a small fan (Rosewill DFS802512M or Caframo Tiny Tornado 827 BL) and upwind of the fly (or PID).</s><s>The windspeed at the fly was measured using a hot wire anemometer (Kanomax A004) and ranged from 0.11 to 0.39 m/s.</s><s>This is within the range of windspeeds encountered by Drosophila in its native habitat, according to a study that measured a mean of 0.37 m/s and a range of ± 0.35 m/s in an orange orchard where Drosophila were active50.</s><s>In order to vary crosswind distance (x), the vial was moved perpendicular to the line connecting the fan and the fly.</s><s>In order to vary upwind distance (y), the fly was moved away from the vial along this line.</s><s>When the odor vial was removed, LFP events disappeared and only spontaneous spikes remained.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Analysis</head><p><s>Peristimulus-time histograms (PSTHs) were calculated by taking the mean spike train across trials, then convolving spike times with a 50-ms Hanning window.</s><s>Spontaneous firing rates were calculated over the 4 s preceding stimulus presentation.</s><s>In Figure <ref type="figure" target="#fig_2">2</ref>, mean LFP amplitude was computed over a 1200-ms window beginning 300 ms after stimulus onset and ending 500 ms after offset.</s><s>In Figure <ref type="figure" target="#fig_5">5c</ref>, we fit an exponential function with a variable decay rate and variable steady-state value to each PSTH, beginning from its peak and ending 200 ms after nominal stimulus offset (i.e., valve closing).</s><s>In Figure <ref type="figure" target="#fig_5">5d</ref>, we calculated the peakto-steady-state ratio by comparing the maximum of each PSTH to the mean firing rate over a 400-ms period beginning 800 ms after nominal stimulus onset (valve opening).</s><s>In Figure <ref type="figure" target="#fig_6">6b</ref>, on-and off-rates were computed by fitting an exponential function with a variable decay rate and latency to the normalized mean LFP.</s><s>To compute on-rates, we fit a 1-s period from nominal stimulus onset to offset.</s><s>To compute off-rates, we fit the remainder of the trial (10 s) beginning at nominal stimulus offset.</s><s>Mean response amplitudes in Figures <ref type="figure" target="#fig_6">6e</ref> and<ref type="figure" target="#fig_7">7a-c</ref> were calculated over a 400 ms period starting 300 ms after nominal stimulus onset.</s><s>For 7d, mean response amplitude was calculated over 1300 ms.</s><s>Onset rate for Figures <ref type="figure" target="#fig_6">6f</ref> and<ref type="figure" target="#fig_7">7a-c</ref> were calculated by fitting an exponential function as in Figure <ref type="figure" target="#fig_6">6b</ref>, but for the 500-ms period from nominal stimulus onset to offset.</s><s>In Figure <ref type="figure" target="#fig_8">8e</ref>, we detected discrete events in the LFP by low-pass filtering the raw voltage trace at 15 Hz, differentiating, and looking for threshold crossings in the resulting signal.</s><s>Events were binned by peak amplitude in bins of 4 mV over the range from 2-26 mV.</s><s>Compound events were identified by having values above 10 mV during a window 50 ms before or 300 ms after initiation, and were eliminated from the analysis.</s><s>In Figure <ref type="figure" target="#fig_8">8g</ref>, peak spike rate was computed over 30 ms preceding the LFP peak.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Filter Analysis</head><p><s>To estimate linear filters, we delivered odor with a slowly-varying random time course.</s><s>The time course was created from binary random values sampled at 20 Hz, passed through an exponential low-pass filter with a time constant of 3 s, then rounded to obtain a binary signal.</s><s>We used offline simulations to verify that this stimulus could be used to correctly estimate the shape of a linear filter.</s><s>LFPs and spike times were further down-sampled to 100Hz for filter analysis.</s></p><p><s>In general, the linear filter that transforms an input I into a response R, can be calculated in the frequency domain according to where F(ω), I(ω), and R(ω) are the Fourier transforms of the filter, input, and response respectively.</s><s>The variable ω represents frequency and * represents the complex conjugate.</s></p><p><s>The numerator of this equation is equal to the Fourier transform of the cross-correlogram of input and response: while the denominator is the power spectrum of the input.</s></p><p><s>For all the filters we calculated, both the input and output signals have relatively little highfrequency content, and so the filter is poorly estimated at high frequencies.</s><s>Moreover, because the input signal has little power at high frequencies, normalizing by the power spectrum of the input signal tends to boost this high-frequency noise in the filter.</s><s>Therefore, to obtain a reasonable filter, we gradually attenuated the frequency representation of the filter above a cutoff frequency (f cut ) according to prior to transforming it back into the time domain.</s><s>Gradual attenuation was used to reduce ripples in the filter that arise from a sharp frequency cutoff.</s><s>For odor-to-LFP filters we chose f cut = 5 Hz, f τ = 20 Hz, and for LFP-to-spike rate filters we chose f cut = 5 Hz, f τ = 200 Hz.</s><s>For filters relating the theoretical command signal to the PID response, we used f cut = 10 Hz, f τ = 50 Hz.</s><s>In general, we chose the largest values of f cut and f τ that did not introduce excessive noise into the resulting filter.</s><s>Qualitatively similar results were obtained with higher absolute cutoffs and sharper attenuation, though this produced more ripples at the edges of the filter.</s></p><p><s>In general, the power spectrum of the input signal limits the power spectrum of the calculated filter.</s><s>In our case, the fact that the LFP has little power at high frequencies means that the calculated spike filter cannot contain high frequencies.</s><s>The true spike filter is almost certainly quite narrow, and so the calculated spike filter is likely a smoothed version of the true spike filter (see Supplementary Figure <ref type="figure" target="#fig_3">3</ref>).</s><s>This smoothing is what gives rise to the fact that the calculated spike filter has some structure to the right of the zero time point.</s><s>In addition, the calculated spike filter may include a small contribution from the spike waveform itself.</s></p><p><s>Data used to test the filter was kept separate from data used to calculate the filter.</s><s>MATLAB (Mathworks, Natick, MA) was used to produce stimulus waveforms, analyze the data, and perform simulations.</s><s>(a) A typical recording showing that a long pulse of 2-butanone (0.1×) acting on OR42a adapts the LFP response to a test pulse of another odor (pentyl acetate, 0.02×) acting on OR47a.</s><s>Group data (right) shows that both the amplitude and the onset rate of the second test pulse response are significantly reduced compared to the first test pulse response (p&lt;0.01 , n=6 , paired t-test).</s><s>(b) Same experiment, but in reverse: a long pulse of pentyl acetate (0.02×) adapts the response to a test pulse of 2-butanone (0.004×).</s><s>The amplitude of the test pulse response is significantly reduced (p&lt;0.01</s><s>, n=5, paired t-test).</s><s>The onset rate is reduced but not significantly (p=0.14, paired t-test).</s><s>(c) A long pulse of 1-octanol (0.1×) acting on OR47b de-adapts the response to a test pulse of 2-butanone (0.1×) acting on OR42a.</s><s>Both the amplitude and the onset rate of the test pulse response are significantly increased (p&lt;0.01 , n=9, paired t-test).</s><s>(d) A long pulse of 2-butanone (0.1×) adapts the response to a test pulse of 1-octanol (0.1×).</s><s>The amplitude of the test pulse response is significantly reduced (p&lt;0.01</s><s>, n=8, paired t-test).</s><s>LFP responses (dashed lines).</s><s>Spectra are normalized to have the same total power.</s><s>ORN is pb1A, stimuli are color-coded as above (y = 5 cm, x = 0 cm).</s><s>(e) LFP events sorted and averaged by amplitude (inverted here for display).</s><s>The range of rise times (time from 10% to 90% of peak) was 28-32 ms.</s><s>Stimulus is 2-butanone 0.1×.</s><s>Same configuration as in (b,c).</s><s>(f) Average spike rates corresponding to the LFP events in (e).</s><s>Dashed trace represents the largest average LFP response, normalized to the same amplitude as the largest average spike rate.</s><s>(g) Peak LFP amplitude versus peak spike rate for the data in (e) and (f), ± s.e.m.</s><s>Open symbol is baseline (defined as the 30 ms starting 100 ms before event onset); dashed line is a linear extrapolation from this to the largest response.</s><s>(h) Power spectra of LFP (dashed line) and spike rate (dotted line) for responses shown in (c).</s><s>Stimulus is 2-butanone 0.1×.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc><div><p><s>(ref 47), Or85d -/-(ref 47), Or85e -/-(ref 47), pebbled-Gal4 (ref 48), UAS-DTl (L.M. Stevens, http://flybase.org,</s><s>personal communication to FlyBase FBrf0204962), Or33c-Gal4 (ref 18), Or46a-Gal4 (ref 18), Or59c-Gal4 (ref 49), UAS-DmNa v -IR (Vienna Drosophila RNAi Center, http://stockcenter.vdrc.at,</s><s>stocks 6131 and 6132), Or42a-Gal4 (ref 49), UAS-OR47a (ref 17), UAS-OR47b (ref 11</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Temporal patterns of ORN spiking are cell-and odor-dependent Rasters and peristimulus-time histograms (PSTHs, mean ± s.d.) show ORN spiking responses to an odor pulse (1.7 s duration, odors diluted in paraffin oil as labeled).</s><s>The time course of the odor pulse (top) is not square because it is slightly smoothed by our odor delivery device (see Supplementary Fig. 1).</s><s>(a) An example of a response with a strong onset transient and offset inhibition.</s><s>(b) In the same ORN type, a different stimulus drives a similar steady-state firing rate, but the onset transient is weaker and there is no offset inhibition.</s><s>(c) This same stimulus drives a strong onset transient and offset inhibition in a different ORN type.</s><s>(d) A more complex response, with an onset transient, then offset inhibition, then more excitation.</s><s>(e) An example of inhibition followed by excitation.</s><s>Each trace represents the mean of 5-6 sensillum recordings, each in a different fly.</s></p></div></figDesc><graphic coords="20,192.00,62.00,288.00,172.48" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Field potentials and spikes can be isolated from single ORNs (a) Three sensillum types in the maxillary palp (de Bruyne et al., 1999; Goldman and Carlson, 2005).</s><s>(b) A typical extracellular recording from a pb1 sensillum (stimulus is 2butanone 0.1×).</s><s>Enlarged segment at the peak of the response shows individual spikes (inset); taking the first derivative (inset lower trace) facilitates spike detection.</s><s>(c) TTX (50 μM) injected into the palp abolishes spikes, leaving the LFP largely unaffected.</s><s>We fit exponentials to the rising and falling phases of the LFP, and we also computed the overshoot after odor offset; none of these parameters changed significantly (data not shown).</s><s>(d) In Or42a -/-flies, this sensillum type no longer responds to this stimulus, although some spontaneous spikes persist.</s><s>(e) Mean pb1 LFP responses to selected stimuli are largely unaffected by TTX but are abolished by mutating Or42a.</s><s>This mutation does not affect responses to these stimuli in a different sensillum type (pb3, Supplementary Fig. 2).</s><s>(f) In another sensillum type (pb2), responses to fenchone (0.25×) and cyclohexanone (1×) are abolished by ablating the A neuron in a genetic background where B is already ablated.</s><s>In a background where A is ablated, 1-octen-1-ol (1×) elicits an inhibitory (upward) LFP which is abolished by killing the B neuron.</s><s>(The small remaining downward response reflects activity in other sensilla.)</s><s>(g) In pb3 sensilla, LFP responses to isoamyl acetate (1×) are abolished by a mutation in Or85d.</s><s>Here, the A neuron has been ablated genetically.</s><s>Data in (e-g) represent mean ± s.d., n = 4-7 recordings each.</s></p></div></figDesc><graphic coords="21,196.04,62.00,279.91,288.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Filter models describe transformations between stimulus, LFP, and spikes (a) Time course of odor stimulus and neural response (pb1, stimulus is 2-butanone 0.01×).</s><s>Note that spike rate is highest when the LFP is growing but suppressed when the LFP is recovering.</s><s>(b) Linear filter describing the relationship between the stimulus and the LFP (pb1A, 2-butanone 0.01×, ± s.d.).</s><s>Arrow indicates single filter lobe.</s><s>(c) The prediction of the filter (blue) is simply an inverted and slightly smoothed version of the odor time course, as expected for a filter with a single lobe.</s><s>Comparison to the recorded LFP (black, mean of 5 recordings in 5 flies) shows that the linear model is an adequate coarse description but underestimates onset rate and overestimates offset rate.</s><s>(d) Actual versus predicted LFP for the stimulus segment shown in (c).</s><s>Note that the model underestimates responses during onset (open arrow) and overestimates responses during offset (filled arrow).</s><s>(e) Linear filter describing the relationship between LFP and spike rate.</s><s>Arrows indicate two filter lobes.The biphasic filter means the spike rate increases when the LFP is growing more negative, and is inhibited when the LFP is recovering.</s><s>Because the negative lobe is larger than the positive lobe, the spike rate remains elevated above baseline during a maintained negative LFP deflection.</s><s>(f) The prediction of the filter (magenta) agrees well with the data (black).</s><s>(g) Actual versus predicted spike rate.</s></p></div></figDesc><graphic coords="22,189.50,62.00,293.00,246.96" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Odor-and cell-dependence of transduction and spiking dynamics (a) Linear filters describing the relationship between the stimulus and the LFP for five different stimulus/cell combinations.</s><s>Note that the filter depends on both ligand and receptor.</s><s>Mean ± s.d.</s><s>across recordings, n = 5-6 each.</s><s>Units of y-axes are mV per unit odor.</s><s>(b) Mean LFP responses for these ligand/receptor combinations (black).</s><s>Colored lines show the prediction of the linear model, obtained by convolving the corresponding filter in (A) with the stimulus waveform (shown at top).</s><s>Mean correlation coefficient 0.93 ± 0.04.</s><s>(c) Linear filters describing the relationship between the LFP and spike rate.</s><s>Note that these filters have a relatively stereotyped shape, unlike the transduction filters.</s><s>Units of y-axes are spikes/s per mV.</s><s>(d) Mean spiking responses (black) in units of spikes/s.</s><s>Colored lines show the prediction of the linear model, obtained by convolving the corresponding filter in (c) with the recorded LFP.</s><s>Mean correlation coefficient 0.92 ± 0.06.</s></p></div></figDesc><graphic coords="23,195.26,62.00,281.48,340.56" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Knocking down DmNa v makes the LFP-to-spiking transformation more differentiating (a) Firing rates in ORNs with reduced expression of voltage-dependent Na + channels (pb1A, stimulus is 2-butanone 0.1×).</s><s>Thin lines are trial-averaged responses from different recordings (n = 20-22 sensilla in 10-11 flies of each genotype); thick lines indicate the mean.</s><s>Mean firing rate during the odor is significantly reduced (p&lt;0.01,</s><s>t-test).</s><s>(b) Spontaneous spike rate is also significantly reduced by Na + channel knockdown (p&lt;0.01,</s><s>t-test).</s><s>(c) Rate of decay from the peak odor-evoked firing rate was speeded by Na + channel knockdown, measured here by fitting an exponential to the trace from peak to 200 ms after odor offset (p&lt;0.01,</s><s>t-test).</s><s>(d) The ratio of peak to steady-state rate firing rate is significantly increased by Na + channel knockdown (p&lt;0.01,</s><s>t-test).</s><s>(e) Knockdown has no effect on the time course of the LFP response, although the amplitude is slightly reduced.</s><s>(f) Filters describing the LFP-to-spiking transformation (mean ± s.d., n = 4).</s><s>Note that knockdown produces more symmetrical positive and negative lobes, indicating a more differentiating transformation.</s><s>(g) Filters describing the stimulus-to-LFP transformation were unaffected by Na + channel knockdown, as expected.</s></p></div></figDesc><graphic coords="24,192.00,62.00,288.00,172.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>Dynamics of transduction and adaptation (a) LFP recordings from pb1A ORNs illustrate how transduction dynamics depend on odor concentration.</s><s>Top is 2-butanone (dilutions of 0.1×, 0.02, 0.004, 0.0008, 0.00016, 0.000032).</s><s>Bottom is isoamyl acetate (1×, 0.2, 0.04, 0.008, 0.0016).</s><s>Traces are means of 5-6 recordings.</s><s>Traces at right are normalized to the same maximum negative deflection.</s><s>Dashed blue line shows one exponential fit to response offset; note that only the initial segment was fit and no attempt was made to fit the overshooting later portion.</s><s>(b) On-and off-rates as a function of odor concentration, mean ± s.d.</s><s>across recordings.</s><s>Rates were calculated by fitting exponential curves to the onset and offset phases of the normalized mean LFP.</s><s>(c) A typical recording showing that a long adapting pulse of 2-butanone (0.1×) reduced the amplitude and onset slope of the LFP response to a weak test odor pulse (2butanone 0.004×, green) but not the response to a strong test odor pulse (2-butanone 0.2×, orange).</s><s>(d) Mean responses to test pulse 1 (solid) and test pulse 2 (dashed) for the two test odors shown in (c), n = 6 recordings.</s><s>Inset shows the onset phase of these traces normalized to the same amplitude.</s><s>(e) Mean response amplitude (± s.d.) as a function of concentration for test pulse 1 (filled) and test pulse 2 (open).</s><s>Arrows indicate the two concentrations shown in (c) and (d).</s><s>(f) Onset slope as a function of concentration for initial (filled) and adapted (open) responses.</s></p></div></figDesc><graphic coords="25,199.30,62.00,273.40,288.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 7 .</head><label>7</label><figDesc><div><p><s>Figure 7. Cross-adaptation between co-expressed odorant receptors</s></p></div></figDesc><graphic coords="26,192.00,62.00,288.00,265.92" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 8 .</head><label>8</label><figDesc><div><p><s>Figure 8. Encoding the dynamics of natural odor plumes (a) Plume dynamics depend on windspeed and odor location.</s><s>Cartoon schematizes upwind distance (y) and crosswind distance (x).</s><s>Traces are LFP recordings from a pb1A ORN responding to 2-butanone (0.1×).</s><s>(b) Simultaneous recordings from a PID and a pb1A ORN (1.5 mm from the PID).</s><s>Note spontaneous spikes (arrow); odor-evoked spikes are not visible at this scale.</s><s>(c) Responses from the same sensillum in the same configuration, now with different odors.</s><s>(d) Power spectra of simultaneously-measured PID signals (solid lines) andLFP responses (dashed lines).</s><s>Spectra are normalized to have the same total power.</s><s>ORN is pb1A, stimuli are color-coded as above (y = 5 cm, x = 0 cm).</s><s>(e) LFP events sorted and averaged by amplitude (inverted here for display).</s><s>The range of rise times (time from 10% to 90% of peak) was 28-32 ms.</s><s>Stimulus is 2-butanone 0.1×.</s><s>Same configuration as in (b,c).</s><s>(f) Average spike rates corresponding to the LFP events in (e).</s><s>Dashed trace represents the largest average LFP response, normalized to the same amplitude as the largest average spike rate.</s><s>(g) Peak LFP amplitude versus peak spike rate for the data in (e) and (f), ± s.e.m.</s><s>Open symbol is baseline (defined as the 30 ms starting 100 ms before event onset); dashed line is a linear extrapolation from this to the largest response.</s><s>(h) Power spectra of LFP (dashed line) and spike rate (dotted line) for responses shown in (c).</s><s>Stimulus is 2-butanone 0.1×.</s></p></div></figDesc><graphic coords="27,209.37,62.00,253.25,296.64" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nat Neurosci.</s><s>Author manuscript; available in PMC 2011 August 01.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGEMENTS</head><p>We are grateful to <rs type="person">John Carlson</rs> for <rs type="grantNumber">Or33c-Gal4</rs>, <rs type="grantNumber">Or46a-Gal4</rs>, <rs type="grantNumber">UAS-Or47a</rs> and <rs type="grantNumber">UAS-Or47b</rs>, <rs type="person">Barry Dickson</rs> for <rs type="grantNumber">Or59c-Gal4</rs> and <rs type="person">Or42a-Gal4</rs>, <rs type="person">Liqun Luo</rs> for pebbled-Gal, and <rs type="person">Leslie Stevens</rs> for <rs type="institution">UAS-DTl</rs>.We thank <rs type="person">Jonathan Cohen</rs>, <rs type="person">Adrienne Fairhall</rs>, <rs type="person">Matt Wachowiak</rs>, and <rs type="person">Gary Yellen</rs> for helpful conversations.<rs type="person">Andreas Liu</rs>, <rs type="person">Markus Meister</rs>, <rs type="person">David Schoppik</rs>, and members of the <rs type="institution">Wilson lab</rs> provided feedback on the manuscript.This work was funded by a <rs type="funder">Helen Hay Whitney Foundation</rs> Fellowship (to K.I.N.), together with a grant from the <rs type="funder">NIH</rs> (<rs type="grantNumber">R01DC008174</rs>), a <rs type="grantName">McKnight Scholar Award</rs>, and a <rs type="grantName">Beckman Young Investigator Award</rs> (to R.I.W.).R.I.W. is an <rs type="grantName">HHMI Early Career Scientist</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_tyQdyfW">
+					<idno type="grant-number">Or33c-Gal4</idno>
+				</org>
+				<org type="funding" xml:id="_5u62fbN">
+					<idno type="grant-number">Or46a-Gal4</idno>
+				</org>
+				<org type="funding" xml:id="_CmA7v6A">
+					<idno type="grant-number">UAS-Or47a</idno>
+				</org>
+				<org type="funding" xml:id="_gahVqrx">
+					<idno type="grant-number">UAS-Or47b</idno>
+				</org>
+				<org type="funding" xml:id="_EH4vAnR">
+					<idno type="grant-number">Or59c-Gal4</idno>
+				</org>
+				<org type="funding" xml:id="_MvKUdta">
+					<idno type="grant-number">R01DC008174</idno>
+					<orgName type="grant-name">McKnight Scholar Award</orgName>
+				</org>
+				<org type="funding" xml:id="_HYPjYkg">
+					<orgName type="grant-name">Beckman Young Investigator Award</orgName>
+				</org>
+				<org type="funding" xml:id="_K8Nqb4S">
+					<orgName type="grant-name">HHMI Early Career Scientist</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Odor plumes and how insects use them</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Murlis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Elkinton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">T</forename><surname>Cardé</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Entymol</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="505" to="532" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Odour-plume dynamics influence the brain&apos;s olfactory code</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Vickers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Christensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Baker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Hildebrand</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">410</biblScope>
+			<biblScope unit="page" from="466" to="470" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11260713</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Electrophysiological responses of single olfactory bulb neurons to binary mixtures of amino acids in the channel catfish, Ictalurus punctatus</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Caprio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="1435" to="1443" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8989383</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Odor coding in a model olfactory organ: the Drosophila maxillary palp</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>De Bruyne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Clyne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Carlson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="4520" to="4532" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10341252</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Adaptation of the odour-induced response in frog olfactory receptor cells</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Reisert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R</forename><surname>Matthews</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">519</biblScope>
+			<biblScope unit="page" from="801" to="813" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10457092</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Odor coding in the Drosophila antenna</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>De Bruyne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Carlson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="537" to="552" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11395013</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Olfactory adaptation depends on the Trp Ca2+ channel in Drosophila</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Stortkuhl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">T</forename><surname>Hovemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Carlson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="4839" to="4846" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10366618</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Computational model of the insect pheromone transduction cascade</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lucas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Rospars</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="2009">2009. 1000321</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19300479</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Octopamine and tyramine modulate pheromone-sensitive olfactory sensilla of the hawkmoth Manduca sexta in a time-dependent manner</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Flecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stengl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">195</biblScope>
+			<biblScope unit="page" from="529" to="545" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Flux detectors versus concentration detectors: two types of chemoreceptors</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Kaissling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Senses</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="99" to="111" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9530975</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The molecular basis of odor coding in the Drosophila antenna</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hallem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Carlson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="965" to="979" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15210116</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Insect olfactory receptors are heteromeric ligand-gated ion channels</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sato</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">452</biblScope>
+			<biblScope unit="page" from="1002" to="1006" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18408712</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Atypical membrane topology and heteromeric function of Drosophila odorant receptors in vivo</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Benton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sachse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Michnick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">B</forename><surname>Vosshall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Biol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16402857</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Role of G-proteins in odor-sensing and CO2-sensing neurons in Drosophila</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Carlson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">20357107</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Drosophila odorant receptors are both ligand-gated and cyclic-nucleotide-activated cation channels</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wicher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">452</biblScope>
+			<biblScope unit="page" from="1007" to="1011" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18408711</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Two interacting olfactory transduction mechanisms have linked polarities and dynamics in Drosophila melanogaster antennal basiconic sensilla neurons</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schuckel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H</forename><surname>Torkkeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>French</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page" from="214" to="223" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19403747</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Integrating the molecular and cellular basis of odor coding in the Drosophila antenna</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Dobritsa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Van Der Goes Van Naters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Warr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Steinbrecht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Carlson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="827" to="841" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12628173</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Coexpression of two functional odor receptors in one neuron</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Goldman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Van Der Goes Van Naters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lessing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Warr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Carlson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="661" to="666" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15748842</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Foundations of cellular neurophysiology</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Johnston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sm-S</forename><surname>Wu</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<publisher>MIT Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Chemo-electrical transduction in insect olfactory receptors</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Kaissling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="121" to="145" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 3518584</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Insect olfaction: deciphering system for chemical messages</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Schneider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">163</biblScope>
+			<biblScope unit="page">4885069</biblScope>
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Fast and slow contrast adaptation in retinal circuitry</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Baccus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meister</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="909" to="919" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12467594</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Temporal processing and adaptation in the songbird auditory forebrain</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">I</forename><surname>Nagel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Doupe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="845" to="859" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16982428</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">System identification of Drosophila olfactory sensory neurons</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Lazar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">B</forename><surname>Slutskiy</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10827-10010-10265-10820</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Neurosci</title>
+		<imprint/>
+	</monogr>
+	<note>2010 in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Two computational regimes of a singlecompartment neuron separated by a planar boundary in conductance space</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">N</forename><surname>Lundstrom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Higgs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Fairhall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1239" to="1260" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18194104</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Neural encoding of rapidly fluctuating odors</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Geffen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Broome</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Laurent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meister</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="570" to="586" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19249277</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Pigments and signals in colour vision</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Rushton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">220</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="1972">1972</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 5059236</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Temporal representations of odors in an olfactory network</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Laurent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wehr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Davidowitz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="3837" to="3847" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8656278</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Molecular features of odorants systematically influence slow temporal responses across clusters of coordinated antennal lobe units in the moth Manduca sexta</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Daly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">H</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="236" to="254" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14985411</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Transformation of olfactory representations in the Drosophila antennal lobe</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Turner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Laurent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">303</biblScope>
+			<biblScope unit="page" from="366" to="370" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14684826</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Intensity versus identity coding in an olfactory system</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stopfer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Laurent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="991" to="1004" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12971898</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Temporally diverse firing patterns in olfactory receptor neurons underlie spatiotemporal neural codes for odors</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Raman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Joseph</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stopfer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="1994" to="2006" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20147528</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Light adaptation in salamander L-cone photoreceptors</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">S</forename><surname>Soo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">B</forename><surname>Detwiler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rieke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="1331" to="1342" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18256253</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">The inositol 1,4,5-trisphosphate receptor is required for maintenance of olfactory adaptation in Drosophila antennae</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Deshpande</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Venkatesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rodrigues</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hasan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="282" to="288" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10842240</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Odorant receptor heterodimerization in the olfactory system of Drosophila melanogaster</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Neuhaus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="15" to="17" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15592462</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Calcium-calmodulin modulation of the olfactory cyclic nucleotide-gated cation channel</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ahamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Yau</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">266</biblScope>
+			<biblScope unit="page" from="1348" to="1354" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7526466</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Adaptation processes in insect olfactory receptors. Mechanisms and behavioral significance</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kaissling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Strausfeld</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Rumbo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann. N. Y. Acad. Sci</title>
+		<imprint>
+			<biblScope unit="volume">510</biblScope>
+			<biblScope unit="page" from="104" to="112" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 3324874</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Membrane properties underlying the firing of neurons in the avian cochlear nucleus</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Reyes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">W</forename><surname>Rubel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Spain</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="5352" to="5364" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8083740</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Neocortical pyramidal cells respond as integrate-and-fire neurons to in vivo-like input currents</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rauch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">La</forename><surname>Camera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Luscher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R</forename><surname>Senn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Fusi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="1598" to="1612" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12750422</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Feature selection in simple neurons: how coding depends on spiking dynamics</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Famulare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fairhall</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/neco.2009.02-09-956</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="581" to="598" />
+			<date type="published" when="2010">2010. 19922290</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Sensory processing in the Drosophila antennal lobe increases the reliability and separability of ensemble odor representations</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Bhandawat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Olsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Schlief</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">W</forename><surname>Gouwens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Wilson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1474" to="1482" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17922008</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Retinal processing near absolute threshold: from behavior to mechanism</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Field</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Sampath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rieke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu Rev Physiol</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="491" to="514" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15709967</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Temporal dynamics and latency patterns of receptor neuron input to the olfactory bulb</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Spors</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wachowiak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">B</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="1247" to="1259" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16436612</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Temporal structure of receptor neuron input to the olfactory bulb imaged in behaving rats</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Carey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Verhagen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Wesson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pirez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wachowiak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="1073" to="1088" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19091924</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Elementary response of olfactory receptor neurons to odorants</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Bhandawat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Reisert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Yau</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">308</biblScope>
+			<biblScope unit="page" from="1931" to="1934" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15976304</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Chemical communication in heliothene moths.1. Antennal Receptor neurons encode several features of intraspecific and interspecific odorants in the male corn-earworm moth Helicoverpa zea</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Almaas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Christensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Mustaparta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Physiol</title>
+		<imprint>
+			<biblScope unit="volume">169</biblScope>
+			<biblScope unit="page" from="249" to="258" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Excitatory interactions between olfactory processing channels in the Drosophila antennal lobe</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Olsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Bhandawat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Wilson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="89" to="103" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17408580</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Temporal target restriction of olfactory receptor neurons by Semaphorin-1a/ PlexinA-mediated axon-axon interactions</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">B</forename><surname>Sweeney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page">17224402</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Molecular, anatomical, and functional organization of the Drosophila olfactory system</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Couto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Alenius</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Dickson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="1535" to="1547" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16139208</note>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Free-flight responses of Drosophila melanogaster to attractive odors</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Budick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Dickinson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Exp. Biol</title>
+		<imprint>
+			<biblScope unit="volume">209</biblScope>
+			<biblScope unit="page" from="3001" to="3017" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16857884</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

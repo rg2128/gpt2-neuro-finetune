@@ -1,0 +1,3633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The mechanics of state-dependent neural correlations</title>
+				<funder ref="#_wGbYFXf">
+					<orgName type="full">Simons Foundation collaboration on the global brain (BD)</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Simons Foundation</orgName>
+				</funder>
+				<funder ref="#_khYhGjD #_XurtAef">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_huPMsxZ #_wbzAveQ #_hMvRFNj">
+					<orgName type="full">National Science Foundation</orgName>
+					<orgName type="abbreviated">NSF</orgName>
+				</funder>
+				<funder ref="#_wmrBj3q">
+					<orgName type="full">NIH-CRCNS</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2017-06-20">2017 June 20.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Brent</forename><surname>Doiron</surname></persName>
+							<email>bdoiron@pitt.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Pittsburgh</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Neural Basis of Cognition</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ashok</forename><surname>Litwin-Kumar</surname></persName>
+							<idno type="ORCID">0000-0003-2422-6576</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Pittsburgh</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Neural Basis of Cognition</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Center for Theoretical Neuroscience</orgName>
+								<orgName type="institution">Columbia University</orgName>
+								<address>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Robert</forename><surname>Rosenbaum</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Pittsburgh</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Neural Basis of Cognition</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Applied and Computational Mathematics and Statistics</orgName>
+								<orgName type="institution">University of Notre Dame</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">Notre Dame</orgName>
+								<address>
+									<region>IN</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Interdisciplinary Center for Network Science and Applications</orgName>
+								<orgName type="institution">University of Notre Dame</orgName>
+								<address>
+									<addrLine>Notre Dame</addrLine>
+									<region>IN</region>
+									<country>UAS</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gabriel</forename><forename type="middle">K</forename><surname>Ocker</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Pittsburgh</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Neural Basis of Cognition</orgName>
+								<address>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff6">
+								<orgName type="institution">Allen Institute for Brain Science</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Krešimir</forename><surname>Josić</surname></persName>
+							<affiliation key="aff7">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Houston</orgName>
+								<address>
+									<settlement>Houston</settlement>
+									<region>TX</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff8">
+								<orgName type="department">Department of Biology and Biochemistry</orgName>
+								<orgName type="institution">University of Houston</orgName>
+								<address>
+									<settlement>Houston</settlement>
+									<region>TX</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff9">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Pittsburgh</orgName>
+								<address>
+									<addrLine>Thackeray 528</addrLine>
+									<postCode>15213</postCode>
+									<settlement>Pittsburgh</settlement>
+									<region>PA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The mechanics of state-dependent neural correlations</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Neuroscience</title>
+						<title level="j" type="abbrev">Nat Neurosci</title>
+						<idno type="ISSN">1097-6256</idno>
+						<idno type="eISSN">1546-1726</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">19</biblScope>
+							<biblScope unit="issue">3</biblScope>
+							<biblScope unit="page" from="383" to="393"/>
+							<date type="published" when="2017-06-20">2017 June 20.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D14C13C96045263756F281D1C9F1F931</idno>
+					<idno type="DOI">10.1038/nn.4242</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Simultaneous recordings from large neural populations are becoming increasingly common.</s><s>An important feature of the population activity are the trial-to-trial correlated fluctuations of the spike train outputs of recorded neuron pairs.</s><s>Like the firing rate of single neurons, correlated activity can be modulated by a number of factors, from changes in arousal and attentional state to learning and task engagement.</s><s>However, the network mechanisms that underlie these changes are not fully understood.</s><s>We review recent theoretical results that identify three separate biophysical mechanisms that modulate spike train correlations: changes in input correlations, internal fluctuations, and the transfer function of single neurons.</s><s>We first examine these mechanisms in feedforward pathways, and then show how the same approach can explain the modulation of correlations in recurrent networks.</s><s>Such mechanistic constraints on the modulation of population activity will be important in statistical analyses of high dimensional neural data.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>A main challenge in systems neuroscience is to understand the patterns of neural activity that support sensory processing <ref type="bibr" target="#b0">1</ref> , memory <ref type="bibr" target="#b1">2</ref> , decision making <ref type="bibr" target="#b2">3</ref> , and cognition <ref type="bibr" target="#b3">4</ref> .</s><s>This activity emerges from interactions between neurons <ref type="bibr" target="#b4">5</ref> , as well as bottom-up sensory and top-down modulatory inputs <ref type="bibr" target="#b5">6</ref> .</s><s>Determining how neural circuits give rise to these activity patterns will</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Modulation of neuronal correlations</head><p><s>Simultaneous recordings from large populations of neurons are becoming commonplace in systems neuroscience <ref type="bibr" target="#b13">14</ref> .</s><s>Consider two spike trains from the k th trial of such an experiment, and</s></p><p><s>, where the Dirac delta function,</s></p><p><s>, represent the m th spike from neuron i.</s><s>The spike count correlation coefficient <ref type="bibr" target="#b43">44,</ref><ref type="bibr" target="#b24">25</ref> between the two spike trains is:</s></p><p><s>Here is the random spike count computed over a duration T on trial k, and and denote the covariance and variance over trials, respectively.</s><s>When ρ appears without a subscript, it always refers to output spike correlations.</s><s>Over small durations (T ~ 1 -10 ms) ρ measures spike train synchrony, while over long durations (T ~ 10 2 -10 3 ms) it captures the shared fluctuations in the firing rates of the two neurons over trials.</s></p><p><s>A growing list of studies show large heterogeneity in correlations measured across the nervous system, as well as from neuron pairs within the same brain region <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b44">45,</ref><ref type="bibr" target="#b45">46,</ref><ref type="bibr" target="#b46">47</ref> .</s></p><p><s>Nevertheless, the average correlation coefficient across paired spike trains in a cortical population is typically small, ranging from 0.01 to 0.3 depending on the brain region, brain state, and joint stimulus preference of the neuron pair <ref type="bibr" target="#b47">48,</ref><ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b44">45</ref> .</s><s>Here we primarily consider long-timescale correlations, although our general framework is applicable to arbitrary time windows.</s></p><p><s>Neuronal correlations are modulated by a variety of factors including attention and arousal, learning, as well as stimulus onset and type.</s><s>In this study we will consider correlation changes induced by a broadly defined state change of the nervous system (see Box 1).</s><s>We present a partial list of examples in Table <ref type="table" target="#tab_0">1</ref> with each entry describing two states, labeled A and B. For each case we list the relative change of correlation from state A to B, as well as the trial duration T over which ρ is measured.</s><s>Table <ref type="table" target="#tab_0">1</ref> shows that ρ can be modulated considerably in different animals, brain regions, cognitive contexts, and when measured over various durations, T. The three final entries in Table <ref type="table" target="#tab_0">1</ref> highlight correlation modulation determined by intracellular recordings, results that are especially important when establishing physiological mechanisms.</s></p><p><s>In sum, the diversity in the conditions and states in which modulations in correlation have been observed suggests that distinct cellular and circuit mechanisms may be responsible.</s><s>We next present a unified framework to discuss and compare a number of mechanisms that can impact the correlation coefficient, ρ, as well as how it is modulated across brain states.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Central framework for correlation modulation</head><p><s>Biological neural circuits consist of neurons belonging to a variety of cell classes wired in complex ways.</s><s>It is tempting to try to infer the structure of these circuits and the physiological properties of neurons within them from multicellular recordings from subsets of neurons.</s><s>Such an approach is fraught with difficulties <ref type="bibr" target="#b48">49</ref> , many of which are due to the fact that only part of the population is observed.</s><s>Here we describe an alternative strategy that is more modest in scope, but provides a general framework for discussing how modulations in spiking correlations depend on biophysical changes in the underlying circuit to which the neurons belong.</s></p><p><s>To start, we consider a pair of simultaneously recorded neurons (Fig. <ref type="figure" target="#fig_0">1</ref>, black triangles) that are members of a larger, yet unknown, neural circuit (Fig. <ref type="figure" target="#fig_0">1</ref>, colored symbols).</s><s>To simplify our analysis we assume that neurons in the pair are not directly coupled (although this is not required for our treatment).</s><s>In this case any correlations between spike trains of the neuron pair are inherited from correlations between their inputs.</s><s>Under this assumption, we will explore how the cellular properties of the postsynaptic neurons, and those of the presynaptic circuit that drives them, influence correlation transfer.</s></p><p><s>On trial k of the experiment neuron i of our pair (i = 1 or 2) responds to its afferent inputs, , with spikes over the window T. We consider values of T that are much larger than the synaptic and membrane timescale of the neurons, thereby not explicitly measuring the fine temporal structure of the spike trains.</s><s>For simplicity, we assume that Var(n 1 ) = Var(n 2 ) = Var(n), so that the correlation coefficient between the responses from the neuron pair is .</s><s>The two neurons do not interact directly, so ρ ≠ 0 implies that the presynaptic inputs to the neurons, x 1 (t) and x 2 (t), are themselves correlated.</s><s>We quantify this correlation using the input covariance Cov(x̂1, x2), between the integrated synaptic inputs, .</s><s>When the input covariance, is small we can use the linear approximation:</s></p><p><s>(1) to relate input and output covariance <ref type="bibr" target="#b36">37</ref> .</s><s>Here L = L 1 = L 2 is the linear response of the target neuron 50,51 .</s><s>Briefly, for weak common fluctuations, s(t), we have 〈n i 〉 ≈ 〈n io 〉 + L i ŝ, where 〈•〉 denotes the expectation over trials, 〈n io 〉 is the mean spike count of the of neuron i at its operating point (defined by s = 0), and .</s><s>The common fluctuations then simply perturb the neuron pair's joint activity about an operational point (where Cov(n 1o , n 2o ) = 0).</s><s>If the operating point changes (say through a modulation), the linear approximation may change L but Eq. ( <ref type="formula">1</ref>) remains valid.</s><s>However if perturbations are too large, this linear approximation can break down, although it could still provide qualitative insights.</s><s>For large time windows, T, the response function L/T is approximately the derivative (slope) of the firing rate -input curve of a neuron at the operational point <ref type="bibr" target="#b36">37,</ref><ref type="bibr" target="#b37">38</ref> .</s></p><p><s>We assume that the response of each neuron is the result of a leaky, potentially nonlinear integration of its inputs.</s><s>The total integrated input, xî(t), includes presynaptic and postsynaptic components.</s><s>The covariance between presynaptic inputs, Cov(P 1 , P 2 ), is determined by both common projections to the neuron pair, as well as correlations in the activity of the presynaptic pool of neurons <ref type="bibr" target="#b31">32,</ref><ref type="bibr" target="#b30">31</ref> .</s><s>From the vantage point of a postsynaptic neuron pair these sources are indistinguishable.</s><s>If we neglect synaptic and dendritic nonlinearities then we have that Cov(x̂1, x2) ∞ Cov(P 1 , P 2 ), where the covariance on the right is between the activities, , of the population presynaptic to neuron i on trial k (Fig. <ref type="figure" target="#fig_0">1</ref>).</s></p><p><s>Postsynaptic effects, such as stochastic vesicle release from synaptic contacts or channel fluctuations, are another well studied source of variability <ref type="bibr" target="#b51">52,</ref><ref type="bibr" target="#b52">53</ref> .</s><s>Since these fluctuations are private to each neuron, we assume that they are uncorrelated between the neuron pair.</s><s>Further, they are also likely uncorrelated with the activity of the presynaptic population, so that Var(xî) ∞ Var(P i ) + Var(N i ), where N i is the postsynaptic noise (integrated over T) within neuron i (Fig. <ref type="figure" target="#fig_0">1</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The total correlation coefficient of the inputs is then</head><p><s>where R x = Var(N)/Var(P) and ρ P = Cov(P 1 , P 2 )/Var(P).</s><s>We again assume that the two neurons are statistically identical, so that Var(x) = Var(x̂1) = Var(x̂2), and similarly for the other variances.</s><s>The coefficient R x then measures the excess fluctuations in the input current due to internal processes in each neuron.</s><s>Ultimately, we are interested in the variability of the spiking output of a neuron, n i .</s><s>Unfortunately there is no simple linear relationship between Var(n i ) and Var(x̂i) <ref type="bibr" target="#b53">54</ref> , as there is for Cov (see Eq. ( <ref type="formula">1</ref>)).</s><s>This makes it difficult to determine the excess variability in the spike response due to internal fluctuations, R y , from only the knowledge of R x .</s><s>However, we make the reasonable assumption that there is a monotonic relationship between them (i.e when R x increases so too does R y ).</s><s>In our review we use this observation to simplify our exposition, and hereafter make no distinction between R x and R y .</s></p><p><s>Finally, we consider the network to be in one of two states (labelled A and B) that differ in their spike count pairwise correlation coefficient ρ.</s><s>This analysis then yields the following expression for the ratio of spike count correlations, ρ A and ρ B in the two states, A and B:</s></p><p><s>(2)</s></p><p><s>The modulation in the output correlation between the two states results from three separate terms:</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>1.</head><p><s>captures state dependent changes in the correlations of the presynaptic input;</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>2.</head><p><s>[(1 + R B )/(1 + R A )] -1 captures state dependent changes in the internal fluctuations within each neuron in the pair;</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3.</head><p><s>[L B /L A ] 2 captures state dependent changes in the response gain of the transfer from synaptic input to the neurons' output.</s><s>Generally L A ≠ L B , since the linearization about the operational point at state A will typically differ from that at state B.</s></p><p><s>We next explore each of these modulatory terms in our feedforward network.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Three mechanisms of correlation modulation</head><p><s>There are several distinct ways to model a state change within the network.</s><s>For example, neuromodulation through the activation of cholinergic and monoaminergic pathways can have diverse effects on the cellular and synaptic properties in a network <ref type="bibr" target="#b54">55</ref> .</s><s>Alternatively, the temporal dynamics of large scale neural activity as measured by electroencephalogram (EEG) and local field potential (LFP) recordings, show qualitative differences when comparing two distinct neural states <ref type="bibr" target="#b40">41</ref> .</s><s>This can be modeled by changing the statistics of the global input to the network <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b55">56</ref> .</s><s>In our framework a presynaptic pool of excitatory and inhibitory neurons (red and blue respectively in Fig. <ref type="figure" target="#fig_1">2</ref>) project to a representative neuron pair (Fig. <ref type="figure" target="#fig_1">2</ref>, black).</s><s>We model the shift from state A to state B as an increase in a static external drive to the presynaptic neuron population (Fig. <ref type="figure" target="#fig_1">2</ref>, a1,b1, and c1 vs. a2, b2, and c2).</s></p><p><s>This modeling choice is sufficient to cause changes in both the firing rate and correlations of the postsynaptic pair and can be loosely interpreted as capturing a wide array of neuromodulation schemes.</s><s>We examine this general model of modulation (see Methods: general feedforward model) in three examples, each highlighting a different mechanism of correlation modulation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Modulating presynaptic correlations</head><p><s>We start by analyzing the effect of changes in the correlations in the pool of presynaptic neurons (see Methods: Modulating presynaptic correlations).</s><s>Here, as in other examples, the target pair of neurons receive correlated excitatory (E) and correlated inhibitory (I) inputs via an overlapping set of projections from the presynaptic pool.</s><s>In the present case we also include direct connections from excitatory to inhibitory neurons within the presynaptic pool itself.</s><s>These connections can correlate the inhibitory activity received by one neuron in the pair with the excitatory activity received by the other neuron.</s><s>The covariance of the total presynaptic activity, over trials is computed as:</s></p><p><s>(3)</s></p><p><s>In state A both excitatory and inhibitory presynaptic pools are weakly driven, resulting in low firing rates in the presynaptic populations and subsequently low firing rates of the postsynaptic neuron pair.</s><s>The low rates in the presynaptic populations allow the spike threshold nonlinearity of the presynaptic cells to suppress neural transfer (the response gain L of the presynaptic populations is small).</s><s>This compromises the presynaptic inhibitory pool's response to projections from the excitatory presynaptic population.</s><s>In particular, the low firing rates in the inhibitory pool imply that the excitatory input fluctuations given to the inhibitory pool are poorly transferred by the inhibitory pool to the postsynaptic neuron pair.</s><s>This results in approximately uncorrelated outputs of the excitatory and inhibitory pool, Cov(Ê i , Î j ) ≈ 0 (Fig. <ref type="figure" target="#fig_1">2</ref>, a3 orange dot).</s><s>In this case is due primarily to overlapping projections with Cov(Ê 1 , Ê 2 ) &gt; 0 and Cov(Î 1 , Î 2 ) &gt; 0 (Fig. <ref type="figure" target="#fig_1">2</ref>, a3 orange dot).</s></p><p><s>In state B the presynaptic pool of neurons fires at a higher rate, increasing the net input to the postsynaptic pair, yielding a higher postsynaptic firing rate compared to state A (Fig 2, a4 green).</s><s>Further, since the drive to the inhibitory pool in state B is larger than in state A then the spiking nonlinearity of the inhibitory neurons does not compromise their response to the projections from the excitatory pool.</s><s>Thus the activity of the presynaptic inhibition is correlated with that of the presynaptic excitation.</s><s>However, since inhibition is hyperpolarizing while excitation is depolarizing, the projections from the excitatory pool to one postsynaptic neuron are anticorrelated with the inhibitory projections to the other postsynaptic neuron.</s><s>In the end, Cov(E i , I j ) &lt; 0 (Fig. <ref type="figure" target="#fig_1">2</ref>, a3 blue dot), and this negative covariability cancels the positive covariability due to overlapping projections.</s><s>This has the effect of reducing overall input correlations, so that (Fig. <ref type="figure" target="#fig_1">2</ref>, a3 blue dot).</s><s>This leads to a reduction in output correlations (Fig 2, a4 black) with ρ B /ρ A &lt; 1 (via Eq. 2).</s><s>In this example the linear transfer function remained approximately constant between the two states (L A ≈ L B ) and we did not model private fluctuations (R A = R B = 0).</s></p><p><s>Excitatory and inhibitory currents are widely reported to be strongly correlated with one another <ref type="bibr" target="#b56">57,</ref><ref type="bibr" target="#b57">58,</ref><ref type="bibr" target="#b58">59</ref> .</s><s>In our model such correlations are due to feedforward excitatory and the associated disynaptic inhibitory pathways from the presynaptic population -a canonical circuit in the brain <ref type="bibr" target="#b59">60</ref> .</s><s>The functional consequences of this type of connectivity were first investigated using trial-averaged single neuron activity, with delayed inhibition creating a 'window of opportunity' for neural responses <ref type="bibr" target="#b60">61,</ref><ref type="bibr" target="#b61">62,</ref><ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b62">63</ref> .</s><s>More recent studies have investigated the influence of this circuit structure on correlations between excitation and inhibition and the covariability of population responses.</s><s>In the whisker barrel cortex of rodents this circuit structure supports an active decorrelation of the spiking activity between putative excitatory and inhibitory units when measured in the stimulus evoked state, when compared to the spontaneous state <ref type="bibr" target="#b63">64,</ref><ref type="bibr" target="#b64">65</ref> .</s><s>A functionally similar feedforward circuit in the electrosensory system of weakly electric fish drives a decorrelated state when stimuli are spatially broad as opposed to spatially compact <ref type="bibr" target="#b65">66,</ref><ref type="bibr" target="#b66">67</ref> .</s><s>The example presented above was based on the models developed in those studies.</s></p><p><s>The cancelation of overall input current covariability by anti-correlated excitatory and inhibitory inputs to neuron pairs was initially studied by Renart, de la Rocha et al. <ref type="bibr" target="#b31">32</ref> .</s><s>However, they considered the case of recurrently coupled cortical networks, as opposed to the feedforward structure analyzed above.</s><s>They showed that in balanced networks of neurons <ref type="bibr" target="#b67">68</ref> the large sources of correlation due to shared projections within and outside the circuit were robustly and fully cancelled, stabilizing an asynchronous network state.</s><s>Conditions under which such cancellation occurs have been clarified in further studies of recurrently coupled networks of model spiking neurons <ref type="bibr" target="#b68">69,</ref><ref type="bibr" target="#b69">70</ref> .</s><s>Modulation of correlations is difficult to study in these cases, mainly because correlations are very small (on the order of the inverse of the network size).</s><s>We will revisit correlation modulation in recurrent networks in a later section.</s></p><p><s>In sum, the circuit mechanisms that determine pre-synaptic covariability are diverse, and a complete treatment is beyond the scope of this review.</s><s>Nevertheless, in many cases a cancellation between various sources of opposing pre-synaptic correlations is a key component.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Modulating postsynaptic noise</head><p><s>To demonstrate the influence of private noise on correlation transfer, we consider a model in which synaptic release is random (see Methods: Modulating internal fluctuations).</s><s>Every presynaptic spike releases a random number of synaptic vesicles to the postsynaptic neuron <ref type="bibr" target="#b52">53</ref> .</s><s>This is due to both the nature of vesicle release and the fact that vesicles are replenished at random times.</s><s>Vesicle recovery dynamics result in activity-dependent changes in the synaptic current's mean and variability.</s><s>This type of synaptic dynamics is standard in models of short term synaptic depression and has been widely used in past studies <ref type="bibr" target="#b70">71,</ref><ref type="bibr" target="#b71">72,</ref><ref type="bibr" target="#b72">73,</ref><ref type="bibr" target="#b73">74,</ref><ref type="bibr" target="#b74">75</ref> .</s></p><p><s>We again consider the response of our model neuron pair in two states.</s><s>In state A the modulatory drive is weak and presynaptic populations fire at a low rate.</s><s>In this case, the variability in the postsynaptic current, Var(N), is due primarily to probabilistic vesicle release, since vesicle uptake almost always happens before the next spike arrival.</s><s>Thus the relative synaptic noise, R A = Var(N A )/Var(P A ), is small (Fig. <ref type="figure" target="#fig_1">2</ref>, b3 blue dot).</s><s>As a result the output correlation, ρ A , is only weakly diluted by synaptic noise.</s></p><p><s>In contrast, the larger modulatory drive in state B results in higher presynaptic and postsynaptic firing rates (Fig. <ref type="figure" target="#fig_1">2</ref>, b4 green).</s><s>Higher postsynaptic activity results in increased depression of synaptic transfer due to vesicle depletion.</s><s>The probabilistic nature of vesicle recovery increases fluctuations in the synaptic current, so that relative synaptic noise, R B , is larger than in state A (Fig. <ref type="figure" target="#fig_1">2</ref>, b3 orange dot).</s><s>Since vesicle recovery is independent across synapses such increased variability dilutes input correlations, .</s><s>This results in a modulation of output spiking correlations with ρ B &lt; ρ A (Fig. <ref type="figure" target="#fig_1">2</ref>, b4 black).</s></p><p><s>Variability due to internal release and recovery dynamics within individual synapses is a well documented component of synaptic dynamics <ref type="bibr" target="#b75">76,</ref><ref type="bibr" target="#b52">53</ref> .</s><s>Previous studies focused on the impact of such synaptic variability on the information transmission across a synapse <ref type="bibr" target="#b76">77,</ref><ref type="bibr" target="#b74">75</ref> .</s></p><p><s>Here we follow our past study <ref type="bibr" target="#b77">78</ref> and show how input correlations are diluted by synaptic variability in a firing rate dependent manner (see also <ref type="bibr" target="#b78">79</ref> ).</s></p><p><s>Synaptic variability is not the only cause of correlation dilution.</s><s>Alternative mechanisms only need two features: First, the variability must be independent across neurons, so that Cov(x̂1, x2) is unaffected by changes in state, and second, the variability must be activity dependent so that Var(N)/Var(P) changes with the state <ref type="bibr" target="#b79">80,</ref><ref type="bibr" target="#b80">81</ref> .</s><s>A multitude of biophysical mechanisms satisfy these requirements, including fast membrane potential fluctuations due to stochastic openings and closings of ion channels <ref type="bibr" target="#b51">52,</ref><ref type="bibr" target="#b80">81</ref> , action potential threshold fluctuations due to finite-sized populations of axonal sodium channels <ref type="bibr" target="#b81">82</ref> , and slow fluctuations in the cellular excitability of neurons <ref type="bibr" target="#b82">83</ref> .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Modulating neural transfer</head><p><s>In the previous example the intensity of background synaptic fluctuations changed the input statistics.</s><s>We next show how it can also influence output correlations by changing the response gain (L) of a neuron (see Methods: Modulating neural transfer).</s><s>In our example the drive from the presynaptic populations is balanced, meaning that both excitation and inhibition increase with the modulatory input (Fig. <ref type="figure" target="#fig_1">2, c1</ref> and<ref type="figure" target="#fig_1">c2</ref>).</s><s>We chose parameters so that the total mean presynaptic input to the target pair is approximately state-independent (through a cancelation of excitation and inhibition currents), but the overall variability of the synaptic input increases with the modulatory drive so that Var(P B ) &gt; Var(P A ). Further, the modulation was such that despite the increase in variance the presynaptic correlations remained fixed, i.e.</s></p><p><s>. Finally, we neglect synaptic variability, so that R A = R B = 0. Thus, any change in output correlation, ρ, cannot be due to a change in input correlation, ρ x .</s></p><p><s>Modeling work <ref type="bibr" target="#b83">84,</ref><ref type="bibr" target="#b84">85,</ref><ref type="bibr" target="#b85">86,</ref><ref type="bibr" target="#b86">87</ref> , dynamic-clamp slice experiments <ref type="bibr" target="#b87">88,</ref><ref type="bibr" target="#b88">89</ref> , and in vivo whole cell recording <ref type="bibr" target="#b89">90</ref> have all demonstrated that increases in conductance-based input fluctuations lower L. Indeed, in our model since in state B synaptic fluctuations are larger than in state A, it follows that L B &lt; L A (Fig. <ref type="figure" target="#fig_2">2 c3</ref>).</s><s>Thus, despite the increase in firing rate between state A and B (Fig. <ref type="figure" target="#fig_1">2</ref>, c4 green), and the absence of changes in the input correlations, , we nevertheless observe ρ B &lt; ρ A (Fig. <ref type="figure" target="#fig_1">2</ref>, c4 black).</s><s>The reduction of L by increased synaptic activity is well studied <ref type="bibr" target="#b87">88</ref> , and the subsequent decrease in output correlations under this modulation scheme has been previously noted <ref type="bibr" target="#b88">89</ref> .</s></p><p><s>Calculating the response gain, L, and determining its impact on the collective behavior of neuronal populations has a long history <ref type="bibr" target="#b90">91,</ref><ref type="bibr" target="#b49">50,</ref><ref type="bibr" target="#b50">51</ref> .</s><s>In particular, the example of a pair of uncoupled neurons driven by partially correlated inputs has been extensively studied.</s><s>Formally, the nonlinear transfer between continuous input and spike response ensures that ρ &lt; ρ x <ref type="bibr" target="#b91">92,</ref><ref type="bibr" target="#b36">37,</ref><ref type="bibr" target="#b38">39,</ref><ref type="bibr" target="#b92">93,</ref><ref type="bibr" target="#b93">94</ref> , yet the influence of the nonlinearity can be controlled by several factors.</s></p><p><s>In many neuron models L increases with the firing rate of a neuron resulting in a relationship between firing rates and ρ <ref type="bibr" target="#b36">37,</ref><ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b94">95</ref> .</s><s>This prediction has been verified in a variety of experimental studies <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b95">96,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b94">95</ref> , and firing rate is often a core determinant of output correlation <ref type="bibr" target="#b44">45</ref> .</s><s>However, in general, output spiking correlations and firing rate do not have a prescribed relation, as our examples illustrate (Fig. <ref type="figure" target="#fig_3">2 a4,</ref><ref type="figure" target="#fig_3">b4,</ref><ref type="figure" target="#fig_3">c4</ref>).</s></p><p><s>Neural excitability can shape how input correlations are transferred to output correlations, with neural integrators favoring spike count correlations measured over long timescales <ref type="bibr" target="#b92">93</ref> , while resonator and phasic membrane dynamics show enhanced short timescale synchrony <ref type="bibr" target="#b96">97,</ref><ref type="bibr" target="#b97">98,</ref><ref type="bibr" target="#b98">99,</ref><ref type="bibr" target="#b99">100</ref> .</s><s>Subthreshold cellular dynamics, such as spike frequency adaptation <ref type="bibr" target="#b100">101</ref> or fast membrane tracking of slow synaptic inputs <ref type="bibr" target="#b91">92</ref> also shape L and hence the transfer of correlation.</s><s>Increased cellular heterogeneity between the postsynaptic neuron pair typically reduces ρ <ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b101">102</ref> , particularly when measured over short timescales <ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b102">103,</ref><ref type="bibr" target="#b103">104</ref> .</s><s>These studies all explicitly considered the case of correlation transfer for a neuron pair; however the cellular and synaptic mechanisms that determine the response gain of a neuron have been a long standing topic of interest <ref type="bibr" target="#b104">105</ref> .</s><s>Our theory suggests that all of these gain control mechanisms will also influence correlation transfer.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Distinguishing between the mechanisms</head><p><s>These three examples demonstrate how distinct cellular and circuit mechanisms impact both firing rates and pairwise correlations.</s><s>We have chosen model parameters so that the changes in firing rate and correlations are nearly identical in all three cases (Fig. <ref type="figure" target="#fig_1">2</ref>, a4,b4, and c4).</s><s>This illustrates an inherent difficulty in using changes in output statistics to infer the biophysical mechanisms that have caused them.</s></p><p><s>One way to distinguish the mechanisms underlying correlation modulation is to consider spiking correlations ρ as a function of the time window (T) over which they are computed, because different mechanism modulate correlations on different timescales <ref type="bibr" target="#b88">89,</ref><ref type="bibr" target="#b77">78,</ref><ref type="bibr" target="#b100">101</ref> .</s><s>In general, ρ increases with the time window <ref type="bibr" target="#b105">106</ref> , as in the case of the feedforward model with non-plastic synapses (Fig. <ref type="figure" target="#fig_3">4a1</ref> and<ref type="figure" target="#fig_2">a3</ref>).</s><s>However, plastic synapses with short-term depression have long timescale vesicle uptake dynamics (~ 400 ms), attenuating low frequency pre-to post-synaptic transfer.</s><s>Consequently, broadband presynaptic activity is not correlated with post-synaptic responses over long timescales, and hence ρ is reduced for T &gt; 400ms (Fig. <ref type="figure" target="#fig_3">4a2</ref>).</s><s>While measuring ρ as a function of T can help distinguish some mechanisms from others (Fig. <ref type="figure" target="#fig_3">4a1</ref> and a3 vs. a2), it does not provide a perfect diagnostic.</s><s>Indeed, some qualitatively distinct mechanisms may only show quantitative differences in the timescale dependence of ρ (Fig. <ref type="figure" target="#fig_3">4a1</ref> vs. a3).</s></p><p><s>Another way to distinguish the mechanisms is to recall that ρ is defined as a ratio:</s></p><p><s>In the second equality we used the co-Fano factor <ref type="bibr" target="#b92">93</ref> , CoF(n 1 , n 2 ) = Cov(n 1 , n 2 )/〈n〉 and the Fano factor, F(n) = Var(n)/〈n〉 (〈n〉 is the mean spike count).</s><s>A decrease in ρ between state A and B may be due to either 1) a larger decrease in CoF(n 1 , n 2 ) than F(n), or 2) a larger increase in F(n) than CoF(n 1 , n 2 ).</s><s>The cancelation of presynaptic covariability through feedforward inhibition or the increase in variability through probabilistic vesicle release both lead to a reduction in ρ as in the first case (Fig. <ref type="figure" target="#fig_3">4b1</ref> vs. c1 and b2 vs. c2).</s><s>In contrast, larger overall variability with increased background fluctuations coupled with a reduced gain leads to a reduction in ρ as in the second case (4b3 vs. c3).</s><s>However, as with timescales, separating modulations of ρ into modulations of spike count Fano and co-Fano factors can only give partial information about underlying biophysical mechanisms.</s></p><p><s>It is possible to indirectly measure the stimulus-response gain L of a neuron by ranging over a stimulus parameter.</s><s>If the stimulus dependence and the sources of input variability are known (or can be approximated) then one can account for changes in ρ by changes in L <ref type="bibr" target="#b65">66</ref> .</s></p><p><s>Manipulations of a neural circuit by pharmacological or optogenetic means can give further insights into how the organization of pre-synaptic correlations, ρ P , or post-synaptic variability, R, contributes to state-dependent changes in ρ (see next section).</s></p><p><s>The most direct method to characterize the mechanisms responsible for state dependent changes in correlation remains to use whole-cell recordings of membrane potential voltage fluctuations.</s><s>Whole cell recordings give information about both the synaptic inputs and spike outputs, allowing us to measure input correlations, Cov(x 1 , x 2 ), internal fluctuations, R, and response gain, L, directly.</s><s>In vivo whole cell recording is challenging.</s><s>However, there are several studies where pairwise correlations have been modulated and simultaneously membrane potentials, or a membrane potential and local field potential have been recorded (see Table <ref type="table" target="#tab_0">1</ref>).</s><s>Studies of this type continue to be well suited to uncover the physiological basis of state-dependent correlation modulation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Correlation modulation in recurrent networks</head><p><s>Thus far we explored correlation modulation in a simple feedforward circuit (Figs. <ref type="figure" target="#fig_0">1</ref> and<ref type="figure" target="#fig_1">2</ref>).</s><s>However, a primary characteristic of cortical networks is large recurrent projections between neurons.</s><s>Theoretical neuroscientists have developed and analyzed various models of recurrent networks of excitatory and inhibitory neurons <ref type="bibr" target="#b106">107,</ref><ref type="bibr" target="#b107">108,</ref><ref type="bibr" target="#b108">109</ref> .</s><s>These models have provided key insights into the mechanisms that shape spike train correlations.</s><s>For instance, networks with rapid but delayed recurrent inhibition produce fast timescale correlated activity in the γ frequency range (30-70 Hz) <ref type="bibr" target="#b109">110,</ref><ref type="bibr" target="#b49">50,</ref><ref type="bibr" target="#b110">111</ref> , but often show negligible correlations on slow timescales.</s><s>Networks with weak or balanced coupling produce slow-timescale correlated activity whose magnitude scales inversely with system size, becoming exceedingly small in networks with thousands of neurons <ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b68">69,</ref><ref type="bibr" target="#b34">35,</ref><ref type="bibr" target="#b31">32,</ref><ref type="bibr" target="#b111">112</ref> .</s><s>However, we are far from a complete understanding of self-generated correlated activity in recurrently networks of spiking neurons.</s></p><p><s>Clustered feedforward <ref type="bibr" target="#b112">113</ref> , clustered recurrent <ref type="bibr" target="#b113">114,</ref><ref type="bibr" target="#b114">115,</ref><ref type="bibr" target="#b115">116</ref> , and spatially distributed network architectures <ref type="bibr" target="#b46">47,</ref><ref type="bibr" target="#b116">117,</ref><ref type="bibr" target="#b117">118</ref> can all produce correlated activity between spiking neurons.</s><s>In such networks, only neurons that belong to the same cluster or are close to one another are strongly correlated.</s><s>Indeed, experiments show that noise correlations are large for neuron pairs that are reciprocally connected <ref type="bibr" target="#b118">119</ref> (same putative cluster), similarly tuned or are nearby in space to one another <ref type="bibr" target="#b47">48</ref> .</s><s>However, the mean correlation between neuron pairs that fall outside these categories are also positive on average <ref type="bibr" target="#b47">48</ref> .</s></p><p><s>Large parallel recordings from neural populations show that spiking correlations have some simple features: network-wide correlations can be largely explained by a one dimensional source of shared fluctuations, often treated as a latent variable in statistical approaches <ref type="bibr" target="#b119">120,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b55">56</ref> .</s><s>The origin of this source is not known.</s><s>A straightforward (albeit phenomenological) way to model these dynamics is to drive a network of spiking neurons with a spatially coherent input that represents an external source of fluctuations <ref type="bibr" target="#b120">121,</ref><ref type="bibr" target="#b121">122,</ref><ref type="bibr" target="#b122">123,</ref><ref type="bibr" target="#b55">56,</ref><ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b93">94</ref> .</s><s>We employ this strategy to study correlation modulation in recurrent networks.</s></p><p><s>We consider a network of model excitatory (E) and inhibitory (I) spiking neurons with dense, recurrent connections between them (see Methods: Correlation modulation in recurrent networks).</s><s>Weak feedforward input fluctuations, F(t), are shared by all neurons (providing feedforward covariability Cov F ), alongside private fluctuations specific to each neuron in the network (Fig. <ref type="figure" target="#fig_3">4a</ref>).</s><s>The shared fluctuations are the largest source of network covariability in the model.</s><s>In addition, we assume that there is a modulatory input similar to that of our previous models (Fig. <ref type="figure" target="#fig_1">2</ref>) and simply depolarizes all neurons (different magnitude for E and I neurons).</s><s>This modulatory input does not affect the external fluctuations F(t).</s></p><p><s>In response to the modulation, E neurons have a higher time-averaged firing rate in state B than state A (Fig. <ref type="figure" target="#fig_3">4b,</ref><ref type="figure">e</ref>).</s><s>In both states the shared fluctuations produce significant variability in the population-averaged instantaneous firing rates (Fig. <ref type="figure" target="#fig_3">4b</ref>, lower panel).</s><s>If the strength of shared input fluctuations is small compared to private fluctuations then the linear response framework assumed in Eq. ( <ref type="formula">2</ref>) is valid <ref type="bibr" target="#b120">121,</ref><ref type="bibr" target="#b121">122,</ref><ref type="bibr" target="#b123">124,</ref><ref type="bibr" target="#b111">112,</ref><ref type="bibr" target="#b65">66,</ref><ref type="bibr" target="#b27">28</ref> .</s><s>In this case the intuition developed from our feedforward analysis will apply to a representative pair of neurons selected from the recurrent network.</s><s>However, to understand the modulation of neural correlations, ρ, we must understand the combined modulations of the correlations in their presynaptic inputs P, the transfer of presynaptic activity to synaptic current x, and the gain of the postsynaptic response to those currents, L.</s></p><p><s>The nonlinearity of the transfer between synaptic input and spike response allows the gain L to be state-dependent.</s><s>In our model we have that L A &lt; L B (Fig. <ref type="figure" target="#fig_3">4c</ref>).</s><s>This differs from our previous analysis (Fig. <ref type="figure" target="#fig_2">2 c3</ref>) since the network model has current-based synapses, while the feedforward case has conductance-based synapses, mimicking a high conductance state <ref type="bibr" target="#b88">89</ref> .</s><s>With current-based synapses and moderate firing rates, an increase in firing rate results in an increase in L, which is supported both by in vitro <ref type="bibr" target="#b36">37,</ref><ref type="bibr" target="#b104">105</ref> and in vivo <ref type="bibr" target="#b19">20</ref> recordings.</s><s>Thus, in our model it is expected that the modulation will produce L B /L A &gt; 1.</s></p><p><s>Any pair of neurons in our network are correlated through the shared fluctuations F(t) via two pathways: the direct feedforward component that provides input with covariance Cov F between neurons, and the indirect pathway via recurrent excitatory and inhibitory projections between neurons in the network that also receive F(t).</s><s>To simplify the exposition we consider the joint common recurrent input R(t) = E(t) + I(t).</s><s>The full covariance of the presynaptic input to a neuron pair then decomposes as:</s></p><p><s>Here Cov R is the covariability due to common recurrent input to the neuron pair, while Cov FR is the interaction between the feedforward and recurrent pathways.</s><s>This decomposition is similar to feedforward case shown in Eq. ( <ref type="formula">3</ref>).</s><s>While the feedforward input F(t) is state invariant, the recurrent activity R(t) changes with state.</s><s>In our model the inhibitory pathway is dominant, making Cov FR &lt; 0 because dynamic recurrent inhibition acts to partially cancel the feedforward drive <ref type="bibr" target="#b120">121,</ref><ref type="bibr" target="#b68">69</ref> .</s><s>The modulatory input enhances this cancellation so that , ultimately yielding Cov A (P 1 , P 2 ) &gt; Cov B (P 1 , P 2 ) (Fig. <ref type="figure" target="#fig_3">4d</ref>).</s></p><p><s>The combined effect of the modulation is then to produce two opposing manipulations of correlation transfer.</s><s>An increase in response gain (L B /L A &gt; 1) occurs in tandem with a decorrelation of the presynaptic input (Cov(P 1 , P 2 ) B /Cov(P 1 , P 2 ) A &lt; 1).</s><s>Our theory in Eq.</s></p><p><s>(2) suggest that the response gain modulation will produce an increase in correlation in state B, that is ρ B /ρ A &gt; 1, while the presynaptic correlation modulation lead to decrease, ρ B /ρ A &lt; 1.</s><s>We chose parameters and a modulation so that the latter effect dominates, and the spike correlation is reduced in state B (Fig. <ref type="figure" target="#fig_3">4e</ref>).</s><s>In general, modulatory inputs result in state changes in multiple stages of correlation transfer.</s><s>Nonetheless, the ideas presented in this review can help disentangle the various effects of a network modulation on the spike train correlations of pairs of neurons within the network.</s></p><p><s>As in the feedforward networks, it is difficult to use spike train data alone to dissect the individual contributions of gain and pre-synaptic correlation modulations in a recurrent network.</s><s>Further probing of the network can, however, give insight into the mechanisms of correlation modulation.</s><s>To illustrate, we model an experiment where light is used to activate interneurons expressing halorhodopsin in a cortical network (Fig. <ref type="figure" target="#fig_3">4e</ref>).</s><s>We assume that light hyperpolarizes a fraction (50%) of the I cells in our model.</s><s>Removing a large fraction of recurrent inhibition changes state dependent modulations in two important ways.</s><s>First, the increase in firing rates in going from state A to B is much larger (Fig. <ref type="figure" target="#fig_3">4f</ref>, green).</s><s>Second, spike correlations now increase with the state modulation (Fig. <ref type="figure" target="#fig_3">4f,</ref><ref type="figure">black</ref>).</s></p><p><s>With weaker inhibition the cancellation of feedforward correlations Cov F through Cov FR is attenuated.</s><s>Thus, when halorhodopsin is activated the decorrelation in neural activity through recurrent inhibition is compromised.</s><s>Further, the increase in firing rate with decreased inhibition allows L to increase to a larger extent as the network transitions from state A to B. The combination of these effects lead to an increase in ρ with the state change when inhibition is reduced.</s><s>Had recurrent inhibition not been a primary component of the mechanism underlying the state dependent dependent modulation in the control case, then we would not expect to observe these qualitative changes.</s></p><p><s>This example shows how contemporary circuit manipulation techniques can be used to test concrete predictions about state-dependent correlation changes in recurrent networks.</s><s>We have confined our analysis to recurrent networks with weak coupling and where neurons receive external sources of fluctuations <ref type="bibr" target="#b120">121,</ref><ref type="bibr" target="#b121">122,</ref><ref type="bibr" target="#b65">66,</ref><ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b68">69,</ref><ref type="bibr" target="#b34">35</ref> .</s><s>In this case linear response techniques are valid.</s><s>The network simply transforms global input fluctuations into networkwide spiking correlations.</s><s>However, when coupling is stronger the network can generate globally coherent activity <ref type="bibr" target="#b109">110,</ref><ref type="bibr" target="#b49">50,</ref><ref type="bibr" target="#b110">111</ref> and strong <ref type="bibr" target="#b124">125</ref> or slow <ref type="bibr" target="#b114">115,</ref><ref type="bibr" target="#b125">126</ref> .</s><s>The complete analysis of such dynamics involves the nonlinear network properties, and hence the factorization in Eq. ( <ref type="formula">2</ref>) is not applicable.</s><s>Such behavior is beyond the scope of this review.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusion</head><p><s>We presented a general framework for analyzing the physiological mechanisms underlying the modulations of neuronal correlations.</s><s>We demonstrated our theory using several examples; however, the list of mechanisms we considered was not exhaustive.</s><s>The large number of factors that modulate intrinsic cellular properties, as well as synaptic excitation and inhibition, suggest that many distinct mechanisms control neuronal correlation.</s><s>Our theoretical approach allows for an easier navigation of this large space, and the development of a circuit-based understanding of state-dependent modulation of neuronal activity.</s></p><p><s>Unravelling the mechanics of correlation modulation in vivo will require a concerted experimental effort.</s><s>We noted that whole-cell recordings will give invaluable data to validate the aspects of certain mechanisms over alternative ones.</s><s>In addition, the combination of genetic specification <ref type="bibr" target="#b126">127</ref> and targeted optogentic manipulation of neural circuits <ref type="bibr" target="#b127">128</ref> promises to provide fundamental insights into neural correlations.</s><s>Finally, analysis of population-wide recordings describes how pairwise correlations are distributed across large groups of neurons <ref type="bibr" target="#b119">120,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b55">56</ref> .</s><s>Extending our theory to networks of neurons is straightforward <ref type="bibr" target="#b120">121,</ref><ref type="bibr" target="#b121">122,</ref><ref type="bibr" target="#b33">34</ref> .</s><s>However, understanding how the dimensionality of populationwide input correlation is represented by the spike responses of interconnected neurons is an open challenge.</s></p><p><s>The changes in correlated activity we describe may have a number of consequences for neural coding.</s><s>Theoretical <ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b122">123</ref> and experimental <ref type="bibr" target="#b95">96,</ref><ref type="bibr" target="#b128">129,</ref><ref type="bibr" target="#b129">130</ref> studies show that changes in correlations can increase the accuracy with which stimulus can be decoded from the population response.</s><s>Further, increased synchrony has also been shown to precede behaviorally relevant events <ref type="bibr" target="#b130">131</ref> .</s><s>However, recent work has exposed that it is the degree of overlap between the structure of population noise correlations and population stimulus tuning that ultimately identifies the correlations that limit information transfer <ref type="bibr" target="#b27">28</ref> .</s><s>This implies that conclusions about the effect of noise correlations on neural coding should be made with care.</s></p><p><s>We have come a long way in characterizing the mechanics underlying the responses of single neurons.</s><s>Understanding circuit and cellular modulations of the collective activity of neural populations will be an essential step toward understanding the brain.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Box 1: Neural State</head><p><s>The operating state of the brain, or simply state, refers to the context under which neural activity is recorded.</s><s>This includes several possibilities, such as: The cognitive state is determined by an animal's level of arousal, attentional focus, or degree of engagement in a task.</s><s>In the absence of a stimulus or task the neural network is in the spontaneous state, as opposed to an evoked state.</s><s>Stimuli that do not directly drive a neuron, yet recruit a non-classical surround can change the processing state of a neuron.</s><s>A change in stimulus features within a neuron's receptive field may change its firing rate.</s><s>However, it does not change the context under which the neural activity is observed, and hence such stimulus features do not determine a state.</s><s>We consider a pair of unconnected neurons (black triangles) that receive input from a presynaptic population of excitatory neurons (red triangles) and inhibitory neurons (blue circles).</s><s>Covariability, Cov(P 1 , P 2 ), in the presynaptic inputs, P 1 and P 2 , to the postsynaptic pair is due to a combination of shared anatomical projections leading to a shared input (overlap between P 1 and P 2 ) and correlations between the activity of the presynaptic populations.</s><s>This presynaptic activity along with internal synaptic and cellular fluctuations, N i , determine the postsynaptic currents, x i (i = 1, 2) in each of the two postsynaptic cells.</s></p><p><s>Finally, the nonlinear spike generation mechanism translates these postsynaptic currents into the output spike trains, y 1 and y 2 .</s><s>The presynaptic excitatory (E) population (red) and the inhibitory population (blue) both project to the postsynaptic neuron pair.</s><s>In state A the presynaptic populations are weakly driven, with a slight asymmetry favoring the E population (a1).</s><s>In contrast, both presynaptic E and I populations are driven strongly in state B (a2).</s><s>The increase in presynaptic rate uncovers an anticorrelation between the E and I currents, ultimately decorrelating the overall synaptic inputs to the postsynaptic pair (a3).</s><s>The result of the modulation from state A to B is to both increase the postsynaptic firing rate (a4, green) and decrease spike count correlation (a4, black).</s><s>(b) The synapses linking presynaptic activity to postsynaptic current are probabilistic, with activity dependent reliability of vesicle release (we show only the E population for schematic brevity).</s><s>In state A the presynaptic populations are weakly driven and the number of vesicles released per presynaptic spike, and their reliability, is high (b1).</s><s>In contrast, in state B the presynaptic population fires at a higher rate, resulting in less reliable synaptic transmission (b2).</s><s>The decrease in synaptic reliability from state A to B increases the synaptic noise to signal ratio, 1 + R (b3).</s><s>As in a4, the transition from state A to B has the effect of both increasing the postsynaptic firing rate (b4, green) and decreasing the spike count correlation (b4, black).</s><s>(c) The presynaptic E and I populations project balanced, conductance based inputs to the postsynaptic pair.</s><s>In state A the firing rates of the presynaptic populations are low, and the overall synaptic fluctuations are small (c1).</s><s>In contrast, in state B the presynaptic rates are higher, resulting in larger fluctuations in the input to the postsynaptic pair (c2).</s><s>The increase in conductance based fluctuations between state A and B reduces the spike response gain (L) (c3).</s><s>As in a4, the transition from state A to B increases the postsynaptic firing rate (c4, green) and decreases the spike count correlation (c4, black).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Examples of state dependent modulation of neural correlation ρ between two states</head><p><s>We denote the two states with A and B, and the correlations measured in each state by ρ A and ρ B with ρ A &gt; ρ B unless otherwise noted.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>System</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure 1.</s><s>Schematic illustration of correlation transfer in networks of spiking neurons</s></p></div></figDesc><graphic coords="23,84.00,62.00,504.00,179.04" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Three mechanisms for correlation modulation (a)The presynaptic excitatory (E) population (red) and the inhibitory population (blue) both project to the postsynaptic neuron pair.</s><s>In state A the presynaptic populations are weakly driven, with a slight asymmetry favoring the E population (a1).</s><s>In contrast, both presynaptic E and I populations are driven strongly in state B (a2).</s><s>The increase in presynaptic rate uncovers an anticorrelation between the E and I currents, ultimately decorrelating the overall synaptic inputs to the postsynaptic pair (a3).</s><s>The result of the modulation from state A to B</s></p></div></figDesc><graphic coords="24,84.00,62.00,504.00,373.56" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Dissecting correlation modulation (a) Output correlation coefficient ρ as a function of the window T over which spike trains are counted.</s><s>The pre-synaptic correlations (column 1), internal fluctuation (column 2), and neural transfer (column 3) examples are identical to those of Figure 2. (b) The Fano factor F(n) = Var(n)/〈n〉 for the same data as panel a.</s><s>(c) The co-Fano factor CoF(n 1 , n 2 ) = Cov(n 1 , n 2 )/〈n〉 for the same data as panel a.</s></p></div></figDesc><graphic coords="26,84.36,62.00,503.28,503.88" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Correlation modulation in recurrent networks a. Schematic of recurrent excitatory (E) and inhibitory (I) network.</s><s>The neurons in the network receive a global source of shared fluctuations, alongside individual sources of private variability.</s><s>b.</s><s>Spike train rasters (top) and instantaneous firing rates (bottom) of the E-neuron population in state A and B. c. Change in spike response gain (L) as modulatory drive (state) is varied.</s><s>d.</s><s>Change in presynaptic correlation to a representative pair of neurons within the population as modulatory drive (state) is varied.</s><s>e.</s><s>The result of the modulation from state A to B is to both increase the postsynaptic firing rate (green) and decrease spike count correlation (black).</s><s>f.</s><s>Schematic showing a silencing of a portion of the inhibitory population through activation of halorhodopsin.</s><s>g.</s><s>Same as e) but with half of the inhibitory neurons hyperpolarized.</s></p></div></figDesc><graphic coords="27,84.00,62.00,504.00,258.12" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head></head><label></label><figDesc><div><p><s>mouse) Pre-task (A) vs. odor sniff (B) 120ms ~ 0.12 145 CLM (European starling) untrained (A) vs. task-relevant (</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc></figDesc><table /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nat Neurosci.</s><s>Author manuscript; available in PMC 2017 June 20.</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_1"><p><s>Neuron pairs were grouped according to their task tuning similarity (TTS).</s><s>Neuron pairs with TTS &gt; 1 show an attention mediated decrease in ρ, while pairs with TTS &lt; -1 show an increase.</s><s>Nat Neurosci.</s><s>Author manuscript; available in PMC</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2017" xml:id="foot_2"><p><s>June 20.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>This work was funded by <rs type="funder">National Science Foundation</rs> grants <rs type="grantNumber">NSF-DMS-1313225</rs> (BD), <rs type="grantNumber">NSF-DMS-1517082</rs> (BD), <rs type="funder">NIH-CRCNS</rs> <rs type="grantNumber">R01DC015139-01ZRG1</rs> (BD), <rs type="grantNumber">NSF-DMS-1122094</rs> (KJ), <rs type="grantNumber">NSF-DMS-1517629</rs> (KJ), and <rs type="grantNumber">NSF-DMS-1517828</rs> (RR), <rs type="funder">National Institute of Health</rs> grant <rs type="grantNumber">NIH: 1F32DC014387 (ALK)</rs> and a grant from the <rs type="funder">Simons Foundation collaboration on the global brain (BD)</rs>, and a <rs type="funder">Simons Foundation</rs> fellowship (KJ).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_huPMsxZ">
+					<idno type="grant-number">NSF-DMS-1313225</idno>
+				</org>
+				<org type="funding" xml:id="_wbzAveQ">
+					<idno type="grant-number">NSF-DMS-1517082</idno>
+				</org>
+				<org type="funding" xml:id="_wmrBj3q">
+					<idno type="grant-number">R01DC015139-01ZRG1</idno>
+				</org>
+				<org type="funding" xml:id="_khYhGjD">
+					<idno type="grant-number">NSF-DMS-1122094</idno>
+				</org>
+				<org type="funding" xml:id="_XurtAef">
+					<idno type="grant-number">NSF-DMS-1517629</idno>
+				</org>
+				<org type="funding" xml:id="_hMvRFNj">
+					<idno type="grant-number">NSF-DMS-1517828</idno>
+				</org>
+				<org type="funding" xml:id="_wGbYFXf">
+					<idno type="grant-number">NIH: 1F32DC014387 (ALK)</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author Manuscript</head><p><s>Doiron et al.</s></p><p><s>Page 29 <ref type="bibr" target="#b1">2</ref> Restricted to neuron pairs with ρ A &gt; 0.</s></p><p><s>3 Three different drugs were applied to recorded neurons during a cued spatial attention task: DL-2-amino-5-phosphonopentanoic acid (APV), 6- cyano-7-nitroquinoxaline-2,3-dione (CNQX), and an NMDA receptor agonist; relative correlations are listed in that order.</s></p><p><s>4 Restricted to neurons with similar tuning.</s></p><p><s>5 Trained and untrained correlations are obtained from separate animals.</s></p><p><s>6 Task specifics placed neuron pairs to have either a cooperative relation to one another, or a competitive one.</s><s>Neuron pairs were grouped according to the difference in their preferred direction of motion (PD), and competition decreased ρ for neuron pairs with PD &lt; 135°, while it increased ρ for pairs with PD &gt; 135°.</s></p><p><s>7 Neuron pairs with signal correlation &gt; 0.4 show a relative modulation of 0.65, while pairs with a signal correlation &lt; 0.4 show a modulation of -0.65.</s></p><p><s>8 Since firing rate changes were negligible the measures were computed only from Cov(y 1 , y 2 ).</s></p><p><s>9 Computed from the integrated spectral coherence between simultaneously recorded membrane potentials.</s></p><p><s>10 Computed from the integrated spectral coherence between simultaneously recorded membrane potential and nearby local field potential.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">A thesaurus for a neural population code</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ganmor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Segev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Schneidman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">eLife</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">6134</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Neural syntax: cell assemblies, synapsembles, and readers</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsáki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="362" to="385" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21040841</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Probabilistic population codes for bayesian decision making</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Beck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="1142" to="1152" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19109917</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The importance of mixed selectivity in complex cognitive tasks</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rigotti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">497</biblScope>
+			<biblScope unit="page" from="585" to="590" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23685452</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">From the neuron doctrine to neural networks</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yuste</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="487" to="497" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26152865</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">On the actions that one nerve cell can have on another: distinguishing drivers from modulators</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Sherman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Guillery</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="7121" to="7126" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Spatio-temporal correlations and visual signalling in a complete neuronal population</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Pillow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">454</biblScope>
+			<biblScope unit="page" from="995" to="999" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18650810</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Dimensionality reduction for large-scale neural recordings</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cunningham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1500" to="1509" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25151264</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Partitioning neuronal variability</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Goris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Movshon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Simoncelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="858" to="865" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24777419</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">State dependence of noise correlations in macaque primary visual cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Ecker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="235" to="248" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24698278</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The Nature of Shared Cortical Variability</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">C</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Okun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">A well-conditioned estimator for large-dimensional covariance matrices</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Ledoit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wolf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of multivariate analysis</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="365" to="411" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Improved estimation and interpretation of correlations in neural circuits</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yatsenko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="199" to="207" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">How advances in neural recording affect data analysis</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Stevenson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Kording</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="139" to="142" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21270781</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Receptive fields, binocular interaction and functional architecture in the cat&apos;s visual cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Hubel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Wiesel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of physiology</title>
+		<imprint>
+			<biblScope unit="volume">160</biblScope>
+			<biblScope unit="page">106</biblScope>
+			<date type="published" when="1962">1962</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14449617</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Neural mechanisms of orientation selectivity in the visual cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annual review of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="441" to="471" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Theory of orientation tuning in visual cortex</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ben-Yishai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Bar-Or</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="3844" to="3848" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">New perspectives on the mechanisms for orientation selectivity</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shapley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current opinion in neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="514" to="522" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9287203</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Dynamics of orientation tuning in macaque primary visual cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Ringach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Hawken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shapley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">387</biblScope>
+			<biblScope unit="page" from="281" to="284" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9153392</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Inhibition, spike threshold, and stimulus selectivity in primary visual cortex</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Priebe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="482" to="497" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18304479</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Feedforward mechanisms of excitatory and inhibitory cortical receptive fields</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Bruno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Simons</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="10966" to="10975" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12486192</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Defining cortical frequency tuning with recurrent excitatory circuitry</title>
+		<author>
+			<persName><forename type="first">Bh</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Arbuckle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">W</forename><surname>Tao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">I</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1594" to="1600" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17994013</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Working models of working memory</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Barak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tsodyks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current opinion in neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="20" to="24" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24709596</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Computational models of grid cells</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Giocomo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">I</forename><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page" from="589" to="603" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21867877</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Measuring and interpreting neuronal correlations</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="811" to="819" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21709677</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Neural correlations, population coding and computation</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Averbeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="358" to="366" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16760916</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">The effect of noise correlations in populations of diversely tuned neurons</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Ecker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Tolias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bethge</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="14272" to="14283" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21976512</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Information-limiting correlations</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Moreno-Bote</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1410" to="1417" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25195105</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">The sign rule and beyond: Boundary effects, flexibility, and noise correlations in neural population codes</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zylberberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<date type="published" when="2014">2014. 1003469</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24586128</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">The variable discharge of cortical neurons: implications for connectivity, computation, and information coding</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="3870" to="3896" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9570816</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">The Effects of Pooling on Spike Train Correlations</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rosenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Trousdale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josić</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">The asynchronous state in cortical circuits</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Renart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">science</title>
+		<imprint>
+			<biblScope unit="volume">327</biblScope>
+			<biblScope unit="page" from="587" to="590" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20110507</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">How Structure Determines Correlations in Neuronal Networks</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Pernice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Staude</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cardanobile</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rotter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<date type="published" when="2011">2011. 1002059</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21625580</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Impact of network structure and cellular response on spike time correlations</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Trousdale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josić</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2012">2012. 1002408</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22457608</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">The correlation structure of local neuronal networks intrinsically results from recurrent dynamics</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Helias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tetzlaff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Diesmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Sensory integration dynamics in a hierarchical network explains choice probabilities in cortical area mt</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wimmer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature communications</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Correlation between neural spike trains increases with firing rate</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>De La Rocha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josić</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Reyes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">448</biblScope>
+			<biblScope unit="page">17700699</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Correlation and synchrony transfer in integrateand-fire neurons: basic properties and consequences for coding</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josić</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">La</forename><surname>De</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rocha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical review letters</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page">108102</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18352234</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Correlations and synchrony in threshold neuron models</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tchumatchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Malyshev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Geisel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Volgushev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Wolf</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical review letters</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page">58102</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20366796</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Stimulus onset quenches neural variability: a widespread cortical phenomenon</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Churchland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="369" to="378" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20173745</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Cortical state and attention</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thiele</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature reviews neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="509" to="523" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21829219</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Waking state: Rapid variations modulate neural and behavioral responses</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Mcginley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="1143" to="1161" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26402600</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Cholinergic signals in mouse barrel cortex during active whisker sensing</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Eggermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kremer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Crochet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Petersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell reports</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1654" to="1660" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25482555</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Correlated firing in macaque visual area mt: time scales and relationship to behavior</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zohary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="1676" to="1697" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11222658</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Five key factors determining pairwise correlations in visual cortex</title>
+		<author>
+			<persName><forename type="first">Dpa</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sahani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="1022" to="1033" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26019310</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Decorrelated neuronal firing in cortical microcircuits</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Ecker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">327</biblScope>
+			<biblScope unit="page" from="584" to="587" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20110506</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Correlated variability in laminar cortical circuits</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Chelaru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dragoi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="590" to="602" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23141070</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Spatial and temporal scales of neuronal correlation in primary visual cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="12591" to="12603" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19036953</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Analysis of graph invariants in functional neocortical circuitry reveals generalized features common to three areas of sensory cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Gururangan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Sadovsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Maclean</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Fast global oscillations in networks of integrate-and-fire neurons with low firing rates</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Hakim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="1621" to="1671" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10490941</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Transmission of noise coded versus additive signals through a neuronal ensemble</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lindner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Schimansky-Geier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Letters</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page">2934</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11290076</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Channel noise in neurons</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>White</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Rubinstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Kay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends in neurosciences</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="131" to="137" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10675918</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">The probability of neurotransmitter release: variability and feedback control at single synapses</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Branco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Staras</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="373" to="383" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19377502</note>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Amplification of trial-to-trial response variability by neurons in visual cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS biology</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="1483" to="1493" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Neuromodulation of brain states</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><forename type="middle">Y</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="209" to="222" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23040816</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Stochastic transitions into silence cause noise correlations in cortical circuits</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mochol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hermoso-Mendizabal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sakata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>De La Rocha</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="3529" to="3534" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Instantaneous correlation of excitation and inhibition during ongoing and sensory-evoked activities</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Okun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Lampl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="535" to="537" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18376400</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Neocortical network activity in vivo is generated through a dynamic balance of excitation and inhibition</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Haider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Duque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Hasenstaub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="4535" to="4545" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16641233</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Synaptic input correlations leading to membrane potential decorrelation of spontaneous activity in cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Graupner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Reyes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="15075" to="15085" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24048838</note>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Processing in layer 4 of the neocortical circuit: new insights from visual and somatosensory cortex</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Pinto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Simons</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current opinion in neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="488" to="497" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11502397</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Inhibition evoked from primary afferents in the electrosensory lateral line lobe of the weakly electric fish (apteronotus leptorhynchus)</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Berman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Maler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="3173" to="3196" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9862915</note>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Balanced inhibition underlies tuning and sharpens spike timing in auditory cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wehr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Zador</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">426</biblScope>
+			<biblScope unit="page" from="442" to="446" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14647382</note>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Direction selectivity of excitation and inhibition in simple cells of the cat primary visual cortex</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Priebe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">426</biblScope>
+			<biblScope unit="page" from="442" to="446" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Neural correlation is stimulus modulated by feedforward inhibitory circuitry</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Middleton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Omar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Simons</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="506" to="518" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22238086</note>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Cellular and circuit mechanisms maintain low spike covariability and enhance population coding in somatosensory cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Middleton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in computational neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="7" to="7" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22408615</note>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">The spatial structure of stimuli shapes the timescale of correlations in population spiking activity</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Litwin-Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Chacron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="1002667" to="e1002667" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23028274</note>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Activation of parallel fiber feedback by spatially diffuse stimuli reduces signal and noise correlations via independent mechanisms in a cerebellum-like structure</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Simmonds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Chacron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS computational biology</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<date type="published" when="2015">2015. 1004034</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25569283</note>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Chaotic balanced state in a model of cortical circuits</title>
+		<author>
+			<persName><forename type="first">Cv</forename><surname>Vreeswijk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1321" to="1371" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9698348</note>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Decorrelation of neural-network activity by inhibitory feedback</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tetzlaff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Helias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Einevoll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Diesmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="1002596" to="e1002596" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23133368</note>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Towards a self-consistent description of irregular and asynchronous cortical activity</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Parga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Statistical Mechanics: Theory and Experiment</title>
+		<imprint>
+			<biblScope unit="page">3010</biblScope>
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Simple stochastic models for the release of quanta of transmitter from a nerve terminal</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Vere-Jones</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Australian Journal of Statistics</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="53" to="63" />
+			<date type="published" when="1966">1966</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Neural networks with dynamic synapses</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tsodyks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Pawelzik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Markram</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">9573407</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Coding of temporal information by activitydependent synapses</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fuhrmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Segev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Markram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tsodyks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="140" to="148" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11784736</note>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Short-term synaptic depression causes a non-monotonic response to correlated stimuli</title>
+		<author>
+			<persName><forename type="first">La</forename><surname>De</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rocha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Parga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="8416" to="8431" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16162924</note>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Short term synaptic depression imposes a frequency dependent filter on synaptic information transfer</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rosenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput. Biol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2012">2012. 1002557</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22737062</note>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Short-term synaptic plasticity</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Zucker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">G</forename><surname>Regehr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annual review of physiology</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page" from="355" to="405" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Enhancement of information transmission efficiency by synaptic failures</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Goldman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1137" to="1162" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15130245</note>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Short-term synaptic depression and stochastic vesicle dynamics reduce and shape neuronal correlations</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rosenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="475" to="484" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23114215</note>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">Long-term plasticity determines the postsynaptic response to correlated afferents with multivesicular short-term synaptic depression</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Bird</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Richardson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in Computational Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">Noise in neurons is message dependent</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Cecchi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="5557" to="5561" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Noise in the nervous system</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Faisal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Selen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Wolpert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="292" to="303" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18319728</note>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Threshold fluctuations in an n sodium channel model of the node of ranvier</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Rubinstein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophysical journal</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page">779</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7756544</note>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Dynamics of excitability over extended timescales in cultured cortical neurons</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="16332" to="16342" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21123579</note>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title level="a" type="main">Synaptic background activity enhances the responsiveness of neocortical pyramidal neurons</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Hô</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Destexhe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page" from="1488" to="1496" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10980021</note>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title level="a" type="main">Subtractive and divisive inhibition: effect of voltagedependent inhibitory conductances and noise</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Longtin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Berman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Maler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="227" to="248" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11177434</note>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<analytic>
+		<title level="a" type="main">How noise contributes to contrast invariance of orientation tuning in cat visual cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hansel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Van</forename><surname>Vreeswijk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page">12077207</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<analytic>
+		<title level="a" type="main">Gain control of firing rate by shunting inhibition: roles of synaptic noise and dendritic saturation</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Prescott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">De</forename><surname>Koninck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="2076" to="2081" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">Gain modulation from background synaptic input</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">S</forename><surname>Chance</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Reyes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="773" to="782" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12194875</note>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title level="a" type="main">Balanced synaptic input shapes the correlation between neural spike trains</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Litwin-Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Oswald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Urban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1002305" to="e1002305" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22215995</note>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<title level="a" type="main">Cellular mechanisms underlying stimulus-dependent gain modulation in primary visual cortex neurons in vivo</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Cardin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Palmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Contreras</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="150" to="160" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18614036</note>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">Theory of correlations in stochastic neural networks</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ginzburg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical review E</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page">3171</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<analytic>
+		<title level="a" type="main">Auto-and crosscorrelograms for the spike response of leaky integrateand-fire neurons with slow synapses</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Moreno-Bote</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Parga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Letters</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page">28101</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16486646</note>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<analytic>
+		<title level="a" type="main">Mechanisms that modulate the transfer of spiking correlations</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rosenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Josic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="1261" to="1305" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21299426</note>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<analytic>
+		<title level="a" type="main">Spike-count distribution in a neuronal population under weak common stimulation</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kruscha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lindner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review E</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page">52817</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<analytic>
+		<title level="a" type="main">Nonlinear transfer of signal and noise correlations in cortical networks</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Lyamzin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="8065" to="8080" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26019325</note>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<analytic>
+		<title level="a" type="main">Attention improves performance primarily by reducing interneuronal correlations</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Maunsell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1594" to="1600" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19915566</note>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<analytic>
+		<title level="a" type="main">Correlation-induced synchronization of oscillations in olfactory bulb neurons</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Galán</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Fourcaud-Trocmé</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Ermentrout</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">N</forename><surname>Urban</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="3646" to="3655" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16597718</note>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<analytic>
+		<title level="a" type="main">Time scales of spike-train correlation for neural oscillators with common drive</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Barreiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shea-Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Thilo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review E</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page">11916</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<analytic>
+		<title level="a" type="main">Correlation transfer in stochastically driven neural oscillators over long and short time scales</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Abouzeid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ermentrout</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review E</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page">61914</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b99">
+	<analytic>
+		<title level="a" type="main">Single neuron firing properties impact correlationbased population coding</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ratté</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Prescott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">De</forename><surname>Schutter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="1413" to="1428" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22279226</note>
+</biblStruct>
+
+<biblStruct xml:id="b100">
+	<analytic>
+		<title level="a" type="main">Kv7 channels regulate pairwise spiking covariability in health and disease</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Ocker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="340" to="352" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24790164</note>
+</biblStruct>
+
+<biblStruct xml:id="b101">
+	<analytic>
+		<title level="a" type="main">Stimulus-dependent correlations in threshold-crossing spiking neurons</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Burak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lewallen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sompolinsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="2269" to="2308" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19409055</note>
+</biblStruct>
+
+<biblStruct xml:id="b102">
+	<analytic>
+		<title level="a" type="main">Rate-specific synchrony: using noisy oscillations to detect equally active neurons</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Markowitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Collman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Hopfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Tank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="8422" to="8427" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b103">
+	<analytic>
+		<title level="a" type="main">Impact of neuronal heterogeneity on correlated colored noise-induced synchronization</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Burton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">N</forename><surname>Urban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Ermentrout</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in computational neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b104">
+	<analytic>
+		<title level="a" type="main">Neuronal arithmetic</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Silver</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="474" to="489" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20531421</note>
+</biblStruct>
+
+<biblStruct xml:id="b105">
+	<analytic>
+		<title level="a" type="main">Spike count correlation increases with length of time interval in the presence of trial-to-trial variation</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Kass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Ventura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="2583" to="2591" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16999571</note>
+</biblStruct>
+
+<biblStruct xml:id="b106">
+	<analytic>
+		<title level="a" type="main">Neural networks as spatio-temporal pattern-forming systems</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ermentrout</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Reports on progress in physics</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="2583" to="2591" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b107">
+	<analytic>
+		<title level="a" type="main">Neural network dynamics</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Vogels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Abbott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="357" to="376" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16022600</note>
+</biblStruct>
+
+<biblStruct xml:id="b108">
+	<monogr>
+		<title level="m" type="main">Neuronal dynamics: From single neurons to networks and models of cognition</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Gerstner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Kistler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Naud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Paninski</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<publisher>Cambridge University Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b109">
+	<analytic>
+		<title level="a" type="main">Gamma rhythms and beta rhythms have different synchronization properties</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kopell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ermentrout</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Whittington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Traub</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="1867" to="1872" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b110">
+	<analytic>
+		<title level="a" type="main">What determines the frequency of fast network oscillations with irregular neural discharges? i. synaptic dynamics and excitation-inhibition balance</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="415" to="430" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12611969</note>
+</biblStruct>
+
+<biblStruct xml:id="b111">
+	<analytic>
+		<title level="a" type="main">Cross-correlations in high-conductance states of a model cortical network</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hertz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="427" to="447" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19842988</note>
+</biblStruct>
+
+<biblStruct xml:id="b112">
+	<analytic>
+		<title level="a" type="main">Role of input correlations in shaping the variability and noise correlations of evoked activity in the neocortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Bujan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aertsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="8611" to="8625" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26041927</note>
+</biblStruct>
+
+<biblStruct xml:id="b113">
+	<analytic>
+		<title level="a" type="main">Slow dynamics and high variability in balanced cortical networks with clustered connections</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Litwin-Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="1498" to="1505" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23001062</note>
+</biblStruct>
+
+<biblStruct xml:id="b114">
+	<analytic>
+		<title level="a" type="main">Balanced neural architecture and the idling brain</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Litwin-Kumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in Computational Neuroscience</title>
+		<imprint>
+			<biblScope unit="page">27</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b115">
+	<analytic>
+		<title level="a" type="main">Emergence of slow-switching assemblies in structured neuronal networks</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Schaub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">N</forename><surname>Billeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Anastassiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Barahona</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<date type="published" when="2015">2015. 1004196</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26176664</note>
+</biblStruct>
+
+<biblStruct xml:id="b116">
+	<analytic>
+		<title level="a" type="main">Propagating waves can explain irregular neural dynamics</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Keane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="1591" to="1605" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25632135</note>
+</biblStruct>
+
+<biblStruct xml:id="b117">
+	<analytic>
+		<title level="a" type="main">Correlations in spiking neuronal networks with distance dependent connections</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kriener</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Helias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aertsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rotter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of computational neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="177" to="200" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19568923</note>
+</biblStruct>
+
+<biblStruct xml:id="b118">
+	<analytic>
+		<title level="a" type="main">Functional specificity of local synaptic connections in neocortical networks</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">473</biblScope>
+			<biblScope unit="page" from="87" to="91" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21478872</note>
+</biblStruct>
+
+<biblStruct xml:id="b119">
+	<analytic>
+		<title level="a" type="main">Local field potentials indicate network state and account for neuronal response variability</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Kelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Kass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of computational neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="567" to="579" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20094906</note>
+</biblStruct>
+
+<biblStruct xml:id="b120">
+	<analytic>
+		<title level="a" type="main">Oscillatory activity in electrosensory neurons increases with the spatial correlation of the stochastic input stimulus</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lindner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Longtin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Maler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bastian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical review letters</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page">48101</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15323795</note>
+</biblStruct>
+
+<biblStruct xml:id="b121">
+	<analytic>
+		<title level="a" type="main">Theory of oscillatory firing induced by spatially correlated noise and delayed inhibitory feedback</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lindner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Longtin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review E</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page">61919</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b122">
+	<analytic>
+		<title level="a" type="main">Correlated neural variability in persistent state networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Polk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Litwin-Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doiron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="6295" to="6300" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b123">
+	<analytic>
+		<title level="a" type="main">How connectivity, background activity, and synaptic properties shape the cross-correlation between spike trains</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ostojic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Brunel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Hakim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="10234" to="10253" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19692598</note>
+</biblStruct>
+
+<biblStruct xml:id="b124">
+	<analytic>
+		<title level="a" type="main">Two types of asynchronous activity in networks of excitatory and inhibitory spiking neurons</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ostojic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="594" to="600" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24561997</note>
+</biblStruct>
+
+<biblStruct xml:id="b125">
+	<analytic>
+		<title level="a" type="main">Asynchronous rate chaos in spiking neuronal circuits</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Harish</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<date type="published" when="2015">2015. 1004266</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26230679</note>
+</biblStruct>
+
+<biblStruct xml:id="b126">
+	<analytic>
+		<title level="a" type="main">Genetic dissection of neural circuits</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Callaway</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="634" to="660" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18341986</note>
+</biblStruct>
+
+<biblStruct xml:id="b127">
+	<analytic>
+		<title level="a" type="main">The development and application of optogenetics</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Fenno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yizhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Deisseroth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annual review of neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="389" to="412" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b128">
+	<analytic>
+		<title level="a" type="main">Perceptual Learning Reduces Interneuronal Correlations in Macaque Visual Cortex</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page" from="750" to="761" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21867889</note>
+</biblStruct>
+
+<biblStruct xml:id="b129">
+	<analytic>
+		<title level="a" type="main">Correlated neuronal discharges that increase coding efficiency during perceptual discrimination</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Romo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zainos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Salinas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="649" to="657" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12765615</note>
+</biblStruct>
+
+<biblStruct xml:id="b130">
+	<analytic>
+		<title level="a" type="main">Spike synchronization and rate modulation differentially involved in motor cortical function</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Riehle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grün</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Diesmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aertsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">278</biblScope>
+			<biblScope unit="page" from="1950" to="1953" />
+			<date type="published" when="1997">1997</date>
+			<pubPlace>New York, NY</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b131">
+	<analytic>
+		<title level="a" type="main">Population coding by electrosensory neurons</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Chacron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bastian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="1825" to="1835" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18256161</note>
+</biblStruct>
+
+<biblStruct xml:id="b132">
+	<analytic>
+		<title level="a" type="main">Spatial attention decorrelates intrinsic activity fluctuations in macaque area V4</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Sundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Reynolds</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="879" to="888" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19778515</note>
+</biblStruct>
+
+<biblStruct xml:id="b133">
+	<analytic>
+		<title level="a" type="main">Attention can either increase or decrease spike count correlations in visual cortex</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Ruff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1591" to="1597" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25306550</note>
+</biblStruct>
+
+<biblStruct xml:id="b134">
+	<analytic>
+		<title level="a" type="main">Lesions of prefrontal cortex reduce attentional modulation of neuronal responses and synchrony in v4</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Gregoriou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Rossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Ungerleider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Desimone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1003" to="1011" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24929661</note>
+</biblStruct>
+
+<biblStruct xml:id="b135">
+	<analytic>
+		<title level="a" type="main">Adaptive coding of visual information in neural populations</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Gutnisky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dragoi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">452</biblScope>
+			<biblScope unit="page" from="220" to="224" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18337822</note>
+</biblStruct>
+
+<biblStruct xml:id="b136">
+	<analytic>
+		<title level="a" type="main">Correlations in v1 are reduced by stimulation outside the receptive field</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Snyder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Morais</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="11222" to="11227" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25143603</note>
+</biblStruct>
+
+<biblStruct xml:id="b137">
+	<analytic>
+		<title level="a" type="main">Attention-induced variance and noise correlation reduction in macaque v1 is mediated by nmda receptors</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Herrero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Gieselmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sanayei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thiele</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="729" to="739" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23719166</note>
+</biblStruct>
+
+<biblStruct xml:id="b138">
+	<analytic>
+		<title level="a" type="main">Arousal and locomotion make distinct contributions to cortical activity patterns and visual encoding</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vinck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Batista-Brito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Knoblich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Cardin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="740" to="754" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25892300</note>
+</biblStruct>
+
+<biblStruct xml:id="b139">
+	<analytic>
+		<title level="a" type="main">Pupil fluctuations track fast switching of cortical states during quiet wakefulness</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Reimer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page" from="355" to="362" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25374359</note>
+</biblStruct>
+
+<biblStruct xml:id="b140">
+	<analytic>
+		<title level="a" type="main">Effects of locomotion extend throughout the mouse early visual system</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Erisken</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="2899" to="2907" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25484299</note>
+</biblStruct>
+
+<biblStruct xml:id="b141">
+	<analytic>
+		<title level="a" type="main">Task engagement selectively modulates neural correlations in primary auditory cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Downer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Niwa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Sutter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="7565" to="7574" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25972181</note>
+</biblStruct>
+
+<biblStruct xml:id="b142">
+	<analytic>
+		<title level="a" type="main">Correlated discharges in the primate prefrontal cortex before and after working memory training</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">L</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Constantinidis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="3538" to="3548" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22934919</note>
+</biblStruct>
+
+<biblStruct xml:id="b143">
+	<analytic>
+		<title level="a" type="main">Context-dependent changes in functional circuitry in visual area mt</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Newsome</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="162" to="173" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18940596</note>
+</biblStruct>
+
+<biblStruct xml:id="b144">
+	<analytic>
+		<title level="a" type="main">Odor representations in olfactory cortex: distributed rate coding and decorrelated population activity</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Miura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="1087" to="1098" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22726838</note>
+</biblStruct>
+
+<biblStruct xml:id="b145">
+	<analytic>
+		<title level="a" type="main">Associative learning enhances population coding by inverting interneuronal correlation patterns</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Jeanne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">O</forename><surname>Sharpee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">Q</forename><surname>Gentner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="352" to="363" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23622067</note>
+</biblStruct>
+
+<biblStruct xml:id="b146">
+	<analytic>
+		<title level="a" type="main">Brightness induction: rate enhancement and neuronal synchronization as complementary codes</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Biederlack</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="page" from="1073" to="1083" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17178409</note>
+</biblStruct>
+
+<biblStruct xml:id="b147">
+	<analytic>
+		<title level="a" type="main">Membrane potential synchrony in primary visual cortex during sensory stimulation</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="1187" to="1201" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21172618</note>
+</biblStruct>
+
+<biblStruct xml:id="b148">
+	<analytic>
+		<title level="a" type="main">Internal brain state regulates membrane potential synchrony in barrel cortex of behaving mice</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Poulet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Petersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">454</biblScope>
+			<biblScope unit="page" from="881" to="885" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18633351</note>
+</biblStruct>
+
+<biblStruct xml:id="b149">
+	<analytic>
+		<title level="a" type="main">Sensory stimulation shifts visual cortex from synchronous to asynchronous states</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Scholl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Seidemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Priebe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">509</biblScope>
+			<biblScope unit="page" from="226" to="229" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24695217</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

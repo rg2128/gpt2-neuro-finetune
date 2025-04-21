@@ -1,0 +1,1517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Single-neuron perturbations reveal feature-specific competition in V1</title>
+				<funder ref="#_CxpGxZT">
+					<orgName type="full">National Science Foundation</orgName>
+					<orgName type="abbreviated">NSF</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">National Institutes of Health</orgName>
+					<orgName type="abbreviated">NIH</orgName>
+				</funder>
+				<funder ref="#_3r3B9gM">
+					<orgName type="full">Burroughs-Wellcome</orgName>
+				</funder>
+				<funder ref="#_gsCdfab">
+					<orgName type="full">NIMH BRAINS program</orgName>
+				</funder>
+				<funder ref="#_PtAsrQ8 #_s8SQQRK">
+					<orgName type="full">NINDS</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">New York Stem Cell Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Searle Scholars Program</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2019-09-06">2019 September 06.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Selmaan</forename><forename type="middle">N</forename><surname>Chettih</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Neurobiology</orgName>
+								<orgName type="institution">Harvard Medical School</orgName>
+								<address>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Harvey</surname></persName>
+							<email>harvey@hms.harvard.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Neurobiology</orgName>
+								<orgName type="institution">Harvard Medical School</orgName>
+								<address>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Single-neuron perturbations reveal feature-specific competition in V1</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature</title>
+						<title level="j" type="abbrev">Nature</title>
+						<idno type="ISSN">0028-0836</idno>
+						<idno type="eISSN">1476-4687</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">567</biblScope>
+							<biblScope unit="issue">7748</biblScope>
+							<biblScope unit="page" from="334" to="340"/>
+							<date type="published" when="2019-09-06">2019 September 06.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">878B31F4F452D7338D4ADF1A56313010</idno>
+					<idno type="DOI">10.1038/s41586-019-0997-6</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2025-04-21T20:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>We developed a method -influence mapping -that uses single-cell perturbations to reveal how local neural populations reshape representations.</s><s>We used two-photon optogenetics to trigger action potentials in a targeted neuron and calcium imaging to measure the effect on neighbors' spiking in awake mice viewing visual stimuli.</s><s>In V1 layer 2/3, excitatory neurons on average suppressed other neurons and had a center-surround influence profile over anatomical space.</s><s>A neuron's influence on a neighbor depended on their similarity in activity.</s><s>Notably, neurons suppressed activity in similarly tuned neurons more than dissimilarly tuned neurons.</s><s>Also, photostimulation reduced the population response, specifically to the targeted neuron's preferred stimulus, by ~2%.</s><s>Therefore, V1 layer 2/3 performed feature competition, in which a likesuppresses-like motif reduces redundancy in population activity and may assist inference of the features underlying sensory input.</s><s>We anticipate influence mapping can be extended to uncover computations in other neural populations.</s></p><p><s>We studied how local groups of neurons in layer 2/3 of mouse primary visual cortex (V1) reshape representations, by perturbing identified neurons and monitoring resulting changes in the local population.</s><s>Layer 2/3 encodes various features of visual stimuli, including stimulus orientation, which are also encoded in its inputs from layer 4 1-3 .</s><s>Studies have proposed that layer 2/3 reshapes these inherited representations through 'feature amplification' to increase the magnitude and reliability of a stimulus response <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5</ref> .</s><s>Amplification is based on the idea that activity in one neuron enhances the activity of similarly tuned neurons more than dissimilarly tuned neurons.</s><s>Findings that excitatory neurons with similar tuning have stronger and more frequent monosynaptic connections 5-9 support this hypothesis.</s><s>Alternatively, theoretical work <ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref> and related experimental Users may view, print, copy, and download text and data-mine the content in such documents, for the purposes of academic research, subject always to the full Conditions of use:</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>findings <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref> have suggested that competition is critical for the computational goals of V1.</s><s>We can generalize the predictions of this work as 'feature competition': the activity of a neuron suppresses similarly tuned neurons more than dissimilarly tuned neurons.</s><s>Feature competition can reduce redundancy in a population representation <ref type="bibr" target="#b9">10</ref> , and differentiate representations of similar stimuli that cause overlapping sensory receptor activity, thus assisting inference of the properties of external stimuli <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b16">17</ref> .</s><s>Feature amplification and feature competition could also co-exist in a population between different subsets of neurons.</s></p><p><s>These hypotheses make direct predictions of how the activity of one neuron affects nearby neurons.</s><s>This effect is difficult to measure with existing methods because it is both causal and functional.</s><s>For example, from monosynaptic connectivity <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b17">18</ref> it is challenging to predict how one neuron's spiking affects another's because connectivity profiles are typically incomplete (often limited to &lt; 50 µm) and contributions from all polysynaptic pathways (e.g.</s><s>disynaptic inhibition <ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref> ) must be simultaneously considered.</s><s>Also, from activity measurements alone, as in functional connectivity studies <ref type="bibr" target="#b21">22</ref> , it is difficult to establish causality.</s><s>Therefore, we extended previous work <ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref><ref type="bibr" target="#b28">[29]</ref> and developed a methodinfluence mapping -in which we optically triggered action potentials in a targeted neuron to directly measure its functional influence on neighboring, non-targeted neurons with known tuning (Fig. <ref type="figure" target="#fig_3">1a</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Photostimulation of targeted neurons</head><p><s>We co-expressed GCaMP6s and a red-shifted channelrhodopsin (C1V1-t/t or ChrimsonR) <ref type="bibr" target="#b29">30,</ref><ref type="bibr" target="#b30">31</ref> in layer 2/3 V1 neurons (Fig. <ref type="figure" target="#fig_3">1b</ref>).</s><s>Opsin expression was restricted to excitatory neurons using the CaMKIIα promoter.</s><s>We targeted localization of channelrhodopsin to the soma using a motif from the Kv2.1 channel <ref type="bibr" target="#b31">32</ref> (Extended Data Fig. <ref type="figure" target="#fig_3">1a</ref>).</s><s>This localization should improve the specificity of influence measurements by reducing photostimulation of non-targeted neurons' axons and dendrites near the target site <ref type="bibr" target="#b32">33</ref> .</s><s>In tuning measurement blocks, we measured neural responses to contrast-modulated gratings with varying drift direction, spatial frequency, and temporal frequency (Fig. <ref type="figure" target="#fig_3">1c</ref>, top).</s><s>In influence measurement blocks, we independently scanned two lasers of different wavelengths to simultaneously image neuronal activity across the population and photostimulate individual targeted neurons with two-photon excitation (Extended Data Fig. <ref type="figure" target="#fig_3">1b</ref>).</s><s>Photostimulation was time-locked to the onset of low contrast (10%) drifting gratings (eight directions, fixed spatial and temporal frequencies) to measure influence in the context of visual stimulus processing (Fig. <ref type="figure" target="#fig_3">1c,</ref><ref type="figure">bottom</ref>).</s><s>Photostimulation induced cell-shaped increases in fluorescence at the target site, indicating selective photostimulation of the targeted neuron (Fig. <ref type="figure" target="#fig_3">1d-f</ref>; Extended Data Fig. <ref type="figure" target="#fig_3">1c,</ref><ref type="figure">e</ref>; Supplementary Videos 1-2).</s></p><p><s>To examine the resolution of photostimulation, we limited opsin expression to a very sparse set of neurons and monitored photostimulation responses in an isolated opsin-expressing neuron.</s><s>Responses decreased with distance between the neuron and photostimulation target, and were not significant beyond 25 μm (Fig. <ref type="figure" target="#fig_3">1e-f</ref>, Extended Data Fig. <ref type="figure" target="#fig_3">1d</ref>).</s><s>To be conservative, all subsequent analyses excluded neuron pairs with &lt; 25 μm lateral separation.</s><s>To further control for off-target photostimulation, in influence mapping experiments, we expressed channelrhodopsin in a moderately sparse subset of excitatory neurons (~20-60 neurons in 0.3 mm 2 ; Fig. <ref type="figure" target="#fig_3">1b</ref>) to reduce opsin-expressing neurons adjacent to photostimulation targets.</s><s>Furthermore, we interleaved trials targeting opsin-expressing neurons with trials targeting control sites that lacked an opsin-expressing cell (Fig. <ref type="figure" target="#fig_3">1b</ref>).</s><s>Control sites accounted for effects arising from nonspecific photostimulation (including in the axial dimension).</s><s>Control photostimulation triggered no fluorescence changes near the target (Fig. <ref type="figure" target="#fig_3">1d</ref>, Extended Data Fig. <ref type="figure" target="#fig_3">1c</ref>).</s></p><p><s>To estimate the amplitude of activity induced by photostimulation, we performed cellattached electrophysiological recordings in anesthetized animals, without presented visual stimuli.</s><s>Photostimulation added approximately six spikes in the targeted neuron within the ~250 ms photostimulation window (Fig. <ref type="figure" target="#fig_3">1i-j</ref>).</s><s>During influence measurement blocks in awake mice, photostimulation concurrent with low contrast visual stimuli elevated the activity of targeted neurons above the levels evoked by the visual stimuli alone, as expected (Figure <ref type="figure" target="#fig_3">1h</ref>).</s><s>The targeted neuron's activity following photostimulation during low contrast visual stimuli was slightly smaller than responses to optimal gratings in the tuning measurement block (Figure <ref type="figure" target="#fig_3">1g-h</ref>).</s><s>Photostimulation therefore induced activity that did not exceed physiologically relevant levels.</s><s>The magnitude of photostimulation did not vary strongly with other properties of the cell, including visual stimulus tuning (Extended Data Fig. <ref type="figure" target="#fig_3">1f-g</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The magnitude of influence in layer 2/3 of V1</head><p><s>We quantified the change in each non-targeted neuron's activity following photostimulation.</s><s>Using the deconvolved activity of non-targeted neurons, we calculated an influence metric ΔActivity: the response on individual photostimulation trials minus the average response on control trials with the same visual stimulus, normalized by the standard deviation of this difference over all trials (Fig. <ref type="figure" target="#fig_4">2a,</ref><ref type="figure">left</ref>).</s><s>We averaged a neuron's ΔActivity over all trials for individual photostimulation targets to obtain an influence value for each pair of targeted and non-targeted neuron.</s><s>We identified positive (excitatory) and negative (inhibitory) influence (Fig. <ref type="figure" target="#fig_4">2a</ref>).</s><s>Influence values corresponded to soma-shaped fluorescence changes in raw images centered on the non-targeted neuron (Fig. <ref type="figure" target="#fig_4">2b</ref>).</s><s>We also developed a metric that expressed influence as a probability that a non-targeted neuron was excited or inhibited following photostimulation.</s><s>This metric was robust to the varyingly asymmetric and heavytailed distributions of individual neurons' activity, and revealed similar findings (Extended Data Fig. <ref type="figure" target="#fig_1">3</ref>).</s></p><p><s>We compared influence following neuron and control site photostimulation, using a leaveone-out procedure to calculate ΔActivity for control sites.</s><s>Control values deviated from zero because of random sampling of neural activity and potential off-target effects.</s><s>However, the magnitude of influence values following neuron photostimulation were ~4% larger than for control photostimulation (Fig. <ref type="figure" target="#fig_4">2c</ref>).</s><s>This effect arose in part because individual excitatory neurons had an average inhibitory effect on other neurons (Fig <ref type="figure" target="#fig_4">2d</ref>).</s><s>In addition, for individual targeted neurons, influence values had ~4% greater dispersion than expected based on control sites (Fig. <ref type="figure" target="#fig_4">2e</ref>).</s><s>This larger dispersion indicated that a neuron differentially affected specific non-targeted neurons, potentially governed by similarities between targeted and non-targeted neurons.</s></p><p><s>We tested this idea by analyzing influence as a function of the anatomical distance between neurons.</s><s>The magnitude of influence decreased with distance, although it remained above control levels for all distances (Fig. <ref type="figure" target="#fig_4">2f</ref>).</s><s>The relative strength of excitatory and inhibitory influence varied: on average, neurons &lt; 70 μm apart had excitatory influence, maximum inhibitory influence was present around 110 μm, and net influence was balanced at longer distances &gt; 300 μm (Fig. <ref type="figure" target="#fig_4">2g</ref>).</s><s>Influence therefore had a center-surround relationship with distance.</s><s>Because there are fewer pairs at smaller distances, the average influence we observed was negative.</s><s>Influence was most suppressive at distances where neurons' receptive fields partially overlap (~12° receptive field width, ~10 μm/° retinotopic magnification) <ref type="bibr" target="#b33">34</ref> .</s><s>Influence following control site photostimulation exhibited weak spatial structure, consistent with small off-target excitation (Fig. <ref type="figure" target="#fig_4">2f-g</ref>).</s></p><p><s>To put these effects on a functional scale, we compared influence to single-trial variability in a neuron's response.</s><s>Influence values in units of ΔActivity were by definition a fraction of trial-to-trial variability.</s><s>Moreover, the variance of the true effect of one neuron's activity on another can be calculated as the difference in variance of influence values following neuron and control photostimulation.</s><s>This calculation revealed that single-neuron photostimulation caused a 2.1% change in another neuron's activity relative to trial-to-trial variability (quantified by the ratio of standard deviations).</s><s>We similarly computed changes in activity as a fraction of average activity, and observed a 5.4% effect on other neurons, with a net ~0.5% decrease in population activity.</s></p><p><s>Considering that a neuron exhibits variability driven by thousands of synaptic inputs, yet we added a few spikes to a single neuron that typically will not be monosynaptically connected <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b18">19</ref> , these effects are substantial and underscore the strength of polysynaptic pathways <ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b20">21</ref> .</s><s>Despite this large effect from the perspective of brain function, our measurement for individual pairs was noisy: we performed 150-200 repeats per pair, yet ~2,500 repeats would be needed for a single-pair signal-to-noise ratio of ~1.</s><s>However, by pooling data across &gt; 10,000 pairs in each experiment, we obtained highly significant results at the population level.</s></p><p><s>Average influence effects could result from strong influence in a small fraction of pairs or weaker influence distributed across the population.</s><s>Removing pairs with the largest positive or negative influence did not qualitatively change the population results (Extended Data Fig. <ref type="figure" target="#fig_3">1a-c</ref>).</s><s>Also, influence relationships were not significantly affected by a neuron's baseline activity level or other properties (Extended Data Fig. <ref type="figure" target="#fig_4">2d-i</ref>).</s><s>Therefore, the addition of a few spikes to a targeted neuron had a distributed effect across many non-targeted neurons.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Tuning similarity is inversely related to influence</head><p><s>To test hypotheses of feature amplification and feature competition, we related visual tuning and influence in the same pairs of neurons.</s><s>In blocks without photostimulation, we measured the tuning of neurons to gratings with randomly sampled drift direction, spatial frequency, and temporal frequency.</s><s>To estimate neural tuning in the absence of identical stimulus repeats, we used a Bayesian nonparametric smoothing method, Gaussian Process regression (GP) (Fig. <ref type="figure" target="#fig_5">3a</ref>-b, Extended Data Fig. <ref type="figure" target="#fig_6">4</ref>).</s><s>This method creates a tuning curve by approximating responses via comparisons to trials with a similar stimulus, assuming that neural responses are a smooth function of stimulus parameters.</s><s>GP smoothing yielded similar tuning results to a conventional model and better predictions of neural activity (Extended Data Fig. <ref type="figure" target="#fig_7">5</ref>).</s></p><p><s>For each pair of neurons, we computed similarity in tuning as a signal correlation, measured as the correlation between single-trial GP predictions of each neuron's visual stimulus response (Fig. <ref type="figure" target="#fig_5">3c</ref>).</s><s>We also computed similarity in trial-to-trial variability as a noise correlation, using the correlation between single-trial residuals after subtraction of GP predictions (Fig. <ref type="figure" target="#fig_5">3c</ref>).</s><s>A model-free 'trace correlation' was computed as the correlation between the neurons' activity throughout the tuning measurement block (Fig. <ref type="figure" target="#fig_5">3c</ref>).</s></p><p><s>We used multiple linear regression to determine how distance, signal correlation, and noise correlation metrics related to the influence between neurons (Fig. <ref type="figure" target="#fig_5">3d</ref>).</s><s>Regression coefficients revealed the sign and magnitude of a metric's relationship to influence, after controlling for the effects of other similarity metrics.</s><s>We used this approach because there were correlations between metrics, such as higher activity correlations at shorter anatomical distances and a positive correlation between signal and noise correlations (Extended Data Fig. <ref type="figure">6a-b</ref>).</s><s>We included terms for interactions between metrics to consider non-linear effects, such as a changing relationship between signal correlation and influence at different anatomical distances.</s><s>We complemented the regression analysis (Fig. <ref type="figure" target="#fig_5">3e-f</ref>) by plotting influence as a function of single activity metrics (Fig. <ref type="figure" target="#fig_5">3g-i</ref>) and comparing these plots to regression-based predictions (Extended Data Fig. <ref type="figure">6c-f</ref>).</s></p><p><s>The regression results confirmed that influence had a center-surround pattern as a function of distance: near pairs had a negative slope, intermediate pairs a positive slope, and distant pairs a slope near zero (Fig. <ref type="figure" target="#fig_5">3e</ref>, left; cf.</s><s>Fig. <ref type="figure" target="#fig_4">2g</ref>).</s><s>Furthermore, influence was positively related to a neuron pair's noise correlation (Fig. <ref type="figure" target="#fig_5">3e</ref>, right).</s><s>However, the noise correlationby-distance interaction coefficient was negative, indicating the relationship between influence and noise correlations decayed with anatomical distance (Fig. <ref type="figure" target="#fig_5">3e</ref>, right).</s><s>Therefore, there existed a positive relationship between influence and noise correlation for nearby pairs, and little relationship for distant pairs (Fig. <ref type="figure" target="#fig_5">3g</ref>).</s><s>This suggests that noise correlations for nearby pairs partially reflected local influence, whereas noise correlations over a broad spatial range may reflect shared external inputs <ref type="bibr" target="#b34">35</ref> .</s></p><p><s>We then considered the relationship between influence and signal correlation.</s><s>A positive regression coefficient would support feature amplification, whereas a negative coefficient would support feature competition.</s><s>Influence had a significant negative relationship with signal correlation (Figure <ref type="figure" target="#fig_5">3e</ref>, right).</s><s>The signal correlation-by-distance interaction term was close to zero, indicating that this relationship did not vary with anatomical distance (Figure <ref type="figure" target="#fig_5">3e</ref>, right).</s><s>Influence also appeared more negative for higher signal correlation values by direct examination (Figure <ref type="figure" target="#fig_5">3h</ref>).</s><s>Therefore, similarly tuned neurons suppressed each other's activity more than dissimilarly tuned neurons, across all distances examined.</s></p><p><s>To test which tuning features contributed to this relationship, we replaced signal correlation in the influence regression with correlations of individual tuning features.</s><s>Orientation tuning recapitulated the negative relationship with influence, as did temporal frequency, indicating that representations of these features were reshaped by recurrent computation (Fig. <ref type="figure" target="#fig_5">3f,</ref><ref type="figure">i</ref>).</s><s>Influence appeared unrelated to tuning similarity for running speed and spatial frequency, despite robust neural tuning to both of these features (Fig. <ref type="figure" target="#fig_5">3f</ref>, Extended Data Fig. <ref type="figure" target="#fig_6">4c-d</ref>).</s></p><p><s>Local processing may therefore selectively shape only a subset of features present in its inputs.</s></p><p><s>Multiple factors therefore contributed to influence: (1) a center-surround effect of distance, (2) a positive effect of noise correlation that decayed with distance, and (3) a spatiallyinvariant negative effect of signal correlation, with specificity for distinct stimulus features.</s><s>We verified that these influence patterns were not due to data processing or analysis artifacts by analyzing ΔF/F traces directly (Extended Data Fig. <ref type="figure">7a-e</ref>).</s><s>Because photostimulation likely caused weak activation of neurons near the targeted neuron, including axially displaced neurons <ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b35">36</ref> (Fig. <ref type="figure" target="#fig_3">1f</ref>, Fig. <ref type="figure" target="#fig_4">2f-g</ref>), we tested for effects due to off-target photostimulation.</s><s>We repeated influence regression, but using the average activity similarity between the non-targeted neuron and multiple neurons near the target site.</s><s>We found no significant effects of local activity (Extended Data Fig. <ref type="figure">7f</ref>).</s><s>Thus, our findings reflect a genuine relationship between an individual photostimulated neuron's characteristics and its influence.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Functional significance on population encoding</head><p><s>Our results so far revealed feature competition based on trial-averaged pairwise relationships.</s><s>However, these analyses did not quantify the functional consequence of influence on the brain's ability to discriminate stimulus properties like orientation, using population responses on single trials.</s><s>Feature competition led to a surprising prediction: due to greater suppression between similarly tuned neurons, photostimulation during a neuron's preferred orientation should suppress the population response and reduce information about orientation in non-targeted neurons more than when presenting non-preferred orientations.</s></p><p><s>We analyzed responses in non-targeted neurons to drifting gratings in influence measurement blocks.</s><s>We built decoders to estimate the population's information about orientation on single trials, and examined accuracy as a function of similarity between visual stimulus orientation and the photostimulated neuron's preference.</s><s>Consistent with our prediction, we observed a significant decrease in decoding performance of ~2% when orientations matched (Fig. <ref type="figure" target="#fig_6">4a</ref>).</s></p><p><s>We then analyzed how photostimulation changed population encoding of orientation.</s><s>For each of the four presented orientations, we defined a dimension of population activity that helped isolate the change in population activity specific to that orientation.</s><s>In addition, we defined a non-selective 'uniform' dimension that weighted all neurons equally.</s><s>Single-trial population responses were projected onto these dimensions (Fig. <ref type="figure" target="#fig_6">4b-d</ref>, Extended Data Fig. <ref type="figure">8b</ref>; Methods).</s><s>When the targeted neuron's preferred orientation was similar to the presented stimulus, we observed a ~2% decrease in activity along the dimension of the presented orientation (response gain) (Fig. <ref type="figure" target="#fig_6">4c,</ref><ref type="figure">e</ref>).</s><s>Activity along the uniform dimension and other encoding dimensions was not significantly changed (Fig. <ref type="figure" target="#fig_6">4d,</ref><ref type="figure">f,</ref><ref type="figure">g</ref>).</s><s>In summary, suppression was selective for population activity encoding a visual stimulus matching the targeted neuron's preference, and had physiological significance for the brain's ability to discriminate visual stimuli.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Feature competition can support perceptual inference</head><p><s>One implication of feature competition is the reduction of redundant stimulus information in the population, which has benefits for sensory codes <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> .</s><s>We developed a 'toy' rate-network model to qualitatively explore this and other potential functions, guided by previous studies <ref type="bibr" target="#b12">13,</ref><ref type="bibr" target="#b16">17</ref> .</s><s>Model neurons received orientation-tuned feedforward inputs (U) and had recurrent functional connections (W) that were similar in effect to influence (Fig. <ref type="figure" target="#fig_6">4h</ref>).</s><s>The functional connections were linearly proportional, with constant s, to the similarity in the connected neurons' inputs.</s><s>We modeled a competition network with a negative relationship between functional connections and input similarity (s &lt; 0) and an 'untuned' network (s = 0) with the same level of overall inhibition (see Extended Data Fig. <ref type="figure">9</ref> for more detail).</s></p><p><s>Untuned and competition networks responded with a similar bump of activity to a single visual stimulus (Fig. <ref type="figure" target="#fig_6">4i</ref>).</s><s>To probe the impact of feature competition, we tested responses to stimuli with mixtures of different orientations.</s><s>The competition network demixed feedforward inputs into components closely matching the responses to individual inputs (Fig. <ref type="figure" target="#fig_6">4j</ref>).</s><s>In contrast, the untuned network responded as a thresholded version of its input (Fig. <ref type="figure" target="#fig_6">4j</ref>).</s><s>Thus, the competition network inferred the underlying causes of feedforward input.</s><s>Due to the negative relationship between recurrent connections and tuning similarity in the competition network, the recurrent connections counteracted input drive to each neuron that was better explained by another neuron's activity <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b16">17</ref> .</s><s>For example, in Fig. <ref type="figure" target="#fig_6">4j</ref>, neurons preferring 60 or 120 degrees were driven strongly by feedforward input and inhibited neurons driven by overlap with the 60 and 120 degree stimuli but that preferred different orientations (e.g. 90 degrees).</s><s>This effect is the statistical principle known as 'explaining away' <ref type="bibr" target="#b16">17</ref> : when an observed phenomena (e.g.</s><s>feedforward input to a neuron preferring 90 degrees) could be caused by alternative sources (e.g.</s><s>60+120 degree or 90 degree stimuli), evidence for one cause typically decreases the likelihood of the other (e.g.</s><s>suppression of the 90 degree cause due to evidence for the 60+120 degree cause).</s><s>In the competition network, feedforward input was 'observed', and neural activity encoded an estimate of the stimulus features responsible for the input.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Non-competitive influence</head><p><s>The presence of feature competition on average does not exclude other possible structure in the neural population.</s><s>We looked for structure consistent with strong monosynaptic connections between excitatory neurons with highly correlated moment-by-moment activity during stimulus presentation <ref type="bibr" target="#b4">5</ref> (trace correlation).</s><s>The distribution of trace correlations was heavily weighted at small values, with pronounced positive and negative tails (Fig. <ref type="figure" target="#fig_7">5a</ref>).</s><s>Influence was excitatory for the most strongly correlated pairs (Fig. <ref type="figure" target="#fig_7">5b</ref>).</s><s>Pairs with high trace correlations had high signal and noise correlations, as well as fine-timescale correlations not captured by our signal and noise metrics, as expected for neurons with diverse locations and phases of receptive fields (Fig. <ref type="figure" target="#fig_7">5c</ref>).</s><s>For all other pairs, including even weakly positively correlated pairs, influence was inhibitory.</s><s>The strongest negative influence was between highly anti-correlated neurons (Fig. <ref type="figure" target="#fig_7">5b</ref>).</s></p><p><s>Influence had a non-monotonic relationship with trace correlation that suggested distinct regimes.</s><s>The central 95% of trace correlations had a negative correlation with influence.</s><s>For the extrema of the distribution, influence was positively correlated with trace correlation.</s><s>We thus compared the rules governing influence for these two regimes, by re-fitting our influence regression (Fig. <ref type="figure" target="#fig_5">3d-e</ref>) separately for weak (central 95% of data) and strong trace correlations (top and bottom 2.5%) (Extended Data Fig. <ref type="figure" target="#fig_3">10</ref>).</s><s>Pairs with weak trace correlations gave similar results to those for the entire dataset (Fig. <ref type="figure" target="#fig_7">5d</ref>), but for pairs with strong trace correlations, influence and signal correlation were positively related (Fig. <ref type="figure" target="#fig_7">5d</ref>).</s><s>Thus, although feature competition dominated on average, it was replaced by amplification for the sparse pool of highly correlated pairs.</s><s>We tested potential impacts of sparse feature amplification between strongly correlated pairs in a network with feature competition on average.</s><s>In our 'toy' competition model, we incorporated sparse like-to-like connectivity between neurons with the most correlated input ('mixed' model).</s><s>On simulations of single trial responses to noisy inputs, this added structure preserved the stimulus demixing capacity of the competition motif, and resulted in a smoother bump of population activity whose shape was consistent across trials (Fig. <ref type="figure" target="#fig_7">5e-g</ref>).</s><s>Thus sparse amplification between near-identical neurons in our network model smoothed population representations of orientation, but additional investigation will be needed to fully understand the rules and function of this non-competitive influence in the brain.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>We have shown that adding a few spikes to a targeted neuron had substantial effects on the local population, including ~2% modulations of responses to visual stimuli and changes in decoding of stimulus properties.</s><s>These effects included major contributions from inhibition <ref type="bibr" target="#b36">37</ref> , including an average inhibitory influence between neurons and an enhanced competition between similarly tuned neurons, forming a like-suppresses-like motif.</s><s>Feature competition was embedded in a complex network structure; however, direct analysis of population activity confirmed key predictions of feature competition and did not reveal widespread amplification.</s><s>Feature competition is thus an important, but incomplete, account of function in layer 2/3 of V1.</s><s>Further examination in different physiological contexts, and with different perturbations, is needed to elaborate this structure.</s></p><p><s>In support of single-unit recordings in V1 <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b38">39</ref> , our results provide some of the first causal evidence that local circuitry in V1 suppresses redundant information in a visual scene to create a sparse and efficient code <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> .</s><s>Feature competition is consistent with the principle of 'explaining away' and may assist inference of visual stimulus properties underlying sensory inputs <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b12">13,</ref><ref type="bibr" target="#b16">17</ref> .</s><s>The computational goal of feature competition generalizes to any sensory system and thus could be a common motif of sensory processing <ref type="bibr" target="#b39">40</ref> .</s></p><p><s>Our functional influence results suggest biophysical implications for V1 microcircuitry.</s><s>Because competition varied depending on tuning similarities, inhibition is likely more finely structured than generally appreciated <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b40">[41]</ref><ref type="bibr" target="#b41">[42]</ref><ref type="bibr" target="#b42">[43]</ref> (but see <ref type="bibr" target="#b43">[44]</ref><ref type="bibr" target="#b44">[45]</ref><ref type="bibr" target="#b45">[46]</ref><ref type="bibr" target="#b46">[47]</ref> ).</s><s>Our results are consistent with studies in multiple species showing similar tuning of excitatory and inhibitory inputs to individual cells <ref type="bibr" target="#b47">[48]</ref><ref type="bibr" target="#b48">[49]</ref><ref type="bibr" target="#b49">[50]</ref> .</s><s>However, the absence of widespread feature amplification suggests reconsidering the function of like-to-like excitatory connections <ref type="bibr" target="#b4">5</ref> .</s><s>We speculate competition might operate over small neural pools, rather than on individual neurons, with strong intrapool excitation.</s><s>However, when multiple visual stimulus dimensions are considered, it is rare for two neurons to be similar along all dimensions, suggesting that amplification in pools could be quite restricted.</s></p><p><s>Influence mapping has the potential to be a general tool to probe computation in local neural populations.</s><s>It potentially allows longitudinal studies over timescales of development, behavioral learning, and changes in brain state.</s><s>Further, its causal, functional estimates are amenable to direct comparison with network modeling and thus could bridge computational and biophysical investigations of cortical function.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Soma localization:</head><p><s>Soma-localized ChrimsonR and C1V1(t/t) plasmids and sequence data will be made available on Addgene (presently available upon request).</s><s>Soma-localization was achieved by appending a motif from Kv2.1 <ref type="bibr" target="#b50">51</ref> after the sequence for the fluorescent protein.</s><s>Construct sequences were synthesized by GenScript, and AAV2/9 virus was prepared by Boston Children's Hospital Viral Core.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Mice and surgeries:</head><p><s>All experimental procedures were approved by the Harvard Medical School Institutional Animal Care and Use Committee and were performed in compliance with the Guide for Animal Care and Use of Laboratory Animals.</s><s>Male C57BL/6J mice were obtained from Jackson Laboratory at ~8 weeks old, with surgeries performed 1-16 weeks after arrival.</s><s>Mice were given an injection of dexamethasone (3 μg per g body weight) 4-12 hours before the surgery.</s><s>A cranial window surgery was performed with a 3.5 mm-diameter window centered at 2.25 mm lateral and 3.1 mm posterior to bregma.</s><s>The window was constructed from bonding two 3.5 mm-diameter coverslips to each other and to an outer 4 mm-diameter coverslip (#1 thickness, Warner Instruments) using UV-curable optical adhesive (Norland Optics NOA 65).</s><s>A virus mixture was created by diluting into phosphate-buffered saline AAV2/1-synapsin-GCaMP6s 52 (obtained from U. Penn Vector Core), AAV2/9-CamKIIa-Cre, and one of either channelrhodopsin construct AAV2/9-Ef1a-ChrimsonR-mRuby2-Kv2.1 or AAV2/9-Ef1a-C1V1(t/t)-mRuby2-Kv2.1.</s><s>Mixture composition was adjusted slightly over the course of experiments, with final and optimal ratios (compared to undiluted stock) of 1/12.5 GCaMP (~4e12 gc/ml), 1/180 channelrhodopsin (~2.22e11 gc/ml), and 1/2,100 cre (~1.33e10 gc/ml).</s><s>Virus was injected on a 3×3 grid of 600 μm spacing over the posterior lateral quadrant of the craniotomy, corresponding to V1, with ~40 nL injection at each site at 250 μm below the pia surface.</s><s>Injections were made using a glass pipette and custom air-pressure injection system and were gradual and continuous over 2-5 minutes, with the pipette left in place after each injection for an additional 2-3 minutes.</s><s>After injections and before insertion of the glass plug, a durectomy was performed, as we observed improved peak optical clarity and a prolonged period of optimal window clarity with this step.</s><s>An intact dura often showed slight increases in thickness and vascularization 1-2 months from surgery visible under our surgical microscope.</s><s>The plug was then sealed in place using Metabond (Parkell) mixed with india ink (5% vol/vol) to prevent light contamination.</s><s>Ten mice were used for the primary dataset combining tuning and influence mapping (6 ChrimsonR, 6 C1V1-t/t).</s><s>Three mice with C1V1-t/t opsin were used for experiments mapping out photostimulation resolution and false-positive influence (Fig. <ref type="figure" target="#fig_3">1ef</ref>); in these mice cre was diluted to 1/10,000 (~3e9 gc/ml) in order to produce highly sparse channelrhodopsin expression.</s><s>Experiments were performed on mice typically 6-8 weeks after surgery, occasionally ranging as short as 4 or up to 12 weeks.</s><s>Experiments were terminated when GCaMP expression appeared high, with some neurons exhibiting GCaMP in the nucleus.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Microscope design:</head><p><s>Data were collected using a custom-built two-photon microscope with two independent scan paths merged through the same Nikon 16× 0.8 NA water immersion objective.</s><s>One scan path used a resonant-galvanometric mirror pair separated by a scan lens-based relay to achieve fast imaging frame acquisitions of 30 Hz.</s><s>The other path, used for photostimulation, used two galvanometric mirrors with an identical relay.</s><s>The two paths were merged after the scan lens -tube lens assembly before the objective via a shortpass dichroic mirror with 1000 nm cutoff (Thorlabs DMSP1000L), with small adjustments made to co-align pathways by imaging a fluorescent bead sample through both pathways.</s><s>A light-tight aluminum box housed collection optics to prevent contamination from visual stimuli.</s><s>Green and red emission were separated by a dichroic mirror (580 nm long-pass, Semrock) and then bandpass filtered (525/50 or 641/75 nm, Semrock) before collection by GaAsP photomultiplier tube (Hamamatsu).</s><s>A Ti:sapphire laser (Coherent Chameleon Vision II) was used to deliver pulsed excitation at 920 nm through the resonant-galvo pathway for calcium imaging, and a Fidelity-2 fiber laser (Coherent) was used to deliver pulsed excitation at 1070 nm through the galvo-galvo pathway.</s><s>A small number of initial experiments used a 1040 nm Ytterbium-based solid-state laser (YBIX, Lumentum) for the galvo-galvo pathway.</s><s>The mouse was head-fixed atop a spherical treadmill, as previously described <ref type="bibr" target="#b52">53</ref> , which was mounted on an XYZ translation stage (Dover Motion) that moved the entire treadmill assembly underneath the microscope's stationary objective.</s><s>Microscope hardware was controlled by Scanimage 2015 (Vidrio Technologies).</s><s>Rotation of the spherical treadmill along all three axes was monitored by a pair of optical sensors (ADNS-9800) embedded into the treadmill support communicating with a microcontroller (Teensy, 3.1), which converted the four sensor measurements into one pulse-width-modulated output channel for each rotational axis.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Visual stimulus:</head><p><s>All visual stimuli were generated using Psychtoolbox 3 in Matlab.</s><s>A 27-inch gaming LCD monitor running at 60 Hz refresh was gamma-corrected and used to display all stimuli (ASUS MG279Q).</s><s>The screen was positioned so that the closest point on the monitor was 22 cm from the mouse's right eye, such that visual field coverage was 107° in width and 74° in height.</s><s>Before each experiment, coarse retinotopy was mapped out via online observation of imaging data using a movable spot stimulus, and monitor position was adjusted so that centrally-presented spots drove the largest responses in the imaged field-of-view.</s><s>Drifting grating stimuli were different in 'influence measurement' and 'tuning measurement' blocks.</s><s>Influence measurement blocks used square-wave gratings at 10% contrast, 0.04 cycles per degree, and 2 cycles per second, presented for 500 ms with 500 ms of grey between presentations (i.e. 1 Hz stimulus presentation rate).</s><s>Stimuli discretely tiled direction space with 45 degree spacing.</s><s>Tuning measurement blocks used sine-wave gratings presented for 4 s, during which contrast linearly increased from 0% to 100% and back to 0%.</s><s>Grating parameters were each sampled from a uniform distribution covering: direction 0-360 degrees, spatial frequency 0.01-0.16</s><s>cycles per degree, and temporal frequency 0.5-4 cycles per second.</s><s>In a subset of experiments (e.g. the example in Fig. <ref type="figure" target="#fig_1">3</ref>), the range of temporal frequencies was adjusted such that a constant range of grating speeds was tested at each spatial frequency (with 0.5-4 Hz temporal frequency used for the central spatial frequency of 0.04 cycles per degree).</s><s>All grating stimuli were windowed gradually with a gaussian aperture of 44 degree standard deviation to prevent artifacts at the monitor's edges.</s><s>Stimuli were presented on a gray background such that average luminance of the monitor was constant throughout all grating presentations and contrasts in the experiment.</s><s>In influencemeasurement blocks, a digital trigger was output from the computer controlling visual stimuli to initiate photostimulation simultaneous to the psychtoolbox screen 'flip' command.</s><s>In all blocks, digital triggers output from the computer controlling visual stimuli were recorded simultaneous to the output of Scanimage's frame clock for offline alignment.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimental protocol:</head><p><s>Mice were habituated to handling, the experimental apparatus, and visual stimuli for 2-4 days before data collection began.</s><s>A field-of-view was selected for an experiment based on co-expression of GCaMP6s and channelrhodopsin.</s><s>920 nm excitation used for GCaMP6s imaging was between 40-60 mW (average with pockels cell blanking at image edges, measured after the objective).</s><s>Multiple experiments performed in the same animal were performed at different lateral locations within V1 or at different depths within layer 2/3 (110-250 μm from brain surface).</s><s>Once a field-of-view was selected, images were acquired from both laser paths.</s><s>The 920 nm-excitation resonant pathway image (~680 × 680 μm) was stored and used throughout the experiment to correct for brain drift during the experiment (described below).</s><s>The 1070 nm excitation photostim galvo pathway image (~550 × 550 μm) was used to visualize channelrhodopsin expression and select regions-of-interest (ROIs) for photostimulation (parameters described below).</s><s>Experiments began with a tuningmeasurement block of ~40 minutes, followed by three photostimulation blocks of 50 minutes each, and finally a second tuning-measurement block of ~40 minutes.</s><s>Within each photostimulation block, each photostimulation target was activated once in a randomized permutation at 1 Hz, and this process was then repeated throughout the block, such that all targets in an experiment were activated in near-random order with exactly the same number of repeats.</s><s>The total number of photostimulation trials per experiment was typically ~8,400, split into ~180 per site.</s></p><p><s>We found that, over these long experimental durations, both deformation of the brain and/or air bubble formation in the objective immersion fluid could lead to contamination of data.</s><s>Thus between each experimental block, we used the alignment image captured before any experiment blocks and overlaid this image with a live-stream of the current FOV and adjusted the stage as necessary to bring the two into alignment.</s><s>This alignment usually required shifts of &lt; 10 μm laterally and axially over the full experiment duration, and was typically no more than 3μm between individual blocks.</s><s>We also found that boiling the water used for objective immersion to remove dissolved gas (cooling to room temperature before use) prevented formation of bubbles.</s><s>Post-hoc verification of drift and image quality stability were confirmed by examining 1000× sped-up movies of the entire experiment after motion correction and temporal down-sampling.</s><s>Insufficiently stable experiments were discarded without further analysis.</s><s>Additionally, single-neuron stimulation was observed and subjectively judged online, so that experiments with generally poor stimulation efficacy were excluded from further analysis.</s><s>All inclusion and exclusion decisions were made before data analysis, and after all experiments had been performed, and were not altered once analysis began.</s></p><p><s>The complete dataset consisted of 28 experiments from 10 mice, with 295 control photostimulation sites and 539 neuron photostimulation sites, 518 of which were significantly photostimulated.</s><s>A total of 8,552 neurons were recorded, of which 6,061 passed criteria for GP regression fit quality (see below).</s><s>This resulted in 156,759 pairs of neuron photostimulation and non-targeted neuron response, from which 1,440 were excluded by our 25 μm distance threshold, and 1,630 were excluded by spatial overlap (see below on CNMF filter overlap).</s><s>This left 153,689 pairs for analysis, from which 64,845 further passed criteria for GP regression fit quality for both targeted and non-targeted neurons.</s><s>All data from experiments were managed and analyzed using a custom built pipeline in the DataJoint framework <ref type="bibr" target="#b53">54</ref> for MATLAB.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Photostimulation:</head><p><s>Our photostimulation protocol was a modification of a 'spiral scan' approach <ref type="bibr" target="#b35">36</ref> .</s><s>After selecting areas for stimulation, we initialized a circular target around each area slightly broader than the targeted neuron in order to account for brain motion in vivo (12-15 μm diameter).</s><s>We used the microscope's galvo-galvo pathway to rapidly sweep a diffractionlimited-spot across the cross-sectional area of a photostimulation target.</s><s>This area was covered uniformly in time using a sweep trajectory combining a 1 kHz circular rotation of the spot around the photostimulation target with an irrational frequency oscillation of the spot's displacement magnitude from target center (1 (2π - )kHz), which was found to rapidly fill the circular cross-section (see Extended Data Fig. <ref type="figure" target="#fig_3">1b</ref>).</s><s>The oscillation of displacement magnitude was a sawtooth wave modified with a square root transform to spend greater time at greater displacements, to account for the increasing circular area at larger displacement.</s><s>A single sweep trajectory was set to 32 ms in duration.</s><s>Photostimulation consisted of a 15 Hz train of 4 sweeps, with sweep onset aligned to the onset of imaging frames.</s><s>Power was typically ~50 mW (measured without pockels blanking, after the objective), but was increased in some experiments if stimulation efficacy was observed to be low (min 36mW, max 67.5mW, mean 52.7mW).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cell-attached Recordings:</head><p><s>Two mice were injected with virus using the same protocols used for experimental animals.</s><s>4-8 weeks after injection, the cranial window was removed and replaced with a 3mm glass window laser with a 0.5mm diameter access hole.</s><s>This custom window was laser cut from a sheet of quartz glass.</s><s>Two-photon targeted recordings <ref type="bibr" target="#b54">55</ref> were obtained using borosilicate glass pipettes pulled to a resistance of 5-7 M ohms and filled with extracellular solution.</s><s>Signals were amplified on a Axopatch 200B (Molecular Devices), filtered with a lowpass bessel filter w/ cutoff at 5 kHz,and recorded at 10 kHz.</s><s>Signals were later high-pass filtered offline and a manual threshold was used to identify spike times.</s><s>Photostimulation was performed using the same protocol used in all experiments (described above, 45 mW power, 1070 nm excitation).</s><s>Spikes added by photostimulation was calculated as the average number of spikes observed 0-250 ms after photostimulation onset, minus one-fourth the average spikes observed in the 1,000 ms preceding photostimulation.</s><s>No recorded neurons exhibited changes in spiking activity more than 250 ms after photostimulation onset.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Pre-processing of imaging data:</head><p><s>Imaging data were processed offline using custom Matlab code described below.</s><s>Code is available online: https://github.com/HarveyLab/Acquisition2P_class</s><s>for motion correction, https://github.com/Selmaan/NMF-Source-Extraction</s><s>for source extraction.</s><s>Motion correction was implemented as a sum of shifts on three distinct temporal scales: sub-frame, full-frame, and minutes-to hour-long warping.</s><s>First, sequential batches of 1000 frames were corrected for rigid translation using an efficient subpixel two-dimensional fft method <ref type="bibr" target="#b55">56</ref> .</s><s>Then rigidly-corrected imaging frames were corrected for non-rigid image deformation on sub-frame timescales using a lucas-kanade method <ref type="bibr" target="#b56">57</ref> .</s><s>To correct for non-rigid deformation on long (minutes to hours) timescales, a reference image was computed as the average of each 1000-frame batch after correction, one being selected as a global reference for the alignment of all other batches.</s><s>This alignment was fit using a rigid two dimensional translation as above, followed by an affine transform after the rigid shift (imregtform in Matlab), followed by a nonlinear warping (imregdemons in Matlab).</s><s>We found that estimating alignment in this iterative way gave much more accurate and consistent results than attempting nonlinear alignment estimation in one step.</s><s>However interpolating data multiple times can degrade quality, and so all image deformations (including sub-and fullframe shifts within batch) were converted to a pixel-displacement format and summed together to create a single composite shift for each pixel for each imaging frame.</s><s>Raw data were then interpolated once using bi-cubic interpolation (interp2 in Matlab).</s></p><p><s>Because single experiments were much too large to load into a conventional computer's memory (~250 GB per experiment), frames were temporally binned by a factor of 25 (from 30 Hz to 1.2 Hz) after motion correction but before source extraction.</s><s>GCaMP6s transients were still easily resolved, and previous work has suggested that source extraction is improved by temporal down-sampling <ref type="bibr" target="#b57">58</ref> .</s><s>The constrained non-negative matrix factorization (CNMF) framework <ref type="bibr" target="#b58">59,</ref><ref type="bibr" target="#b59">60</ref> was then used to identify spatial footprints for all sources using the down-sampled data.</s><s>Some modifications were made to the publicly distributed implementation.</s><s>First, because the approximation of imaging noise needed for CNMF is biased at low temporal frequencies in which imaging noise and signal are not temporally separable, we used full-resolution data to approximate pixel noise and divided this value by the square-root of the down-sampling factor.</s><s>We also used three unregularized ('background') components (default is one), because we observed that spatial footprints of neuropil activity were distinct from the true 'background' fluorescence of baseline GCaMP6s brightness.</s><s>An initial rank-one background component was temporally filtered (1000-frame median filter) such that all high-frequency fluctuations were isolated into one component.</s><s>The remaining low-frequency component was then split between two components which linearly ramped up from or down to zero over the experiment's duration, to account for slight background changes over hours.</s><s>Spatial and temporal profiles for each component were then estimated ordinarily on all subsequent CNMF iterations after this initialization procedure.</s></p><p><s>We further modified the initialization method used by CNMF in order to model sources independent of their spatial profile (i.e.</s><s>neural processes as well as cell bodies), using a normalized cuts-based procedure similar to that used in previous work <ref type="bibr" target="#b60">61</ref> , which clusters pixels into maximally similar groups based on temporal activity correlations.</s><s>As ordinary for CNMF, our initialization operated on overlapping square sub-regions of the field-of-view (~70 μm, 52 pixel edge length, 6 pixel overlap).</s><s>We then calculated the correlation coefficient of all pixel pairs (i, j) in this sub-region over all time points in the down-sampled data, and used these values to construct a graph with edge weight</s></p><formula xml:id="formula_0">W(i, j) = exp( - 1 -corr(i, j) σ</formula><p><s>).</s><s>The parameter σ was set to median(1 -C), where C is the correlation coefficients for all pixel pairs in the subregion.</s><s>We obtained a clustering of the resulting graph using a non-negative factorization as described <ref type="bibr" target="#b61">62</ref> .</s><s>These initial source estimates were then further refined via initialization of a spatially-sparse NMF decomposition of the down-sampled subregion data, and merging of any 'over split' components (when projections of data, after removal of background component, onto two source masks had temporal correlation coefficients greater than 0.9).</s><s>The resulting sources were then used as initializations for all future iterations of the core CNMF algorithm.</s><s>After running CNMF for three iterations on temporally down-sampled data, the resulting spatial footprints were used to extract activity traces for each source from the full temporal resolution data.</s><s>Fluorescence traces of each source were then deconvolved using the constrained AR-1 OASIS method <ref type="bibr" target="#b62">63</ref> ; decay constants were initialized at 1 s and then optimized for each source separately.</s><s>ΔF/F traces were obtained by dividing CNMF traces by the average pixel intensity in the movie in the absence of neural activity (i.e. the sum of background components and the baseline fluorescence identified from deconvolution of a source's CNMF trace).</s><s>Deconvolved activity was also rescaled by this factor, in order to have units of ΔF/F.</s></p><p><s>Because our implementation of CNMF resulted in non-cell-body fluorescence sources being modeled, we trained a 2-layer convolutional network in Matlab using manually annotated labels to identify whether each fluorescence source was one of: (i) a cell body, (ii) an axially-oriented neural process appearing as a bright spot, (iii) a horizontally-oriented neural process appearing as an extended branch, (iv) an unclassified source or imaging artifact.</s><s>The network operated on source-centered windows 25×25 pixels wide (at ~1.2μm/pixel), and consisted of ReLU units with two convolutional layers (32 18×18×1 filters followed by 3 5×5×32 filters), a 256-unit fully connected layer, and a 4-unit softmax output.</s><s>Only sources identified as cell bodies were used in this paper, although we note that neural processes frequently revealed quite similar signals in terms of quality and encoding properties.</s><s>However the inclusion of non-cell-body sources in CNMF for this project was intended only to reduce contamination of cellular fluorescence signals.</s><s>The network was trained on 8,700 sources which were further augmented 30-fold by rescaling, rotation, and reflection.</s><s>There is no ground-truth accuracy to compare with, but agreement with human annotation on heldout datasets ranged from 80-90%, which was qualitatively similar to human variability.</s><s>We provide example predictions of this network on a held-out mouse and session compared to typical human annotation in Extended Data Fig. <ref type="figure" target="#fig_3">1h</ref>.</s></p><p><s>For analysis of traces without neuropil subtraction, we projected imaging data onto the spatial filters obtained by CNMF (i.e.</s><s>without any demixing or subtraction), analogous to averaging pixel intensities for each ROI, to obtain fluorescence traces for each neuron.</s><s>All subsequent processing stages were handled identically to the 'demixed' fluorescence traces.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Photostimulation-specific pre-processing:</head><p><s>A number of additional pre-processing steps were introduced for specific purposes related to photostimulation.</s><s>For each photostimulation target, we calculated a photostimulationtriggered-average (PTA) image for the entire field-of-view of fluorescence changes for 50frames after versus before photostimulation of that target (Extended Data Fig. <ref type="figure" target="#fig_3">1c</ref>).</s><s>This PTA was then used at a number of stages of the processing pipeline.</s><s>First, when initializing source extraction from imaging data using the algorithm described above, we added the largest connected component from PTAs to assist the algorithm's detection of photostimulated neurons.</s><s>Second, we used PTAs for post-hoc confirmation of matches between cellular sources identified by CNMF and photostimulation targets.</s><s>Specifically, we manually examined all sources identified near the location of each photostimulation target, and overlaid these with the PTA image for that target, as well as plotting the PTA trace of each source's activity.</s><s>This was necessary because axial blurring of in vivo two-photon calcium imaging data can lead to fluorescence signals from distinct cells with partial lateral overlap.</s><s>Whenever we did not observe an unambiguous pairing of source and intended target, we labeled a target as 'unmatched' (418 photostimulation sites), and excluded it from further analysis.</s><s>Finally we observed that, due to imperfect axial-resolution, the processes of a stimulated neuron, as identified in a PTA image, could sometimes overlap with the spatial footprint of other cellular sources.</s><s>This overlap could lead to an erroneous measurement of influence between the pair, if the photostimulated neuron's activity was not properly demixed by CNMF and so contaminated the activity trace of the other neuron.</s><s>We note that this issue is a generic property of in vivo two-photon calcium imaging, and not specific to influence mapping or photostimulation per se.</s><s>Given the limitations of current algorithms for demixing, we directly estimated the spatial overlap of each cell's spatial profile (as used in CNMF) with each photostimulated target's processes (taken to be the largest connected component in a binarized PTA) and excluded from analysis any pairs with detected overlap.</s><s>This affected pairs generally &lt; 100 μm apart, and had no qualitative impact on results, although quantitatively the relationship between influence and distance (Fig. <ref type="figure" target="#fig_4">2f-g</ref>) exhibited a more pronounced excitatory center without removing overlapping pairs.</s></p><p><s>Photostimulation causes a minor artifact by directly exciting GCaMP6s or from autofluorescence, causing calcium imaging data collected simultaneously to be biased in a photostimulation-target-specific manner.</s><s>Though this artifact was small with 1070 nm photostimulation, it became quite noticeable when hundreds of trials were averaged.</s><s>Thus, we leveraged the fact that our photostimulation protocol consisted of pulses aligned to imaging frame onsets, and pulses were sub-frame-length, and replaced original data from single-frames containing a photostimulation artifact with linearly interpolated values from the frame immediately before and after.</s><s>This interpolation was performed on all source's activity traces, prior to deconvolution.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Gratings and Photostimulation Response Magnitude:</head><p><s>The magnitude of response to optimal visual stimuli during tuning blocks was measured with a model-free approach, which did not assume any particular tuning structure or contrast sensitivity.</s><s>We measured the difference between the 99th and 1 st percentiles of each neuron's ΔF/F trace over each 4 s-long trial during tuning measurement blocks, and then quantified gratings response magnitude as the 95% percentile of this distribution over all trials.</s><s>For this analysis only, the ΔF/F trace of each neuron for the entire tuning measurement blocks was smoothed with a Savitzky-Golay filter of order five and frame-length 2 s (using MATLAB sgolayfilt) to reduce the impact of imaging noise on this measure.</s></p><p><s>Photostimulation response magnitude was estimated as average ΔF/F for 300-600 ms following photostimulation minus ΔF/F -500 to -100 ms before photostimulation.</s><s>We observed no differences between photostimulation magnitudes when using C1V1 or ChrimsonR (0.61 vs 0.6 ΔF/F, p = 0.304, n = 283 C1V1 neurons, 235 ChrimsonR neurons, Mann-Whitney U-test).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Influence measurement:</head><p><s>We used two complementary metrics to quantify influence.</s><s>For both approaches, single-trial responses for each neuron were computed as the average value of deconvolved traces over 11 imaging frames (367 ms) beginning with the onset of photostimulation (Activity i,n for neuron n on trial i).</s><s>Our first metric computed the difference between single trial and average control trial activity:</s></p><formula xml:id="formula_1">ΔActivity i, n = Activity i, n -Activity j, n j</formula><p><s>where trials j corresponds to all control site photostimulation trials with the same visual stimulus as presented on trial i (and excluding all trials where any site within 25 μm was photostimulated).</s><s>We then normalized ΔActivity i,n by dividing by the standard deviation over all trials i.</s><s>This was important because it is difficult to determine absolute levels of spiking activity from calcium imaging data.</s><s>The normalization ensured that we measured effects relative to each neuron's variability, and furthermore that results would not be improperly influenced by misestimation of absolute activity levels in some neurons.</s></p><p><s>Influence values for an individual photostimulation target were then computed as the average ΔActivity i,n over all trials where that target was photostimulated.</s><s>For analysis of influence from control site photostimulation we used a leave-one-out procedure, where a single control site was excluded from trials j used to calculate expected activity and influence values for that site were obtained as above, and we obtained influence values for all control sites by repeating this procedure for each control site in an experiment.</s></p><p><s>Our second influence metric converted the data into a probabilistic framework using a nonparametric shuffle procedure, which controls for the asymmetric and heavy-tailed distributions of single-trial neural activity.</s><s>This metric was used to confirm results of the simpler metric above, and was further used to identify 'significant' influence values (Extended Data Fig. <ref type="figure" target="#fig_4">2a-c</ref>).</s><s>We began by computing single-trial residuals as described above (i.e.</s><s>ΔActivity i,n ).</s><s>Average photostimulation responses to individual targets were then computed over all trials and compared to 100,000 averages computed via random permutations of trial number and photostimulation target, and excluding any trials with photostimulation of a target within 25 μm of a cell ('shuffle distribution').</s><s>Our second metric was computed as the log-odds ratio that non-targeted neuron n's average response to targeted neuron t photostimulation (ΔActivity t,n ) was greater-versus less-than the shuffle distribution:</s></p><formula xml:id="formula_2">InfOdds t, n = log 10 p(ΔActivity t, n &gt; shuffle n ) p(ΔActivity t, n &lt; shuffle n ) .</formula><p><s>InfOdds t,n was capped at ±5 because we used a finite number of shuffles (this occurred for 57 out of 64,845 pairs in the primary dataset).</s></p><p><s>We used InfOdds t,n to determine the significance of influence values for individual pairs, against the null hypothesis of random sampling of activity (Extended Data Fig. <ref type="figure" target="#fig_4">2a-c</ref>).</s><s>We performed independent tests for whether a neuron's activity was increased or decreased relative to random sampling.</s><s>These values were then used to determine a p-value threshold using the positive false discovery rate procedure <ref type="bibr" target="#b63">64</ref> , as implemented in MATLAB's function mafdr.</s><s>We set p-value thresholds corresponding to false discovery rates of 5% and 25%</s></p><p><s>(respectively 0.15% and 0.42% of all pairs passed these thresholds).</s></p><p><s>We also computed an influence measure ΔFluorescence that could be computed directly from a neuron's fluorescence traces without deconvolution, or in some cases without neuropil subtraction.</s><s>ΔFluorescence was computed as for ΔActivity, except a vector of timepoints aligned to photostimulation onset were used instead of a single scalar value of single-trial activity.</s><s>ΔFluorescence was normalized as for ΔActivity, using the standard deviation of fluorescence values averaged 300-600 ms after photostimulation onset.</s></p><p><s>Note that we use the phrase 'non-targeted neuron' throughout the text with respect to the specific subset of trials on which another neuron was targeted.</s><s>That is, a 'non-targeted neuron' on some trials could be a 'targeted' neuron on other trials (and vice versa).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Gaussian process tuning model:</head><p><s>Our tuning measurement protocol sampled responses over a broad range of stimulus parameters, however it results in no repeats of exactly identical stimuli.</s><s>This improves our sampling efficiency compared to repeating an identical stimulus multiple times, but complicates analysis.</s><s>We thus needed a method to interpolate between highly similar trials.</s><s>Gaussian process regression is a principled, probabilistic approach to both determine smoothing parameters and to perform this interpolation.</s><s>The use of a Gaussian process, as opposed to a conventional regression with basis function expansion, allowed us to specify high-level properties of neural tuning without assuming any particular parametric form of the tuning function, and to reason probabilistically about uncertainties in estimating the latent tuning.</s></p><p><s>Single-trial responses of individual neurons during the tuning-measurement block were computed by averaging deconvolved activity over 112 frames of visual stimulus presentation (~4 s, excluding the first and last 4 frames within a contrast cycle), then taking the squareroot transform in order to stabilize response variability across the range of average response magnitudes <ref type="bibr" target="#b64">65</ref> .</s><s>These responses were considered as noisy observations of a 4-dimensional latent function f(x) with dimensions of: grating drift direction, grating spatial frequency, grating temporal frequency, and the mouse's running speed (which is known to modulate responses in V1).</s><s>This latent function defines the tuning of an individual neuron, and was fit using a Bayesian non-parametric Gaussian process regression model built using the GPML toolbox 4.0 <ref type="bibr" target="#b65">66</ref> in Matlab.</s></p><p><s>The model is specified by the form and hyperparameters of a covariance function K(x, x′), which determines smoothness by specifying the similarity of function values between any two points in the 4-dimensional tuning space.</s><s>We chose the commonly used squaredexponential covariance:</s></p><formula xml:id="formula_3">K(x, x′) = σ c 2 exp -(x -x′) T P -1 (x -x′)</formula><p><s>The hyperparameters here include σ c 2 as the scale of the covariance function, and P as a diagonal matrix with entries λ 1 2 , …, λ 4</s></p><p><s>2 defining an independent length scale for each dimension.</s><s>Shorter distances correspond to functions which are sharply 'tuned' to particular dimensions.</s><s>Note that distances for grating drift direction were calculated after projection into the complex plane.</s><s>We then used a Gaussian likelihood function with hyperparameter σ n 2 as the level of response variability, such that any number of finite samples of the latent function f and noisy observations y at locations X have joint Gaussian distributions:</s></p><formula xml:id="formula_4">f | X~𝒩(0, K) y | f ~𝒩( f , σ n 2 )</formula><p><s>where K is a matrix specifying the covariance between all samples.</s><s>Thus by conditioning on a set of observed data points (the 'training set'), we obtain a posterior distribution over function values at any set of unobserved locations, either held-out data points (the 'test set') or untested locations (see <ref type="bibr" target="#b65">66</ref> for details).</s><s>All hyperparameters were optimized by maximizing the marginal likelihood of the data p(y|X) = ∫ p(y|f)p(f|X)df, as ordinary for a Gaussian process model.</s><s>This procedure is a Bayesian alternative to regularization which does not require cross-validation.</s></p><p><s>We divided each neuron's responses (~1000 trials) into 20-folds, and predicted responses for each fold using 'training' data from the other 19 folds.</s><s>These 'test' predictions were then correlated with actual data as a metric for model accuracy.</s><s>We also compared accuracy when predictions were made on 'test' versus 'training' data as a metric for model over-fitting, which we observed was generally quite low (Extended Data Fig. <ref type="figure" target="#fig_6">4b</ref>).</s><s>Test predictions from the model were then used to calculate single-trial residuals.</s><s>Pearson's linear correlation coefficient was computed between test predictions of two neurons to determine signal correlation, and between residuals to determine noise correlation.</s><s>Because our separation of signal and noise correlation was model-based, all analysis involving either or both quantities needed to exclude from consideration any neurons with inaccurate models.</s><s>To pass inclusion criteria, both the photostimulation targeted neuron's model and the non-targeted neuron's model had to have model accuracies, defined as the pearson correlation between predicted and actual responses, above 0.4 as well as a difference between train and test accuracies of &lt; 0.15 (to exclude possible over-fitting).</s><s>Analysis of neuron versus control influence, distance, and trace correlation relationships (Fig. <ref type="figure" target="#fig_4">2</ref> and<ref type="figure" target="#fig_7">5b</ref>) did not apply these criteria because signal and noise were not considered, however results for both were similar when analyzing the subset of data which passed tuning criteria.</s></p><p><s>The Gaussian process model fits neural responses with a nonlinear 4-dimensional tuning function, which is not necessarily separable by dimension.</s><s>To extract 1-d tuning curves, we thus employed the canonical neurophysiological approach of studying tuning to a stimulus which optimally drives a neuron.</s><s>In other words, we examined spatial frequency tuning at the drift direction, temporal frequency, and running speed that best activated a neuron, as determined by the GP model, and so on for all individual dimensions.</s><s>Specifically, we identified the location x where latent response f was maximal, by starting from the location of the maximal single-trial prediction and then performing a grid-search over all nearby locations in 4-d.</s><s>Given this location, we then fixed three dimensions and varied a 4 th to obtain a tuning curve.</s><s>We further used these tuning curves to determine whether each neuron was significantly tuned to each tuning dimension by calculating a depth-of-modulation dom d as follows:</s></p><formula xml:id="formula_5">dom d = max(t d ) -min(t d ) sqrt(σ max(t d ) 2 + σ min(t d ) 2 )</formula><p><s>where t d is a neuron's tuning curve for the d th dimension, and</s></p><formula xml:id="formula_6">σ max(t d ) 2 , σ min(t d ) 2</formula><p><s>are the variance of the posterior distribution at the locations of maximum and minimum tuning values.</s><s>Neurons were considered tuned to dimension d when dom d &gt; 2, corresponding to statistically significant evidence for tuning modulation along this dimension, and analysis was restricted to these neurons whenever tuning along individual dimensions was considered (Fig. <ref type="figure" target="#fig_5">3f</ref>,i; Fig. <ref type="figure" target="#fig_6">4</ref>).</s><s>Preferred stimulus values were also extracted from 1-d tuning curves.</s></p><p><s>Fractions of tuned neurons for each dimension, tuning curves, and depth-of-modulation values are presented in Extended Data Fig. <ref type="figure" target="#fig_6">4</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Comparison of GP and conventional tuning model:</head><p><s>We adapted a recent parametric tuning model <ref type="bibr" target="#b45">46</ref> to compare with the GP model described above.</s><s>This model approximated single-trial neural responses during tuning measurement blocks, as analyzed above for the GP model, as a product of one-dimensional gaussian tuning curves to each stimulus dimension (drift direction, spatial frequency, temporal frequency, and running speed).</s><s>Tuning to drift direction was a sum of two gaussians, separated by 180-degrees, with a scaling parameter r which adjusted the relative strength of the two gaussians to account for directional preference.</s><s>All other tunings were single gaussians, with a parameter for center and width, and the model included an additional additive response offset.</s><s>All parameters were optimized using MATLAB's Isqnonlin.</s></p><p><s>To compare model accuracies, we used all neurons from a single experiment, and divided trials into 10 cross-validation folds.</s><s>All parameters for both GP and parametric tuning models were fit to 90% of the data and used to predict responses on held-out trials.</s><s>Model accuracy was quantified as the pearson correlation coefficient between predicted and actual data.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Correlations used as similarity metrics:</head><p><s>Four correlation types were used in this study.</s><s>(1) 'Trace correlation' was defined as the Pearson's linear correlation of two neuron's deconvolved activity throughout tuning measurement blocks, after downsampling from 30 Hz to 3 Hz to reduce the influence of noise and imaging artifacts.</s><s>We considered this analogous to what has been termed 'total' or 'response correlation' in the literature <ref type="bibr" target="#b4">5</ref> .</s><s>(2) 'Signal correlation' was defined as the Pearson's linear correlation of GP model single-trial predictions on held-out data (using 20-fold crossvalidation to form predictions for all trials).</s><s>We considered this analogous to signal correlations computed on average responses to a discrete set of stimuli, because the GP model predictions are the mean response inferred by interpolating between trials with similar stimulus parameters.</s><s>(3) 'Noise correlation' was defined as the Pearson's linear correlation of residuals between a neuron's actual single-trial responses and GP modelpredictions (using the same procedure on held-out data as above).</s><s>We considered this analogous to noise correlations computed as residuals of average responses to a discrete set of stimuli by the same logic as for signal correlations.</s><s>(4) 'Response correlation' was defined as the Pearson's linear correlation of the single-trial neural responses to which GP models were fit.</s><s>This is similar to trace correlation, but averages over 4 s periods, and is aligned to visual stimulus presentation.</s><s>Single-trial correlation was used only for visualization purposes in Extended Data Fig. <ref type="figure">6e-f</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Analysis of influence values:</head><p><s>Influence resulting from photostimulation of neuron sites was only analyzed for targets where we could confirm effective stimulation (average response &gt; 5 standard deviations greater than expected in shuffled distribution described above, Extended Data Fig. <ref type="figure" target="#fig_3">1E</ref>).</s><s>We used two analysis procedures: a one-dimensional running average (e.g.</s><s>Fig. <ref type="figure" target="#fig_5">3g-i</ref>), and multiple linear regression (e.g.</s><s>Fig. <ref type="figure" target="#fig_5">3d-f</ref>).</s><s>For running average analyses, we chose center locations to span the full range of observed values and a manually specified bin width.</s><s>Bin parameters were specified in percentile space for signal and noise correlations, and in real space for distance and trace correlation analysis to better sample the sparse tails of these distributions, as described in figure legends for each plot.</s><s>For all plots, x-values were the mean value of the smoothed variable (e.g.</s><s>distance) within a bin, which typically deviates slightly from the nominal bin center.</s><s>We estimated standard errors for each bin by bootstrap resampling.</s><s>Because this analysis introduces arbitrary parameters that could affect results, we considered smoothing analyses as qualitative and exploratory.</s><s>All statistical claims were thus verified by analysis of correlation coefficients or the regression procedure described below.</s></p><p><s>Multiple linear regression was used to estimate the relationship between similarity metrics (distance, signal-, noise-, and trace-correlations) and influence values.</s><s>We constructed a design matrix whose columns included piece-wise linear terms for distance (&lt; 100 μm, 100-300 μm, and &gt; 300 μm segments), linear terms for signal and noise correlations and their interaction, and linear interactions for both signal and noise correlation with log-transformed distance.</s><s>Each distance segment included terms for both offset and slope.</s><s>All predictors were z-scored to facilitate comparison of coefficient magnitudes.</s><s>We then resampled our data points 10,000 times and estimated regression coefficients for each.</s><s>Median coefficients, confidence intervals, and p-values were obtained from this bootstrap distribution as described below.</s><s>For the tuning-components regression in Fig. <ref type="figure" target="#fig_5">3f</ref>, we constructed five alternate regression models, in which signal correlation and its interactions were replaced by tuning curve correlations for one of the five tuning features.</s><s>For each feature, data were restricted to the subset of pairs for which both the photostimulated target neuron and nontargeted neuron exhibited significant tuning (see above).</s><s>Because our model predicted grating drift direction over 360°, we obtained orientation-specific tuning curves by averaging tuning curves across both directions for each orientation, and direction-specific tuning curves by taking the difference across both directions for each orientation.</s></p><p><s>For model prediction plots of Extended Data Fig. <ref type="figure">6c</ref>-f, data were first smoothed as described above.</s><s>Then we used the influence regression model above to predict influence values for each data point, using either the full model or a subset of coefficients.</s><s>The interaction term of signal or noise correlations with distance were considered a part of the 'signal' and 'noise' component of the model for these plots.</s><s>These predicted values were then smoothed identically to the data.</s><s>Note that predictions thus appear nonlinear, despite a linear prediction model, because of complex interdependencies between the distributions of signal correlation, noise correlation, and distance.</s></p><p><s>For analysis of influence directly on ΔF/F traces in Extended Data Fig. <ref type="figure">7</ref>, we fit influence regression models for each frame of ΔFluorescence values, obtaining a temporal vector of influence regression coefficients for each predictor.</s><s>This analysis was otherwise identical to the regression analysis of ΔActivity.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>'Nearby Neuron' Analysis:</head><p><s>We designed this analysis to confirm that influence effects were specific to the relationship of non-targeted neurons and the precise identity of a photostimulated neuron (Extended Data Fig. <ref type="figure">7f</ref>).</s><s>To accomplish this, for each photostimulation site we identified the closest 2.5% of all neurons to the photostimulation site (typically ~10-30 μm away), and averaged their signal and noise correlations with individual non-targeted neurons.</s><s>This captures any spatially broad similarities in tuning shared by neurons near the targeted neuron.</s><s>The influence from this photostimulation site was then analyzed using the influence regression model described above, using this locally-averaged similarity of each non-targeted neuron to neurons nearby the photostimulation site (including all criteria mentioned above).</s><s>This procedure scrambled the relationship between a photostimulated neuron's activity and influence, except for properties which vary smoothly in space and thus would be shared by accidentally activated, non-targeted neurons (either laterally or axially).</s><s>However distances and the statistical structure of our data (e.g.</s><s>correlations between similarity metrics) were unaltered.</s><s>Thus effects related to the precise tuning of individual neuron targets, but not those caused by low-resolution photostimulation of a small volume, were disrupted by this procedure.</s><s>We present results of this analysis (Extended Data Fig. <ref type="figure">7f</ref>) applied to neuron photostimulation data analyzed throughout this manuscript.</s><s>We also performed this analysis for all photostimulation sites (including unmatched and control photostimulation sites, where we could not verify neuronal activation) and obtained similar results (data not shown).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Decoding analysis:</head><p><s>For decoding and population projection (below) analyses, we analyzed trials from 'influence mapping' blocks on which orientation-tuned neuron targets were photostimulated.</s><s>For each neuron targeted for photostimulation, orientation-tuning significance and preference was determined as detailed above, using the GP model and data exclusively from the 'tuning measurement' experimental blocks.</s><s>We used a naïve Bayes decoder to predict which of the four orientations of gratings were presented on single trials in influence mapping blocks.</s></p><p><s>The decoder makes the approximation:</s></p><formula xml:id="formula_7">p(ori | r) ≈ Π i p(ori | r i ) = Π i p(r i | ori)p(ori) p(r i )</formula><p><s>where r is a vector whose entries r i are neural responses from the i th neuron on a single-trial.</s></p><p><s>Thus this decoder is suboptimal because it ignores noise correlations between neurons.</s><s>Because we were interested in predicting the best grating orientation on each trial, we ignored the term in the denominator, and because all orientations were equally likely to be presented, we ignored p(ori) in the numerator, resulting in the following function for prediction of single trial orientation orι:</s></p><formula xml:id="formula_8">orι = argmax ori Π i p(r i | ori)</formula><p><s>which is a simple maximum likelihood predictor.</s><s>We estimated p(r i |ori) non-parametrically, since many neurons had a response of precisely zero on a large fraction of trials, which severely limited accuracy when a parametric, exponential family distribution was used as the likelihood model.</s><s>Specifically, non-zero responses across all trials were discretized to be in one of four equal-width percentile bins, and p(r i , ori) was calculated directly for the percentile and zero bins.</s><s>To prevent our decoder from fitting to the effects of photostimulation, we used a leave-one-out procedure in which all trials for a single photostimulation target were predicted using a model with these data excluded from model fitting.</s><s>Additionally, all photostimulated neurons were excluded from the decoder, so that decoder accuracy was not trivially altered by excluding different neurons for different photostimulation targets.</s></p><p><s>Precise levels of decoding accuracy were variable from experiment to experiment, depending on the number and tuning of imaged cells as well as overall signal quality.</s><s>Furthermore cardinal orientations tended to be slightly over-represented in neural tuning (Extended Data Fig. <ref type="figure" target="#fig_6">4d</ref>) and thus easier to predict than oblique orientations.</s><s>This is of note because the tuning bias also causes different grating orientations to be more or less likely to be matched to the tuning preferences of photostimulated neurons.</s><s>To control for these factors when analyzing combined data, we used a generalized linear mixed-effects model for logistic regression.</s><s>Mixed-effects models allow estimation of 'fixed' effects (as in conventional regression) in the presence of confounding 'random' effects caused by variation attributable to various groupings.</s><s>In our application, the angular difference of presented grating and photostimulated neuron's preferred orientations ('Orientation Misalignment') was a fixed effect, and both experiment ID and grating orientation were random effects.</s><s>We modeled single-trial accuracy of the decoder as:</s></p><formula xml:id="formula_9">acc~Bernoulli(p) log p 1 -p = X β + Zb b ID ~𝒩(0, σ id 2 I) b ori ~𝒩(0, σ ori 2 I)</formula><p><s>where Xβ are the design matrix and coefficients for fixed effects, and Zb are the same for random effects, and random effects terms for each experimental ID (b ID and grating orientation (b ori ) have independent Gaussian priors with variance fit to the data.</s><s>For plots in Fig. <ref type="figure" target="#fig_6">4</ref>, we fit two model variants: one in which orientation misalignment was divided into five equally spaced, discrete bins; a second in which misalignment was treated as a single continuous value.</s><s>The model was fit and p-values were estimated in Matlab using the glme class.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Population-projections analysis:</head><p><s>We decomposed single-trial population responses during influence-measurement blocks into projections along five axes: one each corresponding to the average response to each grating orientation, and a fifth 'uniform' projection that simply averaged the response of all neurons.</s></p><p><s>In contrast to previous analyses, to define a population projection, it was necessary to separate out neurons with a large increase in activity in response to gratings from neurons with a high, tonic level of activity.</s><s>Thus the activity of each neuron across all trials was normalized by calculating pre-trial activity (~467-100 ms before gratings onset), subtracting this value from single trial responses (0-367ms after gratings onset), and dividing the result by the standard deviation of pre-trial responses (i.e.</s><s>single trial responses were z-scored relative to pre-trial activity).</s><s>We then computed response directions to each orientation as the average response, normalized to unit length, and all responses for each orientation were scaled by a single factor so that the average projection of responses onto this direction was one, and single trial projections were then obtained by the inner product of normalized single-trial responses and each of the five population directions.</s></p><p><s>Because the four average response dimensions were not entirely orthogonal, on each trial, we termed the population direction associated with the presented grating as that trial's 'gain direction', and orthogonalized projections onto the other orientation directions with respect to that trial's gain (outlined in Extended Data Fig. <ref type="figure">8b</ref>).</s><s>As for the decoding analysis, all photostimulated neurons were excluded from this analysis to prevent trivial effects due to changing the composition of the analyzed population on different trials.</s><s>For this analysis, in contrast to decoding, by design grouping variables of experiment and visual stimulus orientation had no predictive power.</s><s>We thus used ordinary least-squares regression and nonparametric rank correlation analysis to estimate effects and significance in the main text.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Rate network simulations:</head><p><s>Our network model was modified from that studied previously <ref type="bibr" target="#b16">17</ref> .</s><s>It consisted of one layer of generic neurons with linear input and a rectifying output nonlinearity, and instantaneous functional connections which could be both positive and negative.</s><s>Precisely, the network dynamics obeyed the following discrete time equations:</s></p><formula xml:id="formula_10">r . t = -r t + Wr t + h r t + 1 = max(0, r t + r . t ⋅ dt) h = U T y</formula><p><s>where r t is a vector of firing rates in the network at time t, W is a matrix of functional connections between neurons (with all diagonal entries set to 0), and h is a vector of feedforward inputs to each neuron, given by the product of neural tuning U (with columns u i of individual neuron's tuning) and network input y.</s><s>Individual neuron tuning was given by a von Mises function:</s></p><formula xml:id="formula_11">u i = α ⋅ exp(k ⋅ cos(2 ⋅ (θ -θ i ))</formula><p><s>where θ i is the preferred orientation of a neuron (uniformly tiling 0-180°), and α is selected such that ‖u i ‖ 2 = 1.</s><s>Tuning width as specified by k was set to 1.</s><s>As outlined in Fig. <ref type="figure" target="#fig_6">4h</ref> and Extended Data Figure <ref type="figure">9a</ref>, we constructed the W matrix as a sum of 3 components:</s></p><formula xml:id="formula_12">W = sU T U + c + ℇ</formula><p><s>where s controls the relationship between feedforward inputs and functional connectivity, c controls overall excitatory-inhibitory levels, and ℇ is a matrix of i.i.d.</s><s>values.</s><s>ℇ was 0 for all analyses except for Extended Data Fig. <ref type="figure">9b</ref>, for which it was uniformly distributed between -0.25 and 0.25.</s><s>Our 'amplification' network used s = 0.5, 'competition' used s = -0.5, and 'untuned' used s = 0, but similar results were obtained for a wide range of values.</s><s>For each network, c was adjusted so that overall inhibition was similar.</s><s>Without this adjustment, it would be impossible to compare networks, since 'amplification' networks would exhibit explosive growth of activity.</s><s>Specifically, we used c = -0.7 for 'amplification', c = 0 for 'competition', and c = -0.35</s><s>for 'untuned' networks.</s><s>For results in Figure <ref type="figure" target="#fig_6">4</ref>, the network contained 100 neurons and, for Figure <ref type="figure" target="#fig_7">5</ref>, 180 neurons, although network behavior was largely unaffected by this choice.</s><s>For all simulations, dt was set to 0.001, the simulation was initialized with r = 0 and run for 4,000 time steps (i.e.</s><s>4× the neural time-constant), and network responses were taken as the summed rate over all timesteps for each neuron.</s></p><p><s>For the analysis of Extended Data Fig. <ref type="figure">9b</ref>, we simulated variable responses by varying inputs between single simulation runs ('trials').</s><s>We varied both the gain of the feedforward input (uniformly distributed between 0.75 and 1.25) and an additive offset to the input of each individual neuron (uniformly distributed between -β/2 and β/2, where β was 10 times the average neural activity of all neurons over all stimuli).</s><s>We note that gain variability was not necessary for the results demonstrated; however, adding it led to a positive relationship between signal and noise correlations in all modeled networks, in agreement with data.</s><s>We generated 1000 simulated responses for each of 18 orientations uniformly tiling orientation space, for each network type.</s><s>Regression coefficients were then obtained by linear regression of signal and noise correlations, calculated using simulated responses, against the entries of matrix W. This was intended to verify that our general findings from analysis of influence in Fig. <ref type="figure" target="#fig_1">3</ref> were consistent with our 'competition' model network.</s></p><p><s>For simulations involving single-neuron stimulation (results in Extended Data Fig. <ref type="figure">9e</ref>,f), we clamped the activity of a single neuron to a high value (0.1) from the beginning of a simulation run, and normalized network responses by their response magnitude without clamping.</s><s>The gain of network responses was measured by projecting single trial responses onto the direction of network activity on trials without clamping.</s><s>We note that the small bump in gain for all networks in Extended Data Fig. <ref type="figure">9f</ref> for &lt;10° is due to the simplified 'clamping' approach to modeling single-neuron stimulation, as it corresponds to a slightly reduced increase in activity due to clamping for stimuli which ordinarily drive the clamped neuron to fire.</s></p><p><s>We created a 'mixed' network, used in Figure <ref type="figure" target="#fig_7">5</ref>, by adding an 'amplification' pattern of functional connectivity (with s = 0.5) calculated with tuning width k = 100 to the 'competition' pattern (s= -0.5, k = 1).</s><s>To match experimental data, we also subtracted this same pattern from functional connectivity of oppositely tuned neurons (i.e. after rotating the columns of the connectivity matrix by 90° of preferred orientation), although we observed no differences between networks when performing this latter step or not.</s><s>We generated noisy responses by adding random values uniformly distributed between -0.015 and 0.015 to each neuron's input on each simulation run.</s><s>We measured trial-to-trial network pattern correlations and network pattern shifts by comparing network responses on simulated noisy trials to a template response with no noise but identical visual stimulus.</s><s>Our objective was to quantify the observation that 'mixed' networks exhibited a stereotypical smooth bump of activity in orientation-space in the presence of noise, unlike 'competition' networks.</s><s>We thus computed the cross-correlation in orientation space between template and single-trial responses; the maximum correlation across all shifts was the 'network pattern correlation', and the change in center-of-mass was 'network pattern shift'.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Simplified network equations:</head><p><s>The network described above can be analytically re-expressed as a function of a comparison between inputs and an internal representation, as presented in Extended Data Fig. <ref type="figure">9g</ref>.</s><s>The equations presented are derived and explained in detail here.</s><s>We first examine the linear part of the network dynamics given above, focusing on changes in an individual neuron's activity indexed by i:</s></p><formula xml:id="formula_13">r . i, t = -r i, t + ∑ j ≠ i w i, j r j, t + h i</formula><p><s>Subsequent equations suppress temporal indices for simplicity.</s><s>Substituting for w i,j (with no weight variability, i.e.</s><s>ℇ = 0) and h i and rearranging terms we obtain:</s></p><formula xml:id="formula_14">r . i = -r i + u i T y + s ⋅ ∑ j ≠ i u j r j + c ⋅ ∑ j ≠ i r j</formula><p><s>We then define y -i net = Σ j ≠ i u j r j as a linear 'reconstruction' or internal representation of the network input excluding neuron i.</s><s>Similarly, we define r -i sum = Σ j ≠ i r j as total activity in the network excluding neuron i.</s><s>We then obtain the simplified equation:</s></p><formula xml:id="formula_15">r . i = -r i + u i T (y + s ⋅ y -i net ) + c ⋅ r -i sum</formula><p><s>This derivation was demonstrated previously <ref type="bibr" target="#b16">17</ref> for the special case of s = -1 and c = 0.</s><s>In this scenario, each neuron is driven by the overlap of the residual of yy i net with its tuning u i , implementing a dynamic 'explaining away' of the network's inputs.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistical Procedure:</head><p><s>Statistical tests used are specified in figure legends.</s><s>We generally used non-parametric tests.</s></p><p><s>We also used a bootstrap procedure both to calculate standard errors and for certain hypothesis tests.</s><s>For standard error calculation, we re-calculated a test statistic (e.g.</s><s>mean or standard deviation of a sample) on subsets of our data sampled 1,000 times from the full dataset with replacement.</s><s>The standard deviation over bootstraps was used as the standard error of the test statistic.</s><s>For hypothesis testing, used for calculating significance of influence regression coefficients, we performed influence regression 10,000 times on resampled data.</s><s>The percentiles of the distribution for each coefficient are used for box and whisker plots, and the p-values reported are double the fraction of the bootstrap distribution in which the coefficient was 0 or of opposite sign to the median value.</s><s>The reported p-values from this bootstrap procedure are thus 'two-sided'.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Extended Data</head><p><s>Extended Data Figure <ref type="figure" target="#fig_3">1</ref>:</s></p><p><s>Photostimulation characterization and methods (a) Left, images showing GCaMP6s and densely expressed, soma-localized C1V1 in the same neurons.</s><s>Right, an image of Channelrhodopsin-2 tagged with mCherry, obtained from a different mouse.</s><s>Note that non-localized channels are prominent in the neuropil background compared with soma-localized channels.</s></p><p><s>(b) Photostimulation protocol schematic.</s><s>Top: beam position as a function of time, samples of mirror trajectory plotted at 100 kHz.</s><s>Bottom: Four repeats of an identical sweep were used to photostimulate neurons.</s><s>(c) Photostimulation triggered average images, for a neuron (left) and control (right) site from the experiment in Fig. <ref type="figure" target="#fig_3">1b</ref>.</s><s>Arrows mark the location of both sites.</s><s>(d) Cumulative density plots of photostimulated neuron responses for different lateral displacements of target location from the neuron's center.</s><s>Same data as in Fig. <ref type="figure" target="#fig_3">1e</ref>, but note log scale of x-axis.</s><s>The 15-25 μm offset caused responses that were not present at greater distances.</s></p><p><s>(e) Fraction of neurons that could be photostimulated as a function of the threshold for this classification.</s><s>At a threshold of 5 std above shuffle, more than 96% of neurons (n=518) could be photostimulated.</s><s>Shuffle distributions were computed by bootstrap resampling of activity from trials the neuron was not targeted.</s></p><p><s>(f) Fit quality of the GP tuning model vs. photostimulation magnitude.</s><s>Each dot is a single targeted neuron (n = 518 neurons).</s><s>Spearman correlation, c = 0.084, p = 0.055.</s><s>(g) Mean gratings response of a neuron vs. photostimulation magnitude.</s><s>Each dot is a single targeted neuron (n = 518 neurons).</s><s>Spearman correlation, c = 0.11, p = 0.009.</s><s>(h) A CNN was trained with human-labeled data to predict whether CNMF sources were identified as a cell body or an alternative source, including distinct neural processes, excessively blurry or out-of-plane cells, or artefactual sources (see Methods).</s><s>Note that many non-soma sources exhibited similar calcium transient signals as cell body sources.</s><s>Because there is no objective ground-truth for this classification, held-out datasets were hand labeled, and compared to CNN labeling.</s><s>One example dataset is shown here.</s><s>The large majority of sources were labeled identically, however there are borderline cases where labels differed; many cases appear to be either human error in labeling, due to finite human time and inconsistencies in making borderline judgments, or an overly conservative CNN criteria for cell classification.</s><s>Neither of these errors are expected to impact results presented in this manuscript.</s></p><p><s>Extended Data Figure <ref type="figure" target="#fig_4">2</ref>:</s></p><p><s>Influence measured as probability excited/inhibited (log-odds excited).</s><s>(a) Log-odds excited metric.</s><s>This metric uses a non-parametric bootstrap procedure to estimate the chance of observing average responses to photostimulation of a target from random sampling of a neuron's activity (see Methods).</s><s>An influence value of 0.1 corresponds to a log-odds of ~1.259, or a probability of being excited above shuffles of ~0.557.</s><s>This metric adapts to the varyingly sparse, heavy-tailed, and skewed response distributions of each neuron's activity, and so complements the ΔActivity measure.</s><s>Key analyses from Fig. <ref type="figure" target="#fig_4">2</ref> and Fig. <ref type="figure" target="#fig_1">3</ref>   (i) The mean influence for all values for a single-target was calculated.</s><s>The standard deviation of these values for neuron sites and control sites is plotted.</s><s>The similar values indicate that it is unlikely that some neurons tended to have much larger positive or negative influence than expected based random sampling of the group mean (which was lower for neuron than control sites, see Fig. <ref type="figure" target="#fig_4">2</ref>).</s><s>Error bars, mean ± sem across targets.</s><s>n = 518 neuron targets, 295 control targets, p = 0.72, two-sample F-test.</s></p><p><s>(j) Running average of influence with pairwise distance using bin half-width of 30 μm.</s><s>Shading corresponds to mean ± sem calculated by bootstrap.</s><s>Data are divided into influence from photostimulation sites with stronger versus weaker direct photostimulation responses in the targeted neuron, using a median split of photostimulation significance, as well as for control site photostimulation.</s><s>Mean photostimulation response was 0.36 ΔF/F and 0.85 ΔF/F for weak and strong groups.</s><s>Note the weak distance-dependence observed for control site photostimulation is consistent with greatly reduced, but non-zero, neural excitation when targeting control sites.</s><s>This may result from a number of factors including suboptimal resolution and brain movement in vivo, and indicates the necessity of control site photostimulation.</s></p><p><s>Extended Data Figure <ref type="figure" target="#fig_6">4</ref>:</s></p><p><s>Characterizing neural tuning in V1 using Gaussian process (GP) regression.</s><s>The plots show that pairs with high trace correlations occurred at all distances, but more often for nearby neurons.</s><s>Similarly signal correlations for pairs with high versus low noise correlations were distinct but overlapping distributions.</s><s>This highlights the importance and feasibility of influence regression to disambiguate the contributions of distance, signal, and noise correlation.</s><s>(b) Two-dimensional probability density functions for pairs of similarity metrics, estimated using kernel smoothing, for all data used in influence regression.</s><s>Spearman correlation values for each pair of similarity metrics are overlaid.</s><s>All correlations were significant with p &lt; 1×10 -60 , n=64,845 pairs.</s><s>(c) Running average of influence data (black) and predictions (colored lines) from influence regression model, using a bin half-width of 15% (percentile bins).</s><s>Dashed lines are mean ± sem of data by bootstrap.</s><s>Signal correlation is plotted against mean influence, for the subset of pairs more than 300 μm apart.</s><s>Model predictions are computed using a full influence regression model (blue), or using subsets of coefficients from the same model (distance-red, signal-green, noise-purple).</s><s>The full model prediction is equal to the sum of the three components.</s><s>The running average analysis here accurately reflects the signal component of the influence regression model, plus a tonic offset from the distance component.</s></p><p><s>(d) Running average as in (a), but for noise correlation and pairs at all distances.</s><s>Note that signal and noise interaction coefficients with distance are included in signal and noise components, respectively.</s><s>The running average analysis here confusingly indicates a flat slope of noise correlation and influence.</s><s>Our model predicts this relationship because pairs with higher noise correlations were located at shorter distances, and also had increased signal correlations, and these effects together canceled out increases in influence due to noise correlation.</s><s>(e) Running average as in (a), but for model-free correlations of single-trial responses, and for pairs separated by less than 125 μm.</s><s>At short distances, the positive effect of noise correlations dominated the negative effect of signal correlations.</s><s>(f) Running average as in (a), but for model-free correlations of single-trial responses, and for pairs separated by more than 125 μm.</s><s>At long distances, the negative effect of signal correlations dominated the positive effect of noise correlations.</s></p><p><s>Extended Data Figure <ref type="figure">7</ref>:</s></p><p><s>Results of influence regression are robust to potential artifacts from data processing and offtarget photostimulation (a) Analysis of influence effects directly in ΔF/F traces.</s><s>ΔFluorescence was calculated as for ΔActivity, but using ΔF/F traces rather than trial-averaged deconvolved activity.</s><s>ΔFluorescence was significantly negative in the 1 s following neuron photostimulation relative to control, n = 153,689 neuron site pairs and 90,705 control site pairs.</s><s>Neuron vs.</s></p><p><s>control site: p = 6.79 × 10 (d) The influence regression from Fig. <ref type="figure" target="#fig_5">3d</ref> was applied to ΔFluorescence traces.</s><s>This regression resulted in beta coefficients for traces at each time frame relative to photostimulation onset, which are plotted over time.</s><s>Coefficients for slopes for the three distance bins are plotted.</s><s>The same size and ordering of effects is apparent as when using deconvolved data and the ΔActivity metric, compare to Fig. <ref type="figure" target="#fig_1">3</ref>. Shading corresponds to mean ± sem, calculated using 10,000 coefficient estimates by bootstrap resampling.</s><s>All coefficients were significantly different from zero, averaged over 0-1,000 ms from photostimulation onset, with p &lt; 1×10 -4 by bootstrap.</s></p><p><s>(e) Same as in (a) except for signal and noise correlation coefficients.</s><s>Averaged over 0-1,000 ms from photostimulation onset, signal correlation coefficients were significantly less than zero with p = 0.0008 and noise correlation was greater than zero with p = 0.0154, estimated by bootstrap.</s><s>(f) Similar to regression analysis in Fig. <ref type="figure" target="#fig_5">3d-e</ref>, except as a test of potential off-target effects.</s><s>Instead of using only the photostimulated neuron's activity and tuning properties to calculate correlations with the non-targeted neuron, properties of multiple nearby neurons were used, to test if off-target photostimulation of nearby cells could underlie the observed effects (see Methods).</s><s>This is equivalent to influence regression using identical influence values and distance predictors as in Fig. <ref type="figure" target="#fig_5">3e</ref>, but changing all activity predictors.</s><s>Only distance effects were apparent, as expected, whereas activity-related effects were absent.</s><s>This suggests that the properties of the individually targeted neuron were responsible for the influence relationships we observed.</s><s>Plots show bootstrap distribution with median estimate as gray line, 25-75% interval as box, 1-99% interval as whiskers.</s><s>Left: coefficients for piece-wise linear distance predictors from the model.</s><s>Significance estimated by bootstrap: 25-100 μm, offset p = 0.0982, slope p &lt; 1×10 -4 ; 100-300 μm, offset p &lt; 1×10 -4 , slope p &lt; 1×10 -4 ; &gt; 300 μm, offset p = 0.0018, slope = 0.0316.</s><s>Right: coefficients for activity predictors from the same model.</s><s>Signal correlation, p = 0.9370; signal*distance interaction, p = 0.4072; noise correlation p = 0.8772; noise*distance interaction, p = 0.5138; signal*noise interaction p = 0.5260; n = 64,485 pairs.</s></p><p><s>Extended Data Figure <ref type="figure">8</ref>:</s></p><p><s>Population analysis of gratings responses during influence mapping blocks (a) The orientation information content of all neurons during influence mapping blocks, calculated using the same binning approach used for population decoding.</s><s>Information is color coded, and plotted as a function of a neuron's directional modulation and preferred spatial frequencies estimated during tuning measurement blocks.</s><s>This demonstrates that tuning estimated in tuning and influence measurement blocks were concurrent (gratings during influence mapping were always 0.04 cyc/deg), but that responses to full-field, lowcontrast gratings in influence measurement blocks were sparse.</s><s>(b) Schema indicating the orthogonalization procedure used for population analysis.</s><s>Briefly, because average responses to each grating orientation were not entirely orthogonal, and because photostimulation evoked highly significant changes in response gain in our dataset, we wished to isolate potential changes along alternative population activity dimensions independent of gain changes.</s><s>To accomplish this we orthogonalized projections along nongain dimensions relative to the gain projection observed on individual trials.</s><s>This ensured that changes in response gain could not trivially produce changes along non-gain population dimensions.</s></p><p><s>(d) Model neuron responses following presentation of a linear sum of 60 and 120 degree stimuli.</s><s>Gray lines are the average response of each network to the two stimuli presented individually.</s><s>Note that neurons preferring 70 and 110 degrees receive the maximum feedforward input.</s></p><p><s>(e) Model neuron responses to a visual stimulus (90 degrees) with simulated photostimulation of a neuron.</s><s>Responses (in non-stimulated neurons) are shown when the "photostimulated" neuron had preference for similar (top, 80 degrees) or dissimilar (bottom, 10 degrees) orientations relative to the visual stimulus, color coded by network type.</s></p><p><s>Responses are normalized to activity without simulated photostimulation.</s></p><p><s>(f) Model network responses to visual stimuli with simultaneous "photostimulation", as a function of difference in orientation between visual stimulus and "photostimulated" neuron's preference.</s><s>The response gain dimension was calculated as the normalized response to the visual stimulus in the absence of "photostimulation".</s><s>(g) Analytical solution for the linear aspect of network dynamics (see Methods for derivation).</s><s>This indicates that the network performs a comparison between inputs y and an internal estimate y net , which when s is negative corresponds to dynamical explaining away of network inputs.</s></p><p><s>Extended Data Figure <ref type="figure" target="#fig_3">10</ref>:</s></p><p><s>Interaction of trace correlation with influence regression model coefficients (a) Further characterization of the effects of trace correlation on feature competition vs. amplification (compare to Fig. <ref type="figure" target="#fig_7">5d</ref>).</s><s>Influence regression (as in Fig. <ref type="figure" target="#fig_5">3d</ref>) was performed after including an interaction of each predictor with the magnitude of trace correlation.</s><s>Coefficient estimates for each interaction plotted with uncertainty from bootstrap: gray line, median; box, 25-75% interval; whiskers, 1-99% interval.</s><s>This analysis used no manuallyspecified division between 'strong' and 'weak' correlations, and considered whether trace correlation changed the relationship between influence and any predictors in the influence regression.</s><s>Signal correlation exhibited a highly significant positive interaction, indicating a transition from competition (negative slope) to amplification (positive slope) as the magnitude of trace correlation increased, n = 64,845 pairs, p = 0.0002 (bootstrap).</s></p><p><s>Interactions with all other activity predictors were not significant with p &gt; 0.444.</s><s>Interactions with the slopes of distance predictors were not significant with p &gt; 0.2716.</s><s>There were weak interactions with offsets for near (p = 0.0486) and mid (p = 0.0076) distance bins, but not far (p=0.4738).</s><s>These results indicate that the magnitude of trace correlation had a substantial effect on the relationship between signal correlation and influence.</s><s>(i) Model neuron responses for a 90 degree stimulus (dashed line).</s><s>Feedforward inputs were identical for all networks.</s></p><p><s>(j) Model neuron responses for a linear sum of 60 and 120 degree stimuli.</s><s>Gray lines, summed network response to the stimuli presented individually.</s><s>Feedforward inputs have maxima ~70 and 110 degrees.</s><s>(f) Cross-correlation of single-trial responses on 1000 simulated noisy trials to the noiseless response (maximum value over all shifts in orientation).</s></p><p><s>(g) As in (f), but for the shift in network response due to noise in the input (orientation center-of-mass of activity relative to the noiseless response).</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Extended Data Figure 3 :</head><label>3</label><figDesc><div><p><s>Extended comparison of photostimulation of neuron sites and control sites.</s><s>(a) Influence bias (mean ΔActivity) comparison between neuron and control site photostimulation, after exclusion of pairs with individually significant influence values.</s><s>Significance of each individual pair's influence was determined with a non-parametric bootstrap (Extended Data Fig.3, Methods), and a p-value threshold for significance was chosen to restrict the fraction of false positives below 5% or 25% (pFDR, Methods).</s><s>For 0%, n=153,689 neuron and 90,705 control pairs.</s><s>225 neuron and 26 control pairs were excluded for 5% pFDR, 638 neuron and 50 control pairs were excluded for 25% pFDR.</s><s>Influence following neuron photostimulation was significantly negative for all thresholds, Mann-Whitney U-test, 0% p = 8.90 × 10 -16 , 5% p = 7.24 × 10 -15 , 25% p = 5.72 × 10 -12 .</s><s>(b) As in (a) but for influence dispersion (std of ΔActivity).</s><s>Influence dispersion was greater following neuron than control photostimulation for all thresholds, two-sample F-test, 0% p = 6.84 × 10 -39 , 5% p = 6.04 × 10 -20 , 25% p = 2.63 × 10 -14 .</s><s>(c) As in (a-b), but for influence bias as a function of distance.</s><s>A quantitatively similar center-surround pattern was observed for all thresholds.(d)</s><s>Average influence values for a non-targeted neuron (over all photostimulated neurons) vs. that neuron's average deconvolved activity during non-photostimulated trials in influence mapping blocks.</s><s>Each dot is a single non-targeted neuron.</s><s>n = 8552 neurons.</s><s>Spearman correlation, c = -0.00003,</s><s>p = 0.99.</s><s>(e) Same as in (c), except for mean trace correlation during tuning measurement blocks.</s><s>c = 0.0068, p = 0.53.</s><s>(f) Same as in (d), except for trace correlation strength.</s><s>c = 0.0099, p = 0.36.</s><s>(g) Same as in (d), except for gratings response.</s><s>c = 0.0092, p = 0.38.</s><s>(h) Same as in (d), except for GP tuning model fit quality.</s><s>c = 0.011, p = 0.29.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Extended Data Figure 5 :Extended Data Figure 6 :</head><label>56</label><figDesc><div><p><s>(a) GP model fit quality (pearson correlation with held-out data).</s><s>Each neuron plotted at its relative position in an individual experiment's field-of-view.</s><s>Neurons at all positions were similarly well fit.</s><s>(b) Two-dimensional histogram of GP model fit quality ('test accuracy') and prediction quality on not-held-out data ('train accuracy').</s><s>Major overfitting was not observed.</s><s>(c) Depth-of-Modulation (see Methods) for each individual tuning dimension, for all neurons that passed model fit criteria.</s><s>Dimensions exhibited qualitatively distinct distributions.</s><s>Left: many neurons had almost no drift direction modulation, with many others exhibiting extremely pronounced modulation (&gt; 10).</s><s>Right: Almost all neurons exhibited a moderate degree of modulation (~5) by the mouse's running speed.</s><s>(d) Z-scored tuning curves for each individual tuning dimension, for all neurons passing model fit criteria and with significant modulation (&gt; 2) for the plotted dimension.</s><s>Tuning was qualitatively different for different dimensions.</s><s>Spatial frequency tuning was distributed evenly over our stimulus set and generally bandpass.</s><s>Running speed tuning was distributed more tightly into a few neurons preferring stillness, versus many broadly preferring running.</s><s>(e) Significance of tuning for each dimension as determined by GP regression.</s><s>Comparison of GP tuning model and conventional parametric tuning model.</s><s>(a) Model fit qualities for an example session, assessed on left-out data.</s><s>Each dot is a single neuron, n = 358 neurons.</s><s>GP model fit qualities were higher than those from the parametric tuning model, mean difference of 0.11, p = 5.02 × 10 -60 , Mann-Whitney U-test.</s><s>(b) Estimated preferred orientations of neurons were similar between models.</s><s>Pearson correlation c = 0.88, calculated using only neurons significantly tuned to orientation.</s><s>(c) Estimated spatial frequency preferences of neurons were similar between models, c = 0.95 calculated using only neurons significantly tuned to spatial frequency.</s><s>(d) Signal correlations calculated from the two models were similar, c = 0.80.</s><s>(e) Noise correlations calculated from the two models were similar, c = 0.94.</s><s>Influence regression separates contributions of correlated similarity metrics (a) Probability density functions estimated by kernel smoothing for distance (left) and signal correlation (right), for all data used in influence regression (n = 64,485 pairs).</s><s>Separate densities were estimated for pairs exhibiting varying trace correlation (left) or noise correlation (right).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 1 :</head><label>1</label><figDesc><div><p><s>Figure 1: Photostimulation of targeted neurons (a) Influence mapping schematic.</s><s>(b) Example field-of-view with neuron (red) and control (blue) photostimulation sites.</s><s>(c) Top: Tuning blocks measured responses to drifting gratings with varying direction, spatial frequency, and temporal frequency.</s><s>Bottom: Influence blocks presented 10% contrast visual stimuli simultaneous to single-neuron photostimulation.</s></p></div></figDesc><graphic coords="50,127.92,62.00,416.16,504.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 2 :</head><label>2</label><figDesc><div><p><s>Figure 2: Measurement and characterization of influence (a) Left: calculation of ΔActivity: activity in a non-targeted neuron on single trials following photostimulation of neuron site 1 (red) and on control trials (blue) with matched visual stimulus (gray box).</s><s>x t , values for all trials with photostimulation of site t.</s><s>Center, Right: ΔActivity and traces for example pairs.</s><s>Traces smoothed for display, shading is mean ± sem (b) Photostimulation-triggered average fluorescence changes from raw images centered on all non-targeted neurons for pairs with ΔActivity &gt; 0.15 (left) or &lt; -0.15 (right).</s><s>(c) Influence magnitude (average of |ΔActivity| values) following neuron site (n = 153,689 pairs) or control site (n = 90,705) photostimulation.</s><s>The non-zero value for control sites is expected because of noise due to random sampling of neural activity and potential off-target effects.</s><s>Error bars, mean ± sem calculated by bootstrap.</s><s>Neuron vs. control: p = 1.23 × 10 -19 , Mann-Whitney U-test.</s><s>(d) Influence bias (average of signed ΔActivity values) for a single target was the mean ΔActivity across all non-targeted neurons.</s><s>Error bars, mean ± sem across targets.</s><s>n = 518 neuron targets, 295 control targets.</s><s>p = 0.0023, Mann-Whitney U-test.</s><s>(e) Same as for (d), except for influence dispersion for a single target, which was the standard deviation of ΔActivity across all non-targeted neurons.</s><s>p = 2.1 × 10 -6 , Mann-Whitney U-test.</s><s>(f) Influence magnitude vs. distance between the target site and non-targeted neuron for pairs with neuron site (n=153,689) or control site (n=90,705) photostimulation, shading is mean ± sem (g) Influence bias vs. distance, as in (h).</s></p></div></figDesc><graphic coords="52,84.22,62.00,503.56,272.88" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 3 :</head><label>3</label><figDesc><div><p><s>Figure 3: Relationship of influence to activity similarities between neurons (a) Tuning for spatial frequency and direction for a pair of neurons.</s><s>Each dot is a single trial color-coded by the mean activity throughout the visual stimulus.</s><s>Data (top) and GP model predictions on held-out trials (bottom) showed high correspondence.</s><s>(b) One-dimensional tuning curves for the pair in (a), predicted from the GP model.</s><s>Shading, mean ± sem.</s><s>(c) Signal correlation (left), noise correlation (middle), and trace correlation (right) for the pair in (a-b).</s><s>(d) Design of influence regression.</s><s>Predictors were z-scored so that coefficients indicate the change in influence for 1std increase in predictor.</s><s>(e) Influence regression coefficient estimates based on bootstrap.</s><s>Gray line, median; box, 25-75% interval; whiskers, 1-99% interval.</s><s>Left: piece-wise linear distance predictors.</s><s>25-100 μm, offset p=0.048 (bootstrap), slope p&lt;1×10 -4 ; 100-300 μm, offset p&lt;1×10 -4 , slope p&lt;1×10 -4 ; &gt;300 μm, offset p=0.009, slope p=0.078.</s><s>Right: activity predictors from the same model.</s><s>Signal correlation, p=0.0004; signal*distance, p=0.77; noise correlation p=0.0024; noise*distance, p=0.013; signal*noise, p=0.17; n=64,485 pairs.</s><s>(f) Coefficient estimates from separate models, based on (d), using the specified correlation instead of signal correlation and pairs in which both neurons exhibited tuning.</s><s>Direction, p = 0.18, n = 36,565 pairs; orientation, p = 0.0058, n = 36,565; spatial frequency, p = 0.32, n = 47,810; temporal frequency, p = 0.020, n = 26,526; running speed, p = 0.41, n = 46,634.</s><s>(g) Influence vs. noise correlation, for nearby (black, n=8,538) or distant (gray, n=56,307) pairs.</s><s>Percentile bins, 20% half-width.</s><s>Similar results with different distance thresholds (not shown).</s><s>Shading, mean ± sem calculated by bootstrap.</s><s>(h) Influence vs. signal correlation.</s><s>Percentile bins, 15% half-width.</s><s>(i) Influence vs. difference in preferred orientation.</s><s>Bin half-width, 12.5 degrees.</s></p></div></figDesc><graphic coords="53,84.34,62.00,503.33,179.28" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 4 :</head><label>4</label><figDesc><div><p><s>Figure 4: Effects of feature competition on population encoding of orientation (a) Naïve-Bayes decoding of orientation from population activity during influence blocks.</s><s>Error bars, mean ± sem, logistic regression mixed-effects model, non-overlapping bins.</s><s>Line, logistic regression on non-binned data with a continuous similarity predictor; p = 0.00056, n = 54,187 trials, F-test.</s><s>(b) Population activity (deconvolved ΔF/F) along dimension for 0-degree oriented stimuli on control trials, example experiment.</s><s>Activity along this dimension was high only during 0-</s></p></div></figDesc><graphic coords="54,95.88,62.00,480.24,503.75" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 5 :</head><label>5</label><figDesc><div><p><s>Figure 5: Strongly-correlated pairs exhibit non-competitive influence (a) Histogram of trace correlations.</s><s>(b) Influence vs. trace correlation.</s><s>Bin half-width, 0.1.</s><s>Right: zoom on central 95% of trace correlations.</s><s>Shading, mean ± sem (bootstrap), n=153,689 pairs.</s><s>(c) Signal and noise correlations colored by trace correlation.</s><s>Line, average signal and noise correlations for the trace correlation bins in (b), colored by weak (central 95%) or strong (top, bottom 2.5%) trace correlations.</s><s>Trace correlation is related, but not identical to, the sum of signal and noise correlations.</s><s>(d) Influence regression coefficients, as in Figure 3e.</s><s>All data, black; pairs with weak (gray) or strong (purple) trace correlations.</s><s>Distance predictors were included (not shown, see Extended Data Fig. 10).</s><s>For strong trace correlations: signal correlation, p = 0.011 (bootstrap), n = 3,242 pairs; other coefficients, p &gt; 0.32.</s><s>(e) Single trial rate-network model neuron responses to a 90 degree stimulus (left) or sum of 60 and 120 degree stimuli (right), with noisy inputs.</s><s>Gray lines, responses without added noise.</s><s>Black lines, feedforward inputs (without noise).</s></p></div></figDesc><graphic coords="56,84.00,62.00,504.00,396.48" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="37,84.00,62.00,504.00,336.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc><div><p></p></div></figDesc><graphic coords="42,84.00,62.00,504.00,257.76" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head></head><label></label><figDesc><div><p><s>were repeated using this log-odds metric.(b)Calculation of influence using the activity of a non-targeted neuron.Examples are shown for two pairs of neurons.Left: Deconvolved activity of a non-targeted neuron on trials photostimulating a different neuron (red).Black lines indicate 5% and 95% bounds from resampling all trials.Data were smoothed with a 67 ms std gaussian filter for display only.Right: Mean deconvolved activity for non-targeted neuron averaged over 0.367 s following photostimulation of target (red).Probabilities for obtaining a given deconvolved activity from the shuffle distribution of the non-targeted neuron are shown (black).(c)Influencebias</s><s>(average of signed influence values) as a function of distance between the targeted site and non-targeted neurons., plotted for both neuron and control photostimulation targets.Shading is mean ± sem.Same pairs as Fig.2g, n= 153,689 neuron site pairs, 90,705 control site pairs.(d)</s><s>Influence magnitude measured as the absolute value of influence values for all pairs following neuron or control site photostimulation.The non-zero value for control sites is expected because of noise due to random sampling of neural activity and potential off-target effects.Error bars indicate mean ± sem.n = 153,689 neuron site pairs, 90,705 control site pairs.Neuron vs. control: p = 2.31 × 10 -5 , Mann-Whitney U-test.(e)</s><s>Influence bias for a single-target was the mean of influence values for the targeted neuron across all non-targeted neurons.Error bars indicate mean ± sem across targets.n</s><s>= 518 neuron targets, 295 control targets.p</s><s>= 7.40 × 10 -4 , Mann-Whitney U-test.(f)</s><s>Influence dispersion for a single-target was the standard deviation of influence values for the targeted neuron across all non-targeted neurons.Error bars indicate mean ± sem across targets.n</s><s>= 518 neuron targets, 295 control targets.p</s><s>= 2.3 × 10 -6 , Mann-Whitney U-test.(g)</s><s>The mean influence for all values for a single-target was calculated.</s><s>Plotted is the standard deviation of these values for neuron sites and control sites.</s><s>Coefficient estimates from separate models in which the specified tuning correlation replaced signal correlation in the influence regression model of (i).</s><s>Same bootstrap and boxplot convention as (i).</s><s>Each model used only pairs in which targeted and non-targeted neurons exhibited tuning.</s><s>Direction, p = 0.21, n = 36,565 pairs; orientation, p = 0.0026, n = 36,565; spatial frequency, p = 0.30, n = 47,810; temporal frequency, p = 0.011, n = 26,526; running speed, p = 0.11, n = 46,634.</s></p></div></figDesc><table><row><cell>The similar values</cell></row><row><cell>indicate that it is unlikely that some neurons tended to have much larger positive or negative</cell></row><row><cell>influence than expected based on control sites. n = 518 neuron sites, 295 control sites. p =</cell></row><row><cell>0.88, two-sample F-test.</cell></row><row><cell>(h) Running average of influence with noise correlation, for nearby (black) or distant (gray)</cell></row><row><cell>pairs, with bin half-width of 20% (percentile bins).</cell></row><row><cell>(i) Running average of influence with signal correlation, with bin half-width of 15%</cell></row><row><cell>(percentile bins).</cell></row><row><cell>(j) Running average of influence with difference in preferred orientation, with bin half-width</cell></row><row><cell>of 12.5 degrees.</cell></row><row><cell>(k) Coefficient estimates for linear regression of influence values. Plots show bootstrap</cell></row><row><cell>distribution with median estimate as gray line, 25-75% interval as box, 1-99% interval as</cell></row><row><cell>whiskers. Left: coefficients for piece-wise linear distance predictors from the model.</cell></row><row><cell>Significance estimated by bootstrap: 25-100 μm, offset p = 0.0006, slope p &lt; 1×10 -4 ; 100-</cell></row><row><cell>300 μm, offset p &lt; 1×10 -4 , slope p &lt; 1×10 -4 ; &gt; 300 μm, offset p = 0.68, slope = 0.056.</cell></row><row><cell>Right: coefficients for activity predictors from the same model. Signal correlation, p =</cell></row><row><cell>0.0002; signal-distance interaction, p = 0.96; noise correlation p = 0.0010; noise-distance</cell></row><row><cell>interaction, p = 0.0024; signal-noise interaction p = 0.14; n = 64,485 pairs.</cell></row><row><cell>(l)</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head></head><label></label><figDesc><div><p><s>-15, Mann-Whitney U-test.</s><s>Shading for all plots is mean ± sem calculated by bootstrap.</s><s>(b) ΔFluorescence in non-targeted neurons following photostimulation of neurons at varying distances.</s><s>n = 1,822 near pairs, 35,541 mid-range pairs, 35,882 far pairs.</s><s>Near vs. midrange: p = 7.62 × 10 -19 ; near vs. far: p = 5.0 × 10 -6 ; mid-range vs. far: p = 1.21 × 10 -47 ,</s></p></div></figDesc><table><row><cell>Mann-Whitney U-test.</cell></row><row><cell>(c) As in (b), but without neuropil subtraction, or any source de-mixing from CNMF; traces</cell></row><row><cell>were extracted by projecting raw movies onto neuron ROIs. n = 1,822 near pairs, 35,541</cell></row><row><cell>mid-range pairs, 35,882 far pairs. Near vs. mid-range: p = 5.96 × 10 -28 ; near vs. far: p =</cell></row><row><cell>5.21 × 10 -38 ; mid-range vs. far: p = 4.15 × 10 -13 , Mann-Whitney U-test. This indicates that</cell></row><row><cell>distance-dependent influence effects were not an artifact of source extraction algorithms.</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nature.</s><s>Author manuscript; available in PMC 2019 September 06.</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank <rs type="person">Jan Drugowitsch</rs>, <rs type="person">Mark Andermann</rs>, <rs type="person">Rick Born</rs>, <rs type="person">Ofer Mazor</rs>, <rs type="person">Lauren Orefice</rs>, and members of the <rs type="institution">Harvey lab</rs> for helpful discussions.We thank <rs type="person">Sunny Nyitrai</rs>, <rs type="person">Lydia Bickford</rs>, and <rs type="person">Pascal Kaeser</rs> for assistance testing somalocalization of opsins.We thank the <rs type="institution">Research Instrumentation Core</rs> and machine shop at <rs type="institution">Harvard Medical School</rs> (supported by grant <rs type="grantNumber">P30 EY012196</rs>).This work was supported by a <rs type="funder">Burroughs-Wellcome</rs> <rs type="grantName">Fund Career Award</rs> at the <rs type="institution">Scientific Interface</rs>, the <rs type="funder">Searle Scholars Program</rs>, the <rs type="funder">New York Stem Cell Foundation</rs>, <rs type="funder">NIH</rs> grants from the <rs type="funder">NIMH BRAINS program</rs> (<rs type="grantNumber">R01 MH107620</rs>) and <rs type="funder">NINDS</rs> (<rs type="grantNumber">R01 NS089521</rs>, <rs type="grantNumber">R01 NS108410</rs>), an <rs type="grantName">Armenise-Harvard Foundation Junior Faculty Grant</rs>, and an <rs type="funder">NSF</rs> <rs type="grantName">Graduate Research Fellowship</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_3r3B9gM">
+					<idno type="grant-number">P30 EY012196</idno>
+					<orgName type="grant-name">Fund Career Award</orgName>
+				</org>
+				<org type="funding" xml:id="_gsCdfab">
+					<idno type="grant-number">R01 MH107620</idno>
+				</org>
+				<org type="funding" xml:id="_PtAsrQ8">
+					<idno type="grant-number">R01 NS089521</idno>
+				</org>
+				<org type="funding" xml:id="_s8SQQRK">
+					<idno type="grant-number">R01 NS108410</idno>
+					<orgName type="grant-name">Armenise-Harvard Foundation Junior Faculty Grant</orgName>
+				</org>
+				<org type="funding" xml:id="_CxpGxZT">
+					<orgName type="grant-name">Graduate Research Fellowship</orgName>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability statement</head><p><s>The data that support the findings of this study are available from the corresponding author upon reasonable request.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code availability statement</head><p><s>The custom code used for data collection and pre-processing for study is deposited online, and is linked to from the appropriate methods section describing its use.</s><s>Analysis code is available from the corresponding author upon reasonable request.</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author Information</head><p><s>The authors declare no competing financial interests.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Extended Data</head><note type="other">Figure</note></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Material</head><p><s>Refer to Web version on PubMed Central for supplementary material.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Selective Receptive Fields in Mouse Visual Cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Niell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Stryker</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Highly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="7520" to="7536" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18650330</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Lien AD &amp; Scanziani M Tuned thalamic excitation is amplified by visual cortical circuits</title>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1315" to="1323" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23933748</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Thalamus provides layer 4 of primary visual cortex with orientation-and direction-tuned inputs</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Mensh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ji</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="308" to="315" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26691829</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Mrsic-Flogel TD Cortical connectivity and sensory coding</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">503</biblScope>
+			<biblScope unit="page" from="51" to="58" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24201278</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Functional organization of excitatory synaptic strength in primary visual cortex</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cossell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">518</biblScope>
+			<biblScope unit="page" from="399" to="403" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25652823</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Patterns of excitation and inhibition evoked by horizontal connections in visual cortex share a common relationship to orientation columns</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Weliky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kandler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Fitzpatrick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C</forename><surname>Katz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="541" to="552" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7546734</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Columnar specificity of intrinsic horizontal and corticocortical connections in cat visual cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gilbert</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wiesel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="2432" to="2442" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 2746337</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Functional specificity of local synaptic connections in neocortical networks</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">473</biblScope>
+			<biblScope unit="page" from="87" to="91" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21478872</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Anatomy and function of an excitatory network in the visual cortex</title>
+		<author>
+			<persName><forename type="first">W-Ca</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">532</biblScope>
+			<biblScope unit="page" from="370" to="374" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27018655</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Olshausen BA &amp; Field DJ Sparse coding with an overcomplete basis set: a strategy employed by V1?</title>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="3311" to="3325" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9425546</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Olshausen B &amp; Field D Sparse coding of sensory inputs</title>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="481" to="487" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15321069</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Denève S Perceptual Inference Predicts Contextual Modulations of Sensory Responses</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lochmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">A</forename><surname>Ernst</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="4179" to="4195" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22442081</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Deneve S Neural processing as causal inference</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lochmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="774" to="781" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21742484</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Trott AR &amp; Born RT Input-Gain Control Produces Feature-Specific Surround Suppression</title>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="4973" to="4982" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25810527</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Vinje WE &amp; Gallant JL Sparse Coding and Decorrelation in Primary Visual Cortex During Natural Vision</title>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">287</biblScope>
+			<biblScope unit="page" from="1273" to="1273" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10678835</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Flexible gating of contextual influences in natural vision</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Coen-Cagli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schwartz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1648" to="1655" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26436902</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Moreno-Bote</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Drugowitsch J Causal Inference and Explaining Away in a Spiking Network. Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">17531</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26621426</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Network anatomy and in vivo physiology of visual cortical neurons</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Bock</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">471</biblScope>
+			<biblScope unit="page" from="177" to="182" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21390124</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Single synaptic inputs drive high-precision action potentials in parvalbumin expressing GABA-ergic cortical neurons in vivo</title>
+		<author>
+			<persName><forename type="first">J-S</forename><surname>Jouhanneau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kremkow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jfa</forename><surname>Poulet</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">1540</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29670095</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Inhibition Shapes Cortical Activity</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Isaacson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scanziani</surname></persName>
+		</author>
+		<author>
+			<persName><surname>How</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="231" to="243" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22017986</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Sensitivity to perturbations in vivo implies high noise and suggests rate coding in cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>London</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Roth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Beeren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Häusser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">466</biblScope>
+			<biblScope unit="page" from="123" to="127" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20596024</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Dissecting functional connectivity of neuronal microcircuits: experimental and theoretical insights</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Feldt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bonifazi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Cossart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="225" to="236" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21459463</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Deisseroth K &amp; Tank DW Simultaneous cellular-resolution optical perturbation and imaging of place cell firing fields</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Rickgauer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1816" to="1824" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25402854</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Simultaneous all-optical manipulation and recording of neural circuit activity with cellular resolution in vivo</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Packer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">E</forename><surname>Russell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hwp</forename><surname>Dalgleish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Häusser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Methods</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="140" to="146" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 25532138</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Dissection of Cortical Microcircuits by Single-Neuron Stimulation In Vivo</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Kwan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="1459" to="1467" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22748320</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Peterka DS &amp; Yuste R Imprinting and recalling cortical ensembles</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Carrillo-Reid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bando</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">353</biblScope>
+			<biblScope unit="page" from="691" to="694" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27516599</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Parallel holographic illumination enables sub-millisecond two-photon optogenetic activation in mouse visual cortex in vivo</title>
+		<author>
+			<persName><forename type="first">I-W</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/250795</idno>
+	</analytic>
+	<monogr>
+		<title level="j">bioRxiv</title>
+		<imprint>
+			<biblScope unit="page">250795</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Two-photon optogenetic toolbox for fast inhibition, excitation and bistable modulation</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Prakash</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Methods</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1171" to="1179" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23169303</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Precise multimodal optical control of neural ensemble activity</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Mardinly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="881" to="893" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 29713079</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Neocortical excitation/inhibition balance in information processing and social dysfunction</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Yizhar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">477</biblScope>
+			<biblScope unit="page" from="171" to="178" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21796121</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Independent optical excitation of distinct neural populations</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C</forename><surname>Klapoetke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Methods</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="338" to="346" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 24509633</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Subcellular Targeting of Optogenetic Tools in Retinal Ganglion Cells In Vivo</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ivanova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z-H Raav-Mediated</forename><surname>Pan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">66332</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23799092</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">Parra A &amp; Bolton MM Cellular resolution circuit mapping with temporalfocused excitation of soma-targeted channelrhodopsin</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Baker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">M</forename><surname>Elyada</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">14193</biblScope>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27525487</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Yurgenson S &amp; Reid RC Local Diversity and Fine-Scale Organization of Receptive Fields in Mouse Visual Cortex</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Bonin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Histed</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="18506" to="18521" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22171051</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Rubin JE &amp; Doiron B The spatial structure of correlated neuronal variability</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rosenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kohn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="107" to="114" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 27798630</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Tank DW Two-photon excitation of channelrhodopsin-2 at saturation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Rickgauer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="15025" to="15030" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19706471</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Inhibition dominates sensory responses in the awake cortex</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Haider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Häusser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">493</biblScope>
+			<biblScope unit="page" from="97" to="100" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23172139</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Vinje WE &amp; Gallant JL Natural stimulation of the nonclassical receptive field increases information transmission efficiency in V1</title>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="2904" to="2915" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11923455</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Synaptic and Network Mechanisms of Sparse and Reliable Visual Cortical Activity during Nonclassical Receptive Field Stimulation</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Haider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="107" to="121" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20152117</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Representations: A Potential Role of Olfactory Granule Cells</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinberg</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sparse</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="124" to="136" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21982374</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Differential connectivity and response dynamics of excitatory and inhibitory neurons in visual cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Hofer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1045" to="1052" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21765421</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Unspecific Connectivity of Neocortical Parvalbumin-Positive Interneurons: A Canonical Microcircuit for Inhibition?</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Packer</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yuste R Dense</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="13260" to="13271" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21917809</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Berezovskii VK &amp; Reid RC Broadly Tuned Response Properties of Diverse Inhibitory Neuron Subtypes in Mouse Visual Cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Kerlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Andermann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="858" to="871" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20826316</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Wang FL &amp; Sur M Division and subtraction by distinct cortical inhibitory networks in vivo</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Runyan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">488</biblScope>
+			<biblScope unit="page" from="343" to="348" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22878717</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">scale specificity of cortical networks depends on inhibitory cell type and connectivity</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yoshimura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Callaway</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fine</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="1552" to="1559" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16222228</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Functional selectivity and specific connectivity of inhibitory neurons in primary visual cortex</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Znamenskiy</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/294835</idno>
+	</analytic>
+	<monogr>
+		<title level="j">bioRxiv</title>
+		<imprint>
+			<biblScope unit="page">294835</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Response Features of Parvalbumin-Expressing Interneurons Suggest Precise Roles for Subtypes of Inhibition in Visual Cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Runyan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="847" to="857" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 20826315</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Mohanty D &amp; Priebe NJ Orientation Selectivity of Synaptic Input to Neurons in Mouse and Cat Primary Visual Cortex</title>
+		<author>
+			<persName><forename type="first">Ayy</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Scholl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="12339" to="12350" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 21865476</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Zador AM Balanced inhibition underlies tuning and sharpens spike timing in auditory cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wehr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">426</biblScope>
+			<biblScope unit="page" from="442" to="446" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14647382</note>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Orientation Tuning of Input Conductance, Excitation, and Inhibition in Cat Primary Visual Cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page" from="909" to="926" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10938316</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Scannevin RH &amp; Trimmer JS A Novel Targeting Signal for Proximal Clustering of the Kv2.1 K+ Channel in Hippocampal Neurons</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Antonucci</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="385" to="397" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10719893</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Ultrasensitive fluorescent proteins for imaging neuronal activity</title>
+		<author>
+			<persName><forename type="first">T-W</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">499</biblScope>
+			<biblScope unit="page" from="295" to="300" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 23868258</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Coen P &amp; Tank DW Choice-specific sequences in parietal cortex during a virtualnavigation decision task</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Harvey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">484</biblScope>
+			<biblScope unit="page" from="62" to="68" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 22419153</note>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">DataJoint: managing big scientific data using MATLAB or Python</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yatsenko</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/031658</idno>
+	</analytic>
+	<monogr>
+		<title level="j">bioRxiv</title>
+		<imprint>
+			<biblScope unit="page">31658</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Brecht M &amp; Margrie TW Two-photon targeted patching (TPTP) in vivo</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Komai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Denk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Osten</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Protoc</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="647" to="652" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 17406293</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Fienup JR Efficient subpixel image registration algorithms</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Guizar-Sicairos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thurman</forename><surname>St</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Lett</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="156" to="158" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18197224</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Automated correction of fast motion artifacts for two-photon imaging of awake animals</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jnd</forename><surname>Kerr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci. Methods</title>
+		<imprint>
+			<biblScope unit="volume">176</biblScope>
+			<biblScope unit="page" from="1" to="15" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 18789968</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Multi-scale approaches for high-speed imaging and analysis of large neural populations</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Friedrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS Comput. Biol</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">1005685</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28771570</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<monogr>
+		<title level="m" type="main">A structured matrix factorization framework for large scale calcium imaging data analysis</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Pnevmatikakis</surname></persName>
+		</author>
+		<idno>arXiv 1409.2903</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Simultaneous Denoising, Deconvolution, and Demixing of Calcium Imaging Data</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Pnevmatikakis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="285" to="299" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 26774160</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Dynamic Reorganization of Neuronal Activity Patterns in Parietal Cortex</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Driscoll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">L</forename><surname>Pettit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Minderer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Chettih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Harvey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">170</biblScope>
+			<biblScope unit="page">16</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 28823559</note>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">On the Equivalence of Nonnegative Matrix Factorization and Spectral Clustering</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Simon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SDM</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="606" to="610" />
+			<date type="published" when="2005">2005</date>
+			<publisher>SIAM</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Friedrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Paninski</surname></persName>
+		</author>
+		<idno>arXiv 1609.00639</idno>
+		<title level="m">L Fast Active Set Methods for Online Deconvolution of Calcium Imaging Data</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Storey JD A direct approach to false discovery rates</title>
+	</analytic>
+	<monogr>
+		<title level="j">J. R. Stat. Soc. Ser. B Stat. Methodol</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page" from="479" to="498" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Gaussian-Process Factor Analysis for Low-Dimensional Single-Trial Analysis of Neural Population Activity</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page" from="614" to="635" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 19357332</note>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Rasmussen</surname></persName>
+		</author>
+		<title level="m">Williams CK Gaussian Processes for Machine Learning</title>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
